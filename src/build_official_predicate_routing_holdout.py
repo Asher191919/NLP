@@ -125,8 +125,13 @@ def _eligible_strata(predicates: set[str]) -> set[str]:
 
 
 def candidate_rows(
-    *, excluded: dict[str, set[int]], max_context_chars: int, model: str
+    *,
+    excluded: dict[str, set[int]],
+    max_context_chars: int,
+    model: str,
+    frozen_selected_indices: set[int] | None = None,
 ) -> tuple[list[dict[str, Any]], dict[str, int]]:
+    frozen_selected_indices = set(frozen_selected_indices or ())
     excluded_gold, excluded_contexts = prior.excluded_evidence(excluded)
     target_set = set(TARGET_PREDICATES)
     candidates: list[dict[str, Any]] = []
@@ -173,7 +178,7 @@ def candidate_rows(
             cache_hit = cache_hit or blind.cache_has_reusable_generation(
                 cache, prompt_sha256=blind._sha256(prompt)
             )
-        if cache_hit:
+        if cache_hit and index not in frozen_selected_indices:
             rejected["prefrozen_generation_cache"] += 1
             continue
         candidates.append(
@@ -334,13 +339,18 @@ def build_package(
     counts_per_stratum: dict[str, int] | None = None,
     max_context_chars: int = DEFAULT_MAX_CONTEXT_CHARS,
     model: str = DEFAULT_MODEL,
+    frozen_selected_indices: set[int] | None = None,
 ) -> tuple[bytes, bytes, bytes, dict[str, Any]]:
     counts_per_stratum = dict(counts_per_stratum or DEFAULT_COUNTS_PER_STRATUM)
+    frozen_selected_indices = set(frozen_selected_indices or ())
     if set(counts_per_stratum) != set(STRATA):
         raise ValueError("counts_per_stratum must specify every frozen stratum")
     excluded, ledger = exclusion_ledger()
     candidates, rejections = candidate_rows(
-        excluded=excluded, max_context_chars=max_context_chars, model=model
+        excluded=excluded,
+        max_context_chars=max_context_chars,
+        model=model,
+        frozen_selected_indices=frozen_selected_indices,
     )
     selected = select_rows(
         candidates, seed=seed, counts_per_stratum=counts_per_stratum
@@ -442,9 +452,10 @@ def build_package(
             cache = blind.cache_path(
                 model, "a", system, row["source_index"], row["id"]
             )
-            generation_hits += blind.cache_has_reusable_generation(
-                cache, prompt_sha256=prompt_hash
-            )
+            if row["source_index"] not in frozen_selected_indices:
+                generation_hits += blind.cache_has_reusable_generation(
+                    cache, prompt_sha256=prompt_hash
+                )
         eval_rows.append(
             {
                 "package_index": row["package_index"],
@@ -552,10 +563,19 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
+    frozen_dataset_path = Path(args.output_dir) / "dataset.json"
+    frozen_selected_indices: set[int] = set()
+    if frozen_dataset_path.exists():
+        frozen_dataset = json.loads(frozen_dataset_path.read_text(encoding="utf-8"))
+        frozen_selected_indices = {
+            int(row["source_index"])
+            for row in frozen_dataset.get("samples") or []
+        }
     dataset, inputs, manifest, evaluation = build_package(
         seed=args.seed,
         max_context_chars=args.max_context_chars,
         model=args.model,
+        frozen_selected_indices=frozen_selected_indices,
     )
     outputs = {
         Path(args.output_dir) / "dataset.json": (dataset, "dataset"),

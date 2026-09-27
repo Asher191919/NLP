@@ -55,12 +55,12 @@ All direct systems use the same backbone (`dots3-note-prev`), temperature 0, off
 - Some Task A generations exhausted 4,096 tokens and four conditions exhausted 8,192 tokens before emitting final JSON; the final reproducible cap is 16,384. A transient endpoint outage affected six Task B open-vocabulary samples, all recovered by checkpointed retry.
 - The frozen nonce holdout completed **60/60 units** in 67 recorded attempts (32 raw-open, 35 guarded-v2). Its completed generation cache audits at 60/60 hits with zero external calls; prompt, threshold, and calibrator tuning remain prohibited.
 - The frozen official-text transfer completed **60/60 units** in 81 recorded attempts (34 raw-open, 47 guarded-v2). Completion-length recovery raised only the API completion cap from 8,192 to 16,384; frozen samples, prompt hashes, thresholds, calibrator state, and postprocessing were unchanged. Its final generation and postprocess caches both audit at 60/60 hits with zero external calls.
-- The independent predicate-routing packet `official_predicate_routing_v1` is frozen but **not yet executed**. It contains 27 Task A samples allocated 8 `equivalent class` / 8 `disjoint with` / 3 `type` / 8 domain, with 64 endpoint-visible target edges (69 total). The locked v3-control/v6-treatment plan has 54 units, 0 generation-cache hits, 0 postprocess-cache hits, and 54 estimated external calls; execution requires separate API authorization.
+- The independent predicate-routing packet `official_predicate_routing_v1` completed **54/54 units in 57 recorded attempts**. Routed-v6 raises four-stratum macro target F1 from 0 to 0.0526 but yields only 2 TP-positive samples versus the required 5. Completed generation and postprocess caches both audit at 54/54 hits with zero external calls.
 - Primary result files: `official_blind_openai_a_n30_off0.json` and `official_blind_openai_b_n30_off0.json`.
 - Stratified result and combined payload audit: `official_stratified_open_openai_ab_s5_seed20260922.json` and `official_stratified_open_audit_ab_open_vocab_open_vocab_guarded_open_vocab_guarded_v2_s5_seed20260922.json`.
 - Frozen nonce manifest/result: `nonce_relation_holdout_manifest_n30_seed20260926.json` and `nonce_relation_holdout_openai_n30_seed20260926.json`.
 - Frozen official-text transfer manifest/result: `official_relation_transfer_manifest_a_n30_seed20260927.json` and `official_relation_transfer_openai_a_n30_seed20260927.json`.
-- Frozen predicate-routing package/manifest: `experiments/holdouts/official_predicate_routing_v1/` and `official_predicate_routing_manifest_a_n27_seed20260927.json`.
+- Frozen predicate-routing package/manifest/result: `experiments/holdouts/official_predicate_routing_v1/`, `official_predicate_routing_manifest_a_n27_seed20260927.json`, and `official_predicate_routing_openai_a_n27_seed20260927.json`.
 
 ---
 
@@ -304,15 +304,22 @@ Guarded-v2 reduces non-self non-tax false positives by 281 (66.3%) and raises ov
 
 The deterministic zero-call error audit localizes the dominant failure. Guarded-v2 produces 225 raw non-tax candidates: 143 accepted and 82 rejected. All 225 use predicates outside the exact eight-predicate gold inventory, none is an exact TP, and the rejected set contains no hidden TP. Rejections are led by the quantity cap (40), missing endpoint evidence (24), and non-verbatim evidence (10), but these gates do not explain zero recall. Among accepted predictions, 93 have no local gold overlap, 45 share one exact endpoint, two contain both gold endpoints but not as a gold pair, one has the exact endpoint pair with the wrong predicate, one reverses gold endpoints under the wrong predicate, and one has a single surface-normalized endpoint overlap. `part_of` (46) and `has part` (43) dominate the accepted vocabulary. Raw open likewise emits zero exact gold predicates; 51/424 predictions are taxonomy aliases and 2/424 are typing aliases misserialized as non-tax, while 371 remain outside the gold predicate inventory. The post-hoc diagnosis is predicate-inventory/task-definition mismatch rather than guard-induced recall loss. Because it inspects protected gold, it cannot tune this slice; any axiom/predicate-family routing experiment must be frozen on independent samples.
 
-### 4.5.5 Frozen independent predicate-routing test (**NOT YET EXECUTED**)
+### 4.5.5 Completed independent predicate-routing test
 
 `official_predicate_routing_v1` freezes an independent Task A packet after the official-text transfer diagnosis and before any routed generation. Package ID `78d478f4f1d9d76ff979` identifies 27 samples: 8 assigned to `equivalent class`, 8 to `disjoint with`, 3 to `type`, and 8 to the domain-relation stratum. The packet contains 64 endpoint-visible target gold edges and 69 target gold edges in total. It has zero overlap with prior evidence by sample index, compact context, and exact non-tax gold, and no visible target gold edge is duplicated within the packet. The only externally visible projection is `id/context`.
 
-The comparison locks `open_vocab_guarded_v3_relations` as control and `open_vocab_guarded_v6_predicate_routed` as treatment. Both use the same postprocessor; prompt identity is the only system difference. Neither arm uses a calibrator or an output allowlist. The freeze-time audit records 54 planned units, 0/54 generation-cache hits, 0/54 postprocess-cache hits, and 54 estimated external calls. These calls require separate API authorization.
+The comparison locks `open_vocab_guarded_v3_relations` as control and `open_vocab_guarded_v6_predicate_routed` as treatment. Both use the same postprocessor; prompt identity is the only system difference. Neither arm uses a calibrator or an output allowlist. The immutable freeze-time manifest records 54 planned units, 0/54 generation-cache hits, 0/54 postprocess-cache hits, and 54 estimated external calls. All units complete in 57 recorded attempts; the completed caches now replay at 54/54 generation and postprocess hits with zero external calls.
 
 The primary endpoint is four-stratum macro exact target F1. Prespecified secondary endpoints are pooled target micro-F1, all-NonTax micro-F1, official exact Graph Similarity, predicate adherence, endpoint-visible and nonvisible target recall, and a 10,000-replicate stratified paired sample-cluster bootstrap. The mechanism gate requires both a strict routed-v6 macro-F1 improvement over the general v3 control and exact true positives in at least five independent samples. Failure cannot trigger prompt repair or other retuning on this slice.
 
 The frozen prompt contains eight exact predicates, but the independent packet provides empirical support for only four: `equivalent class`, `disjoint with`, `type`, and `database_cross_reference`. Independent `type` capacity is only three samples after exclusions. The other four prompt routes (`has role`, `same as`, `is_conjugate_acid_of`, and `is_conjugate_base_of`) cannot be evaluated by this packet. The experiment therefore estimates routing behavior only over the four supported strata and cannot substantiate claims about the remaining routes.
+
+| System | Macro target F1 | Pooled target P / R / F1 | TP / FP / FN | TP-positive samples | Official GS |
+|---|---:|---:|---:|---:|---:|
+| general relation-only v3 | 0.0000 | 0 / 0 / 0 | 0 / 0 / 69 | 0 | 0.0000 |
+| predicate-routed v6 | **0.0526** | 0.0143 / 0.0290 / 0.0191 | 2 / 138 / 67 | 2 | 0.0016 |
+
+Routed-v6 recovers two exact `type` edges, one in each of two independent samples. Its type-stratum F1 is 0.2105; equivalent-class, disjoint-with, and domain-stratum F1 remain zero. The routed arm emits 140 target-inventory predictions, led by 120 `type` predictions, and therefore achieves perfect predicate-inventory adherence without useful precision. The paired 10,000-replicate stratified sample-cluster bootstrap gives routed-minus-general macro F1 [0, 0.0556]. Strict macro improvement passes, but exact TP occur in only two samples. The preregistered five-sample mechanism gate fails; `scientific_deployable=false` and `confirmatory_eligible=false` remain final. Same-slice repair and n>=100 expansion are not launched.
 
 ---
 
@@ -340,15 +347,15 @@ Our blind n = 30 official-train numbers are **not** directly comparable to leade
 9. **Cross-year axiom data do not resolve calibration support.** V4 has 0/34 exact accepted candidates; v5 reaches 1/8 from one sample, with a degenerate calibrator. Endpoint-linked gold is not complete document-level supervision, so these runs remain negative diagnostics rather than added calibration support.
 10. **Weak-label calibration generalizes only as base-rate shrinkage.** Sample-grouped five-fold OOF metrics remain low (Brier 0.1134, ECE 0.0045), but every fold collapses to one probability block and therefore learns no confidence ranking. Same-origin weak labels still cannot open the gate.
 11. **Pooled v5 calibration passes only the numeric gate, then fails confirmatory promotion.** The untouched 24-sample endpoint-visible slice yields 4 base TP from 4 samples. Frozen calibration improves Brier/ECE but removes one TP and leaves only 3 positive samples, below the preregistered minimum of 5. This is valid confirmatory negative evidence, so deployment remains false without retuning.
-12. **Semantic matching does not rescue v5.** At the frozen 0.90 threshold, the official embedding alignment changes 0/24 samples for both base and calibrated outputs; relation-only per-sample Graph Similarity remains 0.0935 and 0.0657.
-13. **Uncertainty is still wide and heterogeneous by predicate.** Base F1 has a sample-cluster 95% interval of [0.0238, 0.2712], while equivalent-class precision is 0.1111 and disjoint-with precision is 0.5000. The n≈122 estimate is for pooled precision estimation only.
-14. **The legacy n = 10 direction does not survive blind evaluation.** Its open-path gains came from an oracle-inventory component setting and remain diagnostic only.
-15. **Synthetic non-tax gains remain NON-official.** They cannot be used as evidence of official relation recovery.
-16. **Official facts are highly probeable, but the surface effect is task-dependent.** Closed-book AUROC is 0.9780 [0.9484, 0.9982]. Endpoint aliasing lowers Task B GS but improves Task A point estimates, so neither verified pretraining membership nor a global contamination-induced inflation claim is supported.
-17. **The frozen nonce diagnostic recovers controlled relations but exposes a wording gap.** Guarded-v2 raises exact NonTax F1 from 0.2612 to 0.8571 with 0/60 hard-negative false positives for both systems. Its canonical/paraphrased F1 split is 1.0000/0.7119, so this supports extraction of new synthetic facts under familiar predicates, not unseen-predicate discovery or naturalistic performance.
-18. **The nonce gain does not transfer to the frozen official-text slice.** Both raw open and guarded-v2 obtain 0 exact TP over 101 non-self non-tax gold relations. Guarded-v2 cuts false positives from 424 to 143 and raises GS from 0.1946 to 0.2593, but exact recall remains zero across every prespecified stratum, predicate, density, and visibility diagnostic.
-19. **The guard did not remove a latent correct relation.** A zero-call post-hoc audit finds 0 exact TP among all 225 raw guarded candidates and 0 among the 82 rejected candidates. Every raw guarded predicate falls outside the gold inventory; `part_of`/`has part` account for 89/143 accepted predictions. Predicate-family mismatch, not confidence/evidence filtering, is the dominant failure mechanism.
-20. **The independent predicate-routing test is frozen and awaits execution.** Its 27 samples support four target strata and lock a 54-unit v3-versus-v6 comparison around macro exact target F1. The `type` stratum has only three samples, and four additional prompt predicates have no independent empirical support in this packet, so any eventual conclusion must retain those scope limits.
+12. **Predicate routing produces a narrow recovery but fails its mechanism gate.** On the independent 27-sample packet, routed-v6 raises macro target F1 from 0 to 0.0526 and recovers two `type` edges, but pooled precision is 0.0143 with 138 FP. Two TP-positive samples do not satisfy the required five, so no same-slice repair or n>=100 expansion follows.
+13. **Semantic matching does not rescue v5.** At the frozen 0.90 threshold, the official embedding alignment changes 0/24 samples for both base and calibrated outputs; relation-only per-sample Graph Similarity remains 0.0935 and 0.0657.
+14. **Uncertainty is still wide and heterogeneous by predicate.** Base F1 has a sample-cluster 95% interval of [0.0238, 0.2712], while equivalent-class precision is 0.1111 and disjoint-with precision is 0.5000. The n≈122 estimate is for pooled precision estimation only.
+15. **The legacy n = 10 direction does not survive blind evaluation.** Its open-path gains came from an oracle-inventory component setting and remain diagnostic only.
+16. **Synthetic non-tax gains remain NON-official.** They cannot be used as evidence of official relation recovery.
+17. **Official facts are highly probeable, but the surface effect is task-dependent.** Closed-book AUROC is 0.9780 [0.9484, 0.9982]. Endpoint aliasing lowers Task B GS but improves Task A point estimates, so neither verified pretraining membership nor a global contamination-induced inflation claim is supported.
+18. **The frozen nonce diagnostic recovers controlled relations but exposes a wording gap.** Guarded-v2 raises exact NonTax F1 from 0.2612 to 0.8571 with 0/60 hard-negative false positives for both systems. Its canonical/paraphrased F1 split is 1.0000/0.7119, so this supports extraction of new synthetic facts under familiar predicates, not unseen-predicate discovery or naturalistic performance.
+19. **The nonce gain does not transfer to the frozen official-text slice.** Both raw open and guarded-v2 obtain 0 exact TP over 101 non-self non-tax gold relations. Guarded-v2 cuts false positives from 424 to 143 and raises GS from 0.1946 to 0.2593, but exact recall remains zero across every prespecified stratum, predicate, density, and visibility diagnostic.
+20. **The guard did not remove a latent correct relation.** A zero-call post-hoc audit finds 0 exact TP among all 225 raw guarded candidates and 0 among the 82 rejected candidates. Every raw guarded predicate falls outside the gold inventory; `part_of`/`has part` account for 89/143 accepted predictions. Predicate-family mismatch, not confidence/evidence filtering, is the dominant failure mechanism.
 
 ---
 
@@ -381,10 +388,10 @@ Our blind n = 30 official-train numbers are **not** directly comparable to leade
 - [x] Weak-label calibration replay — 30/30 cache hits, zero external calls, 26 weak-label matches from 14 samples; numeric support passes but deployment remains forcibly closed
 - [x] Sample-grouped weak-label calibration CV — 5 deterministic folds, 200/200 OOF candidates, zero sample overlap, Brier 0.1134 and ECE 0.0045; all folds reduce to base-rate-only calibration
 - [x] Weak-label OOF uncertainty and reliability figure — 10,000 sample-cluster bootstrap replicates; SVG/PDF/300 dpi PNG retained with conditional 95% intervals
-- [ ] Two independent human annotations plus third-person adjudication — templates and validators ready; all 30 rows currently pending
-- [ ] Relation-level human audit of the weak labels — current 27-sample worklist is a triage index only and cannot be frozen
-- [ ] Fit/freeze the human-label calibrator and open the confirmatory gate only if at least five independent positive samples pass support checks
-- [ ] Task A/B real LLM n ≥ 100 if API stability permits
+- [ ] Two independent human annotations plus third-person adjudication — deferred because the current paper makes no human-calibration claim; all 30 rows remain pending
+- [ ] Relation-level human audit of the weak labels — optional future enhancement; the current 27-sample worklist remains a triage index only
+- [ ] Fit/freeze a human-label calibrator only if the paper scope is later expanded to a human-calibration claim
+- [ ] Task A/B real LLM n >= 100 — not launched because the independent predicate-routing mechanism gate failed
 - [x] Official embedding `semantic_match` secondary analysis — frozen threshold 0.90 and model revisions; 0/24 samples change for either v5 system
 - [ ] Expand human/official-gold same-system independent calibration beyond five positive samples; the completed weak-label reliability analysis does not satisfy this gate
 - [x] Freeze a new untouched, fully supervised v5 confirmatory set — 24 Task A samples, 12/12 predicate-balanced, zero overlap, frozen before 0/24-cache generation
@@ -400,9 +407,9 @@ Our blind n = 30 official-train numbers are **not** directly comparable to leade
 - [x] Execute official-text relation transfer — 60/60 locked raw-open/guarded-v2 units in 81 recorded attempts; exact NonTax F1 0/0, guarded-v2 reduces non-self FP 424→143; final dual-layer cache replay uses zero external calls
 - [x] Official-text transfer error audit — zero-call post-hoc classification of 424/143 predictions and 225 raw guarded candidates; 0 raw/rejected TP and 0 guarded candidates using an exact gold predicate
 - [x] Freeze independent predicate-routing test: package `78d478f4f1d9d76ff979`, 27 untouched Task A samples in 8/8/3/8 strata, 64 visible target edges, and zero prior sample/context/exact-gold overlap
-- [ ] Execute the frozen predicate-routing comparison after separate API authorization: 54 locked `open_vocab_guarded_v3_relations`/`open_vocab_guarded_v6_predicate_routed` units, currently 0 cache hits and 54 estimated external calls
-- [ ] Score the frozen routing gate: four-stratum macro exact target F1 must improve strictly and routed-v6 must produce exact TP in at least 5 independent samples; no same-slice retuning
-- [ ] Rate-limit / timeout sensitivity table (API stability appendix)
+- [x] Execute the frozen predicate-routing comparison — 54/54 locked `open_vocab_guarded_v3_relations`/`open_vocab_guarded_v6_predicate_routed` units completed in 57 recorded attempts; completed dual-layer cache replay uses zero external calls
+- [x] Score the frozen routing gate — macro target F1 improves 0 -> 0.0526, but routed-v6 has exact TP in only 2 samples versus the required 5; gate fails and no same-slice retuning is authorized
+- [x] Record predicate-routing API stability — v3/v6 use 28/29 attempts for 27 units each, with 1/2 retried samples and no failed final unit; median latency 33.639/42.690 s, maximum 110.180/135.899 s
 
 ---
 
@@ -507,9 +514,8 @@ python -B D:\NLP\src\analyze_official_relation_transfer.py
 # verify the frozen independent predicate-routing packet; zero API calls
 python -B D:\NLP\src\build_official_predicate_routing_holdout.py --audit-only
 
-# audit the locked 54-unit v3-control/v6-treatment plan; zero API calls
+# replay/audit the completed 54-unit v3-control/v6-treatment result; zero API calls
 python -B D:\NLP\src\run_official_predicate_routing.py --model dots3-note-prev
-# API execution requires separate authorization; only then add --execute
 ```
 
 **Files:**
@@ -522,5 +528,5 @@ python -B D:\NLP\src\run_official_predicate_routing.py --model dots3-note-prev
 - frozen contamination manifests/results/analyses: `official_contamination_{probe,surface}_*.json`
 - frozen nonce package: `experiments/holdouts/nonce_relation_v1/`; evaluation manifest/result: `nonce_relation_holdout_{manifest,openai}_n30_seed20260926.json`
 - frozen official-text transfer package: `experiments/holdouts/official_relation_transfer_v1/`; manifest/result/error audit: `official_relation_transfer_{manifest,openai,error_audit}_a_n30_seed20260927.json`
-- frozen independent predicate-routing package: `experiments/holdouts/official_predicate_routing_v1/`; manifest: `experiments/results/official_predicate_routing_manifest_a_n27_seed20260927.json`
+- frozen independent predicate-routing package: `experiments/holdouts/official_predicate_routing_v1/`; manifest/result: `experiments/results/official_predicate_routing_{manifest,openai}_a_n27_seed20260927.json`
 - official metric: `D:\NLP\src\ontobridg\eval\official_graph_similarity.py`

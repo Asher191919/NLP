@@ -1,6 +1,6 @@
 # Official Predicate Routing Holdout v1
 
-Status: **frozen, not executed**. Package ID: `78d478f4f1d9d76ff979`.
+Status: **completed; mechanism gate failed closed**. Package ID: `78d478f4f1d9d76ff979`.
 
 This packet independently tests the protected-gold post-hoc hypothesis that the
 official transfer failure was caused by predicate-family mismatch. It compares
@@ -70,7 +70,27 @@ py -3 D:\NLP\src\build_official_predicate_routing_holdout.py --audit-only
 py -3 D:\NLP\src\run_official_predicate_routing.py --model dots3-note-prev
 ```
 
-The runner is audit-only by default and currently reports 0/54 generation
-cache hits, 0/54 postprocess-cache hits, and 54 estimated external calls. Do not
-add `--execute` until sending the 27 frozen `id/context` records for both systems
-has been separately authorized.
+All 54 frozen units completed in 57 recorded attempts. The completed runner now
+reports 54/54 generation-cache hits, 54/54 postprocess-cache hits, and zero
+external calls on replay.
+
+## Completed Result
+
+| Metric | general v3 | routed v6 |
+|---|---:|---:|
+| Four-stratum macro exact target F1 | 0.0000 | 0.0526 |
+| Pooled target precision / recall / F1 | 0 / 0 / 0 | 0.0143 / 0.0290 / 0.0191 |
+| Exact TP / FP / FN | 0 / 0 / 69 | 2 / 138 / 67 |
+| TP-positive independent samples | 0 | 2 |
+| Official exact Graph Similarity | 0.0000 | 0.0016 |
+
+Both routed true positives are `type` relations from two of the three type
+samples. Equivalent-class, disjoint-with, and domain strata remain at zero TP.
+The routed arm satisfies the strict macro-F1 improvement condition but misses
+the preregistered minimum of five TP-positive samples. The mechanism gate is
+therefore false; same-slice repair, n>=100 expansion, calibration, and
+deployment remain unauthorized. The stratified paired bootstrap interval for
+routed-minus-general macro F1 is [0, 0.0556].
+
+Result artifact:
+`experiments/results/official_predicate_routing_openai_a_n27_seed20260927.json`.

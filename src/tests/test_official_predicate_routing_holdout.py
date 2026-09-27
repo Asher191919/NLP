@@ -17,7 +17,16 @@ import run_official_predicate_routing as runner
 class OfficialPredicateRoutingHoldoutTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        dataset, inputs, manifest, evaluation = holdout.build_package()
+        frozen_dataset = json.loads(
+            (holdout.DEFAULT_OUTPUT_DIR / "dataset.json").read_text(encoding="utf-8")
+        )
+        cls.frozen_selected_indices = {
+            int(row["source_index"])
+            for row in frozen_dataset["samples"]
+        }
+        dataset, inputs, manifest, evaluation = holdout.build_package(
+            frozen_selected_indices=cls.frozen_selected_indices
+        )
         cls.dataset_bytes = dataset
         cls.inputs_bytes = inputs
         cls.manifest_bytes = manifest
@@ -105,7 +114,9 @@ class OfficialPredicateRoutingHoldoutTests(unittest.TestCase):
         self.assertIn("FROZEN PREDICATE-FAMILY ROUTER", prompt)
 
     def test_build_is_byte_deterministic(self) -> None:
-        dataset, inputs, manifest, evaluation = holdout.build_package()
+        dataset, inputs, manifest, evaluation = holdout.build_package(
+            frozen_selected_indices=self.frozen_selected_indices
+        )
         self.assertEqual(dataset, self.dataset_bytes)
         self.assertEqual(inputs, self.inputs_bytes)
         self.assertEqual(manifest, self.manifest_bytes)

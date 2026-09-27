@@ -309,23 +309,25 @@ Outputs:
     as non-tax. This supports a predicate-family/task-definition mismatch
     diagnosis, but gold inspection prohibits tuning on the same slice; an axiom
     routing follow-up must use a newly frozen independent holdout.
-11. The independent follow-up `official_predicate_routing_v1` is frozen but has
-    not been executed (package `78d478f4f1d9d76ff979`). It contains 27 Task A
+11. The independent follow-up `official_predicate_routing_v1` is complete
+    (package `78d478f4f1d9d76ff979`). It contains 27 Task A
     samples allocated 8/8/3/8 to `equivalent class`, `disjoint with`, `type`,
     and `database_cross_reference` strata, with 64 endpoint-visible target edges
     and 69 target edges in total. Sample indices, compact contexts, and exact
     non-tax gold have zero overlap with prior evidence. The locked comparison is
     `open_vocab_guarded_v3_relations` versus
     `open_vocab_guarded_v6_predicate_routed`; only prompt identity differs. Its
-    54 units had zero generation or postprocess cache hits at freeze time and
-    therefore imply 54 external calls. The primary endpoint is four-stratum
-    macro exact target F1, and the mechanism gate requires both a strict macro-F1
-    improvement and exact true positives in at least five independent samples.
+    54 units completed in 57 recorded attempts and now replay from 54/54
+    generation and postprocess cache hits. Routed-v6 raises the primary
+    four-stratum macro exact target F1 from 0 to 0.0526, but pooled target F1 is
+    only 0.0191 (2 TP, 138 FP, 67 FN). Both TP occur in two `type` samples, so the
+    required five TP-positive independent samples condition fails.
     Only four of the eight routed predicates have independent empirical support:
     independent `type` capacity is limited to three samples, and
     the other prompt routes (`has role`, `same as`, `is_conjugate_acid_of`, and
     `is_conjugate_base_of`) cannot be evaluated by this packet. Same-slice repair
-    is prohibited, and execution requires separate authorization.
+    is prohibited. The mechanism, n>=100 expansion, and deployment gates remain
+    closed.
 
 ---
 
@@ -334,10 +336,11 @@ Outputs:
 > OntoBridg shows that unconstrained open-relation generation over-produces under
 > exact scoring, while relation-only symbolic guards recover relations on a
 > frozen controlled nonce diagnostic but recover none on the completed
-> gold-stratified official-training transfer slice. Its primary contribution is
-> a bounded positive synthetic result, reproducible negative official-train
-> results, and a fail-closed protocol for deciding when open-relation predictions
-> are safe to deploy.
+> gold-stratified official-training transfer slice. Independent predicate routing
+> recovers two `type` edges but fails its five-sample mechanism gate. Its primary
+> contribution is a bounded positive synthetic result, reproducible negative
+> official-train results, and a fail-closed protocol for deciding when
+> open-relation predictions are safe to deploy.
 
 ## Related Paths
 

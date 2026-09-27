@@ -66,8 +66,15 @@ def load_frozen(
     if holdout.prior.file_sha256(Path(package["source"]["path"])) != package["source"]["sha256"]:
         raise ValueError("official source changed after freeze")
 
+    frozen_selected_indices = {
+        int(row["source_index"])
+        for row in dataset.get("samples") or []
+    }
     expected_dataset, expected_inputs, expected_manifest, expected_evaluation = (
-        holdout.build_package(model=model)
+        holdout.build_package(
+            model=model,
+            frozen_selected_indices=frozen_selected_indices,
+        )
     )
     if paths["dataset"].read_bytes() != expected_dataset:
         raise ValueError("frozen dataset differs from deterministic rebuild")
