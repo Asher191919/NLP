@@ -1,6 +1,6 @@
 # Experimental Results (OntoBridg) — filled skeleton
 
-> **Status**: blind Task A/B n = 30, guarded-v1/v2 density evaluation, calibration/axiom diagnostics, the 60-unit nonce holdout, and the 60-unit official-text relation transfer are complete; legacy oracle pilot retained for provenance | 2026-09-27  
+> **Status**: blind Task A/B n = 30, guarded-v1/v2 density evaluation, calibration/axiom diagnostics, the 60-unit nonce holdout, the 60-unit official-text relation transfer, and the 54-unit predicate-routing evaluation plus error audit are complete; legacy oracle pilot retained for provenance | 2026-09-28
 > **Metric policy**: external numbers use **official LLMs4OL 2026 Graph Similarity** (exact_match) + micro-F1. Internal proxy SGS is **not** reported as leaderboard-style SGS.  
 > **Model**: dots3-note-prev (dots studio, OpenAI-compatible free trial)  
 > **Data**: official LLMs4OL 2026 Flagship (Task A) / Reuse (Task B) train splits, no test-set claims.  
@@ -60,7 +60,7 @@ All direct systems use the same backbone (`dots3-note-prev`), temperature 0, off
 - Stratified result and combined payload audit: `official_stratified_open_openai_ab_s5_seed20260922.json` and `official_stratified_open_audit_ab_open_vocab_open_vocab_guarded_open_vocab_guarded_v2_s5_seed20260922.json`.
 - Frozen nonce manifest/result: `nonce_relation_holdout_manifest_n30_seed20260926.json` and `nonce_relation_holdout_openai_n30_seed20260926.json`.
 - Frozen official-text transfer manifest/result: `official_relation_transfer_manifest_a_n30_seed20260927.json` and `official_relation_transfer_openai_a_n30_seed20260927.json`.
-- Frozen predicate-routing package/manifest/result: `experiments/holdouts/official_predicate_routing_v1/`, `official_predicate_routing_manifest_a_n27_seed20260927.json`, and `official_predicate_routing_openai_a_n27_seed20260927.json`.
+- Frozen predicate-routing package/manifest/result/error audit: `experiments/holdouts/official_predicate_routing_v1/`, `official_predicate_routing_manifest_a_n27_seed20260927.json`, `official_predicate_routing_openai_a_n27_seed20260927.json`, and `official_predicate_routing_error_audit_a_n27_seed20260927.json`.
 
 ---
 
@@ -321,6 +321,8 @@ The frozen prompt contains eight exact predicates, but the independent packet pr
 
 Routed-v6 recovers two exact `type` edges, one in each of two independent samples. Its type-stratum F1 is 0.2105; equivalent-class, disjoint-with, and domain-stratum F1 remain zero. The routed arm emits 140 target-inventory predictions, led by 120 `type` predictions, and therefore achieves perfect predicate-inventory adherence without useful precision. The paired 10,000-replicate stratified sample-cluster bootstrap gives routed-minus-general macro F1 [0, 0.0556]. Strict macro improvement passes, but exact TP occur in only two samples. The preregistered five-sample mechanism gate fails; `scientific_deployable=false` and `confirmatory_eligible=false` remain final. Same-slice repair and n>=100 expansion are not launched.
 
+The deterministic zero-call routing audit separates exact mismatch from evidence failure. Routed-v6 generates 193 raw target candidates, accepts 140, and rejects 53. Accepted predicates are `type` 120, `same as` 12, `has role` 6, and `equivalent class` 2. Among the 138 official exact false positives, 121 carry explicit evidence and 17 carry cross-sentence evidence; 133 bind both endpoints verbatim to context. The quantity cap accounts for 42 rejected candidates, 12 samples reach the accepted limit of eight, and six samples have quantity-limit rejections. Thus routing replaces the earlier predicate-inventory mismatch with broad evidence-bound off-gold generation. This audit does not establish that off-gold predictions are semantically false or true: official gold completeness is unknown and no independent semantic adjudication was performed. It cannot authorize retuning or reopen the mechanism gate.
+
 ---
 
 ## 4.6 External anchors (cited, not re-run)
@@ -410,6 +412,7 @@ Our blind n = 30 official-train numbers are **not** directly comparable to leade
 - [x] Execute the frozen predicate-routing comparison — 54/54 locked `open_vocab_guarded_v3_relations`/`open_vocab_guarded_v6_predicate_routed` units completed in 57 recorded attempts; completed dual-layer cache replay uses zero external calls
 - [x] Score the frozen routing gate — macro target F1 improves 0 -> 0.0526, but routed-v6 has exact TP in only 2 samples versus the required 5; gate fails and no same-slice retuning is authorized
 - [x] Record predicate-routing API stability — v3/v6 use 28/29 attempts for 27 units each, with 1/2 retried samples and no failed final unit; median latency 33.639/42.690 s, maximum 110.180/135.899 s
+- [x] Predicate-routing zero-call error audit — 120/140 outputs are `type`; 133/138 exact FP bind both endpoints verbatim, so evidence binding alone does not solve sparse-gold alignment
 
 ---
 
@@ -516,6 +519,9 @@ python -B D:\NLP\src\build_official_predicate_routing_holdout.py --audit-only
 
 # replay/audit the completed 54-unit v3-control/v6-treatment result; zero API calls
 python -B D:\NLP\src\run_official_predicate_routing.py --model dots3-note-prev
+
+# rebuild the post-hoc routing error audit; zero API calls and no retuning authority
+python -B D:\NLP\src\analyze_official_predicate_routing.py
 ```
 
 **Files:**
@@ -528,5 +534,5 @@ python -B D:\NLP\src\run_official_predicate_routing.py --model dots3-note-prev
 - frozen contamination manifests/results/analyses: `official_contamination_{probe,surface}_*.json`
 - frozen nonce package: `experiments/holdouts/nonce_relation_v1/`; evaluation manifest/result: `nonce_relation_holdout_{manifest,openai}_n30_seed20260926.json`
 - frozen official-text transfer package: `experiments/holdouts/official_relation_transfer_v1/`; manifest/result/error audit: `official_relation_transfer_{manifest,openai,error_audit}_a_n30_seed20260927.json`
-- frozen independent predicate-routing package: `experiments/holdouts/official_predicate_routing_v1/`; manifest/result: `experiments/results/official_predicate_routing_{manifest,openai}_a_n27_seed20260927.json`
+- frozen independent predicate-routing package: `experiments/holdouts/official_predicate_routing_v1/`; manifest/result/error audit: `experiments/results/official_predicate_routing_{manifest,openai,error_audit}_a_n27_seed20260927.json`
 - official metric: `D:\NLP\src\ontobridg\eval\official_graph_similarity.py`

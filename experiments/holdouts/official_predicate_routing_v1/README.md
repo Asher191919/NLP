@@ -68,6 +68,7 @@ calibration, same-slice repair, and deployment changes are prohibited.
 ```powershell
 py -3 D:\NLP\src\build_official_predicate_routing_holdout.py --audit-only
 py -3 D:\NLP\src\run_official_predicate_routing.py --model dots3-note-prev
+py -3 D:\NLP\src\analyze_official_predicate_routing.py
 ```
 
 All 54 frozen units completed in 57 recorded attempts. The completed runner now
@@ -92,5 +93,19 @@ therefore false; same-slice repair, n>=100 expansion, calibration, and
 deployment remain unauthorized. The stratified paired bootstrap interval for
 routed-minus-general macro F1 is [0, 0.0556].
 
-Result artifact:
-`experiments/results/official_predicate_routing_openai_a_n27_seed20260927.json`.
+The strictly offline post-hoc audit finds 193 raw target candidates, 140
+accepted target predictions, and 53 rejected target candidates. The accepted
+inventory is dominated by `type` (120/140, 85.7%), followed by `same as` (12),
+`has role` (6), and `equivalent class` (2). Of the 138 official exact false
+positives, 121 use explicit evidence and 17 use cross-sentence evidence; 133
+have both endpoints bound verbatim to the context. The quantity limit rejects
+42 target candidates, 12 samples reach the eight-relation accepted cap, and six
+samples contain a quantity-limit rejection. These are exact-score diagnostics,
+not semantic adjudication: official gold completeness is not established, so
+off-gold predictions cannot be called correct or incorrect without additional
+annotation. The audit cannot authorize same-slice tuning or reopen the gate.
+
+Result artifacts:
+`experiments/results/official_predicate_routing_openai_a_n27_seed20260927.json`
+and
+`experiments/results/official_predicate_routing_error_audit_a_n27_seed20260927.json`.

@@ -10,6 +10,7 @@ SRC = Path(__file__).resolve().parents[1]
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
+import analyze_official_predicate_routing as error_audit
 import build_official_predicate_routing_holdout as holdout
 import run_official_predicate_routing as runner
 
@@ -121,6 +122,35 @@ class OfficialPredicateRoutingHoldoutTests(unittest.TestCase):
         self.assertEqual(inputs, self.inputs_bytes)
         self.assertEqual(manifest, self.manifest_bytes)
         self.assertEqual(evaluation, self.evaluation)
+
+    def test_error_audit_keeps_evidence_binding_separate_from_exact_score(self) -> None:
+        candidate = {
+            "canonicalization": {
+                "subject_method": "context_exact",
+                "object_method": "context_exact",
+            }
+        }
+        self.assertEqual(
+            error_audit.canonicalization_binding(candidate),
+            "both_endpoints_context_exact",
+        )
+        category, _ = error_audit.official_exact_category(
+            ("meter", "type", "length unit"),
+            {("angstrom", "type", "length unit")},
+        )
+        self.assertEqual(category, "predicate_object_exact")
+
+    def test_error_audit_binding_reports_partial_or_missing_context_match(self) -> None:
+        self.assertEqual(
+            error_audit.canonicalization_binding(
+                {"canonicalization": {"subject_method": "context_exact"}}
+            ),
+            "one_endpoint_context_exact",
+        )
+        self.assertEqual(
+            error_audit.canonicalization_binding({}),
+            "no_endpoint_context_exact",
+        )
 
     def test_runner_audit_finds_no_prefrozen_cache(self) -> None:
         hits, replayable = runner.cache_status(

@@ -321,7 +321,13 @@ Outputs:
     generation and postprocess cache hits. Routed-v6 raises the primary
     four-stratum macro exact target F1 from 0 to 0.0526, but pooled target F1 is
     only 0.0191 (2 TP, 138 FP, 67 FN). Both TP occur in two `type` samples, so the
-    required five TP-positive independent samples condition fails.
+    required five TP-positive independent samples condition fails. A zero-call
+    post-hoc audit shows that 120/140 routed outputs are `type`; 133/138 exact
+    false positives have both endpoints bound verbatim to context and all 138
+    carry accepted explicit or cross-sentence evidence. This is broad,
+    evidence-bound off-gold generation rather than a missing-evidence failure.
+    Because no independent semantic adjudication was performed, the audit does
+    not assert that off-gold outputs are semantically true or false.
     Only four of the eight routed predicates have independent empirical support:
     independent `type` capacity is limited to three samples, and
     the other prompt routes (`has role`, `same as`, `is_conjugate_acid_of`, and

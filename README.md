@@ -47,6 +47,8 @@ OAEI/LLMs4OL 2026 提交窗口已过，项目面向 **LLMs4OL 2027 + 论文发�
 
 后续独立检验 `official_predicate_routing_v1` 已完成（package ID `78d478f4f1d9d76ff979`）：27 个独立 Task A 样本按 `equivalent class` / `disjoint with` / `type` / domain 分配为 8/8/3/8，共有 64 条端点可见 target gold（69 条完整 target gold），与既有证据的样本、压缩 context 和 exact non-tax gold 重叠均为 0。54/54 个冻结单元在 57 次记录尝试内成功，完成后生成和后处理缓存均为 54/54，离线重放 0 次外部调用。与 relation-only v3 对照相比，routed-v6 将四分层 macro exact target F1 从 0 提高到 0.0526，但 pooled target P/R/F1 仅为 0.0143/0.0290/0.0191：140 个目标谓词预测中有 2 个 TP 和 138 个 FP。两个 TP 均来自 2 个独立 `type` 样本；`equivalent class`、`disjoint with` 和 `database_cross_reference` 仍为 0 TP。因正例样本数 2 低于预注册门槛 5，机制门失败，`scientific_deployable=false`、`confirmatory_eligible=false`；协议禁止同切片修补，并据此不启动 n≥100 扩样。
 
+零调用错误审计进一步表明，routed-v6 的 140 个目标输出中有 120 个 `type`（85.7%）；138 个 official exact FP 中，121 个带显式证据、17 个带跨句证据，133 个预测的两个端点都逐字绑定到上下文。该结果定位的是“广泛输出文本可证据化关系但与稀疏 official gold 不对齐”，而不是单纯缺证据；由于未做独立语义裁决，off-gold 既不能自动视为语义错误，也不能视为正确关系，机制门保持关闭。
+
 `experiments/results/competition_sim_metrics.json` 中的高分只用于 synthetic mock 方法自检，不能与官方数据或 pro-team 榜单结果比较。
 
 ## 如何运行

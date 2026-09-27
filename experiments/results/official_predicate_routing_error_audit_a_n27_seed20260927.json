@@ -1,0 +1,659 @@
+{
+  "meta": {
+    "protocol": "official_predicate_routing_error_audit_v1",
+    "status": "complete",
+    "post_hoc_diagnostic": true,
+    "official_metric": false,
+    "contains_source_text": false,
+    "contains_protected_gold": true,
+    "result_path": "D:\\NLP\\experiments\\results\\official_predicate_routing_openai_a_n27_seed20260927.json",
+    "result_sha256": "9c5c5c927c6d89a30939f8535d672caff2ceab7f0a09c93f22165d3a674d8983",
+    "package_id": "78d478f4f1d9d76ff979",
+    "evaluation_manifest_sha256": "b4ba7b3f9b1d32b931e9483b37c41f9c3db75970a9928af69e1e4205cda42822",
+    "model": "dots3-note-prev",
+    "recorded_unit_attempts": 57
+  },
+  "diagnostic_policy": {
+    "official_exact_scores_unchanged": true,
+    "off_gold_does_not_imply_semantically_false": true,
+    "evidence_binding_does_not_imply_official_correctness": true,
+    "may_tune_prompt_or_thresholds": false,
+    "may_fit_or_apply_calibrator": false,
+    "may_authorize_external_calls": false,
+    "may_authorize_deployment": false
+  },
+  "systems": {
+    "open_vocab_guarded_v3_relations": {
+      "samples": 27,
+      "accepted_nonself_nontax_candidates": 73,
+      "raw_target_candidates": 0,
+      "accepted_target_predictions": 0,
+      "rejected_target_candidates": 0,
+      "official_exact_tp": 0,
+      "official_exact_fp": 0,
+      "accepted_target_predicate_counts": {},
+      "raw_target_predicate_counts": {},
+      "rejected_target_predicate_counts": {},
+      "official_exact_prediction_categories": {},
+      "missed_gold_coverage_categories": {
+        "no_endpoint_or_predicate_generated": 69
+      },
+      "off_gold_evidence_modes": {},
+      "off_gold_endpoint_binding": {},
+      "rejected_target_reasons": {},
+      "samples_at_accepted_quantity_limit": 4,
+      "samples_with_quantity_limit_rejection": 0,
+      "by_assigned_stratum_target_predicates": {
+        "disjoint_with": {},
+        "domain_specific": {},
+        "equivalent_class": {},
+        "type": {}
+      },
+      "by_assigned_stratum_exact_categories": {
+        "disjoint_with": {},
+        "domain_specific": {},
+        "equivalent_class": {},
+        "type": {}
+      },
+      "off_gold_examples": {}
+    },
+    "open_vocab_guarded_v6_predicate_routed": {
+      "samples": 27,
+      "accepted_nonself_nontax_candidates": 140,
+      "raw_target_candidates": 193,
+      "accepted_target_predictions": 140,
+      "rejected_target_candidates": 53,
+      "official_exact_tp": 2,
+      "official_exact_fp": 138,
+      "accepted_target_predicate_counts": {
+        "type": 120,
+        "same as": 12,
+        "has role": 6,
+        "equivalent class": 2
+      },
+      "raw_target_predicate_counts": {
+        "type": 158,
+        "has role": 14,
+        "same as": 14,
+        "equivalent class": 6,
+        "database_cross_reference": 1
+      },
+      "rejected_target_predicate_counts": {
+        "type": 38,
+        "has role": 8,
+        "equivalent class": 4,
+        "same as": 2,
+        "database_cross_reference": 1
+      },
+      "official_exact_prediction_categories": {
+        "no_local_gold_overlap": 73,
+        "one_endpoint_exact": 36,
+        "predicate_object_exact": 11,
+        "both_endpoints_exact_not_paired": 6,
+        "one_endpoint_surface": 4,
+        "predicate_subject_exact": 3,
+        "endpoints_reversed": 2,
+        "exact": 2,
+        "predicate_only": 2,
+        "endpoints_exact_predicate_mismatch": 1
+      },
+      "missed_gold_coverage_categories": {
+        "no_endpoint_or_predicate_generated": 23,
+        "both_endpoints_generated_unpaired": 19,
+        "one_endpoint_generated": 18,
+        "same_predicate_one_exact_endpoint": 3,
+        "exact": 2,
+        "reversed_endpoints_wrong_predicate": 2,
+        "exact_endpoints_wrong_predicate": 1,
+        "one_surface_endpoint_generated": 1
+      },
+      "off_gold_evidence_modes": {
+        "explicit": 121,
+        "cross_sentence": 17
+      },
+      "off_gold_endpoint_binding": {
+        "both_endpoints_context_exact": 133,
+        "no_endpoint_context_exact": 5
+      },
+      "rejected_target_reasons": {
+        "quantity_limit": 42,
+        "evidence_missing_endpoints": 9,
+        "evidence_not_verbatim": 2
+      },
+      "samples_at_accepted_quantity_limit": 12,
+      "samples_with_quantity_limit_rejection": 6,
+      "by_assigned_stratum_target_predicates": {
+        "disjoint_with": {
+          "type": 35,
+          "has role": 2
+        },
+        "domain_specific": {
+          "type": 41,
+          "same as": 11,
+          "has role": 4
+        },
+        "equivalent_class": {
+          "type": 28,
+          "equivalent class": 2,
+          "same as": 1
+        },
+        "type": {
+          "type": 16
+        }
+      },
+      "by_assigned_stratum_exact_categories": {
+        "disjoint_with": {
+          "no_local_gold_overlap": 17,
+          "one_endpoint_exact": 16,
+          "both_endpoints_exact_not_paired": 3,
+          "one_endpoint_surface": 1
+        },
+        "domain_specific": {
+          "no_local_gold_overlap": 41,
+          "one_endpoint_exact": 10,
+          "endpoints_reversed": 2,
+          "one_endpoint_surface": 2,
+          "endpoints_exact_predicate_mismatch": 1
+        },
+        "equivalent_class": {
+          "no_local_gold_overlap": 15,
+          "one_endpoint_exact": 10,
+          "both_endpoints_exact_not_paired": 3,
+          "predicate_subject_exact": 2,
+          "one_endpoint_surface": 1
+        },
+        "type": {
+          "predicate_object_exact": 11,
+          "exact": 2,
+          "predicate_only": 2,
+          "predicate_subject_exact": 1
+        }
+      },
+      "off_gold_examples": {
+        "no_local_gold_overlap": [
+          {
+            "source_index": 216,
+            "assigned_stratum": "equivalent_class",
+            "prediction": [
+              "number density",
+              "type",
+              "quantitative property"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 216,
+            "assigned_stratum": "equivalent_class",
+            "prediction": [
+              "electromagnetic radiation quantity",
+              "type",
+              "quantitative property"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 216,
+            "assigned_stratum": "equivalent_class",
+            "prediction": [
+              "thermodynamic quantities",
+              "type",
+              "quantitative property"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 216,
+            "assigned_stratum": "equivalent_class",
+            "prediction": [
+              "temperature",
+              "type",
+              "thermodynamic quantity"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 216,
+            "assigned_stratum": "equivalent_class",
+            "prediction": [
+              "thermal diffusivity",
+              "type",
+              "thermodynamic quantity"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          }
+        ],
+        "one_endpoint_exact": [
+          {
+            "source_index": 216,
+            "assigned_stratum": "equivalent_class",
+            "prediction": [
+              "heat",
+              "type",
+              "thermodynamic quantity"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 303,
+            "assigned_stratum": "equivalent_class",
+            "prediction": [
+              "bottom",
+              "type",
+              "minimum"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 559,
+            "assigned_stratum": "equivalent_class",
+            "prediction": [
+              "natural solar radiation",
+              "same as",
+              "white light"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 684,
+            "assigned_stratum": "equivalent_class",
+            "prediction": [
+              "critical level",
+              "type",
+              "threshold"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 684,
+            "assigned_stratum": "equivalent_class",
+            "prediction": [
+              "critical point",
+              "type",
+              "threshold"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          }
+        ],
+        "predicate_subject_exact": [
+          {
+            "source_index": 303,
+            "assigned_stratum": "equivalent_class",
+            "prediction": [
+              "bottom",
+              "equivalent class",
+              "basal layer"
+            ],
+            "near_gold_triples": [
+              [
+                "bottom",
+                "equivalent class",
+                "floor"
+              ]
+            ],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 303,
+            "assigned_stratum": "equivalent_class",
+            "prediction": [
+              "bottom",
+              "equivalent class",
+              "base of the troposphere"
+            ],
+            "near_gold_triples": [
+              [
+                "bottom",
+                "equivalent class",
+                "floor"
+              ]
+            ],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 2245,
+            "assigned_stratum": "type",
+            "prediction": [
+              "angstrom",
+              "type",
+              "angstrom based unit class"
+            ],
+            "near_gold_triples": [
+              [
+                "angstrom",
+                "type",
+                "length unit"
+              ]
+            ],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          }
+        ],
+        "endpoints_reversed": [
+          {
+            "source_index": 545,
+            "assigned_stratum": "domain_specific",
+            "prediction": [
+              "spondias dulcis",
+              "type",
+              "ambarella plant"
+            ],
+            "near_gold_triples": [
+              [
+                "ambarella plant",
+                "database_cross_reference",
+                "spondias dulcis"
+              ]
+            ],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 2315,
+            "assigned_stratum": "domain_specific",
+            "prediction": [
+              "malva verticillata",
+              "type",
+              "mallow plant"
+            ],
+            "near_gold_triples": [
+              [
+                "mallow plant",
+                "database_cross_reference",
+                "malva verticillata"
+              ]
+            ],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          }
+        ],
+        "both_endpoints_exact_not_paired": [
+          {
+            "source_index": 1735,
+            "assigned_stratum": "disjoint_with",
+            "prediction": [
+              "dimictic lake",
+              "type",
+              "holomictic lake"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "cross_sentence",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 1735,
+            "assigned_stratum": "disjoint_with",
+            "prediction": [
+              "monomictic lake",
+              "type",
+              "holomictic lake"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "cross_sentence",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 1735,
+            "assigned_stratum": "disjoint_with",
+            "prediction": [
+              "polymictic lake",
+              "type",
+              "holomictic lake"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "cross_sentence",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 2483,
+            "assigned_stratum": "equivalent_class",
+            "prediction": [
+              "climate",
+              "type",
+              "time mean"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 2483,
+            "assigned_stratum": "equivalent_class",
+            "prediction": [
+              "climatic average",
+              "type",
+              "time mean"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          }
+        ],
+        "predicate_object_exact": [
+          {
+            "source_index": 2245,
+            "assigned_stratum": "type",
+            "prediction": [
+              "meter",
+              "type",
+              "length unit"
+            ],
+            "near_gold_triples": [
+              [
+                "angstrom",
+                "type",
+                "length unit"
+              ]
+            ],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 2245,
+            "assigned_stratum": "type",
+            "prediction": [
+              "micrometer",
+              "type",
+              "length unit"
+            ],
+            "near_gold_triples": [
+              [
+                "angstrom",
+                "type",
+                "length unit"
+              ]
+            ],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 2245,
+            "assigned_stratum": "type",
+            "prediction": [
+              "nanometer",
+              "type",
+              "length unit"
+            ],
+            "near_gold_triples": [
+              [
+                "angstrom",
+                "type",
+                "length unit"
+              ]
+            ],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 2245,
+            "assigned_stratum": "type",
+            "prediction": [
+              "centimeter",
+              "type",
+              "length unit"
+            ],
+            "near_gold_triples": [
+              [
+                "angstrom",
+                "type",
+                "length unit"
+              ]
+            ],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 4105,
+            "assigned_stratum": "type",
+            "prediction": [
+              "micromolar",
+              "type",
+              "concentration unit"
+            ],
+            "near_gold_triples": [
+              [
+                "colony forming unit per volume",
+                "type",
+                "concentration unit"
+              ]
+            ],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          }
+        ],
+        "predicate_only": [
+          {
+            "source_index": 2245,
+            "assigned_stratum": "type",
+            "prediction": [
+              "mile",
+              "type",
+              "mile based unit family"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 2245,
+            "assigned_stratum": "type",
+            "prediction": [
+              "league",
+              "type",
+              "league based unit hierarchy"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          }
+        ],
+        "endpoints_exact_predicate_mismatch": [
+          {
+            "source_index": 2969,
+            "assigned_stratum": "domain_specific",
+            "prediction": [
+              "zebu",
+              "type",
+              "bos taurus"
+            ],
+            "near_gold_triples": [
+              [
+                "zebu",
+                "database_cross_reference",
+                "bos taurus"
+              ]
+            ],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          }
+        ],
+        "one_endpoint_surface": [
+          {
+            "source_index": 3274,
+            "assigned_stratum": "equivalent_class",
+            "prediction": [
+              "seamounts",
+              "type",
+              "mountains"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 3557,
+            "assigned_stratum": "domain_specific",
+            "prediction": [
+              "psidium cattleyanum",
+              "type",
+              "guava plants"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 3557,
+            "assigned_stratum": "domain_specific",
+            "prediction": [
+              "psidium guineense",
+              "type",
+              "guava plants"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          },
+          {
+            "source_index": 4070,
+            "assigned_stratum": "disjoint_with",
+            "prediction": [
+              "amount-of-matter",
+              "type",
+              "bulk substances"
+            ],
+            "near_gold_triples": [],
+            "evidence_mode": "explicit",
+            "endpoint_binding": "both_endpoints_context_exact"
+          }
+        ]
+      }
+    }
+  },
+  "conclusions": {
+    "general_target_predictions": 0,
+    "routed_target_predictions": 140,
+    "routed_type_predictions": 120,
+    "routed_type_prediction_fraction": 0.8571428571428571,
+    "routed_official_exact_tp": 2,
+    "routed_official_exact_fp": 138,
+    "dominant_observed_behavior": "broad_type_overgeneration",
+    "official_gold_completeness_not_established": true,
+    "semantic_correctness_of_off_gold_predictions_not_adjudicated": true,
+    "mechanism_gate_reopened": false,
+    "retuning_authorized": false,
+    "scientific_deployable": false,
+    "confirmatory_eligible": false
+  }
+}
