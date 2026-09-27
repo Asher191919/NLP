@@ -1,0 +1,12 @@
+# OntoBridg core dependencies (stdlib-first)
+# Optional:
+requests>=2.28.0
+# NLTK only needed for WordNet baselines:
+# nltk>=3.8
+# Heavy local LLM stack (optional, not default):
+# torch>=2.0
+# transformers>=4.40
+# Official 2026 semantic_match secondary analysis only:
+# sentence-transformers>=6.1
+# rapidfuzz>=3.14
+# einops>=0.8

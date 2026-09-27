@@ -1,0 +1,980 @@
+{
+  "meta": {
+    "protocol": "v5_axiom_confirmatory_semantic_secondary_v2",
+    "status": "complete_secondary_analysis",
+    "protocol_file_sha256": "954c51494f309f845b7b4fc0ca27f3bda56b9ded426795fe81fad3889bda7562",
+    "official_source_sha256": "eeea8664bb81828608a26502d893696851fb687129564b4e58e48cc00c767773",
+    "model_id": "nomic-ai/nomic-embed-text-v1.5",
+    "model_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+    "remote_code_dependency": {
+      "model_id": "nomic-ai/nomic-bert-2048",
+      "revision": "7710840340a098cfb869c4f65e87cf2b1b70caca"
+    },
+    "threshold": 0.9,
+    "api_calls": 0,
+    "python": "3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "dependency_versions": {
+      "sentence-transformers": "6.1.0",
+      "transformers": "5.12.1",
+      "torch": "2.12.1",
+      "rapidfuzz": "3.14.6",
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "networkx": "3.6.1",
+      "huggingface-hub": "1.19.0",
+      "einops": "0.8.2"
+    }
+  },
+  "scope": {
+    "task": "a",
+    "triple_channel": "nontax_only",
+    "aggregation": "mean_of_per_sample_nontax_only_scores",
+    "n_samples": 24,
+    "selection_is_endpoint_visible_gold_stratified": true
+  },
+  "systems": {
+    "base_v5": {
+      "exact_mean": {
+        "edge_f1": 0.14166666666666666,
+        "neighborhood_similarity": 0.1388888888888889,
+        "taxonomy_similarity": 0.0,
+        "graph_similarity": 0.09351851851851851
+      },
+      "semantic_mean": {
+        "edge_f1": 0.14166666666666666,
+        "neighborhood_similarity": 0.1388888888888889,
+        "taxonomy_similarity": 0.0,
+        "graph_similarity": 0.09351851851851851
+      },
+      "semantic_minus_exact": {
+        "edge_f1": 0.0,
+        "neighborhood_similarity": 0.0,
+        "taxonomy_similarity": 0.0,
+        "graph_similarity": 0.0
+      },
+      "sample_change_counts": {
+        "improved": 0,
+        "unchanged": 24,
+        "degraded": 0
+      },
+      "samples": [
+        {
+          "sample_index": 269,
+          "gold_nontax": 2,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 290,
+          "gold_nontax": 3,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 785,
+          "gold_nontax": 3,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 856,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 882,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 1070,
+          "gold_nontax": 2,
+          "pred_nontax": 3,
+          "exact": {
+            "edge_f1": 0.4,
+            "neighborhood_similarity": 0.3333333333333333,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.24444444444444446
+          },
+          "semantic": {
+            "edge_f1": 0.4,
+            "neighborhood_similarity": 0.3333333333333333,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.24444444444444446
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 1169,
+          "gold_nontax": 15,
+          "pred_nontax": 1,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 1174,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 1281,
+          "gold_nontax": 1,
+          "pred_nontax": 1,
+          "exact": {
+            "edge_f1": 1.0,
+            "neighborhood_similarity": 1.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.6666666666666666
+          },
+          "semantic": {
+            "edge_f1": 1.0,
+            "neighborhood_similarity": 1.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.6666666666666666
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 1523,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 1594,
+          "gold_nontax": 1,
+          "pred_nontax": 7,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 1628,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 1736,
+          "gold_nontax": 2,
+          "pred_nontax": 1,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 1845,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 2563,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 2896,
+          "gold_nontax": 2,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 2945,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 3153,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 3161,
+          "gold_nontax": 7,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 3231,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 3509,
+          "gold_nontax": 3,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 4034,
+          "gold_nontax": 1,
+          "pred_nontax": 1,
+          "exact": {
+            "edge_f1": 1.0,
+            "neighborhood_similarity": 1.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.6666666666666666
+          },
+          "semantic": {
+            "edge_f1": 1.0,
+            "neighborhood_similarity": 1.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.6666666666666666
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 4084,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 4185,
+          "gold_nontax": 1,
+          "pred_nontax": 1,
+          "exact": {
+            "edge_f1": 1.0,
+            "neighborhood_similarity": 1.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.6666666666666666
+          },
+          "semantic": {
+            "edge_f1": 1.0,
+            "neighborhood_similarity": 1.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.6666666666666666
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        }
+      ]
+    },
+    "frozen_calibrated_v5": {
+      "exact_mean": {
+        "edge_f1": 0.09999999999999999,
+        "neighborhood_similarity": 0.09722222222222222,
+        "taxonomy_similarity": 0.0,
+        "graph_similarity": 0.06574074074074074
+      },
+      "semantic_mean": {
+        "edge_f1": 0.09999999999999999,
+        "neighborhood_similarity": 0.09722222222222222,
+        "taxonomy_similarity": 0.0,
+        "graph_similarity": 0.06574074074074074
+      },
+      "semantic_minus_exact": {
+        "edge_f1": 0.0,
+        "neighborhood_similarity": 0.0,
+        "taxonomy_similarity": 0.0,
+        "graph_similarity": 0.0
+      },
+      "sample_change_counts": {
+        "improved": 0,
+        "unchanged": 24,
+        "degraded": 0
+      },
+      "samples": [
+        {
+          "sample_index": 269,
+          "gold_nontax": 2,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 290,
+          "gold_nontax": 3,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 785,
+          "gold_nontax": 3,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 856,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 882,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 1070,
+          "gold_nontax": 2,
+          "pred_nontax": 3,
+          "exact": {
+            "edge_f1": 0.4,
+            "neighborhood_similarity": 0.3333333333333333,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.24444444444444446
+          },
+          "semantic": {
+            "edge_f1": 0.4,
+            "neighborhood_similarity": 0.3333333333333333,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.24444444444444446
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 1169,
+          "gold_nontax": 15,
+          "pred_nontax": 1,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 1174,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 1281,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 1523,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 1594,
+          "gold_nontax": 1,
+          "pred_nontax": 7,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 1628,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 1736,
+          "gold_nontax": 2,
+          "pred_nontax": 1,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 1845,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 2563,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 2896,
+          "gold_nontax": 2,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 2945,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 3153,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 3161,
+          "gold_nontax": 7,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 3231,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 3509,
+          "gold_nontax": 3,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 4034,
+          "gold_nontax": 1,
+          "pred_nontax": 1,
+          "exact": {
+            "edge_f1": 1.0,
+            "neighborhood_similarity": 1.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.6666666666666666
+          },
+          "semantic": {
+            "edge_f1": 1.0,
+            "neighborhood_similarity": 1.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.6666666666666666
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 4084,
+          "gold_nontax": 1,
+          "pred_nontax": 0,
+          "exact": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        },
+        {
+          "sample_index": 4185,
+          "gold_nontax": 1,
+          "pred_nontax": 1,
+          "exact": {
+            "edge_f1": 1.0,
+            "neighborhood_similarity": 1.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.6666666666666666
+          },
+          "semantic": {
+            "edge_f1": 1.0,
+            "neighborhood_similarity": 1.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.6666666666666666
+          },
+          "semantic_minus_exact_graph_similarity": 0.0
+        }
+      ]
+    }
+  },
+  "calibrated_minus_base": {
+    "exact_mean": {
+      "edge_f1": -0.04166666666666667,
+      "neighborhood_similarity": -0.04166666666666667,
+      "taxonomy_similarity": 0.0,
+      "graph_similarity": -0.027777777777777776
+    },
+    "semantic_mean": {
+      "edge_f1": -0.04166666666666667,
+      "neighborhood_similarity": -0.04166666666666667,
+      "taxonomy_similarity": 0.0,
+      "graph_similarity": -0.027777777777777776
+    }
+  },
+  "locked_interpretation": {
+    "secondary_only": true,
+    "authorize_threshold_or_rule_retuning": false,
+    "can_change_preregistered_gate": false,
+    "can_change_deployment_status": false,
+    "exact_match_remains_primary": true
+  },
+  "scientific_deployable": false,
+  "confirmatory_eligible": false,
+  "reason": "secondary_metric_cannot_override_failed_exact_confirmatory_gate"
+}

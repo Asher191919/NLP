@@ -1,0 +1,1742 @@
+{
+  "meta": {
+    "protocol": "llms4ol2026_blind_v1",
+    "audit_only": true,
+    "external_destination": "https://note3-prev-api.askdiandian.com/v1",
+    "model": "dots3-note-prev",
+    "systems": [
+      "closed_vocab",
+      "open_vocab"
+    ],
+    "gold_visible_to_model": false,
+    "contains_source_text": false,
+    "estimated_calls": 120,
+    "total_prompt_chars": 309076
+  },
+  "tasks": {
+    "task_a": {
+      "task_name": "Flagship",
+      "n_samples": 30,
+      "estimated_calls": 60,
+      "samples": [
+        {
+          "sample_index": 0,
+          "sample_id_sha256": "2e9358afe3d8d481eb7a805136b93a196e7580ac62c464b7de2fe0ba78929ae1",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1426,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 1,
+            "taxonomy": 4,
+            "nontax": 1
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "d42a56edeb05f81f3c4aa16486d7c52d903f28e182e75941c1a52e858f2120f9",
+              "chars": 1852
+            },
+            "open_vocab": {
+              "sha256": "a555241a5d784cb7ea22c22d41c8187b40668cfaf892b1a830baeb87ad2c0d93",
+              "chars": 1932
+            }
+          }
+        },
+        {
+          "sample_index": 1,
+          "sample_id_sha256": "55678559059a6830969c29910a3dd6dbfc86dbe6599b96c3c72e4916da478204",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1105,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 6,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "a69d97cf2cc3cb7797d98f7b84057eef68cbcf50cd5b52be955d809689ecbd63",
+              "chars": 1531
+            },
+            "open_vocab": {
+              "sha256": "8e80e8f46b4dd86d75a1230344385b63b93881f4ff75ca9f633ce5587cd8402a",
+              "chars": 1611
+            }
+          }
+        },
+        {
+          "sample_index": 2,
+          "sample_id_sha256": "81f84ad4bb8f1a1de427336a2397826683b36d0692393ea9738cedbb178e0132",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2254,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 30,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "93779fd502bfbcf44d1272af916e5b44a9fa43f5aa91ee68f7a625fcfc3335ea",
+              "chars": 2680
+            },
+            "open_vocab": {
+              "sha256": "086d8da1e30bb2e8c69770f6324607f9072b96a10cb4d2bd0289757adbb31d72",
+              "chars": 2760
+            }
+          }
+        },
+        {
+          "sample_index": 3,
+          "sample_id_sha256": "64f69949af0ba61fab745e61694d0556b8d443d65fb26c547125c2e0470990c2",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1524,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 7,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "8c4f6e82819a4ddef0b9c2196089f24c306426f6bb770265f1bb4bdcdb48c2fc",
+              "chars": 1950
+            },
+            "open_vocab": {
+              "sha256": "46ed206377aa36b3a911505a3345efad8bee6c84f086d526e3734732d9056e4b",
+              "chars": 2030
+            }
+          }
+        },
+        {
+          "sample_index": 4,
+          "sample_id_sha256": "1bd907fb7c91846a89435fd180dcff472ef83afa1dfc2a5dd2de19dd76a2b9a3",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2049,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 6,
+            "taxonomy": 1,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "d7ac3d9a81ed6135012ba1f6d7b5da2617d03223e83a73a958c2e69dd558d44c",
+              "chars": 2475
+            },
+            "open_vocab": {
+              "sha256": "201c68a1309618b0ad19b7f8dfbc62e92766cd1b41c5ac7c56efd99ac9f0b1a0",
+              "chars": 2555
+            }
+          }
+        },
+        {
+          "sample_index": 5,
+          "sample_id_sha256": "f1c124042736d58055d3bfc5e6ab5163bef68f90cf70325b19fc3aaf7ae6d088",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1601,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 8,
+            "taxonomy": 0,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "76aa7e89ed58fc187b1c5753ecc60ca6ccf0cab5bc89a11ed57af0631c7cc5b8",
+              "chars": 2027
+            },
+            "open_vocab": {
+              "sha256": "3ef3559442ff60d65c22c96344d2114040e892e49ec17ae275dc9d80f819809e",
+              "chars": 2107
+            }
+          }
+        },
+        {
+          "sample_index": 6,
+          "sample_id_sha256": "6096a86b830bfc41905137e91b3ca2dbf229a2197e5c92110aa7d7aa97893f31",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2087,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 5,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "36c69f02f520c35c1c6f23ef71b5d6e912c4df078fd92220700848a4a7af3c17",
+              "chars": 2513
+            },
+            "open_vocab": {
+              "sha256": "b2b1fc4bfdc0946c09d33220cb873172531224bd38ab7d2389ada3fa8bf4287c",
+              "chars": 2593
+            }
+          }
+        },
+        {
+          "sample_index": 7,
+          "sample_id_sha256": "5c4dfa2ce3a5efa67f45c30f5f3a2b7932c245d57402b7b6b9f4963aca282a91",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 629,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 6,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "c9ffce5ac7dd4d9c9b5904b192463e8be26772ee8738208daf0b012f0bf6005f",
+              "chars": 1055
+            },
+            "open_vocab": {
+              "sha256": "4bb58b9dab5ba0446fe7f7e09ade04d808189112bdc38616686037561393b2fe",
+              "chars": 1135
+            }
+          }
+        },
+        {
+          "sample_index": 8,
+          "sample_id_sha256": "eb76f246b7202ced3a2a497856f29108ba00e723af3edbecdb921d96292522c4",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2809,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 15,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "801464ced24176bbf4b022c6b611c8b4eef7007944e8748a05da12e5669d1cb7",
+              "chars": 3235
+            },
+            "open_vocab": {
+              "sha256": "44373afc55ab35b9229b3d0cb3a5a949b0363ebda857008cc1ad2cdf28609a95",
+              "chars": 3315
+            }
+          }
+        },
+        {
+          "sample_index": 9,
+          "sample_id_sha256": "5d89c69e1bcb957c51f1511042c7eff62ea8ec844932b7f69ac9ef384517b297",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1255,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 6,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "95e53aca06cea15d0c167a834721e554f88494ba4399334514b79ab7822e05ab",
+              "chars": 1681
+            },
+            "open_vocab": {
+              "sha256": "c8f4536f4d391a4cd6f967983170df394ded6bebfca8dfccfb9084c7890231a8",
+              "chars": 1761
+            }
+          }
+        },
+        {
+          "sample_index": 10,
+          "sample_id_sha256": "cb56e95d5b4913f22ed449a1756c276b042bf2e6c8d1bb55e444fc6822ca2c66",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1829,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 7,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "95b3658807dfd13d690e674afe2e3ec068ba6717e388c095460cded9be85b2a4",
+              "chars": 2255
+            },
+            "open_vocab": {
+              "sha256": "c227e5449678788643eec4e392530bddd72b46ea515c9c7d6243a3e039fc8742",
+              "chars": 2335
+            }
+          }
+        },
+        {
+          "sample_index": 11,
+          "sample_id_sha256": "816f5d4af3120321a3e670e57e4a80689d5d0e8120fb91404120a51d82e7e88e",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2858,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 30,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "ab13dc1d75c35dc5f490b418ebd43f1119d6f8fd07fe1938c7ed6f3b98c1a1e3",
+              "chars": 3284
+            },
+            "open_vocab": {
+              "sha256": "7d5babb551d48bacfc71ddfa3a0081c75137ee9cc1385163c6acf45e75cdd0ab",
+              "chars": 3364
+            }
+          }
+        },
+        {
+          "sample_index": 12,
+          "sample_id_sha256": "9855b806f7b844525a341942745a732f031bbf8fc4ad119311751415fd8fb240",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2061,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 18,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "b1f89c316941c7e90e47b7c458bcc8dd14117dc7d7b46a9ccd22db15ecc300e8",
+              "chars": 2487
+            },
+            "open_vocab": {
+              "sha256": "40f3d9d70d05f34a98e65638d0459c7ffb16b1d9eb5b3bef5557289016e0f13b",
+              "chars": 2567
+            }
+          }
+        },
+        {
+          "sample_index": 13,
+          "sample_id_sha256": "34b1c8a323b7cf9830127e599073b97175a280752edad544e83e30171f4f5d8a",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 517,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 5,
+            "taxonomy": 0,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "7e3e3c1924eaaf5b8c3878c5aae6498d2fcfe79096ff1cb4a18a0d862c2379b4",
+              "chars": 943
+            },
+            "open_vocab": {
+              "sha256": "fd9a0412e7935aaa2acdef61aed5587776c71b5605d0c7a6022d48809be9361e",
+              "chars": 1023
+            }
+          }
+        },
+        {
+          "sample_index": 14,
+          "sample_id_sha256": "56dafb3ffa9f05858d5a512f8adc5ceb09a609e58b51e6b44582f8e015d4140e",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2401,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 16,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "a6285748e4d6f323b1feb981d499ffe358b40278164978b969d657d2c1aca5b3",
+              "chars": 2827
+            },
+            "open_vocab": {
+              "sha256": "5fff50c9c74010bdec714e5783f593edaabba48b4c637fac71a0a4e7e51c7916",
+              "chars": 2907
+            }
+          }
+        },
+        {
+          "sample_index": 15,
+          "sample_id_sha256": "d34167e1f74b79a835208749bfd76e6ed6eca55b7a81d1c14d1816d2c4c5a8e0",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1773,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 9,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "c5f4481519e6175ada10b7315d77bd5b8b3a669247bca6895e410d77b44e8c04",
+              "chars": 2199
+            },
+            "open_vocab": {
+              "sha256": "a6b1ca390f1c0bbc9a3787ee3e9804bbde7c0e13cd14c949b15f6d010e4a93aa",
+              "chars": 2279
+            }
+          }
+        },
+        {
+          "sample_index": 16,
+          "sample_id_sha256": "4e6b3417ffcfe567368782e056a13d7c6f3a7bde3b097ccde62c6d78b28b4551",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1068,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 7,
+            "taxonomy": 0,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "70adcc79a1b1c09c42e2089cfd6aa10b510cd038e78702e3e82bc35a9fcd1154",
+              "chars": 1494
+            },
+            "open_vocab": {
+              "sha256": "f04ad85b4fd6d9bfda2c35be6f5cfbaf26e8daacd17b31ba8e70064853ba1799",
+              "chars": 1574
+            }
+          }
+        },
+        {
+          "sample_index": 17,
+          "sample_id_sha256": "1622c7eb95bc39f09b6ad5ed67f4a79a9ffa924250211fc90c9cb9ebcb5e6bde",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1340,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 8,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "b41f32b47ea77a91fe30dd8d75c0cc7d6b90735c0ee62539902ffc0ef39b7b6f",
+              "chars": 1766
+            },
+            "open_vocab": {
+              "sha256": "0bc6f9a0bb06f3000a3cb201506bb5783b916fd1c74c74f5dd86adaa0209af1b",
+              "chars": 1846
+            }
+          }
+        },
+        {
+          "sample_index": 18,
+          "sample_id_sha256": "2e23c850f56c196bc1b319282e10ba3d12eefa904587ef5f05eef5f723369cd4",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1590,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 10,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "f17c51758a288801c1eba13dd2c161a778753102a4f9546b6f0340ddc80aeb16",
+              "chars": 2016
+            },
+            "open_vocab": {
+              "sha256": "6273492e33670b6a3bb98114c15ad79f8a1f21415cdf1684ada10234f1b83f26",
+              "chars": 2096
+            }
+          }
+        },
+        {
+          "sample_index": 19,
+          "sample_id_sha256": "89524ba54a0a3f4b3d1634da40852df6297e53822f6867ad9e42bbc4c1d25521",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1394,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 5,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "d6533e030d03dc769d1f9155346357d6f5b74cd4024ed3108500d9a6309f30c5",
+              "chars": 1820
+            },
+            "open_vocab": {
+              "sha256": "b8ade65f859d8b5ddd28047c21c0bc7924f0214237d5871001440406efb55052",
+              "chars": 1900
+            }
+          }
+        },
+        {
+          "sample_index": 20,
+          "sample_id_sha256": "407a6f7ba43b72a8ea960f7bb4b9ed153eee86a33d299262642a919470cadb21",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1298,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 5,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "2ccb85d49d5598210ee6c9455bbef7e64716f076f64fe648809da7433be580ae",
+              "chars": 1724
+            },
+            "open_vocab": {
+              "sha256": "a7f63c185036f0db2a6fd4a9523ddaf1281e1dda701a225b16142ccf69c7c40f",
+              "chars": 1804
+            }
+          }
+        },
+        {
+          "sample_index": 21,
+          "sample_id_sha256": "afe83aa40b97a20cfc52bae2fe044e1e961d127196c43b5e3528c4a29ea0fa91",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1997,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 7,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "eb5ed948ccb92c88e5eaee5237ee9df7b6e77a39f18dacefac0ce006e9004f6e",
+              "chars": 2423
+            },
+            "open_vocab": {
+              "sha256": "d380bad5e59f25e0e913c2633b4c8a2d9e9ee5413be3c80640c10c4b1d425d6d",
+              "chars": 2503
+            }
+          }
+        },
+        {
+          "sample_index": 22,
+          "sample_id_sha256": "dbe8c473d7298f47fadbcd0cbe2cabed48428664a7fe0d1424ef97d6a189c6a8",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2185,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 11,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "9fe86f76c8c88c6557ef27679102f5690ec8ab71b7313d63bd72ca08e2d648ba",
+              "chars": 2611
+            },
+            "open_vocab": {
+              "sha256": "ad72b6906f1631ddccc7f3facabf4478ef1a47025c65387e1d4a684dee120fc1",
+              "chars": 2691
+            }
+          }
+        },
+        {
+          "sample_index": 23,
+          "sample_id_sha256": "a60c97a7434f31550c1235c092b4bc711c881af279bfab0be9742acaee6ac8f6",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1208,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 7,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "5fce51e9eb9610dc7f12cc8b9c84933e6fc97dce49f3855e7bae70f1ebaf960e",
+              "chars": 1634
+            },
+            "open_vocab": {
+              "sha256": "feaa3866aaef9682a58b19cd91524a68debb129535532e13437cfe4009d84a89",
+              "chars": 1714
+            }
+          }
+        },
+        {
+          "sample_index": 24,
+          "sample_id_sha256": "393dfd22b353bda9afd767ce1560708fc545ead5c4aa7abee498a0673546c8d9",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1508,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 5,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "8c9efef61bdb88ad390fdc200572d6140281c7bbf39282c529233d2b66aef3af",
+              "chars": 1934
+            },
+            "open_vocab": {
+              "sha256": "20d9acb985dca910edfb8bdf9550a2db8606e7511efd16871c9cec607a90e510",
+              "chars": 2014
+            }
+          }
+        },
+        {
+          "sample_index": 25,
+          "sample_id_sha256": "802e74f6ed82dc4d27dd28665cb3b7dde17b335e8ab81260e9842d680e6177aa",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2066,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 5,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "bb133c83146e3772e6129879b65190a61fc61427261dbb9c40443d1dfa24f964",
+              "chars": 2492
+            },
+            "open_vocab": {
+              "sha256": "abe018e525e93ba1ebc9dd30470d100ffe7004244db53b00ee0fe25a2fb46343",
+              "chars": 2572
+            }
+          }
+        },
+        {
+          "sample_index": 26,
+          "sample_id_sha256": "db6b8fa084297337de66844c22a78c07eec8b1976ae4b65f756255bd6236759f",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2033,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 30,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "87b6d00574bd02377c1240d3deb0bcde344b491d842e9fe4c9b3db57b5f4ba20",
+              "chars": 2459
+            },
+            "open_vocab": {
+              "sha256": "c58e5334a6b81b4643abd7e4ef6e374a00768d70a0cabd6df1ae77002cb1ea9f",
+              "chars": 2539
+            }
+          }
+        },
+        {
+          "sample_index": 27,
+          "sample_id_sha256": "94e1ab2d9d06ed67775dac0d90b4c812079460d8c3c3aa57747533a868b317d8",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2391,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 23,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "6ee88c217c9f4c124498413eeb2e52fb71301cafe65a7cfe1a7b8249fd3d7a72",
+              "chars": 2817
+            },
+            "open_vocab": {
+              "sha256": "52a79171a4b5ed74e7d3431506ed22c22461ad947f8c28d62f1a5e2799463ef6",
+              "chars": 2897
+            }
+          }
+        },
+        {
+          "sample_index": 28,
+          "sample_id_sha256": "a9e204ad662fb46944eaf4fddc32baf8415f76e47037461fcab05e58ac0d9394",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1415,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 5,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "984d3bd06f15ca66048b895e12c03aed0c242f04ea7a12f0b20c37015ece5cb1",
+              "chars": 1841
+            },
+            "open_vocab": {
+              "sha256": "2ffdb23c5d39f43798f651bb84a843a929e09522e7a03b1b2e0c8da190ea7eee",
+              "chars": 1921
+            }
+          }
+        },
+        {
+          "sample_index": 29,
+          "sample_id_sha256": "4cece7ae17474320e13274eb96b92d98c4c252342b77e9db787fca05ad9222ef",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1749,
+          "initial_triples_sent": 0,
+          "given_terms_sent": 0,
+          "given_types_sent": 0,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 8,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "59dbbb21063349ef304c67088baf56b28bbbc29391eaa9bb4252613de1c8fd7a",
+              "chars": 2175
+            },
+            "open_vocab": {
+              "sha256": "297a0373574db65592d12826664bc3b43dd819244c5be24983d275b34aa02f1d",
+              "chars": 2255
+            }
+          }
+        }
+      ]
+    },
+    "task_b": {
+      "task_name": "Reuse",
+      "n_samples": 30,
+      "estimated_calls": 60,
+      "samples": [
+        {
+          "sample_index": 0,
+          "sample_id_sha256": "11394d7c1347fa8797705b33276c758bd19d71ef68d695d9213e89e2a5b9037b",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1996,
+          "initial_triples_sent": 4,
+          "given_terms_sent": 0,
+          "given_types_sent": 7,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 5,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "da9f30a2a521fece8bd249780649136f9ee193323c56954199acc3f7d9416cd5",
+              "chars": 3268
+            },
+            "open_vocab": {
+              "sha256": "f389c478e0db0e7d58e034be30d245e2651b4c3730e65dfacd8a7022d16859d0",
+              "chars": 3348
+            }
+          }
+        },
+        {
+          "sample_index": 1,
+          "sample_id_sha256": "b5364a3a5e51a7c994117c04e0593d862ff2c0769cc107d80df88a4fe08a58be",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1816,
+          "initial_triples_sent": 4,
+          "given_terms_sent": 0,
+          "given_types_sent": 6,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 4,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "9e34dc5f3dd9b89ce3105cbd3d206b810f40e8db874b99f2af0c4f68c1cece31",
+              "chars": 2696
+            },
+            "open_vocab": {
+              "sha256": "4577f4b4398d42ab05ef5fd811cf43ad6a8cfbe9a7179ba75af8446eb348df76",
+              "chars": 2776
+            }
+          }
+        },
+        {
+          "sample_index": 2,
+          "sample_id_sha256": "1a51dd6fb418946ce9f700624fbaa18e6a70d75ec79e7eeb918d7daa3582519a",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2870,
+          "initial_triples_sent": 11,
+          "given_terms_sent": 0,
+          "given_types_sent": 11,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 10,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "74de61d8b60c266d8267854b55bad037133250bc2d996f160a09cf691e38a4ff",
+              "chars": 4111
+            },
+            "open_vocab": {
+              "sha256": "5b16fea4d50d1debf59a879783d409e4c776b1dfd07f826636b1155518aaa074",
+              "chars": 4191
+            }
+          }
+        },
+        {
+          "sample_index": 3,
+          "sample_id_sha256": "6ef75a6758e7c5546dd713c0a6ad6c4dc9c7b9dcec3857ddc3a78a993f612f10",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1491,
+          "initial_triples_sent": 4,
+          "given_terms_sent": 0,
+          "given_types_sent": 4,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 2,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "417cf7595ae6d913bcd0bae910749ea2edf1a357118c3dac124f6dc824840850",
+              "chars": 2391
+            },
+            "open_vocab": {
+              "sha256": "c30a1d35c59ef75fc2275c9a071bef398b04cdffea18660e307fe899dbfdb92a",
+              "chars": 2471
+            }
+          }
+        },
+        {
+          "sample_index": 4,
+          "sample_id_sha256": "9a22b94a0ea1cb542493b24455654a05381b6fdee5d5e8153fc6a5f80b28e346",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2477,
+          "initial_triples_sent": 16,
+          "given_terms_sent": 0,
+          "given_types_sent": 15,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 14,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "2e95e5fe0a593a75beb7166500b7199124dc23e74e14bb53e8c346dcdb3c5c9b",
+              "chars": 3914
+            },
+            "open_vocab": {
+              "sha256": "94a02e9a8a450267b09a1b870fb2a45425bce32e190eb1f2f55f0e3ab65608c5",
+              "chars": 3994
+            }
+          }
+        },
+        {
+          "sample_index": 5,
+          "sample_id_sha256": "2450d5e229681d0fc39125eb083d3ce1cd6906ff3052d2a0b63895b107c1e41f",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1050,
+          "initial_triples_sent": 3,
+          "given_terms_sent": 0,
+          "given_types_sent": 5,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 4,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "c45fe833df0ebb3cf5a09c8794a2cfb2891afd398307df2331e68d83d6cb1dd0",
+              "chars": 1814
+            },
+            "open_vocab": {
+              "sha256": "b76b12f8927b594a4f38b40a5f86535206e40d08d6917942f637c9d1569e5382",
+              "chars": 1894
+            }
+          }
+        },
+        {
+          "sample_index": 6,
+          "sample_id_sha256": "e11ae577037db191fca952df3c81eebde7a0bba390d5475bf1016317e1f34d76",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1734,
+          "initial_triples_sent": 3,
+          "given_terms_sent": 0,
+          "given_types_sent": 4,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 3,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "1de7e24c7cf0662c075e1645054716d4e388c544fe776db5cf283c50f3a28971",
+              "chars": 2743
+            },
+            "open_vocab": {
+              "sha256": "f857142f01e733b59c8c53e678b67ddadcf333c7e115117c289e87ece03d6c07",
+              "chars": 2823
+            }
+          }
+        },
+        {
+          "sample_index": 7,
+          "sample_id_sha256": "eca6380f7e31b24cc0aa36f978a5b117c54b56cabb4cbac784022e09f4984496",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1388,
+          "initial_triples_sent": 3,
+          "given_terms_sent": 0,
+          "given_types_sent": 5,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 3,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "98f809cb3fa3b7c24bbb30d35b9aa2a2a9a68b958c7a4499acc0174b063d512e",
+              "chars": 2247
+            },
+            "open_vocab": {
+              "sha256": "c067dac423450fed02262269f8b2f2492e6df9c509721a613f52ad85f98772dd",
+              "chars": 2327
+            }
+          }
+        },
+        {
+          "sample_index": 8,
+          "sample_id_sha256": "eacccf9246997d80802acf6acdc98dbfc6c57dd9b8d222b562e46553613f4aa8",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1827,
+          "initial_triples_sent": 5,
+          "given_terms_sent": 0,
+          "given_types_sent": 6,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 4,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "bf69642b52ed491bf617c1956d80ef369181915efede2a2b053e21c50cb6e977",
+              "chars": 2891
+            },
+            "open_vocab": {
+              "sha256": "04aa2310caef8643b8ee9435ad3e25177e82ec231f4b642e6eb488380aa32f8a",
+              "chars": 2971
+            }
+          }
+        },
+        {
+          "sample_index": 9,
+          "sample_id_sha256": "f2be90db7decbd059d5cf5561037cfc52b3cdac565bd5ae497ba81695974d45b",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1893,
+          "initial_triples_sent": 4,
+          "given_terms_sent": 0,
+          "given_types_sent": 2,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 1,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "ecb4eb313b6e63a931133b5d0ffc45850185b8e5977e42b9f56f5029248e9426",
+              "chars": 2711
+            },
+            "open_vocab": {
+              "sha256": "766740741ad1038370bef4ecc2589ea3401ea3d4e38693b5a44cc76f181b8dcf",
+              "chars": 2791
+            }
+          }
+        },
+        {
+          "sample_index": 10,
+          "sample_id_sha256": "add12ee91a3fabbc5c4b8fcb57a035feeb6b62cda61abebb8b4b7dc1c81d8005",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1799,
+          "initial_triples_sent": 10,
+          "given_terms_sent": 0,
+          "given_types_sent": 13,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 11,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "d677bacc350a3910c7e944c5795df7283789ce7b656fd7203f73063c1d6b3d8f",
+              "chars": 3127
+            },
+            "open_vocab": {
+              "sha256": "f1cb752b7bbc63e96930b2c15ed18a6c37e2365b7739d0661e2e77936def92c3",
+              "chars": 3207
+            }
+          }
+        },
+        {
+          "sample_index": 11,
+          "sample_id_sha256": "489c9954d9cffdb34ccadfc23210103a898d00852f670a24ba6f84d254708a92",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2034,
+          "initial_triples_sent": 15,
+          "given_terms_sent": 15,
+          "given_types_sent": 1,
+          "gold_counts_scoring_only": {
+            "typing": 15,
+            "taxonomy": 0,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "d53ab9aecad9b871b2ce2d05a261d816b82875cdbddd275b125f1034d01d1f78",
+              "chars": 3528
+            },
+            "open_vocab": {
+              "sha256": "8055cc4b46622b43f018f1b0f87b8cded01a1bcf9b7b565eaf967064c26ecb5e",
+              "chars": 3608
+            }
+          }
+        },
+        {
+          "sample_index": 12,
+          "sample_id_sha256": "65d79ebb70285f0f25ca1ec8c09e58ffd603a901936b4ec14904ef9f670192fd",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2377,
+          "initial_triples_sent": 18,
+          "given_terms_sent": 0,
+          "given_types_sent": 16,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 14,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "b5a2c63506f5b9852b7429f27a3e79703de62e324263542cb01016404773d373",
+              "chars": 4534
+            },
+            "open_vocab": {
+              "sha256": "66ab7488fa4303b3c70c28fc55fd88ee5575a2e7a0b5c7ab67fce78a39fd0f1b",
+              "chars": 4614
+            }
+          }
+        },
+        {
+          "sample_index": 13,
+          "sample_id_sha256": "ce8fc20c1a88af9c1f06faad7fc1a79edb8f6bf0e914cab5fd33928f486b5730",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 3230,
+          "initial_triples_sent": 15,
+          "given_terms_sent": 0,
+          "given_types_sent": 18,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 15,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "1b21dc206b84d4a44195cfb7c44b5bc1da697d7f07741328a1a18bf4a0cf418c",
+              "chars": 4889
+            },
+            "open_vocab": {
+              "sha256": "3dd0786663cdee11d51a15d23d422746be18c625ba9fd7d1efda9baee8cd27df",
+              "chars": 4969
+            }
+          }
+        },
+        {
+          "sample_index": 14,
+          "sample_id_sha256": "10b0bee82fd9140bc639ec3b2ac0e49f643de6cdc01359d10ece63f41a93ca2c",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1783,
+          "initial_triples_sent": 4,
+          "given_terms_sent": 0,
+          "given_types_sent": 5,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 3,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "3144a28b7309a9651285fc22dd9eda41f292ad454093da54a2bfa072b2fea1a7",
+              "chars": 2880
+            },
+            "open_vocab": {
+              "sha256": "53f4ee81cad2235845e14e07523cf7902e3527974012c5b314642341ae0cbed5",
+              "chars": 2960
+            }
+          }
+        },
+        {
+          "sample_index": 15,
+          "sample_id_sha256": "148679dd46bdb1cee81c35506137fdbdb02c5d460391dbd63b3dcdf1c32abbb8",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1944,
+          "initial_triples_sent": 3,
+          "given_terms_sent": 0,
+          "given_types_sent": 4,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 3,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "9f20897e8840daca5904b17e41f567e38b5262f6e619656c8bf360975048f914",
+              "chars": 2825
+            },
+            "open_vocab": {
+              "sha256": "e11fc7216a817e0bc944d3a93c99ef8db6d2ca6d51d3891a20148bd75fcaf718",
+              "chars": 2905
+            }
+          }
+        },
+        {
+          "sample_index": 16,
+          "sample_id_sha256": "d3de45225be55774383509b6ce2fadc7a97576e2b888d2bb78df553e37aa26b7",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1594,
+          "initial_triples_sent": 3,
+          "given_terms_sent": 0,
+          "given_types_sent": 7,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 4,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "7674b3ad42be8955a799cf09e71d7e8290943a4cfed08aa72c82909645755436",
+              "chars": 2428
+            },
+            "open_vocab": {
+              "sha256": "8f1c20b673d95ce10838ea359c129b8e47f61739b4f7017011dc1cd25f5916cf",
+              "chars": 2508
+            }
+          }
+        },
+        {
+          "sample_index": 17,
+          "sample_id_sha256": "f48f6bf41411b181697129035b0ff80d79cc5f7a911f2d42d4b7e0fec00886a3",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1296,
+          "initial_triples_sent": 4,
+          "given_terms_sent": 0,
+          "given_types_sent": 5,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 4,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "38e29f2845ab73cc75175db97f9130951d02c4acb6ea67886c1dae3bfcb2bfb5",
+              "chars": 2121
+            },
+            "open_vocab": {
+              "sha256": "80d132ecfbd9fd315311501cc20f7f23b07c542447fc312b5f9825224b6d0701",
+              "chars": 2201
+            }
+          }
+        },
+        {
+          "sample_index": 18,
+          "sample_id_sha256": "924fdd1fe9b5235ce5a50d0e61ae95a2325b6559fdc8b67daa0e9cadb26b5196",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1359,
+          "initial_triples_sent": 3,
+          "given_terms_sent": 0,
+          "given_types_sent": 5,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 4,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "179fa3ffcf7e12e5e6eeaa99160a7d365ac238bf68c96a8cfcd364f3be881594",
+              "chars": 2124
+            },
+            "open_vocab": {
+              "sha256": "c4e0f73e3955fd44a8ab6b6add248e81960b82616cad8087b6dd1b4c9cd88b45",
+              "chars": 2204
+            }
+          }
+        },
+        {
+          "sample_index": 19,
+          "sample_id_sha256": "55aac12331ddcd5c874b1de6fe7065dec0d99e98e470c26249781ecc92f0bdb0",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2371,
+          "initial_triples_sent": 4,
+          "given_terms_sent": 0,
+          "given_types_sent": 4,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 3,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "275e41ef3c4ebdf4f3c4d4801f68155a82acbc7932ab5574ba8d692e29a3c0ef",
+              "chars": 3130
+            },
+            "open_vocab": {
+              "sha256": "4f56d7abe83870c2518438a0d0e2e3e32dcb1e51428e89c75ce0b8dbdd14541a",
+              "chars": 3210
+            }
+          }
+        },
+        {
+          "sample_index": 20,
+          "sample_id_sha256": "e1ed01102e348ccefe14184cbfd00b250741a5804aa1a5a35800e9b5c4743b51",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1190,
+          "initial_triples_sent": 3,
+          "given_terms_sent": 0,
+          "given_types_sent": 3,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 2,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "ecbfbc2b8b1b31bad4a2beb072afa65ceebf3ed7ec5dc0a99f754f4b3e1ae58e",
+              "chars": 1952
+            },
+            "open_vocab": {
+              "sha256": "f81fba5cf62875bc8a5838982f0f5947db39e5222ffda133f72a03715ea0bd53",
+              "chars": 2032
+            }
+          }
+        },
+        {
+          "sample_index": 21,
+          "sample_id_sha256": "c48e11594d7bd6c095ba91444121a45c5013f0ca07463b4470e811cebed2f439",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1487,
+          "initial_triples_sent": 4,
+          "given_terms_sent": 0,
+          "given_types_sent": 2,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 1,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "9821508a65666a05f69590ee5c77f3ad572389269cc7c2f1f5df6ee4b264bb5c",
+              "chars": 2287
+            },
+            "open_vocab": {
+              "sha256": "d36314456ab5b33d46ae6708ca2087c20e3940541c3e916640a1541ee0255a6a",
+              "chars": 2367
+            }
+          }
+        },
+        {
+          "sample_index": 22,
+          "sample_id_sha256": "4ab1a263da6acc2930a3244d0ba43c0c89885f98f949028bd9a2d32e8cc5f3a5",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2388,
+          "initial_triples_sent": 13,
+          "given_terms_sent": 0,
+          "given_types_sent": 12,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 10,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "90b66fe599f8e54dad80f37759b5c146dd0e1fb187f8f65346c52643c3e8b0e2",
+              "chars": 3957
+            },
+            "open_vocab": {
+              "sha256": "7ac8e348bff610a9f563d033779575dcc6b23c5ac099e3864cdc08a23ea038c6",
+              "chars": 4037
+            }
+          }
+        },
+        {
+          "sample_index": 23,
+          "sample_id_sha256": "3a0b94b6aae114dc9dda7c74ace8005105d822ccfa0eecdbf0c7db70d6b89222",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1404,
+          "initial_triples_sent": 7,
+          "given_terms_sent": 0,
+          "given_types_sent": 9,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 8,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "cfb46b9a5102f8d49e02ce083f90dbd5c6ee057377b68b1bc9e9872489f2c09a",
+              "chars": 2931
+            },
+            "open_vocab": {
+              "sha256": "c299372d11fb27786f2a3bd6e0c60093da87c0982a2293e2950f2784b7c5fc60",
+              "chars": 3011
+            }
+          }
+        },
+        {
+          "sample_index": 24,
+          "sample_id_sha256": "440f572a032f7ffd291a22fe0f5b1d765e65be9c9689ddb7f42d8d5cc7c4558b",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2053,
+          "initial_triples_sent": 7,
+          "given_terms_sent": 0,
+          "given_types_sent": 4,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 3,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "1cb0fde6d9e2e4dd6a31bf6606de35f58f07cfed4e635f470e9f689a65057952",
+              "chars": 3321
+            },
+            "open_vocab": {
+              "sha256": "60307aa2aa15bfc733a46148e28203669d7f47109e0f391136cc5cf49e7e330c",
+              "chars": 3401
+            }
+          }
+        },
+        {
+          "sample_index": 25,
+          "sample_id_sha256": "1302daf4c54f8653a78e1345cd8e51472795632f9826360844eaf27babe39274",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 804,
+          "initial_triples_sent": 4,
+          "given_terms_sent": 0,
+          "given_types_sent": 2,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 1,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "13c8e6f49e853e239f036a891f129553efe151631ec2729c8348fbf7a7ed37d0",
+              "chars": 1588
+            },
+            "open_vocab": {
+              "sha256": "47c2db647346df7972de3fc19a942b7f646af2ace0ac4721612e63c4168b3908",
+              "chars": 1668
+            }
+          }
+        },
+        {
+          "sample_index": 26,
+          "sample_id_sha256": "686d2ac8a1b341450cd3a8b539c1264949499964cedd075a0e76e063116340e7",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1312,
+          "initial_triples_sent": 3,
+          "given_terms_sent": 0,
+          "given_types_sent": 4,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 3,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "446dc5bd360e0077748ffb2761ec6cee2dfb5cb164452e017ff54aab44cf3f36",
+              "chars": 2048
+            },
+            "open_vocab": {
+              "sha256": "4c806290849e40603d7ccdd83f98e0fcbc0da884acb1625666370bcd5b62d0f3",
+              "chars": 2128
+            }
+          }
+        },
+        {
+          "sample_index": 27,
+          "sample_id_sha256": "6d6b7dfe322c1d3c6c248f4553af580a4779f1dc56acc63f6e17dab2177f4614",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1695,
+          "initial_triples_sent": 4,
+          "given_terms_sent": 0,
+          "given_types_sent": 6,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 4,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "75cb37c85de6a511f7910e2f23881cf5704a36e52519aac708ad96bb159522b1",
+              "chars": 2711
+            },
+            "open_vocab": {
+              "sha256": "cb7d5d082729b8ad55d78179465ed3d840d83ab3ba019152c5bc1d01c64d1d9b",
+              "chars": 2791
+            }
+          }
+        },
+        {
+          "sample_index": 28,
+          "sample_id_sha256": "9bd270c1de2c1249eb0f65447520cd18a1fe4d375a0a5500131ff525354e8ab7",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2351,
+          "initial_triples_sent": 2,
+          "given_terms_sent": 0,
+          "given_types_sent": 4,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 3,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "6b851d18d6d07aacc4654efbd890206db729607d7611a3499f4268a10f7c91bc",
+              "chars": 3804
+            },
+            "open_vocab": {
+              "sha256": "b4cfd03561fe5b66814e2112b8019665917991a77f2a54a5523166ca16a9754a",
+              "chars": 3884
+            }
+          }
+        },
+        {
+          "sample_index": 29,
+          "sample_id_sha256": "602377c54ddd1ea021350369a99d2fe1942a4dd91234e41df19981784f3de344",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1855,
+          "initial_triples_sent": 7,
+          "given_terms_sent": 0,
+          "given_types_sent": 10,
+          "gold_counts_scoring_only": {
+            "typing": 0,
+            "taxonomy": 8,
+            "nontax": 0
+          },
+          "prompts": {
+            "closed_vocab": {
+              "sha256": "a2c09d588022e888e11afbaca56ffa2ddd74d0beae365c6e4d5b5441820aef2b",
+              "chars": 2967
+            },
+            "open_vocab": {
+              "sha256": "a9cdad186af8d1f86c84fa16c0f080181fbf81a5bf1900054befb4f2248eafa5",
+              "chars": 3047
+            }
+          }
+        }
+      ]
+    }
+  }
+}

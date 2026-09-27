@@ -1,0 +1,618 @@
+{
+  "meta": {
+    "protocol": "relation_guarded_v2_independent_calibration_v1",
+    "audit_only": true,
+    "selection_uses_gold_locally": true,
+    "selection_is_calibration_only_not_unbiased_evaluation": true,
+    "gold_visible_to_model": false,
+    "contains_source_text": false,
+    "external_destination": "https://api.openai.com/v1",
+    "model": "dots3-note-prev",
+    "system": "open_vocab_guarded_v2",
+    "samples_per_task": 24,
+    "seed": 20260923,
+    "prior_failed_connection_attempts": 0,
+    "exclude_prefix": 30,
+    "exclude_eval_result": "..\\experiments\\results\\official_stratified_open_openai_ab_s5_seed20260922.json",
+    "confidence_threshold": 0.85,
+    "implicit_confidence_threshold": 0.95,
+    "max_nontax": 8,
+    "max_implicit_gap_chars": 600,
+    "estimated_calls": 24,
+    "estimated_generation_cache_hits": 12,
+    "estimated_exact_cache_replays": 12,
+    "estimated_local_reprocesses": 0,
+    "estimated_external_calls": 12,
+    "total_prompt_chars": 104432,
+    "disjoint_from_blind_prefix_and_density_eval": true
+  },
+  "tasks": {
+    "task_b": {
+      "n_samples": 24,
+      "excluded_indices_count": 45,
+      "selected_overlap_with_excluded": [],
+      "pool": {
+        "eligible_samples": 41,
+        "eligible_with_supported_predicate": 8,
+        "supported_predicate_sample_counts": {
+          "derives from": 1,
+          "part_of": 4,
+          "develops_from": 2,
+          "regulates": 1
+        },
+        "selected_visible_gold": 48,
+        "selected_visible_supported_gold": 9
+      },
+      "samples": [
+        {
+          "sample_index": 68,
+          "sample_id_sha256": "93042a3cc9001f3066b07e252fbd0b765e3adb639f605f359e28e61ec641d0fb",
+          "official_nontax_gold_nonself": 4,
+          "visible_nontax_gold": 1,
+          "visible_supported_gold": 0,
+          "visible_supported_predicates": [],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 3196,
+          "prompt": {
+            "sha256": "be2c990dfb5fc46a6bd56a589e1c257ea8ebe5e6e58828d2f7bed76598049a0a",
+            "chars": 5968,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 262,
+          "sample_id_sha256": "752ec22750991fb45ed446e3f668e0128ffda737bea7b9a027d36425058a436e",
+          "official_nontax_gold_nonself": 4,
+          "visible_nontax_gold": 4,
+          "visible_supported_gold": 0,
+          "visible_supported_predicates": [],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2717,
+          "prompt": {
+            "sha256": "3aad38f4eb73c4a73cea7e1de216d028959889758af498e15a5c87ebbc119422",
+            "chars": 5658,
+            "generation_cache_hit": true,
+            "exact_cache_hit": true
+          }
+        },
+        {
+          "sample_index": 370,
+          "sample_id_sha256": "0af43f55b2db30920fd9eda1d591b044552a65926392dc0a420d4bd7a0e4d71f",
+          "official_nontax_gold_nonself": 2,
+          "visible_nontax_gold": 2,
+          "visible_supported_gold": 1,
+          "visible_supported_predicates": [
+            "derives from"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2772,
+          "prompt": {
+            "sha256": "3263bfb09b11530cc2ebbeeb363e7c269834bb13619ebd6ef4e94a44b225e16f",
+            "chars": 5317,
+            "generation_cache_hit": true,
+            "exact_cache_hit": true
+          }
+        },
+        {
+          "sample_index": 432,
+          "sample_id_sha256": "184f880c22bae87654fc3e141e625f2951031fa87634f427466c47c72380bfe4",
+          "official_nontax_gold_nonself": 3,
+          "visible_nontax_gold": 3,
+          "visible_supported_gold": 0,
+          "visible_supported_predicates": [],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2823,
+          "prompt": {
+            "sha256": "ef7531c25629d8036b5f5be97754ac73cb96dd673236e41416cbefb371eb788c",
+            "chars": 5720,
+            "generation_cache_hit": true,
+            "exact_cache_hit": true
+          }
+        },
+        {
+          "sample_index": 531,
+          "sample_id_sha256": "f3face348968af5cbc458f26ce846b32bdcc66f8381c82aecc1e149dde33898d",
+          "official_nontax_gold_nonself": 2,
+          "visible_nontax_gold": 2,
+          "visible_supported_gold": 0,
+          "visible_supported_predicates": [],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1564,
+          "prompt": {
+            "sha256": "8c8ab3d722af9fa6635651515842d967f60aa2757e3ce6f649c9453e81079080",
+            "chars": 3194,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 558,
+          "sample_id_sha256": "b84f6875e87ae269af3b97d6d5cde8fe99864603280d1a0dc659a255d77fcfa2",
+          "official_nontax_gold_nonself": 3,
+          "visible_nontax_gold": 3,
+          "visible_supported_gold": 0,
+          "visible_supported_predicates": [],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 3725,
+          "prompt": {
+            "sha256": "0cf5aababe3140edd007933cf4276f3a4439d9a6fce4b73965290e7c032712a6",
+            "chars": 6176,
+            "generation_cache_hit": true,
+            "exact_cache_hit": true
+          }
+        },
+        {
+          "sample_index": 645,
+          "sample_id_sha256": "79bc9d5c5230bed05f9ee300d14fa91b9785f0f6e26c06045948865630209602",
+          "official_nontax_gold_nonself": 1,
+          "visible_nontax_gold": 1,
+          "visible_supported_gold": 1,
+          "visible_supported_predicates": [
+            "part_of"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1527,
+          "prompt": {
+            "sha256": "3591daadb19d4559a514b9eb99d075a375c9531e5c7bcc30e97559eccc746a95",
+            "chars": 3342,
+            "generation_cache_hit": true,
+            "exact_cache_hit": true
+          }
+        },
+        {
+          "sample_index": 712,
+          "sample_id_sha256": "2bc8450752e1bae74d2e31aadd815ff7e4414024a08accc6e8f8a596c5701923",
+          "official_nontax_gold_nonself": 2,
+          "visible_nontax_gold": 2,
+          "visible_supported_gold": 0,
+          "visible_supported_predicates": [],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1872,
+          "prompt": {
+            "sha256": "c4cee65e2a88818999234a51a46c5bb54f5200c4ab0e8a242b68cbc8dca856cd",
+            "chars": 3819,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 727,
+          "sample_id_sha256": "f5b541746fe2b9538476ee17d51824b3a2fbab6d7d6360fdbb1cf16bcf360218",
+          "official_nontax_gold_nonself": 2,
+          "visible_nontax_gold": 2,
+          "visible_supported_gold": 1,
+          "visible_supported_predicates": [
+            "develops_from"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2272,
+          "prompt": {
+            "sha256": "500b968a3017b8f5afa666636488a37d8fbb6b7bed74d9154e2477ac6002e8d0",
+            "chars": 4209,
+            "generation_cache_hit": true,
+            "exact_cache_hit": true
+          }
+        },
+        {
+          "sample_index": 836,
+          "sample_id_sha256": "fe5256e8d0181a62319217cb0a2df51f1dafb1993d814b3a8997ee1db2eb31a0",
+          "official_nontax_gold_nonself": 2,
+          "visible_nontax_gold": 2,
+          "visible_supported_gold": 0,
+          "visible_supported_predicates": [],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1543,
+          "prompt": {
+            "sha256": "630484f077ef867ef3a9cc086d2cd8f17cbb7a04b11d733314581d042d2a5670",
+            "chars": 3451,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 1431,
+          "sample_id_sha256": "4183fdb2661781e270401f35b82706b7be7c042f4042443c26fd7bfcd7f1381f",
+          "official_nontax_gold_nonself": 1,
+          "visible_nontax_gold": 1,
+          "visible_supported_gold": 0,
+          "visible_supported_predicates": [],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2108,
+          "prompt": {
+            "sha256": "efe5d27b67a5cd400de21750c09442c4b8800d4d398cd0e8312b5fb01a629ec7",
+            "chars": 3945,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 1492,
+          "sample_id_sha256": "67705b8152cf8fd90f43eb9e23fdd8b0b13332d086a317b34317b97a36e5e692",
+          "official_nontax_gold_nonself": 2,
+          "visible_nontax_gold": 1,
+          "visible_supported_gold": 0,
+          "visible_supported_predicates": [],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1841,
+          "prompt": {
+            "sha256": "e6f9e022b3716da6f85278b025f5b678b7eabc60a4f2a250b03931b033666017",
+            "chars": 4092,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 1584,
+          "sample_id_sha256": "9e64ab70da8efb7631d07057fdac767471eb3082e85cb97629e10e06e17fccb7",
+          "official_nontax_gold_nonself": 2,
+          "visible_nontax_gold": 1,
+          "visible_supported_gold": 0,
+          "visible_supported_predicates": [],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2021,
+          "prompt": {
+            "sha256": "1fd9a561821bee921208d764dcff9540130370abe24e943c0e7a956010a7b32e",
+            "chars": 4564,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 1900,
+          "sample_id_sha256": "f43f6beba3c8ba6aba84cfc5d6ca77698dc0736c588f083b9b710f5457e8a6ba",
+          "official_nontax_gold_nonself": 3,
+          "visible_nontax_gold": 3,
+          "visible_supported_gold": 2,
+          "visible_supported_predicates": [
+            "part_of"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1398,
+          "prompt": {
+            "sha256": "7df6e1dd58545c65d3f845cd2644c21aeac244cb5bfeea38d036f90de314b774",
+            "chars": 3184,
+            "generation_cache_hit": true,
+            "exact_cache_hit": true
+          }
+        },
+        {
+          "sample_index": 1924,
+          "sample_id_sha256": "41c875a240de2265b2bc592fefd8f17e2ec9e00b1bf215b8723dcf1696990b2c",
+          "official_nontax_gold_nonself": 2,
+          "visible_nontax_gold": 2,
+          "visible_supported_gold": 0,
+          "visible_supported_predicates": [],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1464,
+          "prompt": {
+            "sha256": "0cae703bf7a7797e82d83cc8e2241ccca2e8c5c50543f07f03b22376ec2486f6",
+            "chars": 3459,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 1975,
+          "sample_id_sha256": "257e44f27adbb64991a66116fab1c4b029f3a37a71f154667bfff6e02dff055c",
+          "official_nontax_gold_nonself": 1,
+          "visible_nontax_gold": 1,
+          "visible_supported_gold": 1,
+          "visible_supported_predicates": [
+            "develops_from"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1377,
+          "prompt": {
+            "sha256": "6836a66ecf5af4942bd3e51e52e33d224b7db646fcdcf93a9c326057515d5c50",
+            "chars": 3160,
+            "generation_cache_hit": true,
+            "exact_cache_hit": true
+          }
+        },
+        {
+          "sample_index": 2010,
+          "sample_id_sha256": "a4f83796e371fc26f10ab9cb5db03939a33690b18c35d88d1eee6ac2c4d3758f",
+          "official_nontax_gold_nonself": 3,
+          "visible_nontax_gold": 2,
+          "visible_supported_gold": 1,
+          "visible_supported_predicates": [
+            "regulates"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2310,
+          "prompt": {
+            "sha256": "50759b372792b3bccd99633f8ebe395dc1411550be965027fed29a66dcce517e",
+            "chars": 5334,
+            "generation_cache_hit": true,
+            "exact_cache_hit": true
+          }
+        },
+        {
+          "sample_index": 2163,
+          "sample_id_sha256": "1796c1574ca5e31c2939014cb6568e00f8e27aeef45f79cd855c9be91a29f2ab",
+          "official_nontax_gold_nonself": 1,
+          "visible_nontax_gold": 1,
+          "visible_supported_gold": 0,
+          "visible_supported_predicates": [],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2413,
+          "prompt": {
+            "sha256": "d7517b20bd55c490cccb50d1776209f3ed24b26c84850f87636175017c44c3d3",
+            "chars": 4837,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 2266,
+          "sample_id_sha256": "be8729e6ce3763a3780c98f7823cc781ef66af904622292fbd1ab8609e20b3da",
+          "official_nontax_gold_nonself": 3,
+          "visible_nontax_gold": 3,
+          "visible_supported_gold": 0,
+          "visible_supported_predicates": [],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1776,
+          "prompt": {
+            "sha256": "8b945005fa7c0a48c3d2379d172ba9038ea3123d88bf29e13da045e62ea2dffd",
+            "chars": 3807,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 2419,
+          "sample_id_sha256": "53ea7251cda75a9abfa1302e205e2403927f8af5e459cfc8bf2b0edc4e2e48ed",
+          "official_nontax_gold_nonself": 2,
+          "visible_nontax_gold": 2,
+          "visible_supported_gold": 0,
+          "visible_supported_predicates": [],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2275,
+          "prompt": {
+            "sha256": "619d5d4a27706e7ee771da4f01e05dca5de8d59b677a7f077a26657204023d00",
+            "chars": 4635,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 2477,
+          "sample_id_sha256": "f1174703bedf7caf1995d79af0f9d336d940deb378a26166c0d5657dc4f37ffb",
+          "official_nontax_gold_nonself": 1,
+          "visible_nontax_gold": 1,
+          "visible_supported_gold": 1,
+          "visible_supported_predicates": [
+            "part_of"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 3156,
+          "prompt": {
+            "sha256": "e31991d4f75511110ac97577e7da2920b82afb85587c8d627954437a551fd21d",
+            "chars": 6401,
+            "generation_cache_hit": true,
+            "exact_cache_hit": true
+          }
+        },
+        {
+          "sample_index": 2559,
+          "sample_id_sha256": "d7553b3a0471c375a6e6a167914d45a800933e222352e46c18a912af0b4230ec",
+          "official_nontax_gold_nonself": 3,
+          "visible_nontax_gold": 3,
+          "visible_supported_gold": 0,
+          "visible_supported_predicates": [],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1299,
+          "prompt": {
+            "sha256": "e5e243ddd75184c58d7c177e7b47419d8949a745f3e2fdccd8a9fc8837bb7f64",
+            "chars": 3106,
+            "generation_cache_hit": true,
+            "exact_cache_hit": true
+          }
+        },
+        {
+          "sample_index": 2609,
+          "sample_id_sha256": "a3771d4edae26ae7be5ef2cd6b72ebdfc3f51e1ab2219bc5a0d3e0929e50d1c9",
+          "official_nontax_gold_nonself": 1,
+          "visible_nontax_gold": 1,
+          "visible_supported_gold": 0,
+          "visible_supported_predicates": [],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1695,
+          "prompt": {
+            "sha256": "db9bc4df91d4bc96720ed49bbd5c68544f46709770eb7ddcc292bd77ef926570",
+            "chars": 3634,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 2668,
+          "sample_id_sha256": "0b111f998fa2296ac15371c55880c68db9c31b9dd9b09f3d73aa15a295c5bf35",
+          "official_nontax_gold_nonself": 4,
+          "visible_nontax_gold": 4,
+          "visible_supported_gold": 1,
+          "visible_supported_predicates": [
+            "part_of"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1430,
+          "prompt": {
+            "sha256": "d5069b361b6a2f0979c0d2a9fb1ee248abf92591a9e394a61a783bee542682f3",
+            "chars": 3420,
+            "generation_cache_hit": true,
+            "exact_cache_hit": true
+          }
+        }
+      ]
+    }
+  }
+}

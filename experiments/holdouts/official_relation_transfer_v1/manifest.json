@@ -1,0 +1,547 @@
+{
+  "balance_audit": {
+    "all_nonself_nontax_gold": 101,
+    "assigned_strata": {
+      "disjoint_with": 10,
+      "equivalent_class": 10,
+      "other_open_predicate": 10
+    },
+    "density_counts": {
+      "high_5_to_8": 3,
+      "medium_2_to_4": 27
+    },
+    "samples": 30,
+    "visible_nontax_gold": 89,
+    "visible_predicate_counts": {
+      "database_cross_reference": 5,
+      "disjoint with": 33,
+      "equivalent class": 25,
+      "has role": 2,
+      "is_conjugate_acid_of": 5,
+      "is_conjugate_base_of": 5,
+      "same as": 1,
+      "type": 13
+    },
+    "visible_relation_count_max": 8,
+    "visible_relation_count_min": 2
+  },
+  "files": {
+    "dataset.json": {
+      "sha256": "76e98ba860f1b72b4df3927acd47429d5a778d218a6670a440d259a8e75a096f"
+    },
+    "model_inputs.jsonl": {
+      "sha256": "a112e40692e21df2743f1a50d10ca68bbe04ef869d81610ceadeba8b34395f0d"
+    }
+  },
+  "independence_audit": {
+    "duplicate_selected_sample_ids": 0,
+    "duplicate_visible_gold_across_selected_samples": 0,
+    "selected_context_overlap_with_prior_evidence": 0,
+    "selected_exact_nontax_gold_overlap_with_nonce_holdout": 0,
+    "selected_exact_nontax_gold_overlap_with_prior_evidence": 0,
+    "selected_index_overlap_with_prior_task_a": [],
+    "selected_indices": [
+      265,
+      294,
+      626,
+      860,
+      1142,
+      1168,
+      1232,
+      1372,
+      1422,
+      1883,
+      2049,
+      2211,
+      2401,
+      2454,
+      2620,
+      2820,
+      2821,
+      3189,
+      3204,
+      3313,
+      3369,
+      3386,
+      3402,
+      3500,
+      3642,
+      3725,
+      3882,
+      3952,
+      4120,
+      4292
+    ]
+  },
+  "meta": {
+    "claim_scope": "disjoint_gold_stratified_official_train_transfer_diagnostic",
+    "contains_protected_gold": false,
+    "contains_source_text": false,
+    "gold_visible_to_model": false,
+    "naturalistic_benchmark": false,
+    "package_id": "76e98ba860f1b72b4df3",
+    "protocol": "official_relation_transfer_holdout_v1",
+    "samples": 30,
+    "seed": 20260927,
+    "status": "frozen",
+    "verified_temporal_holdout": false
+  },
+  "samples": [
+    {
+      "assigned_stratum": "disjoint_with",
+      "context_sha256": "e111501526e2651637f38ca1c38d039fc038f33937a6fb188689da83997e3c26",
+      "package_index": 0,
+      "sample_id_sha256": "cb73ff2fb234420c49ec59c187b0939c8fdca2490a359f31d9177d56702291e6",
+      "source_index": 265,
+      "visible_nontax_gold_count": 4
+    },
+    {
+      "assigned_stratum": "other_open_predicate",
+      "context_sha256": "5c5c24725cd8258a2c8f917f764e719569447b983484ded33280e21bacf64fb0",
+      "package_index": 1,
+      "sample_id_sha256": "d1e6fdbc4caab5464132578fe52536269d7a7c569e3f67b15b7b16b8d3d744ac",
+      "source_index": 294,
+      "visible_nontax_gold_count": 5
+    },
+    {
+      "assigned_stratum": "equivalent_class",
+      "context_sha256": "e25ec5141785e7e44612a697eaa4d8439613abb7bac03ff1714a4a82090f0597",
+      "package_index": 2,
+      "sample_id_sha256": "de61533b629f23c02a139819b8bd0e637a2527ca9446f9e5205969ae73880538",
+      "source_index": 626,
+      "visible_nontax_gold_count": 2
+    },
+    {
+      "assigned_stratum": "equivalent_class",
+      "context_sha256": "ed0adf8e1bd92e664e1ff58053fcb676493b87879edff23222dd00f950a38f81",
+      "package_index": 3,
+      "sample_id_sha256": "b210cb8d726561f8c756bb2d7521d70936b76a328fbd50b8507874009704cab0",
+      "source_index": 860,
+      "visible_nontax_gold_count": 2
+    },
+    {
+      "assigned_stratum": "disjoint_with",
+      "context_sha256": "f3144bc252c00b0c9dca30f0e3dfa7e936a3b148ec64bf8164a67c55556c74a0",
+      "package_index": 4,
+      "sample_id_sha256": "ca8f18fa83ac7eb4f5fc6b5d8fef4345b48c03fdcea6e4c1e5da8092d1b774af",
+      "source_index": 1142,
+      "visible_nontax_gold_count": 2
+    },
+    {
+      "assigned_stratum": "other_open_predicate",
+      "context_sha256": "d0fe4972ce069980faf71c3dcbfa84f98f6746fa2cd757d88c26fd60700afe55",
+      "package_index": 5,
+      "sample_id_sha256": "7daa73758bf224f2cd593e00df7f8cecb1876c625996f447d9fdf49bf92cf589",
+      "source_index": 1168,
+      "visible_nontax_gold_count": 2
+    },
+    {
+      "assigned_stratum": "disjoint_with",
+      "context_sha256": "799683a800667bc507a1953973233a285af5ef9d57e2ee55048ab45e4c8923d8",
+      "package_index": 6,
+      "sample_id_sha256": "7812e6068421782f2e8b2af725192ce2f3db8ecaeec458b291d500b1067bfb47",
+      "source_index": 1232,
+      "visible_nontax_gold_count": 2
+    },
+    {
+      "assigned_stratum": "disjoint_with",
+      "context_sha256": "e824bc8945bd2d60e1d2adbf5cb664e3b491639bac36ff8acccd23496619122a",
+      "package_index": 7,
+      "sample_id_sha256": "d7b2baf7e104bdd38971c05417c51f3bef5d3b90029f53a2d912783524ee0432",
+      "source_index": 1372,
+      "visible_nontax_gold_count": 8
+    },
+    {
+      "assigned_stratum": "other_open_predicate",
+      "context_sha256": "d5e346c891060d6fa1b1d3b70d18c52b6f2bacfc503ee7041ed9095a7aa78f65",
+      "package_index": 8,
+      "sample_id_sha256": "a7b603c3761c7cbb496251111164a72171a8b69ee5b55e7178c068f62cad489a",
+      "source_index": 1422,
+      "visible_nontax_gold_count": 2
+    },
+    {
+      "assigned_stratum": "other_open_predicate",
+      "context_sha256": "d3f88a7413084a06398aac73a45e6b0b7be70d0ddff5243d9406fb5b89e838b7",
+      "package_index": 9,
+      "sample_id_sha256": "f4310f32a8375a20931167244efc5cda1df29e30d56679532357882b4f4887f7",
+      "source_index": 1883,
+      "visible_nontax_gold_count": 4
+    },
+    {
+      "assigned_stratum": "disjoint_with",
+      "context_sha256": "92b76a94d847209719e1f01f86a8a3d513ef1a23b432a00fbe050382d2019aac",
+      "package_index": 10,
+      "sample_id_sha256": "95799a48e0ca365933218d3de79e546b3ac5c18e2641ee8f09ee05b3f4fb7b65",
+      "source_index": 2049,
+      "visible_nontax_gold_count": 2
+    },
+    {
+      "assigned_stratum": "equivalent_class",
+      "context_sha256": "ee80fd050653176fb71d2db95ca88d6411d32acda7b4f9e9abdd5eb50a1c7a25",
+      "package_index": 11,
+      "sample_id_sha256": "a99ba8e229d9f21f846251430a0a21535087c756934c237f7c1b3cedcc8a566b",
+      "source_index": 2211,
+      "visible_nontax_gold_count": 2
+    },
+    {
+      "assigned_stratum": "equivalent_class",
+      "context_sha256": "b3effa9a99cc90b85b77e94d03f41a22284ec76a552dd695a1d505a34cfa52bc",
+      "package_index": 12,
+      "sample_id_sha256": "ad81884342b37045a6ef08333f08bb23af107fde27e562a46118283c84d4e14d",
+      "source_index": 2401,
+      "visible_nontax_gold_count": 2
+    },
+    {
+      "assigned_stratum": "other_open_predicate",
+      "context_sha256": "255f728a6c5f34e8052e3f42d657bb7761b483c2ca63b70fddc80b63373a6336",
+      "package_index": 13,
+      "sample_id_sha256": "fc1fe826d692e85c97cbed4b298b6403f7376471e5e21941d60ad205d0ee93fd",
+      "source_index": 2454,
+      "visible_nontax_gold_count": 4
+    },
+    {
+      "assigned_stratum": "other_open_predicate",
+      "context_sha256": "baa4816b6d14d23331260829825a6d2a4a2510ce833f6c6bd037f5c5630087e8",
+      "package_index": 14,
+      "sample_id_sha256": "19ff22de5c92199caddb5d1b24b8ae5253c4a815adea0d64396dabde16dbcb97",
+      "source_index": 2620,
+      "visible_nontax_gold_count": 4
+    },
+    {
+      "assigned_stratum": "equivalent_class",
+      "context_sha256": "1a3e77fd69ed97707d237b3de8f32c9ed8fdaaaf08801f614364985597f25104",
+      "package_index": 15,
+      "sample_id_sha256": "819653b41f944cb9a2ee2a7cdd44801b691280db73de09753e92c03ce77f6874",
+      "source_index": 2820,
+      "visible_nontax_gold_count": 2
+    },
+    {
+      "assigned_stratum": "disjoint_with",
+      "context_sha256": "66a4f094c179725cb96ba30866464033797b9eea8941bc2123039534f8e92cb2",
+      "package_index": 16,
+      "sample_id_sha256": "8e5db49fe993ce8ee8497af512c97db6422146f621e0dd17c00ac78aa1db87a8",
+      "source_index": 2821,
+      "visible_nontax_gold_count": 2
+    },
+    {
+      "assigned_stratum": "disjoint_with",
+      "context_sha256": "1a6de39d93f6ac7944b59b9cc02ae5788450ce141cfb4688b3d7f8f581102d70",
+      "package_index": 17,
+      "sample_id_sha256": "aa9b7d2a9b9513eab3f2ac02b66699cdf150c763cb38b6e9c3332df49875d4a3",
+      "source_index": 3189,
+      "visible_nontax_gold_count": 2
+    },
+    {
+      "assigned_stratum": "equivalent_class",
+      "context_sha256": "f5fb0ed8ee9233421288d15a1afb719320334315ba52af57d0c0172f45650060",
+      "package_index": 18,
+      "sample_id_sha256": "1f13c163331c95a50413454ce230570ce228e1ace90815d3d507583a29344952",
+      "source_index": 3204,
+      "visible_nontax_gold_count": 3
+    },
+    {
+      "assigned_stratum": "disjoint_with",
+      "context_sha256": "6b2afe696f1e3ac477886d4589108c31bc75c46a20469adfa1e96b1271412b21",
+      "package_index": 19,
+      "sample_id_sha256": "dc30186527efd6770b3e88bcf559356cdd3e6865c3e63dafd168ec4621cd351e",
+      "source_index": 3313,
+      "visible_nontax_gold_count": 5
+    },
+    {
+      "assigned_stratum": "other_open_predicate",
+      "context_sha256": "b63e48d21733f5443e4bc4f52e53e7c1431e8a44343622589f06a16fb020a8b9",
+      "package_index": 20,
+      "sample_id_sha256": "e9cf844a16bd1c05b0e1a71522476176e1e6ec6acae25557bcf0e4ecd9a0971a",
+      "source_index": 3369,
+      "visible_nontax_gold_count": 2
+    },
+    {
+      "assigned_stratum": "equivalent_class",
+      "context_sha256": "e0fc5f18e98635ee789984ecb736a1f470dd494eb709d12ab1fd14fb309c86bd",
+      "package_index": 21,
+      "sample_id_sha256": "b89ff61ccdb77cbac2a75976f35bf828cce1944cec303853a549d070987c86df",
+      "source_index": 3386,
+      "visible_nontax_gold_count": 2
+    },
+    {
+      "assigned_stratum": "disjoint_with",
+      "context_sha256": "1a5864558f5f1cd300cf0d8fca748b9051a81154a8f60892c54e4d7c8bde73e5",
+      "package_index": 22,
+      "sample_id_sha256": "fc6f9fc49d35ae3c74681d49446a5325d7d80bfb21f928a32c4a5d3d5a36a780",
+      "source_index": 3402,
+      "visible_nontax_gold_count": 3
+    },
+    {
+      "assigned_stratum": "other_open_predicate",
+      "context_sha256": "3ad038d4c02b3530e6e406751e2502e82efd3fa8acdabeca1e8dfea8fc9eee98",
+      "package_index": 23,
+      "sample_id_sha256": "224cf6a2edeb5cfd2e53191cf289577ada074df41d19510f7115debc0b43c17f",
+      "source_index": 3500,
+      "visible_nontax_gold_count": 4
+    },
+    {
+      "assigned_stratum": "other_open_predicate",
+      "context_sha256": "3e060523a6c4443afa5e9795e3b2526443221e3caa04c3fde4e7f0e6f1482b95",
+      "package_index": 24,
+      "sample_id_sha256": "15be955ba38c55b6485dcd8c15bc34a8be9905ffe33f4ded7bae86b7c6db3710",
+      "source_index": 3642,
+      "visible_nontax_gold_count": 4
+    },
+    {
+      "assigned_stratum": "equivalent_class",
+      "context_sha256": "db0cfca7173959901d23913693558bc5c003f8d53443b0e39e9323dad18e7144",
+      "package_index": 25,
+      "sample_id_sha256": "699ba8741910ee197e23456527aa34f64326b8a7ece3e4c9d05959f935c9a56e",
+      "source_index": 3725,
+      "visible_nontax_gold_count": 3
+    },
+    {
+      "assigned_stratum": "equivalent_class",
+      "context_sha256": "2d5d42ab31b1a6c2bbcc01cdf985ce336a280de27ad743beb906cb342ca61d31",
+      "package_index": 26,
+      "sample_id_sha256": "fbc067ecc6361fe0fdfe7ad5916d4b85c642b4af7feacd2359803df7fe0f6871",
+      "source_index": 3882,
+      "visible_nontax_gold_count": 2
+    },
+    {
+      "assigned_stratum": "other_open_predicate",
+      "context_sha256": "7eed281d61be6dd50324c8eaaf365b299ad453b2dd76a781a5ec311bb4bfd0bb",
+      "package_index": 27,
+      "sample_id_sha256": "0e4754c6fd18f4c182967bbaff2a6194aae3b1e1905878a658c377a2ffd1a117",
+      "source_index": 3952,
+      "visible_nontax_gold_count": 2
+    },
+    {
+      "assigned_stratum": "disjoint_with",
+      "context_sha256": "a20815191a20c5767289b2fc093d717c89f736705a8b4c7c6e3820e6896bea9e",
+      "package_index": 28,
+      "sample_id_sha256": "c775bafc4759f1a962f0701d4b437c9b30d7656bbc8534ca330a28d690f767c2",
+      "source_index": 4120,
+      "visible_nontax_gold_count": 3
+    },
+    {
+      "assigned_stratum": "equivalent_class",
+      "context_sha256": "14932046226601cb3e7fe270b20dca24213ac0a3bb2a0206c2947cd141134d4b",
+      "package_index": 29,
+      "sample_id_sha256": "cd43200ac03cb2eb494df66b4d6983ceab732bc4aaa7429417e7cd0bdb8a22c4",
+      "source_index": 4292,
+      "visible_nontax_gold_count": 3
+    }
+  ],
+  "selection": {
+    "candidate_count": 62,
+    "count_per_stratum": 10,
+    "exclusion_ledger": [
+      {
+        "description": "indices [0, 40)",
+        "kind": "prefix",
+        "task_a_indices": 40,
+        "task_b_indices": 40
+      },
+      {
+        "kind": "result",
+        "new_task_a_indices": 15,
+        "new_task_b_indices": 15,
+        "path": "D:\\NLP\\experiments\\results\\official_stratified_open_openai_ab_s5_seed20260922.json",
+        "protocol": "llms4ol2026_stratified_open_v1",
+        "sha256": "662ae6b1023a67921b4a57de8dd68181d08f584f0f5cfed149bf0109843d4e88",
+        "task_a_indices": 15,
+        "task_b_indices": 15
+      },
+      {
+        "kind": "result",
+        "new_task_a_indices": 27,
+        "new_task_b_indices": 0,
+        "path": "D:\\NLP\\experiments\\results\\relation_calibration_a_n27_seed20260923.json",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "sha256": "456427a0eb306fb6486c5ac887a3b674e7d0ed86b48093cd930a907a74f6f173",
+        "task_a_indices": 27,
+        "task_b_indices": 0
+      },
+      {
+        "kind": "result",
+        "new_task_a_indices": 0,
+        "new_task_b_indices": 12,
+        "path": "D:\\NLP\\experiments\\results\\relation_calibration_ab_n12_seed20260923.json",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "sha256": "e0bf91282978b24cc02fa82d8e811f6e0d9d25a2f84ae7013b8b7cae0e62153b",
+        "task_a_indices": 12,
+        "task_b_indices": 12
+      },
+      {
+        "kind": "result",
+        "new_task_a_indices": 8,
+        "new_task_b_indices": 0,
+        "path": "D:\\NLP\\experiments\\results\\relation_calibration_open_vocab_guarded_v5_axioms_only_a_indices1419-1554-1796-1824-1935-2676-3130-3516_seed20260924.json",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "sha256": "cb135f14c0327e1ea99c99b0a367dd66c11c29e0d6310ad37b9ce7d9dd17e455",
+        "task_a_indices": 8,
+        "task_b_indices": 0
+      },
+      {
+        "kind": "result",
+        "new_task_a_indices": 8,
+        "new_task_b_indices": 0,
+        "path": "D:\\NLP\\experiments\\results\\relation_calibration_open_vocab_guarded_v5_axioms_only_a_indices678-2171-2643-2780-2920-2958-3064-3676_seed20260925.json",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "sha256": "b5e8ee9b6e660296db473368241ebab0b3ed44260c43cd7fb33e22b7e59f7588",
+        "task_a_indices": 8,
+        "task_b_indices": 0
+      },
+      {
+        "kind": "annotation_manifest",
+        "new_task_a_indices": 15,
+        "new_task_b_indices": 15,
+        "path": "D:\\NLP\\experiments\\annotations\\relation_text_annotation_v1\\manifest.json",
+        "protocol": "relation_text_annotation_v1",
+        "sha256": "2049a811de2bc7f9437d61ad99ee115be79a4eff4c119f0161d63c9a7aaebff5",
+        "task_a_indices": 15,
+        "task_b_indices": 15
+      },
+      {
+        "kind": "annotation_manifest",
+        "new_task_a_indices": 0,
+        "new_task_b_indices": 0,
+        "path": "D:\\NLP\\experiments\\annotations\\relation_text_model_annotation_v1\\manifest.json",
+        "protocol": "relation_text_model_annotation_v1",
+        "sha256": "f7405fe8f87dd5619f239cf3783c6ab9ac863eac7d8944382b4fe768a9b93cc8",
+        "task_a_indices": 15,
+        "task_b_indices": 15
+      },
+      {
+        "indices": 24,
+        "kind": "frozen_evaluation_manifest",
+        "new_indices": 24,
+        "path": "D:\\NLP\\experiments\\results\\v5_axiom_confirmatory_manifest_a24_seed20260925.json",
+        "protocol": "v5_axiom_confirmatory_gold_stratified_v1",
+        "sha256": "487a2f2242dbee3ee722dfab1d795b18a985e4c4e5fb066aa37d388d90499f0b",
+        "task": "a"
+      },
+      {
+        "kind": "audit_only_selection",
+        "new_task_a_indices": 0,
+        "new_task_b_indices": 0,
+        "path": "D:\\NLP\\experiments\\results\\relation_calibration_audit_a_n24_seed20260923.json",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "sha256": "b29bbc8781b8342676a9981b90471b0d3c8a57d544c8f7a7c233c7d40a4e2a16",
+        "task_a_indices": 24,
+        "task_b_indices": 0
+      },
+      {
+        "kind": "audit_only_selection",
+        "new_task_a_indices": 0,
+        "new_task_b_indices": 0,
+        "path": "D:\\NLP\\experiments\\results\\relation_calibration_audit_a_n27_seed20260923.json",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "sha256": "40e034e775420ffb0fc313b6f621b0a85025187372e677d52a1ecea51db0323a",
+        "task_a_indices": 27,
+        "task_b_indices": 0
+      },
+      {
+        "kind": "audit_only_selection",
+        "new_task_a_indices": 0,
+        "new_task_b_indices": 0,
+        "path": "D:\\NLP\\experiments\\results\\relation_calibration_audit_ab_n12_seed20260923.json",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "sha256": "5b6d0bebda601d9dc8199c605ecfbb90d14df32e21f24ab5b3ddc0de6a7e6a37",
+        "task_a_indices": 12,
+        "task_b_indices": 12
+      },
+      {
+        "kind": "audit_only_selection",
+        "new_task_a_indices": 7,
+        "new_task_b_indices": 12,
+        "path": "D:\\NLP\\experiments\\results\\relation_calibration_audit_ab_n12_seed20260924.json",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "sha256": "7978187db48f64b44f136c77444ea0558970f973d6454f79f87c1ee3cb0a83a8",
+        "task_a_indices": 12,
+        "task_b_indices": 12
+      },
+      {
+        "kind": "audit_only_selection",
+        "new_task_a_indices": 0,
+        "new_task_b_indices": 3,
+        "path": "D:\\NLP\\experiments\\results\\relation_calibration_audit_b_n24_seed20260923.json",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "sha256": "c01376e711533a98e6c283c03bce48342d8f07c1bfb976c2c636bcff8d5a8734",
+        "task_a_indices": 0,
+        "task_b_indices": 24
+      },
+      {
+        "kind": "audit_only_selection",
+        "new_task_a_indices": 0,
+        "new_task_b_indices": 0,
+        "path": "D:\\NLP\\experiments\\results\\relation_calibration_audit_open_vocab_guarded_v3_relations_a_indices938-2077-2424_seed20260923.json",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "sha256": "1c21eba2a9dd0e29c3ddce7b9940275a1d26c9396735a4a2d7a325c496a7263d",
+        "task_a_indices": 3,
+        "task_b_indices": 0
+      },
+      {
+        "kind": "audit_only_selection",
+        "new_task_a_indices": 0,
+        "new_task_b_indices": 0,
+        "path": "D:\\NLP\\experiments\\results\\relation_calibration_audit_open_vocab_guarded_v5_axioms_only_a_indices1419-1554-1796-1824-1935-2676-3130-3516_seed20260924.json",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "sha256": "d896ad15489094368de3bac23e505657aedb7c2dc600314d774b1421c6eace46",
+        "task_a_indices": 8,
+        "task_b_indices": 0
+      },
+      {
+        "kind": "audit_only_selection",
+        "new_task_a_indices": 0,
+        "new_task_b_indices": 0,
+        "path": "D:\\NLP\\experiments\\results\\relation_calibration_audit_open_vocab_guarded_v5_axioms_only_a_indices678-2171-2643-2780-2920-2958-3064-3676_seed20260925.json",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "sha256": "110f3dce27b614a9f6ca86ed42e6b4afddb0406f236da5f21cacb27ea07088b2",
+        "task_a_indices": 8,
+        "task_b_indices": 0
+      },
+      {
+        "kind": "audit_only_selection",
+        "new_task_a_indices": 0,
+        "new_task_b_indices": 0,
+        "path": "D:\\NLP\\experiments\\results\\relation_calibration_audit_open_vocab_guarded_v5_axioms_only_a_n12_seed20260925.json",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "sha256": "46d455b2bb7ea304cce05d1a0f8c6f4da2d0808547ee06fbc506f9e36acfebf7",
+        "task_a_indices": 12,
+        "task_b_indices": 0
+      },
+      {
+        "kind": "audit_only_selection",
+        "new_task_a_indices": 0,
+        "new_task_b_indices": 0,
+        "path": "D:\\NLP\\experiments\\results\\relation_calibration_audit_open_vocab_guarded_v5_axioms_only_ab_n12_seed20260924.json",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "sha256": "6304d34b0df7fbc24edc0fe78e66f04efbe902efab28b2b8029969b304d05a5d",
+        "task_a_indices": 12,
+        "task_b_indices": 12
+      }
+    ],
+    "max_context_chars": 6000,
+    "rejection_counts": {
+      "exact_nontax_gold_overlap_with_prior_evidence": 19,
+      "used_sample_index": 144,
+      "visible_relation_count_outside_2_to_8": 4078
+    },
+    "strata": [
+      "equivalent_class",
+      "disjoint_with",
+      "other_open_predicate"
+    ],
+    "visible_nonself_nontax_per_sample": {
+      "max": 8,
+      "min": 2
+    }
+  },
+  "source": {
+    "legal_model_input_fields": [
+      "id",
+      "context"
+    ],
+    "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2026\\TaskA-Flagship\\train_task_a.json",
+    "protected_gold_field": "primitive-ontology-triples",
+    "sha256": "f20b87514a09aa70cb247d359d09674040a9b238235cd2837a1c898de70018a0",
+    "task": "a"
+  }
+}

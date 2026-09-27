@@ -1,0 +1,2204 @@
+{
+  "meta": {
+    "protocol": "llms4ol2026_closed_book_probe_v1",
+    "status": "complete",
+    "manifest": "D:\\NLP\\experiments\\results\\official_contamination_probe_manifest_ab_n15_seed20260926.json",
+    "manifest_sha256": "fcf76519c585fb93569f3893487f938ed70f050167800bf524b56702958a7a2f",
+    "model": "dots3-note-prev",
+    "attempt_ledger": {
+      "planned_units": 30,
+      "successful_units": 30,
+      "failed_final_units": 0,
+      "recorded_unit_attempts": 43,
+      "transport_retries_inside_unit_attempts_observable": false
+    },
+    "external_calls_for_scoring": 0
+  },
+  "probe_metrics": {
+    "n_items": 214,
+    "n_positive": 107,
+    "n_negative": 107,
+    "auroc": 0.9780330159839288,
+    "accuracy": 0.9345794392523364
+  },
+  "sample_scores": [
+    {
+      "task": "a",
+      "sample_index": 0,
+      "probeability": 0.9625,
+      "positive_correct_probability": 0.925,
+      "negative_correct_probability": 1.0,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 1.0,
+          "probability_entailed": 0.0,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 1.0,
+          "probability_entailed": 0.0,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 1.0,
+          "probability_entailed": 0.0,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 1.0,
+          "probability_entailed": 0.0,
+          "correct": true
+        },
+        {
+          "item_id": "q07",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "a",
+      "sample_index": 1,
+      "probeability": 0.98625,
+      "positive_correct_probability": 0.9724999999999999,
+      "negative_correct_probability": 1.0,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.98,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 1.0,
+          "probability_entailed": 0.0,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 1.0,
+          "probability_entailed": 0.0,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.98,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.98,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 1.0,
+          "probability_entailed": 0.0,
+          "correct": true
+        },
+        {
+          "item_id": "q07",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 1.0,
+          "probability_entailed": 0.0,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "a",
+      "sample_index": 2,
+      "probeability": 0.8674999999999999,
+      "positive_correct_probability": 0.745,
+      "negative_correct_probability": 0.99,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.92,
+          "probability_entailed": 0.92,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.96,
+          "probability_entailed": 0.96,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.8,
+          "probability_entailed": 0.19999999999999996,
+          "correct": false
+        },
+        {
+          "item_id": "q07",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "a",
+      "sample_index": 3,
+      "probeability": 0.98625,
+      "positive_correct_probability": 0.9724999999999999,
+      "negative_correct_probability": 1.0,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 1.0,
+          "probability_entailed": 0.0,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.98,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 1.0,
+          "probability_entailed": 0.0,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.98,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 1.0,
+          "probability_entailed": 0.0,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.98,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q07",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 1.0,
+          "probability_entailed": 0.0,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "a",
+      "sample_index": 4,
+      "probeability": 0.8875,
+      "positive_correct_probability": 0.9,
+      "negative_correct_probability": 0.875,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.85,
+          "probability_entailed": 0.15000000000000002,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.85,
+          "probability_entailed": 0.15000000000000002,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.85,
+          "probability_entailed": 0.15000000000000002,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q07",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "a",
+      "sample_index": 5,
+      "probeability": 0.95,
+      "positive_correct_probability": 0.95,
+      "negative_correct_probability": 0.95,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q07",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "a",
+      "sample_index": 7,
+      "probeability": 0.83375,
+      "positive_correct_probability": 0.6775,
+      "negative_correct_probability": 0.99,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": false
+        },
+        {
+          "item_id": "q01",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q07",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "a",
+      "sample_index": 11,
+      "probeability": 0.6575,
+      "positive_correct_probability": 0.32499999999999996,
+      "negative_correct_probability": 0.99,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.09999999999999998,
+          "correct": false
+        },
+        {
+          "item_id": "q04",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.85,
+          "probability_entailed": 0.15000000000000002,
+          "correct": false
+        },
+        {
+          "item_id": "q06",
+          "expected": "entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.09999999999999998,
+          "correct": false
+        },
+        {
+          "item_id": "q07",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "a",
+      "sample_index": 15,
+      "probeability": 0.99,
+      "positive_correct_probability": 0.99,
+      "negative_correct_probability": 0.99,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.99,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.99,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.99,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q07",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.99,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "a",
+      "sample_index": 16,
+      "probeability": 0.96375,
+      "positive_correct_probability": 0.9375,
+      "negative_correct_probability": 0.99,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q07",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "a",
+      "sample_index": 17,
+      "probeability": 0.505,
+      "positive_correct_probability": 0.020000000000000018,
+      "negative_correct_probability": 0.99,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.020000000000000018,
+          "correct": false
+        },
+        {
+          "item_id": "q01",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.020000000000000018,
+          "correct": false
+        },
+        {
+          "item_id": "q05",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.020000000000000018,
+          "correct": false
+        },
+        {
+          "item_id": "q07",
+          "expected": "entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.020000000000000018,
+          "correct": false
+        }
+      ]
+    },
+    {
+      "task": "a",
+      "sample_index": 18,
+      "probeability": 0.8725,
+      "positive_correct_probability": 0.755,
+      "negative_correct_probability": 0.99,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.98,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.09999999999999998,
+          "correct": false
+        },
+        {
+          "item_id": "q05",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q07",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.99,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "a",
+      "sample_index": 20,
+      "probeability": 0.97375,
+      "positive_correct_probability": 0.9575,
+      "negative_correct_probability": 0.99,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.98,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q07",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "a",
+      "sample_index": 25,
+      "probeability": 0.9924999999999999,
+      "positive_correct_probability": 0.985,
+      "negative_correct_probability": 1.0,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 1.0,
+          "probability_entailed": 0.0,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.98,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.98,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 1.0,
+          "probability_entailed": 0.0,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 1.0,
+          "probability_entailed": 1.0,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.98,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 1.0,
+          "probability_entailed": 0.0,
+          "correct": true
+        },
+        {
+          "item_id": "q07",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 1.0,
+          "probability_entailed": 0.0,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "a",
+      "sample_index": 28,
+      "probeability": 0.9575,
+      "positive_correct_probability": 0.925,
+      "negative_correct_probability": 0.99,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q07",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "b",
+      "sample_index": 2,
+      "probeability": 0.92875,
+      "positive_correct_probability": 0.8875,
+      "negative_correct_probability": 0.97,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.85,
+          "probability_entailed": 0.85,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.85,
+          "probability_entailed": 0.85,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q07",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "b",
+      "sample_index": 3,
+      "probeability": 0.9824999999999999,
+      "positive_correct_probability": 0.965,
+      "negative_correct_probability": 1.0,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 1.0,
+          "probability_entailed": 0.0,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 1.0,
+          "probability_entailed": 0.0,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.98,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "b",
+      "sample_index": 5,
+      "probeability": 0.925,
+      "positive_correct_probability": 0.9,
+      "negative_correct_probability": 0.95,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q07",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "b",
+      "sample_index": 7,
+      "probeability": 0.6499999999999999,
+      "positive_correct_probability": 0.32666666666666666,
+      "negative_correct_probability": 0.9733333333333333,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.020000000000000018,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.97,
+          "probability_entailed": 0.030000000000000027,
+          "correct": false
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.09999999999999998,
+          "correct": false
+        },
+        {
+          "item_id": "q05",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.85,
+          "probability_entailed": 0.85,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "b",
+      "sample_index": 9,
+      "probeability": 0.975,
+      "positive_correct_probability": 0.95,
+      "negative_correct_probability": 1.0,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 1.0,
+          "probability_entailed": 0.0,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "b",
+      "sample_index": 10,
+      "probeability": 0.7875000000000001,
+      "positive_correct_probability": 0.675,
+      "negative_correct_probability": 0.9,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.8,
+          "probability_entailed": 0.8,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.09999999999999998,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.09999999999999998,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.8,
+          "probability_entailed": 0.19999999999999996,
+          "correct": false
+        },
+        {
+          "item_id": "q05",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.09999999999999998,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.09999999999999998,
+          "correct": true
+        },
+        {
+          "item_id": "q07",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.8,
+          "probability_entailed": 0.8,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "b",
+      "sample_index": 11,
+      "probeability": 0.95,
+      "positive_correct_probability": 0.95,
+      "negative_correct_probability": 0.95,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q07",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "b",
+      "sample_index": 12,
+      "probeability": 0.90125,
+      "positive_correct_probability": 0.8125,
+      "negative_correct_probability": 0.99,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.85,
+          "probability_entailed": 0.85,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.8,
+          "probability_entailed": 0.8,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.75,
+          "probability_entailed": 0.75,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.85,
+          "probability_entailed": 0.85,
+          "correct": true
+        },
+        {
+          "item_id": "q07",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "b",
+      "sample_index": 14,
+      "probeability": 0.965,
+      "positive_correct_probability": 0.9633333333333333,
+      "negative_correct_probability": 0.9666666666666667,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.97,
+          "probability_entailed": 0.97,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.92,
+          "probability_entailed": 0.07999999999999996,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.97,
+          "probability_entailed": 0.97,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "b",
+      "sample_index": 15,
+      "probeability": 0.98,
+      "positive_correct_probability": 0.98,
+      "negative_correct_probability": 0.98,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.98,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.020000000000000018,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.020000000000000018,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.020000000000000018,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.98,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.98,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "b",
+      "sample_index": 23,
+      "probeability": 0.9312499999999999,
+      "positive_correct_probability": 0.9125,
+      "negative_correct_probability": 0.95,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q07",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "b",
+      "sample_index": 24,
+      "probeability": 0.9499999999999998,
+      "positive_correct_probability": 0.9499999999999998,
+      "negative_correct_probability": 0.9499999999999998,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "b",
+      "sample_index": 25,
+      "probeability": 0.925,
+      "positive_correct_probability": 0.9,
+      "negative_correct_probability": 0.95,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.9,
+          "probability_entailed": 0.9,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.050000000000000044,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "b",
+      "sample_index": 27,
+      "probeability": 0.845,
+      "positive_correct_probability": 0.7,
+      "negative_correct_probability": 0.99,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.8,
+          "probability_entailed": 0.19999999999999996,
+          "correct": false
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.95,
+          "probability_entailed": 0.95,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q06",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.7,
+          "probability_entailed": 0.7,
+          "correct": true
+        },
+        {
+          "item_id": "q07",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "task": "b",
+      "sample_index": 28,
+      "probeability": 0.9849999999999999,
+      "positive_correct_probability": 0.98,
+      "negative_correct_probability": 0.9899999999999999,
+      "items": [
+        {
+          "item_id": "q00",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.98,
+          "correct": true
+        },
+        {
+          "item_id": "q01",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.98,
+          "correct": true
+        },
+        {
+          "item_id": "q02",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q03",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        },
+        {
+          "item_id": "q04",
+          "expected": "entailed",
+          "predicted": "entailed",
+          "confidence": 0.98,
+          "probability_entailed": 0.98,
+          "correct": true
+        },
+        {
+          "item_id": "q05",
+          "expected": "not_entailed",
+          "predicted": "not_entailed",
+          "confidence": 0.99,
+          "probability_entailed": 0.010000000000000009,
+          "correct": true
+        }
+      ]
+    }
+  ],
+  "rank_tertile_splits": {
+    "a": {
+      "clean_low_probeability": [
+        17,
+        11,
+        7,
+        2,
+        18
+      ],
+      "middle": [
+        4,
+        5,
+        28,
+        0,
+        16
+      ],
+      "polluted_high_probeability": [
+        20,
+        1,
+        3,
+        15,
+        25
+      ]
+    },
+    "b": {
+      "clean_low_probeability": [
+        7,
+        10,
+        27,
+        12,
+        5
+      ],
+      "middle": [
+        25,
+        2,
+        23,
+        24,
+        11
+      ],
+      "polluted_high_probeability": [
+        14,
+        9,
+        15,
+        3,
+        28
+      ]
+    }
+  },
+  "context_grounded_blind_performance": {
+    "a": {
+      "closed_vocab": {
+        "clean_low_probeability": {
+          "n": 5,
+          "typing_f1": 0.0,
+          "taxonomy_f1": 0.19428571428571428,
+          "nontax_f1": 0.0,
+          "official_graph_similarity_avg": 0.340525482747705,
+          "composite_typing_tax_gs": 0.17827039901113975
+        },
+        "middle": {
+          "n": 5,
+          "typing_f1": 0.3783783783783784,
+          "taxonomy_f1": 0.4,
+          "nontax_f1": 0.0,
+          "official_graph_similarity_avg": 0.2973549217666865,
+          "composite_typing_tax_gs": 0.3585777667150216
+        },
+        "polluted_high_probeability": {
+          "n": 5,
+          "typing_f1": 0.0,
+          "taxonomy_f1": 0.5544554455445545,
+          "nontax_f1": 0.0,
+          "official_graph_similarity_avg": 0.4506470157249569,
+          "composite_typing_tax_gs": 0.3350341537565038
+        },
+        "polluted_minus_clean": {
+          "typing_f1": 0.0,
+          "taxonomy_f1": 0.3601697312588402,
+          "nontax_f1": 0.0,
+          "official_graph_similarity_avg": 0.11012153297725191,
+          "composite_typing_tax_gs": 0.15676375474536405
+        }
+      },
+      "open_vocab": {
+        "clean_low_probeability": {
+          "n": 5,
+          "typing_f1": 0.0,
+          "taxonomy_f1": 0.0,
+          "nontax_f1": 0.0,
+          "official_graph_similarity_avg": 0.0,
+          "composite_typing_tax_gs": 0.0
+        },
+        "middle": {
+          "n": 5,
+          "typing_f1": 0.4210526315789474,
+          "taxonomy_f1": 0.30303030303030304,
+          "nontax_f1": 0.0,
+          "official_graph_similarity_avg": 0.18471010860484544,
+          "composite_typing_tax_gs": 0.3029310144046986
+        },
+        "polluted_high_probeability": {
+          "n": 5,
+          "typing_f1": 0.0,
+          "taxonomy_f1": 0.15384615384615385,
+          "nontax_f1": 0.0,
+          "official_graph_similarity_avg": 0.042999592999593,
+          "composite_typing_tax_gs": 0.06561524894858228
+        },
+        "polluted_minus_clean": {
+          "typing_f1": 0.0,
+          "taxonomy_f1": 0.15384615384615385,
+          "nontax_f1": 0.0,
+          "official_graph_similarity_avg": 0.042999592999593,
+          "composite_typing_tax_gs": 0.06561524894858228
+        }
+      }
+    },
+    "b": {
+      "closed_vocab": {
+        "clean_low_probeability": {
+          "n": 5,
+          "typing_f1": 0.0,
+          "taxonomy_f1": 0.9444444444444444,
+          "nontax_f1": 0.0,
+          "official_graph_similarity_avg": 0.9022222222222223,
+          "composite_typing_tax_gs": 0.6155555555555555
+        },
+        "middle": {
+          "n": 5,
+          "typing_f1": 1.0,
+          "taxonomy_f1": 0.9767441860465117,
+          "nontax_f1": 0.0,
+          "official_graph_similarity_avg": 0.9158851674641149,
+          "composite_typing_tax_gs": 0.9642097845035421
+        },
+        "polluted_high_probeability": {
+          "n": 5,
+          "typing_f1": 0.0,
+          "taxonomy_f1": 1.0,
+          "nontax_f1": 0.0,
+          "official_graph_similarity_avg": 1.0,
+          "composite_typing_tax_gs": 0.6666666666666666
+        },
+        "polluted_minus_clean": {
+          "typing_f1": 0.0,
+          "taxonomy_f1": 0.05555555555555558,
+          "nontax_f1": 0.0,
+          "official_graph_similarity_avg": 0.09777777777777774,
+          "composite_typing_tax_gs": 0.05111111111111111
+        }
+      },
+      "open_vocab": {
+        "clean_low_probeability": {
+          "n": 5,
+          "typing_f1": 0.0,
+          "taxonomy_f1": 0.9444444444444444,
+          "nontax_f1": 0.0,
+          "official_graph_similarity_avg": 0.7311825718141507,
+          "composite_typing_tax_gs": 0.5585423387528651
+        },
+        "middle": {
+          "n": 5,
+          "typing_f1": 1.0,
+          "taxonomy_f1": 0.9333333333333332,
+          "nontax_f1": 0.0,
+          "official_graph_similarity_avg": 0.6201388888888889,
+          "composite_typing_tax_gs": 0.8511574074074074
+        },
+        "polluted_high_probeability": {
+          "n": 5,
+          "typing_f1": 0.0,
+          "taxonomy_f1": 0.923076923076923,
+          "nontax_f1": 0.0,
+          "official_graph_similarity_avg": 0.6714969997322939,
+          "composite_typing_tax_gs": 0.5315246409364057
+        },
+        "polluted_minus_clean": {
+          "typing_f1": 0.0,
+          "taxonomy_f1": -0.021367521367521403,
+          "nontax_f1": 0.0,
+          "official_graph_similarity_avg": -0.059685572081856764,
+          "composite_typing_tax_gs": -0.027017697816459352
+        }
+      }
+    }
+  },
+  "interpretation": {
+    "contamination_confirmed": false,
+    "valid_claim": "benchmark_factual_probeability_and_association_with_task_performance",
+    "invalid_claim": "verified_pretraining_membership",
+    "negative_controls_may_include_unlabeled_true_facts": true,
+    "authorize_generation_or_calibration_tuning": false,
+    "authorize_deployment_change": false
+  },
+  "confirmatory_eligible": false,
+  "scientific_deployable": false
+}

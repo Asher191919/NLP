@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "challenge": "LLMs4OL 2026",
+    "protocol": "llms4ol2026_blind_v1",
+    "task": "a",
+    "model": "dots3-note-prev",
+    "offset": 0,
+    "limit": 1,
+    "gold_visible_to_model": false
+  },
+  "systems": {
+    "closed_vocab": {
+      "meta": {
+        "challenge": "LLMs4OL 2026",
+        "protocol": "llms4ol2026_blind_v1",
+        "input_policy": "context_only",
+        "gold_visible_to_model": false,
+        "task": "a",
+        "task_name": "Flagship",
+        "system": "closed_vocab",
+        "backend": "openai",
+        "model": "dots3-note-prev",
+        "offset": 0,
+        "limit": 1,
+        "workers": 1,
+        "max_context_chars": 6000,
+        "metric": "llms4ol2026_graph_similarity_exact",
+        "elapsed_sec": 28.685
+      },
+      "summary": {
+        "target_n": 1,
+        "n_success": 0,
+        "n_failed": 1,
+        "complete": false,
+        "term_typing_f1_micro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy_f1_micro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_f1_micro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity_avg": 0.0,
+        "composite_typing_tax_gs": 0.0,
+        "nontax_pred_total": 0,
+        "nontax_gold_total": 0
+      },
+      "samples": [
+        {
+          "sample_index": 0,
+          "sample_id": "e084ae705bfc4281a5e60155dc34c92c",
+          "status": "error",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\closed_vocab\\00000_2e9358afe3.json",
+          "attempts": 2,
+          "latency_sec": 28.646,
+          "errors": [
+            "attempt 1: ValueError: model JSON object has no supported triple list",
+            "attempt 2: ValueError: model JSON object has no supported triple list"
+          ]
+        }
+      ]
+    },
+    "open_vocab": {
+      "meta": {
+        "challenge": "LLMs4OL 2026",
+        "protocol": "llms4ol2026_blind_v1",
+        "input_policy": "context_only",
+        "gold_visible_to_model": false,
+        "task": "a",
+        "task_name": "Flagship",
+        "system": "open_vocab",
+        "backend": "openai",
+        "model": "dots3-note-prev",
+        "offset": 0,
+        "limit": 1,
+        "workers": 1,
+        "max_context_chars": 6000,
+        "metric": "llms4ol2026_graph_similarity_exact",
+        "elapsed_sec": 28.065
+      },
+      "summary": {
+        "target_n": 1,
+        "n_success": 0,
+        "n_failed": 1,
+        "complete": false,
+        "term_typing_f1_micro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy_f1_micro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_f1_micro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity_avg": 0.0,
+        "composite_typing_tax_gs": 0.0,
+        "nontax_pred_total": 0,
+        "nontax_gold_total": 0
+      },
+      "samples": [
+        {
+          "sample_index": 0,
+          "sample_id": "e084ae705bfc4281a5e60155dc34c92c",
+          "status": "error",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab\\00000_2e9358afe3.json",
+          "attempts": 2,
+          "latency_sec": 28.063,
+          "errors": [
+            "attempt 1: ValueError: model JSON object has no supported triple list",
+            "attempt 2: ValueError: model JSON object has no supported triple list"
+          ]
+        }
+      ]
+    }
+  }
+}

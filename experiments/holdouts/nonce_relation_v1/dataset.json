@@ -1,0 +1,2653 @@
+{
+  "meta": {
+    "contains_protected_gold": true,
+    "created_for": "low_exposure_text_grounded_nontax_evaluation",
+    "human_annotated": false,
+    "primary_metric": "exact_nontax_micro_f1",
+    "protocol": "nonce_relation_holdout_v1",
+    "seed": 20260926,
+    "synthetic": true
+  },
+  "samples": [
+    {
+      "context": "Controlled fictional relation record nonce_rel_000; use only statements in this record. entity_fb381eced0 has the ontology relation part_of to entity_abb1dc00f4. entity_ca3c4a46ca has part entity_2c63dd2906. The focal item in this statement is entity_6a6e9043eb. It develops_from entity_053564c885. The focal item in this statement is entity_90f2bf5ef9. It derives from entity_3a38d0fd2e. entity_4ed82675d6 and entity_19f9c78794 were inspected together, but entity_4ed82675d6 does not regulate entity_19f9c78794 and does not have the ontology relation part_of to entity_19f9c78794.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_fb381eced0 has the ontology relation part_of to entity_abb1dc00f4."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_fb381eced0",
+            "part_of",
+            "entity_abb1dc00f4"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_ca3c4a46ca has part entity_2c63dd2906."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_ca3c4a46ca",
+            "has part",
+            "entity_2c63dd2906"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_6a6e9043eb.",
+            "It develops_from entity_053564c885."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_6a6e9043eb",
+            "develops_from",
+            "entity_053564c885"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_90f2bf5ef9.",
+            "It derives from entity_3a38d0fd2e."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_90f2bf5ef9",
+            "derives from",
+            "entity_3a38d0fd2e"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_fb381eced0",
+          "part_of",
+          "entity_abb1dc00f4"
+        ],
+        [
+          "entity_ca3c4a46ca",
+          "has part",
+          "entity_2c63dd2906"
+        ],
+        [
+          "entity_6a6e9043eb",
+          "develops_from",
+          "entity_053564c885"
+        ],
+        [
+          "entity_90f2bf5ef9",
+          "derives from",
+          "entity_3a38d0fd2e"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_4ed82675d6",
+          "regulates",
+          "entity_19f9c78794"
+        ],
+        [
+          "entity_4ed82675d6",
+          "part_of",
+          "entity_19f9c78794"
+        ]
+      ],
+      "id": "nonce_rel_000",
+      "sample_index": 0,
+      "surface_form": "canonical"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_001; use only statements in this record. entity_9fbfd30c38 is located in entity_a7d006e931. entity_528f1033f8 regulates entity_3102b96406. The focal item in this statement is entity_2dcd7900b2. It has the ontology relation part_of to entity_093806b9a5. The focal item in this statement is entity_a3d5a3ef5c. It has part entity_5b757f21de. entity_714fc9a2c4 and entity_1317d138e8 were inspected together, but entity_714fc9a2c4 does not regulate entity_1317d138e8 and does not have the ontology relation part_of to entity_1317d138e8.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_9fbfd30c38 is located in entity_a7d006e931."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_9fbfd30c38",
+            "located in",
+            "entity_a7d006e931"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_528f1033f8 regulates entity_3102b96406."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_528f1033f8",
+            "regulates",
+            "entity_3102b96406"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_2dcd7900b2.",
+            "It has the ontology relation part_of to entity_093806b9a5."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_2dcd7900b2",
+            "part_of",
+            "entity_093806b9a5"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_a3d5a3ef5c.",
+            "It has part entity_5b757f21de."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_a3d5a3ef5c",
+            "has part",
+            "entity_5b757f21de"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_9fbfd30c38",
+          "located in",
+          "entity_a7d006e931"
+        ],
+        [
+          "entity_528f1033f8",
+          "regulates",
+          "entity_3102b96406"
+        ],
+        [
+          "entity_2dcd7900b2",
+          "part_of",
+          "entity_093806b9a5"
+        ],
+        [
+          "entity_a3d5a3ef5c",
+          "has part",
+          "entity_5b757f21de"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_714fc9a2c4",
+          "regulates",
+          "entity_1317d138e8"
+        ],
+        [
+          "entity_714fc9a2c4",
+          "part_of",
+          "entity_1317d138e8"
+        ]
+      ],
+      "id": "nonce_rel_001",
+      "sample_index": 1,
+      "surface_form": "canonical"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_002; use only statements in this record. entity_92e2737a23 develops_from entity_538da60eef. entity_aee4b399ce derives from entity_54706cb9a9. The focal item in this statement is entity_c1463aa035. It is located in entity_fe12030630. The focal item in this statement is entity_02f2972c28. It regulates entity_f361812fd0. entity_af436e276d and entity_1203718272 were inspected together, but entity_af436e276d does not regulate entity_1203718272 and does not have the ontology relation part_of to entity_1203718272.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_92e2737a23 develops_from entity_538da60eef."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_92e2737a23",
+            "develops_from",
+            "entity_538da60eef"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_aee4b399ce derives from entity_54706cb9a9."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_aee4b399ce",
+            "derives from",
+            "entity_54706cb9a9"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_c1463aa035.",
+            "It is located in entity_fe12030630."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_c1463aa035",
+            "located in",
+            "entity_fe12030630"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_02f2972c28.",
+            "It regulates entity_f361812fd0."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_02f2972c28",
+            "regulates",
+            "entity_f361812fd0"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_92e2737a23",
+          "develops_from",
+          "entity_538da60eef"
+        ],
+        [
+          "entity_aee4b399ce",
+          "derives from",
+          "entity_54706cb9a9"
+        ],
+        [
+          "entity_c1463aa035",
+          "located in",
+          "entity_fe12030630"
+        ],
+        [
+          "entity_02f2972c28",
+          "regulates",
+          "entity_f361812fd0"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_af436e276d",
+          "regulates",
+          "entity_1203718272"
+        ],
+        [
+          "entity_af436e276d",
+          "part_of",
+          "entity_1203718272"
+        ]
+      ],
+      "id": "nonce_rel_002",
+      "sample_index": 2,
+      "surface_form": "canonical"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_003; use only statements in this record. entity_7a2afbc0eb has the ontology relation part_of to entity_10068a2ed2. entity_b5054e8dce has part entity_a3aca66b4b. The focal item in this statement is entity_1a1874de43. It develops_from entity_9bd42eaf8f. The focal item in this statement is entity_408a292292. It derives from entity_f0a95e765d. entity_38d6ec8e2f and entity_e776dfe2fc were inspected together, but entity_38d6ec8e2f does not regulate entity_e776dfe2fc and does not have the ontology relation part_of to entity_e776dfe2fc.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_7a2afbc0eb has the ontology relation part_of to entity_10068a2ed2."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_7a2afbc0eb",
+            "part_of",
+            "entity_10068a2ed2"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_b5054e8dce has part entity_a3aca66b4b."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_b5054e8dce",
+            "has part",
+            "entity_a3aca66b4b"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_1a1874de43.",
+            "It develops_from entity_9bd42eaf8f."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_1a1874de43",
+            "develops_from",
+            "entity_9bd42eaf8f"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_408a292292.",
+            "It derives from entity_f0a95e765d."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_408a292292",
+            "derives from",
+            "entity_f0a95e765d"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_7a2afbc0eb",
+          "part_of",
+          "entity_10068a2ed2"
+        ],
+        [
+          "entity_b5054e8dce",
+          "has part",
+          "entity_a3aca66b4b"
+        ],
+        [
+          "entity_1a1874de43",
+          "develops_from",
+          "entity_9bd42eaf8f"
+        ],
+        [
+          "entity_408a292292",
+          "derives from",
+          "entity_f0a95e765d"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_38d6ec8e2f",
+          "regulates",
+          "entity_e776dfe2fc"
+        ],
+        [
+          "entity_38d6ec8e2f",
+          "part_of",
+          "entity_e776dfe2fc"
+        ]
+      ],
+      "id": "nonce_rel_003",
+      "sample_index": 3,
+      "surface_form": "canonical"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_004; use only statements in this record. entity_8a702fc239 is located in entity_f82405b484. entity_141298beca regulates entity_c2bcf9495a. The focal item in this statement is entity_7de090ef49. It has the ontology relation part_of to entity_c2b43ceea8. The focal item in this statement is entity_0fa6e68051. It has part entity_189e1b7e21. entity_97a5dc4bce and entity_fcda1252b6 were inspected together, but entity_97a5dc4bce does not regulate entity_fcda1252b6 and does not have the ontology relation part_of to entity_fcda1252b6.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_8a702fc239 is located in entity_f82405b484."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_8a702fc239",
+            "located in",
+            "entity_f82405b484"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_141298beca regulates entity_c2bcf9495a."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_141298beca",
+            "regulates",
+            "entity_c2bcf9495a"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_7de090ef49.",
+            "It has the ontology relation part_of to entity_c2b43ceea8."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_7de090ef49",
+            "part_of",
+            "entity_c2b43ceea8"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_0fa6e68051.",
+            "It has part entity_189e1b7e21."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_0fa6e68051",
+            "has part",
+            "entity_189e1b7e21"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_8a702fc239",
+          "located in",
+          "entity_f82405b484"
+        ],
+        [
+          "entity_141298beca",
+          "regulates",
+          "entity_c2bcf9495a"
+        ],
+        [
+          "entity_7de090ef49",
+          "part_of",
+          "entity_c2b43ceea8"
+        ],
+        [
+          "entity_0fa6e68051",
+          "has part",
+          "entity_189e1b7e21"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_97a5dc4bce",
+          "regulates",
+          "entity_fcda1252b6"
+        ],
+        [
+          "entity_97a5dc4bce",
+          "part_of",
+          "entity_fcda1252b6"
+        ]
+      ],
+      "id": "nonce_rel_004",
+      "sample_index": 4,
+      "surface_form": "canonical"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_005; use only statements in this record. entity_219bbb686a develops_from entity_ba015fa26c. entity_8d744b80d6 derives from entity_930be72d7e. The focal item in this statement is entity_a9318047e5. It is located in entity_1f77cf3243. The focal item in this statement is entity_5a529ea56e. It regulates entity_fef040658d. entity_8e0f3aae57 and entity_f6ed75e753 were inspected together, but entity_8e0f3aae57 does not regulate entity_f6ed75e753 and does not have the ontology relation part_of to entity_f6ed75e753.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_219bbb686a develops_from entity_ba015fa26c."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_219bbb686a",
+            "develops_from",
+            "entity_ba015fa26c"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_8d744b80d6 derives from entity_930be72d7e."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_8d744b80d6",
+            "derives from",
+            "entity_930be72d7e"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_a9318047e5.",
+            "It is located in entity_1f77cf3243."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_a9318047e5",
+            "located in",
+            "entity_1f77cf3243"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_5a529ea56e.",
+            "It regulates entity_fef040658d."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_5a529ea56e",
+            "regulates",
+            "entity_fef040658d"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_219bbb686a",
+          "develops_from",
+          "entity_ba015fa26c"
+        ],
+        [
+          "entity_8d744b80d6",
+          "derives from",
+          "entity_930be72d7e"
+        ],
+        [
+          "entity_a9318047e5",
+          "located in",
+          "entity_1f77cf3243"
+        ],
+        [
+          "entity_5a529ea56e",
+          "regulates",
+          "entity_fef040658d"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_8e0f3aae57",
+          "regulates",
+          "entity_f6ed75e753"
+        ],
+        [
+          "entity_8e0f3aae57",
+          "part_of",
+          "entity_f6ed75e753"
+        ]
+      ],
+      "id": "nonce_rel_005",
+      "sample_index": 5,
+      "surface_form": "canonical"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_006; use only statements in this record. entity_f0ae4291f9 has the ontology relation part_of to entity_7352172b7b. entity_f1f65a9dfa has part entity_bd9ca90248. The focal item in this statement is entity_671246cc33. It develops_from entity_dad714e409. The focal item in this statement is entity_41f295403c. It derives from entity_20bb22cdba. entity_d39875815b and entity_0335a119b3 were inspected together, but entity_d39875815b does not regulate entity_0335a119b3 and does not have the ontology relation part_of to entity_0335a119b3.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_f0ae4291f9 has the ontology relation part_of to entity_7352172b7b."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_f0ae4291f9",
+            "part_of",
+            "entity_7352172b7b"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_f1f65a9dfa has part entity_bd9ca90248."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_f1f65a9dfa",
+            "has part",
+            "entity_bd9ca90248"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_671246cc33.",
+            "It develops_from entity_dad714e409."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_671246cc33",
+            "develops_from",
+            "entity_dad714e409"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_41f295403c.",
+            "It derives from entity_20bb22cdba."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_41f295403c",
+            "derives from",
+            "entity_20bb22cdba"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_f0ae4291f9",
+          "part_of",
+          "entity_7352172b7b"
+        ],
+        [
+          "entity_f1f65a9dfa",
+          "has part",
+          "entity_bd9ca90248"
+        ],
+        [
+          "entity_671246cc33",
+          "develops_from",
+          "entity_dad714e409"
+        ],
+        [
+          "entity_41f295403c",
+          "derives from",
+          "entity_20bb22cdba"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_d39875815b",
+          "regulates",
+          "entity_0335a119b3"
+        ],
+        [
+          "entity_d39875815b",
+          "part_of",
+          "entity_0335a119b3"
+        ]
+      ],
+      "id": "nonce_rel_006",
+      "sample_index": 6,
+      "surface_form": "canonical"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_007; use only statements in this record. entity_5ca1b9e7eb is located in entity_7c636d8cfc. entity_3ab1f90459 regulates entity_8146653b46. The focal item in this statement is entity_ad39ef0656. It has the ontology relation part_of to entity_a6c8d0dfeb. The focal item in this statement is entity_e84505018d. It has part entity_38e46cbfab. entity_5a98129de0 and entity_619d992e9f were inspected together, but entity_5a98129de0 does not regulate entity_619d992e9f and does not have the ontology relation part_of to entity_619d992e9f.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_5ca1b9e7eb is located in entity_7c636d8cfc."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_5ca1b9e7eb",
+            "located in",
+            "entity_7c636d8cfc"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_3ab1f90459 regulates entity_8146653b46."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_3ab1f90459",
+            "regulates",
+            "entity_8146653b46"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_ad39ef0656.",
+            "It has the ontology relation part_of to entity_a6c8d0dfeb."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_ad39ef0656",
+            "part_of",
+            "entity_a6c8d0dfeb"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_e84505018d.",
+            "It has part entity_38e46cbfab."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_e84505018d",
+            "has part",
+            "entity_38e46cbfab"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_5ca1b9e7eb",
+          "located in",
+          "entity_7c636d8cfc"
+        ],
+        [
+          "entity_3ab1f90459",
+          "regulates",
+          "entity_8146653b46"
+        ],
+        [
+          "entity_ad39ef0656",
+          "part_of",
+          "entity_a6c8d0dfeb"
+        ],
+        [
+          "entity_e84505018d",
+          "has part",
+          "entity_38e46cbfab"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_5a98129de0",
+          "regulates",
+          "entity_619d992e9f"
+        ],
+        [
+          "entity_5a98129de0",
+          "part_of",
+          "entity_619d992e9f"
+        ]
+      ],
+      "id": "nonce_rel_007",
+      "sample_index": 7,
+      "surface_form": "canonical"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_008; use only statements in this record. entity_fe01b59925 develops_from entity_226e8cfadf. entity_6a8630d420 derives from entity_63d448dc93. The focal item in this statement is entity_22b98cebbe. It is located in entity_763b72d618. The focal item in this statement is entity_19226c30ff. It regulates entity_e30cb0b7b0. entity_aa39dbd232 and entity_b7ab7b250e were inspected together, but entity_aa39dbd232 does not regulate entity_b7ab7b250e and does not have the ontology relation part_of to entity_b7ab7b250e.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_fe01b59925 develops_from entity_226e8cfadf."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_fe01b59925",
+            "develops_from",
+            "entity_226e8cfadf"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_6a8630d420 derives from entity_63d448dc93."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_6a8630d420",
+            "derives from",
+            "entity_63d448dc93"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_22b98cebbe.",
+            "It is located in entity_763b72d618."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_22b98cebbe",
+            "located in",
+            "entity_763b72d618"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_19226c30ff.",
+            "It regulates entity_e30cb0b7b0."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_19226c30ff",
+            "regulates",
+            "entity_e30cb0b7b0"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_fe01b59925",
+          "develops_from",
+          "entity_226e8cfadf"
+        ],
+        [
+          "entity_6a8630d420",
+          "derives from",
+          "entity_63d448dc93"
+        ],
+        [
+          "entity_22b98cebbe",
+          "located in",
+          "entity_763b72d618"
+        ],
+        [
+          "entity_19226c30ff",
+          "regulates",
+          "entity_e30cb0b7b0"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_aa39dbd232",
+          "regulates",
+          "entity_b7ab7b250e"
+        ],
+        [
+          "entity_aa39dbd232",
+          "part_of",
+          "entity_b7ab7b250e"
+        ]
+      ],
+      "id": "nonce_rel_008",
+      "sample_index": 8,
+      "surface_form": "canonical"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_009; use only statements in this record. entity_55b322461b has the ontology relation part_of to entity_4ae218c9f9. entity_f36959ac4e has part entity_d1b2a85d49. The focal item in this statement is entity_f5f2290713. It develops_from entity_be1305a962. The focal item in this statement is entity_e4bf6b2eed. It derives from entity_36f70bccf4. entity_a67940cf1e and entity_c7ac5484e8 were inspected together, but entity_a67940cf1e does not regulate entity_c7ac5484e8 and does not have the ontology relation part_of to entity_c7ac5484e8.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_55b322461b has the ontology relation part_of to entity_4ae218c9f9."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_55b322461b",
+            "part_of",
+            "entity_4ae218c9f9"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_f36959ac4e has part entity_d1b2a85d49."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_f36959ac4e",
+            "has part",
+            "entity_d1b2a85d49"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_f5f2290713.",
+            "It develops_from entity_be1305a962."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_f5f2290713",
+            "develops_from",
+            "entity_be1305a962"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_e4bf6b2eed.",
+            "It derives from entity_36f70bccf4."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_e4bf6b2eed",
+            "derives from",
+            "entity_36f70bccf4"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_55b322461b",
+          "part_of",
+          "entity_4ae218c9f9"
+        ],
+        [
+          "entity_f36959ac4e",
+          "has part",
+          "entity_d1b2a85d49"
+        ],
+        [
+          "entity_f5f2290713",
+          "develops_from",
+          "entity_be1305a962"
+        ],
+        [
+          "entity_e4bf6b2eed",
+          "derives from",
+          "entity_36f70bccf4"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_a67940cf1e",
+          "regulates",
+          "entity_c7ac5484e8"
+        ],
+        [
+          "entity_a67940cf1e",
+          "part_of",
+          "entity_c7ac5484e8"
+        ]
+      ],
+      "id": "nonce_rel_009",
+      "sample_index": 9,
+      "surface_form": "canonical"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_010; use only statements in this record. entity_d99317297a is located in entity_be4dbbd9ac. entity_eae28a0739 regulates entity_6b67cfd449. The focal item in this statement is entity_9bc8f18f6b. It has the ontology relation part_of to entity_710efdaaed. The focal item in this statement is entity_d358aac48b. It has part entity_ed3f2ed99b. entity_3f267277a3 and entity_84c4328669 were inspected together, but entity_3f267277a3 does not regulate entity_84c4328669 and does not have the ontology relation part_of to entity_84c4328669.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_d99317297a is located in entity_be4dbbd9ac."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_d99317297a",
+            "located in",
+            "entity_be4dbbd9ac"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_eae28a0739 regulates entity_6b67cfd449."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_eae28a0739",
+            "regulates",
+            "entity_6b67cfd449"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_9bc8f18f6b.",
+            "It has the ontology relation part_of to entity_710efdaaed."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_9bc8f18f6b",
+            "part_of",
+            "entity_710efdaaed"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_d358aac48b.",
+            "It has part entity_ed3f2ed99b."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_d358aac48b",
+            "has part",
+            "entity_ed3f2ed99b"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_d99317297a",
+          "located in",
+          "entity_be4dbbd9ac"
+        ],
+        [
+          "entity_eae28a0739",
+          "regulates",
+          "entity_6b67cfd449"
+        ],
+        [
+          "entity_9bc8f18f6b",
+          "part_of",
+          "entity_710efdaaed"
+        ],
+        [
+          "entity_d358aac48b",
+          "has part",
+          "entity_ed3f2ed99b"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_3f267277a3",
+          "regulates",
+          "entity_84c4328669"
+        ],
+        [
+          "entity_3f267277a3",
+          "part_of",
+          "entity_84c4328669"
+        ]
+      ],
+      "id": "nonce_rel_010",
+      "sample_index": 10,
+      "surface_form": "canonical"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_011; use only statements in this record. entity_abbb2f4722 develops_from entity_8685934761. entity_44eae2a50d derives from entity_b4afaabe99. The focal item in this statement is entity_72ef91a7cb. It is located in entity_b993b0261a. The focal item in this statement is entity_ebff7911f3. It regulates entity_88ffc3ec0e. entity_fcdc12126e and entity_f066a343a3 were inspected together, but entity_fcdc12126e does not regulate entity_f066a343a3 and does not have the ontology relation part_of to entity_f066a343a3.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_abbb2f4722 develops_from entity_8685934761."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_abbb2f4722",
+            "develops_from",
+            "entity_8685934761"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_44eae2a50d derives from entity_b4afaabe99."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_44eae2a50d",
+            "derives from",
+            "entity_b4afaabe99"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_72ef91a7cb.",
+            "It is located in entity_b993b0261a."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_72ef91a7cb",
+            "located in",
+            "entity_b993b0261a"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_ebff7911f3.",
+            "It regulates entity_88ffc3ec0e."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_ebff7911f3",
+            "regulates",
+            "entity_88ffc3ec0e"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_abbb2f4722",
+          "develops_from",
+          "entity_8685934761"
+        ],
+        [
+          "entity_44eae2a50d",
+          "derives from",
+          "entity_b4afaabe99"
+        ],
+        [
+          "entity_72ef91a7cb",
+          "located in",
+          "entity_b993b0261a"
+        ],
+        [
+          "entity_ebff7911f3",
+          "regulates",
+          "entity_88ffc3ec0e"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_fcdc12126e",
+          "regulates",
+          "entity_f066a343a3"
+        ],
+        [
+          "entity_fcdc12126e",
+          "part_of",
+          "entity_f066a343a3"
+        ]
+      ],
+      "id": "nonce_rel_011",
+      "sample_index": 11,
+      "surface_form": "canonical"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_012; use only statements in this record. entity_0ec73bf48b has the ontology relation part_of to entity_acf475971a. entity_0e17ce2e22 has part entity_9dcd4c820d. The focal item in this statement is entity_35509d0e6d. It develops_from entity_1e81bb3f1e. The focal item in this statement is entity_0d6e46707e. It derives from entity_cb76f676d9. entity_1275383478 and entity_82dec8d300 were inspected together, but entity_1275383478 does not regulate entity_82dec8d300 and does not have the ontology relation part_of to entity_82dec8d300.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_0ec73bf48b has the ontology relation part_of to entity_acf475971a."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_0ec73bf48b",
+            "part_of",
+            "entity_acf475971a"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_0e17ce2e22 has part entity_9dcd4c820d."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_0e17ce2e22",
+            "has part",
+            "entity_9dcd4c820d"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_35509d0e6d.",
+            "It develops_from entity_1e81bb3f1e."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_35509d0e6d",
+            "develops_from",
+            "entity_1e81bb3f1e"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_0d6e46707e.",
+            "It derives from entity_cb76f676d9."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_0d6e46707e",
+            "derives from",
+            "entity_cb76f676d9"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_0ec73bf48b",
+          "part_of",
+          "entity_acf475971a"
+        ],
+        [
+          "entity_0e17ce2e22",
+          "has part",
+          "entity_9dcd4c820d"
+        ],
+        [
+          "entity_35509d0e6d",
+          "develops_from",
+          "entity_1e81bb3f1e"
+        ],
+        [
+          "entity_0d6e46707e",
+          "derives from",
+          "entity_cb76f676d9"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_1275383478",
+          "regulates",
+          "entity_82dec8d300"
+        ],
+        [
+          "entity_1275383478",
+          "part_of",
+          "entity_82dec8d300"
+        ]
+      ],
+      "id": "nonce_rel_012",
+      "sample_index": 12,
+      "surface_form": "canonical"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_013; use only statements in this record. entity_5fab98aca5 is located in entity_394530082c. entity_db955cbef8 regulates entity_d9c2b7c37f. The focal item in this statement is entity_ffe0821a26. It has the ontology relation part_of to entity_097838e2fb. The focal item in this statement is entity_78364db772. It has part entity_5cb04c1e52. entity_97969b6a9e and entity_53b36c4173 were inspected together, but entity_97969b6a9e does not regulate entity_53b36c4173 and does not have the ontology relation part_of to entity_53b36c4173.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_5fab98aca5 is located in entity_394530082c."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_5fab98aca5",
+            "located in",
+            "entity_394530082c"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_db955cbef8 regulates entity_d9c2b7c37f."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_db955cbef8",
+            "regulates",
+            "entity_d9c2b7c37f"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_ffe0821a26.",
+            "It has the ontology relation part_of to entity_097838e2fb."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_ffe0821a26",
+            "part_of",
+            "entity_097838e2fb"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_78364db772.",
+            "It has part entity_5cb04c1e52."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_78364db772",
+            "has part",
+            "entity_5cb04c1e52"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_5fab98aca5",
+          "located in",
+          "entity_394530082c"
+        ],
+        [
+          "entity_db955cbef8",
+          "regulates",
+          "entity_d9c2b7c37f"
+        ],
+        [
+          "entity_ffe0821a26",
+          "part_of",
+          "entity_097838e2fb"
+        ],
+        [
+          "entity_78364db772",
+          "has part",
+          "entity_5cb04c1e52"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_97969b6a9e",
+          "regulates",
+          "entity_53b36c4173"
+        ],
+        [
+          "entity_97969b6a9e",
+          "part_of",
+          "entity_53b36c4173"
+        ]
+      ],
+      "id": "nonce_rel_013",
+      "sample_index": 13,
+      "surface_form": "canonical"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_014; use only statements in this record. entity_1adc86ab67 develops_from entity_8c7504e25d. entity_52b17f1793 derives from entity_c58a6ee4c3. The focal item in this statement is entity_8dbd14c445. It is located in entity_b7f547ddf2. The focal item in this statement is entity_745fad0db9. It regulates entity_cc51d427aa. entity_73ef29099e and entity_e216014367 were inspected together, but entity_73ef29099e does not regulate entity_e216014367 and does not have the ontology relation part_of to entity_e216014367.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_1adc86ab67 develops_from entity_8c7504e25d."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_1adc86ab67",
+            "develops_from",
+            "entity_8c7504e25d"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_52b17f1793 derives from entity_c58a6ee4c3."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_52b17f1793",
+            "derives from",
+            "entity_c58a6ee4c3"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_8dbd14c445.",
+            "It is located in entity_b7f547ddf2."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_8dbd14c445",
+            "located in",
+            "entity_b7f547ddf2"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_745fad0db9.",
+            "It regulates entity_cc51d427aa."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_745fad0db9",
+            "regulates",
+            "entity_cc51d427aa"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_1adc86ab67",
+          "develops_from",
+          "entity_8c7504e25d"
+        ],
+        [
+          "entity_52b17f1793",
+          "derives from",
+          "entity_c58a6ee4c3"
+        ],
+        [
+          "entity_8dbd14c445",
+          "located in",
+          "entity_b7f547ddf2"
+        ],
+        [
+          "entity_745fad0db9",
+          "regulates",
+          "entity_cc51d427aa"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_73ef29099e",
+          "regulates",
+          "entity_e216014367"
+        ],
+        [
+          "entity_73ef29099e",
+          "part_of",
+          "entity_e216014367"
+        ]
+      ],
+      "id": "nonce_rel_014",
+      "sample_index": 14,
+      "surface_form": "canonical"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_015; use only statements in this record. entity_dfc842e65b includes entity_bdc10c7218 as a component. entity_2f7e11223e is a component contained by entity_66ed86689c. The focal item in this statement is entity_7ee22100ef. Its developmental precursor is entity_09eadfe33f. The focal item in this statement is entity_5aeef40a0f. Its source material is entity_3ef74494cb. entity_e7a1d4a830 and entity_6fe678a141 were inspected together, but entity_e7a1d4a830 does not regulate entity_6fe678a141 and does not have the ontology relation part_of to entity_6fe678a141.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_dfc842e65b includes entity_bdc10c7218 as a component."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_bdc10c7218",
+            "part_of",
+            "entity_dfc842e65b"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_2f7e11223e is a component contained by entity_66ed86689c."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_66ed86689c",
+            "has part",
+            "entity_2f7e11223e"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_7ee22100ef.",
+            "Its developmental precursor is entity_09eadfe33f."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_7ee22100ef",
+            "develops_from",
+            "entity_09eadfe33f"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_5aeef40a0f.",
+            "Its source material is entity_3ef74494cb."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_5aeef40a0f",
+            "derives from",
+            "entity_3ef74494cb"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_bdc10c7218",
+          "part_of",
+          "entity_dfc842e65b"
+        ],
+        [
+          "entity_66ed86689c",
+          "has part",
+          "entity_2f7e11223e"
+        ],
+        [
+          "entity_7ee22100ef",
+          "develops_from",
+          "entity_09eadfe33f"
+        ],
+        [
+          "entity_5aeef40a0f",
+          "derives from",
+          "entity_3ef74494cb"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_e7a1d4a830",
+          "regulates",
+          "entity_6fe678a141"
+        ],
+        [
+          "entity_e7a1d4a830",
+          "part_of",
+          "entity_6fe678a141"
+        ]
+      ],
+      "id": "nonce_rel_015",
+      "sample_index": 15,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_016; use only statements in this record. entity_4606a79d70 houses entity_f24a623713. entity_8ff3cb180e controls the activity of entity_921431cd2a. The focal item in this statement is entity_5499a787c9. It belongs within entity_04554caa4b as a component. The focal item in this statement is entity_86067e74b7. One of its components is entity_5246606b76. entity_acb08d0560 and entity_ad645a03c0 were inspected together, but entity_acb08d0560 does not regulate entity_ad645a03c0 and does not have the ontology relation part_of to entity_ad645a03c0.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_4606a79d70 houses entity_f24a623713."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_f24a623713",
+            "located in",
+            "entity_4606a79d70"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_8ff3cb180e controls the activity of entity_921431cd2a."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_8ff3cb180e",
+            "regulates",
+            "entity_921431cd2a"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_5499a787c9.",
+            "It belongs within entity_04554caa4b as a component."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_5499a787c9",
+            "part_of",
+            "entity_04554caa4b"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_86067e74b7.",
+            "One of its components is entity_5246606b76."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_86067e74b7",
+            "has part",
+            "entity_5246606b76"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_f24a623713",
+          "located in",
+          "entity_4606a79d70"
+        ],
+        [
+          "entity_8ff3cb180e",
+          "regulates",
+          "entity_921431cd2a"
+        ],
+        [
+          "entity_5499a787c9",
+          "part_of",
+          "entity_04554caa4b"
+        ],
+        [
+          "entity_86067e74b7",
+          "has part",
+          "entity_5246606b76"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_acb08d0560",
+          "regulates",
+          "entity_ad645a03c0"
+        ],
+        [
+          "entity_acb08d0560",
+          "part_of",
+          "entity_ad645a03c0"
+        ]
+      ],
+      "id": "nonce_rel_016",
+      "sample_index": 16,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_017; use only statements in this record. entity_02f69812f5 is the developmental precursor of entity_81d632fa7f. entity_67a9b6afae is the source material for entity_2187db84c5. The focal item in this statement is entity_92ca287635. Its containing site is entity_3d83eaaa07. The focal item in this statement is entity_76c506ccb6. The activity it controls belongs to entity_90d81c4d30. entity_b751247126 and entity_8c05fec53e were inspected together, but entity_b751247126 does not regulate entity_8c05fec53e and does not have the ontology relation part_of to entity_8c05fec53e.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_02f69812f5 is the developmental precursor of entity_81d632fa7f."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_81d632fa7f",
+            "develops_from",
+            "entity_02f69812f5"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_67a9b6afae is the source material for entity_2187db84c5."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_2187db84c5",
+            "derives from",
+            "entity_67a9b6afae"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_92ca287635.",
+            "Its containing site is entity_3d83eaaa07."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_92ca287635",
+            "located in",
+            "entity_3d83eaaa07"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_76c506ccb6.",
+            "The activity it controls belongs to entity_90d81c4d30."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_76c506ccb6",
+            "regulates",
+            "entity_90d81c4d30"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_81d632fa7f",
+          "develops_from",
+          "entity_02f69812f5"
+        ],
+        [
+          "entity_2187db84c5",
+          "derives from",
+          "entity_67a9b6afae"
+        ],
+        [
+          "entity_92ca287635",
+          "located in",
+          "entity_3d83eaaa07"
+        ],
+        [
+          "entity_76c506ccb6",
+          "regulates",
+          "entity_90d81c4d30"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_b751247126",
+          "regulates",
+          "entity_8c05fec53e"
+        ],
+        [
+          "entity_b751247126",
+          "part_of",
+          "entity_8c05fec53e"
+        ]
+      ],
+      "id": "nonce_rel_017",
+      "sample_index": 17,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_018; use only statements in this record. entity_b6967c2d07 includes entity_e3f571c983 as a component. entity_92e7b07ecd is a component contained by entity_7dc5d16e5d. The focal item in this statement is entity_bb560b1155. Its developmental precursor is entity_8565f2775e. The focal item in this statement is entity_9531c6f00d. Its source material is entity_df314a03e2. entity_d9ca69ffe6 and entity_046b507bd6 were inspected together, but entity_d9ca69ffe6 does not regulate entity_046b507bd6 and does not have the ontology relation part_of to entity_046b507bd6.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_b6967c2d07 includes entity_e3f571c983 as a component."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_e3f571c983",
+            "part_of",
+            "entity_b6967c2d07"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_92e7b07ecd is a component contained by entity_7dc5d16e5d."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_7dc5d16e5d",
+            "has part",
+            "entity_92e7b07ecd"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_bb560b1155.",
+            "Its developmental precursor is entity_8565f2775e."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_bb560b1155",
+            "develops_from",
+            "entity_8565f2775e"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_9531c6f00d.",
+            "Its source material is entity_df314a03e2."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_9531c6f00d",
+            "derives from",
+            "entity_df314a03e2"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_e3f571c983",
+          "part_of",
+          "entity_b6967c2d07"
+        ],
+        [
+          "entity_7dc5d16e5d",
+          "has part",
+          "entity_92e7b07ecd"
+        ],
+        [
+          "entity_bb560b1155",
+          "develops_from",
+          "entity_8565f2775e"
+        ],
+        [
+          "entity_9531c6f00d",
+          "derives from",
+          "entity_df314a03e2"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_d9ca69ffe6",
+          "regulates",
+          "entity_046b507bd6"
+        ],
+        [
+          "entity_d9ca69ffe6",
+          "part_of",
+          "entity_046b507bd6"
+        ]
+      ],
+      "id": "nonce_rel_018",
+      "sample_index": 18,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_019; use only statements in this record. entity_58c021c6b8 houses entity_b5f4b03be5. entity_bd922a27e9 controls the activity of entity_8d514bd45d. The focal item in this statement is entity_30b343a4c8. It belongs within entity_86680215bb as a component. The focal item in this statement is entity_326690a772. One of its components is entity_0b216747b6. entity_525c032862 and entity_392b742b3f were inspected together, but entity_525c032862 does not regulate entity_392b742b3f and does not have the ontology relation part_of to entity_392b742b3f.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_58c021c6b8 houses entity_b5f4b03be5."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_b5f4b03be5",
+            "located in",
+            "entity_58c021c6b8"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_bd922a27e9 controls the activity of entity_8d514bd45d."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_bd922a27e9",
+            "regulates",
+            "entity_8d514bd45d"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_30b343a4c8.",
+            "It belongs within entity_86680215bb as a component."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_30b343a4c8",
+            "part_of",
+            "entity_86680215bb"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_326690a772.",
+            "One of its components is entity_0b216747b6."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_326690a772",
+            "has part",
+            "entity_0b216747b6"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_b5f4b03be5",
+          "located in",
+          "entity_58c021c6b8"
+        ],
+        [
+          "entity_bd922a27e9",
+          "regulates",
+          "entity_8d514bd45d"
+        ],
+        [
+          "entity_30b343a4c8",
+          "part_of",
+          "entity_86680215bb"
+        ],
+        [
+          "entity_326690a772",
+          "has part",
+          "entity_0b216747b6"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_525c032862",
+          "regulates",
+          "entity_392b742b3f"
+        ],
+        [
+          "entity_525c032862",
+          "part_of",
+          "entity_392b742b3f"
+        ]
+      ],
+      "id": "nonce_rel_019",
+      "sample_index": 19,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_020; use only statements in this record. entity_835fcdc35b is the developmental precursor of entity_e1842d5104. entity_c713619fa8 is the source material for entity_918224a8c0. The focal item in this statement is entity_6ff0031ba8. Its containing site is entity_4217f67a67. The focal item in this statement is entity_e7c22f0d75. The activity it controls belongs to entity_5a866d7ba3. entity_59a93e9631 and entity_c54ad87a84 were inspected together, but entity_59a93e9631 does not regulate entity_c54ad87a84 and does not have the ontology relation part_of to entity_c54ad87a84.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_835fcdc35b is the developmental precursor of entity_e1842d5104."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_e1842d5104",
+            "develops_from",
+            "entity_835fcdc35b"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_c713619fa8 is the source material for entity_918224a8c0."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_918224a8c0",
+            "derives from",
+            "entity_c713619fa8"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_6ff0031ba8.",
+            "Its containing site is entity_4217f67a67."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_6ff0031ba8",
+            "located in",
+            "entity_4217f67a67"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_e7c22f0d75.",
+            "The activity it controls belongs to entity_5a866d7ba3."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_e7c22f0d75",
+            "regulates",
+            "entity_5a866d7ba3"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_e1842d5104",
+          "develops_from",
+          "entity_835fcdc35b"
+        ],
+        [
+          "entity_918224a8c0",
+          "derives from",
+          "entity_c713619fa8"
+        ],
+        [
+          "entity_6ff0031ba8",
+          "located in",
+          "entity_4217f67a67"
+        ],
+        [
+          "entity_e7c22f0d75",
+          "regulates",
+          "entity_5a866d7ba3"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_59a93e9631",
+          "regulates",
+          "entity_c54ad87a84"
+        ],
+        [
+          "entity_59a93e9631",
+          "part_of",
+          "entity_c54ad87a84"
+        ]
+      ],
+      "id": "nonce_rel_020",
+      "sample_index": 20,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_021; use only statements in this record. entity_86801306fb includes entity_0479d8b959 as a component. entity_ad5c37aa04 is a component contained by entity_6476313fba. The focal item in this statement is entity_ab20f5d017. Its developmental precursor is entity_0667aeb2a9. The focal item in this statement is entity_231555831e. Its source material is entity_3d486e3f16. entity_3d6f1b63fe and entity_b0802763b2 were inspected together, but entity_3d6f1b63fe does not regulate entity_b0802763b2 and does not have the ontology relation part_of to entity_b0802763b2.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_86801306fb includes entity_0479d8b959 as a component."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_0479d8b959",
+            "part_of",
+            "entity_86801306fb"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_ad5c37aa04 is a component contained by entity_6476313fba."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_6476313fba",
+            "has part",
+            "entity_ad5c37aa04"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_ab20f5d017.",
+            "Its developmental precursor is entity_0667aeb2a9."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_ab20f5d017",
+            "develops_from",
+            "entity_0667aeb2a9"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_231555831e.",
+            "Its source material is entity_3d486e3f16."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_231555831e",
+            "derives from",
+            "entity_3d486e3f16"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_0479d8b959",
+          "part_of",
+          "entity_86801306fb"
+        ],
+        [
+          "entity_6476313fba",
+          "has part",
+          "entity_ad5c37aa04"
+        ],
+        [
+          "entity_ab20f5d017",
+          "develops_from",
+          "entity_0667aeb2a9"
+        ],
+        [
+          "entity_231555831e",
+          "derives from",
+          "entity_3d486e3f16"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_3d6f1b63fe",
+          "regulates",
+          "entity_b0802763b2"
+        ],
+        [
+          "entity_3d6f1b63fe",
+          "part_of",
+          "entity_b0802763b2"
+        ]
+      ],
+      "id": "nonce_rel_021",
+      "sample_index": 21,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_022; use only statements in this record. entity_3382862a7e houses entity_642778c2d6. entity_8b234e18f7 controls the activity of entity_134dd61fb4. The focal item in this statement is entity_caceab872e. It belongs within entity_2ef006381c as a component. The focal item in this statement is entity_42019855c2. One of its components is entity_a06a15071d. entity_eeced505c0 and entity_3722782da8 were inspected together, but entity_eeced505c0 does not regulate entity_3722782da8 and does not have the ontology relation part_of to entity_3722782da8.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_3382862a7e houses entity_642778c2d6."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_642778c2d6",
+            "located in",
+            "entity_3382862a7e"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_8b234e18f7 controls the activity of entity_134dd61fb4."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_8b234e18f7",
+            "regulates",
+            "entity_134dd61fb4"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_caceab872e.",
+            "It belongs within entity_2ef006381c as a component."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_caceab872e",
+            "part_of",
+            "entity_2ef006381c"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_42019855c2.",
+            "One of its components is entity_a06a15071d."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_42019855c2",
+            "has part",
+            "entity_a06a15071d"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_642778c2d6",
+          "located in",
+          "entity_3382862a7e"
+        ],
+        [
+          "entity_8b234e18f7",
+          "regulates",
+          "entity_134dd61fb4"
+        ],
+        [
+          "entity_caceab872e",
+          "part_of",
+          "entity_2ef006381c"
+        ],
+        [
+          "entity_42019855c2",
+          "has part",
+          "entity_a06a15071d"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_eeced505c0",
+          "regulates",
+          "entity_3722782da8"
+        ],
+        [
+          "entity_eeced505c0",
+          "part_of",
+          "entity_3722782da8"
+        ]
+      ],
+      "id": "nonce_rel_022",
+      "sample_index": 22,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_023; use only statements in this record. entity_c088dede9c is the developmental precursor of entity_6aa2478869. entity_6312555103 is the source material for entity_30858088c0. The focal item in this statement is entity_7906b1ffc5. Its containing site is entity_2bb2af125f. The focal item in this statement is entity_5792e93307. The activity it controls belongs to entity_71260a50b7. entity_a1cb10ad8d and entity_b1eefdf119 were inspected together, but entity_a1cb10ad8d does not regulate entity_b1eefdf119 and does not have the ontology relation part_of to entity_b1eefdf119.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_c088dede9c is the developmental precursor of entity_6aa2478869."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_6aa2478869",
+            "develops_from",
+            "entity_c088dede9c"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_6312555103 is the source material for entity_30858088c0."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_30858088c0",
+            "derives from",
+            "entity_6312555103"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_7906b1ffc5.",
+            "Its containing site is entity_2bb2af125f."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_7906b1ffc5",
+            "located in",
+            "entity_2bb2af125f"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_5792e93307.",
+            "The activity it controls belongs to entity_71260a50b7."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_5792e93307",
+            "regulates",
+            "entity_71260a50b7"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_6aa2478869",
+          "develops_from",
+          "entity_c088dede9c"
+        ],
+        [
+          "entity_30858088c0",
+          "derives from",
+          "entity_6312555103"
+        ],
+        [
+          "entity_7906b1ffc5",
+          "located in",
+          "entity_2bb2af125f"
+        ],
+        [
+          "entity_5792e93307",
+          "regulates",
+          "entity_71260a50b7"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_a1cb10ad8d",
+          "regulates",
+          "entity_b1eefdf119"
+        ],
+        [
+          "entity_a1cb10ad8d",
+          "part_of",
+          "entity_b1eefdf119"
+        ]
+      ],
+      "id": "nonce_rel_023",
+      "sample_index": 23,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_024; use only statements in this record. entity_ee27b77f02 includes entity_2b75d34df8 as a component. entity_af33a85a72 is a component contained by entity_1e6e40cb5a. The focal item in this statement is entity_e9bd56a361. Its developmental precursor is entity_614184e74f. The focal item in this statement is entity_e1a1e3bd71. Its source material is entity_ca042cdd78. entity_603817bad6 and entity_65a556c27f were inspected together, but entity_603817bad6 does not regulate entity_65a556c27f and does not have the ontology relation part_of to entity_65a556c27f.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_ee27b77f02 includes entity_2b75d34df8 as a component."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_2b75d34df8",
+            "part_of",
+            "entity_ee27b77f02"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_af33a85a72 is a component contained by entity_1e6e40cb5a."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_1e6e40cb5a",
+            "has part",
+            "entity_af33a85a72"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_e9bd56a361.",
+            "Its developmental precursor is entity_614184e74f."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_e9bd56a361",
+            "develops_from",
+            "entity_614184e74f"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_e1a1e3bd71.",
+            "Its source material is entity_ca042cdd78."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_e1a1e3bd71",
+            "derives from",
+            "entity_ca042cdd78"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_2b75d34df8",
+          "part_of",
+          "entity_ee27b77f02"
+        ],
+        [
+          "entity_1e6e40cb5a",
+          "has part",
+          "entity_af33a85a72"
+        ],
+        [
+          "entity_e9bd56a361",
+          "develops_from",
+          "entity_614184e74f"
+        ],
+        [
+          "entity_e1a1e3bd71",
+          "derives from",
+          "entity_ca042cdd78"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_603817bad6",
+          "regulates",
+          "entity_65a556c27f"
+        ],
+        [
+          "entity_603817bad6",
+          "part_of",
+          "entity_65a556c27f"
+        ]
+      ],
+      "id": "nonce_rel_024",
+      "sample_index": 24,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_025; use only statements in this record. entity_0a9d548103 houses entity_e834ea37fa. entity_bd35c99993 controls the activity of entity_f42b063e2e. The focal item in this statement is entity_c9cd749838. It belongs within entity_84c97f3297 as a component. The focal item in this statement is entity_e1067dfab5. One of its components is entity_91dd3bbf34. entity_4831000875 and entity_4c7d1d9e04 were inspected together, but entity_4831000875 does not regulate entity_4c7d1d9e04 and does not have the ontology relation part_of to entity_4c7d1d9e04.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_0a9d548103 houses entity_e834ea37fa."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_e834ea37fa",
+            "located in",
+            "entity_0a9d548103"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_bd35c99993 controls the activity of entity_f42b063e2e."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_bd35c99993",
+            "regulates",
+            "entity_f42b063e2e"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_c9cd749838.",
+            "It belongs within entity_84c97f3297 as a component."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_c9cd749838",
+            "part_of",
+            "entity_84c97f3297"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_e1067dfab5.",
+            "One of its components is entity_91dd3bbf34."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_e1067dfab5",
+            "has part",
+            "entity_91dd3bbf34"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_e834ea37fa",
+          "located in",
+          "entity_0a9d548103"
+        ],
+        [
+          "entity_bd35c99993",
+          "regulates",
+          "entity_f42b063e2e"
+        ],
+        [
+          "entity_c9cd749838",
+          "part_of",
+          "entity_84c97f3297"
+        ],
+        [
+          "entity_e1067dfab5",
+          "has part",
+          "entity_91dd3bbf34"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_4831000875",
+          "regulates",
+          "entity_4c7d1d9e04"
+        ],
+        [
+          "entity_4831000875",
+          "part_of",
+          "entity_4c7d1d9e04"
+        ]
+      ],
+      "id": "nonce_rel_025",
+      "sample_index": 25,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_026; use only statements in this record. entity_092d2f8aae is the developmental precursor of entity_7f32f8668a. entity_8dd8934f6a is the source material for entity_121aa8fd49. The focal item in this statement is entity_a40ea60770. Its containing site is entity_a90389ac53. The focal item in this statement is entity_ebbfac83a7. The activity it controls belongs to entity_14c7cac761. entity_bef06dd9de and entity_b28af5d350 were inspected together, but entity_bef06dd9de does not regulate entity_b28af5d350 and does not have the ontology relation part_of to entity_b28af5d350.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_092d2f8aae is the developmental precursor of entity_7f32f8668a."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_7f32f8668a",
+            "develops_from",
+            "entity_092d2f8aae"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_8dd8934f6a is the source material for entity_121aa8fd49."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_121aa8fd49",
+            "derives from",
+            "entity_8dd8934f6a"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_a40ea60770.",
+            "Its containing site is entity_a90389ac53."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_a40ea60770",
+            "located in",
+            "entity_a90389ac53"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_ebbfac83a7.",
+            "The activity it controls belongs to entity_14c7cac761."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_ebbfac83a7",
+            "regulates",
+            "entity_14c7cac761"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_7f32f8668a",
+          "develops_from",
+          "entity_092d2f8aae"
+        ],
+        [
+          "entity_121aa8fd49",
+          "derives from",
+          "entity_8dd8934f6a"
+        ],
+        [
+          "entity_a40ea60770",
+          "located in",
+          "entity_a90389ac53"
+        ],
+        [
+          "entity_ebbfac83a7",
+          "regulates",
+          "entity_14c7cac761"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_bef06dd9de",
+          "regulates",
+          "entity_b28af5d350"
+        ],
+        [
+          "entity_bef06dd9de",
+          "part_of",
+          "entity_b28af5d350"
+        ]
+      ],
+      "id": "nonce_rel_026",
+      "sample_index": 26,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_027; use only statements in this record. entity_f3985e06a5 includes entity_6c40c4ce76 as a component. entity_ff3fc1e8f7 is a component contained by entity_862c13fc97. The focal item in this statement is entity_8e6041ab50. Its developmental precursor is entity_6d9ca9bee5. The focal item in this statement is entity_4bdfbb927a. Its source material is entity_779849ce3a. entity_10618403cb and entity_fface3b5d8 were inspected together, but entity_10618403cb does not regulate entity_fface3b5d8 and does not have the ontology relation part_of to entity_fface3b5d8.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_f3985e06a5 includes entity_6c40c4ce76 as a component."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_6c40c4ce76",
+            "part_of",
+            "entity_f3985e06a5"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_ff3fc1e8f7 is a component contained by entity_862c13fc97."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_862c13fc97",
+            "has part",
+            "entity_ff3fc1e8f7"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_8e6041ab50.",
+            "Its developmental precursor is entity_6d9ca9bee5."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_8e6041ab50",
+            "develops_from",
+            "entity_6d9ca9bee5"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_4bdfbb927a.",
+            "Its source material is entity_779849ce3a."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_4bdfbb927a",
+            "derives from",
+            "entity_779849ce3a"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_6c40c4ce76",
+          "part_of",
+          "entity_f3985e06a5"
+        ],
+        [
+          "entity_862c13fc97",
+          "has part",
+          "entity_ff3fc1e8f7"
+        ],
+        [
+          "entity_8e6041ab50",
+          "develops_from",
+          "entity_6d9ca9bee5"
+        ],
+        [
+          "entity_4bdfbb927a",
+          "derives from",
+          "entity_779849ce3a"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_10618403cb",
+          "regulates",
+          "entity_fface3b5d8"
+        ],
+        [
+          "entity_10618403cb",
+          "part_of",
+          "entity_fface3b5d8"
+        ]
+      ],
+      "id": "nonce_rel_027",
+      "sample_index": 27,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_028; use only statements in this record. entity_e6420e1a24 houses entity_2c977ec13e. entity_56ae65dd5e controls the activity of entity_ba4ff56125. The focal item in this statement is entity_08424fc794. It belongs within entity_af9dd2fd7c as a component. The focal item in this statement is entity_b4f49adb1f. One of its components is entity_9ea17fbbf5. entity_2cea37f0bd and entity_027ea97f93 were inspected together, but entity_2cea37f0bd does not regulate entity_027ea97f93 and does not have the ontology relation part_of to entity_027ea97f93.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_e6420e1a24 houses entity_2c977ec13e."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_2c977ec13e",
+            "located in",
+            "entity_e6420e1a24"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_56ae65dd5e controls the activity of entity_ba4ff56125."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_56ae65dd5e",
+            "regulates",
+            "entity_ba4ff56125"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_08424fc794.",
+            "It belongs within entity_af9dd2fd7c as a component."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_08424fc794",
+            "part_of",
+            "entity_af9dd2fd7c"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_b4f49adb1f.",
+            "One of its components is entity_9ea17fbbf5."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_b4f49adb1f",
+            "has part",
+            "entity_9ea17fbbf5"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_2c977ec13e",
+          "located in",
+          "entity_e6420e1a24"
+        ],
+        [
+          "entity_56ae65dd5e",
+          "regulates",
+          "entity_ba4ff56125"
+        ],
+        [
+          "entity_08424fc794",
+          "part_of",
+          "entity_af9dd2fd7c"
+        ],
+        [
+          "entity_b4f49adb1f",
+          "has part",
+          "entity_9ea17fbbf5"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_2cea37f0bd",
+          "regulates",
+          "entity_027ea97f93"
+        ],
+        [
+          "entity_2cea37f0bd",
+          "part_of",
+          "entity_027ea97f93"
+        ]
+      ],
+      "id": "nonce_rel_028",
+      "sample_index": 28,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context": "Controlled fictional relation record nonce_rel_029; use only statements in this record. entity_4920a21971 is the developmental precursor of entity_4149a50186. entity_8018df224a is the source material for entity_9932a3312c. The focal item in this statement is entity_90175eaf76. Its containing site is entity_32c230c2a3. The focal item in this statement is entity_de58f256bb. The activity it controls belongs to entity_db0ed106ba. entity_ce957b21a4 and entity_928f366c2b were inspected together, but entity_ce957b21a4 does not regulate entity_928f366c2b and does not have the ontology relation part_of to entity_928f366c2b.",
+      "gold_relation_annotations": [
+        {
+          "evidence": [
+            "entity_4920a21971 is the developmental precursor of entity_4149a50186."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_4149a50186",
+            "develops_from",
+            "entity_4920a21971"
+          ]
+        },
+        {
+          "evidence": [
+            "entity_8018df224a is the source material for entity_9932a3312c."
+          ],
+          "evidence_mode": "explicit",
+          "triple": [
+            "entity_9932a3312c",
+            "derives from",
+            "entity_8018df224a"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_90175eaf76.",
+            "Its containing site is entity_32c230c2a3."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_90175eaf76",
+            "located in",
+            "entity_32c230c2a3"
+          ]
+        },
+        {
+          "evidence": [
+            "The focal item in this statement is entity_de58f256bb.",
+            "The activity it controls belongs to entity_db0ed106ba."
+          ],
+          "evidence_mode": "cross_sentence",
+          "triple": [
+            "entity_de58f256bb",
+            "regulates",
+            "entity_db0ed106ba"
+          ]
+        }
+      ],
+      "gold_relations": [
+        [
+          "entity_4149a50186",
+          "develops_from",
+          "entity_4920a21971"
+        ],
+        [
+          "entity_9932a3312c",
+          "derives from",
+          "entity_8018df224a"
+        ],
+        [
+          "entity_90175eaf76",
+          "located in",
+          "entity_32c230c2a3"
+        ],
+        [
+          "entity_de58f256bb",
+          "regulates",
+          "entity_db0ed106ba"
+        ]
+      ],
+      "hard_negative_controls": [
+        [
+          "entity_ce957b21a4",
+          "regulates",
+          "entity_928f366c2b"
+        ],
+        [
+          "entity_ce957b21a4",
+          "part_of",
+          "entity_928f366c2b"
+        ]
+      ],
+      "id": "nonce_rel_029",
+      "sample_index": 29,
+      "surface_form": "paraphrased"
+    }
+  ]
+}

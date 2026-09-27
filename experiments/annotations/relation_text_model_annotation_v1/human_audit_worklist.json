@@ -1,0 +1,1937 @@
+{
+  "protocol": "relation_model_weaklabel_human_audit_v1",
+  "source_frozen_artifact": "D:\\NLP\\experiments\\annotations\\relation_text_model_annotation_v1\\frozen_model_relations.json",
+  "source_frozen_sha256": "5b02cb6855a2a05221aa63213b8aa261ef02b33341f60c97406a4ef2a65df3d1",
+  "created_from_agreement_seed": 20260924,
+  "purpose": "triage index for a future relation-level human audit of dual-LLM weak labels",
+  "worklist_status": "triage_only_not_freezable",
+  "relation_level_verdicts_required": true,
+  "claim_label_after_audit": "dual-LLM annotation with targeted human audit",
+  "confirmatory_gate": "stays closed until this audit is completed by a human",
+  "scope": {
+    "all_disagreement_samples": 24,
+    "all_positive_samples": 26,
+    "random_20pct_agreed_negative_samples": 1,
+    "total_samples_to_review": 27,
+    "universe_samples": 30
+  },
+  "sample_keys": {
+    "disagreements": [
+      "037dc73c98f67807cb95",
+      "04e4fd278857190bab4d",
+      "0cf8c1f31b7e58e5f6de",
+      "0e8dc10a03ef9c2738a9",
+      "17c5af20cab2ecdc1230",
+      "1e67a8921ca9c82a9309",
+      "2ef68fa8681e2c0013da",
+      "3ca254ed1680846607b3",
+      "3d26a16175967faadac4",
+      "3e3c72ddf55be826e2e3",
+      "4335dd9d441401a9de73",
+      "46ed7f3706ce269756c4",
+      "723685d243983ec78bc9",
+      "7b7e28cf0ffb25163635",
+      "812be39864326e677c2e",
+      "a3d7c70645dd818fb70a",
+      "bf6885a86c3bf4522cbe",
+      "c3d79112a1708e865c00",
+      "c8afd393363bcfb1d758",
+      "ca3a5c5ed3aaedfc58af",
+      "dbceb06136ce5887a0ba",
+      "e8cc5f686501d04654b7",
+      "f458c2a4ec6a51e5fd7d",
+      "ffbc4d6ce0336591c572"
+    ],
+    "positives": [
+      "037dc73c98f67807cb95",
+      "04e4fd278857190bab4d",
+      "0cf8c1f31b7e58e5f6de",
+      "0e8dc10a03ef9c2738a9",
+      "17c5af20cab2ecdc1230",
+      "1e67a8921ca9c82a9309",
+      "2ef68fa8681e2c0013da",
+      "3ca254ed1680846607b3",
+      "3d26a16175967faadac4",
+      "3e3c72ddf55be826e2e3",
+      "4335dd9d441401a9de73",
+      "46ed7f3706ce269756c4",
+      "723685d243983ec78bc9",
+      "7b7e28cf0ffb25163635",
+      "812be39864326e677c2e",
+      "a2ed3a0c5534ab6ee628",
+      "a3d7c70645dd818fb70a",
+      "ad3248b084cb29772a3c",
+      "bf6885a86c3bf4522cbe",
+      "c3d79112a1708e865c00",
+      "c8afd393363bcfb1d758",
+      "ca3a5c5ed3aaedfc58af",
+      "dbceb06136ce5887a0ba",
+      "e8cc5f686501d04654b7",
+      "f458c2a4ec6a51e5fd7d",
+      "ffbc4d6ce0336591c572"
+    ],
+    "agreed_negatives_sampled": [
+      "e73d073a8f76b0a88658"
+    ]
+  },
+  "items": [
+    {
+      "sample_key": "037dc73c98f67807cb95",
+      "task": "a",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "acute myocarditis",
+          "develops_from",
+          "infections"
+        ],
+        [
+          "autoimmune myocarditis",
+          "develops_from",
+          "the body's immune system"
+        ]
+      ],
+      "a_only": [
+        [
+          "acute myocarditis",
+          "develops_from",
+          "infections"
+        ],
+        [
+          "autoimmune myocarditis",
+          "develops_from",
+          "the body's immune system"
+        ]
+      ],
+      "b_only": [],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "04e4fd278857190bab4d",
+      "task": "b",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "concentration of amylose derived from starch in material entity",
+          "derives from",
+          "starch"
+        ],
+        [
+          "concentration of fructan derived from hemicellulose in material entity",
+          "derives from",
+          "hemicellulose"
+        ],
+        [
+          "concentration of galactan derived from hemicellulose in material entity",
+          "derives from",
+          "hemicellulose"
+        ],
+        [
+          "concentration of galactomannan",
+          "derives from",
+          "hemicellulose"
+        ],
+        [
+          "concentration of galactomannan derived from hemicellulose in material entity",
+          "derives from",
+          "hemicellulose"
+        ],
+        [
+          "concentration of galacturonan derived from pectin in material entity",
+          "derives from",
+          "pectin"
+        ]
+      ],
+      "a_only": [
+        [
+          "concentration of amylose derived from starch in material entity",
+          "derives from",
+          "starch"
+        ],
+        [
+          "concentration of fructan derived from hemicellulose in material entity",
+          "derives from",
+          "hemicellulose"
+        ],
+        [
+          "concentration of galactan derived from hemicellulose in material entity",
+          "derives from",
+          "hemicellulose"
+        ],
+        [
+          "concentration of galactomannan derived from hemicellulose in material entity",
+          "derives from",
+          "hemicellulose"
+        ],
+        [
+          "concentration of galacturonan derived from pectin in material entity",
+          "derives from",
+          "pectin"
+        ]
+      ],
+      "b_only": [
+        [
+          "concentration of galactomannan",
+          "derives from",
+          "hemicellulose"
+        ]
+      ],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "0cf8c1f31b7e58e5f6de",
+      "task": "a",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "refractive amblyopia",
+          "develops_from",
+          "uncorrected refractive disparities"
+        ],
+        [
+          "strabismic amblyopia",
+          "develops_from",
+          "misalignment"
+        ],
+        [
+          "trachoma",
+          "causes",
+          "blindness"
+        ]
+      ],
+      "a_only": [
+        [
+          "refractive amblyopia",
+          "develops_from",
+          "uncorrected refractive disparities"
+        ],
+        [
+          "strabismic amblyopia",
+          "develops_from",
+          "misalignment"
+        ]
+      ],
+      "b_only": [],
+      "joint_miss_added_by_c": [
+        [
+          "trachoma",
+          "causes",
+          "blindness"
+        ]
+      ],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "0e8dc10a03ef9c2738a9",
+      "task": "a",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "barioperovskite",
+          "derives from",
+          "mineral precursors"
+        ],
+        [
+          "pengzhizhongite-24r and achtarandite",
+          "located in",
+          "complex oxide deposits"
+        ],
+        [
+          "zircophyllite and atencioite",
+          "located in",
+          "pegmatitic environments"
+        ]
+      ],
+      "a_only": [
+        [
+          "barioperovskite",
+          "derives from",
+          "mineral precursors"
+        ],
+        [
+          "pengzhizhongite-24r and achtarandite",
+          "located in",
+          "complex oxide deposits"
+        ],
+        [
+          "zircophyllite and atencioite",
+          "located in",
+          "pegmatitic environments"
+        ]
+      ],
+      "b_only": [],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "17c5af20cab2ecdc1230",
+      "task": "b",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "amyloid proteins",
+          "located in",
+          "spleen"
+        ],
+        [
+          "blood",
+          "located in",
+          "spleen"
+        ],
+        [
+          "hemangioma of spleen",
+          "has part",
+          "blood vessels"
+        ],
+        [
+          "leukemic cells",
+          "located in",
+          "splenic tissue"
+        ],
+        [
+          "spleen angiosarcoma",
+          "develops_from",
+          "lining of blood vessels"
+        ],
+        [
+          "splenic infarction",
+          "develops_from",
+          "compromised blood supply"
+        ],
+        [
+          "splenic tuberculosis",
+          "derives from",
+          "mycobacterium tuberculosis"
+        ],
+        [
+          "splenic tuberculosis",
+          "develops_from",
+          "mycobacterium tuberculosis"
+        ],
+        [
+          "visceral leishmaniasis",
+          "causes",
+          "splenomegaly"
+        ],
+        [
+          "visceral leishmaniasis",
+          "located in",
+          "spleen"
+        ]
+      ],
+      "a_only": [
+        [
+          "splenic tuberculosis",
+          "develops_from",
+          "mycobacterium tuberculosis"
+        ],
+        [
+          "visceral leishmaniasis",
+          "causes",
+          "splenomegaly"
+        ]
+      ],
+      "b_only": [
+        [
+          "blood",
+          "located in",
+          "spleen"
+        ],
+        [
+          "leukemic cells",
+          "located in",
+          "splenic tissue"
+        ],
+        [
+          "spleen angiosarcoma",
+          "develops_from",
+          "lining of blood vessels"
+        ],
+        [
+          "splenic tuberculosis",
+          "derives from",
+          "mycobacterium tuberculosis"
+        ],
+        [
+          "visceral leishmaniasis",
+          "located in",
+          "spleen"
+        ]
+      ],
+      "joint_miss_added_by_c": [
+        [
+          "splenic infarction",
+          "develops_from",
+          "compromised blood supply"
+        ]
+      ],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "1e67a8921ca9c82a9309",
+      "task": "b",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "acid dune sand",
+          "located in",
+          "dune systems"
+        ],
+        [
+          "alluvial sediment",
+          "located in",
+          "floodplains"
+        ],
+        [
+          "asphalt",
+          "derives from",
+          "petroleum"
+        ],
+        [
+          "biogenous sediment",
+          "has part",
+          "biological debris"
+        ],
+        [
+          "desert sand",
+          "located in",
+          "arid regions"
+        ],
+        [
+          "diesel fuel",
+          "derives from",
+          "petroleum"
+        ],
+        [
+          "gasoline",
+          "derives from",
+          "petroleum"
+        ],
+        [
+          "hydrogenous sediment",
+          "derives from",
+          "water"
+        ],
+        [
+          "hydrothermally-influenced sediment",
+          "located in",
+          "volcanic vents"
+        ],
+        [
+          "lake sediment",
+          "located in",
+          "freshwater bodies"
+        ],
+        [
+          "mangrove biome sediment",
+          "located in",
+          "coastal wetlands"
+        ],
+        [
+          "marine sediment",
+          "located in",
+          "oceans"
+        ],
+        [
+          "microbial communities",
+          "located in",
+          "hyperthermophilic sediment"
+        ],
+        [
+          "microbial communities",
+          "located in",
+          "mesophilic sediment"
+        ],
+        [
+          "microbial communities",
+          "located in",
+          "thermophilic sediment"
+        ],
+        [
+          "suspended sediment",
+          "located in",
+          "fluid column"
+        ],
+        [
+          "terrigenous sediment",
+          "derives from",
+          "land erosion"
+        ]
+      ],
+      "a_only": [],
+      "b_only": [
+        [
+          "acid dune sand",
+          "located in",
+          "dune systems"
+        ],
+        [
+          "asphalt",
+          "derives from",
+          "petroleum"
+        ],
+        [
+          "hydrogenous sediment",
+          "derives from",
+          "water"
+        ],
+        [
+          "hydrothermally-influenced sediment",
+          "located in",
+          "volcanic vents"
+        ],
+        [
+          "microbial communities",
+          "located in",
+          "hyperthermophilic sediment"
+        ],
+        [
+          "microbial communities",
+          "located in",
+          "mesophilic sediment"
+        ],
+        [
+          "microbial communities",
+          "located in",
+          "thermophilic sediment"
+        ],
+        [
+          "suspended sediment",
+          "located in",
+          "fluid column"
+        ]
+      ],
+      "joint_miss_added_by_c": [
+        [
+          "biogenous sediment",
+          "has part",
+          "biological debris"
+        ]
+      ],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "2ef68fa8681e2c0013da",
+      "task": "b",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "cardinal organ part",
+          "part_of",
+          "cardinal part of multi-tissue plant structure"
+        ],
+        [
+          "collective plant organ structure",
+          "part_of",
+          "collective plant structure"
+        ]
+      ],
+      "a_only": [
+        [
+          "cardinal organ part",
+          "part_of",
+          "cardinal part of multi-tissue plant structure"
+        ],
+        [
+          "collective plant organ structure",
+          "part_of",
+          "collective plant structure"
+        ]
+      ],
+      "b_only": [],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "3ca254ed1680846607b3",
+      "task": "b",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "autosomal dominant cutis laxa",
+          "derives from",
+          "mutations"
+        ],
+        [
+          "autosomal dominant cutis laxa",
+          "develops_from",
+          "mutations transmitted via a dominant allele"
+        ]
+      ],
+      "a_only": [
+        [
+          "autosomal dominant cutis laxa",
+          "develops_from",
+          "mutations transmitted via a dominant allele"
+        ]
+      ],
+      "b_only": [
+        [
+          "autosomal dominant cutis laxa",
+          "derives from",
+          "mutations"
+        ]
+      ],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "3d26a16175967faadac4",
+      "task": "a",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "convection",
+          "regulates",
+          "vertical mixing of air"
+        ],
+        [
+          "diurnal movement patterns",
+          "regulates",
+          "daily activity cycles"
+        ],
+        [
+          "heavy rainfall",
+          "positively regulates",
+          "mudslide occurrences"
+        ],
+        [
+          "recharge",
+          "part_of",
+          "transport"
+        ],
+        [
+          "slide events",
+          "regulates",
+          "material displacement"
+        ]
+      ],
+      "a_only": [
+        [
+          "convection",
+          "regulates",
+          "vertical mixing of air"
+        ],
+        [
+          "heavy rainfall",
+          "positively regulates",
+          "mudslide occurrences"
+        ],
+        [
+          "recharge",
+          "part_of",
+          "transport"
+        ],
+        [
+          "slide events",
+          "regulates",
+          "material displacement"
+        ]
+      ],
+      "b_only": [],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "3e3c72ddf55be826e2e3",
+      "task": "a",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "charcoal",
+          "derives from",
+          "wood"
+        ],
+        [
+          "cork",
+          "derives from",
+          "oak bark"
+        ],
+        [
+          "gas molecules",
+          "located in",
+          "lattice of water ice"
+        ],
+        [
+          "humus",
+          "derives from",
+          "plant matter"
+        ],
+        [
+          "mineral dust",
+          "derives from",
+          "wind erosion"
+        ],
+        [
+          "sapropelic kerogen",
+          "derives from",
+          "aquatic algal debris"
+        ]
+      ],
+      "a_only": [
+        [
+          "charcoal",
+          "derives from",
+          "wood"
+        ],
+        [
+          "cork",
+          "derives from",
+          "oak bark"
+        ],
+        [
+          "humus",
+          "derives from",
+          "plant matter"
+        ],
+        [
+          "mineral dust",
+          "derives from",
+          "wind erosion"
+        ],
+        [
+          "sapropelic kerogen",
+          "derives from",
+          "aquatic algal debris"
+        ]
+      ],
+      "b_only": [
+        [
+          "gas molecules",
+          "located in",
+          "lattice of water ice"
+        ]
+      ],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "4335dd9d441401a9de73",
+      "task": "a",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "alcohols",
+          "has part",
+          "hydroxyl (-oh) functional groups"
+        ],
+        [
+          "carboxylic acid anions",
+          "derives from",
+          "deprotonation of carboxylic acids"
+        ],
+        [
+          "oxoanions",
+          "derives from",
+          "carboxylic acids"
+        ]
+      ],
+      "a_only": [
+        [
+          "alcohols",
+          "has part",
+          "hydroxyl (-oh) functional groups"
+        ],
+        [
+          "carboxylic acid anions",
+          "derives from",
+          "deprotonation of carboxylic acids"
+        ]
+      ],
+      "b_only": [
+        [
+          "oxoanions",
+          "derives from",
+          "carboxylic acids"
+        ]
+      ],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "46ed7f3706ce269756c4",
+      "task": "b",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "anatomical structures",
+          "develops_from",
+          "ectoderm"
+        ],
+        [
+          "anterior uvea",
+          "part_of",
+          "uvea"
+        ],
+        [
+          "chorioretinal region",
+          "located in",
+          "eye"
+        ],
+        [
+          "ciliary muscle",
+          "regulates",
+          "lens"
+        ],
+        [
+          "dermal skeletal element",
+          "develops_from",
+          "neural crest cells"
+        ],
+        [
+          "eyeball of camera-type eye",
+          "part_of",
+          "camera-type eye"
+        ],
+        [
+          "feathers",
+          "located in",
+          "birds"
+        ],
+        [
+          "gray matter",
+          "part_of",
+          "central nervous system cell part cluster"
+        ],
+        [
+          "iris smooth muscle",
+          "regulates",
+          "light entry"
+        ],
+        [
+          "lens",
+          "develops_from",
+          "lens vesicle"
+        ],
+        [
+          "limbic system",
+          "located in",
+          "central nervous system"
+        ],
+        [
+          "neural crest-derived structure elements",
+          "develops_from",
+          "neural crest"
+        ],
+        [
+          "neural nucleus",
+          "part_of",
+          "central nervous system cell part cluster"
+        ],
+        [
+          "neuromere",
+          "part_of",
+          "neural tube"
+        ],
+        [
+          "optic nerve",
+          "develops_from",
+          "optic vesicle"
+        ],
+        [
+          "optic vesicle",
+          "part_of",
+          "diencephalon"
+        ],
+        [
+          "posterior segment of eyeball",
+          "has part",
+          "vitreous body"
+        ],
+        [
+          "prosomere",
+          "part_of",
+          "forebrain"
+        ],
+        [
+          "retina",
+          "develops_from",
+          "optic vesicle"
+        ],
+        [
+          "smooth muscle of eye",
+          "part_of",
+          "eye"
+        ],
+        [
+          "uvea",
+          "has part",
+          "anterior uvea"
+        ],
+        [
+          "vitreous body",
+          "part_of",
+          "posterior segment of eyeball"
+        ],
+        [
+          "wall of lateral ventricle",
+          "develops_from",
+          "ectoderm-derived tissue"
+        ],
+        [
+          "wall of ventricular system of brain",
+          "part_of",
+          "ventricular system of brain"
+        ]
+      ],
+      "a_only": [
+        [
+          "ciliary muscle",
+          "regulates",
+          "lens"
+        ],
+        [
+          "lens",
+          "develops_from",
+          "lens vesicle"
+        ],
+        [
+          "neural crest-derived structure elements",
+          "develops_from",
+          "neural crest"
+        ],
+        [
+          "optic vesicle",
+          "part_of",
+          "diencephalon"
+        ],
+        [
+          "posterior segment of eyeball",
+          "has part",
+          "vitreous body"
+        ],
+        [
+          "uvea",
+          "has part",
+          "anterior uvea"
+        ],
+        [
+          "wall of lateral ventricle",
+          "develops_from",
+          "ectoderm-derived tissue"
+        ]
+      ],
+      "b_only": [
+        [
+          "anatomical structures",
+          "develops_from",
+          "ectoderm"
+        ],
+        [
+          "anterior uvea",
+          "part_of",
+          "uvea"
+        ],
+        [
+          "chorioretinal region",
+          "located in",
+          "eye"
+        ],
+        [
+          "eyeball of camera-type eye",
+          "part_of",
+          "camera-type eye"
+        ],
+        [
+          "feathers",
+          "located in",
+          "birds"
+        ],
+        [
+          "gray matter",
+          "part_of",
+          "central nervous system cell part cluster"
+        ],
+        [
+          "limbic system",
+          "located in",
+          "central nervous system"
+        ],
+        [
+          "neural nucleus",
+          "part_of",
+          "central nervous system cell part cluster"
+        ],
+        [
+          "neuromere",
+          "part_of",
+          "neural tube"
+        ],
+        [
+          "smooth muscle of eye",
+          "part_of",
+          "eye"
+        ],
+        [
+          "vitreous body",
+          "part_of",
+          "posterior segment of eyeball"
+        ],
+        [
+          "wall of ventricular system of brain",
+          "part_of",
+          "ventricular system of brain"
+        ]
+      ],
+      "joint_miss_added_by_c": [
+        [
+          "dermal skeletal element",
+          "develops_from",
+          "neural crest cells"
+        ]
+      ],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "723685d243983ec78bc9",
+      "task": "a",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "cambarus",
+          "located in",
+          "cooler streams"
+        ],
+        [
+          "emodin",
+          "located in",
+          "plant tissues"
+        ],
+        [
+          "faxonius limosus",
+          "located in",
+          "muddy bottom habitats"
+        ],
+        [
+          "pork leg center slice (raw)",
+          "derives from",
+          "a piece of pig (raw)"
+        ],
+        [
+          "pork leg center slice (raw)",
+          "derives from",
+          "piece of pig (raw)"
+        ]
+      ],
+      "a_only": [
+        [
+          "pork leg center slice (raw)",
+          "derives from",
+          "piece of pig (raw)"
+        ]
+      ],
+      "b_only": [
+        [
+          "pork leg center slice (raw)",
+          "derives from",
+          "a piece of pig (raw)"
+        ]
+      ],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "7b7e28cf0ffb25163635",
+      "task": "b",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "hydroxides",
+          "regulates",
+          "nutrient bioavailability"
+        ],
+        [
+          "inorganic oxide",
+          "regulates",
+          "cation exchange capacity"
+        ],
+        [
+          "mineral deposits",
+          "has part",
+          "inorganic oxide"
+        ],
+        [
+          "organic oxide",
+          "derives from",
+          "decaying biomass"
+        ],
+        [
+          "oxoacid",
+          "derives from",
+          "hydroxides"
+        ],
+        [
+          "oxoacid",
+          "derives from",
+          "hydroxides structure"
+        ]
+      ],
+      "a_only": [
+        [
+          "hydroxides",
+          "regulates",
+          "nutrient bioavailability"
+        ],
+        [
+          "inorganic oxide",
+          "regulates",
+          "cation exchange capacity"
+        ],
+        [
+          "oxoacid",
+          "derives from",
+          "hydroxides"
+        ]
+      ],
+      "b_only": [
+        [
+          "mineral deposits",
+          "has part",
+          "inorganic oxide"
+        ],
+        [
+          "oxoacid",
+          "derives from",
+          "hydroxides structure"
+        ],
+        [
+          "pepo fruit weight",
+          "part_of",
+          "yield optimization"
+        ]
+      ],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "812be39864326e677c2e",
+      "task": "a",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "fat",
+          "part_of",
+          "poultry"
+        ],
+        [
+          "liver",
+          "part_of",
+          "poultry"
+        ]
+      ],
+      "a_only": [
+        [
+          "fat",
+          "part_of",
+          "poultry"
+        ],
+        [
+          "liver",
+          "part_of",
+          "poultry"
+        ]
+      ],
+      "b_only": [],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "a2ed3a0c5534ab6ee628",
+      "task": "a",
+      "audit_reasons": [
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "central nervous system melanocytic neoplasm",
+          "derives from",
+          "pigment-producing cells"
+        ],
+        [
+          "central nervous system rhabdomyosarcoma",
+          "develops_from",
+          "muscle-like tissue"
+        ]
+      ],
+      "a_only": [],
+      "b_only": [],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "a3d7c70645dd818fb70a",
+      "task": "a",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "hyperekplexia 1",
+          "regulates",
+          "motor control"
+        ],
+        [
+          "muscular dystrophy-dystroglycanopathy type b15",
+          "regulates",
+          "glycosylation of dystroglycan"
+        ],
+        [
+          "spondylocostal dysostosis 1",
+          "regulates",
+          "vertebral development"
+        ]
+      ],
+      "a_only": [
+        [
+          "hyperekplexia 1",
+          "regulates",
+          "motor control"
+        ],
+        [
+          "muscular dystrophy-dystroglycanopathy type b15",
+          "regulates",
+          "glycosylation of dystroglycan"
+        ],
+        [
+          "spondylocostal dysostosis 1",
+          "regulates",
+          "vertebral development"
+        ]
+      ],
+      "b_only": [],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "ad3248b084cb29772a3c",
+      "task": "b",
+      "audit_reasons": [
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "cynoscion acoupa",
+          "located in",
+          "south american waters"
+        ],
+        [
+          "cynoscion jamaicensis",
+          "located in",
+          "caribbean and gulf of mexico regions"
+        ],
+        [
+          "cynoscion regalis",
+          "located in",
+          "atlantic coast"
+        ]
+      ],
+      "a_only": [],
+      "b_only": [],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "bf6885a86c3bf4522cbe",
+      "task": "b",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "concentration of avenacin a-1",
+          "located in",
+          "oats"
+        ],
+        [
+          "concentration of azukisaponin iii",
+          "located in",
+          "azuki beans"
+        ],
+        [
+          "concentration of crocetin",
+          "derives from",
+          "saffron"
+        ],
+        [
+          "concentration of ginsenoside rb2",
+          "part_of",
+          "ginseng"
+        ],
+        [
+          "concentration of ginsenoside rc",
+          "part_of",
+          "ginseng"
+        ],
+        [
+          "concentration of ginsenoside rg2",
+          "part_of",
+          "ginseng"
+        ],
+        [
+          "concentration of limonene-1,2-diol",
+          "derives from",
+          "citrus oils"
+        ],
+        [
+          "concentration of lubimin",
+          "located in",
+          "specific plant species"
+        ],
+        [
+          "concentration of norbixin",
+          "derives from",
+          "annatto"
+        ],
+        [
+          "concentration of obacunone",
+          "located in",
+          "citrus"
+        ],
+        [
+          "concentration of phytol",
+          "part_of",
+          "chlorophyll structure"
+        ],
+        [
+          "concentration of soyasaponin a1",
+          "located in",
+          "soybeans"
+        ],
+        [
+          "concentration of spinasaponin a",
+          "located in",
+          "spinach"
+        ]
+      ],
+      "a_only": [],
+      "b_only": [
+        [
+          "concentration of avenacin a-1",
+          "located in",
+          "oats"
+        ],
+        [
+          "concentration of ginsenoside rb2",
+          "part_of",
+          "ginseng"
+        ],
+        [
+          "concentration of ginsenoside rc",
+          "part_of",
+          "ginseng"
+        ],
+        [
+          "concentration of ginsenoside rg2",
+          "part_of",
+          "ginseng"
+        ],
+        [
+          "concentration of lubimin",
+          "located in",
+          "specific plant species"
+        ]
+      ],
+      "joint_miss_added_by_c": [
+        [
+          "concentration of spinasaponin a",
+          "located in",
+          "spinach"
+        ]
+      ],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "c3d79112a1708e865c00",
+      "task": "a",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "amylopectin",
+          "derives from",
+          "starch"
+        ],
+        [
+          "amylose",
+          "derives from",
+          "starch"
+        ],
+        [
+          "glucomannan",
+          "derives from",
+          "hemicellulose"
+        ],
+        [
+          "glucose",
+          "derives from",
+          "amorphous cellulose"
+        ],
+        [
+          "glucose",
+          "derives from",
+          "amylopectin"
+        ],
+        [
+          "glucose",
+          "derives from",
+          "amylose"
+        ],
+        [
+          "glucose",
+          "derives from",
+          "glucomannan"
+        ],
+        [
+          "glucose",
+          "derives from",
+          "maltose"
+        ],
+        [
+          "glucose",
+          "derives from",
+          "raffinose"
+        ],
+        [
+          "glucose",
+          "derives from",
+          "stachyose"
+        ],
+        [
+          "glucose",
+          "derives from",
+          "sucrose"
+        ],
+        [
+          "glucose",
+          "derives from",
+          "verbascose"
+        ],
+        [
+          "glucose",
+          "derives from",
+          "xylan"
+        ],
+        [
+          "glucose",
+          "derives from",
+          "xyloglucan"
+        ],
+        [
+          "raffinose",
+          "derives from",
+          "raffinose family oligosaccharide"
+        ],
+        [
+          "stachyose",
+          "derives from",
+          "raffinose family oligosaccharide"
+        ],
+        [
+          "verbascose",
+          "derives from",
+          "raffinose family oligosaccharide"
+        ],
+        [
+          "xylan",
+          "derives from",
+          "hemicellulose"
+        ],
+        [
+          "xyloglucan",
+          "derives from",
+          "hemicellulose"
+        ]
+      ],
+      "a_only": [
+        [
+          "amylopectin",
+          "derives from",
+          "starch"
+        ],
+        [
+          "amylose",
+          "derives from",
+          "starch"
+        ],
+        [
+          "glucomannan",
+          "derives from",
+          "hemicellulose"
+        ],
+        [
+          "xylan",
+          "derives from",
+          "hemicellulose"
+        ],
+        [
+          "xyloglucan",
+          "derives from",
+          "hemicellulose"
+        ]
+      ],
+      "b_only": [],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "c8afd393363bcfb1d758",
+      "task": "a",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "beef brisket",
+          "derives from",
+          "brisket"
+        ],
+        [
+          "fat back",
+          "part_of",
+          "shoulder (meat cut)"
+        ],
+        [
+          "fore shank",
+          "part_of",
+          "shank (meat)"
+        ],
+        [
+          "ground sirloin",
+          "derives from",
+          "sirloin"
+        ],
+        [
+          "pork spareribs",
+          "derives from",
+          "side (meat cut)"
+        ]
+      ],
+      "a_only": [
+        [
+          "beef brisket",
+          "derives from",
+          "brisket"
+        ],
+        [
+          "pork spareribs",
+          "derives from",
+          "side (meat cut)"
+        ]
+      ],
+      "b_only": [],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "ca3a5c5ed3aaedfc58af",
+      "task": "b",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "betulinic acid",
+          "located in",
+          "various plant species"
+        ],
+        [
+          "diosgenin",
+          "derives from",
+          "wild yams"
+        ],
+        [
+          "erythrodiol",
+          "located in",
+          "various plant species"
+        ],
+        [
+          "glycyrrhetinic acid",
+          "derives from",
+          "licorice root"
+        ],
+        [
+          "grapevine crops",
+          "has part",
+          "(e)-trans-miyabenol c"
+        ],
+        [
+          "obacunone",
+          "derives from",
+          "citrus agriculture"
+        ],
+        [
+          "soyasapogenol b",
+          "located in",
+          "soybeans"
+        ],
+        [
+          "soyasaponin a1",
+          "derives from",
+          "soyasapogenol b"
+        ]
+      ],
+      "a_only": [],
+      "b_only": [
+        [
+          "betulinic acid",
+          "located in",
+          "various plant species"
+        ],
+        [
+          "erythrodiol",
+          "located in",
+          "various plant species"
+        ],
+        [
+          "grapevine crops",
+          "has part",
+          "(e)-trans-miyabenol c"
+        ],
+        [
+          "obacunone",
+          "derives from",
+          "citrus agriculture"
+        ]
+      ],
+      "joint_miss_added_by_c": [
+        [
+          "soyasapogenol b",
+          "located in",
+          "soybeans"
+        ]
+      ],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "dbceb06136ce5887a0ba",
+      "task": "b",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "adjustment disorder",
+          "develops_from",
+          "maladaptive reactions to identifiable stressors"
+        ],
+        [
+          "cognitive disorder",
+          "regulates",
+          "memory and reasoning abilities"
+        ]
+      ],
+      "a_only": [
+        [
+          "adjustment disorder",
+          "develops_from",
+          "maladaptive reactions to identifiable stressors"
+        ],
+        [
+          "cognitive disorder",
+          "regulates",
+          "memory and reasoning abilities"
+        ]
+      ],
+      "b_only": [],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "e73d073a8f76b0a88658",
+      "task": "a",
+      "audit_reasons": [
+        "agreed_negative_sample"
+      ],
+      "weak_label_relations": [],
+      "a_only": [],
+      "b_only": [],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "e8cc5f686501d04654b7",
+      "task": "b",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "endocrine system",
+          "has part",
+          "glands"
+        ],
+        [
+          "parathyroid gland diseases",
+          "regulates",
+          "calcium homeostasis"
+        ],
+        [
+          "thyroid gland diseases",
+          "regulates",
+          "metabolic rate"
+        ],
+        [
+          "various glands",
+          "regulates",
+          "critical body functions"
+        ]
+      ],
+      "a_only": [
+        [
+          "endocrine system",
+          "has part",
+          "glands"
+        ],
+        [
+          "thyroid gland diseases",
+          "regulates",
+          "metabolic rate"
+        ]
+      ],
+      "b_only": [
+        [
+          "various glands",
+          "regulates",
+          "critical body functions"
+        ]
+      ],
+      "joint_miss_added_by_c": [
+        [
+          "parathyroid gland diseases",
+          "regulates",
+          "calcium homeostasis"
+        ]
+      ],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "f458c2a4ec6a51e5fd7d",
+      "task": "a",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "chordomas",
+          "develops_from",
+          "notochord"
+        ],
+        [
+          "chordomas",
+          "develops_from",
+          "remnants of the notochord"
+        ],
+        [
+          "clivus chordoma",
+          "develops_from",
+          "clival region"
+        ],
+        [
+          "marginal corneal ulcer",
+          "located in",
+          "limbus"
+        ],
+        [
+          "mycotic corneal ulcer",
+          "develops_from",
+          "fungal infections"
+        ],
+        [
+          "spinal chordoma",
+          "located in",
+          "vertebral column"
+        ]
+      ],
+      "a_only": [
+        [
+          "chordomas",
+          "develops_from",
+          "remnants of the notochord"
+        ],
+        [
+          "spinal chordoma",
+          "located in",
+          "vertebral column"
+        ]
+      ],
+      "b_only": [
+        [
+          "chordomas",
+          "develops_from",
+          "notochord"
+        ]
+      ],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    },
+    {
+      "sample_key": "ffbc4d6ce0336591c572",
+      "task": "b",
+      "audit_reasons": [
+        "disagreement",
+        "has_positive_relations"
+      ],
+      "weak_label_relations": [
+        [
+          "animal drumstick (skinless)",
+          "part_of",
+          "lower body of poultry"
+        ],
+        [
+          "animal leg (skinless)",
+          "part_of",
+          "lower body of poultry"
+        ],
+        [
+          "animal thigh (skinless)",
+          "part_of",
+          "lower body of poultry"
+        ],
+        [
+          "piece of dark animal meat (skinless)",
+          "located in",
+          "weight-bearing muscles"
+        ],
+        [
+          "piece of light animal meat (skinless)",
+          "located in",
+          "flight muscles of poultry"
+        ],
+        [
+          "piece of pork meat (skinless)",
+          "derives from",
+          "hams"
+        ],
+        [
+          "piece of pork meat (skinless)",
+          "derives from",
+          "hams or loins"
+        ],
+        [
+          "piece of pork meat (skinless)",
+          "derives from",
+          "loins"
+        ]
+      ],
+      "a_only": [
+        [
+          "piece of pork meat (skinless)",
+          "derives from",
+          "hams or loins"
+        ]
+      ],
+      "b_only": [
+        [
+          "animal drumstick (skinless)",
+          "part_of",
+          "lower body of poultry"
+        ],
+        [
+          "animal leg (skinless)",
+          "part_of",
+          "lower body of poultry"
+        ],
+        [
+          "animal thigh (skinless)",
+          "part_of",
+          "lower body of poultry"
+        ],
+        [
+          "piece of pork meat (skinless)",
+          "derives from",
+          "hams"
+        ],
+        [
+          "piece of pork meat (skinless)",
+          "derives from",
+          "loins"
+        ]
+      ],
+      "joint_miss_added_by_c": [],
+      "human_verdict": "",
+      "human_notes": ""
+    }
+  ]
+}

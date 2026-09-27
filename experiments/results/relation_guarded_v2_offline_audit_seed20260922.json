@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "protocol": "relation_guarded_v2_offline_audit_v1",
+    "source_result": "D:\\NLP\\experiments\\results\\official_stratified_open_openai_ab_s5_seed20260922.json",
+    "source_system": "open_vocab_guarded",
+    "seed": 20260922,
+    "calibration_per_stratum": 2,
+    "canonicalization_version": "relation_canonicalization_v1",
+    "source_evaluation_selection_uses_gold_locally": true,
+    "calibration_split_uses_candidate_labels": false,
+    "gold_used_for_candidate_labels_only": true,
+    "api_calls": 0
+  },
+  "split": {
+    "calibration_indices": {
+      "a": [
+        631,
+        1071,
+        2521,
+        2542,
+        2742,
+        4021
+      ],
+      "b": [
+        57,
+        85,
+        1536,
+        1659,
+        2342,
+        2459
+      ]
+    },
+    "heldout_indices": {
+      "a": [
+        199,
+        829,
+        1158,
+        1285,
+        1741,
+        1769,
+        2041,
+        3244,
+        3550
+      ],
+      "b": [
+        44,
+        420,
+        519,
+        666,
+        834,
+        1770,
+        1833,
+        2313,
+        2739
+      ]
+    }
+  },
+  "candidate_summary": {
+    "all": {
+      "n": 40,
+      "raw_true_positives": 0,
+      "canonical_true_positives": 0,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "calibration": {
+      "n": 23,
+      "raw_true_positives": 0,
+      "canonical_true_positives": 0,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "heldout": {
+      "n": 17,
+      "raw_true_positives": 0,
+      "canonical_true_positives": 0,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    }
+  },
+  "calibrator": {
+    "version": "beta_isotonic_v1",
+    "status": "degenerate_too_few_positives",
+    "deployable": false,
+    "alpha": 1.0,
+    "beta": 1.0,
+    "min_positives": 2,
+    "min_negatives": 2,
+    "n_samples": 23,
+    "n_positives": 0,
+    "blocks": [
+      {
+        "min_score": 0.9,
+        "max_score": 0.9,
+        "positives": 0,
+        "total": 13,
+        "probability": 0.06666666666666667
+      },
+      {
+        "min_score": 0.95,
+        "max_score": 1.0,
+        "positives": 0,
+        "total": 10,
+        "probability": 0.08333333333333333
+      }
+    ]
+  },
+  "calibration_metrics": {
+    "calibration_raw": {
+      "n": 23,
+      "positives": 0,
+      "brier": 0.8841304347826088,
+      "ece": 0.9391304347826087
+    },
+    "heldout_raw": {
+      "n": 17,
+      "positives": 0,
+      "brier": 0.9048529411764706,
+      "ece": 0.95
+    },
+    "heldout_calibrated_diagnostic_only": {
+      "n": 17,
+      "positives": 0,
+      "brier": 0.00576797385620915,
+      "ece": 0.07549019607843137
+    }
+  },
+  "implicit_evidence": {
+    "candidates_observed": 0,
+    "reason": "source guarded-v1 prompts allowed one evidence span only",
+    "requires_new_guarded_v2_generation": true
+  },
+  "interpretation": {
+    "calibrated_metrics_are_deployable": false,
+    "warning": "Do not apply this calibrator: the calibration split has too few positive candidates. The calibrated held-out metrics are diagnostic only."
+  }
+}

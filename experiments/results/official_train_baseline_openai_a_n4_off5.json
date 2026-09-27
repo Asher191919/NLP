@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "challenge": "LLMs4OL 2026",
+    "data_root": "D:\\NLP\\data\\LLMs4OL-Challenge\\2026",
+    "backend": "openai",
+    "model": "dots3-note-prev",
+    "limit": 4,
+    "offset": 5,
+    "metric": "official_graph_similarity_exact",
+    "api_key_present": true
+  },
+  "tasks": {
+    "task_a": {
+      "open_vocab": {
+        "system": "open_vocab",
+        "backend": "openai",
+        "model": "dots3-note-prev",
+        "task": "a",
+        "limit": 4,
+        "offset": 5,
+        "n_samples_done": 0,
+        "n_samples": 4,
+        "n_samples_target": 4,
+        "partial": false,
+        "term_typing_f1_micro": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 8,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy_f1_micro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 26
+        },
+        "nontax_f1_micro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity_avg": 0.16666666666666666,
+        "composite_typing_tax_gs": 0.3888888888888889,
+        "nontax_pred_total": 0,
+        "nontax_gold_total": 0,
+        "elapsed_sec": 148.18,
+        "metric_policy": {
+          "graph_similarity": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "proxy_sgs_used": false
+        },
+        "checkpoint": "D:\\NLP\\experiments\\results\\checkpoints\\openai_taska_open_vocab_n4_off5.json"
+      }
+    }
+  }
+}

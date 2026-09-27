@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "challenge": "LLMs4OL 2026",
+    "data_root": "D:\\NLP\\data\\LLMs4OL-Challenge\\2026",
+    "backend": "offline",
+    "model": "gpt-4o-mini",
+    "limit": 40,
+    "metric": "official_graph_similarity_exact",
+    "api_key_present": false
+  },
+  "tasks": {
+    "task_b": {
+      "closed_vocab": {
+        "system": "closed_vocab",
+        "backend": "offline_pattern_or_mock",
+        "model": "gpt-4o-mini",
+        "n_samples": 40,
+        "term_typing_f1_micro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 68,
+          "fn": 30
+        },
+        "taxonomy_f1_micro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 80,
+          "fn": 205
+        },
+        "nontax_f1_micro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity_avg": 0.0,
+        "composite_typing_tax_gs": 0.0,
+        "nontax_pred_total": 0,
+        "nontax_gold_total": 0,
+        "elapsed_sec": 0.05,
+        "metric_policy": {
+          "graph_similarity": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "proxy_sgs_used": false
+        }
+      },
+      "open_vocab": {
+        "system": "open_vocab",
+        "backend": "offline_pattern_or_mock",
+        "model": "gpt-4o-mini",
+        "n_samples": 40,
+        "term_typing_f1_micro": {
+          "precision": 0.0005162622612287042,
+          "recall": 0.03333333333333333,
+          "f1": 0.0010167768174885613,
+          "tp": 1,
+          "fp": 1936,
+          "fn": 29
+        },
+        "taxonomy_f1_micro": {
+          "precision": 0.051470588235294115,
+          "recall": 0.03414634146341464,
+          "f1": 0.04105571847507332,
+          "tp": 7,
+          "fp": 129,
+          "fn": 198
+        },
+        "nontax_f1_micro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 15,
+          "fn": 0
+        },
+        "official_graph_similarity_avg": 0.03433249825107952,
+        "composite_typing_tax_gs": 0.0254683311812138,
+        "nontax_pred_total": 15,
+        "nontax_gold_total": 0,
+        "elapsed_sec": 35.91,
+        "metric_policy": {
+          "graph_similarity": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "proxy_sgs_used": false
+        }
+      }
+    }
+  }
+}

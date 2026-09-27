@@ -1,0 +1,2876 @@
+{
+  "meta": {
+    "system": "OntoBridg",
+    "version": "0.2.0",
+    "seed": 42,
+    "contamination_level": 0.55,
+    "reference_2026_pro_team": {
+      "task_b": {
+        "sgs": 0.8692,
+        "term_typing_f1": 0.92,
+        "taxonomy_f1": 0.854,
+        "nontax_f1": 0.0
+      },
+      "task_a": {
+        "sgs": 0.7416,
+        "note": "closed taxonomy vocab fails for associative relations"
+      }
+    },
+    "datasets": [
+      {
+        "name": "synthetic_biomedical",
+        "n_types": 9,
+        "n_terms": 20,
+        "n_taxonomy": 28,
+        "n_relations": 20,
+        "n_nontax_relations": 20,
+        "corpus_lines": 23,
+        "domain_ranges": {
+          "treats": [
+            "Drug",
+            "Disease"
+          ],
+          "causes": [
+            "Disease",
+            "Symptom"
+          ],
+          "part-of": [
+            "BiologicalEntity",
+            "BiologicalEntity"
+          ],
+          "interacts-with": [
+            "Protein",
+            "Protein"
+          ],
+          "located-in": [
+            "Disease",
+            "Anatomy"
+          ],
+          "participates-in": [
+            "Protein",
+            "Pathway"
+          ]
+        }
+      },
+      {
+        "name": "synthetic_geo",
+        "n_types": 9,
+        "n_terms": 16,
+        "n_taxonomy": 24,
+        "n_relations": 18,
+        "n_nontax_relations": 18,
+        "corpus_lines": 21,
+        "domain_ranges": {
+          "located-in": [
+            "Place",
+            "Place"
+          ],
+          "flows-through": [
+            "River",
+            "PoliticalUnit"
+          ],
+          "capital-of": [
+            "City",
+            "Country"
+          ],
+          "borders": [
+            "Country",
+            "NaturalFeature"
+          ],
+          "part-of": [
+            "NaturalFeature",
+            "Entity"
+          ]
+        }
+      },
+      {
+        "name": "synthetic_product",
+        "n_types": 10,
+        "n_terms": 18,
+        "n_taxonomy": 27,
+        "n_relations": 21,
+        "n_nontax_relations": 21,
+        "corpus_lines": 24,
+        "domain_ranges": {
+          "manufactured-by": [
+            "Product",
+            "Brand"
+          ],
+          "made-of": [
+            "Product",
+            "Material"
+          ],
+          "has-feature": [
+            "Product",
+            "Feature"
+          ],
+          "belongs-to": [
+            "Product",
+            "Category"
+          ],
+          "part-of": [
+            "Material",
+            "Entity"
+          ]
+        }
+      },
+      {
+        "name": "synthetic_multi_domain",
+        "n_types": 26,
+        "n_terms": 54,
+        "n_taxonomy": 79,
+        "n_relations": 59,
+        "n_nontax_relations": 59,
+        "corpus_lines": 68,
+        "domain_ranges": {
+          "treats": [
+            "Drug",
+            "Disease"
+          ],
+          "causes": [
+            "Disease",
+            "Symptom"
+          ],
+          "part-of": [
+            "BiologicalEntity",
+            "BiologicalEntity"
+          ],
+          "interacts-with": [
+            "Protein",
+            "Protein"
+          ],
+          "located-in": [
+            "Disease",
+            "Anatomy"
+          ],
+          "participates-in": [
+            "Protein",
+            "Pathway"
+          ],
+          "flows-through": [
+            "River",
+            "PoliticalUnit"
+          ],
+          "capital-of": [
+            "City",
+            "Country"
+          ],
+          "borders": [
+            "Country",
+            "NaturalFeature"
+          ],
+          "manufactured-by": [
+            "Product",
+            "Brand"
+          ],
+          "made-of": [
+            "Product",
+            "Material"
+          ],
+          "has-feature": [
+            "Product",
+            "Feature"
+          ],
+          "belongs-to": [
+            "Product",
+            "Category"
+          ]
+        }
+      }
+    ]
+  },
+  "task_a": [
+    {
+      "dataset": "synthetic_biomedical",
+      "system": "pro_team_closed_vocab",
+      "task": "A",
+      "term_typing_f1": 0.8636363636363635,
+      "taxonomy_f1": 0.8421052631578947,
+      "nontax_f1": 0.0,
+      "sgs": 0.5589436736180996,
+      "graph_similarity_official": 0.5589436736180996,
+      "edge_f1": 0.7107438016528926,
+      "neighborhood_sim": 0.4792483660130719,
+      "taxonomy_sim": 0.48683885318833414,
+      "proxy_sgs_internal": 0.4825454545454545,
+      "official_like": 0.7548951001374525,
+      "combo": 0.5661713251030894,
+      "metric_id": "llms4ol2026_graph_similarity_exact",
+      "external_reportable": true,
+      "pred_nontax": 0,
+      "gold_nontax": 20,
+      "metrics_full": {
+        "term_typing": {
+          "precision": 0.7916666666666666,
+          "recall": 0.95,
+          "f1": 0.8636363636363635,
+          "tp": 19,
+          "fp": 5,
+          "fn": 1,
+          "macro_f1": 0.8677248677248678
+        },
+        "taxonomy": {
+          "precision": 0.8275862068965517,
+          "recall": 0.8571428571428571,
+          "f1": 0.8421052631578947,
+          "tp": 24,
+          "fp": 5,
+          "fn": 4
+        },
+        "relations_all": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 24,
+          "fn": 20
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 20
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.7107438016528926,
+          "neighborhood_similarity": 0.4792483660130719,
+          "taxonomy_similarity": 0.48683885318833414,
+          "graph_similarity": 0.5589436736180996,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.4825454545454545,
+          "proxy_sgs": 0.4825454545454545,
+          "term_component": 0.7599999999999999,
+          "taxonomy_component": 0.7272727272727273,
+          "relation_component": 0.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.7548951001374525,
+        "official_like_score_external": {
+          "term_typing_f1": 0.8636363636363635,
+          "taxonomy_f1": 0.8421052631578947,
+          "graph_similarity": 0.5589436736180996,
+          "composite": 0.7548951001374525
+        },
+        "combo_score_internal": 0.5661713251030894,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      }
+    },
+    {
+      "dataset": "synthetic_biomedical",
+      "system": "ontobridg_open_vocab",
+      "task": "A",
+      "term_typing_f1": 0.8636363636363635,
+      "taxonomy_f1": 0.8421052631578947,
+      "nontax_f1": 0.4367816091954023,
+      "sgs": 0.5442719903037948,
+      "graph_similarity_official": 0.5442719903037948,
+      "edge_f1": 0.6595744680851064,
+      "neighborhood_sim": 0.4864026496379438,
+      "taxonomy_sim": 0.48683885318833414,
+      "proxy_sgs_internal": 0.5803395721925133,
+      "official_like": 0.7500045390326844,
+      "combo": 0.6716988065733638,
+      "metric_id": "llms4ol2026_graph_similarity_exact",
+      "external_reportable": true,
+      "pred_nontax": 67,
+      "gold_nontax": 20,
+      "metrics_full": {
+        "term_typing": {
+          "precision": 0.7916666666666666,
+          "recall": 0.95,
+          "f1": 0.8636363636363635,
+          "tp": 19,
+          "fp": 5,
+          "fn": 1,
+          "macro_f1": 0.8677248677248678
+        },
+        "taxonomy": {
+          "precision": 0.8275862068965517,
+          "recall": 0.8571428571428571,
+          "f1": 0.8421052631578947,
+          "tp": 24,
+          "fp": 5,
+          "fn": 4
+        },
+        "relations_all": {
+          "precision": 0.2835820895522388,
+          "recall": 0.95,
+          "f1": 0.4367816091954023,
+          "tp": 19,
+          "fp": 48,
+          "fn": 1
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.2835820895522388,
+          "recall": 0.95,
+          "f1": 0.4367816091954023,
+          "tp": 19,
+          "fp": 48,
+          "fn": 1
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.6595744680851064,
+          "neighborhood_similarity": 0.4864026496379438,
+          "taxonomy_similarity": 0.48683885318833414,
+          "graph_similarity": 0.5442719903037948,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.5803395721925133,
+          "proxy_sgs": 0.5803395721925133,
+          "term_component": 0.7599999999999999,
+          "taxonomy_component": 0.7272727272727273,
+          "relation_component": 0.27941176470588236,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.7500045390326844,
+        "official_like_score_external": {
+          "term_typing_f1": 0.8636363636363635,
+          "taxonomy_f1": 0.8421052631578947,
+          "graph_similarity": 0.5442719903037948,
+          "composite": 0.7500045390326844
+        },
+        "combo_score_internal": 0.6716988065733638,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      }
+    },
+    {
+      "dataset": "synthetic_geo",
+      "system": "pro_team_closed_vocab",
+      "task": "A",
+      "term_typing_f1": 0.9411764705882353,
+      "taxonomy_f1": 0.8695652173913043,
+      "nontax_f1": 0.0,
+      "sgs": 0.586910678974171,
+      "graph_similarity_official": 0.586910678974171,
+      "edge_f1": 0.7346938775510204,
+      "neighborhood_sim": 0.5482603815937149,
+      "taxonomy_sim": 0.4777777777777778,
+      "proxy_sgs_internal": 0.5358974358974359,
+      "official_like": 0.7992174556512368,
+      "combo": 0.5994130917384277,
+      "metric_id": "llms4ol2026_graph_similarity_exact",
+      "external_reportable": true,
+      "pred_nontax": 0,
+      "gold_nontax": 18,
+      "metrics_full": {
+        "term_typing": {
+          "precision": 0.8888888888888888,
+          "recall": 1.0,
+          "f1": 0.9411764705882353,
+          "tp": 16,
+          "fp": 2,
+          "fn": 0,
+          "macro_f1": 0.95
+        },
+        "taxonomy": {
+          "precision": 0.9090909090909091,
+          "recall": 0.8333333333333334,
+          "f1": 0.8695652173913043,
+          "tp": 20,
+          "fp": 2,
+          "fn": 4
+        },
+        "relations_all": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 18,
+          "fn": 18
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 18
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.7346938775510204,
+          "neighborhood_similarity": 0.5482603815937149,
+          "taxonomy_similarity": 0.4777777777777778,
+          "graph_similarity": 0.586910678974171,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.5358974358974359,
+          "proxy_sgs": 0.5358974358974359,
+          "term_component": 0.8888888888888888,
+          "taxonomy_component": 0.7692307692307693,
+          "relation_component": 0.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.7992174556512368,
+        "official_like_score_external": {
+          "term_typing_f1": 0.9411764705882353,
+          "taxonomy_f1": 0.8695652173913043,
+          "graph_similarity": 0.586910678974171,
+          "composite": 0.7992174556512368
+        },
+        "combo_score_internal": 0.5994130917384277,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      }
+    },
+    {
+      "dataset": "synthetic_geo",
+      "system": "ontobridg_open_vocab",
+      "task": "A",
+      "term_typing_f1": 0.9411764705882353,
+      "taxonomy_f1": 0.9090909090909091,
+      "nontax_f1": 0.8571428571428571,
+      "sgs": 0.7477497550460513,
+      "graph_similarity_official": 0.7477497550460513,
+      "edge_f1": 0.9,
+      "neighborhood_sim": 0.8179159318048207,
+      "taxonomy_sim": 0.5253333333333333,
+      "proxy_sgs_internal": 0.8208333333333333,
+      "official_like": 0.8660057115750653,
+      "combo": 0.8637899979670132,
+      "metric_id": "llms4ol2026_graph_similarity_exact",
+      "external_reportable": true,
+      "pred_nontax": 24,
+      "gold_nontax": 18,
+      "metrics_full": {
+        "term_typing": {
+          "precision": 0.8888888888888888,
+          "recall": 1.0,
+          "f1": 0.9411764705882353,
+          "tp": 16,
+          "fp": 2,
+          "fn": 0,
+          "macro_f1": 0.95
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1": 0.9090909090909091,
+          "tp": 20,
+          "fp": 0,
+          "fn": 4
+        },
+        "relations_all": {
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571428571428571,
+          "tp": 18,
+          "fp": 6,
+          "fn": 0
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571428571428571,
+          "tp": 18,
+          "fp": 6,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.9,
+          "neighborhood_similarity": 0.8179159318048207,
+          "taxonomy_similarity": 0.5253333333333333,
+          "graph_similarity": 0.7477497550460513,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.8208333333333333,
+          "proxy_sgs": 0.8208333333333333,
+          "term_component": 0.8888888888888888,
+          "taxonomy_component": 0.8333333333333334,
+          "relation_component": 0.75,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.8660057115750653,
+        "official_like_score_external": {
+          "term_typing_f1": 0.9411764705882353,
+          "taxonomy_f1": 0.9090909090909091,
+          "graph_similarity": 0.7477497550460513,
+          "composite": 0.8660057115750653
+        },
+        "combo_score_internal": 0.8637899979670132,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      }
+    },
+    {
+      "dataset": "synthetic_product",
+      "system": "pro_team_closed_vocab",
+      "task": "A",
+      "term_typing_f1": 0.972972972972973,
+      "taxonomy_f1": 0.9019607843137256,
+      "nontax_f1": 0.0,
+      "sgs": 0.6529737352786354,
+      "graph_similarity_official": 0.6529737352786354,
+      "edge_f1": 0.7592592592592593,
+      "neighborhood_sim": 0.587012987012987,
+      "taxonomy_sim": 0.6126489595636602,
+      "proxy_sgs_internal": 0.5717105263157894,
+      "official_like": 0.8426358308551114,
+      "combo": 0.6319768731413336,
+      "metric_id": "llms4ol2026_graph_similarity_exact",
+      "external_reportable": true,
+      "pred_nontax": 0,
+      "gold_nontax": 20,
+      "metrics_full": {
+        "term_typing": {
+          "precision": 0.9473684210526315,
+          "recall": 1.0,
+          "f1": 0.972972972972973,
+          "tp": 18,
+          "fp": 1,
+          "fn": 0,
+          "macro_f1": 0.9666666666666667
+        },
+        "taxonomy": {
+          "precision": 0.9583333333333334,
+          "recall": 0.8518518518518519,
+          "f1": 0.9019607843137256,
+          "tp": 23,
+          "fp": 1,
+          "fn": 4
+        },
+        "relations_all": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 19,
+          "fn": 20
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 20
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.7592592592592593,
+          "neighborhood_similarity": 0.587012987012987,
+          "taxonomy_similarity": 0.6126489595636602,
+          "graph_similarity": 0.6529737352786354,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.5717105263157894,
+          "proxy_sgs": 0.5717105263157894,
+          "term_component": 0.9473684210526315,
+          "taxonomy_component": 0.8214285714285714,
+          "relation_component": 0.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.8426358308551114,
+        "official_like_score_external": {
+          "term_typing_f1": 0.972972972972973,
+          "taxonomy_f1": 0.9019607843137256,
+          "graph_similarity": 0.6529737352786354,
+          "composite": 0.8426358308551114
+        },
+        "combo_score_internal": 0.6319768731413336,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      }
+    },
+    {
+      "dataset": "synthetic_product",
+      "system": "ontobridg_open_vocab",
+      "task": "A",
+      "term_typing_f1": 0.972972972972973,
+      "taxonomy_f1": 0.92,
+      "nontax_f1": 1.0,
+      "sgs": 0.8349397742999943,
+      "graph_similarity_official": 0.8349397742999943,
+      "edge_f1": 0.9606299212598426,
+      "neighborhood_sim": 0.9008881922675026,
+      "taxonomy_sim": 0.6433012093726379,
+      "proxy_sgs_internal": 0.9323586744639375,
+      "official_like": 0.9093042490909892,
+      "combo": 0.9319781868182418,
+      "metric_id": "llms4ol2026_graph_similarity_exact",
+      "external_reportable": true,
+      "pred_nontax": 20,
+      "gold_nontax": 20,
+      "metrics_full": {
+        "term_typing": {
+          "precision": 0.9473684210526315,
+          "recall": 1.0,
+          "f1": 0.972972972972973,
+          "tp": 18,
+          "fp": 1,
+          "fn": 0,
+          "macro_f1": 0.9666666666666667
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 0.8518518518518519,
+          "f1": 0.92,
+          "tp": 23,
+          "fp": 0,
+          "fn": 4
+        },
+        "relations_all": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 20,
+          "fp": 0,
+          "fn": 0
+        },
+        "relations_nontaxonomic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 20,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.9606299212598426,
+          "neighborhood_similarity": 0.9008881922675026,
+          "taxonomy_similarity": 0.6433012093726379,
+          "graph_similarity": 0.8349397742999943,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.9323586744639375,
+          "proxy_sgs": 0.9323586744639375,
+          "term_component": 0.9473684210526315,
+          "taxonomy_component": 0.8518518518518519,
+          "relation_component": 1.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.9093042490909892,
+        "official_like_score_external": {
+          "term_typing_f1": 0.972972972972973,
+          "taxonomy_f1": 0.92,
+          "graph_similarity": 0.8349397742999943,
+          "composite": 0.9093042490909892
+        },
+        "combo_score_internal": 0.9319781868182418,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      }
+    },
+    {
+      "dataset": "synthetic_multi_domain",
+      "system": "pro_team_closed_vocab",
+      "task": "A",
+      "term_typing_f1": 0.9217391304347826,
+      "taxonomy_f1": 0.8701298701298702,
+      "nontax_f1": 0.0,
+      "sgs": 0.6116372307387968,
+      "graph_similarity_official": 0.6116372307387968,
+      "edge_f1": 0.7339449541284403,
+      "neighborhood_sim": 0.5355486685032139,
+      "taxonomy_sim": 0.5654180695847363,
+      "proxy_sgs_internal": 0.5259918427882833,
+      "official_like": 0.8011687437678167,
+      "combo": 0.6008765578258625,
+      "metric_id": "llms4ol2026_graph_similarity_exact",
+      "external_reportable": true,
+      "pred_nontax": 0,
+      "gold_nontax": 58,
+      "metrics_full": {
+        "term_typing": {
+          "precision": 0.8688524590163934,
+          "recall": 0.9814814814814815,
+          "f1": 0.9217391304347826,
+          "tp": 53,
+          "fp": 8,
+          "fn": 1,
+          "macro_f1": 0.9323062558356676
+        },
+        "taxonomy": {
+          "precision": 0.8933333333333333,
+          "recall": 0.8481012658227848,
+          "f1": 0.8701298701298702,
+          "tp": 67,
+          "fp": 8,
+          "fn": 12
+        },
+        "relations_all": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 61,
+          "fn": 58
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 58
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.7339449541284403,
+          "neighborhood_similarity": 0.5355486685032139,
+          "taxonomy_similarity": 0.5654180695847363,
+          "graph_similarity": 0.6116372307387968,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.5259918427882833,
+          "proxy_sgs": 0.5259918427882833,
+          "term_component": 0.8548387096774194,
+          "taxonomy_component": 0.7701149425287356,
+          "relation_component": 0.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.8011687437678167,
+        "official_like_score_external": {
+          "term_typing_f1": 0.9217391304347826,
+          "taxonomy_f1": 0.8701298701298702,
+          "graph_similarity": 0.6116372307387968,
+          "composite": 0.8011687437678167
+        },
+        "combo_score_internal": 0.6008765578258625,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      }
+    },
+    {
+      "dataset": "synthetic_multi_domain",
+      "system": "ontobridg_open_vocab",
+      "task": "A",
+      "term_typing_f1": 0.9217391304347826,
+      "taxonomy_f1": 0.8758169934640523,
+      "nontax_f1": 0.7801418439716312,
+      "sgs": 0.7311729650976088,
+      "graph_similarity_official": 0.7311729650976088,
+      "edge_f1": 0.8557457212713935,
+      "neighborhood_sim": 0.76503502810321,
+      "taxonomy_sim": 0.5727381459182225,
+      "proxy_sgs_internal": 0.7529632408102025,
+      "official_like": 0.842909696332148,
+      "combo": 0.8272177332420187,
+      "metric_id": "llms4ol2026_graph_similarity_exact",
+      "external_reportable": true,
+      "pred_nontax": 83,
+      "gold_nontax": 58,
+      "metrics_full": {
+        "term_typing": {
+          "precision": 0.8688524590163934,
+          "recall": 0.9814814814814815,
+          "f1": 0.9217391304347826,
+          "tp": 53,
+          "fp": 8,
+          "fn": 1,
+          "macro_f1": 0.9323062558356676
+        },
+        "taxonomy": {
+          "precision": 0.9054054054054054,
+          "recall": 0.8481012658227848,
+          "f1": 0.8758169934640523,
+          "tp": 67,
+          "fp": 7,
+          "fn": 12
+        },
+        "relations_all": {
+          "precision": 0.6626506024096386,
+          "recall": 0.9482758620689655,
+          "f1": 0.7801418439716312,
+          "tp": 55,
+          "fp": 28,
+          "fn": 3
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.6626506024096386,
+          "recall": 0.9482758620689655,
+          "f1": 0.7801418439716312,
+          "tp": 55,
+          "fp": 28,
+          "fn": 3
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.8557457212713935,
+          "neighborhood_similarity": 0.76503502810321,
+          "taxonomy_similarity": 0.5727381459182225,
+          "graph_similarity": 0.7311729650976088,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.7529632408102025,
+          "proxy_sgs": 0.7529632408102025,
+          "term_component": 0.8548387096774194,
+          "taxonomy_component": 0.7790697674418605,
+          "relation_component": 0.6395348837209303,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.842909696332148,
+        "official_like_score_external": {
+          "term_typing_f1": 0.9217391304347826,
+          "taxonomy_f1": 0.8758169934640523,
+          "graph_similarity": 0.7311729650976088,
+          "composite": 0.842909696332148
+        },
+        "combo_score_internal": 0.8272177332420187,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      }
+    }
+  ],
+  "task_b": [
+    {
+      "dataset": "synthetic_biomedical",
+      "system": "pro_team_closed_vocab",
+      "task": "B",
+      "term_typing_f1": 0.888888888888889,
+      "taxonomy_f1": 0.8620689655172413,
+      "nontax_f1": 0.0,
+      "sgs": 0.5861080675621988,
+      "graph_similarity_official": 0.5861080675621988,
+      "edge_f1": 0.7317073170731708,
+      "neighborhood_sim": 0.5140077243018419,
+      "taxonomy_sim": 0.5126091613115834,
+      "proxy_sgs_internal": 0.5051515151515151,
+      "official_like": 0.7790219739894431,
+      "combo": 0.5842664804920823,
+      "metric_id": "llms4ol2026_graph_similarity_exact",
+      "external_reportable": true,
+      "pred_nontax": 0,
+      "gold_nontax": 20,
+      "seed_size": 8,
+      "extension_size": 12,
+      "extension_only": {
+        "term_typing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 12,
+          "fp": 0,
+          "fn": 0,
+          "macro_f1": 1.0
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 12,
+          "fp": 0,
+          "fn": 0
+        },
+        "relations_all": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 12,
+          "fn": 15
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 15
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.761904761904762,
+          "neighborhood_similarity": 0.504,
+          "taxonomy_similarity": 1.0,
+          "graph_similarity": 0.7553015873015873,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.6499999999999999,
+          "proxy_sgs": 0.6499999999999999,
+          "term_component": 1.0,
+          "taxonomy_component": 1.0,
+          "relation_component": 0.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.9184338624338624,
+        "official_like_score_external": {
+          "term_typing_f1": 1.0,
+          "taxonomy_f1": 1.0,
+          "graph_similarity": 0.7553015873015873,
+          "composite": 0.9184338624338624
+        },
+        "combo_score_internal": 0.6888253968253968,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      },
+      "metrics_full": {
+        "term_typing": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.888888888888889,
+          "tp": 20,
+          "fp": 5,
+          "fn": 0,
+          "macro_f1": 0.8974867724867724
+        },
+        "taxonomy": {
+          "precision": 0.8333333333333334,
+          "recall": 0.8928571428571429,
+          "f1": 0.8620689655172413,
+          "tp": 25,
+          "fp": 5,
+          "fn": 3
+        },
+        "relations_all": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 25,
+          "fn": 20
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 20
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.7317073170731708,
+          "neighborhood_similarity": 0.5140077243018419,
+          "taxonomy_similarity": 0.5126091613115834,
+          "graph_similarity": 0.5861080675621988,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.5051515151515151,
+          "proxy_sgs": 0.5051515151515151,
+          "term_component": 0.7999999999999999,
+          "taxonomy_component": 0.7575757575757576,
+          "relation_component": 0.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.7790219739894431,
+        "official_like_score_external": {
+          "term_typing_f1": 0.888888888888889,
+          "taxonomy_f1": 0.8620689655172413,
+          "graph_similarity": 0.5861080675621988,
+          "composite": 0.7790219739894431
+        },
+        "combo_score_internal": 0.5842664804920823,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      }
+    },
+    {
+      "dataset": "synthetic_biomedical",
+      "system": "ontobridg_open_vocab",
+      "task": "B",
+      "term_typing_f1": 0.888888888888889,
+      "taxonomy_f1": 0.8620689655172413,
+      "nontax_f1": 0.41304347826086957,
+      "sgs": 0.5547587072673578,
+      "graph_similarity_official": 0.5547587072673578,
+      "edge_f1": 0.6564102564102564,
+      "neighborhood_sim": 0.4952567040802335,
+      "taxonomy_sim": 0.5126091613115834,
+      "proxy_sgs_internal": 0.596247405562474,
+      "official_like": 0.768572187224496,
+      "combo": 0.6796900099835894,
+      "metric_id": "llms4ol2026_graph_similarity_exact",
+      "external_reportable": true,
+      "pred_nontax": 72,
+      "gold_nontax": 20,
+      "seed_size": 8,
+      "extension_size": 12,
+      "extension_only": {
+        "term_typing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 12,
+          "fp": 0,
+          "fn": 0,
+          "macro_f1": 1.0
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 12,
+          "fp": 0,
+          "fn": 0
+        },
+        "relations_all": {
+          "precision": 0.2857142857142857,
+          "recall": 0.9333333333333333,
+          "f1": 0.43749999999999994,
+          "tp": 14,
+          "fp": 35,
+          "fn": 1
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.2857142857142857,
+          "recall": 0.9333333333333333,
+          "f1": 0.43749999999999994,
+          "tp": 14,
+          "fp": 35,
+          "fn": 1
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.6785714285714285,
+          "neighborhood_similarity": 0.4907735633542085,
+          "taxonomy_similarity": 1.0,
+          "graph_similarity": 0.7231149973085457,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.7479999999999999,
+          "proxy_sgs": 0.7479999999999999,
+          "term_component": 1.0,
+          "taxonomy_component": 1.0,
+          "relation_component": 0.28,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.9077049991028486,
+        "official_like_score_external": {
+          "term_typing_f1": 1.0,
+          "taxonomy_f1": 1.0,
+          "graph_similarity": 0.7231149973085457,
+          "composite": 0.9077049991028486
+        },
+        "combo_score_internal": 0.7901537493271364,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      },
+      "metrics_full": {
+        "term_typing": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.888888888888889,
+          "tp": 20,
+          "fp": 5,
+          "fn": 0,
+          "macro_f1": 0.8974867724867724
+        },
+        "taxonomy": {
+          "precision": 0.8333333333333334,
+          "recall": 0.8928571428571429,
+          "f1": 0.8620689655172413,
+          "tp": 25,
+          "fp": 5,
+          "fn": 3
+        },
+        "relations_all": {
+          "precision": 0.2638888888888889,
+          "recall": 0.95,
+          "f1": 0.41304347826086957,
+          "tp": 19,
+          "fp": 53,
+          "fn": 1
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.2638888888888889,
+          "recall": 0.95,
+          "f1": 0.41304347826086957,
+          "tp": 19,
+          "fp": 53,
+          "fn": 1
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.6564102564102564,
+          "neighborhood_similarity": 0.4952567040802335,
+          "taxonomy_similarity": 0.5126091613115834,
+          "graph_similarity": 0.5547587072673578,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.596247405562474,
+          "proxy_sgs": 0.596247405562474,
+          "term_component": 0.7999999999999999,
+          "taxonomy_component": 0.7575757575757576,
+          "relation_component": 0.2602739726027397,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.768572187224496,
+        "official_like_score_external": {
+          "term_typing_f1": 0.888888888888889,
+          "taxonomy_f1": 0.8620689655172413,
+          "graph_similarity": 0.5547587072673578,
+          "composite": 0.768572187224496
+        },
+        "combo_score_internal": 0.6796900099835894,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      }
+    },
+    {
+      "dataset": "synthetic_geo",
+      "system": "pro_team_closed_vocab",
+      "task": "B",
+      "term_typing_f1": 0.9411764705882353,
+      "taxonomy_f1": 0.8695652173913043,
+      "nontax_f1": 0.0,
+      "sgs": 0.586910678974171,
+      "graph_similarity_official": 0.586910678974171,
+      "edge_f1": 0.7346938775510204,
+      "neighborhood_sim": 0.5482603815937149,
+      "taxonomy_sim": 0.4777777777777778,
+      "proxy_sgs_internal": 0.5358974358974359,
+      "official_like": 0.7992174556512368,
+      "combo": 0.5994130917384277,
+      "metric_id": "llms4ol2026_graph_similarity_exact",
+      "external_reportable": true,
+      "pred_nontax": 0,
+      "gold_nontax": 18,
+      "seed_size": 6,
+      "extension_size": 10,
+      "extension_only": {
+        "term_typing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "macro_f1": 1.0
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 10,
+          "fp": 0,
+          "fn": 0
+        },
+        "relations_all": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 10,
+          "fn": 17
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 17
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.7017543859649124,
+          "neighborhood_similarity": 0.42630385487528344,
+          "taxonomy_similarity": 1.0,
+          "graph_similarity": 0.709352746946732,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.6499999999999999,
+          "proxy_sgs": 0.6499999999999999,
+          "term_component": 1.0,
+          "taxonomy_component": 1.0,
+          "relation_component": 0.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.9031175823155774,
+        "official_like_score_external": {
+          "term_typing_f1": 1.0,
+          "taxonomy_f1": 1.0,
+          "graph_similarity": 0.709352746946732,
+          "composite": 0.9031175823155774
+        },
+        "combo_score_internal": 0.677338186736683,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      },
+      "metrics_full": {
+        "term_typing": {
+          "precision": 0.8888888888888888,
+          "recall": 1.0,
+          "f1": 0.9411764705882353,
+          "tp": 16,
+          "fp": 2,
+          "fn": 0,
+          "macro_f1": 0.95
+        },
+        "taxonomy": {
+          "precision": 0.9090909090909091,
+          "recall": 0.8333333333333334,
+          "f1": 0.8695652173913043,
+          "tp": 20,
+          "fp": 2,
+          "fn": 4
+        },
+        "relations_all": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 18,
+          "fn": 18
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 18
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.7346938775510204,
+          "neighborhood_similarity": 0.5482603815937149,
+          "taxonomy_similarity": 0.4777777777777778,
+          "graph_similarity": 0.586910678974171,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.5358974358974359,
+          "proxy_sgs": 0.5358974358974359,
+          "term_component": 0.8888888888888888,
+          "taxonomy_component": 0.7692307692307693,
+          "relation_component": 0.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.7992174556512368,
+        "official_like_score_external": {
+          "term_typing_f1": 0.9411764705882353,
+          "taxonomy_f1": 0.8695652173913043,
+          "graph_similarity": 0.586910678974171,
+          "composite": 0.7992174556512368
+        },
+        "combo_score_internal": 0.5994130917384277,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      }
+    },
+    {
+      "dataset": "synthetic_geo",
+      "system": "ontobridg_open_vocab",
+      "task": "B",
+      "term_typing_f1": 0.9411764705882353,
+      "taxonomy_f1": 0.9090909090909091,
+      "nontax_f1": 0.8571428571428571,
+      "sgs": 0.7477497550460513,
+      "graph_similarity_official": 0.7477497550460513,
+      "edge_f1": 0.9,
+      "neighborhood_sim": 0.8179159318048207,
+      "taxonomy_sim": 0.5253333333333333,
+      "proxy_sgs_internal": 0.8208333333333333,
+      "official_like": 0.8660057115750653,
+      "combo": 0.8637899979670132,
+      "metric_id": "llms4ol2026_graph_similarity_exact",
+      "external_reportable": true,
+      "pred_nontax": 24,
+      "gold_nontax": 18,
+      "seed_size": 6,
+      "extension_size": 10,
+      "extension_only": {
+        "term_typing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "macro_f1": 1.0
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 10,
+          "fp": 0,
+          "fn": 0
+        },
+        "relations_all": {
+          "precision": 0.7391304347826086,
+          "recall": 1.0,
+          "f1": 0.85,
+          "tp": 17,
+          "fp": 6,
+          "fn": 0
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.7391304347826086,
+          "recall": 1.0,
+          "f1": 0.85,
+          "tp": 17,
+          "fp": 6,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.9249999999999999,
+          "neighborhood_similarity": 0.875,
+          "taxonomy_similarity": 1.0,
+          "graph_similarity": 0.9333333333333332,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.9086956521739129,
+          "proxy_sgs": 0.9086956521739129,
+          "term_component": 1.0,
+          "taxonomy_component": 1.0,
+          "relation_component": 0.7391304347826086,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.9777777777777777,
+        "official_like_score_external": {
+          "term_typing_f1": 1.0,
+          "taxonomy_f1": 1.0,
+          "graph_similarity": 0.9333333333333332,
+          "composite": 0.9777777777777777
+        },
+        "combo_score_internal": 0.9458333333333333,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      },
+      "metrics_full": {
+        "term_typing": {
+          "precision": 0.8888888888888888,
+          "recall": 1.0,
+          "f1": 0.9411764705882353,
+          "tp": 16,
+          "fp": 2,
+          "fn": 0,
+          "macro_f1": 0.95
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1": 0.9090909090909091,
+          "tp": 20,
+          "fp": 0,
+          "fn": 4
+        },
+        "relations_all": {
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571428571428571,
+          "tp": 18,
+          "fp": 6,
+          "fn": 0
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571428571428571,
+          "tp": 18,
+          "fp": 6,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.9,
+          "neighborhood_similarity": 0.8179159318048207,
+          "taxonomy_similarity": 0.5253333333333333,
+          "graph_similarity": 0.7477497550460513,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.8208333333333333,
+          "proxy_sgs": 0.8208333333333333,
+          "term_component": 0.8888888888888888,
+          "taxonomy_component": 0.8333333333333334,
+          "relation_component": 0.75,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.8660057115750653,
+        "official_like_score_external": {
+          "term_typing_f1": 0.9411764705882353,
+          "taxonomy_f1": 0.9090909090909091,
+          "graph_similarity": 0.7477497550460513,
+          "composite": 0.8660057115750653
+        },
+        "combo_score_internal": 0.8637899979670132,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      }
+    },
+    {
+      "dataset": "synthetic_product",
+      "system": "pro_team_closed_vocab",
+      "task": "B",
+      "term_typing_f1": 0.972972972972973,
+      "taxonomy_f1": 0.9019607843137256,
+      "nontax_f1": 0.0,
+      "sgs": 0.6529737352786354,
+      "graph_similarity_official": 0.6529737352786354,
+      "edge_f1": 0.7592592592592593,
+      "neighborhood_sim": 0.587012987012987,
+      "taxonomy_sim": 0.6126489595636602,
+      "proxy_sgs_internal": 0.5717105263157894,
+      "official_like": 0.8426358308551114,
+      "combo": 0.6319768731413336,
+      "metric_id": "llms4ol2026_graph_similarity_exact",
+      "external_reportable": true,
+      "pred_nontax": 0,
+      "gold_nontax": 20,
+      "seed_size": 7,
+      "extension_size": 11,
+      "extension_only": {
+        "term_typing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 11,
+          "fp": 0,
+          "fn": 0,
+          "macro_f1": 1.0
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 11,
+          "fp": 0,
+          "fn": 0
+        },
+        "relations_all": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 11,
+          "fn": 18
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 18
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.7096774193548387,
+          "neighborhood_similarity": 0.5115942028985507,
+          "taxonomy_similarity": 1.0,
+          "graph_similarity": 0.7404238740844632,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.6499999999999999,
+          "proxy_sgs": 0.6499999999999999,
+          "term_component": 1.0,
+          "taxonomy_component": 1.0,
+          "relation_component": 0.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.9134746246948211,
+        "official_like_score_external": {
+          "term_typing_f1": 1.0,
+          "taxonomy_f1": 1.0,
+          "graph_similarity": 0.7404238740844632,
+          "composite": 0.9134746246948211
+        },
+        "combo_score_internal": 0.6851059685211158,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      },
+      "metrics_full": {
+        "term_typing": {
+          "precision": 0.9473684210526315,
+          "recall": 1.0,
+          "f1": 0.972972972972973,
+          "tp": 18,
+          "fp": 1,
+          "fn": 0,
+          "macro_f1": 0.9666666666666667
+        },
+        "taxonomy": {
+          "precision": 0.9583333333333334,
+          "recall": 0.8518518518518519,
+          "f1": 0.9019607843137256,
+          "tp": 23,
+          "fp": 1,
+          "fn": 4
+        },
+        "relations_all": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 19,
+          "fn": 20
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 20
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.7592592592592593,
+          "neighborhood_similarity": 0.587012987012987,
+          "taxonomy_similarity": 0.6126489595636602,
+          "graph_similarity": 0.6529737352786354,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.5717105263157894,
+          "proxy_sgs": 0.5717105263157894,
+          "term_component": 0.9473684210526315,
+          "taxonomy_component": 0.8214285714285714,
+          "relation_component": 0.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.8426358308551114,
+        "official_like_score_external": {
+          "term_typing_f1": 0.972972972972973,
+          "taxonomy_f1": 0.9019607843137256,
+          "graph_similarity": 0.6529737352786354,
+          "composite": 0.8426358308551114
+        },
+        "combo_score_internal": 0.6319768731413336,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      }
+    },
+    {
+      "dataset": "synthetic_product",
+      "system": "ontobridg_open_vocab",
+      "task": "B",
+      "term_typing_f1": 0.972972972972973,
+      "taxonomy_f1": 0.92,
+      "nontax_f1": 1.0,
+      "sgs": 0.8349397742999943,
+      "graph_similarity_official": 0.8349397742999943,
+      "edge_f1": 0.9606299212598426,
+      "neighborhood_sim": 0.9008881922675026,
+      "taxonomy_sim": 0.6433012093726379,
+      "proxy_sgs_internal": 0.9323586744639375,
+      "official_like": 0.9093042490909892,
+      "combo": 0.9319781868182418,
+      "metric_id": "llms4ol2026_graph_similarity_exact",
+      "external_reportable": true,
+      "pred_nontax": 20,
+      "gold_nontax": 20,
+      "seed_size": 7,
+      "extension_size": 11,
+      "extension_only": {
+        "term_typing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 11,
+          "fp": 0,
+          "fn": 0,
+          "macro_f1": 1.0
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 11,
+          "fp": 0,
+          "fn": 0
+        },
+        "relations_all": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 18,
+          "fp": 0,
+          "fn": 0
+        },
+        "relations_nontaxonomic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 18,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 1.0,
+          "neighborhood_similarity": 1.0,
+          "taxonomy_similarity": 1.0,
+          "graph_similarity": 1.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.9999999999999999,
+          "proxy_sgs": 0.9999999999999999,
+          "term_component": 1.0,
+          "taxonomy_component": 1.0,
+          "relation_component": 1.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 1.0,
+        "official_like_score_external": {
+          "term_typing_f1": 1.0,
+          "taxonomy_f1": 1.0,
+          "graph_similarity": 1.0,
+          "composite": 1.0
+        },
+        "combo_score_internal": 1.0,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      },
+      "metrics_full": {
+        "term_typing": {
+          "precision": 0.9473684210526315,
+          "recall": 1.0,
+          "f1": 0.972972972972973,
+          "tp": 18,
+          "fp": 1,
+          "fn": 0,
+          "macro_f1": 0.9666666666666667
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 0.8518518518518519,
+          "f1": 0.92,
+          "tp": 23,
+          "fp": 0,
+          "fn": 4
+        },
+        "relations_all": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 20,
+          "fp": 0,
+          "fn": 0
+        },
+        "relations_nontaxonomic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 20,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.9606299212598426,
+          "neighborhood_similarity": 0.9008881922675026,
+          "taxonomy_similarity": 0.6433012093726379,
+          "graph_similarity": 0.8349397742999943,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.9323586744639375,
+          "proxy_sgs": 0.9323586744639375,
+          "term_component": 0.9473684210526315,
+          "taxonomy_component": 0.8518518518518519,
+          "relation_component": 1.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.9093042490909892,
+        "official_like_score_external": {
+          "term_typing_f1": 0.972972972972973,
+          "taxonomy_f1": 0.92,
+          "graph_similarity": 0.8349397742999943,
+          "composite": 0.9093042490909892
+        },
+        "combo_score_internal": 0.9319781868182418,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      }
+    },
+    {
+      "dataset": "synthetic_multi_domain",
+      "system": "pro_team_closed_vocab",
+      "task": "B",
+      "term_typing_f1": 0.9217391304347826,
+      "taxonomy_f1": 0.8701298701298702,
+      "nontax_f1": 0.0,
+      "sgs": 0.6114916636647538,
+      "graph_similarity_official": 0.6114916636647538,
+      "edge_f1": 0.7339449541284403,
+      "neighborhood_sim": 0.5352661227661227,
+      "taxonomy_sim": 0.5652639140996985,
+      "proxy_sgs_internal": 0.5259918427882833,
+      "official_like": 0.8011202214098022,
+      "combo": 0.6008401660573517,
+      "metric_id": "llms4ol2026_graph_similarity_exact",
+      "external_reportable": true,
+      "pred_nontax": 0,
+      "gold_nontax": 58,
+      "seed_size": 21,
+      "extension_size": 33,
+      "extension_only": {
+        "term_typing": {
+          "precision": 1.0,
+          "recall": 0.9696969696969697,
+          "f1": 0.9846153846153847,
+          "tp": 32,
+          "fp": 0,
+          "fn": 1,
+          "macro_f1": 0.9791666666666666
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 0.9696969696969697,
+          "f1": 0.9846153846153847,
+          "tp": 32,
+          "fp": 0,
+          "fn": 1
+        },
+        "relations_all": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 32,
+          "fn": 47
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 47
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.7231638418079096,
+          "neighborhood_similarity": 0.47380952380952385,
+          "taxonomy_similarity": 0.9693877551020408,
+          "graph_similarity": 0.7221203735731581,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.6303030303030303,
+          "proxy_sgs": 0.6303030303030303,
+          "term_component": 0.9696969696969696,
+          "taxonomy_component": 0.9696969696969697,
+          "relation_component": 0.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.8971170476013092,
+        "official_like_score_external": {
+          "term_typing_f1": 0.9846153846153847,
+          "taxonomy_f1": 0.9846153846153847,
+          "graph_similarity": 0.7221203735731581,
+          "composite": 0.8971170476013092
+        },
+        "combo_score_internal": 0.6728377857009818,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      },
+      "metrics_full": {
+        "term_typing": {
+          "precision": 0.8688524590163934,
+          "recall": 0.9814814814814815,
+          "f1": 0.9217391304347826,
+          "tp": 53,
+          "fp": 8,
+          "fn": 1,
+          "macro_f1": 0.9326797385620915
+        },
+        "taxonomy": {
+          "precision": 0.8933333333333333,
+          "recall": 0.8481012658227848,
+          "f1": 0.8701298701298702,
+          "tp": 67,
+          "fp": 8,
+          "fn": 12
+        },
+        "relations_all": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 61,
+          "fn": 58
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 58
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.7339449541284403,
+          "neighborhood_similarity": 0.5352661227661227,
+          "taxonomy_similarity": 0.5652639140996985,
+          "graph_similarity": 0.6114916636647538,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.5259918427882833,
+          "proxy_sgs": 0.5259918427882833,
+          "term_component": 0.8548387096774194,
+          "taxonomy_component": 0.7701149425287356,
+          "relation_component": 0.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.8011202214098022,
+        "official_like_score_external": {
+          "term_typing_f1": 0.9217391304347826,
+          "taxonomy_f1": 0.8701298701298702,
+          "graph_similarity": 0.6114916636647538,
+          "composite": 0.8011202214098022
+        },
+        "combo_score_internal": 0.6008401660573517,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      }
+    },
+    {
+      "dataset": "synthetic_multi_domain",
+      "system": "ontobridg_open_vocab",
+      "task": "B",
+      "term_typing_f1": 0.9217391304347826,
+      "taxonomy_f1": 0.8758169934640523,
+      "nontax_f1": 0.8029197080291972,
+      "sgs": 0.7340814556161698,
+      "graph_similarity_official": 0.7340814556161698,
+      "edge_f1": 0.8641975308641975,
+      "neighborhood_sim": 0.7654646174532538,
+      "taxonomy_sim": 0.5725822185310578,
+      "proxy_sgs_internal": 0.7638821290688526,
+      "official_like": 0.8438791931716683,
+      "combo": 0.8336393218860505,
+      "metric_id": "llms4ol2026_graph_similarity_exact",
+      "external_reportable": true,
+      "pred_nontax": 79,
+      "gold_nontax": 58,
+      "seed_size": 21,
+      "extension_size": 33,
+      "extension_only": {
+        "term_typing": {
+          "precision": 1.0,
+          "recall": 0.9696969696969697,
+          "f1": 0.9846153846153847,
+          "tp": 32,
+          "fp": 0,
+          "fn": 1,
+          "macro_f1": 0.9791666666666666
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 0.9696969696969697,
+          "f1": 0.9846153846153847,
+          "tp": 32,
+          "fp": 0,
+          "fn": 1
+        },
+        "relations_all": {
+          "precision": 0.6875,
+          "recall": 0.9361702127659575,
+          "f1": 0.7927927927927927,
+          "tp": 44,
+          "fp": 20,
+          "fn": 3
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.6875,
+          "recall": 0.9361702127659575,
+          "f1": 0.7927927927927927,
+          "tp": 44,
+          "fp": 20,
+          "fn": 3
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.8962655601659751,
+          "neighborhood_similarity": 0.8356709956709957,
+          "taxonomy_similarity": 0.9693877551020408,
+          "graph_similarity": 0.9004414369796705,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.8601537765716869,
+          "proxy_sgs": 0.8601537765716869,
+          "term_component": 0.9696969696969696,
+          "taxonomy_component": 0.9696969696969697,
+          "relation_component": 0.6567164179104478,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.9565574020701466,
+        "official_like_score_external": {
+          "term_typing_f1": 0.9846153846153847,
+          "taxonomy_f1": 0.9846153846153847,
+          "graph_similarity": 0.9004414369796705,
+          "composite": 0.9565574020701466
+        },
+        "combo_score_internal": 0.9156162497508081,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      },
+      "metrics_full": {
+        "term_typing": {
+          "precision": 0.8688524590163934,
+          "recall": 0.9814814814814815,
+          "f1": 0.9217391304347826,
+          "tp": 53,
+          "fp": 8,
+          "fn": 1,
+          "macro_f1": 0.9326797385620915
+        },
+        "taxonomy": {
+          "precision": 0.9054054054054054,
+          "recall": 0.8481012658227848,
+          "f1": 0.8758169934640523,
+          "tp": 67,
+          "fp": 7,
+          "fn": 12
+        },
+        "relations_all": {
+          "precision": 0.6962025316455697,
+          "recall": 0.9482758620689655,
+          "f1": 0.8029197080291972,
+          "tp": 55,
+          "fp": 24,
+          "fn": 3
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.6962025316455697,
+          "recall": 0.9482758620689655,
+          "f1": 0.8029197080291972,
+          "tp": 55,
+          "fp": 24,
+          "fn": 3
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.8641975308641975,
+          "neighborhood_similarity": 0.7654646174532538,
+          "taxonomy_similarity": 0.5725822185310578,
+          "graph_similarity": 0.7340814556161698,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.7638821290688526,
+          "proxy_sgs": 0.7638821290688526,
+          "term_component": 0.8548387096774194,
+          "taxonomy_component": 0.7790697674418605,
+          "relation_component": 0.6707317073170732,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.8438791931716683,
+        "official_like_score_external": {
+          "term_typing_f1": 0.9217391304347826,
+          "taxonomy_f1": 0.8758169934640523,
+          "graph_similarity": 0.7340814556161698,
+          "composite": 0.8438791931716683
+        },
+        "combo_score_internal": 0.8336393218860505,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      }
+    }
+  ],
+  "contamination": [
+    {
+      "system": "ontobridg",
+      "dataset": "synthetic_multi_domain",
+      "contamination": {
+        "dataset": "synthetic_multi_domain",
+        "term_probe_rate": 0.5740740740740741,
+        "relation_probe_rate": 0.6724137931034483,
+        "level": "high"
+      },
+      "full": {
+        "term_typing": {
+          "precision": 0.8688524590163934,
+          "recall": 0.9814814814814815,
+          "f1": 0.9217391304347826,
+          "tp": 53,
+          "fp": 8,
+          "fn": 1,
+          "macro_f1": 0.9323062558356676
+        },
+        "taxonomy": {
+          "precision": 0.9054054054054054,
+          "recall": 0.8481012658227848,
+          "f1": 0.8758169934640523,
+          "tp": 67,
+          "fp": 7,
+          "fn": 12
+        },
+        "relations_all": {
+          "precision": 0.6626506024096386,
+          "recall": 0.9482758620689655,
+          "f1": 0.7801418439716312,
+          "tp": 55,
+          "fp": 28,
+          "fn": 3
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.6626506024096386,
+          "recall": 0.9482758620689655,
+          "f1": 0.7801418439716312,
+          "tp": 55,
+          "fp": 28,
+          "fn": 3
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.8557457212713935,
+          "neighborhood_similarity": 0.76503502810321,
+          "taxonomy_similarity": 0.5727381459182225,
+          "graph_similarity": 0.7311729650976088,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.7529632408102025,
+          "proxy_sgs": 0.7529632408102025,
+          "term_component": 0.8548387096774194,
+          "taxonomy_component": 0.7790697674418605,
+          "relation_component": 0.6395348837209303,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.842909696332148,
+        "official_like_score_external": {
+          "term_typing_f1": 0.9217391304347826,
+          "taxonomy_f1": 0.8758169934640523,
+          "graph_similarity": 0.7311729650976088,
+          "composite": 0.842909696332148
+        },
+        "combo_score_internal": 0.8272177332420187,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      },
+      "term_holdout": {
+        "term_typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 13,
+          "macro_f1": 0.0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 13
+        },
+        "relations_all": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 22
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 22
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.0,
+          "proxy_sgs": 0.0,
+          "term_component": 0.0,
+          "taxonomy_component": 0.0,
+          "relation_component": 0.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.0,
+        "official_like_score_external": {
+          "term_typing_f1": 0.0,
+          "taxonomy_f1": 0.0,
+          "graph_similarity": 0.0,
+          "composite": 0.0
+        },
+        "combo_score_internal": 0.0,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      },
+      "paraphrase": {
+        "term_typing": {
+          "precision": 0.8833333333333333,
+          "recall": 0.9814814814814815,
+          "f1": 0.9298245614035088,
+          "tp": 53,
+          "fp": 7,
+          "fn": 1,
+          "macro_f1": 0.938608776844071
+        },
+        "taxonomy": {
+          "precision": 0.9178082191780822,
+          "recall": 0.8481012658227848,
+          "f1": 0.881578947368421,
+          "tp": 67,
+          "fp": 6,
+          "fn": 12
+        },
+        "relations_all": {
+          "precision": 0.6056338028169014,
+          "recall": 0.7413793103448276,
+          "f1": 0.6666666666666667,
+          "tp": 43,
+          "fp": 28,
+          "fn": 15
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.6056338028169014,
+          "recall": 0.7413793103448276,
+          "f1": 0.6666666666666667,
+          "tp": 43,
+          "fp": 28,
+          "fn": 15
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.8253164556962026,
+          "neighborhood_similarity": 0.7088126751919855,
+          "taxonomy_similarity": 0.580560682498667,
+          "graph_similarity": 0.704896604462285,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.7115380906460944,
+          "proxy_sgs": 0.7115380906460944,
+          "term_component": 0.8688524590163934,
+          "taxonomy_component": 0.788235294117647,
+          "relation_component": 0.5,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.838766704411405,
+        "official_like_score_external": {
+          "term_typing_f1": 0.9298245614035088,
+          "taxonomy_f1": 0.881578947368421,
+          "graph_similarity": 0.704896604462285,
+          "composite": 0.838766704411405
+        },
+        "combo_score_internal": 0.7957416949752204,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      },
+      "synthetic_novel": {
+        "term_typing": {
+          "precision": 0.06557377049180328,
+          "recall": 0.07407407407407407,
+          "f1": 0.06956521739130435,
+          "tp": 4,
+          "fp": 57,
+          "fn": 50,
+          "macro_f1": 0.018613242398408638
+        },
+        "taxonomy": {
+          "precision": 0.2545454545454545,
+          "recall": 0.17721518987341772,
+          "f1": 0.208955223880597,
+          "tp": 14,
+          "fp": 41,
+          "fn": 65
+        },
+        "relations_all": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 47,
+          "fn": 58
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 47,
+          "fn": 58
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.1016949152542373,
+          "neighborhood_similarity": 0.04843199280745611,
+          "taxonomy_similarity": 0.03371441080419409,
+          "graph_similarity": 0.0612804396219625,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.12533638477186865,
+          "proxy_sgs": 0.12533638477186865,
+          "term_component": 0.28167683812845107,
+          "taxonomy_component": 0.11666666666666667,
+          "relation_component": 0.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.11326696029795462,
+        "official_like_score_external": {
+          "term_typing_f1": 0.06956521739130435,
+          "taxonomy_f1": 0.208955223880597,
+          "graph_similarity": 0.0612804396219625,
+          "composite": 0.11326696029795462
+        },
+        "combo_score_internal": 0.08495022022346596,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      },
+      "drops": {
+        "holdout_combo_drop": 0.842909696332148,
+        "paraphrase_combo_drop": 0.004142991920742967,
+        "novel_combo_drop": 0.7296427360341934,
+        "holdout_nontax_f1_drop": 0.7801418439716312,
+        "paraphrase_nontax_f1_drop": 0.11347517730496448,
+        "holdout_protocol": "corpus-blind + knowledge-scrub(when provided); positive drop => memorization",
+        "metric_note": "drops computed with official Graph Similarity composite"
+      }
+    },
+    {
+      "system": "pro_team",
+      "dataset": "synthetic_multi_domain",
+      "contamination": {
+        "dataset": "synthetic_multi_domain",
+        "term_probe_rate": 0.5740740740740741,
+        "relation_probe_rate": 0.6724137931034483,
+        "level": "high"
+      },
+      "full": {
+        "term_typing": {
+          "precision": 0.8688524590163934,
+          "recall": 0.9814814814814815,
+          "f1": 0.9217391304347826,
+          "tp": 53,
+          "fp": 8,
+          "fn": 1,
+          "macro_f1": 0.9323062558356676
+        },
+        "taxonomy": {
+          "precision": 0.8933333333333333,
+          "recall": 0.8481012658227848,
+          "f1": 0.8701298701298702,
+          "tp": 67,
+          "fp": 8,
+          "fn": 12
+        },
+        "relations_all": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 61,
+          "fn": 58
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 58
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.7339449541284403,
+          "neighborhood_similarity": 0.5355486685032139,
+          "taxonomy_similarity": 0.5654180695847363,
+          "graph_similarity": 0.6116372307387968,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.5259918427882833,
+          "proxy_sgs": 0.5259918427882833,
+          "term_component": 0.8548387096774194,
+          "taxonomy_component": 0.7701149425287356,
+          "relation_component": 0.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.8011687437678167,
+        "official_like_score_external": {
+          "term_typing_f1": 0.9217391304347826,
+          "taxonomy_f1": 0.8701298701298702,
+          "graph_similarity": 0.6116372307387968,
+          "composite": 0.8011687437678167
+        },
+        "combo_score_internal": 0.6008765578258625,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      },
+      "term_holdout": {
+        "term_typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 13,
+          "macro_f1": 0.0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 13
+        },
+        "relations_all": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 22
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 22
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.0,
+          "proxy_sgs": 0.0,
+          "term_component": 0.0,
+          "taxonomy_component": 0.0,
+          "relation_component": 0.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.0,
+        "official_like_score_external": {
+          "term_typing_f1": 0.0,
+          "taxonomy_f1": 0.0,
+          "graph_similarity": 0.0,
+          "composite": 0.0
+        },
+        "combo_score_internal": 0.0,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      },
+      "paraphrase": {
+        "term_typing": {
+          "precision": 0.8833333333333333,
+          "recall": 0.9814814814814815,
+          "f1": 0.9298245614035088,
+          "tp": 53,
+          "fp": 7,
+          "fn": 1,
+          "macro_f1": 0.938608776844071
+        },
+        "taxonomy": {
+          "precision": 0.9054054054054054,
+          "recall": 0.8481012658227848,
+          "f1": 0.8758169934640523,
+          "tp": 67,
+          "fp": 7,
+          "fn": 12
+        },
+        "relations_all": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 60,
+          "fn": 58
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 58
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.7384615384615384,
+          "neighborhood_similarity": 0.5430976430976431,
+          "taxonomy_similarity": 0.5727381459182225,
+          "graph_similarity": 0.6180991091591347,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.5333301563095691,
+          "proxy_sgs": 0.5333301563095691,
+          "term_component": 0.8688524590163934,
+          "taxonomy_component": 0.7790697674418605,
+          "relation_component": 0.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.8079135546755652,
+        "official_like_score_external": {
+          "term_typing_f1": 0.9298245614035088,
+          "taxonomy_f1": 0.8758169934640523,
+          "graph_similarity": 0.6180991091591347,
+          "composite": 0.8079135546755652
+        },
+        "combo_score_internal": 0.605935166006674,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      },
+      "synthetic_novel": {
+        "term_typing": {
+          "precision": 0.06557377049180328,
+          "recall": 0.07407407407407407,
+          "f1": 0.06956521739130435,
+          "tp": 4,
+          "fp": 57,
+          "fn": 50,
+          "macro_f1": 0.018613242398408638
+        },
+        "taxonomy": {
+          "precision": 0.18666666666666668,
+          "recall": 0.17721518987341772,
+          "f1": 0.1818181818181818,
+          "tp": 14,
+          "fp": 61,
+          "fn": 65
+        },
+        "relations_all": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 61,
+          "fn": 58
+        },
+        "relations_nontaxonomic": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 58
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.11009174311926606,
+          "neighborhood_similarity": 0.049088202794652015,
+          "taxonomy_similarity": 0.028932224874521163,
+          "graph_similarity": 0.06270405692947974,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "internal_proxy_sgs": {
+          "sgs": 0.11950305143853532,
+          "proxy_sgs": 0.11950305143853532,
+          "term_component": 0.28167683812845107,
+          "taxonomy_component": 0.1,
+          "relation_component": 0.0,
+          "metric_id": "ontobridg_internal_proxy_sgs",
+          "external_reportable": false,
+          "warning": "NOT official LLMs4OL Graph Similarity"
+        },
+        "official_like_score": 0.10469581871298862,
+        "official_like_score_external": {
+          "term_typing_f1": 0.06956521739130435,
+          "taxonomy_f1": 0.1818181818181818,
+          "graph_similarity": 0.06270405692947974,
+          "composite": 0.10469581871298862
+        },
+        "combo_score_internal": 0.07852186403474147,
+        "metric_policy": {
+          "external_reportable_key": "official_graph_similarity",
+          "forbidden_external_keys": [
+            "internal_proxy_sgs",
+            "sgs",
+            "proxy_sgs"
+          ]
+        }
+      },
+      "drops": {
+        "holdout_combo_drop": 0.8011687437678167,
+        "paraphrase_combo_drop": -0.0067448109077485885,
+        "novel_combo_drop": 0.696472925054828,
+        "holdout_nontax_f1_drop": 0.0,
+        "paraphrase_nontax_f1_drop": 0.0,
+        "holdout_protocol": "corpus-blind + knowledge-scrub(when provided); positive drop => memorization",
+        "metric_note": "drops computed with official Graph Similarity composite"
+      }
+    }
+  ],
+  "summary": {
+    "pro_team_closed_vocab": {
+      "task_a_avg": {
+        "term_typing_f1": 0.9248812344080886,
+        "taxonomy_f1": 0.8709402837481988,
+        "nontax_f1": 0.0,
+        "sgs": 0.6026163296524257,
+        "graph_similarity_official": 0.6026163296524257,
+        "edge_f1": 0.7346604731479032,
+        "neighborhood_sim": 0.537517600780747,
+        "taxonomy_sim": 0.5356709150286271,
+        "official_like": 0.7994792826029044,
+        "combo": 0.5996094619521783,
+        "proxy_sgs_internal": 0.5290363148867407
+      },
+      "task_b_avg": {
+        "term_typing_f1": 0.9311943657212199,
+        "taxonomy_f1": 0.8759312093380354,
+        "nontax_f1": 0.0,
+        "sgs": 0.6093710363699398,
+        "graph_similarity_official": 0.6093710363699398,
+        "edge_f1": 0.7399013520029727,
+        "neighborhood_sim": 0.5461368039186667,
+        "taxonomy_sim": 0.54207495318818,
+        "official_like": 0.8054988704763983,
+        "combo": 0.6041241528572988,
+        "proxy_sgs_internal": 0.5346878300382559
+      },
+      "task_a_nontax_total_pred": 0,
+      "task_b_nontax_total_pred": 0,
+      "task_a_nontax_total_gold": 116,
+      "task_b_nontax_total_gold": 116
+    },
+    "ontobridg_open_vocab": {
+      "task_a_avg": {
+        "term_typing_f1": 0.9248812344080886,
+        "taxonomy_f1": 0.886753291428214,
+        "nontax_f1": 0.7685165775774727,
+        "sgs": 0.7145336211868623,
+        "graph_similarity_official": 0.7145336211868623,
+        "edge_f1": 0.8439875276540856,
+        "neighborhood_sim": 0.7425604504533693,
+        "taxonomy_sim": 0.5570528854531319,
+        "official_like": 0.8420560490077217,
+        "combo": 0.8236711811501594,
+        "proxy_sgs_internal": 0.7716237051999967
+      },
+      "task_b_avg": {
+        "term_typing_f1": 0.9311943657212199,
+        "taxonomy_f1": 0.8917442170180507,
+        "nontax_f1": 0.768276510858231,
+        "sgs": 0.7178824230573932,
+        "graph_similarity_official": 0.7178824230573932,
+        "edge_f1": 0.8453094271335742,
+        "neighborhood_sim": 0.7448813614014527,
+        "taxonomy_sim": 0.5634564806371531,
+        "official_like": 0.8469403352655547,
+        "combo": 0.8272743791637237,
+        "proxy_sgs_internal": 0.7783303856071493
+      },
+      "task_a_nontax_total_pred": 194,
+      "task_b_nontax_total_pred": 195,
+      "task_a_nontax_total_gold": 116,
+      "task_b_nontax_total_gold": 116
+    },
+    "delta_ontobridg_minus_pro_team": {
+      "task_a_combo": 0.224061719197981,
+      "task_a_sgs": 0.11191729153443652,
+      "task_a_nontax_f1": 0.7685165775774727,
+      "task_b_combo": 0.2231502263064249,
+      "task_b_sgs": 0.10851138668745341,
+      "task_b_nontax_f1": 0.768276510858231
+    }
+  }
+}

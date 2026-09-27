@@ -1,0 +1,343 @@
+{
+  "meta": {
+    "protocol": "llms4ol2025_cross_year_relation_calibration_v1",
+    "audit_only": true,
+    "selection_uses_gold_locally": true,
+    "selection_is_calibration_only_not_unbiased_evaluation": true,
+    "gold_visible_to_model": false,
+    "contains_source_text": false,
+    "external_destination": "https://note3-prev-api.askdiandian.com/v1",
+    "model": "dots3-note-prev",
+    "system": "open_vocab_guarded_v5_axioms_only",
+    "seed": 20260923,
+    "estimated_calls": 10,
+    "estimated_generation_cache_hits": 10,
+    "estimated_exact_cache_replays": 10,
+    "estimated_local_reprocesses": 0,
+    "estimated_external_calls": 0,
+    "total_prompt_chars": 29888,
+    "disjoint_from_all_2026_train_gold": true
+  },
+  "pool": {
+    "source_repository_license": "MIT",
+    "underlying_ontology_license_reverified": false,
+    "source_files": [
+      {
+        "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskA-Text2Onto\\ecology\\train\\documents.jsonl",
+        "sha256": "570e255e910f0314db02b7c89d7216bc11ddf796db1f5391e850787304c829d1"
+      },
+      {
+        "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskA-Text2Onto\\ecology\\train\\terms2docs.json",
+        "sha256": "6dfb15d7b3955d151c60bbe7922cfa17a5255f8b0cfc4d434fcb8fed7dbce18c"
+      },
+      {
+        "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskA-Text2Onto\\engineering\\train\\documents.jsonl",
+        "sha256": "e163732e8b75f1aa9331d9494f69cf5dcf3b6aba5dc787cafa0dd9e306c279d9"
+      },
+      {
+        "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskA-Text2Onto\\engineering\\train\\terms2docs.json",
+        "sha256": "50b06f5ce725f30ab3596954f7f6d6c0b666dc793bbb305385d6e81a831989ad"
+      },
+      {
+        "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskA-Text2Onto\\scholarly\\train\\documents.jsonl",
+        "sha256": "248fbc13a1cbff9d3c629e12066c68a389b4b8df1e9b7ccfaafb491d02e06ea5"
+      },
+      {
+        "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskA-Text2Onto\\scholarly\\train\\terms2docs.json",
+        "sha256": "0d0ab5d20e76fdec2f4eee92c37a259ca97fadf1cdbe2b67b486137107dda59a"
+      },
+      {
+        "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskD-NonTaxonomicRE\\FoodOn\\train\\foodon_train_re_pairs.json",
+        "sha256": "89399ad4a29dc83a0321fbce95b19446ba734ca8cad6d8dc16f77d936e8b03c0"
+      },
+      {
+        "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskD-NonTaxonomicRE\\GO\\train\\go_train_re_pairs.json",
+        "sha256": "39e2a6e5ec8914d01401a09b286574d51a65d01aac688d01a36f29a3b0b5c68b"
+      },
+      {
+        "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskD-NonTaxonomicRE\\SWEET\\train\\sweet_train_re_pairs.json",
+        "sha256": "6f2915c531f85a197b7552f7ffbeb76ddb65e320aa59cf491f665c05792aa711"
+      }
+    ],
+    "relation_pairs_total": 13416,
+    "endpoint_linked_occurrences": 29,
+    "endpoint_linked_documents": 19,
+    "blocked_documents": 6,
+    "blocked_reason_counts": {
+      "contains_2026_train_gold_triple": 6
+    },
+    "eligible_documents": 13,
+    "eligible_unique_gold_triples": 11,
+    "selected_documents": 10,
+    "selected_unique_gold_triples": 11,
+    "selected_predicate_counts": {
+      "disjoint with": 8,
+      "equivalent class": 3
+    },
+    "gold_triple_overlap_with_2026_train": 0,
+    "duplicate_gold_across_selected_documents": false,
+    "selection_seed": 20260923
+  },
+  "samples": [
+    {
+      "sample_index": 0,
+      "sample_id_sha256": "9c2600a16a2a784786cbf253f0a01cdad4006826e3c8a1940ab1e388506b1be4",
+      "source_year": 2025,
+      "text_domain": "ecology",
+      "source_document_id_sha256": "3f1dae2d4986ff1aca92209be7931dfd7b6dfe1c655471c8dac17588577a7e76",
+      "relation_domains": [
+        "SWEET"
+      ],
+      "visible_gold": 1,
+      "visible_gold_predicates": [
+        "equivalent class"
+      ],
+      "selection_purpose": "cross_year_relation_calibration",
+      "input_fields": [
+        "context"
+      ],
+      "protected_gold_field": "primitive-ontology-triples",
+      "context_chars_sent": 311,
+      "prompt": {
+        "sha256": "d4ab4b06ee9dc1cf4f644d3454832be5e14ef07a65913b629f29c52e02f3d1a5",
+        "chars": 2259,
+        "generation_cache_hit": true,
+        "exact_cache_hit": true
+      }
+    },
+    {
+      "sample_index": 1,
+      "sample_id_sha256": "af9931be484608e521ca2bbb4a3454bffa8acbb25f1aff5e615b0f95fe73ab0b",
+      "source_year": 2025,
+      "text_domain": "ecology",
+      "source_document_id_sha256": "c6b4238504ccef81c011c3aa77ef9cfd9714897a01f12c8565f7161ac556f427",
+      "relation_domains": [
+        "SWEET"
+      ],
+      "visible_gold": 1,
+      "visible_gold_predicates": [
+        "disjoint with"
+      ],
+      "selection_purpose": "cross_year_relation_calibration",
+      "input_fields": [
+        "context"
+      ],
+      "protected_gold_field": "primitive-ontology-triples",
+      "context_chars_sent": 1364,
+      "prompt": {
+        "sha256": "4001d88f35e78b0b9fcf58a1dc035240279944b4728a6be066b754bfb50078ab",
+        "chars": 3312,
+        "generation_cache_hit": true,
+        "exact_cache_hit": true
+      }
+    },
+    {
+      "sample_index": 2,
+      "sample_id_sha256": "171e31b0a42623af6ccf1c7ac90b0cbde61ac60f616f4d5a59dfbee11f5d4241",
+      "source_year": 2025,
+      "text_domain": "ecology",
+      "source_document_id_sha256": "a79bf5bb32d90ea7e7e3970151b05c8d9e87679fce0f1e885777d6415dc9ff83",
+      "relation_domains": [
+        "GO"
+      ],
+      "visible_gold": 1,
+      "visible_gold_predicates": [
+        "disjoint with"
+      ],
+      "selection_purpose": "cross_year_relation_calibration",
+      "input_fields": [
+        "context"
+      ],
+      "protected_gold_field": "primitive-ontology-triples",
+      "context_chars_sent": 642,
+      "prompt": {
+        "sha256": "2c86f14724b30a3550849af64fecd69c5f74daccc1fe2843e698b6e7be448876",
+        "chars": 2590,
+        "generation_cache_hit": true,
+        "exact_cache_hit": true
+      }
+    },
+    {
+      "sample_index": 3,
+      "sample_id_sha256": "91dd658f78bf9eb1169d5741da4e7dad028f22b68e6d9b68847937cb78f2d2c2",
+      "source_year": 2025,
+      "text_domain": "ecology",
+      "source_document_id_sha256": "096b840b0976e1cd7369dd1fbe16766b028067c5cf324d98f9aad16ce3320a64",
+      "relation_domains": [
+        "GO"
+      ],
+      "visible_gold": 1,
+      "visible_gold_predicates": [
+        "disjoint with"
+      ],
+      "selection_purpose": "cross_year_relation_calibration",
+      "input_fields": [
+        "context"
+      ],
+      "protected_gold_field": "primitive-ontology-triples",
+      "context_chars_sent": 2167,
+      "prompt": {
+        "sha256": "36ce36c88832abd364334d1d283323bd8954a8cdc9dabebb91572713ac7404fb",
+        "chars": 4115,
+        "generation_cache_hit": true,
+        "exact_cache_hit": true
+      }
+    },
+    {
+      "sample_index": 4,
+      "sample_id_sha256": "624e1f7cce836cb18e1ceee1ac217beeac920afd95acb16238b50bcf5efe4628",
+      "source_year": 2025,
+      "text_domain": "ecology",
+      "source_document_id_sha256": "bef67cc6db963b0815d14e621b5415cb423bcff8f37ec221580c293574b9af3a",
+      "relation_domains": [
+        "SWEET"
+      ],
+      "visible_gold": 1,
+      "visible_gold_predicates": [
+        "equivalent class"
+      ],
+      "selection_purpose": "cross_year_relation_calibration",
+      "input_fields": [
+        "context"
+      ],
+      "protected_gold_field": "primitive-ontology-triples",
+      "context_chars_sent": 637,
+      "prompt": {
+        "sha256": "c3903053a9639d81366353ad47a2597f31d865b8c795e49abb3e393e19b23bec",
+        "chars": 2585,
+        "generation_cache_hit": true,
+        "exact_cache_hit": true
+      }
+    },
+    {
+      "sample_index": 5,
+      "sample_id_sha256": "40a8000078e29fd1339abb6de69cd41b01737b792d5a83d53c1148349ab54e3a",
+      "source_year": 2025,
+      "text_domain": "ecology",
+      "source_document_id_sha256": "06a520a5e92a1b4324db8a2b0d9c89d5434515e122d1314d21e3e00d8d694785",
+      "relation_domains": [
+        "SWEET"
+      ],
+      "visible_gold": 1,
+      "visible_gold_predicates": [
+        "disjoint with"
+      ],
+      "selection_purpose": "cross_year_relation_calibration",
+      "input_fields": [
+        "context"
+      ],
+      "protected_gold_field": "primitive-ontology-triples",
+      "context_chars_sent": 930,
+      "prompt": {
+        "sha256": "52766db2c7290c666566f9c3c54b85e14b44fa93b8d8f6177fc7e9e4029a97b3",
+        "chars": 2878,
+        "generation_cache_hit": true,
+        "exact_cache_hit": true
+      }
+    },
+    {
+      "sample_index": 6,
+      "sample_id_sha256": "8784b7fab4dc522dbef3e31992afdded719ff229fc9dab2667ad73da69baa7aa",
+      "source_year": 2025,
+      "text_domain": "ecology",
+      "source_document_id_sha256": "8a30a23c69c545b5356c7d8f72363bf17c6985cdf3b71f3591a91e492faf0bf3",
+      "relation_domains": [
+        "GO"
+      ],
+      "visible_gold": 1,
+      "visible_gold_predicates": [
+        "disjoint with"
+      ],
+      "selection_purpose": "cross_year_relation_calibration",
+      "input_fields": [
+        "context"
+      ],
+      "protected_gold_field": "primitive-ontology-triples",
+      "context_chars_sent": 1739,
+      "prompt": {
+        "sha256": "1885eff38c0675c2ed5d3b9f46e4aa9022b1c4b456fc4f7f66e2896ae5ca807a",
+        "chars": 3687,
+        "generation_cache_hit": true,
+        "exact_cache_hit": true
+      }
+    },
+    {
+      "sample_index": 7,
+      "sample_id_sha256": "9b5d17a354ef74ecc2849ca3ea456de8d28e4296e71e33b5e877ec981a728df1",
+      "source_year": 2025,
+      "text_domain": "ecology",
+      "source_document_id_sha256": "0e03a01244e7418f23a10e069f6a41cc6f9d1d0ed962629358c69c7a8c14d7a8",
+      "relation_domains": [
+        "SWEET"
+      ],
+      "visible_gold": 1,
+      "visible_gold_predicates": [
+        "equivalent class"
+      ],
+      "selection_purpose": "cross_year_relation_calibration",
+      "input_fields": [
+        "context"
+      ],
+      "protected_gold_field": "primitive-ontology-triples",
+      "context_chars_sent": 1041,
+      "prompt": {
+        "sha256": "555bbbe343841fcdd05093c87ca1b4d4c8949297860a1e188c15ab86fabe3f3c",
+        "chars": 2989,
+        "generation_cache_hit": true,
+        "exact_cache_hit": true
+      }
+    },
+    {
+      "sample_index": 8,
+      "sample_id_sha256": "49795d9b18ebfc2ac1b7a1ccffeb253b5ca50bc2b449dd46831b4fd3f9aa2951",
+      "source_year": 2025,
+      "text_domain": "ecology",
+      "source_document_id_sha256": "abc195231e7d761af03c0c69ec279b892fa3caca88d8f342924527953adeb8b8",
+      "relation_domains": [
+        "GO"
+      ],
+      "visible_gold": 2,
+      "visible_gold_predicates": [
+        "disjoint with"
+      ],
+      "selection_purpose": "cross_year_relation_calibration",
+      "input_fields": [
+        "context"
+      ],
+      "protected_gold_field": "primitive-ontology-triples",
+      "context_chars_sent": 750,
+      "prompt": {
+        "sha256": "fd94a60268985274d832c107000b94c6bf75a613b3bcfcc765c532be54d05c59",
+        "chars": 2698,
+        "generation_cache_hit": true,
+        "exact_cache_hit": true
+      }
+    },
+    {
+      "sample_index": 9,
+      "sample_id_sha256": "47b38acd0da0a54f6d4e16c0986170458b34676422edf14224b5ca4f8d119842",
+      "source_year": 2025,
+      "text_domain": "ecology",
+      "source_document_id_sha256": "580aa7cb4631dc9a4640e392e096470e3be588875681e5e667060bdc715820e2",
+      "relation_domains": [
+        "SWEET"
+      ],
+      "visible_gold": 1,
+      "visible_gold_predicates": [
+        "disjoint with"
+      ],
+      "selection_purpose": "cross_year_relation_calibration",
+      "input_fields": [
+        "context"
+      ],
+      "protected_gold_field": "primitive-ontology-triples",
+      "context_chars_sent": 827,
+      "prompt": {
+        "sha256": "1b5a8448c2ccb73d66d4f2aaca6eb32f917f5df01d94709a24b5557871adc4d9",
+        "chars": 2775,
+        "generation_cache_hit": true,
+        "exact_cache_hit": true
+      }
+    }
+  ]
+}

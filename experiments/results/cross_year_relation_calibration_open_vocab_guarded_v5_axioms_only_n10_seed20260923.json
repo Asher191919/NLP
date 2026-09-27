@@ -1,0 +1,1746 @@
+{
+  "meta": {
+    "protocol": "llms4ol2025_cross_year_relation_calibration_v1",
+    "model": "dots3-note-prev",
+    "system": "open_vocab_guarded_v5_axioms_only",
+    "seed": 20260923,
+    "selection_uses_gold_locally": true,
+    "selection_is_calibration_only_not_unbiased_evaluation": true,
+    "gold_visible_to_model": false,
+    "pool": {
+      "source_repository_license": "MIT",
+      "underlying_ontology_license_reverified": false,
+      "source_files": [
+        {
+          "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskA-Text2Onto\\ecology\\train\\documents.jsonl",
+          "sha256": "570e255e910f0314db02b7c89d7216bc11ddf796db1f5391e850787304c829d1"
+        },
+        {
+          "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskA-Text2Onto\\ecology\\train\\terms2docs.json",
+          "sha256": "6dfb15d7b3955d151c60bbe7922cfa17a5255f8b0cfc4d434fcb8fed7dbce18c"
+        },
+        {
+          "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskA-Text2Onto\\engineering\\train\\documents.jsonl",
+          "sha256": "e163732e8b75f1aa9331d9494f69cf5dcf3b6aba5dc787cafa0dd9e306c279d9"
+        },
+        {
+          "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskA-Text2Onto\\engineering\\train\\terms2docs.json",
+          "sha256": "50b06f5ce725f30ab3596954f7f6d6c0b666dc793bbb305385d6e81a831989ad"
+        },
+        {
+          "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskA-Text2Onto\\scholarly\\train\\documents.jsonl",
+          "sha256": "248fbc13a1cbff9d3c629e12066c68a389b4b8df1e9b7ccfaafb491d02e06ea5"
+        },
+        {
+          "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskA-Text2Onto\\scholarly\\train\\terms2docs.json",
+          "sha256": "0d0ab5d20e76fdec2f4eee92c37a259ca97fadf1cdbe2b67b486137107dda59a"
+        },
+        {
+          "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskD-NonTaxonomicRE\\FoodOn\\train\\foodon_train_re_pairs.json",
+          "sha256": "89399ad4a29dc83a0321fbce95b19446ba734ca8cad6d8dc16f77d936e8b03c0"
+        },
+        {
+          "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskD-NonTaxonomicRE\\GO\\train\\go_train_re_pairs.json",
+          "sha256": "39e2a6e5ec8914d01401a09b286574d51a65d01aac688d01a36f29a3b0b5c68b"
+        },
+        {
+          "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskD-NonTaxonomicRE\\SWEET\\train\\sweet_train_re_pairs.json",
+          "sha256": "6f2915c531f85a197b7552f7ffbeb76ddb65e320aa59cf491f665c05792aa711"
+        }
+      ],
+      "relation_pairs_total": 13416,
+      "endpoint_linked_occurrences": 29,
+      "endpoint_linked_documents": 19,
+      "blocked_documents": 6,
+      "blocked_reason_counts": {
+        "contains_2026_train_gold_triple": 6
+      },
+      "eligible_documents": 13,
+      "eligible_unique_gold_triples": 11,
+      "selected_documents": 10,
+      "selected_unique_gold_triples": 11,
+      "selected_predicate_counts": {
+        "disjoint with": 8,
+        "equivalent class": 3
+      },
+      "gold_triple_overlap_with_2026_train": 0,
+      "duplicate_gold_across_selected_documents": false,
+      "selection_seed": 20260923
+    },
+    "attempt_ledger": {
+      "planned_units": 10,
+      "successful_units": 10,
+      "failed_final_units": 0,
+      "prior_failed_connection_attempts": 0,
+      "unit_attempts_including_prior_failures": 10,
+      "successful_runner_attempts_including_retries": 10,
+      "low_level_attempts_including_prior_failures": 10
+    }
+  },
+  "generation": {
+    "meta": {
+      "challenge": "LLMs4OL 2026",
+      "protocol": "llms4ol2025_cross_year_relation_calibration_v1",
+      "input_policy": "context_only",
+      "gold_visible_to_model": false,
+      "task": "a",
+      "task_name": "Flagship",
+      "system": "open_vocab_guarded_v5_axioms_only",
+      "backend": "openai",
+      "model": "dots3-note-prev",
+      "offset": 0,
+      "limit": 10,
+      "workers": 2,
+      "max_context_chars": 6000,
+      "confidence_threshold": 0.85,
+      "implicit_confidence_threshold": 0.95,
+      "calibrated_confidence_threshold": 0.5,
+      "allowed_nontax_predicates": [
+        "disjoint with",
+        "equivalent class"
+      ],
+      "max_nontax": 8,
+      "max_implicit_gap_chars": 600,
+      "calibration_file": null,
+      "calibration_status": "not_configured",
+      "max_completion_tokens": 16384,
+      "metric": "llms4ol2026_graph_similarity_exact",
+      "elapsed_sec": 0.017,
+      "elapsed_sec_scope": "current_process_including_cache_replay",
+      "selection": "cross_year_relation_calibration",
+      "pool": {
+        "source_repository_license": "MIT",
+        "underlying_ontology_license_reverified": false,
+        "source_files": [
+          {
+            "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskA-Text2Onto\\ecology\\train\\documents.jsonl",
+            "sha256": "570e255e910f0314db02b7c89d7216bc11ddf796db1f5391e850787304c829d1"
+          },
+          {
+            "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskA-Text2Onto\\ecology\\train\\terms2docs.json",
+            "sha256": "6dfb15d7b3955d151c60bbe7922cfa17a5255f8b0cfc4d434fcb8fed7dbce18c"
+          },
+          {
+            "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskA-Text2Onto\\engineering\\train\\documents.jsonl",
+            "sha256": "e163732e8b75f1aa9331d9494f69cf5dcf3b6aba5dc787cafa0dd9e306c279d9"
+          },
+          {
+            "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskA-Text2Onto\\engineering\\train\\terms2docs.json",
+            "sha256": "50b06f5ce725f30ab3596954f7f6d6c0b666dc793bbb305385d6e81a831989ad"
+          },
+          {
+            "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskA-Text2Onto\\scholarly\\train\\documents.jsonl",
+            "sha256": "248fbc13a1cbff9d3c629e12066c68a389b4b8df1e9b7ccfaafb491d02e06ea5"
+          },
+          {
+            "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskA-Text2Onto\\scholarly\\train\\terms2docs.json",
+            "sha256": "0d0ab5d20e76fdec2f4eee92c37a259ca97fadf1cdbe2b67b486137107dda59a"
+          },
+          {
+            "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskD-NonTaxonomicRE\\FoodOn\\train\\foodon_train_re_pairs.json",
+            "sha256": "89399ad4a29dc83a0321fbce95b19446ba734ca8cad6d8dc16f77d936e8b03c0"
+          },
+          {
+            "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskD-NonTaxonomicRE\\GO\\train\\go_train_re_pairs.json",
+            "sha256": "39e2a6e5ec8914d01401a09b286574d51a65d01aac688d01a36f29a3b0b5c68b"
+          },
+          {
+            "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2025\\TaskD-NonTaxonomicRE\\SWEET\\train\\sweet_train_re_pairs.json",
+            "sha256": "6f2915c531f85a197b7552f7ffbeb76ddb65e320aa59cf491f665c05792aa711"
+          }
+        ],
+        "relation_pairs_total": 13416,
+        "endpoint_linked_occurrences": 29,
+        "endpoint_linked_documents": 19,
+        "blocked_documents": 6,
+        "blocked_reason_counts": {
+          "contains_2026_train_gold_triple": 6
+        },
+        "eligible_documents": 13,
+        "eligible_unique_gold_triples": 11,
+        "selected_documents": 10,
+        "selected_unique_gold_triples": 11,
+        "selected_predicate_counts": {
+          "disjoint with": 8,
+          "equivalent class": 3
+        },
+        "gold_triple_overlap_with_2026_train": 0,
+        "duplicate_gold_across_selected_documents": false,
+        "selection_seed": 20260923
+      }
+    },
+    "summary": {
+      "target_n": 10,
+      "n_success": 10,
+      "n_failed": 0,
+      "complete": true,
+      "term_typing_f1_micro": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "taxonomy_f1_micro": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "nontax_f1_micro": {
+        "precision": 0.125,
+        "recall": 0.09090909090909091,
+        "f1": 0.10526315789473685,
+        "tp": 1,
+        "fp": 7,
+        "fn": 10
+      },
+      "nontax_nonself_f1_micro": {
+        "precision": 0.125,
+        "recall": 0.09090909090909091,
+        "f1": 0.10526315789473685,
+        "tp": 1,
+        "fp": 7,
+        "fn": 10
+      },
+      "official_graph_similarity_avg": 0.012037037037037037,
+      "composite_typing_tax_gs": 0.004012345679012346,
+      "nontax_pred_total": 8,
+      "nontax_gold_total": 11,
+      "nontax_nonself_pred_total": 8,
+      "nontax_nonself_gold_total": 11,
+      "successful_latency_sec": {
+        "min": 6.108,
+        "median": 14.38,
+        "p95": 55.377,
+        "max": 55.377,
+        "sum": 189.543
+      },
+      "successful_runner_attempts_total": 10,
+      "successful_samples_with_retry": 0,
+      "guard": {
+        "samples": 10,
+        "raw_nontax": 10,
+        "accepted_nontax": 8,
+        "rejected_nontax": 2,
+        "rejection_reason_counts": {
+          "evidence_missing_endpoints": 2
+        }
+      }
+    },
+    "samples": [
+      {
+        "sample_index": 0,
+        "sample_id": "llms4ol2025:ecology:1042_0",
+        "status": "ok",
+        "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\00000_9c2600a16a.json",
+        "attempts": 1,
+        "latency_sec": 7.707,
+        "metrics": {
+          "typing": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "taxonomy": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "nontax": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "nontax_nonself": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "official_graph_similarity": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0,
+            "metric_id": "llms4ol2026_graph_similarity_exact",
+            "external_reportable": true,
+            "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+          },
+          "gold_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 1
+          },
+          "pred_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 0
+          }
+        },
+        "guard_diagnostics": {
+          "canonicalization_version": "relation_canonicalization_v2",
+          "postprocess_version": "guarded_v2_postprocess_v3",
+          "calibration_status": "not_configured",
+          "calibration_applied": false,
+          "confidence_threshold": 0.85,
+          "implicit_confidence_threshold": 0.95,
+          "calibrated_confidence_threshold": 0.5,
+          "allowed_nontax_predicates": [
+            "disjoint with",
+            "equivalent class"
+          ],
+          "max_implicit_gap_chars": 600,
+          "max_nontax": 8,
+          "raw_candidates": 0,
+          "canonicalized_candidates": 0,
+          "accepted_core": 0,
+          "raw_nontax": 0,
+          "accepted_nontax": 0,
+          "rejected_nontax": 0,
+          "rejection_reason_counts": {},
+          "accepted_nontax_candidates": [],
+          "rejected_nontax_candidates": []
+        },
+        "source_year": 2025,
+        "text_domain": "ecology",
+        "source_document_id_sha256": "3f1dae2d4986ff1aca92209be7931dfd7b6dfe1c655471c8dac17588577a7e76",
+        "relation_domains": [
+          "SWEET"
+        ],
+        "visible_gold": 1,
+        "visible_gold_predicates": [
+          "equivalent class"
+        ],
+        "selection_purpose": "cross_year_relation_calibration"
+      },
+      {
+        "sample_index": 1,
+        "sample_id": "llms4ol2025:ecology:10_5",
+        "status": "ok",
+        "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\00001_af9931be48.json",
+        "attempts": 1,
+        "latency_sec": 22.976,
+        "metrics": {
+          "typing": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "taxonomy": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "nontax": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 1
+          },
+          "nontax_nonself": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 1
+          },
+          "official_graph_similarity": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0,
+            "metric_id": "llms4ol2026_graph_similarity_exact",
+            "external_reportable": true,
+            "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+          },
+          "gold_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 1
+          },
+          "pred_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 1
+          }
+        },
+        "guard_diagnostics": {
+          "canonicalization_version": "relation_canonicalization_v2",
+          "postprocess_version": "guarded_v2_postprocess_v3",
+          "calibration_status": "not_configured",
+          "calibration_applied": false,
+          "confidence_threshold": 0.85,
+          "implicit_confidence_threshold": 0.95,
+          "calibrated_confidence_threshold": 0.5,
+          "allowed_nontax_predicates": [
+            "disjoint with",
+            "equivalent class"
+          ],
+          "max_implicit_gap_chars": 600,
+          "max_nontax": 8,
+          "raw_candidates": 2,
+          "canonicalized_candidates": 0,
+          "accepted_core": 0,
+          "raw_nontax": 2,
+          "accepted_nontax": 1,
+          "rejected_nontax": 1,
+          "rejection_reason_counts": {
+            "evidence_missing_endpoints": 1
+          },
+          "accepted_nontax_candidates": [
+            {
+              "triple": [
+                "marine ecosystems",
+                "disjoint with",
+                "freshwater ecosystems"
+              ],
+              "raw_confidence": 0.95,
+              "calibrated_confidence": null,
+              "ranking_confidence": 0.95,
+              "evidence": [
+                "marine ecosystems and freshwater ecosystems"
+              ],
+              "evidence_mode": "explicit",
+              "evidence_gap_chars": null,
+              "canonicalization": {
+                "version": "relation_canonicalization_v2",
+                "changed": false,
+                "reversed": false,
+                "subject_from": null,
+                "predicate_from": null,
+                "object_from": null,
+                "subject_method": "context_exact",
+                "object_method": "context_exact"
+              },
+              "position": 1
+            }
+          ],
+          "rejected_nontax_candidates": [
+            {
+              "triple": [
+                "aquatic ecosystems",
+                "disjoint with",
+                "terrestrial ecosystems"
+              ],
+              "raw_confidence": 0.95,
+              "calibrated_confidence": null,
+              "ranking_confidence": 0.95,
+              "evidence": [
+                "aquatic and terrestrial ecosystems"
+              ],
+              "evidence_mode": "explicit",
+              "evidence_gap_chars": null,
+              "canonicalization": {
+                "version": "relation_canonicalization_v2",
+                "changed": false,
+                "reversed": false,
+                "subject_from": null,
+                "predicate_from": null,
+                "object_from": null,
+                "subject_method": "context_exact",
+                "object_method": "context_exact"
+              },
+              "position": 0,
+              "reasons": [
+                "evidence_missing_endpoints"
+              ]
+            }
+          ]
+        },
+        "source_year": 2025,
+        "text_domain": "ecology",
+        "source_document_id_sha256": "c6b4238504ccef81c011c3aa77ef9cfd9714897a01f12c8565f7161ac556f427",
+        "relation_domains": [
+          "SWEET"
+        ],
+        "visible_gold": 1,
+        "visible_gold_predicates": [
+          "disjoint with"
+        ],
+        "selection_purpose": "cross_year_relation_calibration"
+      },
+      {
+        "sample_index": 2,
+        "sample_id": "llms4ol2025:ecology:1282_0",
+        "status": "ok",
+        "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\00002_171e31b0a4.json",
+        "attempts": 1,
+        "latency_sec": 14.929,
+        "metrics": {
+          "typing": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "taxonomy": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "nontax": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "nontax_nonself": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "official_graph_similarity": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0,
+            "metric_id": "llms4ol2026_graph_similarity_exact",
+            "external_reportable": true,
+            "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+          },
+          "gold_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 1
+          },
+          "pred_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 0
+          }
+        },
+        "guard_diagnostics": {
+          "canonicalization_version": "relation_canonicalization_v2",
+          "postprocess_version": "guarded_v2_postprocess_v3",
+          "calibration_status": "not_configured",
+          "calibration_applied": false,
+          "confidence_threshold": 0.85,
+          "implicit_confidence_threshold": 0.95,
+          "calibrated_confidence_threshold": 0.5,
+          "allowed_nontax_predicates": [
+            "disjoint with",
+            "equivalent class"
+          ],
+          "max_implicit_gap_chars": 600,
+          "max_nontax": 8,
+          "raw_candidates": 0,
+          "canonicalized_candidates": 0,
+          "accepted_core": 0,
+          "raw_nontax": 0,
+          "accepted_nontax": 0,
+          "rejected_nontax": 0,
+          "rejection_reason_counts": {},
+          "accepted_nontax_candidates": [],
+          "rejected_nontax_candidates": []
+        },
+        "source_year": 2025,
+        "text_domain": "ecology",
+        "source_document_id_sha256": "a79bf5bb32d90ea7e7e3970151b05c8d9e87679fce0f1e885777d6415dc9ff83",
+        "relation_domains": [
+          "GO"
+        ],
+        "visible_gold": 1,
+        "visible_gold_predicates": [
+          "disjoint with"
+        ],
+        "selection_purpose": "cross_year_relation_calibration"
+      },
+      {
+        "sample_index": 3,
+        "sample_id": "llms4ol2025:ecology:18_0",
+        "status": "ok",
+        "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\00003_91dd658f78.json",
+        "attempts": 1,
+        "latency_sec": 33.068,
+        "metrics": {
+          "typing": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "taxonomy": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "nontax": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 1
+          },
+          "nontax_nonself": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 1
+          },
+          "official_graph_similarity": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0,
+            "metric_id": "llms4ol2026_graph_similarity_exact",
+            "external_reportable": true,
+            "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+          },
+          "gold_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 1
+          },
+          "pred_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 1
+          }
+        },
+        "guard_diagnostics": {
+          "canonicalization_version": "relation_canonicalization_v2",
+          "postprocess_version": "guarded_v2_postprocess_v3",
+          "calibration_status": "not_configured",
+          "calibration_applied": false,
+          "confidence_threshold": 0.85,
+          "implicit_confidence_threshold": 0.95,
+          "calibrated_confidence_threshold": 0.5,
+          "allowed_nontax_predicates": [
+            "disjoint with",
+            "equivalent class"
+          ],
+          "max_implicit_gap_chars": 600,
+          "max_nontax": 8,
+          "raw_candidates": 2,
+          "canonicalized_candidates": 0,
+          "accepted_core": 0,
+          "raw_nontax": 2,
+          "accepted_nontax": 1,
+          "rejected_nontax": 1,
+          "rejection_reason_counts": {
+            "evidence_missing_endpoints": 1
+          },
+          "accepted_nontax_candidates": [
+            {
+              "triple": [
+                "determinate root nodule",
+                "disjoint with",
+                "indeterminate root nodule"
+              ],
+              "raw_confidence": 0.95,
+              "calibrated_confidence": null,
+              "ranking_confidence": 0.95,
+              "evidence": [
+                "root nodules can be further divided into determinate and indeterminate root nodules"
+              ],
+              "evidence_mode": "explicit",
+              "evidence_gap_chars": null,
+              "canonicalization": {
+                "version": "relation_canonicalization_v2",
+                "changed": false,
+                "reversed": false,
+                "subject_from": null,
+                "predicate_from": null,
+                "object_from": null,
+                "subject_method": "unchanged",
+                "object_method": "unchanged"
+              },
+              "position": 1
+            }
+          ],
+          "rejected_nontax_candidates": [
+            {
+              "triple": [
+                "sense organ",
+                "equivalent class",
+                "uberon_0000970"
+              ],
+              "raw_confidence": 0.95,
+              "calibrated_confidence": null,
+              "ranking_confidence": 0.95,
+              "evidence": [
+                "other sensory organs (UBERON_0000970)"
+              ],
+              "evidence_mode": "explicit",
+              "evidence_gap_chars": null,
+              "canonicalization": {
+                "version": "relation_canonicalization_v2",
+                "changed": false,
+                "reversed": false,
+                "subject_from": null,
+                "predicate_from": null,
+                "object_from": null,
+                "subject_method": "context_exact",
+                "object_method": "context_exact"
+              },
+              "position": 0,
+              "reasons": [
+                "evidence_missing_endpoints"
+              ]
+            }
+          ]
+        },
+        "source_year": 2025,
+        "text_domain": "ecology",
+        "source_document_id_sha256": "096b840b0976e1cd7369dd1fbe16766b028067c5cf324d98f9aad16ce3320a64",
+        "relation_domains": [
+          "GO"
+        ],
+        "visible_gold": 1,
+        "visible_gold_predicates": [
+          "disjoint with"
+        ],
+        "selection_purpose": "cross_year_relation_calibration"
+      },
+      {
+        "sample_index": 4,
+        "sample_id": "llms4ol2025:ecology:1984_0",
+        "status": "ok",
+        "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\00004_624e1f7cce.json",
+        "attempts": 1,
+        "latency_sec": 7.362,
+        "metrics": {
+          "typing": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "taxonomy": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "nontax": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "nontax_nonself": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "official_graph_similarity": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0,
+            "metric_id": "llms4ol2026_graph_similarity_exact",
+            "external_reportable": true,
+            "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+          },
+          "gold_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 1
+          },
+          "pred_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 0
+          }
+        },
+        "guard_diagnostics": {
+          "canonicalization_version": "relation_canonicalization_v2",
+          "postprocess_version": "guarded_v2_postprocess_v3",
+          "calibration_status": "not_configured",
+          "calibration_applied": false,
+          "confidence_threshold": 0.85,
+          "implicit_confidence_threshold": 0.95,
+          "calibrated_confidence_threshold": 0.5,
+          "allowed_nontax_predicates": [
+            "disjoint with",
+            "equivalent class"
+          ],
+          "max_implicit_gap_chars": 600,
+          "max_nontax": 8,
+          "raw_candidates": 0,
+          "canonicalized_candidates": 0,
+          "accepted_core": 0,
+          "raw_nontax": 0,
+          "accepted_nontax": 0,
+          "rejected_nontax": 0,
+          "rejection_reason_counts": {},
+          "accepted_nontax_candidates": [],
+          "rejected_nontax_candidates": []
+        },
+        "source_year": 2025,
+        "text_domain": "ecology",
+        "source_document_id_sha256": "bef67cc6db963b0815d14e621b5415cb423bcff8f37ec221580c293574b9af3a",
+        "relation_domains": [
+          "SWEET"
+        ],
+        "visible_gold": 1,
+        "visible_gold_predicates": [
+          "equivalent class"
+        ],
+        "selection_purpose": "cross_year_relation_calibration"
+      },
+      {
+        "sample_index": 5,
+        "sample_id": "llms4ol2025:ecology:20_0",
+        "status": "ok",
+        "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\00005_40a8000078.json",
+        "attempts": 1,
+        "latency_sec": 18.747,
+        "metrics": {
+          "typing": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "taxonomy": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "nontax": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "nontax_nonself": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "official_graph_similarity": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0,
+            "metric_id": "llms4ol2026_graph_similarity_exact",
+            "external_reportable": true,
+            "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+          },
+          "gold_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 1
+          },
+          "pred_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 0
+          }
+        },
+        "guard_diagnostics": {
+          "canonicalization_version": "relation_canonicalization_v2",
+          "postprocess_version": "guarded_v2_postprocess_v3",
+          "calibration_status": "not_configured",
+          "calibration_applied": false,
+          "confidence_threshold": 0.85,
+          "implicit_confidence_threshold": 0.95,
+          "calibrated_confidence_threshold": 0.5,
+          "allowed_nontax_predicates": [
+            "disjoint with",
+            "equivalent class"
+          ],
+          "max_implicit_gap_chars": 600,
+          "max_nontax": 8,
+          "raw_candidates": 0,
+          "canonicalized_candidates": 0,
+          "accepted_core": 0,
+          "raw_nontax": 0,
+          "accepted_nontax": 0,
+          "rejected_nontax": 0,
+          "rejection_reason_counts": {},
+          "accepted_nontax_candidates": [],
+          "rejected_nontax_candidates": []
+        },
+        "source_year": 2025,
+        "text_domain": "ecology",
+        "source_document_id_sha256": "06a520a5e92a1b4324db8a2b0d9c89d5434515e122d1314d21e3e00d8d694785",
+        "relation_domains": [
+          "SWEET"
+        ],
+        "visible_gold": 1,
+        "visible_gold_predicates": [
+          "disjoint with"
+        ],
+        "selection_purpose": "cross_year_relation_calibration"
+      },
+      {
+        "sample_index": 6,
+        "sample_id": "llms4ol2025:ecology:226_0",
+        "status": "ok",
+        "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\00006_8784b7fab4.json",
+        "attempts": 1,
+        "latency_sec": 9.439,
+        "metrics": {
+          "typing": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "taxonomy": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "nontax": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "nontax_nonself": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "official_graph_similarity": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0,
+            "metric_id": "llms4ol2026_graph_similarity_exact",
+            "external_reportable": true,
+            "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+          },
+          "gold_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 1
+          },
+          "pred_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 0
+          }
+        },
+        "guard_diagnostics": {
+          "canonicalization_version": "relation_canonicalization_v2",
+          "postprocess_version": "guarded_v2_postprocess_v3",
+          "calibration_status": "not_configured",
+          "calibration_applied": false,
+          "confidence_threshold": 0.85,
+          "implicit_confidence_threshold": 0.95,
+          "calibrated_confidence_threshold": 0.5,
+          "allowed_nontax_predicates": [
+            "disjoint with",
+            "equivalent class"
+          ],
+          "max_implicit_gap_chars": 600,
+          "max_nontax": 8,
+          "raw_candidates": 0,
+          "canonicalized_candidates": 0,
+          "accepted_core": 0,
+          "raw_nontax": 0,
+          "accepted_nontax": 0,
+          "rejected_nontax": 0,
+          "rejection_reason_counts": {},
+          "accepted_nontax_candidates": [],
+          "rejected_nontax_candidates": []
+        },
+        "source_year": 2025,
+        "text_domain": "ecology",
+        "source_document_id_sha256": "8a30a23c69c545b5356c7d8f72363bf17c6985cdf3b71f3591a91e492faf0bf3",
+        "relation_domains": [
+          "GO"
+        ],
+        "visible_gold": 1,
+        "visible_gold_predicates": [
+          "disjoint with"
+        ],
+        "selection_purpose": "cross_year_relation_calibration"
+      },
+      {
+        "sample_index": 7,
+        "sample_id": "llms4ol2025:ecology:315_0",
+        "status": "ok",
+        "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\00007_9b5d17a354.json",
+        "attempts": 1,
+        "latency_sec": 6.108,
+        "metrics": {
+          "typing": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "taxonomy": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "nontax": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "nontax_nonself": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "official_graph_similarity": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0,
+            "metric_id": "llms4ol2026_graph_similarity_exact",
+            "external_reportable": true,
+            "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+          },
+          "gold_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 1
+          },
+          "pred_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 0
+          }
+        },
+        "guard_diagnostics": {
+          "canonicalization_version": "relation_canonicalization_v2",
+          "postprocess_version": "guarded_v2_postprocess_v3",
+          "calibration_status": "not_configured",
+          "calibration_applied": false,
+          "confidence_threshold": 0.85,
+          "implicit_confidence_threshold": 0.95,
+          "calibrated_confidence_threshold": 0.5,
+          "allowed_nontax_predicates": [
+            "disjoint with",
+            "equivalent class"
+          ],
+          "max_implicit_gap_chars": 600,
+          "max_nontax": 8,
+          "raw_candidates": 0,
+          "canonicalized_candidates": 0,
+          "accepted_core": 0,
+          "raw_nontax": 0,
+          "accepted_nontax": 0,
+          "rejected_nontax": 0,
+          "rejection_reason_counts": {},
+          "accepted_nontax_candidates": [],
+          "rejected_nontax_candidates": []
+        },
+        "source_year": 2025,
+        "text_domain": "ecology",
+        "source_document_id_sha256": "0e03a01244e7418f23a10e069f6a41cc6f9d1d0ed962629358c69c7a8c14d7a8",
+        "relation_domains": [
+          "SWEET"
+        ],
+        "visible_gold": 1,
+        "visible_gold_predicates": [
+          "equivalent class"
+        ],
+        "selection_purpose": "cross_year_relation_calibration"
+      },
+      {
+        "sample_index": 8,
+        "sample_id": "llms4ol2025:ecology:730_0",
+        "status": "ok",
+        "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\00008_49795d9b18.json",
+        "attempts": 1,
+        "latency_sec": 55.377,
+        "metrics": {
+          "typing": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "taxonomy": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "nontax": {
+            "precision": 0.16666666666666666,
+            "recall": 0.5,
+            "f1": 0.25,
+            "tp": 1,
+            "fp": 5,
+            "fn": 1
+          },
+          "nontax_nonself": {
+            "precision": 0.16666666666666666,
+            "recall": 0.5,
+            "f1": 0.25,
+            "tp": 1,
+            "fp": 5,
+            "fn": 1
+          },
+          "official_graph_similarity": {
+            "edge_f1": 0.25,
+            "neighborhood_similarity": 0.1111111111111111,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.12037037037037036,
+            "metric_id": "llms4ol2026_graph_similarity_exact",
+            "external_reportable": true,
+            "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+          },
+          "gold_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 2
+          },
+          "pred_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 6
+          }
+        },
+        "guard_diagnostics": {
+          "canonicalization_version": "relation_canonicalization_v2",
+          "postprocess_version": "guarded_v2_postprocess_v3",
+          "calibration_status": "not_configured",
+          "calibration_applied": false,
+          "confidence_threshold": 0.85,
+          "implicit_confidence_threshold": 0.95,
+          "calibrated_confidence_threshold": 0.5,
+          "allowed_nontax_predicates": [
+            "disjoint with",
+            "equivalent class"
+          ],
+          "max_implicit_gap_chars": 600,
+          "max_nontax": 8,
+          "raw_candidates": 6,
+          "canonicalized_candidates": 0,
+          "accepted_core": 0,
+          "raw_nontax": 6,
+          "accepted_nontax": 6,
+          "rejected_nontax": 0,
+          "rejection_reason_counts": {},
+          "accepted_nontax_candidates": [
+            {
+              "triple": [
+                "viruses",
+                "disjoint with",
+                "bacteria"
+              ],
+              "raw_confidence": 0.95,
+              "calibrated_confidence": null,
+              "ranking_confidence": 0.95,
+              "evidence": [
+                "viruses, bacteria, archaea, and eukaryota"
+              ],
+              "evidence_mode": "explicit",
+              "evidence_gap_chars": null,
+              "canonicalization": {
+                "version": "relation_canonicalization_v2",
+                "changed": false,
+                "reversed": false,
+                "subject_from": null,
+                "predicate_from": null,
+                "object_from": null,
+                "subject_method": "context_exact",
+                "object_method": "context_exact"
+              },
+              "position": 0
+            },
+            {
+              "triple": [
+                "viruses",
+                "disjoint with",
+                "archaea"
+              ],
+              "raw_confidence": 0.95,
+              "calibrated_confidence": null,
+              "ranking_confidence": 0.95,
+              "evidence": [
+                "viruses, bacteria, archaea, and eukaryota"
+              ],
+              "evidence_mode": "explicit",
+              "evidence_gap_chars": null,
+              "canonicalization": {
+                "version": "relation_canonicalization_v2",
+                "changed": false,
+                "reversed": false,
+                "subject_from": null,
+                "predicate_from": null,
+                "object_from": null,
+                "subject_method": "context_exact",
+                "object_method": "context_exact"
+              },
+              "position": 1
+            },
+            {
+              "triple": [
+                "viruses",
+                "disjoint with",
+                "eukaryota"
+              ],
+              "raw_confidence": 0.95,
+              "calibrated_confidence": null,
+              "ranking_confidence": 0.95,
+              "evidence": [
+                "viruses, bacteria, archaea, and eukaryota"
+              ],
+              "evidence_mode": "explicit",
+              "evidence_gap_chars": null,
+              "canonicalization": {
+                "version": "relation_canonicalization_v2",
+                "changed": false,
+                "reversed": false,
+                "subject_from": null,
+                "predicate_from": null,
+                "object_from": null,
+                "subject_method": "context_exact",
+                "object_method": "context_exact"
+              },
+              "position": 2
+            },
+            {
+              "triple": [
+                "bacteria",
+                "disjoint with",
+                "archaea"
+              ],
+              "raw_confidence": 0.95,
+              "calibrated_confidence": null,
+              "ranking_confidence": 0.95,
+              "evidence": [
+                "viruses, bacteria, archaea, and eukaryota"
+              ],
+              "evidence_mode": "explicit",
+              "evidence_gap_chars": null,
+              "canonicalization": {
+                "version": "relation_canonicalization_v2",
+                "changed": false,
+                "reversed": false,
+                "subject_from": null,
+                "predicate_from": null,
+                "object_from": null,
+                "subject_method": "context_exact",
+                "object_method": "context_exact"
+              },
+              "position": 3
+            },
+            {
+              "triple": [
+                "bacteria",
+                "disjoint with",
+                "eukaryota"
+              ],
+              "raw_confidence": 0.95,
+              "calibrated_confidence": null,
+              "ranking_confidence": 0.95,
+              "evidence": [
+                "viruses, bacteria, archaea, and eukaryota"
+              ],
+              "evidence_mode": "explicit",
+              "evidence_gap_chars": null,
+              "canonicalization": {
+                "version": "relation_canonicalization_v2",
+                "changed": false,
+                "reversed": false,
+                "subject_from": null,
+                "predicate_from": null,
+                "object_from": null,
+                "subject_method": "context_exact",
+                "object_method": "context_exact"
+              },
+              "position": 4
+            },
+            {
+              "triple": [
+                "archaea",
+                "disjoint with",
+                "eukaryota"
+              ],
+              "raw_confidence": 0.95,
+              "calibrated_confidence": null,
+              "ranking_confidence": 0.95,
+              "evidence": [
+                "viruses, bacteria, archaea, and eukaryota"
+              ],
+              "evidence_mode": "explicit",
+              "evidence_gap_chars": null,
+              "canonicalization": {
+                "version": "relation_canonicalization_v2",
+                "changed": false,
+                "reversed": false,
+                "subject_from": null,
+                "predicate_from": null,
+                "object_from": null,
+                "subject_method": "context_exact",
+                "object_method": "context_exact"
+              },
+              "position": 5
+            }
+          ],
+          "rejected_nontax_candidates": []
+        },
+        "source_year": 2025,
+        "text_domain": "ecology",
+        "source_document_id_sha256": "abc195231e7d761af03c0c69ec279b892fa3caca88d8f342924527953adeb8b8",
+        "relation_domains": [
+          "GO"
+        ],
+        "visible_gold": 2,
+        "visible_gold_predicates": [
+          "disjoint with"
+        ],
+        "selection_purpose": "cross_year_relation_calibration"
+      },
+      {
+        "sample_index": 9,
+        "sample_id": "llms4ol2025:ecology:808_0",
+        "status": "ok",
+        "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\00009_47b38acd0d.json",
+        "attempts": 1,
+        "latency_sec": 13.83,
+        "metrics": {
+          "typing": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "taxonomy": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "nontax": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "nontax_nonself": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "official_graph_similarity": {
+            "edge_f1": 0.0,
+            "neighborhood_similarity": 0.0,
+            "taxonomy_similarity": 0.0,
+            "graph_similarity": 0.0,
+            "metric_id": "llms4ol2026_graph_similarity_exact",
+            "external_reportable": true,
+            "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+          },
+          "gold_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 1
+          },
+          "pred_counts": {
+            "typing": 0,
+            "taxonomy": 0,
+            "nontax": 0
+          }
+        },
+        "guard_diagnostics": {
+          "canonicalization_version": "relation_canonicalization_v2",
+          "postprocess_version": "guarded_v2_postprocess_v3",
+          "calibration_status": "not_configured",
+          "calibration_applied": false,
+          "confidence_threshold": 0.85,
+          "implicit_confidence_threshold": 0.95,
+          "calibrated_confidence_threshold": 0.5,
+          "allowed_nontax_predicates": [
+            "disjoint with",
+            "equivalent class"
+          ],
+          "max_implicit_gap_chars": 600,
+          "max_nontax": 8,
+          "raw_candidates": 0,
+          "canonicalized_candidates": 0,
+          "accepted_core": 0,
+          "raw_nontax": 0,
+          "accepted_nontax": 0,
+          "rejected_nontax": 0,
+          "rejection_reason_counts": {},
+          "accepted_nontax_candidates": [],
+          "rejected_nontax_candidates": []
+        },
+        "source_year": 2025,
+        "text_domain": "ecology",
+        "source_document_id_sha256": "580aa7cb4631dc9a4640e392e096470e3be588875681e5e667060bdc715820e2",
+        "relation_domains": [
+          "SWEET"
+        ],
+        "visible_gold": 1,
+        "visible_gold_predicates": [
+          "disjoint with"
+        ],
+        "selection_purpose": "cross_year_relation_calibration"
+      }
+    ]
+  },
+  "offline_report": {
+    "candidate_summary": {
+      "all": {
+        "n": 10,
+        "raw_true_positives": 1,
+        "canonical_true_positives": 1,
+        "symmetric_semantic_true_positives": 1,
+        "recovered_by_symmetric_order_invariance": 0,
+        "canonicalization_changed": 0,
+        "recovered_by_canonicalization": 0,
+        "lost_by_canonicalization": 0
+      },
+      "deployment_population": {
+        "n": 8,
+        "raw_true_positives": 1,
+        "canonical_true_positives": 1,
+        "symmetric_semantic_true_positives": 1,
+        "recovered_by_symmetric_order_invariance": 0,
+        "canonicalization_changed": 0,
+        "recovered_by_canonicalization": 0,
+        "lost_by_canonicalization": 0
+      }
+    },
+    "calibrator": {
+      "version": "beta_isotonic_v1",
+      "status": "degenerate_too_few_positives",
+      "deployable": false,
+      "alpha": 1.0,
+      "beta": 1.0,
+      "min_positives": 2,
+      "min_negatives": 2,
+      "n_samples": 8,
+      "n_positives": 1,
+      "blocks": [
+        {
+          "min_score": 0.95,
+          "max_score": 0.95,
+          "positives": 1,
+          "total": 8,
+          "probability": 0.2
+        }
+      ]
+    },
+    "deployment_support": {
+      "deployable": false,
+      "candidate_level_deployable": false,
+      "status": "degenerate_too_few_positives",
+      "min_positive_samples": 5,
+      "positive_candidates": 1,
+      "positive_samples": 1
+    },
+    "calibration_metrics": {
+      "raw": {
+        "n": 8,
+        "positives": 1,
+        "brier": 0.7899999999999999,
+        "ece": 0.825
+      },
+      "calibrated": {
+        "n": 8,
+        "positives": 1,
+        "brier": 0.11500000000000002,
+        "ece": 0.07500000000000001
+      }
+    },
+    "threshold_selection": {
+      "scope": "post_evidence_pre_quantity_candidates_from_calibration_samples_only",
+      "n_candidates": 8,
+      "n_positives": 1,
+      "recommended_threshold": 0.2,
+      "recommended_metrics": {
+        "threshold": 0.2,
+        "selected": 8,
+        "tp": 1,
+        "fp": 7,
+        "fn": 0,
+        "precision": 0.125,
+        "recall": 1.0,
+        "f1": 0.2222222222222222
+      },
+      "rows": [
+        {
+          "threshold": 0.0,
+          "selected": 8,
+          "tp": 1,
+          "fp": 7,
+          "fn": 0,
+          "precision": 0.125,
+          "recall": 1.0,
+          "f1": 0.2222222222222222
+        },
+        {
+          "threshold": 0.2,
+          "selected": 8,
+          "tp": 1,
+          "fp": 7,
+          "fn": 0,
+          "precision": 0.125,
+          "recall": 1.0,
+          "f1": 0.2222222222222222
+        }
+      ]
+    },
+    "predicate_policy": {
+      "scope": "post_evidence_pre_quantity_candidates_from_calibration_samples_only",
+      "allowed_predicates": [
+        "disjoint with"
+      ],
+      "selected": 8,
+      "tp": 1,
+      "fp": 7,
+      "fn": 0,
+      "precision": 0.125,
+      "recall": 1.0,
+      "f1": 0.2222222222222222,
+      "warning": "This policy is selected on sparse calibration labels and must be reported as a calibration-supported ablation, not a universal predicate inventory."
+    },
+    "symmetric_serialization_audit": {
+      "scope": "accepted_candidates_only_cross_year_endpoint_linked_gold",
+      "symmetric_predicates": [
+        "disjoint with",
+        "equivalent class"
+      ],
+      "surface_morphology_version": "relation_surface_morphology_v1",
+      "max_predictions_per_sample": 8,
+      "official_exact_original": {
+        "predictions": 8,
+        "gold": 11,
+        "tp": 1,
+        "fp": 7,
+        "fn": 10,
+        "precision": 0.125,
+        "recall": 0.09090909090909091,
+        "f1": 0.10526315789473685,
+        "positive_samples": 1
+      },
+      "semantic_order_invariant_diagnostic": {
+        "predictions": 8,
+        "gold": 11,
+        "tp": 1,
+        "fp": 7,
+        "fn": 10,
+        "precision": 0.125,
+        "recall": 0.09090909090909091,
+        "f1": 0.10526315789473685,
+        "positive_samples": 1
+      },
+      "semantic_order_and_surface_invariant_diagnostic": {
+        "predictions": 8,
+        "gold": 11,
+        "tp": 2,
+        "fp": 6,
+        "fn": 9,
+        "precision": 0.25,
+        "recall": 0.18181818181818182,
+        "f1": 0.2105263157894737,
+        "positive_samples": 2
+      },
+      "official_exact_surface_canonicalization_ablation": {
+        "predictions": 8,
+        "gold": 11,
+        "tp": 1,
+        "fp": 7,
+        "fn": 10,
+        "precision": 0.125,
+        "recall": 0.09090909090909091,
+        "f1": 0.10526315789473685,
+        "positive_samples": 1
+      },
+      "surface_canonicalization_transition": {
+        "recovered_exact": 0,
+        "lost_exact": 0,
+        "recovered": [],
+        "lost": []
+      },
+      "official_exact_bidirectional_serialization_ablation": {
+        "predictions": 16,
+        "gold": 11,
+        "tp": 1,
+        "fp": 15,
+        "fn": 10,
+        "precision": 0.0625,
+        "recall": 0.09090909090909091,
+        "f1": 0.07407407407407407,
+        "positive_samples": 1
+      },
+      "bidirectional_predictions_added": 8,
+      "official_exact_cap_aware_bidirectional_ablation": {
+        "predictions": 12,
+        "gold": 11,
+        "tp": 1,
+        "fp": 11,
+        "fn": 10,
+        "precision": 0.08333333333333333,
+        "recall": 0.09090909090909091,
+        "f1": 0.08695652173913043,
+        "positive_samples": 1
+      },
+      "cap_aware_bidirectional_transition": {
+        "recovered_exact": 0,
+        "lost_exact": 0,
+        "recovered": [],
+        "lost": []
+      },
+      "cap_aware_bidirectional_predictions_added": 4,
+      "official_exact_surface_plus_cap_aware_bidirectional_ablation": {
+        "predictions": 12,
+        "gold": 11,
+        "tp": 2,
+        "fp": 10,
+        "fn": 9,
+        "precision": 0.16666666666666666,
+        "recall": 0.18181818181818182,
+        "f1": 0.17391304347826086,
+        "positive_samples": 2
+      },
+      "surface_plus_cap_aware_bidirectional_transition": {
+        "recovered_exact": 1,
+        "lost_exact": 0,
+        "recovered": [
+          {
+            "task": "cross_year",
+            "sample_index": 1,
+            "triple": [
+              "freshwater ecosystem",
+              "disjoint with",
+              "marine ecosystem"
+            ]
+          }
+        ],
+        "lost": []
+      },
+      "surface_plus_cap_aware_bidirectional_predictions_added": 4,
+      "deployable": false,
+      "confirmatory_eligible": false,
+      "warning": "Symmetric/surface-invariant matching is not the official exact metric. Surface canonicalization and bidirectional serialization are gold-blind diagnostic ablations and require adequate independent support before use."
+    },
+    "exact_positive_candidates": [
+      {
+        "task": "cross_year",
+        "sample_index": 8,
+        "stratum": null,
+        "split": "calibration",
+        "confidence": 0.95,
+        "position": 4,
+        "raw_triple": [
+          "bacteria",
+          "disjoint with",
+          "eukaryota"
+        ],
+        "canonical_triple": [
+          "bacteria",
+          "disjoint with",
+          "eukaryota"
+        ],
+        "raw_correct": true,
+        "canonical_correct": true,
+        "symmetric_semantic_correct": true,
+        "canonicalization_changed": false,
+        "near_match_type": "exact",
+        "near_gold_triples": [
+          [
+            "bacteria",
+            "disjoint with",
+            "eukaryota"
+          ]
+        ],
+        "evidence_mode": "explicit",
+        "evidence_gap_chars": null,
+        "postprocess_status": "accepted",
+        "rejection_reasons": []
+      }
+    ]
+  }
+}

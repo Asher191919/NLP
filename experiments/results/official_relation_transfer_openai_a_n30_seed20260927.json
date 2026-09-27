@@ -1,0 +1,5209 @@
+{
+  "meta": {
+    "protocol": "official_relation_transfer_eval_v1",
+    "status": "complete",
+    "manifest": "D:\\NLP\\experiments\\results\\official_relation_transfer_manifest_a_n30_seed20260927.json",
+    "manifest_sha256": "9e4ab1df98616874acebe75a425d8aa24dbe0ec6d5e149d14bca78613e27bb12",
+    "package_id": "76e98ba860f1b72b4df3",
+    "model": "dots3-note-prev",
+    "attempt_ledger": {
+      "planned_units": 60,
+      "successful_units": 60,
+      "failed_final_units": 0,
+      "recorded_unit_attempts": 81
+    }
+  },
+  "summaries": {
+    "open_vocab": {
+      "all": {
+        "target_n": 30,
+        "n_success": 30,
+        "n_failed": 0,
+        "complete": true,
+        "term_typing_f1_micro": {
+          "precision": 0.054945054945054944,
+          "recall": 0.17857142857142858,
+          "f1": 0.08403361344537814,
+          "tp": 5,
+          "fp": 86,
+          "fn": 23
+        },
+        "taxonomy_f1_micro": {
+          "precision": 0.592,
+          "recall": 0.3148936170212766,
+          "f1": 0.4111111111111111,
+          "tp": 148,
+          "fp": 102,
+          "fn": 322
+        },
+        "nontax_f1_micro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 424,
+          "fn": 104
+        },
+        "nontax_nonself_f1_micro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 424,
+          "fn": 101
+        },
+        "official_graph_similarity_avg": 0.19464904507199413,
+        "composite_typing_tax_gs": 0.22993125654282778,
+        "nontax_pred_total": 424,
+        "nontax_gold_total": 104,
+        "nontax_nonself_pred_total": 424,
+        "nontax_nonself_gold_total": 101,
+        "successful_latency_sec": {
+          "min": 14.383,
+          "median": 45.771,
+          "p95": 116.054,
+          "max": 119.165,
+          "sum": 1566.774
+        },
+        "successful_runner_attempts_total": 34,
+        "successful_samples_with_retry": 4,
+        "by_gold_predicate": {
+          "database_cross_reference": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 5
+          },
+          "disjoint with": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 38
+          },
+          "equivalent class": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 31
+          },
+          "has role": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 2
+          },
+          "is_conjugate_acid_of": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 5
+          },
+          "is_conjugate_base_of": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 5
+          },
+          "same as": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 2
+          },
+          "type": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 16
+          }
+        },
+        "gold_recall_by_endpoint_visibility": {
+          "endpoint_visible": {
+            "support": 89,
+            "true_positives": 0,
+            "recall": 0.0
+          },
+          "not_endpoint_visible": {
+            "support": 12,
+            "true_positives": 0,
+            "recall": 0.0
+          }
+        }
+      },
+      "by_assigned_stratum": {
+        "equivalent_class": {
+          "target_n": 10,
+          "n_success": 10,
+          "n_failed": 0,
+          "complete": true,
+          "term_typing_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 46,
+            "fn": 1
+          },
+          "taxonomy_f1_micro": {
+            "precision": 0.5591397849462365,
+            "recall": 0.26,
+            "f1": 0.3549488054607508,
+            "tp": 52,
+            "fp": 41,
+            "fn": 148
+          },
+          "nontax_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 181,
+            "fn": 28
+          },
+          "nontax_nonself_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 181,
+            "fn": 28
+          },
+          "official_graph_similarity_avg": 0.18703510940621193,
+          "composite_typing_tax_gs": 0.18066130495565424,
+          "nontax_pred_total": 181,
+          "nontax_gold_total": 28,
+          "nontax_nonself_pred_total": 181,
+          "nontax_nonself_gold_total": 28,
+          "successful_latency_sec": {
+            "min": 31.85,
+            "median": 47.7,
+            "p95": 119.165,
+            "max": 119.165,
+            "sum": 639.56
+          },
+          "successful_runner_attempts_total": 13,
+          "successful_samples_with_retry": 3,
+          "by_gold_predicate": {
+            "disjoint with": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 1
+            },
+            "equivalent class": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 27
+            }
+          },
+          "gold_recall_by_endpoint_visibility": {
+            "endpoint_visible": {
+              "support": 23,
+              "true_positives": 0,
+              "recall": 0.0
+            },
+            "not_endpoint_visible": {
+              "support": 5,
+              "true_positives": 0,
+              "recall": 0.0
+            }
+          }
+        },
+        "disjoint_with": {
+          "target_n": 10,
+          "n_success": 10,
+          "n_failed": 0,
+          "complete": true,
+          "term_typing_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 14,
+            "fn": 15
+          },
+          "taxonomy_f1_micro": {
+            "precision": 0.4782608695652174,
+            "recall": 0.3333333333333333,
+            "f1": 0.3928571428571428,
+            "tp": 33,
+            "fp": 36,
+            "fn": 66
+          },
+          "nontax_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 114,
+            "fn": 37
+          },
+          "nontax_nonself_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 114,
+            "fn": 37
+          },
+          "official_graph_similarity_avg": 0.11005694616995083,
+          "composite_typing_tax_gs": 0.16763802967569788,
+          "nontax_pred_total": 114,
+          "nontax_gold_total": 37,
+          "nontax_nonself_pred_total": 114,
+          "nontax_nonself_gold_total": 37,
+          "successful_latency_sec": {
+            "min": 14.383,
+            "median": 38.215,
+            "p95": 114.779,
+            "max": 114.779,
+            "sum": 472.152
+          },
+          "successful_runner_attempts_total": 11,
+          "successful_samples_with_retry": 1,
+          "by_gold_predicate": {
+            "disjoint with": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 37
+            }
+          },
+          "gold_recall_by_endpoint_visibility": {
+            "endpoint_visible": {
+              "support": 33,
+              "true_positives": 0,
+              "recall": 0.0
+            },
+            "not_endpoint_visible": {
+              "support": 4,
+              "true_positives": 0,
+              "recall": 0.0
+            }
+          }
+        },
+        "other_open_predicate": {
+          "target_n": 10,
+          "n_success": 10,
+          "n_failed": 0,
+          "complete": true,
+          "term_typing_f1_micro": {
+            "precision": 0.16129032258064516,
+            "recall": 0.4166666666666667,
+            "f1": 0.2325581395348837,
+            "tp": 5,
+            "fp": 26,
+            "fn": 7
+          },
+          "taxonomy_f1_micro": {
+            "precision": 0.7159090909090909,
+            "recall": 0.3684210526315789,
+            "f1": 0.4864864864864865,
+            "tp": 63,
+            "fp": 25,
+            "fn": 108
+          },
+          "nontax_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 129,
+            "fn": 39
+          },
+          "nontax_nonself_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 129,
+            "fn": 36
+          },
+          "official_graph_similarity_avg": 0.2868550796398196,
+          "composite_typing_tax_gs": 0.33529990188706327,
+          "nontax_pred_total": 129,
+          "nontax_gold_total": 39,
+          "nontax_nonself_pred_total": 129,
+          "nontax_nonself_gold_total": 36,
+          "successful_latency_sec": {
+            "min": 23.273,
+            "median": 47.709,
+            "p95": 58.757,
+            "max": 58.757,
+            "sum": 455.062
+          },
+          "successful_runner_attempts_total": 10,
+          "successful_samples_with_retry": 0,
+          "by_gold_predicate": {
+            "database_cross_reference": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 5
+            },
+            "equivalent class": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 4
+            },
+            "has role": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 2
+            },
+            "is_conjugate_acid_of": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 5
+            },
+            "is_conjugate_base_of": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 5
+            },
+            "same as": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 2
+            },
+            "type": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 16
+            }
+          },
+          "gold_recall_by_endpoint_visibility": {
+            "endpoint_visible": {
+              "support": 33,
+              "true_positives": 0,
+              "recall": 0.0
+            },
+            "not_endpoint_visible": {
+              "support": 3,
+              "true_positives": 0,
+              "recall": 0.0
+            }
+          }
+        }
+      },
+      "by_density": {
+        "medium_2_to_4": {
+          "target_n": 27,
+          "n_success": 27,
+          "n_failed": 0,
+          "complete": true,
+          "term_typing_f1_micro": {
+            "precision": 0.056818181818181816,
+            "recall": 0.21739130434782608,
+            "f1": 0.0900900900900901,
+            "tp": 5,
+            "fp": 83,
+            "fn": 18
+          },
+          "taxonomy_f1_micro": {
+            "precision": 0.5502645502645502,
+            "recall": 0.24880382775119617,
+            "f1": 0.342668863261944,
+            "tp": 104,
+            "fp": 85,
+            "fn": 314
+          },
+          "nontax_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 400,
+            "fn": 86
+          },
+          "nontax_nonself_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 400,
+            "fn": 83
+          },
+          "official_graph_similarity_avg": 0.17716846001221095,
+          "composite_typing_tax_gs": 0.20330913778808168,
+          "nontax_pred_total": 400,
+          "nontax_gold_total": 86,
+          "nontax_nonself_pred_total": 400,
+          "nontax_nonself_gold_total": 83,
+          "successful_latency_sec": {
+            "min": 14.383,
+            "median": 44.946,
+            "p95": 116.054,
+            "max": 119.165,
+            "sum": 1418.167
+          },
+          "successful_runner_attempts_total": 31,
+          "successful_samples_with_retry": 4,
+          "by_gold_predicate": {
+            "database_cross_reference": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 5
+            },
+            "disjoint with": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 25
+            },
+            "equivalent class": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 31
+            },
+            "has role": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 2
+            },
+            "is_conjugate_acid_of": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 5
+            },
+            "is_conjugate_base_of": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 5
+            },
+            "same as": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 2
+            },
+            "type": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 11
+            }
+          },
+          "gold_recall_by_endpoint_visibility": {
+            "endpoint_visible": {
+              "support": 71,
+              "true_positives": 0,
+              "recall": 0.0
+            },
+            "not_endpoint_visible": {
+              "support": 12,
+              "true_positives": 0,
+              "recall": 0.0
+            }
+          }
+        },
+        "high_5_to_8": {
+          "target_n": 3,
+          "n_success": 3,
+          "n_failed": 0,
+          "complete": true,
+          "term_typing_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 3,
+            "fn": 5
+          },
+          "taxonomy_f1_micro": {
+            "precision": 0.7213114754098361,
+            "recall": 0.8461538461538461,
+            "f1": 0.7787610619469026,
+            "tp": 44,
+            "fp": 17,
+            "fn": 8
+          },
+          "nontax_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 24,
+            "fn": 18
+          },
+          "nontax_nonself_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 24,
+            "fn": 18
+          },
+          "official_graph_similarity_avg": 0.35197431061004253,
+          "composite_typing_tax_gs": 0.376911790852315,
+          "nontax_pred_total": 24,
+          "nontax_gold_total": 18,
+          "nontax_nonself_pred_total": 24,
+          "nontax_nonself_gold_total": 18,
+          "successful_latency_sec": {
+            "min": 35.772,
+            "median": 55.384,
+            "p95": 57.451,
+            "max": 57.451,
+            "sum": 148.607
+          },
+          "successful_runner_attempts_total": 3,
+          "successful_samples_with_retry": 0,
+          "by_gold_predicate": {
+            "disjoint with": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 13
+            },
+            "type": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 5
+            }
+          },
+          "gold_recall_by_endpoint_visibility": {
+            "endpoint_visible": {
+              "support": 18,
+              "true_positives": 0,
+              "recall": 0.0
+            },
+            "not_endpoint_visible": {
+              "support": 0,
+              "true_positives": 0,
+              "recall": 0.0
+            }
+          }
+        }
+      }
+    },
+    "open_vocab_guarded_v2": {
+      "all": {
+        "target_n": 30,
+        "n_success": 30,
+        "n_failed": 0,
+        "complete": true,
+        "term_typing_f1_micro": {
+          "precision": 0.4166666666666667,
+          "recall": 0.17857142857142858,
+          "f1": 0.25,
+          "tp": 5,
+          "fp": 7,
+          "fn": 23
+        },
+        "taxonomy_f1_micro": {
+          "precision": 0.7670454545454546,
+          "recall": 0.2872340425531915,
+          "f1": 0.4179566563467493,
+          "tp": 135,
+          "fp": 41,
+          "fn": 335
+        },
+        "nontax_f1_micro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 143,
+          "fn": 104
+        },
+        "nontax_nonself_f1_micro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 143,
+          "fn": 101
+        },
+        "official_graph_similarity_avg": 0.25927033168394514,
+        "composite_typing_tax_gs": 0.3090756626768982,
+        "nontax_pred_total": 143,
+        "nontax_gold_total": 104,
+        "nontax_nonself_pred_total": 143,
+        "nontax_nonself_gold_total": 101,
+        "successful_latency_sec": {
+          "min": 38.164,
+          "median": 97.023,
+          "p95": 485.561,
+          "max": 492.769,
+          "sum": 4183.876
+        },
+        "successful_runner_attempts_total": 47,
+        "successful_samples_with_retry": 8,
+        "guard": {
+          "samples": 30,
+          "raw_nontax": 225,
+          "accepted_nontax": 143,
+          "rejected_nontax": 82,
+          "rejection_reason_counts": {
+            "implicit_evidence_too_distant": 6,
+            "evidence_missing_endpoints": 24,
+            "implicit_span_missing_endpoint": 1,
+            "evidence_not_verbatim": 10,
+            "quantity_limit": 40,
+            "generic_predicate": 3
+          }
+        },
+        "by_gold_predicate": {
+          "database_cross_reference": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 5
+          },
+          "disjoint with": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 38
+          },
+          "equivalent class": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 31
+          },
+          "has role": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 2
+          },
+          "is_conjugate_acid_of": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 5
+          },
+          "is_conjugate_base_of": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 5
+          },
+          "same as": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 2
+          },
+          "type": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 16
+          }
+        },
+        "gold_recall_by_endpoint_visibility": {
+          "endpoint_visible": {
+            "support": 89,
+            "true_positives": 0,
+            "recall": 0.0
+          },
+          "not_endpoint_visible": {
+            "support": 12,
+            "true_positives": 0,
+            "recall": 0.0
+          }
+        }
+      },
+      "by_assigned_stratum": {
+        "equivalent_class": {
+          "target_n": 10,
+          "n_success": 10,
+          "n_failed": 0,
+          "complete": true,
+          "term_typing_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "taxonomy_f1_micro": {
+            "precision": 0.6451612903225806,
+            "recall": 0.1,
+            "f1": 0.17316017316017315,
+            "tp": 20,
+            "fp": 11,
+            "fn": 180
+          },
+          "nontax_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 57,
+            "fn": 28
+          },
+          "nontax_nonself_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 57,
+            "fn": 28
+          },
+          "official_graph_similarity_avg": 0.10261328356691304,
+          "composite_typing_tax_gs": 0.0919244855756954,
+          "nontax_pred_total": 57,
+          "nontax_gold_total": 28,
+          "nontax_nonself_pred_total": 57,
+          "nontax_nonself_gold_total": 28,
+          "successful_latency_sec": {
+            "min": 46.438,
+            "median": 121.688,
+            "p95": 387.275,
+            "max": 387.275,
+            "sum": 1533.386
+          },
+          "successful_runner_attempts_total": 18,
+          "successful_samples_with_retry": 4,
+          "guard": {
+            "samples": 10,
+            "raw_nontax": 114,
+            "accepted_nontax": 57,
+            "rejected_nontax": 57,
+            "rejection_reason_counts": {
+              "implicit_evidence_too_distant": 3,
+              "evidence_missing_endpoints": 17,
+              "quantity_limit": 33,
+              "evidence_not_verbatim": 4
+            }
+          },
+          "by_gold_predicate": {
+            "disjoint with": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 1
+            },
+            "equivalent class": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 27
+            }
+          },
+          "gold_recall_by_endpoint_visibility": {
+            "endpoint_visible": {
+              "support": 23,
+              "true_positives": 0,
+              "recall": 0.0
+            },
+            "not_endpoint_visible": {
+              "support": 5,
+              "true_positives": 0,
+              "recall": 0.0
+            }
+          }
+        },
+        "disjoint_with": {
+          "target_n": 10,
+          "n_success": 10,
+          "n_failed": 0,
+          "complete": true,
+          "term_typing_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 6,
+            "fn": 15
+          },
+          "taxonomy_f1_micro": {
+            "precision": 0.5909090909090909,
+            "recall": 0.26262626262626265,
+            "f1": 0.36363636363636365,
+            "tp": 26,
+            "fp": 18,
+            "fn": 73
+          },
+          "nontax_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 48,
+            "fn": 37
+          },
+          "nontax_nonself_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 48,
+            "fn": 37
+          },
+          "official_graph_similarity_avg": 0.21252048473022445,
+          "composite_typing_tax_gs": 0.1920522827888627,
+          "nontax_pred_total": 48,
+          "nontax_gold_total": 37,
+          "nontax_nonself_pred_total": 48,
+          "nontax_nonself_gold_total": 37,
+          "successful_latency_sec": {
+            "min": 61.196,
+            "median": 84.264,
+            "p95": 492.769,
+            "max": 492.769,
+            "sum": 1362.076
+          },
+          "successful_runner_attempts_total": 12,
+          "successful_samples_with_retry": 2,
+          "guard": {
+            "samples": 10,
+            "raw_nontax": 65,
+            "accepted_nontax": 48,
+            "rejected_nontax": 17,
+            "rejection_reason_counts": {
+              "implicit_evidence_too_distant": 3,
+              "evidence_missing_endpoints": 7,
+              "implicit_span_missing_endpoint": 1,
+              "evidence_not_verbatim": 2,
+              "quantity_limit": 6
+            }
+          },
+          "by_gold_predicate": {
+            "disjoint with": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 37
+            }
+          },
+          "gold_recall_by_endpoint_visibility": {
+            "endpoint_visible": {
+              "support": 33,
+              "true_positives": 0,
+              "recall": 0.0
+            },
+            "not_endpoint_visible": {
+              "support": 4,
+              "true_positives": 0,
+              "recall": 0.0
+            }
+          }
+        },
+        "other_open_predicate": {
+          "target_n": 10,
+          "n_success": 10,
+          "n_failed": 0,
+          "complete": true,
+          "term_typing_f1_micro": {
+            "precision": 0.8333333333333334,
+            "recall": 0.4166666666666667,
+            "f1": 0.5555555555555556,
+            "tp": 5,
+            "fp": 1,
+            "fn": 7
+          },
+          "taxonomy_f1_micro": {
+            "precision": 0.8811881188118812,
+            "recall": 0.52046783625731,
+            "f1": 0.6544117647058824,
+            "tp": 89,
+            "fp": 12,
+            "fn": 82
+          },
+          "nontax_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 38,
+            "fn": 39
+          },
+          "nontax_nonself_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 38,
+            "fn": 36
+          },
+          "official_graph_similarity_avg": 0.4626772267546978,
+          "composite_typing_tax_gs": 0.557548182338712,
+          "nontax_pred_total": 38,
+          "nontax_gold_total": 39,
+          "nontax_nonself_pred_total": 38,
+          "nontax_nonself_gold_total": 36,
+          "successful_latency_sec": {
+            "min": 38.164,
+            "median": 85.638,
+            "p95": 485.561,
+            "max": 485.561,
+            "sum": 1288.414
+          },
+          "successful_runner_attempts_total": 17,
+          "successful_samples_with_retry": 2,
+          "guard": {
+            "samples": 10,
+            "raw_nontax": 46,
+            "accepted_nontax": 38,
+            "rejected_nontax": 8,
+            "rejection_reason_counts": {
+              "generic_predicate": 3,
+              "quantity_limit": 1,
+              "evidence_not_verbatim": 4
+            }
+          },
+          "by_gold_predicate": {
+            "database_cross_reference": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 5
+            },
+            "equivalent class": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 4
+            },
+            "has role": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 2
+            },
+            "is_conjugate_acid_of": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 5
+            },
+            "is_conjugate_base_of": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 5
+            },
+            "same as": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 2
+            },
+            "type": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 16
+            }
+          },
+          "gold_recall_by_endpoint_visibility": {
+            "endpoint_visible": {
+              "support": 33,
+              "true_positives": 0,
+              "recall": 0.0
+            },
+            "not_endpoint_visible": {
+              "support": 3,
+              "true_positives": 0,
+              "recall": 0.0
+            }
+          }
+        }
+      },
+      "by_density": {
+        "medium_2_to_4": {
+          "target_n": 27,
+          "n_success": 27,
+          "n_failed": 0,
+          "complete": true,
+          "term_typing_f1_micro": {
+            "precision": 0.4166666666666667,
+            "recall": 0.21739130434782608,
+            "f1": 0.2857142857142857,
+            "tp": 5,
+            "fp": 7,
+            "fn": 18
+          },
+          "taxonomy_f1_micro": {
+            "precision": 0.7432432432432432,
+            "recall": 0.2631578947368421,
+            "f1": 0.38869257950530034,
+            "tp": 110,
+            "fp": 38,
+            "fn": 308
+          },
+          "nontax_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 127,
+            "fn": 86
+          },
+          "nontax_nonself_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 127,
+            "fn": 83
+          },
+          "official_graph_similarity_avg": 0.2511794935229148,
+          "composite_typing_tax_gs": 0.3085287862475003,
+          "nontax_pred_total": 127,
+          "nontax_gold_total": 86,
+          "nontax_nonself_pred_total": 127,
+          "nontax_nonself_gold_total": 83,
+          "successful_latency_sec": {
+            "min": 38.164,
+            "median": 100.739,
+            "p95": 485.561,
+            "max": 492.769,
+            "sum": 3964.191
+          },
+          "successful_runner_attempts_total": 42,
+          "successful_samples_with_retry": 7,
+          "guard": {
+            "samples": 27,
+            "raw_nontax": 201,
+            "accepted_nontax": 127,
+            "rejected_nontax": 74,
+            "rejection_reason_counts": {
+              "implicit_evidence_too_distant": 6,
+              "evidence_missing_endpoints": 24,
+              "implicit_span_missing_endpoint": 1,
+              "quantity_limit": 34,
+              "generic_predicate": 3,
+              "evidence_not_verbatim": 8
+            }
+          },
+          "by_gold_predicate": {
+            "database_cross_reference": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 5
+            },
+            "disjoint with": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 25
+            },
+            "equivalent class": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 31
+            },
+            "has role": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 2
+            },
+            "is_conjugate_acid_of": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 5
+            },
+            "is_conjugate_base_of": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 5
+            },
+            "same as": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 2
+            },
+            "type": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 11
+            }
+          },
+          "gold_recall_by_endpoint_visibility": {
+            "endpoint_visible": {
+              "support": 71,
+              "true_positives": 0,
+              "recall": 0.0
+            },
+            "not_endpoint_visible": {
+              "support": 12,
+              "true_positives": 0,
+              "recall": 0.0
+            }
+          }
+        },
+        "high_5_to_8": {
+          "target_n": 3,
+          "n_success": 3,
+          "n_failed": 0,
+          "complete": true,
+          "term_typing_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 5
+          },
+          "taxonomy_f1_micro": {
+            "precision": 0.8928571428571429,
+            "recall": 0.4807692307692308,
+            "f1": 0.625,
+            "tp": 25,
+            "fp": 3,
+            "fn": 27
+          },
+          "nontax_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 16,
+            "fn": 18
+          },
+          "nontax_nonself_f1_micro": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 16,
+            "fn": 18
+          },
+          "official_graph_similarity_avg": 0.3320878751332182,
+          "composite_typing_tax_gs": 0.3190292917110727,
+          "nontax_pred_total": 16,
+          "nontax_gold_total": 18,
+          "nontax_nonself_pred_total": 16,
+          "nontax_nonself_gold_total": 18,
+          "successful_latency_sec": {
+            "min": 61.196,
+            "median": 73.376,
+            "p95": 85.113,
+            "max": 85.113,
+            "sum": 219.685
+          },
+          "successful_runner_attempts_total": 5,
+          "successful_samples_with_retry": 1,
+          "guard": {
+            "samples": 3,
+            "raw_nontax": 24,
+            "accepted_nontax": 16,
+            "rejected_nontax": 8,
+            "rejection_reason_counts": {
+              "evidence_not_verbatim": 2,
+              "quantity_limit": 6
+            }
+          },
+          "by_gold_predicate": {
+            "disjoint with": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 13
+            },
+            "type": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 5
+            }
+          },
+          "gold_recall_by_endpoint_visibility": {
+            "endpoint_visible": {
+              "support": 18,
+              "true_positives": 0,
+              "recall": 0.0
+            },
+            "not_endpoint_visible": {
+              "support": 0,
+              "true_positives": 0,
+              "recall": 0.0
+            }
+          }
+        }
+      }
+    }
+  },
+  "samples": [
+    {
+      "package_index": 0,
+      "source_index": 265,
+      "sample_id": "48e01fb671c54bf1b41b2e553fa7f50e",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 14.383,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 6
+        },
+        "taxonomy": {
+          "precision": 0.42857142857142855,
+          "recall": 0.75,
+          "f1": 0.5454545454545454,
+          "tp": 3,
+          "fp": 4,
+          "fn": 1
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 8
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 8
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 6,
+          "taxonomy": 4,
+          "nontax": 8
+        },
+        "pred_counts": {
+          "typing": 2,
+          "taxonomy": 7,
+          "nontax": 0
+        }
+      }
+    },
+    {
+      "package_index": 1,
+      "source_index": 294,
+      "sample_id": "e564a84cab4c4d5d95a0a451b737359f",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "high_5_to_8",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 57.451,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 3,
+          "fn": 5
+        },
+        "taxonomy": {
+          "precision": 0.8387096774193549,
+          "recall": 1.0,
+          "f1": 0.9122807017543859,
+          "tp": 26,
+          "fp": 5,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 5,
+          "fn": 5
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 5,
+          "fn": 5
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.6933333333333334,
+          "neighborhood_similarity": 0.5223193473193474,
+          "taxonomy_similarity": 0.7801120448179272,
+          "graph_similarity": 0.6652549084902026,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 5,
+          "taxonomy": 26,
+          "nontax": 5
+        },
+        "pred_counts": {
+          "typing": 3,
+          "taxonomy": 31,
+          "nontax": 5
+        }
+      }
+    },
+    {
+      "package_index": 2,
+      "source_index": 626,
+      "sample_id": "2cf4bfa96da0432899b532413a373bb9",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 40.471,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.7499999999999999,
+          "tp": 3,
+          "fp": 0,
+          "fn": 2
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 15,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 15,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.2222222222222222,
+          "neighborhood_similarity": 0.06772486772486773,
+          "taxonomy_similarity": 0.5714285714285714,
+          "graph_similarity": 0.28712522045855376,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 5,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 2,
+          "taxonomy": 3,
+          "nontax": 15
+        }
+      }
+    },
+    {
+      "package_index": 3,
+      "source_index": 860,
+      "sample_id": "ebd38801344e4542992ad8316c0a3ab2",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 48.804,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 15
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 9,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 9,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 15,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 4,
+          "taxonomy": 4,
+          "nontax": 9
+        }
+      }
+    },
+    {
+      "package_index": 4,
+      "source_index": 1142,
+      "sample_id": "c5f6ad7b749544279fa5aead5b0dce87",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 33.936,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 7,
+          "fn": 7
+        },
+        "taxonomy": {
+          "precision": 0.18181818181818182,
+          "recall": 1.0,
+          "f1": 0.3076923076923077,
+          "tp": 2,
+          "fp": 9,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.10810810810810811,
+          "neighborhood_similarity": 0.05357142857142857,
+          "taxonomy_similarity": 0.16666666666666666,
+          "graph_similarity": 0.10944873444873444,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 7,
+          "taxonomy": 2,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 7,
+          "taxonomy": 11,
+          "nontax": 8
+        }
+      }
+    },
+    {
+      "package_index": 5,
+      "source_index": 1168,
+      "sample_id": "4e0a94acb89e4df9902c0730299e2f53",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 44.15,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 15,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.625,
+          "neighborhood_similarity": 0.42824074074074076,
+          "taxonomy_similarity": 1.0,
+          "graph_similarity": 0.6844135802469135,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 15,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 8,
+          "taxonomy": 15,
+          "nontax": 8
+        }
+      }
+    },
+    {
+      "package_index": 6,
+      "source_index": 1232,
+      "sample_id": "1bff904926d64afea1ad47aa3c9864d1",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 2,
+      "latency_sec": 114.779,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 0.5555555555555556,
+          "f1": 0.7142857142857143,
+          "tp": 5,
+          "fp": 0,
+          "fn": 4
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 5,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 5,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.47619047619047616,
+          "neighborhood_similarity": 0.2740740740740741,
+          "taxonomy_similarity": 0.5416666666666666,
+          "graph_similarity": 0.4306437389770723,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 9,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 5,
+          "nontax": 5
+        }
+      }
+    },
+    {
+      "package_index": 7,
+      "source_index": 1372,
+      "sample_id": "e3fcd0c2b31141409e55763129f437a7",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "high_5_to_8",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 55.384,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.47368421052631576,
+          "recall": 0.6,
+          "f1": 0.5294117647058824,
+          "tp": 9,
+          "fp": 10,
+          "fn": 6
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 15,
+          "fn": 8
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 15,
+          "fn": 8
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.3157894736842105,
+          "neighborhood_similarity": 0.09727691663175533,
+          "taxonomy_similarity": 0.4468253968253968,
+          "graph_similarity": 0.2866305957137875,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 15,
+          "nontax": 8
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 19,
+          "nontax": 15
+        }
+      }
+    },
+    {
+      "package_index": 8,
+      "source_index": 1422,
+      "sample_id": "02d1d48dded2421189e275420ef27707",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 23.273,
+      "metrics": {
+        "typing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.8571428571428571,
+          "neighborhood_similarity": 0.8055555555555555,
+          "taxonomy_similarity": 1.0,
+          "graph_similarity": 0.8875661375661376,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 1,
+          "taxonomy": 5,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 1,
+          "taxonomy": 5,
+          "nontax": 0
+        }
+      }
+    },
+    {
+      "package_index": 9,
+      "source_index": 1883,
+      "sample_id": "661d31bea55143fcb6572f7adc6f7d49",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 51.267,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 30
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 41,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 41,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 30,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 41
+        }
+      }
+    },
+    {
+      "package_index": 10,
+      "source_index": 2049,
+      "sample_id": "0a35f663d76f441b9ae5ecc88df7c8f6",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 40.657,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 5
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 6,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 6,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 5,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 6
+        }
+      }
+    },
+    {
+      "package_index": 11,
+      "source_index": 2211,
+      "sample_id": "576e13deb7fd47f7ba9b4efd27b49f41",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 2,
+      "latency_sec": 116.054,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 22,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.9090909090909091,
+          "recall": 0.8695652173913043,
+          "f1": 0.888888888888889,
+          "tp": 20,
+          "fp": 2,
+          "fn": 3
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 25,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 25,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.4255319148936171,
+          "neighborhood_similarity": 0.1529331657238634,
+          "taxonomy_similarity": 0.894927536231884,
+          "graph_similarity": 0.4911308722831215,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 23,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 22,
+          "taxonomy": 22,
+          "nontax": 25
+        }
+      }
+    },
+    {
+      "package_index": 12,
+      "source_index": 2401,
+      "sample_id": "e0a82e958e6847ebb2d2388e20659198",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 2,
+      "latency_sec": 119.165,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 10,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.15,
+          "recall": 0.09090909090909091,
+          "f1": 0.11320754716981132,
+          "tp": 3,
+          "fp": 17,
+          "fn": 30
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 20,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 20,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.07058823529411765,
+          "neighborhood_similarity": 0.0528169014084507,
+          "taxonomy_similarity": 0.07211538461538461,
+          "graph_similarity": 0.06517350710598431,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 33,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 10,
+          "taxonomy": 20,
+          "nontax": 20
+        }
+      }
+    },
+    {
+      "package_index": 13,
+      "source_index": 2454,
+      "sample_id": "0bcd7cc3cb554d4ab359ecafaeef6972",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 29.123,
+      "metrics": {
+        "typing": {
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "tp": 4,
+          "fp": 0,
+          "fn": 2
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 0.56,
+          "f1": 0.717948717948718,
+          "tp": 14,
+          "fp": 0,
+          "fn": 11
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 7
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 7
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.6428571428571429,
+          "neighborhood_similarity": 0.5577026301663983,
+          "taxonomy_similarity": 0.5123456790123457,
+          "graph_similarity": 0.5709684840119623,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 6,
+          "taxonomy": 25,
+          "nontax": 7
+        },
+        "pred_counts": {
+          "typing": 4,
+          "taxonomy": 14,
+          "nontax": 0
+        }
+      }
+    },
+    {
+      "package_index": 14,
+      "source_index": 2620,
+      "sample_id": "ce0eec1847b84a07904ab2c526419498",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 57.494,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 7,
+          "fn": 6
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 25,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 25,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 6,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 7,
+          "nontax": 25
+        }
+      }
+    },
+    {
+      "package_index": 15,
+      "source_index": 2820,
+      "sample_id": "516600dece704918a285456028cc14b4",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 42.496,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 13
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 30,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 30,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 13,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 30
+        }
+      }
+    },
+    {
+      "package_index": 16,
+      "source_index": 2821,
+      "sample_id": "1eb94a2667aa4c7cba41a2349a208297",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 58.992,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 11
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 18,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 18,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 11,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 4,
+          "taxonomy": 0,
+          "nontax": 18
+        }
+      }
+    },
+    {
+      "package_index": 17,
+      "source_index": 3189,
+      "sample_id": "6f07e3919d72446fa3f8483e4051544e",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 54.519,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.3076923076923077,
+          "recall": 0.13333333333333333,
+          "f1": 0.18604651162790697,
+          "tp": 4,
+          "fp": 9,
+          "fn": 26
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 34,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 34,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.10126582278481013,
+          "neighborhood_similarity": 0.028648770584254454,
+          "taxonomy_similarity": 0.07922244635980194,
+          "graph_similarity": 0.06971234657628884,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 30,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 13,
+          "nontax": 34
+        }
+      }
+    },
+    {
+      "package_index": 18,
+      "source_index": 3204,
+      "sample_id": "b7be7f0f040c4baca29f514b5652ac1f",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 54.235,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 1
+        },
+        "taxonomy": {
+          "precision": 0.25,
+          "recall": 0.16666666666666666,
+          "f1": 0.2,
+          "tp": 3,
+          "fp": 9,
+          "fn": 15
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 5,
+          "fn": 3
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 5,
+          "fn": 3
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.1395348837209302,
+          "neighborhood_similarity": 0.07023809523809524,
+          "taxonomy_similarity": 0.053571428571428575,
+          "graph_similarity": 0.087781469176818,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 1,
+          "taxonomy": 18,
+          "nontax": 3
+        },
+        "pred_counts": {
+          "typing": 4,
+          "taxonomy": 12,
+          "nontax": 5
+        }
+      }
+    },
+    {
+      "package_index": 19,
+      "source_index": 3313,
+      "sample_id": "c8474ccb8a54436e8131a6c4703c8876",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "high_5_to_8",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 35.772,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.8181818181818182,
+          "recall": 0.8181818181818182,
+          "f1": 0.8181818181818182,
+          "tp": 9,
+          "fp": 2,
+          "fn": 2
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 5
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 5
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.06451612903225808,
+          "neighborhood_similarity": 0.09375,
+          "taxonomy_similarity": 0.15384615384615385,
+          "graph_similarity": 0.10403742762613731,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 11,
+          "nontax": 5
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 11,
+          "nontax": 4
+        }
+      }
+    },
+    {
+      "package_index": 20,
+      "source_index": 3369,
+      "sample_id": "c9dacbcc831141e0b69f29f4c7f7b1ae",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 58.757,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 24
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 24,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 0
+        }
+      }
+    },
+    {
+      "package_index": 21,
+      "source_index": 3386,
+      "sample_id": "50f455666e5740748dc8a38da69e323d",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 46.596,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.9166666666666666,
+          "recall": 0.3793103448275862,
+          "f1": 0.5365853658536586,
+          "tp": 11,
+          "fp": 1,
+          "fn": 18
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 41,
+          "fn": 7
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 41,
+          "fn": 7
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.2471910112359551,
+          "neighborhood_similarity": 0.06229437229437229,
+          "taxonomy_similarity": 0.27956989247311825,
+          "graph_similarity": 0.1963517586678152,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 29,
+          "nontax": 7
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 12,
+          "nontax": 41
+        }
+      }
+    },
+    {
+      "package_index": 22,
+      "source_index": 3402,
+      "sample_id": "7bc6008a2571472c9f2421d99e0b27fd",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 32.184,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 5
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 15,
+          "fn": 3
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 15,
+          "fn": 3
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 5,
+          "nontax": 3
+        },
+        "pred_counts": {
+          "typing": 1,
+          "taxonomy": 1,
+          "nontax": 15
+        }
+      }
+    },
+    {
+      "package_index": 23,
+      "source_index": 3500,
+      "sample_id": "c5ec1d006be1421aa0439a2471378cfd",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 39.84,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 5
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 29,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 29,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 5,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 4,
+          "taxonomy": 4,
+          "nontax": 29
+        }
+      }
+    },
+    {
+      "package_index": 24,
+      "source_index": 3642,
+      "sample_id": "319b858eff9e40348547205f8f4adaed",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 53.827,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 6
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 6,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 0
+        }
+      }
+    },
+    {
+      "package_index": 25,
+      "source_index": 3725,
+      "sample_id": "4e20ba5a75d0446ca5e18bfd51735063",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 31.85,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 8,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 3
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 3
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.5925925925925926,
+          "neighborhood_similarity": 0.29166666666666663,
+          "taxonomy_similarity": 1.0,
+          "graph_similarity": 0.6280864197530863,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 8,
+          "nontax": 3
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 8,
+          "nontax": 8
+        }
+      }
+    },
+    {
+      "package_index": 26,
+      "source_index": 3882,
+      "sample_id": "4d5e1a9317224bd0b8820abc8bd9a559",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 2,
+      "latency_sec": 94.943,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.5714285714285714,
+          "recall": 0.18181818181818182,
+          "f1": 0.27586206896551724,
+          "tp": 4,
+          "fp": 3,
+          "fn": 18
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 16,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 16,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.1702127659574468,
+          "neighborhood_similarity": 0.07692307692307693,
+          "taxonomy_similarity": 0.09696969696969697,
+          "graph_similarity": 0.11470184661674022,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 22,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 7,
+          "nontax": 16
+        }
+      }
+    },
+    {
+      "package_index": 27,
+      "source_index": 3952,
+      "sample_id": "7b0441d120944cc29a86f2ef1daadd1b",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 39.88,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 11,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.25,
+          "recall": 0.10344827586206896,
+          "f1": 0.14634146341463414,
+          "tp": 3,
+          "fp": 9,
+          "fn": 26
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 21,
+          "fn": 5
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 21,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.07692307692307691,
+          "neighborhood_similarity": 0.03034547152194211,
+          "taxonomy_similarity": 0.07377450980392157,
+          "graph_similarity": 0.0603476860829802,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 29,
+          "nontax": 5
+        },
+        "pred_counts": {
+          "typing": 11,
+          "taxonomy": 12,
+          "nontax": 21
+        }
+      }
+    },
+    {
+      "package_index": 28,
+      "source_index": 4120,
+      "sample_id": "55972cf3aeb2440baba3ff3b144c28c8",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 31.546,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "taxonomy": {
+          "precision": 0.5,
+          "recall": 0.14285714285714285,
+          "f1": 0.22222222222222224,
+          "tp": 1,
+          "fp": 1,
+          "fn": 6
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 9,
+          "fn": 3
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 9,
+          "fn": 3
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.08695652173913043,
+          "neighborhood_similarity": 0.08,
+          "taxonomy_similarity": 0.13333333333333333,
+          "graph_similarity": 0.10009661835748791,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 2,
+          "taxonomy": 7,
+          "nontax": 3
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 2,
+          "nontax": 9
+        }
+      }
+    },
+    {
+      "package_index": 29,
+      "source_index": 4292,
+      "sample_id": "81d8babfa9354bbb888272b0c5aa37dc",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 44.946,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 5,
+          "fn": 34
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 12,
+          "fn": 3
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 12,
+          "fn": 3
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 34,
+          "nontax": 3
+        },
+        "pred_counts": {
+          "typing": 4,
+          "taxonomy": 5,
+          "nontax": 12
+        }
+      }
+    },
+    {
+      "package_index": 0,
+      "source_index": 265,
+      "sample_id": "48e01fb671c54bf1b41b2e553fa7f50e",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 2,
+      "latency_sec": 96.148,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 6
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571,
+          "tp": 3,
+          "fp": 0,
+          "fn": 1
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 8
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 8
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.2222222222222222,
+          "neighborhood_similarity": 0.060606060606060615,
+          "taxonomy_similarity": 0.7777777777777778,
+          "graph_similarity": 0.35353535353535354,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 6,
+          "taxonomy": 4,
+          "nontax": 8
+        },
+        "pred_counts": {
+          "typing": 2,
+          "taxonomy": 3,
+          "nontax": 4
+        }
+      }
+    },
+    {
+      "package_index": 1,
+      "source_index": 294,
+      "sample_id": "e564a84cab4c4d5d95a0a451b737359f",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "high_5_to_8",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 3,
+      "latency_sec": 73.376,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 5
+        },
+        "taxonomy": {
+          "precision": 0.95,
+          "recall": 0.7307692307692307,
+          "f1": 0.8260869565217392,
+          "tp": 19,
+          "fp": 1,
+          "fn": 7
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 5
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 5
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.6333333333333333,
+          "neighborhood_similarity": 0.5821237585943467,
+          "taxonomy_similarity": 0.6823412698412699,
+          "graph_similarity": 0.6325994539229832,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 5,
+          "taxonomy": 26,
+          "nontax": 5
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 20,
+          "nontax": 4
+        }
+      }
+    },
+    {
+      "package_index": 2,
+      "source_index": 626,
+      "sample_id": "2cf4bfa96da0432899b532413a373bb9",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 3,
+      "latency_sec": 46.438,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.7499999999999999,
+          "tp": 3,
+          "fp": 0,
+          "fn": 2
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 3,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 3,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.4615384615384615,
+          "neighborhood_similarity": 0.2333333333333333,
+          "taxonomy_similarity": 0.5714285714285714,
+          "graph_similarity": 0.4221001221001221,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 5,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 3,
+          "nontax": 3
+        }
+      }
+    },
+    {
+      "package_index": 3,
+      "source_index": 860,
+      "sample_id": "ebd38801344e4542992ad8316c0a3ab2",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 4,
+      "latency_sec": 151.678,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.2,
+          "recall": 0.06666666666666667,
+          "f1": 0.1,
+          "tp": 1,
+          "fp": 4,
+          "fn": 14
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.08333333333333333,
+          "neighborhood_similarity": 0.026984126984126982,
+          "taxonomy_similarity": 0.056666666666666664,
+          "graph_similarity": 0.05566137566137566,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 15,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 5,
+          "nontax": 2
+        }
+      }
+    },
+    {
+      "package_index": 4,
+      "source_index": 1142,
+      "sample_id": "c5f6ad7b749544279fa5aead5b0dce87",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 73.618,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 7
+        },
+        "taxonomy": {
+          "precision": 0.2222222222222222,
+          "recall": 1.0,
+          "f1": 0.3636363636363636,
+          "tp": 2,
+          "fp": 7,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 3,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 3,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.17391304347826086,
+          "neighborhood_similarity": 0.13157894736842105,
+          "taxonomy_similarity": 0.2727272727272727,
+          "graph_similarity": 0.19273975452465153,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 7,
+          "taxonomy": 2,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 9,
+          "nontax": 3
+        }
+      }
+    },
+    {
+      "package_index": 5,
+      "source_index": 1168,
+      "sample_id": "4e0a94acb89e4df9902c0730299e2f53",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 38.164,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 15,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.9375,
+          "neighborhood_similarity": 0.925,
+          "taxonomy_similarity": 1.0,
+          "graph_similarity": 0.9541666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 15,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 15,
+          "nontax": 0
+        }
+      }
+    },
+    {
+      "package_index": 6,
+      "source_index": 1232,
+      "sample_id": "1bff904926d64afea1ad47aa3c9864d1",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 68.797,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.8571428571428571,
+          "recall": 0.6666666666666666,
+          "f1": 0.75,
+          "tp": 6,
+          "fp": 1,
+          "fn": 3
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.4615384615384615,
+          "neighborhood_similarity": 0.20486111111111113,
+          "taxonomy_similarity": 0.5439560439560439,
+          "graph_similarity": 0.40345187220187223,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 9,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 7,
+          "nontax": 8
+        }
+      }
+    },
+    {
+      "package_index": 7,
+      "source_index": 1372,
+      "sample_id": "e3fcd0c2b31141409e55763129f437a7",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "high_5_to_8",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 61.196,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 15
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 8
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 8
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 15,
+          "nontax": 8
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 8
+        }
+      }
+    },
+    {
+      "package_index": 8,
+      "source_index": 1422,
+      "sample_id": "02d1d48dded2421189e275420ef27707",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 153.052,
+      "metrics": {
+        "typing": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 5,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.8571428571428571,
+          "neighborhood_similarity": 0.8055555555555555,
+          "taxonomy_similarity": 1.0,
+          "graph_similarity": 0.8875661375661376,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 1,
+          "taxonomy": 5,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 1,
+          "taxonomy": 5,
+          "nontax": 0
+        }
+      }
+    },
+    {
+      "package_index": 9,
+      "source_index": 1883,
+      "sample_id": "661d31bea55143fcb6572f7adc6f7d49",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 6,
+      "latency_sec": 485.561,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 0.8666666666666667,
+          "f1": 0.9285714285714286,
+          "tp": 26,
+          "fp": 0,
+          "fn": 4
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.8387096774193549,
+          "neighborhood_similarity": 0.7718894009216589,
+          "taxonomy_similarity": 0.8344086021505377,
+          "graph_similarity": 0.8150025601638505,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 30,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 26,
+          "nontax": 2
+        }
+      }
+    },
+    {
+      "package_index": 10,
+      "source_index": 2049,
+      "sample_id": "0a35f663d76f441b9ae5ecc88df7c8f6",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 62.515,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 5
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 5,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 5,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 5,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 5
+        }
+      }
+    },
+    {
+      "package_index": 11,
+      "source_index": 2211,
+      "sample_id": "576e13deb7fd47f7ba9b4efd27b49f41",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 2,
+      "latency_sec": 387.275,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 23
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 23,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 8
+        }
+      }
+    },
+    {
+      "package_index": 12,
+      "source_index": 2401,
+      "sample_id": "e0a82e958e6847ebb2d2388e20659198",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 3,
+      "latency_sec": 217.479,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 33
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 33,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 8
+        }
+      }
+    },
+    {
+      "package_index": 13,
+      "source_index": 2454,
+      "sample_id": "0bcd7cc3cb554d4ab359ecafaeef6972",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 72.609,
+      "metrics": {
+        "typing": {
+          "precision": 0.8,
+          "recall": 0.6666666666666666,
+          "f1": 0.7272727272727272,
+          "tp": 4,
+          "fp": 1,
+          "fn": 2
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 0.56,
+          "f1": 0.717948717948718,
+          "tp": 14,
+          "fp": 0,
+          "fn": 11
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 7
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 7
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.631578947368421,
+          "neighborhood_similarity": 0.519927536231884,
+          "taxonomy_similarity": 0.5123456790123457,
+          "graph_similarity": 0.5546173875375503,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 6,
+          "taxonomy": 25,
+          "nontax": 7
+        },
+        "pred_counts": {
+          "typing": 5,
+          "taxonomy": 14,
+          "nontax": 0
+        }
+      }
+    },
+    {
+      "package_index": 14,
+      "source_index": 2620,
+      "sample_id": "ce0eec1847b84a07904ab2c526419498",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 45.904,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 6
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 6,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 8
+        }
+      }
+    },
+    {
+      "package_index": 15,
+      "source_index": 2820,
+      "sample_id": "516600dece704918a285456028cc14b4",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 119.999,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 13
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 13,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 8
+        }
+      }
+    },
+    {
+      "package_index": 16,
+      "source_index": 2821,
+      "sample_id": "1eb94a2667aa4c7cba41a2349a208297",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 163.426,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.375,
+          "recall": 0.2727272727272727,
+          "f1": 0.3157894736842105,
+          "tp": 3,
+          "fp": 5,
+          "fn": 8
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.22222222222222224,
+          "neighborhood_similarity": 0.13,
+          "taxonomy_similarity": 0.11875,
+          "graph_similarity": 0.15699074074074074,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 11,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 4,
+          "taxonomy": 8,
+          "nontax": 2
+        }
+      }
+    },
+    {
+      "package_index": 17,
+      "source_index": 3189,
+      "sample_id": "6f07e3919d72446fa3f8483e4051544e",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 2,
+      "latency_sec": 492.769,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 30
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 6,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 6,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 30,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 6
+        }
+      }
+    },
+    {
+      "package_index": 18,
+      "source_index": 3204,
+      "sample_id": "b7be7f0f040c4baca29f514b5652ac1f",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 100.739,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 18
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 3
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 3
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 1,
+          "taxonomy": 18,
+          "nontax": 3
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 8
+        }
+      }
+    },
+    {
+      "package_index": 19,
+      "source_index": 3313,
+      "sample_id": "c8474ccb8a54436e8131a6c4703c8876",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "high_5_to_8",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 85.113,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.75,
+          "recall": 0.5454545454545454,
+          "f1": 0.631578947368421,
+          "tp": 6,
+          "fp": 2,
+          "fn": 5
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 5
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 5
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.42857142857142855,
+          "neighborhood_similarity": 0.3098958333333333,
+          "taxonomy_similarity": 0.3525252525252525,
+          "graph_similarity": 0.36366417147667146,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 11,
+          "nontax": 5
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 8,
+          "nontax": 4
+        }
+      }
+    },
+    {
+      "package_index": 20,
+      "source_index": 3369,
+      "sample_id": "c9dacbcc831141e0b69f29f4c7f7b1ae",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 97.899,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.125,
+          "recall": 0.041666666666666664,
+          "f1": 0.0625,
+          "tp": 1,
+          "fp": 7,
+          "fn": 23
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 5,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 5,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.05128205128205129,
+          "neighborhood_similarity": 0.013888888888888888,
+          "taxonomy_similarity": 0.0195578231292517,
+          "graph_similarity": 0.02824292110006396,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 24,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 8,
+          "nontax": 5
+        }
+      }
+    },
+    {
+      "package_index": 21,
+      "source_index": 3386,
+      "sample_id": "50f455666e5740748dc8a38da69e323d",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 77.493,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.8461538461538461,
+          "recall": 0.3793103448275862,
+          "f1": 0.5238095238095238,
+          "tp": 11,
+          "fp": 2,
+          "fn": 18
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 7
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 7
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.44897959183673475,
+          "neighborhood_similarity": 0.2878370098039216,
+          "taxonomy_similarity": 0.22916666666666666,
+          "graph_similarity": 0.32199442276910767,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 29,
+          "nontax": 7
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 13,
+          "nontax": 0
+        }
+      }
+    },
+    {
+      "package_index": 22,
+      "source_index": 3402,
+      "sample_id": "7bc6008a2571472c9f2421d99e0b27fd",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 83.415,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.7142857142857143,
+          "recall": 1.0,
+          "f1": 0.8333333333333333,
+          "tp": 5,
+          "fp": 2,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 3
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 3
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.625,
+          "neighborhood_similarity": 0.4083333333333333,
+          "taxonomy_similarity": 0.6,
+          "graph_similarity": 0.5444444444444444,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 5,
+          "nontax": 3
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 7,
+          "nontax": 1
+        }
+      }
+    },
+    {
+      "package_index": 23,
+      "source_index": 3500,
+      "sample_id": "c5ec1d006be1421aa0439a2471378cfd",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 138.659,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 5
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 5,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 1,
+          "nontax": 8
+        }
+      }
+    },
+    {
+      "package_index": 24,
+      "source_index": 3642,
+      "sample_id": "319b858eff9e40348547205f8f4adaed",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 114.51,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 6,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 7,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 7,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.5217391304347826,
+          "neighborhood_similarity": 0.45952380952380956,
+          "taxonomy_similarity": 1.0,
+          "graph_similarity": 0.6604209799861974,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 6,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 6,
+          "nontax": 7
+        }
+      }
+    },
+    {
+      "package_index": 25,
+      "source_index": 3725,
+      "sample_id": "4e20ba5a75d0446ca5e18bfd51735063",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 47.381,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 8
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 3
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 3
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 8,
+          "nontax": 3
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 8
+        }
+      }
+    },
+    {
+      "package_index": 26,
+      "source_index": 3882,
+      "sample_id": "4d5e1a9317224bd0b8820abc8bd9a559",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 261.528,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.5,
+          "recall": 0.22727272727272727,
+          "f1": 0.3125,
+          "tp": 5,
+          "fp": 5,
+          "fn": 17
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.2631578947368421,
+          "neighborhood_similarity": 0.1953846153846154,
+          "taxonomy_similarity": 0.22058823529411764,
+          "graph_similarity": 0.22637691513852506,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 22,
+          "nontax": 2
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 10,
+          "nontax": 4
+        }
+      }
+    },
+    {
+      "package_index": 27,
+      "source_index": 3952,
+      "sample_id": "7b0441d120944cc29a86f2ef1daadd1b",
+      "assigned_stratum": "other_open_predicate",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 68.68,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.5,
+          "recall": 0.10344827586206896,
+          "f1": 0.17142857142857143,
+          "tp": 3,
+          "fp": 3,
+          "fn": 26
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 5
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.13636363636363635,
+          "neighborhood_similarity": 0.07368421052631578,
+          "taxonomy_similarity": 0.07242063492063493,
+          "graph_similarity": 0.09415616060352903,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 29,
+          "nontax": 5
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 6,
+          "nontax": 4
+        }
+      }
+    },
+    {
+      "package_index": 28,
+      "source_index": 4120,
+      "sample_id": "55972cf3aeb2440baba3ff3b144c28c8",
+      "assigned_stratum": "disjoint_with",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 175.079,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 2
+        },
+        "taxonomy": {
+          "precision": 0.5,
+          "recall": 0.14285714285714285,
+          "f1": 0.22222222222222224,
+          "tp": 1,
+          "fp": 1,
+          "fn": 6
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 7,
+          "fn": 3
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 7,
+          "fn": 3
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.09523809523809525,
+          "neighborhood_similarity": 0.10256410256410256,
+          "taxonomy_similarity": 0.13333333333333333,
+          "graph_similarity": 0.11037851037851039,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 2,
+          "taxonomy": 7,
+          "nontax": 3
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 2,
+          "nontax": 7
+        }
+      }
+    },
+    {
+      "package_index": 29,
+      "source_index": 4292,
+      "sample_id": "81d8babfa9354bbb888272b0c5aa37dc",
+      "assigned_stratum": "equivalent_class",
+      "density_stratum": "medium_2_to_4",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "latency_sec": 123.376,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 34
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 3
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 3
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 34,
+          "nontax": 3
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 8
+        }
+      }
+    }
+  ],
+  "interpretation": {
+    "official_training_text": true,
+    "gold_stratified_not_unbiased": true,
+    "naturalistic_benchmark": false,
+    "verified_temporal_holdout": false,
+    "may_tune_generation_or_thresholds": false,
+    "may_fit_or_apply_calibrator": false,
+    "may_authorize_deployment": false
+  },
+  "confirmatory_eligible": false,
+  "scientific_deployable": false
+}

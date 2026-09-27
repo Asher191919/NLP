@@ -1,0 +1,2303 @@
+{
+  "meta": {
+    "protocol": "relation_text_model_annotation_v1",
+    "sample_protocol": "relation_text_annotation_v1",
+    "packet_id": "5b53d848edca6abb58f4",
+    "manifest_sha256": "f7405fe8f87dd5619f239cf3783c6ab9ac863eac7d8944382b4fe768a9b93cc8",
+    "adjudication_sha256": "dbef8c25cbe3d07e9f9faed12eba0da746083d2c034491b282858f23c04cf2aa",
+    "n_samples": 30,
+    "n_relations": 169,
+    "annotation_provenance": "declared_by_annotation_files_not_identity_verified",
+    "source_annotator_ids": [
+      "model_a_wb-reasoning",
+      "model_b_wb-default"
+    ],
+    "adjudicator_ids": [
+      "model_c_wb-reasoning"
+    ],
+    "annotation_source": "dual_model_adjudicated",
+    "declared_human_annotation": false,
+    "human_annotated": false,
+    "confirmatory_eligible": false,
+    "calibration_ready": false,
+    "exploratory_calibration_ready": true,
+    "calibration_scope": "exploratory_dual_llm_weak_label",
+    "claim_label": "exploratory dual-LLM weak-label calibration",
+    "source_annotator_models": [
+      "workbuddy-subagent:default",
+      "workbuddy-subagent:reasoning"
+    ],
+    "adjudicator_models": [
+      "workbuddy-subagent:reasoning"
+    ],
+    "requires_human_audit_before_confirmatory": true,
+    "human_audit_scope": "all_disagreements, all_positive_relations, random_20pct_agreed_negatives"
+  },
+  "samples": [
+    {
+      "sample_key": "0cf8c1f31b7e58e5f6de",
+      "task": "a",
+      "source_index": 48,
+      "relations": [
+        {
+          "triple": [
+            "refractive amblyopia",
+            "develops_from",
+            "uncorrected refractive disparities"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "refractive amblyopia, which arises from uncorrected refractive disparities"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "strabismic amblyopia",
+            "develops_from",
+            "misalignment"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "strabismic amblyopia, resulting from misalignment"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "trachoma",
+            "causes",
+            "blindness"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "trachoma is a bacterial infectious disease that can lead to blindness"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "0e8dc10a03ef9c2738a9",
+      "task": "a",
+      "source_index": 562,
+      "relations": [
+        {
+          "triple": [
+            "barioperovskite",
+            "derives from",
+            "mineral precursors"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Barioperovskite represents a class of functional materials derived from mineral precursors"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "pengzhizhongite-24r and achtarandite",
+            "located in",
+            "complex oxide deposits"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Researchers have documented Pengzhizhongite-24R and Achtarandite in complex oxide deposits"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "zircophyllite and atencioite",
+            "located in",
+            "pegmatitic environments"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Zircophyllite and Atencioite are often found in pegmatitic environments"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "3d26a16175967faadac4",
+      "task": "a",
+      "source_index": 659,
+      "relations": [
+        {
+          "triple": [
+            "convection",
+            "regulates",
+            "vertical mixing of air"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Convection drives the vertical mixing of air"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "diurnal movement patterns",
+            "regulates",
+            "daily activity cycles"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "diurnal movement patterns that regulate daily activity cycles"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "heavy rainfall",
+            "positively regulates",
+            "mudslide occurrences"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "mudslide occurrences triggered by heavy rainfall"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "recharge",
+            "part_of",
+            "transport"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "recharge replenishes groundwater systems as part of this broader transport network"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "slide events",
+            "regulates",
+            "material displacement"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "material displacement is often driven by slide events"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "3e3c72ddf55be826e2e3",
+      "task": "a",
+      "source_index": 864,
+      "relations": [
+        {
+          "triple": [
+            "charcoal",
+            "derives from",
+            "wood"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "wood is subjected to thermal degradation, it forms charcoal"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "cork",
+            "derives from",
+            "oak bark"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "cork from oak bark"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "gas molecules",
+            "located in",
+            "lattice of water ice"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "where gas molecules are trapped within a lattice of water ice"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "humus",
+            "derives from",
+            "plant matter"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "plant matter decomposes to form humus"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "mineral dust",
+            "derives from",
+            "wind erosion"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "mineral dust generated by wind erosion"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "sapropelic kerogen",
+            "derives from",
+            "aquatic algal debris"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "sapropelic kerogen derived from aquatic algal debris"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "c8afd393363bcfb1d758",
+      "task": "a",
+      "source_index": 1108,
+      "relations": [
+        {
+          "triple": [
+            "beef brisket",
+            "derives from",
+            "brisket"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the beef brisket is a distinct preparation derived from that primal section"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "fat back",
+            "part_of",
+            "shoulder (meat cut)"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the fat back, which is technically a sub-part of the shoulder (meat cut)"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "fore shank",
+            "part_of",
+            "shank (meat)"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the fore shank represents a specific sub-region belonging to the shank (meat)"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "ground sirloin",
+            "derives from",
+            "sirloin"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "ground sirloin is processed from the sirloin"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "pork spareribs",
+            "derives from",
+            "side (meat cut)"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The side (meat cut) serves as another fundamental cut of meat, u.s., from which popular items like pork spareribs are harvested"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "723685d243983ec78bc9",
+      "task": "a",
+      "source_index": 1159,
+      "relations": [
+        {
+          "triple": [
+            "cambarus",
+            "located in",
+            "cooler streams"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the genus Cambarus, which exhibits robust populations in the cooler streams"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "emodin",
+            "located in",
+            "plant tissues"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the pigment emodin was identified as a prominent anthraquinone compound found in the plant tissues"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "faxonius limosus",
+            "located in",
+            "muddy bottom habitats"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Faxonius limosus, a species belonging to the american crayfish family that thrives in muddy bottom habitats"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "pork leg center slice (raw)",
+            "derives from",
+            "a piece of pig (raw)"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the pork leg center slice (raw), which originates from a piece of pig (raw) and represents a specific cut from the hindquarter."
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "pork leg center slice (raw)",
+            "derives from",
+            "piece of pig (raw)"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the pork leg center slice (raw), which originates from a piece of pig (raw)"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "037dc73c98f67807cb95",
+      "task": "a",
+      "source_index": 1286,
+      "relations": [
+        {
+          "triple": [
+            "acute myocarditis",
+            "develops_from",
+            "infections"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "acute myocarditis, which may develop suddenly following infections"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "autoimmune myocarditis",
+            "develops_from",
+            "the body's immune system"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "autoimmune myocarditis, which results from the body's immune system mistakenly attacking heart tissues"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "a3d7c70645dd818fb70a",
+      "task": "a",
+      "source_index": 1914,
+      "relations": [
+        {
+          "triple": [
+            "hyperekplexia 1",
+            "regulates",
+            "motor control"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "hyperekplexia 1 affects motor control via startle reflexes"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "muscular dystrophy-dystroglycanopathy type b15",
+            "regulates",
+            "glycosylation of dystroglycan"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "muscular dystrophy-dystroglycanopathy type B15, affecting glycosylation of dystroglycan"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "spondylocostal dysostosis 1",
+            "regulates",
+            "vertebral development"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "spondylocostal dysostosis 1, which impacts vertebral development"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "e73d073a8f76b0a88658",
+      "task": "a",
+      "source_index": 1966,
+      "relations": [],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "c3d79112a1708e865c00",
+      "task": "a",
+      "source_index": 2174,
+      "relations": [
+        {
+          "triple": [
+            "amylopectin",
+            "derives from",
+            "starch"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "glucose derived from amylopectin derived from starch"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "amylose",
+            "derives from",
+            "starch"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "glucose derived from amylose derived from starch"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "glucomannan",
+            "derives from",
+            "hemicellulose"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "glucose derived from glucomannan derived from hemicellulose"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "glucose",
+            "derives from",
+            "amorphous cellulose"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "glucose derived from amorphous cellulose"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "glucose",
+            "derives from",
+            "amylopectin"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "glucose derived from amylopectin derived from starch"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "glucose",
+            "derives from",
+            "amylose"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "glucose derived from amylose derived from starch"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "glucose",
+            "derives from",
+            "glucomannan"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "glucose derived from glucomannan derived from hemicellulose"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "glucose",
+            "derives from",
+            "maltose"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "glucose derived from maltose"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "glucose",
+            "derives from",
+            "raffinose"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "glucose derived from raffinose derived from raffinose family oligosaccharide"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "glucose",
+            "derives from",
+            "stachyose"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "glucose derived from stachyose derived from raffinose family oligosaccharide"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "glucose",
+            "derives from",
+            "sucrose"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "glucose derived from sucrose"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "glucose",
+            "derives from",
+            "verbascose"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "glucose derived from verbascose derived from raffinose family oligosaccharide"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "glucose",
+            "derives from",
+            "xylan"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "glucose derived from xylan derived from hemicellulose"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "glucose",
+            "derives from",
+            "xyloglucan"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "glucose derived from xyloglucan derived from hemicellulose"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "raffinose",
+            "derives from",
+            "raffinose family oligosaccharide"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "glucose derived from raffinose derived from raffinose family oligosaccharide"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "stachyose",
+            "derives from",
+            "raffinose family oligosaccharide"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "glucose derived from stachyose derived from raffinose family oligosaccharide"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "verbascose",
+            "derives from",
+            "raffinose family oligosaccharide"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "glucose derived from verbascose derived from raffinose family oligosaccharide"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "xylan",
+            "derives from",
+            "hemicellulose"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "glucose derived from xylan derived from hemicellulose"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "xyloglucan",
+            "derives from",
+            "hemicellulose"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "glucose derived from xyloglucan derived from hemicellulose"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "f458c2a4ec6a51e5fd7d",
+      "task": "a",
+      "source_index": 2319,
+      "relations": [
+        {
+          "triple": [
+            "chordomas",
+            "develops_from",
+            "notochord"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Chordomas are rare, slow-growing malignant bone tumors that arise from the remnants of the notochord."
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "chordomas",
+            "develops_from",
+            "remnants of the notochord"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Chordomas are rare, slow-growing malignant bone tumors that arise from the remnants of the notochord."
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "clivus chordoma",
+            "develops_from",
+            "clival region"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the clivus chordoma is a specific subtype arising from the clival region"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "marginal corneal ulcer",
+            "located in",
+            "limbus"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the marginal corneal ulcer, which typically occurs at the limbus"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "mycotic corneal ulcer",
+            "develops_from",
+            "fungal infections"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the mycotic corneal ulcer arises from fungal infections"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "spinal chordoma",
+            "located in",
+            "vertebral column"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The spinal chordoma manifests along the vertebral column"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "c1236bd636d750c34e84",
+      "task": "a",
+      "source_index": 2522,
+      "relations": [],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "812be39864326e677c2e",
+      "task": "a",
+      "source_index": 3390,
+      "relations": [
+        {
+          "triple": [
+            "fat",
+            "part_of",
+            "poultry"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "specifically liver and fat of poultry (uncooked)"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "liver",
+            "part_of",
+            "poultry"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "specifically liver and fat of poultry (uncooked)"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "4335dd9d441401a9de73",
+      "task": "a",
+      "source_index": 3515,
+      "relations": [
+        {
+          "triple": [
+            "alcohols",
+            "has part",
+            "hydroxyl (-oh) functional groups"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "alcohols are diverse compounds that contain hydroxyl (-OH) functional groups"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "carboxylic acid anions",
+            "derives from",
+            "deprotonation of carboxylic acids"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Carboxylic acid anions, known as oxoanions, arise from the deprotonation of carboxylic acids"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "oxoanions",
+            "derives from",
+            "carboxylic acids"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Carboxylic acid anions, known as oxoanions, arise from the deprotonation of carboxylic acids"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "a2ed3a0c5534ab6ee628",
+      "task": "a",
+      "source_index": 4153,
+      "relations": [
+        {
+          "triple": [
+            "central nervous system melanocytic neoplasm",
+            "derives from",
+            "pigment-producing cells"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "central nervous system melanocytic neoplasm, derived from pigment-producing cells"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "central nervous system rhabdomyosarcoma",
+            "develops_from",
+            "muscle-like tissue"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "central nervous system rhabdomyosarcoma, which arises from muscle-like tissue"
+          ],
+          "decision_source": "double_annotation_agreement"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "2ef68fa8681e2c0013da",
+      "task": "b",
+      "source_index": 96,
+      "relations": [
+        {
+          "triple": [
+            "cardinal organ part",
+            "part_of",
+            "cardinal part of multi-tissue plant structure"
+          ],
+          "evidence_mode": "cross_sentence",
+          "evidence": [
+            "Internal or specific functional parts include the cardinal part of multi-tissue plant structure.",
+            "Within this group, we find the arilloid and the cardinal organ part."
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "collective plant organ structure",
+            "part_of",
+            "collective plant structure"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Aggregations form a collective plant structure, and within that, a collective plant organ structure"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "3ca254ed1680846607b3",
+      "task": "b",
+      "source_index": 118,
+      "relations": [
+        {
+          "triple": [
+            "autosomal dominant cutis laxa",
+            "derives from",
+            "mutations"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "autosomal dominant cutis laxa, which arises from mutations transmitted via a dominant allele"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "autosomal dominant cutis laxa",
+            "develops_from",
+            "mutations transmitted via a dominant allele"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "autosomal dominant cutis laxa, which arises from mutations transmitted via a dominant allele"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "bf6885a86c3bf4522cbe",
+      "task": "b",
+      "source_index": 209,
+      "relations": [
+        {
+          "triple": [
+            "concentration of avenacin a-1",
+            "located in",
+            "oats"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "concentration of avenacin a-1, which acts as a defense compound in oats"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "concentration of azukisaponin iii",
+            "located in",
+            "azuki beans"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "concentration of soyasaponin a1 is prevalent in soybeans, concentration of azukisaponin iii occurs in azuki beans"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "concentration of crocetin",
+            "derives from",
+            "saffron"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "concentration of crocetin and concentration of norbixin, derived from saffron and annatto respectively"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "concentration of ginsenoside rb2",
+            "part_of",
+            "ginseng"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "concentration of ginsenoside rg2, concentration of ginsenoside rb2, and concentration of ginsenoside rc are the primary bioactive constituents of ginseng"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "concentration of ginsenoside rc",
+            "part_of",
+            "ginseng"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "concentration of ginsenoside rg2, concentration of ginsenoside rb2, and concentration of ginsenoside rc are the primary bioactive constituents of ginseng"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "concentration of ginsenoside rg2",
+            "part_of",
+            "ginseng"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "concentration of ginsenoside rg2, concentration of ginsenoside rb2, and concentration of ginsenoside rc are the primary bioactive constituents of ginseng"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "concentration of limonene-1,2-diol",
+            "derives from",
+            "citrus oils"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the concentration of limonene-1,2-diol serves as a transformation product of citrus oils"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "concentration of lubimin",
+            "located in",
+            "specific plant species"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "concentration of lubimin, found in specific plant species"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "concentration of norbixin",
+            "derives from",
+            "annatto"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "concentration of crocetin and concentration of norbixin, derived from saffron and annatto respectively"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "concentration of obacunone",
+            "located in",
+            "citrus"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "concentration of obacunone, the latter being a limonoid triterpenoid found in citrus"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "concentration of phytol",
+            "part_of",
+            "chlorophyll structure"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "concentration of phytol is a key component of chlorophyll structure"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "concentration of soyasaponin a1",
+            "located in",
+            "soybeans"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "concentration of soyasaponin a1 is prevalent in soybeans, concentration of azukisaponin iii occurs in azuki beans"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "concentration of spinasaponin a",
+            "located in",
+            "spinach"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "concentration of spinasaponin a is associated with spinach and related species"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "ffbc4d6ce0336591c572",
+      "task": "b",
+      "source_index": 258,
+      "relations": [
+        {
+          "triple": [
+            "animal drumstick (skinless)",
+            "part_of",
+            "lower body of poultry"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The lower body of poultry is segmented into distinct functional cuts: the 'animal drumstick (skinless)', the 'animal thigh (skinless)', and the general 'animal leg (skinless)'"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "animal leg (skinless)",
+            "part_of",
+            "lower body of poultry"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The lower body of poultry is segmented into distinct functional cuts: the 'animal drumstick (skinless)', the 'animal thigh (skinless)', and the general 'animal leg (skinless)'"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "animal thigh (skinless)",
+            "part_of",
+            "lower body of poultry"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The lower body of poultry is segmented into distinct functional cuts: the 'animal drumstick (skinless)', the 'animal thigh (skinless)', and the general 'animal leg (skinless)'"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "piece of dark animal meat (skinless)",
+            "located in",
+            "weight-bearing muscles"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "'piece of dark animal meat (skinless)', found in weight-bearing muscles"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "piece of light animal meat (skinless)",
+            "located in",
+            "flight muscles of poultry"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "'piece of light animal meat (skinless)', which is typically found in flight muscles of poultry"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "piece of pork meat (skinless)",
+            "derives from",
+            "hams"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "'piece of pork meat (skinless)' is widely utilized in various cuisines, often derived from hams or loins where the rind has been removed."
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "piece of pork meat (skinless)",
+            "derives from",
+            "hams or loins"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "'piece of pork meat (skinless)' is widely utilized in various cuisines, often derived from hams or loins"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "piece of pork meat (skinless)",
+            "derives from",
+            "loins"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "'piece of pork meat (skinless)' is widely utilized in various cuisines, often derived from hams or loins where the rind has been removed."
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "ad3248b084cb29772a3c",
+      "task": "b",
+      "source_index": 349,
+      "relations": [
+        {
+          "triple": [
+            "cynoscion acoupa",
+            "located in",
+            "south american waters"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "cynoscion acoupa, found in south american waters"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "cynoscion jamaicensis",
+            "located in",
+            "caribbean and gulf of mexico regions"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "cynoscion jamaicensis, inhabiting caribbean and gulf of mexico regions"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "cynoscion regalis",
+            "located in",
+            "atlantic coast"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "cynoscion regalis, widely distributed along the atlantic coast"
+          ],
+          "decision_source": "double_annotation_agreement"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "04e4fd278857190bab4d",
+      "task": "b",
+      "source_index": 369,
+      "relations": [
+        {
+          "triple": [
+            "concentration of amylose derived from starch in material entity",
+            "derives from",
+            "starch"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the concentration of amylose derived from starch in material entity represents a more specific subset"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "concentration of fructan derived from hemicellulose in material entity",
+            "derives from",
+            "hemicellulose"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the concentration of fructan derived from hemicellulose in material entity is a subclass of concentration of fructan in material entity"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "concentration of galactan derived from hemicellulose in material entity",
+            "derives from",
+            "hemicellulose"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The concentration of galactan derived from hemicellulose in material entity is a subclass of concentration of galactan in material entity"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "concentration of galactomannan",
+            "derives from",
+            "hemicellulose"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "with the concentration of galactomannan derived from hemicellulose in material entity representing a specific derivation."
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "concentration of galactomannan derived from hemicellulose in material entity",
+            "derives from",
+            "hemicellulose"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the concentration of galactomannan derived from hemicellulose in material entity representing a specific derivation"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "concentration of galacturonan derived from pectin in material entity",
+            "derives from",
+            "pectin"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Specifically, the concentration of galacturonan derived from pectin in material entity is a subclass of concentration of galacturonan in material entity"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "e30db887e826e796ed85",
+      "task": "b",
+      "source_index": 445,
+      "relations": [],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "17c5af20cab2ecdc1230",
+      "task": "b",
+      "source_index": 476,
+      "relations": [
+        {
+          "triple": [
+            "amyloid proteins",
+            "located in",
+            "spleen"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "serum amyloid A amyloidosis can deposit amyloid proteins in the spleen"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "blood",
+            "located in",
+            "spleen"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "where blood becomes trapped within the spleen"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "hemangioma of spleen",
+            "has part",
+            "blood vessels"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Hemangioma of spleen is a benign vascular tumor composed of blood vessels"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "leukemic cells",
+            "located in",
+            "splenic tissue"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "where leukemic cells infiltrate splenic tissue"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "spleen angiosarcoma",
+            "develops_from",
+            "lining of blood vessels"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Another aggressive form within this domain is spleen angiosarcoma, a rare tumor arising from the lining of blood vessels."
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "splenic infarction",
+            "develops_from",
+            "compromised blood supply"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "splenic infarction, which results from compromised blood supply causing tissue death"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "splenic tuberculosis",
+            "derives from",
+            "mycobacterium tuberculosis"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "splenic tuberculosis, often resulting from the spread of Mycobacterium tuberculosis"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "splenic tuberculosis",
+            "develops_from",
+            "mycobacterium tuberculosis"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "splenic tuberculosis, often resulting from the spread of Mycobacterium tuberculosis"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "visceral leishmaniasis",
+            "causes",
+            "splenomegaly"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "visceral leishmaniasis is a systemic parasitic infection that frequently causes splenomegaly"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "visceral leishmaniasis",
+            "located in",
+            "spleen"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "visceral leishmaniasis is a systemic parasitic infection that frequently causes splenomegaly and involves the spleen"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "7b7e28cf0ffb25163635",
+      "task": "b",
+      "source_index": 494,
+      "relations": [
+        {
+          "triple": [
+            "hydroxides",
+            "regulates",
+            "nutrient bioavailability"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the concentration of hydroxides can significantly alter nutrient bioavailability"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "inorganic oxide",
+            "regulates",
+            "cation exchange capacity"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "an inorganic oxide that influences cation exchange capacity"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "mineral deposits",
+            "has part",
+            "inorganic oxide"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "mineral deposits often contain an inorganic oxide that influences cation exchange capacity"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "organic oxide",
+            "derives from",
+            "decaying biomass"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "an organic oxide derived from decaying biomass"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "oxoacid",
+            "derives from",
+            "hydroxides"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "they can form an oxoacid, which is chemically derived from the hydroxides structure"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "oxoacid",
+            "derives from",
+            "hydroxides structure"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "they can form an oxoacid, which is chemically derived from the hydroxides structure and contributes to soil acidity"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "e8cc5f686501d04654b7",
+      "task": "b",
+      "source_index": 824,
+      "relations": [
+        {
+          "triple": [
+            "endocrine system",
+            "has part",
+            "glands"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The endocrine system consists of various glands that regulate critical body functions through hormone secretion"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "parathyroid gland diseases",
+            "regulates",
+            "calcium homeostasis"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "parathyroid gland diseases impact calcium homeostasis"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "thyroid gland diseases",
+            "regulates",
+            "metabolic rate"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Thyroid gland diseases influence metabolic rate and overall development"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "various glands",
+            "regulates",
+            "critical body functions"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The endocrine system consists of various glands that regulate critical body functions through hormone secretion"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "1e67a8921ca9c82a9309",
+      "task": "b",
+      "source_index": 1002,
+      "relations": [
+        {
+          "triple": [
+            "acid dune sand",
+            "located in",
+            "dune systems"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "acid dune sand formed in specific coastal or inland dune systems"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "alluvial sediment",
+            "located in",
+            "floodplains"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "alluvial sediment forms through deposition by flowing water in floodplains"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "asphalt",
+            "derives from",
+            "petroleum"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "petroleum serves as a critical resource, yielding essential compounds such as diesel fuel and gasoline, while also providing the basis for asphalt."
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "biogenous sediment",
+            "has part",
+            "biological debris"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "biogenous sediment consists of biological debris"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "desert sand",
+            "located in",
+            "arid regions"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "desert sand found in arid regions"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "diesel fuel",
+            "derives from",
+            "petroleum"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "petroleum serves as a critical resource, yielding essential compounds such as diesel fuel and gasoline"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "gasoline",
+            "derives from",
+            "petroleum"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "petroleum serves as a critical resource, yielding essential compounds such as diesel fuel and gasoline"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "hydrogenous sediment",
+            "derives from",
+            "water"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "hydrogenous sediment forms through chemical precipitation from water"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "hydrothermally-influenced sediment",
+            "located in",
+            "volcanic vents"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "hydrothermally-influenced sediment found near volcanic vents"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "lake sediment",
+            "located in",
+            "freshwater bodies"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "lake sediment accumulates in freshwater bodies"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "mangrove biome sediment",
+            "located in",
+            "coastal wetlands"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "mangrove biome sediment accumulated in coastal wetlands"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "marine sediment",
+            "located in",
+            "oceans"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "marine sediment settles in oceans"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "microbial communities",
+            "located in",
+            "hyperthermophilic sediment"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "mesophilic sediment, thermophilic sediment, and hyperthermophilic sediment based on the temperature preferences of the microbial communities thriving within them."
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "microbial communities",
+            "located in",
+            "mesophilic sediment"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "mesophilic sediment, thermophilic sediment, and hyperthermophilic sediment based on the temperature preferences of the microbial communities thriving within them."
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "microbial communities",
+            "located in",
+            "thermophilic sediment"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "mesophilic sediment, thermophilic sediment, and hyperthermophilic sediment based on the temperature preferences of the microbial communities thriving within them."
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "suspended sediment",
+            "located in",
+            "fluid column"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "or suspended sediment as they move within a fluid column"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "terrigenous sediment",
+            "derives from",
+            "land erosion"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "terrigenous sediment derives from land erosion"
+          ],
+          "decision_source": "double_annotation_agreement"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "46ed7f3706ce269756c4",
+      "task": "b",
+      "source_index": 1355,
+      "relations": [
+        {
+          "triple": [
+            "anatomical structures",
+            "develops_from",
+            "ectoderm"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The ectoderm, one of the primary germ layers in embryonic development, gives rise to a diverse array of anatomical structures"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "anterior uvea",
+            "part_of",
+            "uvea"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The uvea, a vascular layer of the eye, is an ectoderm-derived structure that includes the anterior uvea."
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "chorioretinal region",
+            "located in",
+            "eye"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The chorioretinal region, essential for photoreceptor function, is another ectoderm-derived structure within the eye."
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "ciliary muscle",
+            "regulates",
+            "lens"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The ciliary muscle, an ectoderm-derived structure, adjusts the tension on the lens"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "dermal skeletal element",
+            "develops_from",
+            "neural crest cells"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Skeletal components such as the dermal skeletal element are ectoderm-derived structures, often arising from neural crest cells"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "eyeball of camera-type eye",
+            "part_of",
+            "camera-type eye"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the camera-type eye is a prominent ectoderm-derived structure, comprising the eyeball of camera-type eye which houses the visual apparatus"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "feathers",
+            "located in",
+            "birds"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Feathers, complex integumentary appendages, are also ectoderm-derived structures found in birds."
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "gray matter",
+            "part_of",
+            "central nervous system cell part cluster"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "a central nervous system cell part cluster that includes functional subdivisions such as gray matter and neural nucleus"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "iris smooth muscle",
+            "regulates",
+            "light entry"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the iris smooth muscle regulates light entry"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "lens",
+            "develops_from",
+            "lens vesicle"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The lens vesicle, which forms the lens, is an ectoderm-derived structure"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "limbic system",
+            "located in",
+            "central nervous system"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The limbic system, a set of brain structures involved in emotion and memory, is an ectoderm-derived structure within the central nervous system."
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "neural crest-derived structure elements",
+            "develops_from",
+            "neural crest"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The neural crest, a transient multipotent cell population, gives rise to neural crest-derived structure elements throughout the body."
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "neural nucleus",
+            "part_of",
+            "central nervous system cell part cluster"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "a central nervous system cell part cluster that includes functional subdivisions such as gray matter and neural nucleus"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "neuromere",
+            "part_of",
+            "neural tube"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the neural tube segments into neuromere units, where the prosomere represents a specific regional subdivision of the forebrain"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "optic nerve",
+            "develops_from",
+            "optic vesicle"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The optic vesicle, the initial outpouching of the diencephalon, is an ectoderm-derived structure that eventually differentiates into the retina and optic nerve."
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "optic vesicle",
+            "part_of",
+            "diencephalon"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The optic vesicle, the initial outpouching of the diencephalon"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "posterior segment of eyeball",
+            "has part",
+            "vitreous body"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The posterior segment of eyeball contains the vitreous body"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "prosomere",
+            "part_of",
+            "forebrain"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the prosomere represents a specific regional subdivision of the forebrain"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "retina",
+            "develops_from",
+            "optic vesicle"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The optic vesicle, the initial outpouching of the diencephalon, is an ectoderm-derived structure that eventually differentiates into the retina and optic nerve."
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "smooth muscle of eye",
+            "part_of",
+            "eye"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The eye also contains smooth muscle of eye, which are ectoderm-derived structures responsible for controlling the pupil and lens shape."
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "uvea",
+            "has part",
+            "anterior uvea"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The uvea, a vascular layer of the eye, is an ectoderm-derived structure that includes the anterior uvea"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "vitreous body",
+            "part_of",
+            "posterior segment of eyeball"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The posterior segment of eyeball contains the vitreous body"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "wall of lateral ventricle",
+            "develops_from",
+            "ectoderm-derived tissue"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the wall of lateral ventricle illustrate how these boundaries are formed from ectoderm-derived tissue"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "wall of ventricular system of brain",
+            "part_of",
+            "ventricular system of brain"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "with its structural boundary defined by the wall of ventricular system of brain"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "dbceb06136ce5887a0ba",
+      "task": "b",
+      "source_index": 1398,
+      "relations": [
+        {
+          "triple": [
+            "adjustment disorder",
+            "develops_from",
+            "maladaptive reactions to identifiable stressors"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the adjustment disorder, which arises from maladaptive reactions to identifiable stressors"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "cognitive disorder",
+            "regulates",
+            "memory and reasoning abilities"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "the cognitive disorder, impacting memory and reasoning abilities"
+          ],
+          "decision_source": "adjudication"
+        }
+      ],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "3ae2c6f2190894cf523d",
+      "task": "b",
+      "source_index": 1491,
+      "relations": [],
+      "annotation_complete": true
+    },
+    {
+      "sample_key": "ca3a5c5ed3aaedfc58af",
+      "task": "b",
+      "source_index": 2560,
+      "relations": [
+        {
+          "triple": [
+            "betulinic acid",
+            "located in",
+            "various plant species"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The triterpenoid category extends to betulinic acid and erythrodiol, which are found in various plant species"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "diosgenin",
+            "derives from",
+            "wild yams"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Medicinal agriculture also focuses on glycyrrhetinic acid from licorice root and diosgenin derived from wild yams"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "erythrodiol",
+            "located in",
+            "various plant species"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "The triterpenoid category extends to betulinic acid and erythrodiol, which are found in various plant species"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "glycyrrhetinic acid",
+            "derives from",
+            "licorice root"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Medicinal agriculture also focuses on glycyrrhetinic acid from licorice root and diosgenin derived from wild yams"
+          ],
+          "decision_source": "double_annotation_agreement"
+        },
+        {
+          "triple": [
+            "grapevine crops",
+            "has part",
+            "(e)-trans-miyabenol c"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Furthermore, grapevine crops contain (E)-trans-miyabenol C, which is also a subclass of triterpenoid"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "obacunone",
+            "derives from",
+            "citrus agriculture"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "Citrus agriculture yields obacunone, another triterpenoid"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "soyasapogenol b",
+            "located in",
+            "soybeans"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "soybeans are a significant source of soyasapogenol B"
+          ],
+          "decision_source": "adjudication"
+        },
+        {
+          "triple": [
+            "soyasaponin a1",
+            "derives from",
+            "soyasapogenol b"
+          ],
+          "evidence_mode": "explicit",
+          "evidence": [
+            "soybeans are a significant source of soyasapogenol B, a compound that is a subclass of triterpenoid, which functions as a precursor in the biosynthesis of saponins like soyasaponin A1"
+          ],
+          "decision_source": "double_annotation_agreement"
+        }
+      ],
+      "annotation_complete": true
+    }
+  ]
+}

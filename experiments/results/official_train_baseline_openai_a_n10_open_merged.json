@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "challenge": "LLMs4OL 2026",
+    "task": "a",
+    "backend": "openai",
+    "model": "dots3-note-prev",
+    "system": "open_vocab",
+    "n_samples": 10,
+    "metric": "official_graph_similarity_exact",
+    "merged": true
+  },
+  "tasks": {
+    "task_a": {
+      "open_vocab": {
+        "system": "open_vocab",
+        "backend": "openai",
+        "model": "dots3-note-prev",
+        "n_samples": 10,
+        "term_typing_f1_micro": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 15,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy_f1_micro": {
+          "precision": 1.0,
+          "recall": 0.0625,
+          "f1": 0.11764705882352941,
+          "tp": 5,
+          "fp": 0,
+          "fn": 75
+        },
+        "nontax_f1_micro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "official_graph_similarity_avg": 0.22509342509342506,
+        "composite_typing_tax_gs": 0.44758016130565154,
+        "nontax_pred_total": 0,
+        "nontax_gold_total": 1,
+        "metric_policy": {
+          "graph_similarity": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "proxy_sgs_used": false
+        },
+        "merged_from_chunks": true,
+        "chunks": [
+          "official_train_baseline_openai_a_n5_off0.json",
+          "official_train_baseline_openai_a_n4_off5.json",
+          "official_train_baseline_openai_a_n1_off9.json"
+        ]
+      }
+    }
+  }
+}

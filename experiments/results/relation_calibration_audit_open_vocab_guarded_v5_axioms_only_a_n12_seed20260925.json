@@ -1,0 +1,503 @@
+{
+  "meta": {
+    "protocol": "relation_guarded_v2_independent_calibration_v1",
+    "audit_only": true,
+    "selection_uses_gold_locally": true,
+    "selection_is_calibration_only_not_unbiased_evaluation": true,
+    "gold_visible_to_model": false,
+    "contains_source_text": false,
+    "external_destination": "https://note3-prev-api.askdiandian.com/v1",
+    "model": "dots3-note-prev",
+    "system": "open_vocab_guarded_v5_axioms_only",
+    "samples_per_task": 12,
+    "sample_indices": [],
+    "seed": 20260925,
+    "prior_failed_connection_attempts": 0,
+    "prior_failed_unit_attempts": 0,
+    "prior_failed_low_level_attempts": 0,
+    "exclude_prefix": 40,
+    "exclude_eval_result": "experiments/results/official_stratified_open_openai_ab_s5_seed20260922.json",
+    "additional_exclude_results": [
+      "experiments/results/relation_calibration_a_n27_seed20260923.json",
+      "experiments/results/relation_calibration_ab_n12_seed20260923.json",
+      "experiments/results/relation_calibration_open_vocab_guarded_v5_axioms_only_a_indices1419-1554-1796-1824-1935-2676-3130-3516_seed20260924.json"
+    ],
+    "exclude_annotation_manifests": [
+      "experiments/annotations/relation_text_model_annotation_v1/manifest.json"
+    ],
+    "exclusion_ledger": [
+      {
+        "kind": "prefix",
+        "description": "indices [0, 40)",
+        "task_a_indices": 40,
+        "task_b_indices": 40
+      },
+      {
+        "kind": "result",
+        "path": "experiments\\results\\official_stratified_open_openai_ab_s5_seed20260922.json",
+        "sha256": "662ae6b1023a67921b4a57de8dd68181d08f584f0f5cfed149bf0109843d4e88",
+        "protocol": "llms4ol2026_stratified_open_v1",
+        "task_a_indices": 15,
+        "task_b_indices": 15,
+        "new_task_a_indices": 15,
+        "new_task_b_indices": 15
+      },
+      {
+        "kind": "result",
+        "path": "experiments\\results\\relation_calibration_a_n27_seed20260923.json",
+        "sha256": "456427a0eb306fb6486c5ac887a3b674e7d0ed86b48093cd930a907a74f6f173",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "task_a_indices": 27,
+        "task_b_indices": 0,
+        "new_task_a_indices": 27,
+        "new_task_b_indices": 0
+      },
+      {
+        "kind": "result",
+        "path": "experiments\\results\\relation_calibration_ab_n12_seed20260923.json",
+        "sha256": "e0bf91282978b24cc02fa82d8e811f6e0d9d25a2f84ae7013b8b7cae0e62153b",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "task_a_indices": 12,
+        "task_b_indices": 12,
+        "new_task_a_indices": 0,
+        "new_task_b_indices": 12
+      },
+      {
+        "kind": "result",
+        "path": "experiments\\results\\relation_calibration_open_vocab_guarded_v5_axioms_only_a_indices1419-1554-1796-1824-1935-2676-3130-3516_seed20260924.json",
+        "sha256": "cb135f14c0327e1ea99c99b0a367dd66c11c29e0d6310ad37b9ce7d9dd17e455",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "task_a_indices": 8,
+        "task_b_indices": 0,
+        "new_task_a_indices": 8,
+        "new_task_b_indices": 0
+      },
+      {
+        "kind": "annotation_manifest",
+        "path": "experiments\\annotations\\relation_text_model_annotation_v1\\manifest.json",
+        "sha256": "f7405fe8f87dd5619f239cf3783c6ab9ac863eac7d8944382b4fe768a9b93cc8",
+        "protocol": "relation_text_model_annotation_v1",
+        "task_a_indices": 15,
+        "task_b_indices": 15,
+        "new_task_a_indices": 15,
+        "new_task_b_indices": 15
+      }
+    ],
+    "confidence_threshold": 0.85,
+    "implicit_confidence_threshold": 0.95,
+    "max_nontax": 8,
+    "max_implicit_gap_chars": 600,
+    "estimated_calls": 12,
+    "estimated_generation_cache_hits": 0,
+    "estimated_exact_cache_replays": 0,
+    "estimated_local_reprocesses": 0,
+    "estimated_external_calls": 12,
+    "total_prompt_chars": 49230,
+    "disjoint_from_blind_prefix_and_density_eval": true,
+    "disjoint_from_all_exclusions": true
+  },
+  "tasks": {
+    "task_a": {
+      "n_samples": 12,
+      "excluded_indices_count": 105,
+      "selected_overlap_with_excluded": [],
+      "pool": {
+        "eligible_samples": 226,
+        "eligible_with_supported_predicate": 0,
+        "eligible_with_lexically_explicit_relation": 11,
+        "eligible_with_guard_compatible_exact_predicate": 226,
+        "supported_predicate_sample_counts": {},
+        "visible_predicate_sample_counts": {
+          "equivalent class": 110,
+          "disjoint with": 90,
+          "type": 16,
+          "database_cross_reference": 10,
+          "is_conjugate_acid_of": 3,
+          "is_conjugate_base_of": 3,
+          "domain": 2,
+          "same as": 2,
+          "see also": 2,
+          "has role": 1,
+          "overlaps": 1,
+          "term replaced by": 1
+        },
+        "selected_visible_gold": 79,
+        "selected_visible_supported_gold": 0,
+        "selected_visible_lexically_explicit_gold": 13,
+        "selected_visible_guard_compatible_exact_gold": 79
+      },
+      "samples": [
+        {
+          "sample_index": 665,
+          "sample_id_sha256": "a42251627c58eddc6fbb415343835d2c0f5e9b46687184d2c1d5fce066719509",
+          "official_nontax_gold_nonself": 28,
+          "visible_nontax_gold": 28,
+          "visible_supported_gold": 0,
+          "visible_guard_compatible_exact_gold": 28,
+          "visible_lexically_explicit_gold": 0,
+          "visible_nontax_predicates": [
+            "disjoint with"
+          ],
+          "visible_lexically_explicit_predicates": [],
+          "visible_supported_predicates": [],
+          "visible_guard_compatible_predicates": [
+            "disjoint with"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2273,
+          "prompt": {
+            "sha256": "a57a7da9030a7e1b4f855d58a8ee92db8a09f05c67c9ce2270b4828a9fecb566",
+            "chars": 4221,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 678,
+          "sample_id_sha256": "525cde6f79ebb4a8ee5e87d7355d7823f8954ff1fa1ec62a8bd4604f552b1417",
+          "official_nontax_gold_nonself": 1,
+          "visible_nontax_gold": 1,
+          "visible_supported_gold": 0,
+          "visible_guard_compatible_exact_gold": 1,
+          "visible_lexically_explicit_gold": 1,
+          "visible_nontax_predicates": [
+            "equivalent class"
+          ],
+          "visible_lexically_explicit_predicates": [
+            "equivalent class"
+          ],
+          "visible_supported_predicates": [],
+          "visible_guard_compatible_predicates": [
+            "equivalent class"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2814,
+          "prompt": {
+            "sha256": "4591a1fcc8cef758ca6e13e4dd5977c399ea143bbeafb991b6915fbe9843e9dc",
+            "chars": 4762,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 1336,
+          "sample_id_sha256": "aa396036a75997e60edc6798c813d6994918e54f77ddb9fe59f94b13c626b451",
+          "official_nontax_gold_nonself": 10,
+          "visible_nontax_gold": 9,
+          "visible_supported_gold": 0,
+          "visible_guard_compatible_exact_gold": 9,
+          "visible_lexically_explicit_gold": 2,
+          "visible_nontax_predicates": [
+            "type"
+          ],
+          "visible_lexically_explicit_predicates": [
+            "type"
+          ],
+          "visible_supported_predicates": [],
+          "visible_guard_compatible_predicates": [
+            "type"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2769,
+          "prompt": {
+            "sha256": "a55bd75194ce05ac938dc963a8ce37d4f08a811e5d30342cfeaa72ee7094deca",
+            "chars": 4717,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 2017,
+          "sample_id_sha256": "aa9ead1e0f05b62f919f516c4c11db9da13508493549f0da3ba572b0eec70595",
+          "official_nontax_gold_nonself": 2,
+          "visible_nontax_gold": 2,
+          "visible_supported_gold": 0,
+          "visible_guard_compatible_exact_gold": 2,
+          "visible_lexically_explicit_gold": 1,
+          "visible_nontax_predicates": [
+            "type"
+          ],
+          "visible_lexically_explicit_predicates": [
+            "type"
+          ],
+          "visible_supported_predicates": [],
+          "visible_guard_compatible_predicates": [
+            "type"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2728,
+          "prompt": {
+            "sha256": "4e2c257023bc21c2ec31ac30d5c29eba911b304263924428c753213ba6744f8e",
+            "chars": 4676,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 2171,
+          "sample_id_sha256": "682d1cfe25ad55d001b806e6948ea1e48db22a3c7337a3e9d2f235f577e61f85",
+          "official_nontax_gold_nonself": 2,
+          "visible_nontax_gold": 2,
+          "visible_supported_gold": 0,
+          "visible_guard_compatible_exact_gold": 2,
+          "visible_lexically_explicit_gold": 1,
+          "visible_nontax_predicates": [
+            "equivalent class"
+          ],
+          "visible_lexically_explicit_predicates": [
+            "equivalent class"
+          ],
+          "visible_supported_predicates": [],
+          "visible_guard_compatible_predicates": [
+            "equivalent class"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 3277,
+          "prompt": {
+            "sha256": "e0ca0d842d259dd7949955f0d8b1c17e625c7f5c8f59c6a7f51a9bb08907fadd",
+            "chars": 5225,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 2643,
+          "sample_id_sha256": "391fc0a9cba378548b4e8c2ef4515975ab195618cc61e1ba7382cff5072066b6",
+          "official_nontax_gold_nonself": 6,
+          "visible_nontax_gold": 1,
+          "visible_supported_gold": 0,
+          "visible_guard_compatible_exact_gold": 1,
+          "visible_lexically_explicit_gold": 1,
+          "visible_nontax_predicates": [
+            "equivalent class"
+          ],
+          "visible_lexically_explicit_predicates": [
+            "equivalent class"
+          ],
+          "visible_supported_predicates": [],
+          "visible_guard_compatible_predicates": [
+            "equivalent class"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 896,
+          "prompt": {
+            "sha256": "d1b6169da4451fbd2d98035f37fd547300e4b14b818fd2a6605fb9487ba92a73",
+            "chars": 2844,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 2758,
+          "sample_id_sha256": "435d191372b7884cd01f23060361492e6932ee0452f8f68d268a94a6b56a4fce",
+          "official_nontax_gold_nonself": 17,
+          "visible_nontax_gold": 17,
+          "visible_supported_gold": 0,
+          "visible_guard_compatible_exact_gold": 17,
+          "visible_lexically_explicit_gold": 2,
+          "visible_nontax_predicates": [
+            "type"
+          ],
+          "visible_lexically_explicit_predicates": [
+            "type"
+          ],
+          "visible_supported_predicates": [],
+          "visible_guard_compatible_predicates": [
+            "type"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2688,
+          "prompt": {
+            "sha256": "75bd8e0c5f81105ef52388743b6cb33de928fe440ed812ea06669a915c42d2ff",
+            "chars": 4636,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 2780,
+          "sample_id_sha256": "8e42cdf163d8ffee69753bc5dbe71383130ef811acfa431d7e7b8fd6fd97d775",
+          "official_nontax_gold_nonself": 3,
+          "visible_nontax_gold": 3,
+          "visible_supported_gold": 0,
+          "visible_guard_compatible_exact_gold": 3,
+          "visible_lexically_explicit_gold": 1,
+          "visible_nontax_predicates": [
+            "equivalent class"
+          ],
+          "visible_lexically_explicit_predicates": [
+            "equivalent class"
+          ],
+          "visible_supported_predicates": [],
+          "visible_guard_compatible_predicates": [
+            "equivalent class"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1641,
+          "prompt": {
+            "sha256": "f865e5559d49646efafaf9836a119ac4511f18dae1f845443ec3bda1a28a2fff",
+            "chars": 3589,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 2920,
+          "sample_id_sha256": "0efc559486e5e012f156dba801902c98b64e4e3a7c668d41afdb08e23fcc6fba",
+          "official_nontax_gold_nonself": 6,
+          "visible_nontax_gold": 6,
+          "visible_supported_gold": 0,
+          "visible_guard_compatible_exact_gold": 6,
+          "visible_lexically_explicit_gold": 1,
+          "visible_nontax_predicates": [
+            "disjoint with"
+          ],
+          "visible_lexically_explicit_predicates": [
+            "disjoint with"
+          ],
+          "visible_supported_predicates": [],
+          "visible_guard_compatible_predicates": [
+            "disjoint with"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 905,
+          "prompt": {
+            "sha256": "66e7cf3493cc5a6142bc9e1c6509298e704ccd8a5271a879441503c2e3cc437d",
+            "chars": 2853,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 2958,
+          "sample_id_sha256": "feabe1109466c0b4e45359d763ecf7405996201f8db1c71ea0c2a7b3304fbcd6",
+          "official_nontax_gold_nonself": 2,
+          "visible_nontax_gold": 2,
+          "visible_supported_gold": 0,
+          "visible_guard_compatible_exact_gold": 2,
+          "visible_lexically_explicit_gold": 1,
+          "visible_nontax_predicates": [
+            "equivalent class"
+          ],
+          "visible_lexically_explicit_predicates": [
+            "equivalent class"
+          ],
+          "visible_supported_predicates": [],
+          "visible_guard_compatible_predicates": [
+            "equivalent class"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1991,
+          "prompt": {
+            "sha256": "e93a0a61ee6b89cbca1925162ea10f67222de89d3ffb68403562ad8d29562c92",
+            "chars": 3939,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 3064,
+          "sample_id_sha256": "6a6eb5670ac73da9f0abf304506a4fb32c5fc1e1b0468c12a6378db0c10413f1",
+          "official_nontax_gold_nonself": 5,
+          "visible_nontax_gold": 5,
+          "visible_supported_gold": 0,
+          "visible_guard_compatible_exact_gold": 5,
+          "visible_lexically_explicit_gold": 1,
+          "visible_nontax_predicates": [
+            "equivalent class"
+          ],
+          "visible_lexically_explicit_predicates": [
+            "equivalent class"
+          ],
+          "visible_supported_predicates": [],
+          "visible_guard_compatible_predicates": [
+            "equivalent class"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2033,
+          "prompt": {
+            "sha256": "028d0cb434f18126a0f02bc0d200a29b3024ef3a245b0542fe797f4e778f14fc",
+            "chars": 3981,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        },
+        {
+          "sample_index": 3676,
+          "sample_id_sha256": "ebfef69b4b5eb0ae36a771c3c92f01ec486b12679e5bbeec745d9e7338d0e74f",
+          "official_nontax_gold_nonself": 3,
+          "visible_nontax_gold": 3,
+          "visible_supported_gold": 0,
+          "visible_guard_compatible_exact_gold": 3,
+          "visible_lexically_explicit_gold": 1,
+          "visible_nontax_predicates": [
+            "equivalent class"
+          ],
+          "visible_lexically_explicit_predicates": [
+            "equivalent class"
+          ],
+          "visible_supported_predicates": [],
+          "visible_guard_compatible_predicates": [
+            "equivalent class"
+          ],
+          "selection_purpose": "independent_relation_calibration",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1839,
+          "prompt": {
+            "sha256": "f5d0977cbc6264fb930dc75cb20d8ed05d0088bc6856e55af53e260bfc918dfb",
+            "chars": 3787,
+            "generation_cache_hit": false,
+            "exact_cache_hit": false
+          }
+        }
+      ]
+    }
+  }
+}

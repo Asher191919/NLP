@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "protocol": "v5_axiom_confirmatory_semantic_secondary_v2",
+    "status": "frozen_not_executed",
+    "frozen_before_semantic_scoring": true,
+    "contains_source_text": false,
+    "contains_gold_triples": false,
+    "api_calls": 0,
+    "supersedes_unexecuted_protocol": {
+      "path": "D:\\NLP\\experiments\\results\\v5_axiom_confirmatory_semantic_protocol_a_n24_seed20260925.json",
+      "sha256": "1066142c9c60d98facdd41817659d70d1278a8834b69d2faa1b008450d296545",
+      "reason": "nested_remote_code_revision_was_not_locked"
+    }
+  },
+  "claim_scope": "task_a_endpoint_visible_axiom_slice_nontax_only",
+  "primary_analysis": {
+    "metric": "official_exact_nontax_micro",
+    "source_score": "D:\\NLP\\experiments\\results\\v5_axiom_confirmatory_score_a_n24_seed20260925.json",
+    "source_score_sha256": "7a5de59c2e1c1f693c2f530ebadc75913fb49af2f80be2c8a5525bf17b9aba9a",
+    "remains_primary": true
+  },
+  "secondary_analysis": {
+    "metric": "llms4ol2026_graph_similarity_semantic_match",
+    "aggregation": "mean_of_per_sample_nontax_only_scores",
+    "threshold": 0.9,
+    "model_id": "nomic-ai/nomic-embed-text-v1.5",
+    "model_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+    "remote_code_dependency": {
+      "model_id": "nomic-ai/nomic-bert-2048",
+      "revision": "7710840340a098cfb869c4f65e87cf2b1b70caca"
+    },
+    "trust_remote_code": true,
+    "official_source": "D:\\NLP\\data\\LLMs4OL-Challenge\\2026\\metrics\\graph_similarity.py",
+    "official_source_sha256": "eeea8664bb81828608a26502d893696851fb687129564b4e58e48cc00c767773",
+    "systems": [
+      "base_v5",
+      "frozen_calibrated_v5"
+    ],
+    "sample_indices": [
+      269,
+      290,
+      785,
+      856,
+      882,
+      1070,
+      1169,
+      1174,
+      1281,
+      1523,
+      1594,
+      1628,
+      1736,
+      1845,
+      2563,
+      2896,
+      2945,
+      3153,
+      3161,
+      3231,
+      3509,
+      4034,
+      4084,
+      4185
+    ],
+    "n_samples": 24
+  },
+  "inputs": {
+    "confirmatory_manifest": {
+      "path": "D:\\NLP\\experiments\\results\\v5_axiom_confirmatory_manifest_a24_seed20260925.json",
+      "sha256": "487a2f2242dbee3ee722dfab1d795b18a985e4c4e5fb066aa37d388d90499f0b"
+    },
+    "base_result": {
+      "path": "D:\\NLP\\experiments\\results\\v5_axiom_confirmatory_base_a_n24_seed20260925.json",
+      "sha256": "9612257f8ab2fff377802224d6b5f3fd3294d80bf347d67c5e9328ba8afaf92b"
+    },
+    "calibrated_result": {
+      "path": "D:\\NLP\\experiments\\results\\v5_axiom_confirmatory_calibrated_a_n24_seed20260925.json",
+      "sha256": "564c91fd93ab4eadd29e029eceb6d0f944233426a1509ecb7b9cf0093fe1e3ac"
+    }
+  },
+  "locked_interpretation": {
+    "secondary_only": true,
+    "authorize_threshold_or_rule_retuning": false,
+    "can_change_preregistered_gate": false,
+    "can_change_deployment_status": false,
+    "exact_match_remains_primary": true
+  }
+}

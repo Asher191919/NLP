@@ -1,0 +1,4268 @@
+{
+  "meta": {
+    "protocol": "nonce_relation_holdout_eval_v1",
+    "status": "complete",
+    "manifest": "D:\\NLP\\experiments\\results\\nonce_relation_holdout_manifest_n30_seed20260926.json",
+    "manifest_sha256": "d30e22e6a25b199823f348a9e984b418d17559f33eef3773949c1c1afebc9e13",
+    "package_id": "aa1f0e2e61177e6144e2",
+    "model": "dots3-note-prev",
+    "attempt_ledger": {
+      "planned_units": 60,
+      "successful_units": 60,
+      "failed_final_units": 0,
+      "recorded_unit_attempts": 67
+    }
+  },
+  "summaries": {
+    "open_vocab": {
+      "all": {
+        "n": 30,
+        "n_success": 30,
+        "typing_f1": 0.0,
+        "taxonomy_f1": 0.0,
+        "nontax_precision": 0.2222222222222222,
+        "nontax_recall": 0.31666666666666665,
+        "nontax_f1": 0.26116838487972505,
+        "official_graph_similarity_avg": 0.18052749719416386,
+        "hard_negative_controls": 60,
+        "hard_negative_false_positives": 0,
+        "hard_negative_false_positive_rate": 0.0,
+        "by_predicate": {
+          "part_of": {
+            "precision": 0.7647058823529411,
+            "recall": 0.65,
+            "f1": 0.7027027027027027,
+            "tp": 13,
+            "fp": 4,
+            "fn": 7
+          },
+          "has part": {
+            "precision": 1.0,
+            "recall": 0.1,
+            "f1": 0.18181818181818182,
+            "tp": 2,
+            "fp": 0,
+            "fn": 18
+          },
+          "develops_from": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "tp": 10,
+            "fp": 0,
+            "fn": 10
+          },
+          "derives from": {
+            "precision": 1.0,
+            "recall": 0.05,
+            "f1": 0.09523809523809523,
+            "tp": 1,
+            "fp": 0,
+            "fn": 19
+          },
+          "located in": {
+            "precision": 1.0,
+            "recall": 0.1,
+            "f1": 0.18181818181818182,
+            "tp": 2,
+            "fp": 0,
+            "fn": 18
+          },
+          "regulates": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "tp": 10,
+            "fp": 0,
+            "fn": 10
+          }
+        },
+        "gold_recall_by_evidence_mode": {
+          "explicit": {
+            "support": 60,
+            "true_positives": 19,
+            "recall": 0.31666666666666665
+          },
+          "cross_sentence": {
+            "support": 60,
+            "true_positives": 19,
+            "recall": 0.31666666666666665
+          }
+        }
+      },
+      "by_surface_form": {
+        "canonical": {
+          "n": 15,
+          "n_success": 15,
+          "typing_f1": 0.0,
+          "taxonomy_f1": 0.0,
+          "nontax_precision": 0.4605263157894737,
+          "nontax_recall": 0.5833333333333334,
+          "nontax_f1": 0.5147058823529412,
+          "official_graph_similarity_avg": 0.3311784511784512,
+          "hard_negative_controls": 30,
+          "hard_negative_false_positives": 0,
+          "hard_negative_false_positive_rate": 0.0,
+          "by_predicate": {
+            "part_of": {
+              "precision": 0.9090909090909091,
+              "recall": 1.0,
+              "f1": 0.9523809523809523,
+              "tp": 10,
+              "fp": 1,
+              "fn": 0
+            },
+            "has part": {
+              "precision": 1.0,
+              "recall": 0.2,
+              "f1": 0.33333333333333337,
+              "tp": 2,
+              "fp": 0,
+              "fn": 8
+            },
+            "develops_from": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 10,
+              "fp": 0,
+              "fn": 0
+            },
+            "derives from": {
+              "precision": 1.0,
+              "recall": 0.1,
+              "f1": 0.18181818181818182,
+              "tp": 1,
+              "fp": 0,
+              "fn": 9
+            },
+            "located in": {
+              "precision": 1.0,
+              "recall": 0.2,
+              "f1": 0.33333333333333337,
+              "tp": 2,
+              "fp": 0,
+              "fn": 8
+            },
+            "regulates": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 10,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "gold_recall_by_evidence_mode": {
+            "explicit": {
+              "support": 30,
+              "true_positives": 18,
+              "recall": 0.6
+            },
+            "cross_sentence": {
+              "support": 30,
+              "true_positives": 17,
+              "recall": 0.5666666666666667
+            }
+          }
+        },
+        "paraphrased": {
+          "n": 15,
+          "n_success": 15,
+          "typing_f1": 0.0,
+          "taxonomy_f1": 0.0,
+          "nontax_precision": 0.031578947368421054,
+          "nontax_recall": 0.05,
+          "nontax_f1": 0.03870967741935484,
+          "official_graph_similarity_avg": 0.029876543209876545,
+          "hard_negative_controls": 30,
+          "hard_negative_false_positives": 0,
+          "hard_negative_false_positive_rate": 0.0,
+          "by_predicate": {
+            "part_of": {
+              "precision": 0.5,
+              "recall": 0.3,
+              "f1": 0.37499999999999994,
+              "tp": 3,
+              "fp": 3,
+              "fn": 7
+            },
+            "has part": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 10
+            },
+            "develops_from": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 10
+            },
+            "derives from": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 10
+            },
+            "located in": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 10
+            },
+            "regulates": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 10
+            }
+          },
+          "gold_recall_by_evidence_mode": {
+            "explicit": {
+              "support": 30,
+              "true_positives": 1,
+              "recall": 0.03333333333333333
+            },
+            "cross_sentence": {
+              "support": 30,
+              "true_positives": 2,
+              "recall": 0.06666666666666667
+            }
+          }
+        }
+      }
+    },
+    "open_vocab_guarded_v2": {
+      "all": {
+        "n": 30,
+        "n_success": 30,
+        "typing_f1": 0.0,
+        "taxonomy_f1": 0.0,
+        "nontax_precision": 0.864406779661017,
+        "nontax_recall": 0.85,
+        "nontax_f1": 0.8571428571428572,
+        "official_graph_similarity_avg": 0.569047619047619,
+        "hard_negative_controls": 60,
+        "hard_negative_false_positives": 0,
+        "hard_negative_false_positive_rate": 0.0,
+        "by_predicate": {
+          "part_of": {
+            "precision": 0.7727272727272727,
+            "recall": 0.85,
+            "f1": 0.8095238095238095,
+            "tp": 17,
+            "fp": 5,
+            "fn": 3
+          },
+          "has part": {
+            "precision": 0.75,
+            "recall": 0.75,
+            "f1": 0.75,
+            "tp": 15,
+            "fp": 5,
+            "fn": 5
+          },
+          "develops_from": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 20,
+            "fp": 0,
+            "fn": 0
+          },
+          "derives from": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 20,
+            "fp": 0,
+            "fn": 0
+          },
+          "located in": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "tp": 15,
+            "fp": 0,
+            "fn": 5
+          },
+          "regulates": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "tp": 15,
+            "fp": 0,
+            "fn": 5
+          }
+        },
+        "gold_recall_by_evidence_mode": {
+          "explicit": {
+            "support": 60,
+            "true_positives": 45,
+            "recall": 0.75
+          },
+          "cross_sentence": {
+            "support": 60,
+            "true_positives": 57,
+            "recall": 0.95
+          }
+        }
+      },
+      "by_surface_form": {
+        "canonical": {
+          "n": 15,
+          "n_success": 15,
+          "typing_f1": 0.0,
+          "taxonomy_f1": 0.0,
+          "nontax_precision": 1.0,
+          "nontax_recall": 1.0,
+          "nontax_f1": 1.0,
+          "official_graph_similarity_avg": 0.6666666666666666,
+          "hard_negative_controls": 30,
+          "hard_negative_false_positives": 0,
+          "hard_negative_false_positive_rate": 0.0,
+          "by_predicate": {
+            "part_of": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 10,
+              "fp": 0,
+              "fn": 0
+            },
+            "has part": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 10,
+              "fp": 0,
+              "fn": 0
+            },
+            "develops_from": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 10,
+              "fp": 0,
+              "fn": 0
+            },
+            "derives from": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 10,
+              "fp": 0,
+              "fn": 0
+            },
+            "located in": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 10,
+              "fp": 0,
+              "fn": 0
+            },
+            "regulates": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 10,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "gold_recall_by_evidence_mode": {
+            "explicit": {
+              "support": 30,
+              "true_positives": 30,
+              "recall": 1.0
+            },
+            "cross_sentence": {
+              "support": 30,
+              "true_positives": 30,
+              "recall": 1.0
+            }
+          }
+        },
+        "paraphrased": {
+          "n": 15,
+          "n_success": 15,
+          "typing_f1": 0.0,
+          "taxonomy_f1": 0.0,
+          "nontax_precision": 0.7241379310344828,
+          "nontax_recall": 0.7,
+          "nontax_f1": 0.711864406779661,
+          "official_graph_similarity_avg": 0.4714285714285714,
+          "hard_negative_controls": 30,
+          "hard_negative_false_positives": 0,
+          "hard_negative_false_positive_rate": 0.0,
+          "by_predicate": {
+            "part_of": {
+              "precision": 0.5833333333333334,
+              "recall": 0.7,
+              "f1": 0.6363636363636365,
+              "tp": 7,
+              "fp": 5,
+              "fn": 3
+            },
+            "has part": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "f1": 0.5,
+              "tp": 5,
+              "fp": 5,
+              "fn": 5
+            },
+            "develops_from": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 10,
+              "fp": 0,
+              "fn": 0
+            },
+            "derives from": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 10,
+              "fp": 0,
+              "fn": 0
+            },
+            "located in": {
+              "precision": 1.0,
+              "recall": 0.5,
+              "f1": 0.6666666666666666,
+              "tp": 5,
+              "fp": 0,
+              "fn": 5
+            },
+            "regulates": {
+              "precision": 1.0,
+              "recall": 0.5,
+              "f1": 0.6666666666666666,
+              "tp": 5,
+              "fp": 0,
+              "fn": 5
+            }
+          },
+          "gold_recall_by_evidence_mode": {
+            "explicit": {
+              "support": 30,
+              "true_positives": 15,
+              "recall": 0.5
+            },
+            "cross_sentence": {
+              "support": 30,
+              "true_positives": 27,
+              "recall": 0.9
+            }
+          }
+        }
+      }
+    }
+  },
+  "samples": [
+    {
+      "sample_index": 0,
+      "sample_id": "nonce_rel_000",
+      "surface_form": "canonical",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f1": 0.4444444444444445,
+          "tp": 2,
+          "fp": 3,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f1": 0.4444444444444445,
+          "tp": 2,
+          "fp": 3,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.4444444444444445,
+          "neighborhood_similarity": 0.4,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.2814814814814815,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 5
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 1,
+      "sample_id": "nonce_rel_001",
+      "surface_form": "canonical",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f1": 0.4444444444444445,
+          "tp": 2,
+          "fp": 3,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f1": 0.4444444444444445,
+          "tp": 2,
+          "fp": 3,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.4444444444444445,
+          "neighborhood_similarity": 0.4,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.2814814814814815,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 5
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 2,
+      "sample_id": "nonce_rel_002",
+      "surface_form": "canonical",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 2,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 2,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.5,
+          "neighborhood_similarity": 0.5,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.3333333333333333,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 3,
+      "sample_id": "nonce_rel_003",
+      "surface_form": "canonical",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.2857142857142857,
+          "recall": 0.5,
+          "f1": 0.36363636363636365,
+          "tp": 2,
+          "fp": 5,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.2857142857142857,
+          "recall": 0.5,
+          "f1": 0.36363636363636365,
+          "tp": 2,
+          "fp": 5,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.36363636363636365,
+          "neighborhood_similarity": 0.4,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.2545454545454546,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 7
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 4,
+      "sample_id": "nonce_rel_004",
+      "surface_form": "canonical",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.2857142857142857,
+          "recall": 0.5,
+          "f1": 0.36363636363636365,
+          "tp": 2,
+          "fp": 5,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.2857142857142857,
+          "recall": 0.5,
+          "f1": 0.36363636363636365,
+          "tp": 2,
+          "fp": 5,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.36363636363636365,
+          "neighborhood_similarity": 0.4,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.2545454545454546,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 7
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 5,
+      "sample_id": "nonce_rel_005",
+      "surface_form": "canonical",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f1": 0.4444444444444445,
+          "tp": 2,
+          "fp": 3,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f1": 0.4444444444444445,
+          "tp": 2,
+          "fp": 3,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.4444444444444445,
+          "neighborhood_similarity": 0.4,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.2814814814814815,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 5
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 6,
+      "sample_id": "nonce_rel_006",
+      "surface_form": "canonical",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 2,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 2,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.5,
+          "neighborhood_similarity": 0.5,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.3333333333333333,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 7,
+      "sample_id": "nonce_rel_007",
+      "surface_form": "canonical",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f1": 0.4444444444444445,
+          "tp": 2,
+          "fp": 3,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f1": 0.4444444444444445,
+          "tp": 2,
+          "fp": 3,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.4444444444444445,
+          "neighborhood_similarity": 0.4,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.2814814814814815,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 5
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 8,
+      "sample_id": "nonce_rel_008",
+      "surface_form": "canonical",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "tp": 3,
+          "fp": 1,
+          "fn": 1
+        },
+        "nontax_nonself": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "tp": 3,
+          "fp": 1,
+          "fn": 1
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.75,
+          "neighborhood_similarity": 0.75,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.5,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 9,
+      "sample_id": "nonce_rel_009",
+      "surface_form": "canonical",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 2,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 2,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.5,
+          "neighborhood_similarity": 0.5,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.3333333333333333,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 10,
+      "sample_id": "nonce_rel_010",
+      "surface_form": "canonical",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.888888888888889,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.888888888888889,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.888888888888889,
+          "neighborhood_similarity": 0.8,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.562962962962963,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 5
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 11,
+      "sample_id": "nonce_rel_011",
+      "surface_form": "canonical",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f1": 0.4444444444444445,
+          "tp": 2,
+          "fp": 3,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f1": 0.4444444444444445,
+          "tp": 2,
+          "fp": 3,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.36363636363636365,
+          "neighborhood_similarity": 0.3181818181818182,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.2272727272727273,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 2,
+          "taxonomy": 0,
+          "nontax": 5
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 12,
+      "sample_id": "nonce_rel_012",
+      "surface_form": "canonical",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 2,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 2,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.5,
+          "neighborhood_similarity": 0.5,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.3333333333333333,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 13,
+      "sample_id": "nonce_rel_013",
+      "surface_form": "canonical",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.888888888888889,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.888888888888889,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.7272727272727273,
+          "neighborhood_similarity": 0.6363636363636364,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.4545454545454546,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 2,
+          "taxonomy": 0,
+          "nontax": 5
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 14,
+      "sample_id": "nonce_rel_014",
+      "surface_form": "canonical",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.2857142857142857,
+          "recall": 0.5,
+          "f1": 0.36363636363636365,
+          "tp": 2,
+          "fp": 5,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.2857142857142857,
+          "recall": 0.5,
+          "f1": 0.36363636363636365,
+          "tp": 2,
+          "fp": 5,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.36363636363636365,
+          "neighborhood_similarity": 0.4,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.2545454545454546,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 7
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 15,
+      "sample_id": "nonce_rel_015",
+      "surface_form": "paraphrased",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 9,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 9,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 9
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 16,
+      "sample_id": "nonce_rel_016",
+      "surface_form": "paraphrased",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.2,
+          "recall": 0.25,
+          "f1": 0.22222222222222224,
+          "tp": 1,
+          "fp": 4,
+          "fn": 3
+        },
+        "nontax_nonself": {
+          "precision": 0.2,
+          "recall": 0.25,
+          "f1": 0.22222222222222224,
+          "tp": 1,
+          "fp": 4,
+          "fn": 3
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.22222222222222224,
+          "neighborhood_similarity": 0.2,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.14074074074074075,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 5
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 17,
+      "sample_id": "nonce_rel_017",
+      "surface_form": "paraphrased",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 2,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 8,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 8
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 18,
+      "sample_id": "nonce_rel_018",
+      "surface_form": "paraphrased",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 7,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 7,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 7
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 19,
+      "sample_id": "nonce_rel_019",
+      "surface_form": "paraphrased",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.2,
+          "recall": 0.25,
+          "f1": 0.22222222222222224,
+          "tp": 1,
+          "fp": 4,
+          "fn": 3
+        },
+        "nontax_nonself": {
+          "precision": 0.2,
+          "recall": 0.25,
+          "f1": 0.22222222222222224,
+          "tp": 1,
+          "fp": 4,
+          "fn": 3
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.22222222222222224,
+          "neighborhood_similarity": 0.2,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.14074074074074075,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 5
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 20,
+      "sample_id": "nonce_rel_020",
+      "surface_form": "paraphrased",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 5,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 5,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 5
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 21,
+      "sample_id": "nonce_rel_021",
+      "surface_form": "paraphrased",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 5,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 5,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 5
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 22,
+      "sample_id": "nonce_rel_022",
+      "surface_form": "paraphrased",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 7,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 7,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 7
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 23,
+      "sample_id": "nonce_rel_023",
+      "surface_form": "paraphrased",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 2,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 10,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 10,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 10
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 24,
+      "sample_id": "nonce_rel_024",
+      "surface_form": "paraphrased",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.25,
+          "recall": 0.25,
+          "f1": 0.25,
+          "tp": 1,
+          "fp": 3,
+          "fn": 3
+        },
+        "nontax_nonself": {
+          "precision": 0.25,
+          "recall": 0.25,
+          "f1": 0.25,
+          "tp": 1,
+          "fp": 3,
+          "fn": 3
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.25,
+          "neighborhood_similarity": 0.25,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.16666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 25,
+      "sample_id": "nonce_rel_025",
+      "surface_form": "paraphrased",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 4,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 26,
+      "sample_id": "nonce_rel_026",
+      "surface_form": "paraphrased",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 3,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 3,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 3
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 27,
+      "sample_id": "nonce_rel_027",
+      "surface_form": "paraphrased",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 7,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 7,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 7
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 28,
+      "sample_id": "nonce_rel_028",
+      "surface_form": "paraphrased",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 11,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 11,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 11
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 29,
+      "sample_id": "nonce_rel_029",
+      "surface_form": "paraphrased",
+      "system": "open_vocab",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 5,
+          "fn": 4
+        },
+        "nontax_nonself": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 5,
+          "fn": 4
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.0,
+          "neighborhood_similarity": 0.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.0,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 5
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 0,
+      "sample_id": "nonce_rel_000",
+      "surface_form": "canonical",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 1.0,
+          "neighborhood_similarity": 1.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.6666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 1,
+      "sample_id": "nonce_rel_001",
+      "surface_form": "canonical",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 1.0,
+          "neighborhood_similarity": 1.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.6666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 2,
+      "sample_id": "nonce_rel_002",
+      "surface_form": "canonical",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 1.0,
+          "neighborhood_similarity": 1.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.6666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 3,
+      "sample_id": "nonce_rel_003",
+      "surface_form": "canonical",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 1.0,
+          "neighborhood_similarity": 1.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.6666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 4,
+      "sample_id": "nonce_rel_004",
+      "surface_form": "canonical",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 1.0,
+          "neighborhood_similarity": 1.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.6666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 5,
+      "sample_id": "nonce_rel_005",
+      "surface_form": "canonical",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 1.0,
+          "neighborhood_similarity": 1.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.6666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 6,
+      "sample_id": "nonce_rel_006",
+      "surface_form": "canonical",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 1.0,
+          "neighborhood_similarity": 1.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.6666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 7,
+      "sample_id": "nonce_rel_007",
+      "surface_form": "canonical",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 1.0,
+          "neighborhood_similarity": 1.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.6666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 8,
+      "sample_id": "nonce_rel_008",
+      "surface_form": "canonical",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 1.0,
+          "neighborhood_similarity": 1.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.6666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 9,
+      "sample_id": "nonce_rel_009",
+      "surface_form": "canonical",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 1.0,
+          "neighborhood_similarity": 1.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.6666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 10,
+      "sample_id": "nonce_rel_010",
+      "surface_form": "canonical",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 1.0,
+          "neighborhood_similarity": 1.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.6666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 11,
+      "sample_id": "nonce_rel_011",
+      "surface_form": "canonical",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 1.0,
+          "neighborhood_similarity": 1.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.6666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 12,
+      "sample_id": "nonce_rel_012",
+      "surface_form": "canonical",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 1.0,
+          "neighborhood_similarity": 1.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.6666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 13,
+      "sample_id": "nonce_rel_013",
+      "surface_form": "canonical",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 1.0,
+          "neighborhood_similarity": 1.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.6666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 14,
+      "sample_id": "nonce_rel_014",
+      "surface_form": "canonical",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 1.0,
+          "neighborhood_similarity": 1.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.6666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 15,
+      "sample_id": "nonce_rel_015",
+      "surface_form": "paraphrased",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 2,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 2,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 2,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.5,
+          "neighborhood_similarity": 0.5,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.3333333333333333,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 16,
+      "sample_id": "nonce_rel_016",
+      "surface_form": "paraphrased",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 2,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 2,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.5,
+          "neighborhood_similarity": 0.5,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.3333333333333333,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 17,
+      "sample_id": "nonce_rel_017",
+      "surface_form": "paraphrased",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 3,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571,
+          "tp": 3,
+          "fp": 0,
+          "fn": 1
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571,
+          "tp": 3,
+          "fp": 0,
+          "fn": 1
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.8571428571428571,
+          "neighborhood_similarity": 0.75,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.5357142857142857,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 3
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 18,
+      "sample_id": "nonce_rel_018",
+      "surface_form": "paraphrased",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "tp": 3,
+          "fp": 1,
+          "fn": 1
+        },
+        "nontax_nonself": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "tp": 3,
+          "fp": 1,
+          "fn": 1
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.75,
+          "neighborhood_similarity": 0.75,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.5,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 19,
+      "sample_id": "nonce_rel_019",
+      "surface_form": "paraphrased",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.25,
+          "recall": 0.25,
+          "f1": 0.25,
+          "tp": 1,
+          "fp": 3,
+          "fn": 3
+        },
+        "nontax_nonself": {
+          "precision": 0.25,
+          "recall": 0.25,
+          "f1": 0.25,
+          "tp": 1,
+          "fp": 3,
+          "fn": 3
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.25,
+          "neighborhood_similarity": 0.25,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.16666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 20,
+      "sample_id": "nonce_rel_020",
+      "surface_form": "paraphrased",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 1.0,
+          "neighborhood_similarity": 1.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.6666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 21,
+      "sample_id": "nonce_rel_021",
+      "surface_form": "paraphrased",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 2,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 2,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.5,
+          "neighborhood_similarity": 0.5,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.3333333333333333,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 22,
+      "sample_id": "nonce_rel_022",
+      "surface_form": "paraphrased",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 2,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "tp": 3,
+          "fp": 1,
+          "fn": 1
+        },
+        "nontax_nonself": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "tp": 3,
+          "fp": 1,
+          "fn": 1
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.75,
+          "neighborhood_similarity": 0.75,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.5,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 23,
+      "sample_id": "nonce_rel_023",
+      "surface_form": "paraphrased",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571,
+          "tp": 3,
+          "fp": 0,
+          "fn": 1
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571,
+          "tp": 3,
+          "fp": 0,
+          "fn": 1
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.8571428571428571,
+          "neighborhood_similarity": 0.75,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.5357142857142857,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 3
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 24,
+      "sample_id": "nonce_rel_024",
+      "surface_form": "paraphrased",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "tp": 3,
+          "fp": 1,
+          "fn": 1
+        },
+        "nontax_nonself": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "tp": 3,
+          "fp": 1,
+          "fn": 1
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.75,
+          "neighborhood_similarity": 0.75,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.5,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 25,
+      "sample_id": "nonce_rel_025",
+      "surface_form": "paraphrased",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 2,
+          "fn": 2
+        },
+        "nontax_nonself": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 2,
+          "fn": 2
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.5,
+          "neighborhood_similarity": 0.5,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.3333333333333333,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 26,
+      "sample_id": "nonce_rel_026",
+      "surface_form": "paraphrased",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 1.0,
+          "neighborhood_similarity": 1.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.6666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 27,
+      "sample_id": "nonce_rel_027",
+      "surface_form": "paraphrased",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "tp": 3,
+          "fp": 1,
+          "fn": 1
+        },
+        "nontax_nonself": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "tp": 3,
+          "fp": 1,
+          "fn": 1
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.75,
+          "neighborhood_similarity": 0.75,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.5,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 28,
+      "sample_id": "nonce_rel_028",
+      "surface_form": "paraphrased",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 1,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "tp": 3,
+          "fp": 1,
+          "fn": 1
+        },
+        "nontax_nonself": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "tp": 3,
+          "fp": 1,
+          "fn": 1
+        },
+        "official_graph_similarity": {
+          "edge_f1": 0.75,
+          "neighborhood_similarity": 0.75,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.5,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    },
+    {
+      "sample_index": 29,
+      "sample_id": "nonce_rel_029",
+      "surface_form": "paraphrased",
+      "system": "open_vocab_guarded_v2",
+      "status": "ok",
+      "attempts": 2,
+      "metrics": {
+        "typing": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "nontax_nonself": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity": {
+          "edge_f1": 1.0,
+          "neighborhood_similarity": 1.0,
+          "taxonomy_similarity": 0.0,
+          "graph_similarity": 0.6666666666666666,
+          "metric_id": "llms4ol2026_graph_similarity_exact",
+          "external_reportable": true,
+          "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+        },
+        "gold_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        },
+        "pred_counts": {
+          "typing": 0,
+          "taxonomy": 0,
+          "nontax": 4
+        }
+      },
+      "hard_negative_controls": 2,
+      "errors": null
+    }
+  ],
+  "interpretation": {
+    "synthetic_low_exposure_holdout": true,
+    "naturalistic_benchmark": false,
+    "verified_temporal_holdout": false,
+    "may_tune_generation_or_thresholds": false,
+    "may_fit_or_apply_calibrator": false,
+    "may_authorize_deployment": false
+  },
+  "confirmatory_eligible": false,
+  "scientific_deployable": false
+}

@@ -1,0 +1,446 @@
+{
+  "meta": {
+    "protocol": "relation_guarded_v2_independent_calibration_v1",
+    "model": "dots3-note-prev",
+    "system": "open_vocab_guarded_v5_axioms_only",
+    "tasks": [
+      "a"
+    ],
+    "samples_per_task": 12,
+    "sample_indices": [
+      1419,
+      1554,
+      1796,
+      1824,
+      1935,
+      2676,
+      3130,
+      3516
+    ],
+    "seed": 20260924,
+    "prior_failed_connection_attempts": 0,
+    "selection_uses_gold_locally": true,
+    "selection_is_calibration_only_not_unbiased_evaluation": true,
+    "gold_visible_to_model": false,
+    "exclude_prefix": 40,
+    "exclude_eval_result": "experiments/results/official_stratified_open_openai_ab_s5_seed20260922.json",
+    "additional_exclude_results": [
+      "experiments/results/relation_calibration_a_n27_seed20260923.json",
+      "experiments/results/relation_calibration_ab_n12_seed20260923.json"
+    ],
+    "exclude_annotation_manifests": [
+      "experiments/annotations/relation_text_model_annotation_v1/manifest.json"
+    ],
+    "exclusion_ledger": [
+      {
+        "kind": "prefix",
+        "description": "indices [0, 40)",
+        "task_a_indices": 40,
+        "task_b_indices": 40
+      },
+      {
+        "kind": "result",
+        "path": "experiments\\results\\official_stratified_open_openai_ab_s5_seed20260922.json",
+        "sha256": "662ae6b1023a67921b4a57de8dd68181d08f584f0f5cfed149bf0109843d4e88",
+        "protocol": "llms4ol2026_stratified_open_v1",
+        "task_a_indices": 15,
+        "task_b_indices": 15,
+        "new_task_a_indices": 15,
+        "new_task_b_indices": 15
+      },
+      {
+        "kind": "result",
+        "path": "experiments\\results\\relation_calibration_a_n27_seed20260923.json",
+        "sha256": "456427a0eb306fb6486c5ac887a3b674e7d0ed86b48093cd930a907a74f6f173",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "task_a_indices": 27,
+        "task_b_indices": 0,
+        "new_task_a_indices": 27,
+        "new_task_b_indices": 0
+      },
+      {
+        "kind": "result",
+        "path": "experiments\\results\\relation_calibration_ab_n12_seed20260923.json",
+        "sha256": "e0bf91282978b24cc02fa82d8e811f6e0d9d25a2f84ae7013b8b7cae0e62153b",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "task_a_indices": 12,
+        "task_b_indices": 12,
+        "new_task_a_indices": 0,
+        "new_task_b_indices": 12
+      },
+      {
+        "kind": "annotation_manifest",
+        "path": "experiments\\annotations\\relation_text_model_annotation_v1\\manifest.json",
+        "sha256": "f7405fe8f87dd5619f239cf3783c6ab9ac863eac7d8944382b4fe768a9b93cc8",
+        "protocol": "relation_text_model_annotation_v1",
+        "task_a_indices": 15,
+        "task_b_indices": 15,
+        "new_task_a_indices": 15,
+        "new_task_b_indices": 15
+      }
+    ],
+    "confidence_threshold": 0.85,
+    "implicit_confidence_threshold": 0.95,
+    "calibrated_confidence_threshold": 0.5,
+    "max_nontax": 8,
+    "max_implicit_gap_chars": 600,
+    "attempt_ledger": {
+      "planned_units": 8,
+      "successful_units": 0,
+      "failed_final_units": 8,
+      "prior_failed_connection_attempts": 0,
+      "unit_attempts_including_prior_failures": 8,
+      "successful_runner_attempts_including_retries": 0,
+      "low_level_attempts_including_prior_failures": 0
+    }
+  },
+  "tasks": {
+    "task_a": {
+      "meta": {
+        "task": "a",
+        "selected_indices": [
+          1419,
+          1554,
+          1796,
+          1824,
+          1935,
+          2676,
+          3130,
+          3516
+        ],
+        "n_samples": 8
+      },
+      "systems": {
+        "open_vocab_guarded_v5_axioms_only": {
+          "meta": {
+            "challenge": "LLMs4OL 2026",
+            "protocol": "llms4ol2026_blind_v1",
+            "input_policy": "context_only",
+            "gold_visible_to_model": false,
+            "task": "a",
+            "task_name": "Flagship",
+            "system": "open_vocab_guarded_v5_axioms_only",
+            "backend": "openai",
+            "model": "dots3-note-prev",
+            "offset": 0,
+            "limit": 8,
+            "workers": 2,
+            "max_context_chars": 6000,
+            "confidence_threshold": 0.85,
+            "implicit_confidence_threshold": 0.95,
+            "calibrated_confidence_threshold": 0.5,
+            "allowed_nontax_predicates": null,
+            "max_nontax": 8,
+            "max_implicit_gap_chars": 600,
+            "calibration_file": null,
+            "calibration_status": "not_configured",
+            "max_completion_tokens": 1024,
+            "metric": "llms4ol2026_graph_similarity_exact",
+            "elapsed_sec": 296.944,
+            "elapsed_sec_scope": "current_process_including_cache_replay",
+            "selection": "independent_relation_calibration",
+            "selected_indices": [
+              1419,
+              1554,
+              1796,
+              1824,
+              1935,
+              2676,
+              3130,
+              3516
+            ],
+            "excluded_indices_count": 97,
+            "pool": {
+              "selection": "explicit_sample_indices",
+              "selected_visible_gold": 35,
+              "selected_visible_supported_gold": 0
+            }
+          },
+          "summary": {
+            "target_n": 8,
+            "n_success": 0,
+            "n_failed": 8,
+            "complete": false,
+            "term_typing_f1_micro": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy_f1_micro": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax_f1_micro": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax_nonself_f1_micro": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity_avg": 0.0,
+            "composite_typing_tax_gs": 0.0,
+            "nontax_pred_total": 0,
+            "nontax_gold_total": 0,
+            "nontax_nonself_pred_total": 0,
+            "nontax_nonself_gold_total": 0,
+            "successful_latency_sec": {
+              "min": 0.0,
+              "median": 0.0,
+              "p95": 0.0,
+              "max": 0.0,
+              "sum": 0
+            },
+            "successful_runner_attempts_total": 0,
+            "successful_samples_with_retry": 0
+          },
+          "samples": [
+            {
+              "sample_index": 1419,
+              "sample_id": "32090e234e4a4a12b6eadaa2fd0d6190",
+              "status": "error",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\01419_429e081ca1.json",
+              "attempts": 2,
+              "latency_sec": 28.746,
+              "errors": [
+                "attempt 1: RuntimeError: LLM returned no final content (finish_reason=length, reasoning_chars=5242). Increase ONTOBRIDG_MAX_TOKENS for reasoning models.",
+                "attempt 2: RuntimeError: LLM returned no final content (finish_reason=length, reasoning_chars=5212). Increase ONTOBRIDG_MAX_TOKENS for reasoning models."
+              ],
+              "official_nontax_gold_nonself": 3,
+              "visible_nontax_gold": 3,
+              "visible_supported_gold": 0,
+              "visible_guard_compatible_exact_gold": 3,
+              "visible_lexically_explicit_gold": 2,
+              "visible_nontax_predicates": [
+                "equivalent class"
+              ],
+              "visible_lexically_explicit_predicates": [
+                "equivalent class"
+              ],
+              "visible_supported_predicates": [],
+              "visible_guard_compatible_predicates": [
+                "equivalent class"
+              ],
+              "selection_purpose": "fixed_relation_generation_pilot"
+            },
+            {
+              "sample_index": 1554,
+              "sample_id": "0544f623ea034acdbb5d3cb84b24640f",
+              "status": "error",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\01554_faf23ea47e.json",
+              "attempts": 2,
+              "latency_sec": 210.552,
+              "errors": [
+                "attempt 1: RuntimeError: LLM returned no final content (finish_reason=length, reasoning_chars=5256). Increase ONTOBRIDG_MAX_TOKENS for reasoning models.",
+                "attempt 2: RuntimeError: LLM returned no final content (finish_reason=length, reasoning_chars=5095). Increase ONTOBRIDG_MAX_TOKENS for reasoning models."
+              ],
+              "official_nontax_gold_nonself": 4,
+              "visible_nontax_gold": 4,
+              "visible_supported_gold": 0,
+              "visible_guard_compatible_exact_gold": 4,
+              "visible_lexically_explicit_gold": 1,
+              "visible_nontax_predicates": [
+                "equivalent class"
+              ],
+              "visible_lexically_explicit_predicates": [
+                "equivalent class"
+              ],
+              "visible_supported_predicates": [],
+              "visible_guard_compatible_predicates": [
+                "equivalent class"
+              ],
+              "selection_purpose": "fixed_relation_generation_pilot"
+            },
+            {
+              "sample_index": 1796,
+              "sample_id": "4642d5e58e6b40e48aebf540ae820fa3",
+              "status": "error",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\01796_92711abdb4.json",
+              "attempts": 2,
+              "latency_sec": 27.697,
+              "errors": [
+                "attempt 1: RuntimeError: LLM returned no final content (finish_reason=length, reasoning_chars=5198). Increase ONTOBRIDG_MAX_TOKENS for reasoning models.",
+                "attempt 2: RuntimeError: LLM returned no final content (finish_reason=length, reasoning_chars=5294). Increase ONTOBRIDG_MAX_TOKENS for reasoning models."
+              ],
+              "official_nontax_gold_nonself": 3,
+              "visible_nontax_gold": 3,
+              "visible_supported_gold": 0,
+              "visible_guard_compatible_exact_gold": 3,
+              "visible_lexically_explicit_gold": 1,
+              "visible_nontax_predicates": [
+                "equivalent class"
+              ],
+              "visible_lexically_explicit_predicates": [
+                "equivalent class"
+              ],
+              "visible_supported_predicates": [],
+              "visible_guard_compatible_predicates": [
+                "equivalent class"
+              ],
+              "selection_purpose": "fixed_relation_generation_pilot"
+            },
+            {
+              "sample_index": 1824,
+              "sample_id": "4bf4393fab7442199112a5ecfc374808",
+              "status": "error",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\01824_b12b4ec8f0.json",
+              "attempts": 2,
+              "latency_sec": 210.487,
+              "errors": [
+                "attempt 1: RuntimeError: LLM returned no final content (finish_reason=length, reasoning_chars=4899). Increase ONTOBRIDG_MAX_TOKENS for reasoning models.",
+                "attempt 2: RuntimeError: LLM returned no final content (finish_reason=length, reasoning_chars=4971). Increase ONTOBRIDG_MAX_TOKENS for reasoning models."
+              ],
+              "official_nontax_gold_nonself": 8,
+              "visible_nontax_gold": 8,
+              "visible_supported_gold": 0,
+              "visible_guard_compatible_exact_gold": 8,
+              "visible_lexically_explicit_gold": 1,
+              "visible_nontax_predicates": [
+                "equivalent class"
+              ],
+              "visible_lexically_explicit_predicates": [
+                "equivalent class"
+              ],
+              "visible_supported_predicates": [],
+              "visible_guard_compatible_predicates": [
+                "equivalent class"
+              ],
+              "selection_purpose": "fixed_relation_generation_pilot"
+            },
+            {
+              "sample_index": 1935,
+              "sample_id": "44d22f2e400246018bc36d6a678ec143",
+              "status": "error",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\01935_efa2790b91.json",
+              "attempts": 2,
+              "latency_sec": 29.236,
+              "errors": [
+                "attempt 1: RuntimeError: LLM returned no final content (finish_reason=length, reasoning_chars=5683). Increase ONTOBRIDG_MAX_TOKENS for reasoning models.",
+                "attempt 2: RuntimeError: LLM returned no final content (finish_reason=length, reasoning_chars=5653). Increase ONTOBRIDG_MAX_TOKENS for reasoning models."
+              ],
+              "official_nontax_gold_nonself": 4,
+              "visible_nontax_gold": 4,
+              "visible_supported_gold": 0,
+              "visible_guard_compatible_exact_gold": 4,
+              "visible_lexically_explicit_gold": 1,
+              "visible_nontax_predicates": [
+                "equivalent class"
+              ],
+              "visible_lexically_explicit_predicates": [
+                "equivalent class"
+              ],
+              "visible_supported_predicates": [],
+              "visible_guard_compatible_predicates": [
+                "equivalent class"
+              ],
+              "selection_purpose": "fixed_relation_generation_pilot"
+            },
+            {
+              "sample_index": 2676,
+              "sample_id": "1511302a7cf24dae814c93acdce5b40f",
+              "status": "error",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\02676_be8c3b1aee.json",
+              "attempts": 2,
+              "latency_sec": 29.172,
+              "errors": [
+                "attempt 1: RuntimeError: LLM returned no final content (finish_reason=length, reasoning_chars=5536). Increase ONTOBRIDG_MAX_TOKENS for reasoning models.",
+                "attempt 2: RuntimeError: LLM returned no final content (finish_reason=length, reasoning_chars=5493). Increase ONTOBRIDG_MAX_TOKENS for reasoning models."
+              ],
+              "official_nontax_gold_nonself": 6,
+              "visible_nontax_gold": 6,
+              "visible_supported_gold": 0,
+              "visible_guard_compatible_exact_gold": 6,
+              "visible_lexically_explicit_gold": 3,
+              "visible_nontax_predicates": [
+                "disjoint with",
+                "equivalent class"
+              ],
+              "visible_lexically_explicit_predicates": [
+                "equivalent class"
+              ],
+              "visible_supported_predicates": [],
+              "visible_guard_compatible_predicates": [
+                "disjoint with",
+                "equivalent class"
+              ],
+              "selection_purpose": "fixed_relation_generation_pilot"
+            },
+            {
+              "sample_index": 3130,
+              "sample_id": "05d8f21429bd4d05b019c91391fcb1b2",
+              "status": "error",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\03130_41ba739ec1.json",
+              "attempts": 2,
+              "latency_sec": 29.97,
+              "errors": [
+                "attempt 1: RuntimeError: LLM returned no final content (finish_reason=length, reasoning_chars=5481). Increase ONTOBRIDG_MAX_TOKENS for reasoning models.",
+                "attempt 2: RuntimeError: LLM returned no final content (finish_reason=length, reasoning_chars=5124). Increase ONTOBRIDG_MAX_TOKENS for reasoning models."
+              ],
+              "official_nontax_gold_nonself": 3,
+              "visible_nontax_gold": 3,
+              "visible_supported_gold": 0,
+              "visible_guard_compatible_exact_gold": 3,
+              "visible_lexically_explicit_gold": 1,
+              "visible_nontax_predicates": [
+                "equivalent class"
+              ],
+              "visible_lexically_explicit_predicates": [
+                "equivalent class"
+              ],
+              "visible_supported_predicates": [],
+              "visible_guard_compatible_predicates": [
+                "equivalent class"
+              ],
+              "selection_purpose": "fixed_relation_generation_pilot"
+            },
+            {
+              "sample_index": 3516,
+              "sample_id": "fa4c2ba480c447cab089dfd4820db4ec",
+              "status": "error",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\03516_974566584a.json",
+              "attempts": 2,
+              "latency_sec": 26.955,
+              "errors": [
+                "attempt 1: RuntimeError: LLM returned no final content (finish_reason=length, reasoning_chars=5562). Increase ONTOBRIDG_MAX_TOKENS for reasoning models.",
+                "attempt 2: RuntimeError: LLM returned no final content (finish_reason=length, reasoning_chars=5417). Increase ONTOBRIDG_MAX_TOKENS for reasoning models."
+              ],
+              "official_nontax_gold_nonself": 4,
+              "visible_nontax_gold": 4,
+              "visible_supported_gold": 0,
+              "visible_guard_compatible_exact_gold": 4,
+              "visible_lexically_explicit_gold": 1,
+              "visible_nontax_predicates": [
+                "disjoint with",
+                "equivalent class"
+              ],
+              "visible_lexically_explicit_predicates": [
+                "equivalent class"
+              ],
+              "visible_supported_predicates": [],
+              "visible_guard_compatible_predicates": [
+                "disjoint with",
+                "equivalent class"
+              ],
+              "selection_purpose": "fixed_relation_generation_pilot"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

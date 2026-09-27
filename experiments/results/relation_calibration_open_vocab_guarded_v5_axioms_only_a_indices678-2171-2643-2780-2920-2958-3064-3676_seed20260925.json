@@ -1,0 +1,1240 @@
+{
+  "meta": {
+    "protocol": "relation_guarded_v2_independent_calibration_v1",
+    "model": "dots3-note-prev",
+    "system": "open_vocab_guarded_v5_axioms_only",
+    "tasks": [
+      "a"
+    ],
+    "samples_per_task": 12,
+    "sample_indices": [
+      678,
+      2171,
+      2643,
+      2780,
+      2920,
+      2958,
+      3064,
+      3676
+    ],
+    "seed": 20260925,
+    "prior_failed_connection_attempts": 0,
+    "prior_failed_unit_attempts": 0,
+    "prior_failed_low_level_attempts": 0,
+    "selection_uses_gold_locally": true,
+    "selection_is_calibration_only_not_unbiased_evaluation": true,
+    "gold_visible_to_model": false,
+    "exclude_prefix": 40,
+    "exclude_eval_result": "experiments/results/official_stratified_open_openai_ab_s5_seed20260922.json",
+    "additional_exclude_results": [
+      "experiments/results/relation_calibration_a_n27_seed20260923.json",
+      "experiments/results/relation_calibration_ab_n12_seed20260923.json",
+      "experiments/results/relation_calibration_open_vocab_guarded_v5_axioms_only_a_indices1419-1554-1796-1824-1935-2676-3130-3516_seed20260924.json"
+    ],
+    "exclude_annotation_manifests": [
+      "experiments/annotations/relation_text_model_annotation_v1/manifest.json"
+    ],
+    "exclusion_ledger": [
+      {
+        "kind": "prefix",
+        "description": "indices [0, 40)",
+        "task_a_indices": 40,
+        "task_b_indices": 40
+      },
+      {
+        "kind": "result",
+        "path": "experiments\\results\\official_stratified_open_openai_ab_s5_seed20260922.json",
+        "sha256": "662ae6b1023a67921b4a57de8dd68181d08f584f0f5cfed149bf0109843d4e88",
+        "protocol": "llms4ol2026_stratified_open_v1",
+        "task_a_indices": 15,
+        "task_b_indices": 15,
+        "new_task_a_indices": 15,
+        "new_task_b_indices": 15
+      },
+      {
+        "kind": "result",
+        "path": "experiments\\results\\relation_calibration_a_n27_seed20260923.json",
+        "sha256": "456427a0eb306fb6486c5ac887a3b674e7d0ed86b48093cd930a907a74f6f173",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "task_a_indices": 27,
+        "task_b_indices": 0,
+        "new_task_a_indices": 27,
+        "new_task_b_indices": 0
+      },
+      {
+        "kind": "result",
+        "path": "experiments\\results\\relation_calibration_ab_n12_seed20260923.json",
+        "sha256": "e0bf91282978b24cc02fa82d8e811f6e0d9d25a2f84ae7013b8b7cae0e62153b",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "task_a_indices": 12,
+        "task_b_indices": 12,
+        "new_task_a_indices": 0,
+        "new_task_b_indices": 12
+      },
+      {
+        "kind": "result",
+        "path": "experiments\\results\\relation_calibration_open_vocab_guarded_v5_axioms_only_a_indices1419-1554-1796-1824-1935-2676-3130-3516_seed20260924.json",
+        "sha256": "cb135f14c0327e1ea99c99b0a367dd66c11c29e0d6310ad37b9ce7d9dd17e455",
+        "protocol": "relation_guarded_v2_independent_calibration_v1",
+        "task_a_indices": 8,
+        "task_b_indices": 0,
+        "new_task_a_indices": 8,
+        "new_task_b_indices": 0
+      },
+      {
+        "kind": "annotation_manifest",
+        "path": "experiments\\annotations\\relation_text_model_annotation_v1\\manifest.json",
+        "sha256": "f7405fe8f87dd5619f239cf3783c6ab9ac863eac7d8944382b4fe768a9b93cc8",
+        "protocol": "relation_text_model_annotation_v1",
+        "task_a_indices": 15,
+        "task_b_indices": 15,
+        "new_task_a_indices": 15,
+        "new_task_b_indices": 15
+      }
+    ],
+    "confidence_threshold": 0.85,
+    "implicit_confidence_threshold": 0.95,
+    "calibrated_confidence_threshold": 0.5,
+    "max_nontax": 8,
+    "max_implicit_gap_chars": 600,
+    "attempt_ledger": {
+      "planned_units": 8,
+      "successful_units": 8,
+      "failed_final_units": 0,
+      "prior_failed_connection_attempts": 0,
+      "prior_failed_unit_attempts": 0,
+      "unit_attempts_including_prior_failures": 8,
+      "current_low_level_attempts": 8,
+      "prior_failed_low_level_attempts": 0,
+      "successful_runner_attempts_including_retries": 8,
+      "low_level_attempts_including_prior_failures": 8
+    }
+  },
+  "tasks": {
+    "task_a": {
+      "meta": {
+        "task": "a",
+        "selected_indices": [
+          678,
+          2171,
+          2643,
+          2780,
+          2920,
+          2958,
+          3064,
+          3676
+        ],
+        "n_samples": 8
+      },
+      "systems": {
+        "open_vocab_guarded_v5_axioms_only": {
+          "meta": {
+            "challenge": "LLMs4OL 2026",
+            "protocol": "llms4ol2026_blind_v1",
+            "input_policy": "context_only",
+            "gold_visible_to_model": false,
+            "task": "a",
+            "task_name": "Flagship",
+            "system": "open_vocab_guarded_v5_axioms_only",
+            "backend": "openai",
+            "model": "dots3-note-prev",
+            "offset": 0,
+            "limit": 8,
+            "workers": 2,
+            "max_context_chars": 6000,
+            "confidence_threshold": 0.85,
+            "implicit_confidence_threshold": 0.95,
+            "calibrated_confidence_threshold": 0.5,
+            "allowed_nontax_predicates": null,
+            "max_nontax": 8,
+            "max_implicit_gap_chars": 600,
+            "calibration_file": null,
+            "calibration_status": "not_configured",
+            "max_completion_tokens": 16384,
+            "metric": "llms4ol2026_graph_similarity_exact",
+            "elapsed_sec": 246.738,
+            "elapsed_sec_scope": "current_process_including_cache_replay",
+            "selection": "independent_relation_calibration",
+            "selected_indices": [
+              678,
+              2171,
+              2643,
+              2780,
+              2920,
+              2958,
+              3064,
+              3676
+            ],
+            "excluded_indices_count": 105,
+            "pool": {
+              "selection": "explicit_sample_indices",
+              "selected_visible_gold": 23,
+              "selected_visible_supported_gold": 0
+            }
+          },
+          "summary": {
+            "target_n": 8,
+            "n_success": 8,
+            "n_failed": 0,
+            "complete": true,
+            "term_typing_f1_micro": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 1
+            },
+            "taxonomy_f1_micro": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 176
+            },
+            "nontax_f1_micro": {
+              "precision": 0.375,
+              "recall": 0.10714285714285714,
+              "f1": 0.16666666666666666,
+              "tp": 3,
+              "fp": 5,
+              "fn": 25
+            },
+            "nontax_nonself_f1_micro": {
+              "precision": 0.375,
+              "recall": 0.10714285714285714,
+              "f1": 0.16666666666666666,
+              "tp": 3,
+              "fp": 5,
+              "fn": 25
+            },
+            "official_graph_similarity_avg": 0.014509772431921555,
+            "composite_typing_tax_gs": 0.004836590810640518,
+            "nontax_pred_total": 8,
+            "nontax_gold_total": 28,
+            "nontax_nonself_pred_total": 8,
+            "nontax_nonself_gold_total": 28,
+            "successful_latency_sec": {
+              "min": 6.582,
+              "median": 29.234,
+              "p95": 156.852,
+              "max": 156.852,
+              "sum": 449.058
+            },
+            "successful_runner_attempts_total": 8,
+            "successful_samples_with_retry": 0,
+            "guard": {
+              "samples": 8,
+              "raw_nontax": 8,
+              "accepted_nontax": 8,
+              "rejected_nontax": 0,
+              "rejection_reason_counts": {}
+            }
+          },
+          "samples": [
+            {
+              "sample_index": 678,
+              "sample_id": "ab79b688992e4572892f3307dfaecd03",
+              "status": "ok",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\00678_525cde6f79.json",
+              "attempts": 1,
+              "latency_sec": 40.641,
+              "metrics": {
+                "typing": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 0
+                },
+                "taxonomy": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 30
+                },
+                "nontax": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 2,
+                  "fn": 1
+                },
+                "nontax_nonself": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 2,
+                  "fn": 1
+                },
+                "official_graph_similarity": {
+                  "edge_f1": 0.0,
+                  "neighborhood_similarity": 0.0,
+                  "taxonomy_similarity": 0.0,
+                  "graph_similarity": 0.0,
+                  "metric_id": "llms4ol2026_graph_similarity_exact",
+                  "external_reportable": true,
+                  "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+                },
+                "gold_counts": {
+                  "typing": 0,
+                  "taxonomy": 30,
+                  "nontax": 1
+                },
+                "pred_counts": {
+                  "typing": 0,
+                  "taxonomy": 0,
+                  "nontax": 2
+                }
+              },
+              "guard_diagnostics": {
+                "canonicalization_version": "relation_canonicalization_v2",
+                "postprocess_version": "guarded_v2_postprocess_v3",
+                "calibration_status": "not_configured",
+                "calibration_applied": false,
+                "confidence_threshold": 0.85,
+                "implicit_confidence_threshold": 0.95,
+                "calibrated_confidence_threshold": 0.5,
+                "allowed_nontax_predicates": null,
+                "max_implicit_gap_chars": 600,
+                "max_nontax": 8,
+                "raw_candidates": 2,
+                "canonicalized_candidates": 0,
+                "accepted_core": 0,
+                "raw_nontax": 2,
+                "accepted_nontax": 2,
+                "rejected_nontax": 0,
+                "rejection_reason_counts": {},
+                "accepted_nontax_candidates": [
+                  {
+                    "triple": [
+                      "granulation",
+                      "equivalent class",
+                      "granule structures"
+                    ],
+                    "raw_confidence": 0.95,
+                    "calibrated_confidence": null,
+                    "ranking_confidence": 0.95,
+                    "evidence": [
+                      "granulation, characterized by the boiling pattern of convection cells known as granule structures"
+                    ],
+                    "evidence_mode": "explicit",
+                    "evidence_gap_chars": null,
+                    "canonicalization": {
+                      "version": "relation_canonicalization_v2",
+                      "changed": false,
+                      "reversed": false,
+                      "subject_from": null,
+                      "predicate_from": null,
+                      "object_from": null,
+                      "subject_method": "context_exact",
+                      "object_method": "context_exact"
+                    },
+                    "position": 0
+                  },
+                  {
+                    "triple": [
+                      "respiration",
+                      "equivalent class",
+                      "cellular process of energy generation"
+                    ],
+                    "raw_confidence": 0.95,
+                    "calibrated_confidence": null,
+                    "ranking_confidence": 0.95,
+                    "evidence": [
+                      "Respiration, the cellular process of energy generation"
+                    ],
+                    "evidence_mode": "explicit",
+                    "evidence_gap_chars": null,
+                    "canonicalization": {
+                      "version": "relation_canonicalization_v2",
+                      "changed": false,
+                      "reversed": false,
+                      "subject_from": null,
+                      "predicate_from": null,
+                      "object_from": null,
+                      "subject_method": "context_exact",
+                      "object_method": "context_exact"
+                    },
+                    "position": 1
+                  }
+                ],
+                "rejected_nontax_candidates": []
+              },
+              "official_nontax_gold_nonself": 1,
+              "visible_nontax_gold": 1,
+              "visible_supported_gold": 0,
+              "visible_guard_compatible_exact_gold": 1,
+              "visible_lexically_explicit_gold": 1,
+              "visible_nontax_predicates": [
+                "equivalent class"
+              ],
+              "visible_lexically_explicit_predicates": [
+                "equivalent class"
+              ],
+              "visible_supported_predicates": [],
+              "visible_guard_compatible_predicates": [
+                "equivalent class"
+              ],
+              "selection_purpose": "fixed_relation_generation_pilot"
+            },
+            {
+              "sample_index": 2171,
+              "sample_id": "10d8c89daa8c4dd49831f1d1a3762471",
+              "status": "ok",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\02171_682d1cfe25.json",
+              "attempts": 1,
+              "latency_sec": 156.852,
+              "metrics": {
+                "typing": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 0
+                },
+                "taxonomy": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 30
+                },
+                "nontax": {
+                  "precision": 1.0,
+                  "recall": 0.5,
+                  "f1": 0.6666666666666666,
+                  "tp": 1,
+                  "fp": 0,
+                  "fn": 1
+                },
+                "nontax_nonself": {
+                  "precision": 1.0,
+                  "recall": 0.5,
+                  "f1": 0.6666666666666666,
+                  "tp": 1,
+                  "fp": 0,
+                  "fn": 1
+                },
+                "official_graph_similarity": {
+                  "edge_f1": 0.06060606060606061,
+                  "neighborhood_similarity": 0.02222222222222222,
+                  "taxonomy_similarity": 0.0,
+                  "graph_similarity": 0.02760942760942761,
+                  "metric_id": "llms4ol2026_graph_similarity_exact",
+                  "external_reportable": true,
+                  "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+                },
+                "gold_counts": {
+                  "typing": 0,
+                  "taxonomy": 30,
+                  "nontax": 2
+                },
+                "pred_counts": {
+                  "typing": 0,
+                  "taxonomy": 0,
+                  "nontax": 1
+                }
+              },
+              "guard_diagnostics": {
+                "canonicalization_version": "relation_canonicalization_v2",
+                "postprocess_version": "guarded_v2_postprocess_v3",
+                "calibration_status": "not_configured",
+                "calibration_applied": false,
+                "confidence_threshold": 0.85,
+                "implicit_confidence_threshold": 0.95,
+                "calibrated_confidence_threshold": 0.5,
+                "allowed_nontax_predicates": null,
+                "max_implicit_gap_chars": 600,
+                "max_nontax": 8,
+                "raw_candidates": 1,
+                "canonicalized_candidates": 0,
+                "accepted_core": 0,
+                "raw_nontax": 1,
+                "accepted_nontax": 1,
+                "rejected_nontax": 0,
+                "rejection_reason_counts": {},
+                "accepted_nontax_candidates": [
+                  {
+                    "triple": [
+                      "porosity",
+                      "equivalent class",
+                      "porousness"
+                    ],
+                    "raw_confidence": 0.95,
+                    "calibrated_confidence": null,
+                    "ranking_confidence": 0.95,
+                    "evidence": [
+                      "Porosity, often referred to interchangeably in broad contexts as porousness, defines the void spaces within a soil matrix."
+                    ],
+                    "evidence_mode": "explicit",
+                    "evidence_gap_chars": null,
+                    "canonicalization": {
+                      "version": "relation_canonicalization_v2",
+                      "changed": false,
+                      "reversed": false,
+                      "subject_from": null,
+                      "predicate_from": null,
+                      "object_from": null,
+                      "subject_method": "context_exact",
+                      "object_method": "context_exact"
+                    },
+                    "position": 0
+                  }
+                ],
+                "rejected_nontax_candidates": []
+              },
+              "official_nontax_gold_nonself": 2,
+              "visible_nontax_gold": 2,
+              "visible_supported_gold": 0,
+              "visible_guard_compatible_exact_gold": 2,
+              "visible_lexically_explicit_gold": 1,
+              "visible_nontax_predicates": [
+                "equivalent class"
+              ],
+              "visible_lexically_explicit_predicates": [
+                "equivalent class"
+              ],
+              "visible_supported_predicates": [],
+              "visible_guard_compatible_predicates": [
+                "equivalent class"
+              ],
+              "selection_purpose": "fixed_relation_generation_pilot"
+            },
+            {
+              "sample_index": 2643,
+              "sample_id": "ccc8a9fa18a44e2d9357f92eb9c45b22",
+              "status": "ok",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\02643_391fc0a9cb.json",
+              "attempts": 1,
+              "latency_sec": 15.336,
+              "metrics": {
+                "typing": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 0
+                },
+                "taxonomy": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 26
+                },
+                "nontax": {
+                  "precision": 1.0,
+                  "recall": 0.16666666666666666,
+                  "f1": 0.2857142857142857,
+                  "tp": 1,
+                  "fp": 0,
+                  "fn": 5
+                },
+                "nontax_nonself": {
+                  "precision": 1.0,
+                  "recall": 0.16666666666666666,
+                  "f1": 0.2857142857142857,
+                  "tp": 1,
+                  "fp": 0,
+                  "fn": 5
+                },
+                "official_graph_similarity": {
+                  "edge_f1": 0.06060606060606061,
+                  "neighborhood_similarity": 0.037037037037037035,
+                  "taxonomy_similarity": 0.0,
+                  "graph_similarity": 0.03254769921436588,
+                  "metric_id": "llms4ol2026_graph_similarity_exact",
+                  "external_reportable": true,
+                  "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+                },
+                "gold_counts": {
+                  "typing": 0,
+                  "taxonomy": 26,
+                  "nontax": 6
+                },
+                "pred_counts": {
+                  "typing": 0,
+                  "taxonomy": 0,
+                  "nontax": 1
+                }
+              },
+              "guard_diagnostics": {
+                "canonicalization_version": "relation_canonicalization_v2",
+                "postprocess_version": "guarded_v2_postprocess_v3",
+                "calibration_status": "not_configured",
+                "calibration_applied": false,
+                "confidence_threshold": 0.85,
+                "implicit_confidence_threshold": 0.95,
+                "calibrated_confidence_threshold": 0.5,
+                "allowed_nontax_predicates": null,
+                "max_implicit_gap_chars": 600,
+                "max_nontax": 8,
+                "raw_candidates": 1,
+                "canonicalized_candidates": 0,
+                "accepted_core": 0,
+                "raw_nontax": 1,
+                "accepted_nontax": 1,
+                "rejected_nontax": 0,
+                "rejection_reason_counts": {},
+                "accepted_nontax_candidates": [
+                  {
+                    "triple": [
+                      "unsaturated zone",
+                      "equivalent class",
+                      "vadose zone"
+                    ],
+                    "raw_confidence": 0.95,
+                    "calibrated_confidence": null,
+                    "ranking_confidence": 0.95,
+                    "evidence": [
+                      "The unsaturated zone, also frequently referred to as the vadose zone, represents the upper layer where pore spaces contain both air and water."
+                    ],
+                    "evidence_mode": "explicit",
+                    "evidence_gap_chars": null,
+                    "canonicalization": {
+                      "version": "relation_canonicalization_v2",
+                      "changed": false,
+                      "reversed": false,
+                      "subject_from": null,
+                      "predicate_from": null,
+                      "object_from": null,
+                      "subject_method": "context_exact",
+                      "object_method": "context_exact"
+                    },
+                    "position": 0
+                  }
+                ],
+                "rejected_nontax_candidates": []
+              },
+              "official_nontax_gold_nonself": 6,
+              "visible_nontax_gold": 1,
+              "visible_supported_gold": 0,
+              "visible_guard_compatible_exact_gold": 1,
+              "visible_lexically_explicit_gold": 1,
+              "visible_nontax_predicates": [
+                "equivalent class"
+              ],
+              "visible_lexically_explicit_predicates": [
+                "equivalent class"
+              ],
+              "visible_supported_predicates": [],
+              "visible_guard_compatible_predicates": [
+                "equivalent class"
+              ],
+              "selection_purpose": "fixed_relation_generation_pilot"
+            },
+            {
+              "sample_index": 2780,
+              "sample_id": "68600492a0164458a99a6896bf253a51",
+              "status": "ok",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\02780_8e42cdf163.json",
+              "attempts": 1,
+              "latency_sec": 17.827,
+              "metrics": {
+                "typing": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 0
+                },
+                "taxonomy": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 15
+                },
+                "nontax": {
+                  "precision": 1.0,
+                  "recall": 0.3333333333333333,
+                  "f1": 0.5,
+                  "tp": 1,
+                  "fp": 0,
+                  "fn": 2
+                },
+                "nontax_nonself": {
+                  "precision": 1.0,
+                  "recall": 0.3333333333333333,
+                  "f1": 0.5,
+                  "tp": 1,
+                  "fp": 0,
+                  "fn": 2
+                },
+                "official_graph_similarity": {
+                  "edge_f1": 0.10526315789473684,
+                  "neighborhood_similarity": 0.0625,
+                  "taxonomy_similarity": 0.0,
+                  "graph_similarity": 0.05592105263157895,
+                  "metric_id": "llms4ol2026_graph_similarity_exact",
+                  "external_reportable": true,
+                  "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+                },
+                "gold_counts": {
+                  "typing": 0,
+                  "taxonomy": 15,
+                  "nontax": 3
+                },
+                "pred_counts": {
+                  "typing": 0,
+                  "taxonomy": 0,
+                  "nontax": 1
+                }
+              },
+              "guard_diagnostics": {
+                "canonicalization_version": "relation_canonicalization_v2",
+                "postprocess_version": "guarded_v2_postprocess_v3",
+                "calibration_status": "not_configured",
+                "calibration_applied": false,
+                "confidence_threshold": 0.85,
+                "implicit_confidence_threshold": 0.95,
+                "calibrated_confidence_threshold": 0.5,
+                "allowed_nontax_predicates": null,
+                "max_implicit_gap_chars": 600,
+                "max_nontax": 8,
+                "raw_candidates": 1,
+                "canonicalized_candidates": 0,
+                "accepted_core": 0,
+                "raw_nontax": 1,
+                "accepted_nontax": 1,
+                "rejected_nontax": 0,
+                "rejection_reason_counts": {},
+                "accepted_nontax_candidates": [
+                  {
+                    "triple": [
+                      "volcanism",
+                      "equivalent class",
+                      "vulcanism"
+                    ],
+                    "raw_confidence": 0.95,
+                    "calibrated_confidence": null,
+                    "ranking_confidence": 0.95,
+                    "evidence": [
+                      "broadlyclassifiedundervolcanism and sometimesinterchangeablyreferredtoas vulcanism"
+                    ],
+                    "evidence_mode": "explicit",
+                    "evidence_gap_chars": null,
+                    "canonicalization": {
+                      "version": "relation_canonicalization_v2",
+                      "changed": false,
+                      "reversed": false,
+                      "subject_from": null,
+                      "predicate_from": null,
+                      "object_from": null,
+                      "subject_method": "unchanged",
+                      "object_method": "context_exact"
+                    },
+                    "position": 0
+                  }
+                ],
+                "rejected_nontax_candidates": []
+              },
+              "official_nontax_gold_nonself": 3,
+              "visible_nontax_gold": 3,
+              "visible_supported_gold": 0,
+              "visible_guard_compatible_exact_gold": 3,
+              "visible_lexically_explicit_gold": 1,
+              "visible_nontax_predicates": [
+                "equivalent class"
+              ],
+              "visible_lexically_explicit_predicates": [
+                "equivalent class"
+              ],
+              "visible_supported_predicates": [],
+              "visible_guard_compatible_predicates": [
+                "equivalent class"
+              ],
+              "selection_purpose": "fixed_relation_generation_pilot"
+            },
+            {
+              "sample_index": 2920,
+              "sample_id": "a26ba9963982442ea6322bb0a9225691",
+              "status": "ok",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\02920_0efc559486.json",
+              "attempts": 1,
+              "latency_sec": 119.254,
+              "metrics": {
+                "typing": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 0
+                },
+                "taxonomy": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 8
+                },
+                "nontax": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 1,
+                  "fn": 6
+                },
+                "nontax_nonself": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 1,
+                  "fn": 6
+                },
+                "official_graph_similarity": {
+                  "edge_f1": 0.0,
+                  "neighborhood_similarity": 0.0,
+                  "taxonomy_similarity": 0.0,
+                  "graph_similarity": 0.0,
+                  "metric_id": "llms4ol2026_graph_similarity_exact",
+                  "external_reportable": true,
+                  "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+                },
+                "gold_counts": {
+                  "typing": 0,
+                  "taxonomy": 8,
+                  "nontax": 6
+                },
+                "pred_counts": {
+                  "typing": 0,
+                  "taxonomy": 0,
+                  "nontax": 1
+                }
+              },
+              "guard_diagnostics": {
+                "canonicalization_version": "relation_canonicalization_v2",
+                "postprocess_version": "guarded_v2_postprocess_v3",
+                "calibration_status": "not_configured",
+                "calibration_applied": false,
+                "confidence_threshold": 0.85,
+                "implicit_confidence_threshold": 0.95,
+                "calibrated_confidence_threshold": 0.5,
+                "allowed_nontax_predicates": null,
+                "max_implicit_gap_chars": 600,
+                "max_nontax": 8,
+                "raw_candidates": 1,
+                "canonicalized_candidates": 0,
+                "accepted_core": 0,
+                "raw_nontax": 1,
+                "accepted_nontax": 1,
+                "rejected_nontax": 0,
+                "rejection_reason_counts": {},
+                "accepted_nontax_candidates": [
+                  {
+                    "triple": [
+                      "process_aggregate",
+                      "disjoint with",
+                      "process"
+                    ],
+                    "raw_confidence": 0.95,
+                    "calibrated_confidence": null,
+                    "ranking_confidence": 0.95,
+                    "evidence": [
+                      "process_aggregate remains a direct subclass of processual_entity, distinct from the transformational processes",
+                      "process serves as a parent class for specific material transformations"
+                    ],
+                    "evidence_mode": "cross_sentence",
+                    "evidence_gap_chars": 294,
+                    "canonicalization": {
+                      "version": "relation_canonicalization_v2",
+                      "changed": false,
+                      "reversed": false,
+                      "subject_from": null,
+                      "predicate_from": null,
+                      "object_from": null,
+                      "subject_method": "context_exact",
+                      "object_method": "context_exact"
+                    },
+                    "position": 0
+                  }
+                ],
+                "rejected_nontax_candidates": []
+              },
+              "official_nontax_gold_nonself": 6,
+              "visible_nontax_gold": 6,
+              "visible_supported_gold": 0,
+              "visible_guard_compatible_exact_gold": 6,
+              "visible_lexically_explicit_gold": 1,
+              "visible_nontax_predicates": [
+                "disjoint with"
+              ],
+              "visible_lexically_explicit_predicates": [
+                "disjoint with"
+              ],
+              "visible_supported_predicates": [],
+              "visible_guard_compatible_predicates": [
+                "disjoint with"
+              ],
+              "selection_purpose": "fixed_relation_generation_pilot"
+            },
+            {
+              "sample_index": 2958,
+              "sample_id": "3db6913a2f2f4f3aa6f7f4fe30416b55",
+              "status": "ok",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\02958_feabe11094.json",
+              "attempts": 1,
+              "latency_sec": 6.582,
+              "metrics": {
+                "typing": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 0
+                },
+                "taxonomy": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 27
+                },
+                "nontax": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 2
+                },
+                "nontax_nonself": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 2
+                },
+                "official_graph_similarity": {
+                  "edge_f1": 0.0,
+                  "neighborhood_similarity": 0.0,
+                  "taxonomy_similarity": 0.0,
+                  "graph_similarity": 0.0,
+                  "metric_id": "llms4ol2026_graph_similarity_exact",
+                  "external_reportable": true,
+                  "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+                },
+                "gold_counts": {
+                  "typing": 0,
+                  "taxonomy": 27,
+                  "nontax": 2
+                },
+                "pred_counts": {
+                  "typing": 0,
+                  "taxonomy": 0,
+                  "nontax": 0
+                }
+              },
+              "guard_diagnostics": {
+                "canonicalization_version": "relation_canonicalization_v2",
+                "postprocess_version": "guarded_v2_postprocess_v3",
+                "calibration_status": "not_configured",
+                "calibration_applied": false,
+                "confidence_threshold": 0.85,
+                "implicit_confidence_threshold": 0.95,
+                "calibrated_confidence_threshold": 0.5,
+                "allowed_nontax_predicates": null,
+                "max_implicit_gap_chars": 600,
+                "max_nontax": 8,
+                "raw_candidates": 0,
+                "canonicalized_candidates": 0,
+                "accepted_core": 0,
+                "raw_nontax": 0,
+                "accepted_nontax": 0,
+                "rejected_nontax": 0,
+                "rejection_reason_counts": {},
+                "accepted_nontax_candidates": [],
+                "rejected_nontax_candidates": []
+              },
+              "official_nontax_gold_nonself": 2,
+              "visible_nontax_gold": 2,
+              "visible_supported_gold": 0,
+              "visible_guard_compatible_exact_gold": 2,
+              "visible_lexically_explicit_gold": 1,
+              "visible_nontax_predicates": [
+                "equivalent class"
+              ],
+              "visible_lexically_explicit_predicates": [
+                "equivalent class"
+              ],
+              "visible_supported_predicates": [],
+              "visible_guard_compatible_predicates": [
+                "equivalent class"
+              ],
+              "selection_purpose": "fixed_relation_generation_pilot"
+            },
+            {
+              "sample_index": 3064,
+              "sample_id": "0590229a58f54ec5bc611ab85c30a93d",
+              "status": "ok",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\03064_6a6eb5670a.json",
+              "attempts": 1,
+              "latency_sec": 83.294,
+              "metrics": {
+                "typing": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 0
+                },
+                "taxonomy": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 27
+                },
+                "nontax": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 2,
+                  "fn": 5
+                },
+                "nontax_nonself": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 2,
+                  "fn": 5
+                },
+                "official_graph_similarity": {
+                  "edge_f1": 0.0,
+                  "neighborhood_similarity": 0.0,
+                  "taxonomy_similarity": 0.0,
+                  "graph_similarity": 0.0,
+                  "metric_id": "llms4ol2026_graph_similarity_exact",
+                  "external_reportable": true,
+                  "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+                },
+                "gold_counts": {
+                  "typing": 0,
+                  "taxonomy": 27,
+                  "nontax": 5
+                },
+                "pred_counts": {
+                  "typing": 0,
+                  "taxonomy": 0,
+                  "nontax": 2
+                }
+              },
+              "guard_diagnostics": {
+                "canonicalization_version": "relation_canonicalization_v2",
+                "postprocess_version": "guarded_v2_postprocess_v3",
+                "calibration_status": "not_configured",
+                "calibration_applied": false,
+                "confidence_threshold": 0.85,
+                "implicit_confidence_threshold": 0.95,
+                "calibrated_confidence_threshold": 0.5,
+                "allowed_nontax_predicates": null,
+                "max_implicit_gap_chars": 600,
+                "max_nontax": 8,
+                "raw_candidates": 2,
+                "canonicalized_candidates": 0,
+                "accepted_core": 0,
+                "raw_nontax": 2,
+                "accepted_nontax": 2,
+                "rejected_nontax": 0,
+                "rejection_reason_counts": {},
+                "accepted_nontax_candidates": [
+                  {
+                    "triple": [
+                      "active sliding interfaces",
+                      "equivalent class",
+                      "transform boundary"
+                    ],
+                    "raw_confidence": 0.95,
+                    "calibrated_confidence": null,
+                    "ranking_confidence": 0.95,
+                    "evidence": [
+                      "active sliding interfaces are known as the transform boundary"
+                    ],
+                    "evidence_mode": "explicit",
+                    "evidence_gap_chars": null,
+                    "canonicalization": {
+                      "version": "relation_canonicalization_v2",
+                      "changed": false,
+                      "reversed": false,
+                      "subject_from": null,
+                      "predicate_from": null,
+                      "object_from": null,
+                      "subject_method": "context_exact",
+                      "object_method": "context_exact"
+                    },
+                    "position": 0
+                  },
+                  {
+                    "triple": [
+                      "ancient or inactive interfaces",
+                      "equivalent class",
+                      "fossil plate boundary"
+                    ],
+                    "raw_confidence": 0.95,
+                    "calibrated_confidence": null,
+                    "ranking_confidence": 0.95,
+                    "evidence": [
+                      "ancient or inactive interfaces are termed a fossil plate boundary"
+                    ],
+                    "evidence_mode": "explicit",
+                    "evidence_gap_chars": null,
+                    "canonicalization": {
+                      "version": "relation_canonicalization_v2",
+                      "changed": false,
+                      "reversed": false,
+                      "subject_from": null,
+                      "predicate_from": null,
+                      "object_from": null,
+                      "subject_method": "context_exact",
+                      "object_method": "context_exact"
+                    },
+                    "position": 1
+                  }
+                ],
+                "rejected_nontax_candidates": []
+              },
+              "official_nontax_gold_nonself": 5,
+              "visible_nontax_gold": 5,
+              "visible_supported_gold": 0,
+              "visible_guard_compatible_exact_gold": 5,
+              "visible_lexically_explicit_gold": 1,
+              "visible_nontax_predicates": [
+                "equivalent class"
+              ],
+              "visible_lexically_explicit_predicates": [
+                "equivalent class"
+              ],
+              "visible_supported_predicates": [],
+              "visible_guard_compatible_predicates": [
+                "equivalent class"
+              ],
+              "selection_purpose": "fixed_relation_generation_pilot"
+            },
+            {
+              "sample_index": 3676,
+              "sample_id": "e8934b93d8054b3bbc29b34bef1ba3db",
+              "status": "ok",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v5_axioms_only\\03676_ebfef69b4b.json",
+              "attempts": 1,
+              "latency_sec": 9.272,
+              "metrics": {
+                "typing": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 1
+                },
+                "taxonomy": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 13
+                },
+                "nontax": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 3
+                },
+                "nontax_nonself": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 3
+                },
+                "official_graph_similarity": {
+                  "edge_f1": 0.0,
+                  "neighborhood_similarity": 0.0,
+                  "taxonomy_similarity": 0.0,
+                  "graph_similarity": 0.0,
+                  "metric_id": "llms4ol2026_graph_similarity_exact",
+                  "external_reportable": true,
+                  "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+                },
+                "gold_counts": {
+                  "typing": 1,
+                  "taxonomy": 13,
+                  "nontax": 3
+                },
+                "pred_counts": {
+                  "typing": 0,
+                  "taxonomy": 0,
+                  "nontax": 0
+                }
+              },
+              "guard_diagnostics": {
+                "canonicalization_version": "relation_canonicalization_v2",
+                "postprocess_version": "guarded_v2_postprocess_v3",
+                "calibration_status": "not_configured",
+                "calibration_applied": false,
+                "confidence_threshold": 0.85,
+                "implicit_confidence_threshold": 0.95,
+                "calibrated_confidence_threshold": 0.5,
+                "allowed_nontax_predicates": null,
+                "max_implicit_gap_chars": 600,
+                "max_nontax": 8,
+                "raw_candidates": 0,
+                "canonicalized_candidates": 0,
+                "accepted_core": 0,
+                "raw_nontax": 0,
+                "accepted_nontax": 0,
+                "rejected_nontax": 0,
+                "rejection_reason_counts": {},
+                "accepted_nontax_candidates": [],
+                "rejected_nontax_candidates": []
+              },
+              "official_nontax_gold_nonself": 3,
+              "visible_nontax_gold": 3,
+              "visible_supported_gold": 0,
+              "visible_guard_compatible_exact_gold": 3,
+              "visible_lexically_explicit_gold": 1,
+              "visible_nontax_predicates": [
+                "equivalent class"
+              ],
+              "visible_lexically_explicit_predicates": [
+                "equivalent class"
+              ],
+              "visible_supported_predicates": [],
+              "visible_guard_compatible_predicates": [
+                "equivalent class"
+              ],
+              "selection_purpose": "fixed_relation_generation_pilot"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

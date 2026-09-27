@@ -1,0 +1,3325 @@
+{
+  "meta": {
+    "challenge": "LLMs4OL 2026",
+    "protocol": "llms4ol2026_blind_v1",
+    "task": "b",
+    "model": "dots3-note-prev",
+    "offset": 0,
+    "limit": 30,
+    "gold_visible_to_model": false
+  },
+  "systems": {
+    "closed_vocab": {
+      "meta": {
+        "challenge": "LLMs4OL 2026",
+        "protocol": "llms4ol2026_blind_v1",
+        "input_policy": "context_initial_official_terms_types",
+        "gold_visible_to_model": false,
+        "task": "b",
+        "task_name": "Reuse",
+        "system": "closed_vocab",
+        "backend": "openai",
+        "model": "dots3-note-prev",
+        "offset": 0,
+        "limit": 30,
+        "workers": 2,
+        "max_context_chars": 6000,
+        "max_completion_tokens": 16384,
+        "metric": "llms4ol2026_graph_similarity_exact",
+        "elapsed_sec": 0.08,
+        "elapsed_sec_scope": "current_process_including_cache_replay"
+      },
+      "summary": {
+        "target_n": 30,
+        "n_success": 30,
+        "n_failed": 0,
+        "complete": true,
+        "term_typing_f1_micro": {
+          "precision": 0.7894736842105263,
+          "recall": 1.0,
+          "f1": 0.8823529411764706,
+          "tp": 15,
+          "fp": 4,
+          "fn": 0
+        },
+        "taxonomy_f1_micro": {
+          "precision": 0.96,
+          "recall": 0.935064935064935,
+          "f1": 0.9473684210526316,
+          "tp": 144,
+          "fp": 6,
+          "fn": 10
+        },
+        "nontax_f1_micro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "official_graph_similarity_avg": 0.9375368802923754,
+        "composite_typing_tax_gs": 0.9224194141738259,
+        "nontax_pred_total": 0,
+        "nontax_gold_total": 0,
+        "successful_latency_sec": {
+          "min": 14.509,
+          "median": 53.771,
+          "p95": 148.249,
+          "max": 213.803,
+          "sum": 1877.67
+        },
+        "successful_runner_attempts_total": 30,
+        "successful_samples_with_retry": 0
+      },
+      "samples": [
+        {
+          "sample_index": 0,
+          "sample_id": "66733e0484e04fc89bd745865acb7424",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00000_11394d7c13.json",
+          "attempts": 1,
+          "latency_sec": 56.598,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 5,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 5,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 5,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 1,
+          "sample_id": "d00949ae3d79432faa66a3cc5861f53b",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00001_b5364a3a5e.json",
+          "attempts": 1,
+          "latency_sec": 73.524,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 4,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 4,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.6666666666666666,
+              "neighborhood_similarity": 0.4333333333333333,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 0.6999999999999998,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 4,
+              "taxonomy": 4,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 2,
+          "sample_id": "a954183e350a42d280972135f60941a9",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00002_1a51dd6fb4.json",
+          "attempts": 1,
+          "latency_sec": 77.199,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 0.9,
+              "f1": 0.9473684210526316,
+              "tp": 9,
+              "fp": 0,
+              "fn": 1
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.9473684210526316,
+              "neighborhood_similarity": 0.890909090909091,
+              "taxonomy_similarity": 0.9,
+              "graph_similarity": 0.9127591706539074,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 10,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 9,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 3,
+          "sample_id": "8cc70e8706f34b5aa545acddc0ca27a3",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00003_6ef75a6758.json",
+          "attempts": 1,
+          "latency_sec": 41.647,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 2,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 2,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 2,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 4,
+          "sample_id": "9118c76647504264bd597b39b1550900",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00004_9a22b94a0e.json",
+          "attempts": 1,
+          "latency_sec": 55.649,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 0.8571428571428571,
+              "recall": 0.8571428571428571,
+              "f1": 0.8571428571428571,
+              "tp": 12,
+              "fp": 2,
+              "fn": 2
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.8571428571428571,
+              "neighborhood_similarity": 0.7878787878787878,
+              "taxonomy_similarity": 0.9111111111111111,
+              "graph_similarity": 0.8520442520442519,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 14,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 14,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 5,
+          "sample_id": "ec6105f455e44cf19310b18b94e0efaf",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00005_2450d5e229.json",
+          "attempts": 1,
+          "latency_sec": 50.236,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "f1": 0.5,
+              "tp": 2,
+              "fp": 2,
+              "fn": 2
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.5,
+              "neighborhood_similarity": 0.36666666666666664,
+              "taxonomy_similarity": 0.6666666666666667,
+              "graph_similarity": 0.5111111111111112,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 6,
+          "sample_id": "1db39e6362394444b565c008d1cee820",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00006_e11ae57703.json",
+          "attempts": 1,
+          "latency_sec": 22.193,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 3,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 7,
+          "sample_id": "1ed40d043201487399942563e3e97883",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00007_eca6380f7e.json",
+          "attempts": 1,
+          "latency_sec": 22.277,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 3,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 8,
+          "sample_id": "1a091dea55a74a9ca8f7a187539ae64e",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00008_eacccf9246.json",
+          "attempts": 1,
+          "latency_sec": 33.531,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 0.75,
+              "f1": 0.8571428571428571,
+              "tp": 3,
+              "fp": 0,
+              "fn": 1
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.8571428571428571,
+              "neighborhood_similarity": 0.75,
+              "taxonomy_similarity": 0.75,
+              "graph_similarity": 0.7857142857142857,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 9,
+          "sample_id": "8cab167a90484df19f37da9c335d6e93",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00009_f2be90db7d.json",
+          "attempts": 1,
+          "latency_sec": 22.9,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 1,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 1,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 1,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 10,
+          "sample_id": "948d25b13a4240499ec6d210b9847b5e",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00010_add12ee91a.json",
+          "attempts": 1,
+          "latency_sec": 42.117,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 11,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 11,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 11,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 11,
+          "sample_id": "277ae0b955a24ab499106cdd7a8c91fe",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00011_489c9954d9.json",
+          "attempts": 1,
+          "latency_sec": 23.438,
+          "metrics": {
+            "typing": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 15,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 0.0,
+              "graph_similarity": 0.6666666666666666,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 15,
+              "taxonomy": 0,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 15,
+              "taxonomy": 0,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 12,
+          "sample_id": "c4d163e8f7374185a427479b023647d2",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00012_65d79ebb70.json",
+          "attempts": 1,
+          "latency_sec": 148.249,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 14,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 14,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 14,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 13,
+          "sample_id": "20cac7abd8e943198f883c5aa3c56ea9",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00013_ce8fc20c1a.json",
+          "attempts": 1,
+          "latency_sec": 52.535,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 0.8571428571428571,
+              "recall": 0.8,
+              "f1": 0.8275862068965518,
+              "tp": 12,
+              "fp": 2,
+              "fn": 3
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.8275862068965518,
+              "neighborhood_similarity": 0.7796296296296297,
+              "taxonomy_similarity": 0.7824074074074074,
+              "graph_similarity": 0.7965410813111964,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 15,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 14,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 14,
+          "sample_id": "69925a1440024c53a135f64e99cc1c9e",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00014_10b0bee82f.json",
+          "attempts": 1,
+          "latency_sec": 28.466,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 3,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 15,
+          "sample_id": "d0d990d3770f410aada290ba01ed8de3",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00015_148679dd46.json",
+          "attempts": 1,
+          "latency_sec": 14.509,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 3,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 16,
+          "sample_id": "d5f0b29ed73a45e18a53002cc5d9b2d2",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00016_d3de45225b.json",
+          "attempts": 1,
+          "latency_sec": 213.803,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 4,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 17,
+          "sample_id": "789c77b3215d443a81046ab16dc60b8f",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00017_f48f6bf414.json",
+          "attempts": 1,
+          "latency_sec": 26.339,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 4,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 18,
+          "sample_id": "1509225bd4164ac1997e7a29ccc579ea",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00018_924fdd1fe9.json",
+          "attempts": 1,
+          "latency_sec": 76.816,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 4,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 19,
+          "sample_id": "4da29d1dedab4ce989ace6c145ec91cc",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00019_55aac12331.json",
+          "attempts": 1,
+          "latency_sec": 139.239,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 3,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 20,
+          "sample_id": "a234eedd3c6243bca83c13303aa05d8f",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00020_e1ed01102e.json",
+          "attempts": 1,
+          "latency_sec": 61.522,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 2,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 2,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 2,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 21,
+          "sample_id": "68159fec0b6249fd94f7edad6bdc6f35",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00021_c48e11594d.json",
+          "attempts": 1,
+          "latency_sec": 138.955,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 1,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 1,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 1,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 22,
+          "sample_id": "41dd91bbeb8d4e89b756eb51fbc9b321",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00022_4ab1a263da.json",
+          "attempts": 1,
+          "latency_sec": 56.748,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 10,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 10,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 10,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 23,
+          "sample_id": "7d379fdd736645d78c565a0aeb4e129f",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00023_3a0b94b6aa.json",
+          "attempts": 1,
+          "latency_sec": 55.007,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 8,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 8,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 8,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 24,
+          "sample_id": "b12307f6c2ff4ab9959466d1ad47f1ec",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00024_440f572a03.json",
+          "attempts": 1,
+          "latency_sec": 61.266,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 3,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 25,
+          "sample_id": "29dbc84e40334f1a9ba8d5cdfa69106b",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00025_1302daf4c5.json",
+          "attempts": 1,
+          "latency_sec": 106.708,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 1,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 1,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 1,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 26,
+          "sample_id": "d059bf6b226440cfa43f1b40fb080614",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00026_686d2ac8a1.json",
+          "attempts": 1,
+          "latency_sec": 36.799,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 3,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 27,
+          "sample_id": "da4b3ec210154ff592355f61147d2dd4",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00027_6d6b7dfe32.json",
+          "attempts": 1,
+          "latency_sec": 32.285,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 4,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 28,
+          "sample_id": "fec887ae266b40ab8a7dd7d5ee765f3d",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00028_9bd270c1de.json",
+          "attempts": 1,
+          "latency_sec": 45.897,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 3,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 29,
+          "sample_id": "3a09bc85f6c648c5ba356829ce2d4268",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\closed_vocab\\00029_602377c54d.json",
+          "attempts": 1,
+          "latency_sec": 61.218,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 0.875,
+              "f1": 0.9333333333333333,
+              "tp": 7,
+              "fp": 0,
+              "fn": 1
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.9333333333333333,
+              "neighborhood_similarity": 0.9466666666666667,
+              "taxonomy_similarity": 0.8238095238095238,
+              "graph_similarity": 0.9012698412698411,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 8,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 7,
+              "nontax": 0
+            }
+          }
+        }
+      ]
+    },
+    "open_vocab": {
+      "meta": {
+        "challenge": "LLMs4OL 2026",
+        "protocol": "llms4ol2026_blind_v1",
+        "input_policy": "context_initial_official_terms_types",
+        "gold_visible_to_model": false,
+        "task": "b",
+        "task_name": "Reuse",
+        "system": "open_vocab",
+        "backend": "openai",
+        "model": "dots3-note-prev",
+        "offset": 0,
+        "limit": 30,
+        "workers": 2,
+        "max_context_chars": 6000,
+        "max_completion_tokens": 16384,
+        "metric": "llms4ol2026_graph_similarity_exact",
+        "elapsed_sec": 0.079,
+        "elapsed_sec_scope": "current_process_including_cache_replay"
+      },
+      "summary": {
+        "target_n": 30,
+        "n_success": 30,
+        "n_failed": 0,
+        "complete": true,
+        "term_typing_f1_micro": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 15,
+          "fp": 0,
+          "fn": 0
+        },
+        "taxonomy_f1_micro": {
+          "precision": 0.8666666666666667,
+          "recall": 0.9285714285714286,
+          "f1": 0.896551724137931,
+          "tp": 143,
+          "fp": 22,
+          "fn": 11
+        },
+        "nontax_f1_micro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 150,
+          "fn": 0
+        },
+        "official_graph_similarity_avg": 0.6448826552312965,
+        "composite_typing_tax_gs": 0.8471447931230758,
+        "nontax_pred_total": 150,
+        "nontax_gold_total": 0,
+        "successful_latency_sec": {
+          "min": 25.083,
+          "median": 57.454,
+          "p95": 176.196,
+          "max": 185.779,
+          "sum": 2075.447
+        },
+        "successful_runner_attempts_total": 30,
+        "successful_samples_with_retry": 0
+      },
+      "samples": [
+        {
+          "sample_index": 0,
+          "sample_id": "66733e0484e04fc89bd745865acb7424",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00000_11394d7c13.json",
+          "attempts": 1,
+          "latency_sec": 53.228,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 0.8333333333333334,
+              "recall": 1.0,
+              "f1": 0.9090909090909091,
+              "tp": 5,
+              "fp": 1,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.9090909090909091,
+              "neighborhood_similarity": 0.8333333333333334,
+              "taxonomy_similarity": 0.8333333333333334,
+              "graph_similarity": 0.8585858585858586,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 5,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 6,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 1,
+          "sample_id": "d00949ae3d79432faa66a3cc5861f53b",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00001_b5364a3a5e.json",
+          "attempts": 1,
+          "latency_sec": 185.779,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 4,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 15,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.34782608695652173,
+              "neighborhood_similarity": 0.13194444444444445,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 0.49325684380032203,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 15
+            }
+          }
+        },
+        {
+          "sample_index": 2,
+          "sample_id": "a954183e350a42d280972135f60941a9",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00002_1a51dd6fb4.json",
+          "attempts": 1,
+          "latency_sec": 57.361,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 10,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 5,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.8,
+              "neighborhood_similarity": 0.5520833333333334,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 0.7840277777777778,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 10,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 10,
+              "nontax": 5
+            }
+          }
+        },
+        {
+          "sample_index": 3,
+          "sample_id": "8cc70e8706f34b5aa545acddc0ca27a3",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00003_6ef75a6758.json",
+          "attempts": 1,
+          "latency_sec": 53.49,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666,
+              "tp": 2,
+              "fp": 2,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 4,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.4,
+              "neighborhood_similarity": 0.25,
+              "taxonomy_similarity": 0.5,
+              "graph_similarity": 0.3833333333333333,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 2,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 4
+            }
+          }
+        },
+        {
+          "sample_index": 4,
+          "sample_id": "9118c76647504264bd597b39b1550900",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00004_9a22b94a0e.json",
+          "attempts": 1,
+          "latency_sec": 36.382,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 0.7857142857142857,
+              "recall": 0.7857142857142857,
+              "f1": 0.7857142857142857,
+              "tp": 11,
+              "fp": 3,
+              "fn": 3
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.7857142857142857,
+              "neighborhood_similarity": 0.6712121212121213,
+              "taxonomy_similarity": 0.8444444444444444,
+              "graph_similarity": 0.7671236171236172,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 14,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 14,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 5,
+          "sample_id": "ec6105f455e44cf19310b18b94e0efaf",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00005_2450d5e229.json",
+          "attempts": 1,
+          "latency_sec": 64.542,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "f1": 0.5,
+              "tp": 2,
+              "fp": 2,
+              "fn": 2
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 6,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.28571428571428575,
+              "neighborhood_similarity": 0.08974358974358973,
+              "taxonomy_similarity": 0.6666666666666667,
+              "graph_similarity": 0.3473748473748474,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 6
+            }
+          }
+        },
+        {
+          "sample_index": 6,
+          "sample_id": "1db39e6362394444b565c008d1cee820",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00006_e11ae57703.json",
+          "attempts": 1,
+          "latency_sec": 99.839,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571,
+              "tp": 3,
+              "fp": 1,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 3,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.6,
+              "neighborhood_similarity": 0.28125,
+              "taxonomy_similarity": 0.45,
+              "graph_similarity": 0.44375000000000003,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 3
+            }
+          }
+        },
+        {
+          "sample_index": 7,
+          "sample_id": "1ed40d043201487399942563e3e97883",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00007_eca6380f7e.json",
+          "attempts": 1,
+          "latency_sec": 105.571,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 3,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 8,
+          "sample_id": "1a091dea55a74a9ca8f7a187539ae64e",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00008_eacccf9246.json",
+          "attempts": 1,
+          "latency_sec": 78.042,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 0.75,
+              "f1": 0.8571428571428571,
+              "tp": 3,
+              "fp": 0,
+              "fn": 1
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 2,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.6666666666666665,
+              "neighborhood_similarity": 0.45,
+              "taxonomy_similarity": 0.75,
+              "graph_similarity": 0.6222222222222221,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 2
+            }
+          }
+        },
+        {
+          "sample_index": 9,
+          "sample_id": "8cab167a90484df19f37da9c335d6e93",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00009_f2be90db7d.json",
+          "attempts": 1,
+          "latency_sec": 43.528,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 1,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 5,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.2857142857142857,
+              "neighborhood_similarity": 0.13636363636363635,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 0.474025974025974,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 1,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 1,
+              "nontax": 5
+            }
+          }
+        },
+        {
+          "sample_index": 10,
+          "sample_id": "948d25b13a4240499ec6d210b9847b5e",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00010_add12ee91a.json",
+          "attempts": 1,
+          "latency_sec": 47.71,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 11,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 16,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.5789473684210525,
+              "neighborhood_similarity": 0.26333333333333336,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 0.6140935672514619,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 11,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 11,
+              "nontax": 16
+            }
+          }
+        },
+        {
+          "sample_index": 11,
+          "sample_id": "277ae0b955a24ab499106cdd7a8c91fe",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00011_489c9954d9.json",
+          "attempts": 1,
+          "latency_sec": 63.235,
+          "metrics": {
+            "typing": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 15,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 15,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.6666666666666666,
+              "neighborhood_similarity": 0.2833333333333333,
+              "taxonomy_similarity": 0.0,
+              "graph_similarity": 0.31666666666666665,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 15,
+              "taxonomy": 0,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 15,
+              "taxonomy": 0,
+              "nontax": 15
+            }
+          }
+        },
+        {
+          "sample_index": 12,
+          "sample_id": "c4d163e8f7374185a427479b023647d2",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00012_65d79ebb70.json",
+          "attempts": 1,
+          "latency_sec": 48.682,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 14,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 14,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 14,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 13,
+          "sample_id": "20cac7abd8e943198f883c5aa3c56ea9",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00013_ce8fc20c1a.json",
+          "attempts": 1,
+          "latency_sec": 98.106,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 0.6,
+              "recall": 0.8,
+              "f1": 0.6857142857142857,
+              "tp": 12,
+              "fp": 8,
+              "fn": 3
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 8,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.5581395348837209,
+              "neighborhood_similarity": 0.2787037037037037,
+              "taxonomy_similarity": 0.5032051282051282,
+              "graph_similarity": 0.4466827889308509,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 15,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 20,
+              "nontax": 8
+            }
+          }
+        },
+        {
+          "sample_index": 14,
+          "sample_id": "69925a1440024c53a135f64e99cc1c9e",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00014_10b0bee82f.json",
+          "attempts": 1,
+          "latency_sec": 25.083,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 3,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 15,
+          "sample_id": "d0d990d3770f410aada290ba01ed8de3",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00015_148679dd46.json",
+          "attempts": 1,
+          "latency_sec": 57.548,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 3,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 16,
+          "sample_id": "d5f0b29ed73a45e18a53002cc5d9b2d2",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00016_d3de45225b.json",
+          "attempts": 1,
+          "latency_sec": 96.577,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 4,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 5,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.6153846153846153,
+              "neighborhood_similarity": 0.39743589743589747,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 0.6709401709401709,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 5
+            }
+          }
+        },
+        {
+          "sample_index": 17,
+          "sample_id": "789c77b3215d443a81046ab16dc60b8f",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00017_f48f6bf414.json",
+          "attempts": 1,
+          "latency_sec": 176.196,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 4,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 5,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.6153846153846153,
+              "neighborhood_similarity": 0.27999999999999997,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 0.6317948717948717,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 5
+            }
+          }
+        },
+        {
+          "sample_index": 18,
+          "sample_id": "1509225bd4164ac1997e7a29ccc579ea",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00018_924fdd1fe9.json",
+          "attempts": 1,
+          "latency_sec": 77.686,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 4,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 19,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.29629629629629634,
+              "neighborhood_similarity": 0.07222222222222222,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 0.4561728395061729,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 19
+            }
+          }
+        },
+        {
+          "sample_index": 19,
+          "sample_id": "4da29d1dedab4ce989ace6c145ec91cc",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00019_55aac12331.json",
+          "attempts": 1,
+          "latency_sec": 43.682,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 3,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 14,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.3,
+              "neighborhood_similarity": 0.09242424242424242,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 0.46414141414141413,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 14
+            }
+          }
+        },
+        {
+          "sample_index": 20,
+          "sample_id": "a234eedd3c6243bca83c13303aa05d8f",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00020_e1ed01102e.json",
+          "attempts": 1,
+          "latency_sec": 54.266,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 0.6666666666666666,
+              "recall": 1.0,
+              "f1": 0.8,
+              "tp": 2,
+              "fp": 1,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 1,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.6666666666666666,
+              "neighborhood_similarity": 0.5,
+              "taxonomy_similarity": 0.625,
+              "graph_similarity": 0.5972222222222222,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 2,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 1
+            }
+          }
+        },
+        {
+          "sample_index": 21,
+          "sample_id": "68159fec0b6249fd94f7edad6bdc6f35",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00021_c48e11594d.json",
+          "attempts": 1,
+          "latency_sec": 43.233,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 0.3333333333333333,
+              "recall": 1.0,
+              "f1": 0.5,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 1,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.4,
+              "neighborhood_similarity": 0.25,
+              "taxonomy_similarity": 0.3333333333333333,
+              "graph_similarity": 0.3277777777777778,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 1,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 1
+            }
+          }
+        },
+        {
+          "sample_index": 22,
+          "sample_id": "41dd91bbeb8d4e89b756eb51fbc9b321",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00022_4ab1a263da.json",
+          "attempts": 1,
+          "latency_sec": 44.614,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 10,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 10,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 10,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 23,
+          "sample_id": "7d379fdd736645d78c565a0aeb4e129f",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00023_3a0b94b6aa.json",
+          "attempts": 1,
+          "latency_sec": 107.797,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 8,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 8,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 8,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 24,
+          "sample_id": "b12307f6c2ff4ab9959466d1ad47f1ec",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00024_440f572a03.json",
+          "attempts": 1,
+          "latency_sec": 64.435,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 3,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 1.0,
+              "neighborhood_similarity": 1.0,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 1.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            }
+          }
+        },
+        {
+          "sample_index": 25,
+          "sample_id": "29dbc84e40334f1a9ba8d5cdfa69106b",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00025_1302daf4c5.json",
+          "attempts": 1,
+          "latency_sec": 34.715,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 2,
+              "fn": 1
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 4,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.0,
+              "neighborhood_similarity": 0.0,
+              "taxonomy_similarity": 0.0,
+              "graph_similarity": 0.0,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 1,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 2,
+              "nontax": 4
+            }
+          }
+        },
+        {
+          "sample_index": 26,
+          "sample_id": "d059bf6b226440cfa43f1b40fb080614",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00026_686d2ac8a1.json",
+          "attempts": 1,
+          "latency_sec": 49.628,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 3,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 6,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.5,
+              "neighborhood_similarity": 0.23076923076923078,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 0.576923076923077,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 6
+            }
+          }
+        },
+        {
+          "sample_index": 27,
+          "sample_id": "da4b3ec210154ff592355f61147d2dd4",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00027_6d6b7dfe32.json",
+          "attempts": 1,
+          "latency_sec": 33.191,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 4,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 4,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.6666666666666666,
+              "neighborhood_similarity": 0.4166666666666667,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 0.6944444444444443,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 4,
+              "nontax": 4
+            }
+          }
+        },
+        {
+          "sample_index": 28,
+          "sample_id": "fec887ae266b40ab8a7dd7d5ee765f3d",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00028_9bd270c1de.json",
+          "attempts": 1,
+          "latency_sec": 73.728,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "tp": 3,
+              "fp": 0,
+              "fn": 0
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 11,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.35294117647058826,
+              "neighborhood_similarity": 0.1474358974358974,
+              "taxonomy_similarity": 1.0,
+              "graph_similarity": 0.5001256913021619,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 3,
+              "nontax": 11
+            }
+          }
+        },
+        {
+          "sample_index": 29,
+          "sample_id": "3a09bc85f6c648c5ba356829ce2d4268",
+          "status": "ok",
+          "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_b\\open_vocab\\00029_602377c54d.json",
+          "attempts": 1,
+          "latency_sec": 57.573,
+          "metrics": {
+            "typing": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy": {
+              "precision": 1.0,
+              "recall": 0.875,
+              "f1": 0.9333333333333333,
+              "tp": 7,
+              "fp": 0,
+              "fn": 1
+            },
+            "nontax": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 1,
+              "fn": 0
+            },
+            "official_graph_similarity": {
+              "edge_f1": 0.875,
+              "neighborhood_similarity": 0.8666666666666666,
+              "taxonomy_similarity": 0.8857142857142858,
+              "graph_similarity": 0.8757936507936508,
+              "metric_id": "llms4ol2026_graph_similarity_exact",
+              "external_reportable": true,
+              "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+            },
+            "gold_counts": {
+              "typing": 0,
+              "taxonomy": 8,
+              "nontax": 0
+            },
+            "pred_counts": {
+              "typing": 0,
+              "taxonomy": 7,
+              "nontax": 1
+            }
+          }
+        }
+      ]
+    }
+  }
+}

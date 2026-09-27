@@ -1,0 +1,286 @@
+{
+  "meta": {
+    "protocol": "relation_guarded_v2_offline_audit_v1",
+    "source_result": "D:\\NLP\\experiments\\results\\relation_calibration_open_vocab_guarded_v3_relations_a_indices938-2077-2424_seed20260923.json",
+    "source_results": [
+      "D:\\NLP\\experiments\\results\\relation_calibration_open_vocab_guarded_v3_relations_a_indices938-2077-2424_seed20260923.json"
+    ],
+    "source_system": "open_vocab_guarded_v3_relations",
+    "seed": 20260922,
+    "calibration_per_stratum": 2,
+    "all_samples_calibration": true,
+    "canonicalization_version": "relation_canonicalization_v2",
+    "source_evaluation_selection_uses_gold_locally": true,
+    "source_attempt_ledgers": [
+      {
+        "planned_units": 3,
+        "successful_units": 3,
+        "failed_final_units": 0,
+        "prior_failed_connection_attempts": 0,
+        "unit_attempts_including_prior_failures": 3,
+        "successful_runner_attempts_including_retries": 3,
+        "low_level_attempts_including_prior_failures": 3
+      }
+    ],
+    "calibration_split_uses_candidate_labels": false,
+    "gold_used_for_candidate_labels_only": true,
+    "calibrator_fit_population": "post_evidence_pre_quantity_candidates",
+    "api_calls": 0
+  },
+  "split": {
+    "calibration_indices": {
+      "a": [
+        938,
+        2077,
+        2424
+      ]
+    },
+    "heldout_indices": {
+      "a": []
+    }
+  },
+  "candidate_summary": {
+    "all": {
+      "n": 11,
+      "raw_true_positives": 0,
+      "canonical_true_positives": 0,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "calibration": {
+      "n": 11,
+      "raw_true_positives": 0,
+      "canonical_true_positives": 0,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "heldout": {
+      "n": 0,
+      "raw_true_positives": 0,
+      "canonical_true_positives": 0,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "calibration_deployment_population": {
+      "n": 11,
+      "raw_true_positives": 0,
+      "canonical_true_positives": 0,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "heldout_deployment_population": {
+      "n": 0,
+      "raw_true_positives": 0,
+      "canonical_true_positives": 0,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    }
+  },
+  "calibrator": {
+    "version": "beta_isotonic_v1",
+    "status": "degenerate_too_few_positives",
+    "deployable": false,
+    "alpha": 1.0,
+    "beta": 1.0,
+    "min_positives": 2,
+    "min_negatives": 2,
+    "n_samples": 11,
+    "n_positives": 0,
+    "blocks": [
+      {
+        "min_score": 0.9,
+        "max_score": 0.9,
+        "positives": 0,
+        "total": 11,
+        "probability": 0.07692307692307693
+      }
+    ]
+  },
+  "deployment_support": {
+    "deployable": false,
+    "candidate_level_deployable": false,
+    "status": "degenerate_too_few_positives",
+    "min_positive_samples": 5,
+    "positive_candidates": 0,
+    "positive_samples": 0,
+    "support_level": "insufficient",
+    "warning": null
+  },
+  "calibration_metrics": {
+    "calibration_raw": {
+      "n": 11,
+      "positives": 0,
+      "brier": 0.81,
+      "ece": 0.9
+    },
+    "calibration_calibrated": {
+      "n": 11,
+      "positives": 0,
+      "brier": 0.005917159763313611,
+      "ece": 0.07692307692307693
+    },
+    "heldout_raw": {
+      "n": 0,
+      "positives": 0,
+      "brier": 0.0,
+      "ece": 0.0
+    },
+    "heldout_calibrated_diagnostic_only": {
+      "n": 0,
+      "positives": 0,
+      "brier": 0.0,
+      "ece": 0.0
+    }
+  },
+  "calibrated_threshold_selection": {
+    "scope": "post_evidence_pre_quantity_candidates_from_calibration_samples_only",
+    "n_candidates": 11,
+    "n_positives": 0,
+    "recommended_threshold": 0.07692307692307693,
+    "recommended_metrics": {
+      "threshold": 0.07692307692307693,
+      "selected": 11,
+      "tp": 0,
+      "fp": 11,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "rows": [
+      {
+        "threshold": 0.0,
+        "selected": 11,
+        "tp": 0,
+        "fp": 11,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "threshold": 0.07692307692307693,
+        "selected": 11,
+        "tp": 0,
+        "fp": 11,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    ]
+  },
+  "calibration_predicate_policy": {
+    "scope": "post_evidence_pre_quantity_candidates_from_calibration_samples_only",
+    "allowed_predicates": [],
+    "selected": 0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "warning": "This policy is selected on sparse calibration labels and must be reported as a calibration-supported ablation, not a universal predicate inventory."
+  },
+  "predicate_constrained_threshold_selection": {
+    "scope": "post_evidence_pre_quantity_candidates_from_calibration_samples_only",
+    "n_candidates": 0,
+    "n_positives": 0,
+    "recommended_threshold": 0.0,
+    "recommended_metrics": {
+      "threshold": 0.0,
+      "selected": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "rows": [
+      {
+        "threshold": 0.0,
+        "selected": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    ]
+  },
+  "candidate_groups": {
+    "by_task": {
+      "a": {
+        "n": 11,
+        "positives": 0,
+        "accepted": 11,
+        "accepted_positives": 0
+      }
+    },
+    "by_evidence_mode": {
+      "explicit": {
+        "n": 11,
+        "positives": 0,
+        "accepted": 11,
+        "accepted_positives": 0
+      }
+    },
+    "by_predicate": {
+      "derives from": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 1,
+        "accepted_positives": 0
+      },
+      "has part": {
+        "n": 6,
+        "positives": 0,
+        "accepted": 6,
+        "accepted_positives": 0
+      },
+      "located in": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 1,
+        "accepted_positives": 0
+      },
+      "regulates": {
+        "n": 3,
+        "positives": 0,
+        "accepted": 3,
+        "accepted_positives": 0
+      }
+    },
+    "by_raw_confidence": {
+      "0.9": {
+        "n": 11,
+        "positives": 0,
+        "accepted": 11,
+        "accepted_positives": 0
+      }
+    }
+  },
+  "implicit_evidence": {
+    "candidates_observed": 0,
+    "accepted_candidates": 0,
+    "canonical_true_positives": 0,
+    "accepted_canonical_true_positives": 0,
+    "requires_new_guarded_v2_generation": true
+  },
+  "exact_positive_candidates": [],
+  "near_match_summary": {
+    "none": 11
+  },
+  "actionable_near_matches": [],
+  "interpretation": {
+    "calibrated_metrics_are_deployable": false,
+    "warning": "Do not apply this calibrator: the calibration split has too few positive candidates. The calibrated held-out metrics are diagnostic only."
+  }
+}

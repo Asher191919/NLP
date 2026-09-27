@@ -1,0 +1,1216 @@
+{
+  "meta": {
+    "protocol": "relation_guarded_v2_offline_audit_v1",
+    "source_result": "D:\\NLP\\experiments\\results\\relation_calibration_open_vocab_guarded_v5_axioms_only_a_indices1419-1554-1796-1824-1935-2676-3130-3516_seed20260924.json",
+    "source_results": [
+      "D:\\NLP\\experiments\\results\\relation_calibration_open_vocab_guarded_v5_axioms_only_a_indices1419-1554-1796-1824-1935-2676-3130-3516_seed20260924.json",
+      "D:\\NLP\\experiments\\results\\relation_calibration_open_vocab_guarded_v5_axioms_only_a_indices678-2171-2643-2780-2920-2958-3064-3676_seed20260925.json"
+    ],
+    "source_system": "open_vocab_guarded_v5_axioms_only",
+    "seed": 20260925,
+    "calibration_per_stratum": 2,
+    "all_samples_calibration": true,
+    "canonicalization_version": "relation_canonicalization_v2",
+    "source_evaluation_selection_uses_gold_locally": true,
+    "source_attempt_ledgers": [
+      {
+        "planned_units": 8,
+        "successful_units": 8,
+        "failed_final_units": 0,
+        "prior_failed_connection_attempts": 0,
+        "prior_failed_unit_attempts": 8,
+        "unit_attempts_including_prior_failures": 16,
+        "current_low_level_attempts": 8,
+        "prior_failed_low_level_attempts": 16,
+        "successful_runner_attempts_including_retries": 8,
+        "low_level_attempts_including_prior_failures": 24
+      },
+      {
+        "planned_units": 8,
+        "successful_units": 8,
+        "failed_final_units": 0,
+        "prior_failed_connection_attempts": 0,
+        "prior_failed_unit_attempts": 0,
+        "unit_attempts_including_prior_failures": 8,
+        "current_low_level_attempts": 8,
+        "prior_failed_low_level_attempts": 0,
+        "successful_runner_attempts_including_retries": 8,
+        "low_level_attempts_including_prior_failures": 8
+      }
+    ],
+    "calibration_split_uses_candidate_labels": false,
+    "gold_used_for_candidate_labels_only": true,
+    "calibrator_fit_population": "post_evidence_pre_quantity_candidates",
+    "api_calls": 0
+  },
+  "split": {
+    "calibration_indices": {
+      "a": [
+        678,
+        1419,
+        1554,
+        1796,
+        1824,
+        1935,
+        2171,
+        2643,
+        2676,
+        2780,
+        2920,
+        2958,
+        3064,
+        3130,
+        3516,
+        3676
+      ]
+    },
+    "heldout_indices": {
+      "a": []
+    }
+  },
+  "candidate_summary": {
+    "all": {
+      "n": 31,
+      "raw_true_positives": 7,
+      "canonical_true_positives": 7,
+      "symmetric_semantic_true_positives": 15,
+      "recovered_by_symmetric_order_invariance": 8,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "calibration": {
+      "n": 31,
+      "raw_true_positives": 7,
+      "canonical_true_positives": 7,
+      "symmetric_semantic_true_positives": 15,
+      "recovered_by_symmetric_order_invariance": 8,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "heldout": {
+      "n": 0,
+      "raw_true_positives": 0,
+      "canonical_true_positives": 0,
+      "symmetric_semantic_true_positives": 0,
+      "recovered_by_symmetric_order_invariance": 0,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "calibration_deployment_population": {
+      "n": 31,
+      "raw_true_positives": 7,
+      "canonical_true_positives": 7,
+      "symmetric_semantic_true_positives": 15,
+      "recovered_by_symmetric_order_invariance": 8,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "heldout_deployment_population": {
+      "n": 0,
+      "raw_true_positives": 0,
+      "canonical_true_positives": 0,
+      "symmetric_semantic_true_positives": 0,
+      "recovered_by_symmetric_order_invariance": 0,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    }
+  },
+  "calibrator": {
+    "version": "beta_isotonic_v1",
+    "status": "ok",
+    "deployable": true,
+    "alpha": 1.0,
+    "beta": 1.0,
+    "min_positives": 2,
+    "min_negatives": 2,
+    "n_samples": 31,
+    "n_positives": 7,
+    "blocks": [
+      {
+        "min_score": 0.9,
+        "max_score": 0.9,
+        "positives": 0,
+        "total": 5,
+        "probability": 0.14285714285714285
+      },
+      {
+        "min_score": 0.95,
+        "max_score": 1.0,
+        "positives": 7,
+        "total": 26,
+        "probability": 0.2857142857142857
+      }
+    ]
+  },
+  "deployment_support": {
+    "deployable": true,
+    "candidate_level_deployable": true,
+    "status": "ok",
+    "min_positive_samples": 5,
+    "positive_candidates": 7,
+    "positive_samples": 6,
+    "support_level": "moderate",
+    "warning": null
+  },
+  "calibration_metrics": {
+    "calibration_raw": {
+      "n": 31,
+      "positives": 7,
+      "brier": 0.6986967741935485,
+      "ece": 0.724516129032258
+    },
+    "calibration_calibrated": {
+      "n": 31,
+      "positives": 7,
+      "brier": 0.1685319289005925,
+      "ece": 0.0368663594470046
+    },
+    "heldout_raw": {
+      "n": 0,
+      "positives": 0,
+      "brier": 0.0,
+      "ece": 0.0
+    },
+    "heldout_calibrated_diagnostic_only": {
+      "n": 0,
+      "positives": 0,
+      "brier": 0.0,
+      "ece": 0.0
+    }
+  },
+  "calibrated_threshold_selection": {
+    "scope": "post_evidence_pre_quantity_candidates_from_calibration_samples_only",
+    "n_candidates": 31,
+    "n_positives": 7,
+    "recommended_threshold": 0.2857142857142857,
+    "recommended_metrics": {
+      "threshold": 0.2857142857142857,
+      "selected": 26,
+      "tp": 7,
+      "fp": 19,
+      "fn": 0,
+      "precision": 0.2692307692307692,
+      "recall": 1.0,
+      "f1": 0.42424242424242425
+    },
+    "rows": [
+      {
+        "threshold": 0.0,
+        "selected": 31,
+        "tp": 7,
+        "fp": 24,
+        "fn": 0,
+        "precision": 0.22580645161290322,
+        "recall": 1.0,
+        "f1": 0.3684210526315789
+      },
+      {
+        "threshold": 0.21428571428571427,
+        "selected": 26,
+        "tp": 7,
+        "fp": 19,
+        "fn": 0,
+        "precision": 0.2692307692307692,
+        "recall": 1.0,
+        "f1": 0.42424242424242425
+      },
+      {
+        "threshold": 0.2857142857142857,
+        "selected": 26,
+        "tp": 7,
+        "fp": 19,
+        "fn": 0,
+        "precision": 0.2692307692307692,
+        "recall": 1.0,
+        "f1": 0.42424242424242425
+      }
+    ]
+  },
+  "calibration_predicate_policy": {
+    "scope": "post_evidence_pre_quantity_candidates_from_calibration_samples_only",
+    "allowed_predicates": [
+      "equivalent class"
+    ],
+    "selected": 26,
+    "tp": 7,
+    "fp": 19,
+    "fn": 0,
+    "precision": 0.2692307692307692,
+    "recall": 1.0,
+    "f1": 0.42424242424242425,
+    "warning": "This policy is selected on sparse calibration labels and must be reported as a calibration-supported ablation, not a universal predicate inventory."
+  },
+  "predicate_constrained_threshold_selection": {
+    "scope": "post_evidence_pre_quantity_candidates_from_calibration_samples_only",
+    "n_candidates": 26,
+    "n_positives": 7,
+    "recommended_threshold": 0.2857142857142857,
+    "recommended_metrics": {
+      "threshold": 0.2857142857142857,
+      "selected": 24,
+      "tp": 7,
+      "fp": 17,
+      "fn": 0,
+      "precision": 0.2916666666666667,
+      "recall": 1.0,
+      "f1": 0.45161290322580644
+    },
+    "rows": [
+      {
+        "threshold": 0.0,
+        "selected": 26,
+        "tp": 7,
+        "fp": 19,
+        "fn": 0,
+        "precision": 0.2692307692307692,
+        "recall": 1.0,
+        "f1": 0.42424242424242425
+      },
+      {
+        "threshold": 0.21428571428571427,
+        "selected": 24,
+        "tp": 7,
+        "fp": 17,
+        "fn": 0,
+        "precision": 0.2916666666666667,
+        "recall": 1.0,
+        "f1": 0.45161290322580644
+      },
+      {
+        "threshold": 0.2857142857142857,
+        "selected": 24,
+        "tp": 7,
+        "fp": 17,
+        "fn": 0,
+        "precision": 0.2916666666666667,
+        "recall": 1.0,
+        "f1": 0.45161290322580644
+      }
+    ]
+  },
+  "candidate_groups": {
+    "by_task": {
+      "a": {
+        "n": 31,
+        "positives": 7,
+        "accepted": 31,
+        "accepted_positives": 7
+      }
+    },
+    "by_evidence_mode": {
+      "cross_sentence": {
+        "n": 3,
+        "positives": 0,
+        "accepted": 3,
+        "accepted_positives": 0
+      },
+      "explicit": {
+        "n": 28,
+        "positives": 7,
+        "accepted": 28,
+        "accepted_positives": 7
+      }
+    },
+    "by_predicate": {
+      "disjoint with": {
+        "n": 5,
+        "positives": 0,
+        "accepted": 5,
+        "accepted_positives": 0
+      },
+      "equivalent class": {
+        "n": 26,
+        "positives": 7,
+        "accepted": 26,
+        "accepted_positives": 7
+      }
+    },
+    "by_raw_confidence": {
+      "0.9": {
+        "n": 5,
+        "positives": 0,
+        "accepted": 5,
+        "accepted_positives": 0
+      },
+      "0.95": {
+        "n": 19,
+        "positives": 6,
+        "accepted": 19,
+        "accepted_positives": 6
+      },
+      "0.97": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 1,
+        "accepted_positives": 0
+      },
+      "0.98": {
+        "n": 3,
+        "positives": 1,
+        "accepted": 3,
+        "accepted_positives": 1
+      },
+      "1.0": {
+        "n": 3,
+        "positives": 0,
+        "accepted": 3,
+        "accepted_positives": 0
+      }
+    }
+  },
+  "implicit_evidence": {
+    "candidates_observed": 3,
+    "accepted_candidates": 3,
+    "canonical_true_positives": 0,
+    "accepted_canonical_true_positives": 0,
+    "requires_new_guarded_v2_generation": false
+  },
+  "structural_projection_audit": {
+    "version": "structural_projection_audit_v1",
+    "uses_gold_for_candidate_labels_only": true,
+    "api_calls": 0,
+    "by_rule": {},
+    "replicated_rules": [],
+    "exact_positive_candidates": [],
+    "selected_projection_candidates": [],
+    "selected_projection_summary": {
+      "n": 0,
+      "tp": 0,
+      "fp": 0,
+      "positive_samples": 0,
+      "precision": 0.0
+    },
+    "deployment_support": {
+      "deployable": false,
+      "status": "insufficient_projection_positive_samples",
+      "min_positive_samples": 5,
+      "min_precision": 0.8,
+      "positive_samples": 0,
+      "precision": 0.0
+    },
+    "combined_with_base_diagnostic": {
+      "positive_samples": 6,
+      "base_positive_samples": 6,
+      "new_projection_positive_samples": 0,
+      "passes_sample_count_only": true,
+      "deployable": false,
+      "warning": "The combined sample count is diagnostic only until the projection channel independently reaches its support gate."
+    }
+  },
+  "symmetric_serialization_audit": {
+    "scope": "accepted_candidates_only",
+    "symmetric_predicates": [
+      "disjoint with",
+      "equivalent class"
+    ],
+    "surface_morphology_version": "relation_surface_morphology_v1",
+    "max_predictions_per_sample": 8,
+    "official_exact_original": {
+      "predictions": 31,
+      "gold": 63,
+      "tp": 7,
+      "fp": 24,
+      "fn": 56,
+      "precision": 0.22580645161290322,
+      "recall": 0.1111111111111111,
+      "f1": 0.14893617021276595,
+      "positive_samples": 6
+    },
+    "semantic_order_invariant_diagnostic": {
+      "predictions": 31,
+      "gold": 63,
+      "tp": 15,
+      "fp": 16,
+      "fn": 48,
+      "precision": 0.4838709677419355,
+      "recall": 0.23809523809523808,
+      "f1": 0.3191489361702127,
+      "positive_samples": 11
+    },
+    "semantic_order_and_surface_invariant_diagnostic": {
+      "predictions": 31,
+      "gold": 63,
+      "tp": 16,
+      "fp": 15,
+      "fn": 47,
+      "precision": 0.5161290322580645,
+      "recall": 0.25396825396825395,
+      "f1": 0.3404255319148936,
+      "positive_samples": 11
+    },
+    "official_exact_surface_canonicalization_ablation": {
+      "predictions": 31,
+      "gold": 63,
+      "tp": 8,
+      "fp": 23,
+      "fn": 55,
+      "precision": 0.25806451612903225,
+      "recall": 0.12698412698412698,
+      "f1": 0.1702127659574468,
+      "positive_samples": 6
+    },
+    "surface_canonicalization_transition": {
+      "recovered_exact": 1,
+      "lost_exact": 0,
+      "recovered": [
+        {
+          "task": "a",
+          "sample_index": 1554,
+          "triple": [
+            "aaqs",
+            "equivalent class",
+            "ambient air quality standard"
+          ]
+        }
+      ],
+      "lost": []
+    },
+    "official_exact_bidirectional_serialization_ablation": {
+      "predictions": 62,
+      "gold": 63,
+      "tp": 15,
+      "fp": 47,
+      "fn": 48,
+      "precision": 0.24193548387096775,
+      "recall": 0.23809523809523808,
+      "f1": 0.24,
+      "positive_samples": 11
+    },
+    "bidirectional_predictions_added": 31,
+    "official_exact_cap_aware_bidirectional_ablation": {
+      "predictions": 58,
+      "gold": 63,
+      "tp": 14,
+      "fp": 44,
+      "fn": 49,
+      "precision": 0.2413793103448276,
+      "recall": 0.2222222222222222,
+      "f1": 0.23140495867768596,
+      "positive_samples": 11
+    },
+    "cap_aware_bidirectional_transition": {
+      "recovered_exact": 7,
+      "lost_exact": 0,
+      "recovered": [
+        {
+          "task": "a",
+          "sample_index": 1419,
+          "triple": [
+            "p wave",
+            "equivalent class",
+            "primary wave"
+          ]
+        },
+        {
+          "task": "a",
+          "sample_index": 1419,
+          "triple": [
+            "s wave",
+            "equivalent class",
+            "secondary wave"
+          ]
+        },
+        {
+          "task": "a",
+          "sample_index": 1796,
+          "triple": [
+            "pdsi",
+            "equivalent class",
+            "palmer drought severity index"
+          ]
+        },
+        {
+          "task": "a",
+          "sample_index": 1796,
+          "triple": [
+            "phdi",
+            "equivalent class",
+            "palmer hydrological drought index"
+          ]
+        },
+        {
+          "task": "a",
+          "sample_index": 1824,
+          "triple": [
+            "riparian",
+            "equivalent class",
+            "riparian zone"
+          ]
+        },
+        {
+          "task": "a",
+          "sample_index": 2676,
+          "triple": [
+            "biochemical oxygen demand",
+            "equivalent class",
+            "biological oxygen demand"
+          ]
+        },
+        {
+          "task": "a",
+          "sample_index": 3516,
+          "triple": [
+            "chemical element",
+            "equivalent class",
+            "element"
+          ]
+        }
+      ],
+      "lost": []
+    },
+    "cap_aware_bidirectional_predictions_added": 27,
+    "official_exact_surface_plus_cap_aware_bidirectional_ablation": {
+      "predictions": 58,
+      "gold": 63,
+      "tp": 15,
+      "fp": 43,
+      "fn": 48,
+      "precision": 0.25862068965517243,
+      "recall": 0.23809523809523808,
+      "f1": 0.24793388429752067,
+      "positive_samples": 11
+    },
+    "surface_plus_cap_aware_bidirectional_transition": {
+      "recovered_exact": 8,
+      "lost_exact": 0,
+      "recovered": [
+        {
+          "task": "a",
+          "sample_index": 1419,
+          "triple": [
+            "p wave",
+            "equivalent class",
+            "primary wave"
+          ]
+        },
+        {
+          "task": "a",
+          "sample_index": 1419,
+          "triple": [
+            "s wave",
+            "equivalent class",
+            "secondary wave"
+          ]
+        },
+        {
+          "task": "a",
+          "sample_index": 1554,
+          "triple": [
+            "aaqs",
+            "equivalent class",
+            "ambient air quality standard"
+          ]
+        },
+        {
+          "task": "a",
+          "sample_index": 1796,
+          "triple": [
+            "pdsi",
+            "equivalent class",
+            "palmer drought severity index"
+          ]
+        },
+        {
+          "task": "a",
+          "sample_index": 1796,
+          "triple": [
+            "phdi",
+            "equivalent class",
+            "palmer hydrological drought index"
+          ]
+        },
+        {
+          "task": "a",
+          "sample_index": 1824,
+          "triple": [
+            "riparian",
+            "equivalent class",
+            "riparian zone"
+          ]
+        },
+        {
+          "task": "a",
+          "sample_index": 2676,
+          "triple": [
+            "biochemical oxygen demand",
+            "equivalent class",
+            "biological oxygen demand"
+          ]
+        },
+        {
+          "task": "a",
+          "sample_index": 3516,
+          "triple": [
+            "chemical element",
+            "equivalent class",
+            "element"
+          ]
+        }
+      ],
+      "lost": []
+    },
+    "surface_plus_cap_aware_bidirectional_predictions_added": 27,
+    "deployable": false,
+    "confirmatory_eligible": false,
+    "warning": "Symmetric/surface-invariant matching is not the official exact metric. Surface canonicalization and bidirectional serialization are gold-blind diagnostic ablations and require adequate independent support before use."
+  },
+  "exact_positive_candidates": [
+    {
+      "task": "a",
+      "sample_index": 1554,
+      "stratum": null,
+      "split": "calibration",
+      "confidence": 0.98,
+      "raw_triple": [
+        "nsps",
+        "equivalent class",
+        "new source performance standard"
+      ],
+      "canonical_triple": [
+        "nsps",
+        "equivalent class",
+        "new source performance standard"
+      ],
+      "raw_correct": true,
+      "canonical_correct": true,
+      "symmetric_semantic_correct": true,
+      "canonicalization_changed": false,
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 1935,
+      "stratum": null,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "probability density function",
+        "equivalent class",
+        "pdf"
+      ],
+      "canonical_triple": [
+        "probability density function",
+        "equivalent class",
+        "pdf"
+      ],
+      "raw_correct": true,
+      "canonical_correct": true,
+      "symmetric_semantic_correct": true,
+      "canonicalization_changed": false,
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 2171,
+      "stratum": null,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "porosity",
+        "equivalent class",
+        "porousness"
+      ],
+      "canonical_triple": [
+        "porosity",
+        "equivalent class",
+        "porousness"
+      ],
+      "raw_correct": true,
+      "canonical_correct": true,
+      "symmetric_semantic_correct": true,
+      "canonicalization_changed": false,
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 2643,
+      "stratum": null,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "unsaturated zone",
+        "equivalent class",
+        "vadose zone"
+      ],
+      "canonical_triple": [
+        "unsaturated zone",
+        "equivalent class",
+        "vadose zone"
+      ],
+      "raw_correct": true,
+      "canonical_correct": true,
+      "symmetric_semantic_correct": true,
+      "canonicalization_changed": false,
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 2780,
+      "stratum": null,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "volcanism",
+        "equivalent class",
+        "vulcanism"
+      ],
+      "canonical_triple": [
+        "volcanism",
+        "equivalent class",
+        "vulcanism"
+      ],
+      "raw_correct": true,
+      "canonical_correct": true,
+      "symmetric_semantic_correct": true,
+      "canonicalization_changed": false,
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 3130,
+      "stratum": null,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "dew point",
+        "equivalent class",
+        "dew point temperature"
+      ],
+      "canonical_triple": [
+        "dew point",
+        "equivalent class",
+        "dew point temperature"
+      ],
+      "raw_correct": true,
+      "canonical_correct": true,
+      "symmetric_semantic_correct": true,
+      "canonicalization_changed": false,
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 3130,
+      "stratum": null,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "wind chill",
+        "equivalent class",
+        "wind chill index"
+      ],
+      "canonical_triple": [
+        "wind chill",
+        "equivalent class",
+        "wind chill index"
+      ],
+      "raw_correct": true,
+      "canonical_correct": true,
+      "symmetric_semantic_correct": true,
+      "canonicalization_changed": false,
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    }
+  ],
+  "near_match_summary": {
+    "exact": 7,
+    "none": 11,
+    "predicate_object_exact": 2,
+    "predicate_subject_exact": 3,
+    "symmetric_endpoints_reversed": 8
+  },
+  "actionable_near_matches": [
+    {
+      "task": "a",
+      "sample_index": 678,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "granulation",
+        "equivalent class",
+        "granule structures"
+      ],
+      "canonical_triple": [
+        "granulation",
+        "equivalent class",
+        "granule structures"
+      ],
+      "near_match_type": "predicate_subject_exact",
+      "near_gold_triples": [
+        [
+          "granulation",
+          "equivalent class",
+          "granule"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 1419,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "primary wave",
+        "equivalent class",
+        "p wave"
+      ],
+      "canonical_triple": [
+        "primary wave",
+        "equivalent class",
+        "p wave"
+      ],
+      "near_match_type": "symmetric_endpoints_reversed",
+      "near_gold_triples": [
+        [
+          "p wave",
+          "equivalent class",
+          "primary wave"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 1419,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "secondary wave",
+        "equivalent class",
+        "s wave"
+      ],
+      "canonical_triple": [
+        "secondary wave",
+        "equivalent class",
+        "s wave"
+      ],
+      "near_match_type": "symmetric_endpoints_reversed",
+      "near_gold_triples": [
+        [
+          "s wave",
+          "equivalent class",
+          "secondary wave"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 1554,
+      "split": "calibration",
+      "confidence": 0.98,
+      "raw_triple": [
+        "aaqs",
+        "equivalent class",
+        "ambient air quality standards"
+      ],
+      "canonical_triple": [
+        "aaqs",
+        "equivalent class",
+        "ambient air quality standards"
+      ],
+      "near_match_type": "predicate_subject_exact",
+      "near_gold_triples": [
+        [
+          "aaqs",
+          "equivalent class",
+          "ambient air quality standard"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 1796,
+      "split": "calibration",
+      "confidence": 1.0,
+      "raw_triple": [
+        "palmer drought severity index",
+        "equivalent class",
+        "pdsi"
+      ],
+      "canonical_triple": [
+        "palmer drought severity index",
+        "equivalent class",
+        "pdsi"
+      ],
+      "near_match_type": "symmetric_endpoints_reversed",
+      "near_gold_triples": [
+        [
+          "pdsi",
+          "equivalent class",
+          "palmer drought severity index"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 1796,
+      "split": "calibration",
+      "confidence": 1.0,
+      "raw_triple": [
+        "palmer hydrological drought index",
+        "equivalent class",
+        "phdi"
+      ],
+      "canonical_triple": [
+        "palmer hydrological drought index",
+        "equivalent class",
+        "phdi"
+      ],
+      "near_match_type": "symmetric_endpoints_reversed",
+      "near_gold_triples": [
+        [
+          "phdi",
+          "equivalent class",
+          "palmer hydrological drought index"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 1796,
+      "split": "calibration",
+      "confidence": 1.0,
+      "raw_triple": [
+        "surface moisture index",
+        "equivalent class",
+        "smi"
+      ],
+      "canonical_triple": [
+        "surface moisture index",
+        "equivalent class",
+        "smi"
+      ],
+      "near_match_type": "symmetric_endpoints_reversed",
+      "near_gold_triples": [
+        [
+          "smi",
+          "equivalent class",
+          "surface moisture index"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 1824,
+      "split": "calibration",
+      "confidence": 0.9,
+      "raw_triple": [
+        "riparian zone",
+        "equivalent class",
+        "riparian"
+      ],
+      "canonical_triple": [
+        "riparian zone",
+        "equivalent class",
+        "riparian"
+      ],
+      "near_match_type": "symmetric_endpoints_reversed",
+      "near_gold_triples": [
+        [
+          "riparian",
+          "equivalent class",
+          "riparian zone"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 1935,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "cumulative distribution",
+        "equivalent class",
+        "cdf"
+      ],
+      "canonical_triple": [
+        "cumulative distribution",
+        "equivalent class",
+        "cdf"
+      ],
+      "near_match_type": "predicate_object_exact",
+      "near_gold_triples": [
+        [
+          "probability distribution function",
+          "equivalent class",
+          "cdf"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 2676,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "biological oxygen demand",
+        "equivalent class",
+        "biochemical oxygen demand"
+      ],
+      "canonical_triple": [
+        "biological oxygen demand",
+        "equivalent class",
+        "biochemical oxygen demand"
+      ],
+      "near_match_type": "symmetric_endpoints_reversed",
+      "near_gold_triples": [
+        [
+          "biochemical oxygen demand",
+          "equivalent class",
+          "biological oxygen demand"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 2920,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "process_aggregate",
+        "disjoint with",
+        "process"
+      ],
+      "canonical_triple": [
+        "process_aggregate",
+        "disjoint with",
+        "process"
+      ],
+      "near_match_type": "predicate_object_exact",
+      "near_gold_triples": [
+        [
+          "fiat_process_part",
+          "disjoint with",
+          "process"
+        ]
+      ],
+      "evidence_mode": "cross_sentence",
+      "evidence_gap_chars": 294,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 3130,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "dew point",
+        "equivalent class",
+        "dew point depression"
+      ],
+      "canonical_triple": [
+        "dew point",
+        "equivalent class",
+        "dew point depression"
+      ],
+      "near_match_type": "predicate_subject_exact",
+      "near_gold_triples": [
+        [
+          "dew point",
+          "equivalent class",
+          "dew point temperature"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 3516,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "element",
+        "equivalent class",
+        "chemical element"
+      ],
+      "canonical_triple": [
+        "element",
+        "equivalent class",
+        "chemical element"
+      ],
+      "near_match_type": "symmetric_endpoints_reversed",
+      "near_gold_triples": [
+        [
+          "chemical element",
+          "equivalent class",
+          "element"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    }
+  ],
+  "interpretation": {
+    "calibrated_metrics_are_deployable": true,
+    "warning": "Calibrator passed candidate- and sample-level support checks."
+  }
+}

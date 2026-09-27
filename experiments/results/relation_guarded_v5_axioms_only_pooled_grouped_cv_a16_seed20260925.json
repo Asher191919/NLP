@@ -1,0 +1,787 @@
+{
+  "meta": {
+    "protocol": "gold_relation_grouped_cv_reused_validation_v1",
+    "source_system": "open_vocab_guarded_v5_axioms_only",
+    "source_files": [
+      {
+        "role": "prior_calibration",
+        "path": "D:\\NLP\\experiments\\results\\relation_calibration_open_vocab_guarded_v5_axioms_only_a_indices1419-1554-1796-1824-1935-2676-3130-3516_seed20260924.json",
+        "sha256": "cb135f14c0327e1ea99c99b0a367dd66c11c29e0d6310ad37b9ce7d9dd17e455"
+      },
+      {
+        "role": "reused_independent_validation",
+        "path": "D:\\NLP\\experiments\\results\\relation_calibration_open_vocab_guarded_v5_axioms_only_a_indices678-2171-2643-2780-2920-2958-3064-3676_seed20260925.json",
+        "sha256": "b5e8ee9b6e660296db473368241ebab0b3ed44260c43cd7fb33e22b7e59f7588"
+      }
+    ],
+    "seed": 20260925,
+    "folds": 5,
+    "api_calls": 0,
+    "gold_used_for_candidate_labels_only": true,
+    "validation_reused_for_calibration": true,
+    "has_untouched_confirmatory_set": false
+  },
+  "candidate_summary": {
+    "all": {
+      "n": 31,
+      "raw_true_positives": 7,
+      "canonical_true_positives": 7,
+      "symmetric_semantic_true_positives": 15,
+      "recovered_by_symmetric_order_invariance": 8,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "deployment_population": {
+      "n": 31,
+      "raw_true_positives": 7,
+      "canonical_true_positives": 7,
+      "symmetric_semantic_true_positives": 15,
+      "recovered_by_symmetric_order_invariance": 8,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    }
+  },
+  "numeric_grouped_cv_gate": {
+    "deployable": true,
+    "candidate_level_deployable": true,
+    "confirmatory_eligible": true,
+    "positive_samples": 6,
+    "min_positive_samples": 5,
+    "status": "ok"
+  },
+  "grouped_cross_validation": {
+    "protocol": "sample_grouped_calibration_cv_v1",
+    "fit_scope": "other_sample_groups_only",
+    "evaluation_scope": "pooled_out_of_fold_candidates",
+    "n_folds": 5,
+    "seed": 20260925,
+    "n_sample_groups": 14,
+    "n_positive_sample_groups": 6,
+    "fold_assignment": {
+      "a:1419": 4,
+      "a:1554": 0,
+      "a:1796": 2,
+      "a:1824": 3,
+      "a:1935": 4,
+      "a:2171": 3,
+      "a:2643": 3,
+      "a:2676": 3,
+      "a:2780": 2,
+      "a:2920": 4,
+      "a:3064": 3,
+      "a:3130": 1,
+      "a:3516": 0,
+      "a:678": 1
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "train_sample_keys": [
+          "a:1419",
+          "a:1796",
+          "a:1824",
+          "a:1935",
+          "a:2171",
+          "a:2643",
+          "a:2676",
+          "a:2780",
+          "a:2920",
+          "a:3064",
+          "a:3130",
+          "a:678"
+        ],
+        "validation_sample_keys": [
+          "a:1554",
+          "a:3516"
+        ],
+        "sample_overlap_count": 0,
+        "train_samples": 12,
+        "validation_samples": 2,
+        "train_candidates": 25,
+        "validation_candidates": 6,
+        "train_positives": 6,
+        "validation_positives": 1,
+        "train_positive_samples": 5,
+        "validation_positive_samples": 1,
+        "train_candidate_counts_by_task": {
+          "a": 25
+        },
+        "validation_candidate_counts_by_task": {
+          "a": 6
+        },
+        "calibrator_status": "ok",
+        "calibrator": {
+          "version": "beta_isotonic_v1",
+          "status": "ok",
+          "deployable": true,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "min_positives": 2,
+          "min_negatives": 2,
+          "n_samples": 25,
+          "n_positives": 6,
+          "blocks": [
+            {
+              "min_score": 0.9,
+              "max_score": 0.9,
+              "positives": 0,
+              "total": 4,
+              "probability": 0.16666666666666666
+            },
+            {
+              "min_score": 0.95,
+              "max_score": 1.0,
+              "positives": 6,
+              "total": 21,
+              "probability": 0.30434782608695654
+            }
+          ]
+        },
+        "held_out_metrics": {
+          "raw": {
+            "n": 6,
+            "positives": 1,
+            "brier": 0.7560333333333333,
+            "ece": 0.79
+          },
+          "calibrated": {
+            "n": 6,
+            "positives": 1,
+            "brier": 0.14703668697052438,
+            "ece": 0.11473429951690822
+          }
+        }
+      },
+      {
+        "fold": 1,
+        "train_sample_keys": [
+          "a:1419",
+          "a:1554",
+          "a:1796",
+          "a:1824",
+          "a:1935",
+          "a:2171",
+          "a:2643",
+          "a:2676",
+          "a:2780",
+          "a:2920",
+          "a:3064",
+          "a:3516"
+        ],
+        "validation_sample_keys": [
+          "a:3130",
+          "a:678"
+        ],
+        "sample_overlap_count": 0,
+        "train_samples": 12,
+        "validation_samples": 2,
+        "train_candidates": 25,
+        "validation_candidates": 6,
+        "train_positives": 5,
+        "validation_positives": 2,
+        "train_positive_samples": 5,
+        "validation_positive_samples": 1,
+        "train_candidate_counts_by_task": {
+          "a": 25
+        },
+        "validation_candidate_counts_by_task": {
+          "a": 6
+        },
+        "calibrator_status": "ok",
+        "calibrator": {
+          "version": "beta_isotonic_v1",
+          "status": "ok",
+          "deployable": true,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "min_positives": 2,
+          "min_negatives": 2,
+          "n_samples": 25,
+          "n_positives": 5,
+          "blocks": [
+            {
+              "min_score": 0.9,
+              "max_score": 0.9,
+              "positives": 0,
+              "total": 5,
+              "probability": 0.14285714285714285
+            },
+            {
+              "min_score": 0.95,
+              "max_score": 1.0,
+              "positives": 5,
+              "total": 20,
+              "probability": 0.2727272727272727
+            }
+          ]
+        },
+        "held_out_metrics": {
+          "raw": {
+            "n": 6,
+            "positives": 2,
+            "brier": 0.6089,
+            "ece": 0.6199999999999999
+          },
+          "calibrated": {
+            "n": 6,
+            "positives": 2,
+            "brier": 0.2258953168044077,
+            "ece": 0.06060606060606061
+          }
+        }
+      },
+      {
+        "fold": 2,
+        "train_sample_keys": [
+          "a:1419",
+          "a:1554",
+          "a:1824",
+          "a:1935",
+          "a:2171",
+          "a:2643",
+          "a:2676",
+          "a:2920",
+          "a:3064",
+          "a:3130",
+          "a:3516",
+          "a:678"
+        ],
+        "validation_sample_keys": [
+          "a:1796",
+          "a:2780"
+        ],
+        "sample_overlap_count": 0,
+        "train_samples": 12,
+        "validation_samples": 2,
+        "train_candidates": 24,
+        "validation_candidates": 7,
+        "train_positives": 6,
+        "validation_positives": 1,
+        "train_positive_samples": 5,
+        "validation_positive_samples": 1,
+        "train_candidate_counts_by_task": {
+          "a": 24
+        },
+        "validation_candidate_counts_by_task": {
+          "a": 7
+        },
+        "calibrator_status": "ok",
+        "calibrator": {
+          "version": "beta_isotonic_v1",
+          "status": "ok",
+          "deployable": true,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "min_positives": 2,
+          "min_negatives": 2,
+          "n_samples": 24,
+          "n_positives": 6,
+          "blocks": [
+            {
+              "min_score": 0.9,
+              "max_score": 0.9,
+              "positives": 0,
+              "total": 2,
+              "probability": 0.25
+            },
+            {
+              "min_score": 0.95,
+              "max_score": 0.95,
+              "positives": 5,
+              "total": 18,
+              "probability": 0.3
+            },
+            {
+              "min_score": 0.97,
+              "max_score": 0.97,
+              "positives": 0,
+              "total": 1,
+              "probability": 0.3333333333333333
+            },
+            {
+              "min_score": 0.98,
+              "max_score": 0.98,
+              "positives": 1,
+              "total": 3,
+              "probability": 0.4
+            }
+          ]
+        },
+        "held_out_metrics": {
+          "raw": {
+            "n": 7,
+            "positives": 1,
+            "brier": 0.7760714285714286,
+            "ece": 0.8071428571428572
+          },
+          "calibrated": {
+            "n": 7,
+            "positives": 1,
+            "brier": 0.16535714285714284,
+            "ece": 0.37857142857142856
+          }
+        }
+      },
+      {
+        "fold": 3,
+        "train_sample_keys": [
+          "a:1419",
+          "a:1554",
+          "a:1796",
+          "a:1935",
+          "a:2780",
+          "a:2920",
+          "a:3130",
+          "a:3516",
+          "a:678"
+        ],
+        "validation_sample_keys": [
+          "a:1824",
+          "a:2171",
+          "a:2643",
+          "a:2676",
+          "a:3064"
+        ],
+        "sample_overlap_count": 0,
+        "train_samples": 9,
+        "validation_samples": 5,
+        "train_candidates": 25,
+        "validation_candidates": 6,
+        "train_positives": 5,
+        "validation_positives": 2,
+        "train_positive_samples": 4,
+        "validation_positive_samples": 2,
+        "train_candidate_counts_by_task": {
+          "a": 25
+        },
+        "validation_candidate_counts_by_task": {
+          "a": 6
+        },
+        "calibrator_status": "ok",
+        "calibrator": {
+          "version": "beta_isotonic_v1",
+          "status": "ok",
+          "deployable": true,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "min_positives": 2,
+          "min_negatives": 2,
+          "n_samples": 25,
+          "n_positives": 5,
+          "blocks": [
+            {
+              "min_score": 0.9,
+              "max_score": 0.9,
+              "positives": 0,
+              "total": 4,
+              "probability": 0.16666666666666666
+            },
+            {
+              "min_score": 0.95,
+              "max_score": 1.0,
+              "positives": 5,
+              "total": 21,
+              "probability": 0.2608695652173913
+            }
+          ]
+        },
+        "held_out_metrics": {
+          "raw": {
+            "n": 6,
+            "positives": 2,
+            "brier": 0.5870833333333333,
+            "ece": 0.6083333333333332
+          },
+          "calibrated": {
+            "n": 6,
+            "positives": 2,
+            "brier": 0.22076069453196104,
+            "ece": 0.14371980676328505
+          }
+        }
+      },
+      {
+        "fold": 4,
+        "train_sample_keys": [
+          "a:1554",
+          "a:1796",
+          "a:1824",
+          "a:2171",
+          "a:2643",
+          "a:2676",
+          "a:2780",
+          "a:3064",
+          "a:3130",
+          "a:3516",
+          "a:678"
+        ],
+        "validation_sample_keys": [
+          "a:1419",
+          "a:1935",
+          "a:2920"
+        ],
+        "sample_overlap_count": 0,
+        "train_samples": 11,
+        "validation_samples": 3,
+        "train_candidates": 25,
+        "validation_candidates": 6,
+        "train_positives": 6,
+        "validation_positives": 1,
+        "train_positive_samples": 5,
+        "validation_positive_samples": 1,
+        "train_candidate_counts_by_task": {
+          "a": 25
+        },
+        "validation_candidate_counts_by_task": {
+          "a": 6
+        },
+        "calibrator_status": "ok",
+        "calibrator": {
+          "version": "beta_isotonic_v1",
+          "status": "ok",
+          "deployable": true,
+          "alpha": 1.0,
+          "beta": 1.0,
+          "min_positives": 2,
+          "min_negatives": 2,
+          "n_samples": 25,
+          "n_positives": 6,
+          "blocks": [
+            {
+              "min_score": 0.9,
+              "max_score": 0.9,
+              "positives": 0,
+              "total": 5,
+              "probability": 0.14285714285714285
+            },
+            {
+              "min_score": 0.95,
+              "max_score": 1.0,
+              "positives": 6,
+              "total": 20,
+              "probability": 0.3181818181818182
+            }
+          ]
+        },
+        "held_out_metrics": {
+          "raw": {
+            "n": 6,
+            "positives": 1,
+            "brier": 0.7525,
+            "ece": 0.7833333333333332
+          },
+          "calibrated": {
+            "n": 6,
+            "positives": 1,
+            "brier": 0.1618457300275482,
+            "ece": 0.15151515151515152
+          }
+        }
+      }
+    ],
+    "out_of_fold_predictions": [
+      {
+        "sample_key": "a:1554",
+        "task": "a",
+        "fold": 0,
+        "raw_confidence": 0.98,
+        "calibrated_confidence": 0.30434782608695654,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:1554",
+        "task": "a",
+        "fold": 0,
+        "raw_confidence": 0.98,
+        "calibrated_confidence": 0.30434782608695654,
+        "weak_label": true
+      },
+      {
+        "sample_key": "a:1554",
+        "task": "a",
+        "fold": 0,
+        "raw_confidence": 0.98,
+        "calibrated_confidence": 0.30434782608695654,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:1554",
+        "task": "a",
+        "fold": 0,
+        "raw_confidence": 0.95,
+        "calibrated_confidence": 0.30434782608695654,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:3516",
+        "task": "a",
+        "fold": 0,
+        "raw_confidence": 0.95,
+        "calibrated_confidence": 0.30434782608695654,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:3516",
+        "task": "a",
+        "fold": 0,
+        "raw_confidence": 0.9,
+        "calibrated_confidence": 0.16666666666666666,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:678",
+        "task": "a",
+        "fold": 1,
+        "raw_confidence": 0.95,
+        "calibrated_confidence": 0.2727272727272727,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:678",
+        "task": "a",
+        "fold": 1,
+        "raw_confidence": 0.95,
+        "calibrated_confidence": 0.2727272727272727,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:3130",
+        "task": "a",
+        "fold": 1,
+        "raw_confidence": 0.97,
+        "calibrated_confidence": 0.2727272727272727,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:3130",
+        "task": "a",
+        "fold": 1,
+        "raw_confidence": 0.95,
+        "calibrated_confidence": 0.2727272727272727,
+        "weak_label": true
+      },
+      {
+        "sample_key": "a:3130",
+        "task": "a",
+        "fold": 1,
+        "raw_confidence": 0.95,
+        "calibrated_confidence": 0.2727272727272727,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:3130",
+        "task": "a",
+        "fold": 1,
+        "raw_confidence": 0.95,
+        "calibrated_confidence": 0.2727272727272727,
+        "weak_label": true
+      },
+      {
+        "sample_key": "a:1796",
+        "task": "a",
+        "fold": 2,
+        "raw_confidence": 1.0,
+        "calibrated_confidence": 0.4,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:1796",
+        "task": "a",
+        "fold": 2,
+        "raw_confidence": 1.0,
+        "calibrated_confidence": 0.4,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:1796",
+        "task": "a",
+        "fold": 2,
+        "raw_confidence": 1.0,
+        "calibrated_confidence": 0.4,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:1796",
+        "task": "a",
+        "fold": 2,
+        "raw_confidence": 0.9,
+        "calibrated_confidence": 0.25,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:1796",
+        "task": "a",
+        "fold": 2,
+        "raw_confidence": 0.9,
+        "calibrated_confidence": 0.25,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:1796",
+        "task": "a",
+        "fold": 2,
+        "raw_confidence": 0.9,
+        "calibrated_confidence": 0.25,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:2780",
+        "task": "a",
+        "fold": 2,
+        "raw_confidence": 0.95,
+        "calibrated_confidence": 0.3,
+        "weak_label": true
+      },
+      {
+        "sample_key": "a:1824",
+        "task": "a",
+        "fold": 3,
+        "raw_confidence": 0.9,
+        "calibrated_confidence": 0.16666666666666666,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:2171",
+        "task": "a",
+        "fold": 3,
+        "raw_confidence": 0.95,
+        "calibrated_confidence": 0.2608695652173913,
+        "weak_label": true
+      },
+      {
+        "sample_key": "a:2643",
+        "task": "a",
+        "fold": 3,
+        "raw_confidence": 0.95,
+        "calibrated_confidence": 0.2608695652173913,
+        "weak_label": true
+      },
+      {
+        "sample_key": "a:2676",
+        "task": "a",
+        "fold": 3,
+        "raw_confidence": 0.95,
+        "calibrated_confidence": 0.2608695652173913,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:3064",
+        "task": "a",
+        "fold": 3,
+        "raw_confidence": 0.95,
+        "calibrated_confidence": 0.2608695652173913,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:3064",
+        "task": "a",
+        "fold": 3,
+        "raw_confidence": 0.95,
+        "calibrated_confidence": 0.2608695652173913,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:1419",
+        "task": "a",
+        "fold": 4,
+        "raw_confidence": 0.95,
+        "calibrated_confidence": 0.3181818181818182,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:1419",
+        "task": "a",
+        "fold": 4,
+        "raw_confidence": 0.95,
+        "calibrated_confidence": 0.3181818181818182,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:1419",
+        "task": "a",
+        "fold": 4,
+        "raw_confidence": 0.95,
+        "calibrated_confidence": 0.3181818181818182,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:1935",
+        "task": "a",
+        "fold": 4,
+        "raw_confidence": 0.95,
+        "calibrated_confidence": 0.3181818181818182,
+        "weak_label": true
+      },
+      {
+        "sample_key": "a:1935",
+        "task": "a",
+        "fold": 4,
+        "raw_confidence": 0.95,
+        "calibrated_confidence": 0.3181818181818182,
+        "weak_label": false
+      },
+      {
+        "sample_key": "a:2920",
+        "task": "a",
+        "fold": 4,
+        "raw_confidence": 0.95,
+        "calibrated_confidence": 0.3181818181818182,
+        "weak_label": false
+      }
+    ],
+    "coverage": {
+      "eligible_candidates": 31,
+      "out_of_fold_predictions": 31,
+      "each_candidate_scored_once": true,
+      "sample_group_overlap_count": 0
+    },
+    "pooled_out_of_fold_metrics": {
+      "raw": {
+        "n": 31,
+        "positives": 7,
+        "brier": 0.6986967741935485,
+        "ece": 0.724516129032258
+      },
+      "calibrated": {
+        "n": 31,
+        "positives": 7,
+        "brier": 0.18357195387118222,
+        "ece": 0.08301457775511073
+      },
+      "delta": {
+        "brier": -0.5151248203223663,
+        "ece": -0.6415015512771474
+      }
+    },
+    "fold_status_counts": {
+      "ok": 5
+    },
+    "calibration_shape": {
+      "fold_block_counts": [
+        2,
+        2,
+        4,
+        2,
+        2
+      ],
+      "all_folds_single_probability_block": false,
+      "learned_confidence_ranking": true,
+      "interpretation": "at_least_one_fold_retains_score_resolution"
+    },
+    "deployment_support": {
+      "deployable": false,
+      "candidate_level_deployable": true,
+      "confirmatory_eligible": false,
+      "positive_samples": 6,
+      "min_positive_samples": 5,
+      "status": "validation_reused_for_calibration_and_no_untouched_confirmatory_set",
+      "numeric_gate_passed": true,
+      "reason": "validation_reused_for_calibration_and_no_untouched_confirmatory_set"
+    }
+  },
+  "scientific_deployable": false,
+  "confirmatory_eligible": false,
+  "reason": "validation_reused_for_calibration_and_no_untouched_confirmatory_set"
+}

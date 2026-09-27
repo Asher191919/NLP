@@ -1,0 +1,1063 @@
+{
+  "meta": {
+    "protocol": "relation_text_annotation_v1",
+    "packet_id": "5b53d848edca6abb58f4",
+    "seed": 20260923,
+    "tasks": [
+      "a",
+      "b"
+    ],
+    "count_per_task": 15,
+    "n_samples": 30,
+    "max_context_chars": 6000,
+    "selection_uses_official_gold": false,
+    "selection_uses_model_output": false,
+    "annotator_gold_visible": false,
+    "annotator_model_output_visible": false,
+    "requires_two_independent_annotators": true,
+    "requires_adjudication": true,
+    "calibration_ready": false
+  },
+  "source_files": [
+    {
+      "task": "a",
+      "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2026\\TaskA-Flagship\\train_task_a.json",
+      "sha256": "f20b87514a09aa70cb247d359d09674040a9b238235cd2837a1c898de70018a0"
+    },
+    {
+      "task": "b",
+      "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2026\\TaskB-Reuse\\train_task_b.json",
+      "sha256": "6d5745ca415c1beac1850be385d030d6227e4b84955180f62dcee970bf593f08"
+    }
+  ],
+  "exclusion_sources": [
+    {
+      "kind": "blind_prefix",
+      "exclusive_stop": 30
+    },
+    {
+      "kind": "result_artifact",
+      "path": "D:\\NLP\\experiments\\results\\official_stratified_open_openai_ab_s5_seed20260922.json",
+      "sha256": "662ae6b1023a67921b4a57de8dd68181d08f584f0f5cfed149bf0109843d4e88",
+      "task_a_indices": [
+        199,
+        631,
+        829,
+        1071,
+        1158,
+        1285,
+        1741,
+        1769,
+        2041,
+        2521,
+        2542,
+        2742,
+        3244,
+        3550,
+        4021
+      ],
+      "task_b_indices": [
+        44,
+        57,
+        85,
+        420,
+        519,
+        666,
+        834,
+        1536,
+        1659,
+        1770,
+        1833,
+        2313,
+        2342,
+        2459,
+        2739
+      ]
+    },
+    {
+      "kind": "result_artifact",
+      "path": "D:\\NLP\\experiments\\results\\relation_calibration_a_n27_seed20260923.json",
+      "sha256": "456427a0eb306fb6486c5ac887a3b674e7d0ed86b48093cd930a907a74f6f173",
+      "task_a_indices": [
+        136,
+        330,
+        372,
+        503,
+        520,
+        866,
+        938,
+        968,
+        973,
+        1025,
+        1263,
+        1456,
+        1478,
+        1587,
+        2077,
+        2100,
+        2424,
+        2498,
+        2531,
+        2963,
+        3120,
+        3150,
+        3551,
+        3616,
+        3644,
+        3978,
+        4038
+      ],
+      "task_b_indices": []
+    },
+    {
+      "kind": "result_artifact",
+      "path": "D:\\NLP\\experiments\\results\\relation_calibration_ab_n12_seed20260923.json",
+      "sha256": "e0bf91282978b24cc02fa82d8e811f6e0d9d25a2f84ae7013b8b7cae0e62153b",
+      "task_a_indices": [
+        503,
+        520,
+        968,
+        973,
+        1025,
+        1263,
+        1478,
+        2100,
+        2531,
+        3120,
+        3150,
+        3978
+      ],
+      "task_b_indices": [
+        262,
+        370,
+        432,
+        558,
+        645,
+        727,
+        1900,
+        1975,
+        2010,
+        2477,
+        2559,
+        2668
+      ]
+    },
+    {
+      "kind": "result_artifact",
+      "path": "D:\\NLP\\experiments\\results\\relation_calibration_open_vocab_guarded_v3_relations_a_indices938-2077-2424_seed20260923.json",
+      "sha256": "319174e324f0ded47ed9824ed7e69edf7da5f97b298aea46a22a7ad70eb7cd60",
+      "task_a_indices": [
+        938,
+        2077,
+        2424
+      ],
+      "task_b_indices": []
+    }
+  ],
+  "pools": {
+    "task_a": {
+      "eligible_text_triggered_samples": 1861,
+      "excluded_indices_count": 72,
+      "selected_samples": 15,
+      "eligible_trigger_family_counts": {
+        "association": 295,
+        "causal": 90,
+        "division": 89,
+        "interaction": 86,
+        "location": 316,
+        "origin": 571,
+        "part_whole": 476,
+        "regulation": 473
+      },
+      "selected_trigger_family_counts": {
+        "association": 11,
+        "causal": 6,
+        "division": 1,
+        "interaction": 3,
+        "location": 11,
+        "origin": 12,
+        "part_whole": 11,
+        "regulation": 5
+      },
+      "selected_overlap_with_exclusions": []
+    },
+    "task_b": {
+      "eligible_text_triggered_samples": 1195,
+      "excluded_indices_count": 57,
+      "selected_samples": 15,
+      "eligible_trigger_family_counts": {
+        "association": 200,
+        "causal": 47,
+        "division": 56,
+        "interaction": 61,
+        "location": 215,
+        "origin": 353,
+        "part_whole": 334,
+        "regulation": 284
+      },
+      "selected_trigger_family_counts": {
+        "association": 8,
+        "causal": 2,
+        "division": 1,
+        "interaction": 4,
+        "location": 7,
+        "origin": 10,
+        "part_whole": 13,
+        "regulation": 8
+      },
+      "selected_overlap_with_exclusions": []
+    }
+  },
+  "preferred_predicates": [
+    "part_of",
+    "has part",
+    "develops_from",
+    "derives from",
+    "located in",
+    "positively regulates",
+    "regulates"
+  ],
+  "samples": [
+    {
+      "sample_key": "0cf8c1f31b7e58e5f6de",
+      "task": "a",
+      "source_index": 48,
+      "source_sample_id_sha256": "1941e55f44e0d445dd7541b17e2526f9bde1d2e81f0dc03d83b12e69c48bcb93",
+      "context_sha256": "29f828bb8931e4cc7b833fe119386c4790dc19d3f7f23f3a696e56d4e4637903",
+      "legal_input_fields": [
+        "context"
+      ],
+      "trigger_families": [
+        "association",
+        "causal",
+        "origin",
+        "part_whole"
+      ],
+      "trigger_family_count": 4,
+      "trigger_occurrences": 7,
+      "trigger_counts": {
+        "association": 3,
+        "causal": 2,
+        "origin": 1,
+        "part_whole": 1
+      },
+      "selection_rank_sha256": "2cb9b4b0f0f8567efd6502961ec15dd993c26fbb278b4e9dc2d99254292319aa",
+      "context_chars": 2866,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "0e8dc10a03ef9c2738a9",
+      "task": "a",
+      "source_index": 562,
+      "source_sample_id_sha256": "65c415417d821f51f399a8161667e79d9b3e4a9fa3bf122c4dcff53a13e6772a",
+      "context_sha256": "2f7a9ff9bbec7735b02932e422a031ae34795a793f66745e40b1a9219ab03760",
+      "legal_input_fields": [
+        "context"
+      ],
+      "trigger_families": [
+        "association",
+        "interaction",
+        "location",
+        "origin"
+      ],
+      "trigger_family_count": 4,
+      "trigger_occurrences": 5,
+      "trigger_counts": {
+        "association": 1,
+        "interaction": 1,
+        "location": 2,
+        "origin": 1
+      },
+      "selection_rank_sha256": "75d9c3175936f51747422fdd69ae6b9d1e86ac29e3933150ef5d4e3d500ac8ca",
+      "context_chars": 3627,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "3d26a16175967faadac4",
+      "task": "a",
+      "source_index": 659,
+      "source_sample_id_sha256": "89467504f117eacb5c365dede8b315d39bf56acf5375bf8e855babbd353eb2a9",
+      "context_sha256": "bc4f5776818e090eb32c8016af90297d67df70d9365ede9246751762d8968ab1",
+      "legal_input_fields": [
+        "context"
+      ],
+      "trigger_families": [
+        "causal",
+        "interaction",
+        "part_whole",
+        "regulation"
+      ],
+      "trigger_family_count": 4,
+      "trigger_occurrences": 4,
+      "trigger_counts": {
+        "causal": 1,
+        "interaction": 1,
+        "part_whole": 1,
+        "regulation": 1
+      },
+      "selection_rank_sha256": "b0327f854e932ca7d07e17fb159501d1dc224dda06ba0da7fa7a7aac9b806029",
+      "context_chars": 2712,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "3e3c72ddf55be826e2e3",
+      "task": "a",
+      "source_index": 864,
+      "source_sample_id_sha256": "59ed14c93d5dd4de02a1ac9e598f3da41780f963de802ab7a325f72060a91c16",
+      "context_sha256": "2f6c895cee56640d67ab794d14fcf1c5e9c2c9507416b349488beb5abe8bb38a",
+      "legal_input_fields": [
+        "context"
+      ],
+      "trigger_families": [
+        "association",
+        "location",
+        "origin",
+        "part_whole"
+      ],
+      "trigger_family_count": 4,
+      "trigger_occurrences": 5,
+      "trigger_counts": {
+        "association": 1,
+        "location": 2,
+        "origin": 1,
+        "part_whole": 1
+      },
+      "selection_rank_sha256": "0a21a1803199abe188bfa620ddf1eda78393433d8a9658010ab46e581803d335",
+      "context_chars": 2355,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "c8afd393363bcfb1d758",
+      "task": "a",
+      "source_index": 1108,
+      "source_sample_id_sha256": "c19f38ee117edaf3082ae788cf47233c21df0c411085180c2e50befc78930e1c",
+      "context_sha256": "7e79e5c55267aad878d5aa452a3bc26935c2c7e915430800191d5427f918eacd",
+      "legal_input_fields": [
+        "context"
+      ],
+      "trigger_families": [
+        "location",
+        "origin",
+        "part_whole"
+      ],
+      "trigger_family_count": 3,
+      "trigger_occurrences": 4,
+      "trigger_counts": {
+        "location": 1,
+        "origin": 1,
+        "part_whole": 2
+      },
+      "selection_rank_sha256": "2e4f7b7d38149666be3699b3685a93b0af22d5ccd0f3a840ea79e022f3752e74",
+      "context_chars": 1606,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "723685d243983ec78bc9",
+      "task": "a",
+      "source_index": 1159,
+      "source_sample_id_sha256": "5ab6efef73ead6e10b9d3d589c522f9da9c7ab0791d5f1f56390f4541c43e0c0",
+      "context_sha256": "b6f505a4498e680548dd3ba5bff20a6c728b79ddeaffc3fb47ac29d160fd3962",
+      "legal_input_fields": [
+        "context"
+      ],
+      "trigger_families": [
+        "association",
+        "location",
+        "origin",
+        "part_whole"
+      ],
+      "trigger_family_count": 4,
+      "trigger_occurrences": 4,
+      "trigger_counts": {
+        "association": 1,
+        "location": 1,
+        "origin": 1,
+        "part_whole": 1
+      },
+      "selection_rank_sha256": "3728ed1adcb85f834316e4c958fa915eb44a43da81fb9ea5e6a3b73189cda146",
+      "context_chars": 2448,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "037dc73c98f67807cb95",
+      "task": "a",
+      "source_index": 1286,
+      "source_sample_id_sha256": "f7863f0306d3ae917cd3a6abf855f1d0def393af6fb2989e092690c1e3145be0",
+      "context_sha256": "52ed01f971622c187516639a0f5093bff722f7ef7800a6fe3a66df2c5aabf23c",
+      "legal_input_fields": [
+        "context"
+      ],
+      "trigger_families": [
+        "association",
+        "causal",
+        "division",
+        "location",
+        "origin"
+      ],
+      "trigger_family_count": 5,
+      "trigger_occurrences": 5,
+      "trigger_counts": {
+        "association": 1,
+        "causal": 1,
+        "division": 1,
+        "location": 1,
+        "origin": 1
+      },
+      "selection_rank_sha256": "06b262da726c157048805884e34a0ddf438e354315a9c67b676bcbe58ded0b32",
+      "context_chars": 1354,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "a3d7c70645dd818fb70a",
+      "task": "a",
+      "source_index": 1914,
+      "source_sample_id_sha256": "73dc1c663bda761493553ca108597a52ac67472d9c7169ab126e5695cd6ffd03",
+      "context_sha256": "ab6f287c2dd7790f5282ff68e547d5ab8fa887f612dcd37c1a0d750c255154ae",
+      "legal_input_fields": [
+        "context"
+      ],
+      "trigger_families": [
+        "association",
+        "causal",
+        "location",
+        "origin",
+        "part_whole",
+        "regulation"
+      ],
+      "trigger_family_count": 6,
+      "trigger_occurrences": 6,
+      "trigger_counts": {
+        "association": 1,
+        "causal": 1,
+        "location": 1,
+        "origin": 1,
+        "part_whole": 1,
+        "regulation": 1
+      },
+      "selection_rank_sha256": "8828b5f17ac74d77b9505f20906c6bab5fdcf9828f2051c9337fc5c31734ae94",
+      "context_chars": 1951,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "e73d073a8f76b0a88658",
+      "task": "a",
+      "source_index": 1966,
+      "source_sample_id_sha256": "8f6db9eacaad0ad3e9c1c15751bb59ed9ea272f1bed3e662a28a8258d73c71eb",
+      "context_sha256": "19de4b7cf9bd7a5bc6d51073d2a23ad0d27cb02cc54b104f7149d3f0cc932ca5",
+      "legal_input_fields": [
+        "context"
+      ],
+      "trigger_families": [
+        "association",
+        "location",
+        "part_whole",
+        "regulation"
+      ],
+      "trigger_family_count": 4,
+      "trigger_occurrences": 5,
+      "trigger_counts": {
+        "association": 1,
+        "location": 1,
+        "part_whole": 2,
+        "regulation": 1
+      },
+      "selection_rank_sha256": "94739fe44717cb7e0722609e77a32572cd177f2e0058df75d82a28f9226abeaa",
+      "context_chars": 2694,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "c3d79112a1708e865c00",
+      "task": "a",
+      "source_index": 2174,
+      "source_sample_id_sha256": "2f5cc94c0899f5e2b033c2c1d67ada8cd92eaa85feb348f527713ccb4223d7c9",
+      "context_sha256": "99ff9e8ad9e156e2724b1657aa83c10bc23353d011f830353c0ed56e98ef0098",
+      "legal_input_fields": [
+        "context"
+      ],
+      "trigger_families": [
+        "association",
+        "location",
+        "origin"
+      ],
+      "trigger_family_count": 3,
+      "trigger_occurrences": 23,
+      "trigger_counts": {
+        "association": 1,
+        "location": 1,
+        "origin": 21
+      },
+      "selection_rank_sha256": "d544e0487423ddda40cc85e630bb3dfd4747ef465c2815049b496c529f0f096d",
+      "context_chars": 2632,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "f458c2a4ec6a51e5fd7d",
+      "task": "a",
+      "source_index": 2319,
+      "source_sample_id_sha256": "92adb29ec1fb0868135ba4685359df5e442abe5d1818010f18af8a1a7cbf1a00",
+      "context_sha256": "d9ce5a13c02f945c5208b860e3d4ce80518aa4a995894d9a526302707dbca869",
+      "legal_input_fields": [
+        "context"
+      ],
+      "trigger_families": [
+        "association",
+        "causal",
+        "origin"
+      ],
+      "trigger_family_count": 3,
+      "trigger_occurrences": 5,
+      "trigger_counts": {
+        "association": 2,
+        "causal": 1,
+        "origin": 2
+      },
+      "selection_rank_sha256": "09eab7538708c9c39ab8ca5f85346a39dadf6ae73790026c942b75ceeb961291",
+      "context_chars": 1794,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "c1236bd636d750c34e84",
+      "task": "a",
+      "source_index": 2522,
+      "source_sample_id_sha256": "9b52c272dfc97b2624b8118260c1d5cfdd1476e65f53cfd2e702342728eeb2c1",
+      "context_sha256": "ecd20fec5d9b81ea13f2334b12804dd1cc169a4b953dcae5a969c1cc5cd31d5a",
+      "legal_input_fields": [
+        "context"
+      ],
+      "trigger_families": [
+        "association",
+        "part_whole",
+        "regulation"
+      ],
+      "trigger_family_count": 3,
+      "trigger_occurrences": 5,
+      "trigger_counts": {
+        "association": 1,
+        "part_whole": 1,
+        "regulation": 3
+      },
+      "selection_rank_sha256": "c0af9b0416b21b1b3e87b5048c75ffa69128e150dc820691ff65049ca7d9a6a7",
+      "context_chars": 2978,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "812be39864326e677c2e",
+      "task": "a",
+      "source_index": 3390,
+      "source_sample_id_sha256": "d2ef36f7b82420266d7a6647acb28d115a057b7c8806571e1cc308c6304880d5",
+      "context_sha256": "e45c6329d972708bbd4d4e1b4f67d9675d22c2f5eb67488c240042af06e3c7db",
+      "legal_input_fields": [
+        "context"
+      ],
+      "trigger_families": [
+        "location",
+        "origin",
+        "part_whole",
+        "regulation"
+      ],
+      "trigger_family_count": 4,
+      "trigger_occurrences": 4,
+      "trigger_counts": {
+        "location": 1,
+        "origin": 1,
+        "part_whole": 1,
+        "regulation": 1
+      },
+      "selection_rank_sha256": "6e3ac83bd8fb16d6c73eab7a12f6d1352bc363f141396318dbef82853e346cb2",
+      "context_chars": 1324,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "4335dd9d441401a9de73",
+      "task": "a",
+      "source_index": 3515,
+      "source_sample_id_sha256": "aa604496e4051f890c724b4de0bcf1a95924486353b7650b3a6567be35b33789",
+      "context_sha256": "2b2a846b2a24e938d0813fe7bda0ca105529c0226e426c3f302a539d1e152e8b",
+      "legal_input_fields": [
+        "context"
+      ],
+      "trigger_families": [
+        "interaction",
+        "location",
+        "origin",
+        "part_whole"
+      ],
+      "trigger_family_count": 4,
+      "trigger_occurrences": 4,
+      "trigger_counts": {
+        "interaction": 1,
+        "location": 1,
+        "origin": 1,
+        "part_whole": 1
+      },
+      "selection_rank_sha256": "0c0cd788e33c8cddd5dd66a6ef709f0e04f13cdd1d97f14d7569b46b1cc03967",
+      "context_chars": 1090,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "a2ed3a0c5534ab6ee628",
+      "task": "a",
+      "source_index": 4153,
+      "source_sample_id_sha256": "b836a2bab18490de8c86244229deaae7b4476a482e3f651f420e4c4eecfce3ff",
+      "context_sha256": "0d59e2372c20667acf7d3f9a62330c213b25d5a3b699308e1dc4b06a1797a639",
+      "legal_input_fields": [
+        "context"
+      ],
+      "trigger_families": [
+        "association",
+        "causal",
+        "location",
+        "origin",
+        "part_whole"
+      ],
+      "trigger_family_count": 5,
+      "trigger_occurrences": 6,
+      "trigger_counts": {
+        "association": 1,
+        "causal": 1,
+        "location": 1,
+        "origin": 2,
+        "part_whole": 1
+      },
+      "selection_rank_sha256": "c564c4eb045bb96afcd80d4d9f4c2ae9e3a258ad14a5e911c7208c38c3291877",
+      "context_chars": 2665,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "2ef68fa8681e2c0013da",
+      "task": "b",
+      "source_index": 96,
+      "source_sample_id_sha256": "68c7db42ae8a491f2f6ab5dc2085ec6ea9295f3298e7cca257a85d81fa6e9d2a",
+      "context_sha256": "06826befe408da5082779c5fa9339bbfb64b782a1502ba881d367019594a0c5e",
+      "legal_input_fields": [
+        "context",
+        "terms",
+        "types",
+        "initial-primitive-ontology-triples"
+      ],
+      "trigger_families": [
+        "association",
+        "interaction",
+        "part_whole",
+        "regulation"
+      ],
+      "trigger_family_count": 4,
+      "trigger_occurrences": 4,
+      "trigger_counts": {
+        "association": 1,
+        "interaction": 1,
+        "part_whole": 1,
+        "regulation": 1
+      },
+      "selection_rank_sha256": "4e4012574516e74a74e1458fed67ef740263a04ed15033276cbff7ff461d1bd7",
+      "context_chars": 1623,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "3ca254ed1680846607b3",
+      "task": "b",
+      "source_index": 118,
+      "source_sample_id_sha256": "76a1617c7df46f4bce40f2f08a27fbeae786b5d2953c8235c39cbf9b4c37949d",
+      "context_sha256": "38a2fbe97018da2ace43f74e5aeb37b7dc1afcbf7bccfe7bda65d0ea5b471a9e",
+      "legal_input_fields": [
+        "context",
+        "terms",
+        "types",
+        "initial-primitive-ontology-triples"
+      ],
+      "trigger_families": [
+        "association",
+        "division",
+        "origin",
+        "part_whole"
+      ],
+      "trigger_family_count": 4,
+      "trigger_occurrences": 4,
+      "trigger_counts": {
+        "association": 1,
+        "division": 1,
+        "origin": 1,
+        "part_whole": 1
+      },
+      "selection_rank_sha256": "497e60f23a1ec8a45f62baa41e8f141357cf6aa9895af6c39ad4f7d1774be8c0",
+      "context_chars": 1655,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "bf6885a86c3bf4522cbe",
+      "task": "b",
+      "source_index": 209,
+      "source_sample_id_sha256": "82905e52b5407c6f12deed4f94b5e898a801bcd2c787e203fd51252770913060",
+      "context_sha256": "b35c81b66768174c2d7e0868acbfc8fe0f46915e0acab6b0eafc5b4af094e281",
+      "legal_input_fields": [
+        "context",
+        "terms",
+        "types",
+        "initial-primitive-ontology-triples"
+      ],
+      "trigger_families": [
+        "association",
+        "location",
+        "origin"
+      ],
+      "trigger_family_count": 3,
+      "trigger_occurrences": 6,
+      "trigger_counts": {
+        "association": 1,
+        "location": 4,
+        "origin": 1
+      },
+      "selection_rank_sha256": "78806b4ee7bd192bc9b681559ae2bf93edc7a9b9d96a05a6f7c80a314271944f",
+      "context_chars": 3384,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "ffbc4d6ce0336591c572",
+      "task": "b",
+      "source_index": 258,
+      "source_sample_id_sha256": "fd19242f010e5ac2a96374951e369ad5886502d79eb01728f8d0a5cbd712258c",
+      "context_sha256": "f67903e672b2e0e1a6e77d848b68ebce8a057b7a165dc50a847c6783b86f92e4",
+      "legal_input_fields": [
+        "context",
+        "terms",
+        "types",
+        "initial-primitive-ontology-triples"
+      ],
+      "trigger_families": [
+        "association",
+        "location",
+        "origin"
+      ],
+      "trigger_family_count": 3,
+      "trigger_occurrences": 5,
+      "trigger_counts": {
+        "association": 1,
+        "location": 2,
+        "origin": 2
+      },
+      "selection_rank_sha256": "24a8dac85a7fd7a0a3ea347d7afc4728ac92b24e90e71e6f728da2e4d1a34aad",
+      "context_chars": 3391,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "ad3248b084cb29772a3c",
+      "task": "b",
+      "source_index": 349,
+      "source_sample_id_sha256": "7bb7172750dc2aededb1c7ed950d13e1867489f8a6da912a2d02dc08308a9f2b",
+      "context_sha256": "a4e6cdfff494eb6ec1177eb01e7a6c09ddfaaf9f55638c78476ea467325fe349",
+      "legal_input_fields": [
+        "context",
+        "terms",
+        "types",
+        "initial-primitive-ontology-triples"
+      ],
+      "trigger_families": [
+        "association",
+        "location",
+        "part_whole"
+      ],
+      "trigger_family_count": 3,
+      "trigger_occurrences": 4,
+      "trigger_counts": {
+        "association": 2,
+        "location": 1,
+        "part_whole": 1
+      },
+      "selection_rank_sha256": "0f36867a432b3f2d521bb335e5dbbe7be5eb909a94b036b929f281ea5fb6f5cf",
+      "context_chars": 1820,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "04e4fd278857190bab4d",
+      "task": "b",
+      "source_index": 369,
+      "source_sample_id_sha256": "23df1605a2f41dc0eee7e0c92e5064334973019b9f6c6ff59232abc9a31ef816",
+      "context_sha256": "f3f615436a282f19ce5f83d1ddd6010f5143552e2c48850a540e10201d01b51e",
+      "legal_input_fields": [
+        "context",
+        "terms",
+        "types",
+        "initial-primitive-ontology-triples"
+      ],
+      "trigger_families": [
+        "origin",
+        "part_whole",
+        "regulation"
+      ],
+      "trigger_family_count": 3,
+      "trigger_occurrences": 7,
+      "trigger_counts": {
+        "origin": 5,
+        "part_whole": 1,
+        "regulation": 1
+      },
+      "selection_rank_sha256": "dad109b5f4058205d9e619e4424d88d7c25054fa3f917fa5cc548f60f31514dd",
+      "context_chars": 3900,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "e30db887e826e796ed85",
+      "task": "b",
+      "source_index": 445,
+      "source_sample_id_sha256": "c090e65eaa109e0ece5847762012a9c2718346b14e993183be67635f8c807c8d",
+      "context_sha256": "24d608d5017a5d7917df30e261af31d1294beb9f83dcf05606c9f916da3104c6",
+      "legal_input_fields": [
+        "context",
+        "terms",
+        "types",
+        "initial-primitive-ontology-triples"
+      ],
+      "trigger_families": [
+        "interaction",
+        "origin",
+        "part_whole",
+        "regulation"
+      ],
+      "trigger_family_count": 4,
+      "trigger_occurrences": 4,
+      "trigger_counts": {
+        "interaction": 1,
+        "origin": 1,
+        "part_whole": 1,
+        "regulation": 1
+      },
+      "selection_rank_sha256": "73955303c5d8f202bcd12c8a216aa28f4ebe845d65c20ea511d88b5e9b32cd39",
+      "context_chars": 1481,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "17c5af20cab2ecdc1230",
+      "task": "b",
+      "source_index": 476,
+      "source_sample_id_sha256": "7c3a316c7bcda372f1bef6334d9572bc3b3df224d4f09521dd49cf2320417cfb",
+      "context_sha256": "d802511cbb04ea952154295731b79f95b9e15151a170078fafa7cec41f708c9c",
+      "legal_input_fields": [
+        "context",
+        "terms",
+        "types",
+        "initial-primitive-ontology-triples"
+      ],
+      "trigger_families": [
+        "association",
+        "causal",
+        "part_whole"
+      ],
+      "trigger_family_count": 3,
+      "trigger_occurrences": 6,
+      "trigger_counts": {
+        "association": 1,
+        "causal": 3,
+        "part_whole": 2
+      },
+      "selection_rank_sha256": "29dc042e1e72b2a0c75bc4b0f15078d05c287f3ebc4991c020f6fc8e741b876f",
+      "context_chars": 1902,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "7b7e28cf0ffb25163635",
+      "task": "b",
+      "source_index": 494,
+      "source_sample_id_sha256": "df4a8d74f2700edb1625a34fc078ad1a80ade29166d174eac6ea4566fcd81403",
+      "context_sha256": "a82ecae6e4958bc3e74b6f555b34eb38fe6a9130dd979a605a17dfd07af4ada6",
+      "legal_input_fields": [
+        "context",
+        "terms",
+        "types",
+        "initial-primitive-ontology-triples"
+      ],
+      "trigger_families": [
+        "interaction",
+        "origin",
+        "part_whole",
+        "regulation"
+      ],
+      "trigger_family_count": 4,
+      "trigger_occurrences": 5,
+      "trigger_counts": {
+        "interaction": 1,
+        "origin": 2,
+        "part_whole": 1,
+        "regulation": 1
+      },
+      "selection_rank_sha256": "790073786a06793d841b9e6de3f47a69c454821a0f19be1ff6e2e4d10796883e",
+      "context_chars": 1762,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "e8cc5f686501d04654b7",
+      "task": "b",
+      "source_index": 824,
+      "source_sample_id_sha256": "548cbd580f78d797d08da7e8c5a527bd40849c26c0112ffbdc8273dc3d7cd94a",
+      "context_sha256": "ffd81857329a90d5b8b70b65605a35b522177ae4642ffae18b7d679d3f88f652",
+      "legal_input_fields": [
+        "context",
+        "terms",
+        "types",
+        "initial-primitive-ontology-triples"
+      ],
+      "trigger_families": [
+        "association",
+        "causal",
+        "part_whole",
+        "regulation"
+      ],
+      "trigger_family_count": 4,
+      "trigger_occurrences": 4,
+      "trigger_counts": {
+        "association": 1,
+        "causal": 1,
+        "part_whole": 1,
+        "regulation": 1
+      },
+      "selection_rank_sha256": "0910fdd15151a8299d03439ee4250a299518bf1ea7f30731ec182a354d8ca744",
+      "context_chars": 2230,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "1e67a8921ca9c82a9309",
+      "task": "b",
+      "source_index": 1002,
+      "source_sample_id_sha256": "56948de7dde7062088a54201b6a8cebcfffe82e84da4110fa0edcf68be590acc",
+      "context_sha256": "128ff4bc89c40c7576f5eccb6c1b12dcafa6669c461e4a717506bb1c6daee4f4",
+      "legal_input_fields": [
+        "context",
+        "terms",
+        "types",
+        "initial-primitive-ontology-triples"
+      ],
+      "trigger_families": [
+        "location",
+        "origin",
+        "part_whole"
+      ],
+      "trigger_family_count": 3,
+      "trigger_occurrences": 5,
+      "trigger_counts": {
+        "location": 2,
+        "origin": 1,
+        "part_whole": 2
+      },
+      "selection_rank_sha256": "b770b596d438d3dc3b2566652e5ccf11a8a84001ed4aa61b68b01fcd9c1606d4",
+      "context_chars": 2997,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "46ed7f3706ce269756c4",
+      "task": "b",
+      "source_index": 1355,
+      "source_sample_id_sha256": "d10704a0e92235afa48867dada9243923b4f6da0260f90353a522961ba49a6ed",
+      "context_sha256": "22a07224bf2a30a3a4abbcff87f37d3b2e40684043fa59688d174a9fc37347f1",
+      "legal_input_fields": [
+        "context",
+        "terms",
+        "types",
+        "initial-primitive-ontology-triples"
+      ],
+      "trigger_families": [
+        "location",
+        "origin",
+        "part_whole",
+        "regulation"
+      ],
+      "trigger_family_count": 4,
+      "trigger_occurrences": 6,
+      "trigger_counts": {
+        "location": 1,
+        "origin": 1,
+        "part_whole": 3,
+        "regulation": 1
+      },
+      "selection_rank_sha256": "4abc56df68962857bf79e4f9db5bea29f53b0358b95500ae83296f575fe96c3d",
+      "context_chars": 3657,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "dbceb06136ce5887a0ba",
+      "task": "b",
+      "source_index": 1398,
+      "source_sample_id_sha256": "6a14e50c6c4039c43079aca0e3c6c34c60c82994e1dc19ac1a8d77c2bb5b69b8",
+      "context_sha256": "e6f01425f38bdd4fdfa56cf67e9b37baeefdcf94af2566c5ee6ebea6150d8bb3",
+      "legal_input_fields": [
+        "context",
+        "terms",
+        "types",
+        "initial-primitive-ontology-triples"
+      ],
+      "trigger_families": [
+        "association",
+        "origin",
+        "part_whole",
+        "regulation"
+      ],
+      "trigger_family_count": 4,
+      "trigger_occurrences": 4,
+      "trigger_counts": {
+        "association": 1,
+        "origin": 1,
+        "part_whole": 1,
+        "regulation": 1
+      },
+      "selection_rank_sha256": "5392f648d487083d8602ed897af16ffadad1a961d1f0f668ba7442b05f831a3c",
+      "context_chars": 1650,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "3ae2c6f2190894cf523d",
+      "task": "b",
+      "source_index": 1491,
+      "source_sample_id_sha256": "0af2b9f09a6b1d59b6c3d39cb7df1899831114f4ba1bb3b96a1a88c3e5ac4ae8",
+      "context_sha256": "179b2cb761f74c74a77a3d44e92dd06b8a605d25efb2d84cb1cec93bd7ef5f61",
+      "legal_input_fields": [
+        "context",
+        "terms",
+        "types",
+        "initial-primitive-ontology-triples"
+      ],
+      "trigger_families": [
+        "interaction",
+        "location",
+        "part_whole",
+        "regulation"
+      ],
+      "trigger_family_count": 4,
+      "trigger_occurrences": 5,
+      "trigger_counts": {
+        "interaction": 1,
+        "location": 1,
+        "part_whole": 1,
+        "regulation": 2
+      },
+      "selection_rank_sha256": "0da2c0b90b1558303302bd6eea55d650fadb7a869c5c24e6c4d638abef93d133",
+      "context_chars": 2185,
+      "context_truncated": false
+    },
+    {
+      "sample_key": "ca3a5c5ed3aaedfc58af",
+      "task": "b",
+      "source_index": 2560,
+      "source_sample_id_sha256": "05bf91e489a4501f782263407d7a4c79d60983d3a940fc915ba684b6f8db7901",
+      "context_sha256": "48e111bb73f6c010f77ce9a3ee1172aebda3d6ec9ed30ea34fc50b945b9a02cc",
+      "legal_input_fields": [
+        "context",
+        "terms",
+        "types",
+        "initial-primitive-ontology-triples"
+      ],
+      "trigger_families": [
+        "location",
+        "origin",
+        "part_whole"
+      ],
+      "trigger_family_count": 3,
+      "trigger_occurrences": 5,
+      "trigger_counts": {
+        "location": 2,
+        "origin": 1,
+        "part_whole": 2
+      },
+      "selection_rank_sha256": "5db93121fcb205f446cff5bc023ec472ce9d31927c8d33acd51c82c23e973634",
+      "context_chars": 2441,
+      "context_truncated": false
+    }
+  ]
+}

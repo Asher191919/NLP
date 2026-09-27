@@ -1,0 +1,15 @@
+from ontobridg.prompts.templates import (
+    CONTAMINATION_PROBE,
+    TASK_A_RELATIONS_OPEN,
+    TASK_A_TAXONOMY,
+    TASK_A_TERM_TYPING,
+    TASK_B_EXTENSION,
+)
+
+__all__ = [
+    "CONTAMINATION_PROBE",
+    "TASK_A_RELATIONS_OPEN",
+    "TASK_A_TAXONOMY",
+    "TASK_A_TERM_TYPING",
+    "TASK_B_EXTENSION",
+]

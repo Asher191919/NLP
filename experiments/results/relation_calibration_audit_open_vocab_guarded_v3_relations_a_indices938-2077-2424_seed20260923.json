@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "protocol": "relation_guarded_v2_independent_calibration_v1",
+    "audit_only": true,
+    "selection_uses_gold_locally": true,
+    "selection_is_calibration_only_not_unbiased_evaluation": true,
+    "gold_visible_to_model": false,
+    "contains_source_text": false,
+    "external_destination": "https://api.openai.com/v1",
+    "model": "dots3-note-prev",
+    "system": "open_vocab_guarded_v3_relations",
+    "samples_per_task": 12,
+    "sample_indices": [
+      938,
+      2077,
+      2424
+    ],
+    "seed": 20260923,
+    "prior_failed_connection_attempts": 0,
+    "exclude_prefix": 30,
+    "exclude_eval_result": "..\\experiments\\results\\official_stratified_open_openai_ab_s5_seed20260922.json",
+    "confidence_threshold": 0.85,
+    "implicit_confidence_threshold": 0.95,
+    "max_nontax": 8,
+    "max_implicit_gap_chars": 600,
+    "estimated_calls": 3,
+    "estimated_generation_cache_hits": 3,
+    "estimated_exact_cache_replays": 3,
+    "estimated_local_reprocesses": 0,
+    "estimated_external_calls": 0,
+    "total_prompt_chars": 10523,
+    "disjoint_from_blind_prefix_and_density_eval": true
+  },
+  "tasks": {
+    "task_a": {
+      "n_samples": 3,
+      "excluded_indices_count": 45,
+      "selected_overlap_with_excluded": [],
+      "pool": {
+        "selection": "explicit_sample_indices",
+        "selected_visible_gold": 3,
+        "selected_visible_supported_gold": 3
+      },
+      "samples": [
+        {
+          "sample_index": 938,
+          "sample_id_sha256": "b526764cf33d57914c2990a48904921ed73f996805210df75c01cfcb749848df",
+          "official_nontax_gold_nonself": 1,
+          "visible_nontax_gold": 1,
+          "visible_supported_gold": 1,
+          "visible_supported_predicates": [
+            "derives from"
+          ],
+          "selection_purpose": "fixed_relation_generation_pilot",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2074,
+          "prompt": {
+            "sha256": "6d0c57147e88b6982e0ccc7c469201bee14a25122e133b46a6ce115de85646c4",
+            "chars": 3900,
+            "generation_cache_hit": true,
+            "exact_cache_hit": true
+          }
+        },
+        {
+          "sample_index": 2077,
+          "sample_id_sha256": "f5cf104df294a034b70b315108e6fc65e4c4d62babd2aaec50ccd25ab7a4c0fd",
+          "official_nontax_gold_nonself": 1,
+          "visible_nontax_gold": 1,
+          "visible_supported_gold": 1,
+          "visible_supported_predicates": [
+            "derives from"
+          ],
+          "selection_purpose": "fixed_relation_generation_pilot",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 992,
+          "prompt": {
+            "sha256": "cc5a086c2f25d437746a84833166d47ffde8ea37e36add530b05b7e7d271fce8",
+            "chars": 2818,
+            "generation_cache_hit": true,
+            "exact_cache_hit": true
+          }
+        },
+        {
+          "sample_index": 2424,
+          "sample_id_sha256": "3833b93615811269add5d8bbca03489bd6d723acf093086095fe5d818a13b1ba",
+          "official_nontax_gold_nonself": 1,
+          "visible_nontax_gold": 1,
+          "visible_supported_gold": 1,
+          "visible_supported_predicates": [
+            "has part"
+          ],
+          "selection_purpose": "fixed_relation_generation_pilot",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1979,
+          "prompt": {
+            "sha256": "9d82ab446059df61d3f9a87d233586e081f0b91e6ef6cdb17ac7066992f58bd1",
+            "chars": 3805,
+            "generation_cache_hit": true,
+            "exact_cache_hit": true
+          }
+        }
+      ]
+    }
+  }
+}

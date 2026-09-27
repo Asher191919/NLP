@@ -1,0 +1,3472 @@
+{
+  "meta": {
+    "gold_visible_to_model": false,
+    "hypothesis_origin": "prior_protected_gold_error_audit",
+    "protocol": "official_predicate_routing_holdout_v1",
+    "seed": 20260927,
+    "selection_is_gold_stratified_not_unbiased": true,
+    "selection_uses_gold_locally": true,
+    "source": "LLMs4OL 2026 Task A official training data",
+    "status": "frozen"
+  },
+  "samples": [
+    {
+      "assigned_stratum": "equivalent_class",
+      "context": "Title: Thermodynamic and Radiative Properties in Environmental Systems \n\n Content: \nIn the realm of ecology and environmental science, the intricate interplay of various measurable attributes is crucial in understanding ecological dynamics and energy balance. A foundational concept here is the number density, which serves as a fundamental subclass of quantitative property, enabling scientists to characterize the distribution of particles in ecological systems. Within this context, we encounter neutral number density, representing uncharged particles, and total electron content, which quantifies charged particles, both of which are essential for analyzing atmospheric behavior.\nAnother critical aspect in this domain is the measurement of electromagnetic radiation quantity, a subclass also categorized under quantitative property. This measure is vital as it relates to how energy from radiation interacts with different materials within the environment. The solid angle, representing geometric extents, and fluence, which quantifies particle flow, further enrich our understanding of how elements interact within ecological frameworks.\nThe thermodynamic quantities play a pivotal role in environmental modeling and are recognized as subclasses of quantitative property. Among these, temperature is a primary thermodynamic quantity that influences atmospheric and oceanic dynamics significantly. The temperature gradient assists in detailing how temperature varies spatially, while the broader thermal gradient also contributes to our understanding of energy distribution across different environments.\nThermal diffusivity emerges as a vital thermodynamic quantity, defining the rate at which thermal energy spreads through a material. Other essential measurements include specific heat and volumetric heat capacity, which characterize how materials store energy. Heat, as an element of thermodynamic quantity, manifests through mechanisms such as heat flow and heat flux, indicating energy transfer within a system.\nMoreover, the coefficient of thermal expansion and the coefficient of heat transfer are important measures that highlight material responsiveness to thermal changes, enabling the effective modeling of material behavior under varying temperature conditions. A comprehensive understanding of these properties culminates in the thermal profile, which presents the state of heat distribution, giving insight into how energy is organized over time and space.\nIn summary, these quantifiable properties—spanning from number density to thermodynamic quantities—are integral to constructing a coherent picture of ecological interactions, facilitating advancements in modeling and environmental management.",
+      "gold_triples": [
+        [
+          "number density",
+          "is-a",
+          "quantitative property"
+        ],
+        [
+          "neutral number density",
+          "is-a",
+          "number density"
+        ],
+        [
+          "total electron content",
+          "is-a",
+          "number density"
+        ],
+        [
+          "electromagnetic radiation quantity",
+          "is-a",
+          "quantitative property"
+        ],
+        [
+          "solid angle",
+          "is-a",
+          "quantitative property"
+        ],
+        [
+          "fractional quantity",
+          "is-a",
+          "quantitative property"
+        ],
+        [
+          "fluence",
+          "is-a",
+          "quantitative property"
+        ],
+        [
+          "thermodynamic quantity",
+          "is-a",
+          "quantitative property"
+        ],
+        [
+          "thermal diffusivity",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "specific heat",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "heat flow",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "heat",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "heat flux",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "heat energy",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "linear thermal expansion",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "volumetric heat capacity",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "temperature",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "thermal profile",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "specific heat capacity",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "thermal flux",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "coefficient of thermal expansion",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "thermal conductivity",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "coefficient of heat transfer",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "molar heat capacity",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "temperature gradient",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "thermal gradient",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "thermal energy",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "thermal expansion coefficient",
+          "is-a",
+          "thermodynamic quantity"
+        ],
+        [
+          "radiation medium interaction quantity",
+          "is-a",
+          "quantitative property"
+        ],
+        [
+          "per meter quantity",
+          "is-a",
+          "quantitative property"
+        ],
+        [
+          "heat flux",
+          "equivalent class",
+          "thermal flux"
+        ],
+        [
+          "temperature gradient",
+          "equivalent class",
+          "thermal gradient"
+        ],
+        [
+          "heat flow",
+          "equivalent class",
+          "thermal flux"
+        ],
+        [
+          "specific heat",
+          "equivalent class",
+          "specific heat capacity"
+        ],
+        [
+          "coefficient of thermal expansion",
+          "equivalent class",
+          "thermal expansion coefficient"
+        ],
+        [
+          "heat",
+          "equivalent class",
+          "thermal energy"
+        ],
+        [
+          "heat",
+          "equivalent class",
+          "heat energy"
+        ]
+      ],
+      "id": "5dd8690c79214cd0a8231e30d3c54f55",
+      "package_index": 0,
+      "source_index": 216,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "coefficient of thermal expansion",
+          "equivalent class",
+          "thermal expansion coefficient"
+        ],
+        [
+          "heat",
+          "equivalent class",
+          "heat energy"
+        ],
+        [
+          "heat",
+          "equivalent class",
+          "thermal energy"
+        ],
+        [
+          "heat flow",
+          "equivalent class",
+          "thermal flux"
+        ],
+        [
+          "heat flux",
+          "equivalent class",
+          "thermal flux"
+        ],
+        [
+          "specific heat",
+          "equivalent class",
+          "specific heat capacity"
+        ],
+        [
+          "temperature gradient",
+          "equivalent class",
+          "thermal gradient"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "heat",
+          "equivalent class",
+          "thermal energy"
+        ],
+        [
+          "temperature gradient",
+          "equivalent class",
+          "thermal gradient"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "domain_specific",
+      "context": "Title: Agricultural and Aquatic Diversity \n\n Content: \nIn the realm of horticulture, the Beefsteak tomato (raw) represents a specific preparation state that falls under the broader category of Beefsteak tomato varieties, prized for its large size and succulent flesh. Fisheries play a crucial role in agriculture, particularly regarding snapper stocks. The snapper group encompasses diverse taxa, from the *Lutjanus* genus to distinct genera like *Etelis* and *Apsilus*. Notable species include the golden snapper, often targeted in tropical waters, alongside the *Lutjanus* members such as the yellowtail snapper Lutjanus vivanus, the crimson snapper Lutjanus sanguineus, the Colorado snapper Lutjanus colorado, and the purple snapper Lutjanus purpureus. Further diversity is seen in the snapper Apsilus dentatus, the spotted snapper Lutjanus guttatus, the mangrove snapper Lutjanus griseus, the red snapper Lutjanus lutjanus, the dogsnapper Lutjanus buccanella, the pink snapper Lutjanus peru, the five-lined snapper Lutjanus quinquelineatus, the dusky snapper Lutjanus johnii, the red hind Lutjanus campechanus, the red snapper Lutjanus sebae, the malabar snapper Lutjanus malabaricus, the bumphead snapper Lutjanus gibbus, and the silver-belly snapper Lutjanus argentiventris.",
+      "gold_triples": [
+        [
+          "beefsteak tomato",
+          "is-a",
+          "beefsteak tomato"
+        ],
+        [
+          "etelis oculatus",
+          "is-a",
+          "snapper"
+        ],
+        [
+          "lutjanus vivanus",
+          "is-a",
+          "snapper"
+        ],
+        [
+          "golden snapper",
+          "is-a",
+          "snapper"
+        ],
+        [
+          "lutjanus sanguineus",
+          "is-a",
+          "snapper"
+        ],
+        [
+          "lutjanus colorado",
+          "is-a",
+          "snapper"
+        ],
+        [
+          "lutjanus purpureus",
+          "is-a",
+          "snapper"
+        ],
+        [
+          "apsilus dentatus",
+          "is-a",
+          "snapper"
+        ],
+        [
+          "lutjanus guttatus",
+          "is-a",
+          "snapper"
+        ],
+        [
+          "lutjanus griseus",
+          "is-a",
+          "snapper"
+        ],
+        [
+          "lutjanus lutjanus",
+          "is-a",
+          "snapper"
+        ],
+        [
+          "lutjanus buccanella",
+          "is-a",
+          "snapper"
+        ],
+        [
+          "lutjanus peru",
+          "is-a",
+          "snapper"
+        ],
+        [
+          "lutjanus quinquelineatus",
+          "is-a",
+          "snapper"
+        ],
+        [
+          "lutjanus johnii",
+          "is-a",
+          "snapper"
+        ],
+        [
+          "lutjanus campechanus",
+          "is-a",
+          "snapper"
+        ],
+        [
+          "lutjanus sebae",
+          "is-a",
+          "snapper"
+        ],
+        [
+          "lutjanus malabaricus",
+          "is-a",
+          "snapper"
+        ],
+        [
+          "lutjanus gibbus",
+          "is-a",
+          "snapper"
+        ],
+        [
+          "lutjanus argentiventris",
+          "is-a",
+          "snapper"
+        ],
+        [
+          "snapper",
+          "database_cross_reference",
+          "lutjanus lutjanus"
+        ]
+      ],
+      "id": "f6417c06f0b2496facbba23652ca474c",
+      "package_index": 1,
+      "source_index": 267,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "snapper",
+          "database_cross_reference",
+          "lutjanus lutjanus"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "snapper",
+          "database_cross_reference",
+          "lutjanus lutjanus"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "equivalent_class",
+      "context": "Title: Thermodynamics and Structural Boundaries in Atmospheric Systems \n\n Content: \nUnderstanding the physical parameters of the atmosphere involves distinguishing between vertical temperature gradients and structural thresholds. The rate at which temperature changes with altitude is a critical metric, generally categorized under the concept of a lapse rate. Within this framework, the environmental lapse rate represents the actual temperature gradient observed in the atmosphere at a specific time, while the dry adiabatic lapse rate describes the cooling of an unsaturated air parcel as it rises. These thermal dynamics are often bounded by specific vertical limits, which are collectively referred to as a minimum in statistical summaries of atmospheric data. In practical terms, these lower bounds are described using various interchangeable terms depending on the context; whether one refers to the bottom, the basal layer, the base of the troposphere, or the floor of the convective boundary, each term serves as a subclass of minimum to define the lower limit of the phenomenon being studied.",
+      "gold_triples": [
+        [
+          "bottom",
+          "is-a",
+          "minimum"
+        ],
+        [
+          "basal",
+          "is-a",
+          "minimum"
+        ],
+        [
+          "base",
+          "is-a",
+          "minimum"
+        ],
+        [
+          "floor",
+          "is-a",
+          "minimum"
+        ],
+        [
+          "environmental lapse rate",
+          "is-a",
+          "lapse rate"
+        ],
+        [
+          "dry adiabatic lapse rate",
+          "is-a",
+          "lapse rate"
+        ],
+        [
+          "basal",
+          "equivalent class",
+          "bottom"
+        ],
+        [
+          "base",
+          "equivalent class",
+          "bottom"
+        ],
+        [
+          "bottom",
+          "equivalent class",
+          "floor"
+        ]
+      ],
+      "id": "26e31f1ed7494981b5ff0be42da9a2c8",
+      "package_index": 2,
+      "source_index": 303,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "basal",
+          "equivalent class",
+          "bottom"
+        ],
+        [
+          "base",
+          "equivalent class",
+          "bottom"
+        ],
+        [
+          "bottom",
+          "equivalent class",
+          "floor"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "basal",
+          "equivalent class",
+          "bottom"
+        ],
+        [
+          "base",
+          "equivalent class",
+          "bottom"
+        ],
+        [
+          "bottom",
+          "equivalent class",
+          "floor"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "domain_specific",
+      "context": "Title: Overview of the Genus Spondias and Its Species \n\n Content: \nThe genus Spondias encompasses a diverse group of tropical fruit-bearing trees valued in agriculture. Prominent species within this genus include Spondias purpurea, Spondias mombin, and Spondias dulcis, each contributing to the rich biodiversity of edible fruit crops. These species are frequently categorized under the broader agricultural classification of ciruela plant, highlighting their relevance to regional fruit cultivation. Specifically, both Spondias purpurea and Spondias mombin are recognized as members of the ciruela plant group, sharing traits characteristic of these subtropical fruits. Within this framework, Spondias dulcis holds a distinct position as a member of the ambarella plant category. The ambarella plant itself is defined as a subclass of the ciruela plant, further linking these culinary varieties. Consequently, Spondias dulcis is classified as an ambarella plant, while remaining a fundamental part of the Spondias lineage. This nested taxonomy underscores the complex relationships between widely cultivated fruit trees and their morphological classifications.",
+      "gold_triples": [
+        [
+          "spondias purpurea",
+          "is-a",
+          "spondias"
+        ],
+        [
+          "spondias mombin",
+          "is-a",
+          "spondias"
+        ],
+        [
+          "spondias dulcis",
+          "is-a",
+          "spondias"
+        ],
+        [
+          "ambarella plant",
+          "is-a",
+          "ciruela plant"
+        ],
+        [
+          "spondias dulcis",
+          "is-a",
+          "ambarella plant"
+        ],
+        [
+          "spondias purpurea",
+          "is-a",
+          "ciruela plant"
+        ],
+        [
+          "spondias mombin",
+          "is-a",
+          "ciruela plant"
+        ],
+        [
+          "ambarella plant",
+          "database_cross_reference",
+          "spondias dulcis"
+        ]
+      ],
+      "id": "31146b17c5ec414b956b743ad7a72aba",
+      "package_index": 3,
+      "source_index": 545,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "ambarella plant",
+          "database_cross_reference",
+          "spondias dulcis"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "ambarella plant",
+          "database_cross_reference",
+          "spondias dulcis"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "equivalent_class",
+      "context": "Title: Optical Classifications in Ecological Remote Sensing \n\n Content: \nIn ecological remote sensing and environmental monitoring, researchers rely on precise optical classifications to assess vegetation dynamics, atmospheric composition, and ecosystem productivity. At the foundation of these measurements lies the electromagnetic spectrum, which is formally recognized as a spectral band encompassing all measurable radiative energy. Within this overarching framework, analytical techniques are organized into distinct categories, most notably a broadband and a narrow spectrum, both of which are established subclasses of a spectral band depending on sensor resolution. When high-precision data is required to detect subtle physiological stress in plant communities, scientists utilize a monochromatic approach, which serves as a specialized subclass of a narrow spectrum. Conversely, for large-scale habitat mapping and environmental assessments, broad spectrum methodologies are adopted, capturing integrated energy fluxes across the ecological landscape. Within these wider classifications, researchers categorize measurements as either bolometric or polychromatic, both of which align with broadband techniques, enabling the quantification of total radiative energy and multi-wavelength reflectance. In practical applications, natural solar radiation, often referred to as white light, is treated as a significant spectral band within this context. In studying vegetation and canopy interactions with light, the polychromatic and bolometric parameters are frequently deployed, allowing researchers to model photosynthetically active radiation and thermal variations effectively. By understanding how these complex classifications intersect, environmental scientists can employ the right sensors and methodologies, from dissecting narrow spectrum indicators to integrating broadband energy budgets.",
+      "gold_triples": [
+        [
+          "broad band",
+          "is-a",
+          "spectral band"
+        ],
+        [
+          "bolometric",
+          "is-a",
+          "broad band"
+        ],
+        [
+          "polychromatic",
+          "is-a",
+          "broad band"
+        ],
+        [
+          "narrow spectrum",
+          "is-a",
+          "spectral band"
+        ],
+        [
+          "monochromatic",
+          "is-a",
+          "narrow spectrum"
+        ],
+        [
+          "broad spectrum",
+          "is-a",
+          "spectral band"
+        ],
+        [
+          "bolometric",
+          "is-a",
+          "broad spectrum"
+        ],
+        [
+          "polychromatic",
+          "is-a",
+          "broad spectrum"
+        ],
+        [
+          "electromagnetic spectrum",
+          "is-a",
+          "spectral band"
+        ],
+        [
+          "white light",
+          "is-a",
+          "spectral band"
+        ],
+        [
+          "polychromatic",
+          "is-a",
+          "white light"
+        ],
+        [
+          "bolometric",
+          "is-a",
+          "white light"
+        ],
+        [
+          "broad spectrum",
+          "equivalent class",
+          "white light"
+        ],
+        [
+          "broad band",
+          "equivalent class",
+          "broad spectrum"
+        ]
+      ],
+      "id": "6a1af8071b564a16841bbe449b1e06e3",
+      "package_index": 4,
+      "source_index": 559,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "broad band",
+          "equivalent class",
+          "broad spectrum"
+        ],
+        [
+          "broad spectrum",
+          "equivalent class",
+          "white light"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "broad band",
+          "equivalent class",
+          "broad spectrum"
+        ],
+        [
+          "broad spectrum",
+          "equivalent class",
+          "white light"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "equivalent_class",
+      "context": "Title: Integrating Optical Parameters and Statistical Analytics in Ecological Monitoring \n\n Content: \nModern ecological monitoring relies heavily on the integration of optical remote sensing and advanced data analytics to assess ecosystem health. When researchers analyze how light penetrates aquatic or forested environments, they quantify the extinction coefficient, attenuation coefficient, and scattering coefficient, all of which fundamentally characterize patterns within the spatial frequency domain. Translating these complex measurements into actionable insights requires a robust statistical framework. Analysts begin by computing a moment to capture the underlying distribution of their datasets, frequently relying on the mean and average as primary indicators of central tendency. To fully characterize variability, the complete statistical summary encompasses the mode, standard deviation, mid range, median, minimum, variance, maximum, and skewness, each revealing different aspects of ecological fluctuations. When testing hypotheses about environmental stressors, scientists derive a statistical score, often employing the t score, z score, or chi square value to evaluate significance. Conservation decisions frequently pivot on a defined threshold, with particular attention paid to a critical level or critical point that signals irreversible habitat degradation. Furthermore, as ecosystems respond to multifactorial pressures, researchers construct a bivariate statistical summary to evaluate paired variables, where coherence quantifies the degree of synchronized ecological response across monitoring stations.",
+      "gold_triples": [
+        [
+          "extinction coefficient",
+          "is-a",
+          "spatial frequency"
+        ],
+        [
+          "attenuation coefficient",
+          "is-a",
+          "spatial frequency"
+        ],
+        [
+          "scattering coefficient",
+          "is-a",
+          "spatial frequency"
+        ],
+        [
+          "moment",
+          "is-a",
+          "statistical summary"
+        ],
+        [
+          "mean",
+          "is-a",
+          "moment"
+        ],
+        [
+          "average",
+          "is-a",
+          "moment"
+        ],
+        [
+          "mode",
+          "is-a",
+          "statistical summary"
+        ],
+        [
+          "standard deviation",
+          "is-a",
+          "statistical summary"
+        ],
+        [
+          "mid range",
+          "is-a",
+          "statistical summary"
+        ],
+        [
+          "median",
+          "is-a",
+          "statistical summary"
+        ],
+        [
+          "minimum",
+          "is-a",
+          "statistical summary"
+        ],
+        [
+          "variance",
+          "is-a",
+          "statistical summary"
+        ],
+        [
+          "statistical score",
+          "is-a",
+          "statistical summary"
+        ],
+        [
+          "t score",
+          "is-a",
+          "statistical score"
+        ],
+        [
+          "z score",
+          "is-a",
+          "statistical score"
+        ],
+        [
+          "chi square value",
+          "is-a",
+          "statistical score"
+        ],
+        [
+          "maximum",
+          "is-a",
+          "statistical summary"
+        ],
+        [
+          "skewness",
+          "is-a",
+          "statistical summary"
+        ],
+        [
+          "threshold",
+          "is-a",
+          "statistical summary"
+        ],
+        [
+          "critical level",
+          "is-a",
+          "threshold"
+        ],
+        [
+          "critical point",
+          "is-a",
+          "threshold"
+        ],
+        [
+          "bivariate statistical summary",
+          "is-a",
+          "statistical summary"
+        ],
+        [
+          "coherence",
+          "is-a",
+          "bivariate statistical summary"
+        ],
+        [
+          "average",
+          "equivalent class",
+          "mean"
+        ],
+        [
+          "attenuation coefficient",
+          "equivalent class",
+          "extinction coefficient"
+        ],
+        [
+          "critical level",
+          "equivalent class",
+          "critical point"
+        ]
+      ],
+      "id": "e44010e41ba043228169e8588cf84bef",
+      "package_index": 5,
+      "source_index": 684,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "attenuation coefficient",
+          "equivalent class",
+          "extinction coefficient"
+        ],
+        [
+          "average",
+          "equivalent class",
+          "mean"
+        ],
+        [
+          "critical level",
+          "equivalent class",
+          "critical point"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "attenuation coefficient",
+          "equivalent class",
+          "extinction coefficient"
+        ],
+        [
+          "average",
+          "equivalent class",
+          "mean"
+        ],
+        [
+          "critical level",
+          "equivalent class",
+          "critical point"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "disjoint_with",
+      "context": "Title: Integrated Safety and Routing Protocols for Heavy Transport Fleets \n\n Content: \nmodernheavy-haulageoperationsdependonprecisevehiclecategorizationandsophisticatednavigationarchitecturestoensureefficiencyandsafety.inthe realmofspecializedlogistics,atractorpoletrailerrepresentsaspecificconfigurationthatisdefinedasatypeofpoletrailer,engineeredtomanagelongatedloadwhileprovidingthenecessaryarticulationfordifficultterrain.themechanicalsafetyoftheseassetsisparamount;thereforesuchtrailersareoftenfittedwithanairover-hydraulicbrakesystem,ahybridbrakingtechnologythatleveragespneumaticcontrolstoactuatehydraulicbrakes,functioningasanadvancediterationoftheconventionalairbrakesystemtoguaranteereliabledecelerationunderheavydutycycles.tocoordinate thedeploymentoftheseunits,fleetmanagementplatformsus detailedgraph-basedmodelsofroadinfrastructure.thesesystemscalculateviableroutesbychainingtogethersequentialpathsegmentobjectsthatdelineatecontinuousdrivableareas.thetopologyofanygivenjourneyisboundedbyastartnode,whichestablishthepointoforigin,andanendnode,whichdefinesthedeliverylocation;bothoftheseessentialgeographicmarkersareclassifiedasnodeswithintheunderlyingnetworkstructure.additionally,whentheroutingalgorithmencounterscomplexjunctions,itmaprepresenttheconvergenceareaasanintersectionsegment,aspecializedcategoryofpathsegmentthatencodesthespecificconnectivityandgeometricconstraintsrequiredfornavigatingthroughmulti-laneinterchangessafely.",
+      "gold_triples": [
+        [
+          "tractor pole trailer",
+          "is-a",
+          "pole trailer"
+        ],
+        [
+          "start node",
+          "is-a",
+          "node"
+        ],
+        [
+          "end node",
+          "is-a",
+          "node"
+        ],
+        [
+          "air over-hydraulic brake system",
+          "is-a",
+          "air brake system"
+        ],
+        [
+          "intersection segment",
+          "is-a",
+          "path segment"
+        ],
+        [
+          "node",
+          "disjoint with",
+          "path segment"
+        ],
+        [
+          "end node",
+          "disjoint with",
+          "start node"
+        ]
+      ],
+      "id": "4337ab19c9d1479a838e3a957dee38c0",
+      "package_index": 6,
+      "source_index": 919,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "end node",
+          "disjoint with",
+          "start node"
+        ],
+        [
+          "node",
+          "disjoint with",
+          "path segment"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "end node",
+          "disjoint with",
+          "start node"
+        ],
+        [
+          "node",
+          "disjoint with",
+          "path segment"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "disjoint_with",
+      "context": "Title: Advanced Polymerization Mechanisms and Material Property Frameworks \n\n Content: \nIn modern polymer chemistry and materials engineering, precise control over synthetic pathways is essential for tailoring macromolecular architectures. The foundation of many chain-growth processes lies in the addition reaction, a fundamental transformation where monomers link together without losing small molecules. Within this synthetic landscape, the polar addition reaction plays a critical role by proceeding through charged intermediates, a mechanism that specifically includes the electrophilic addition reaction and the nucleophilic addition reaction depending on the electron density of the reacting species. Alternatively, the non polar addition reaction advances through concerted or radical pathways, offering complementary routes to engineer material microstructures with distinct mechanical and thermal properties. To systematically predict how these chemical transformations translate into end-use performance, researchers rely on structured conceptual frameworks. In these ontological models, all measurable attributes and behavioral tendencies of a material are categorized under the overarching type known as the realizable_entity. Within this classification, the function describes the intended macroscopic utility of a synthesized polymer, whereas the role highlights how specific structural motifs participate during processing or service. Meanwhile, the disposition captures latent characteristics, such as environmental degradation thresholds or viscoelastic relaxation, that remain dormant until triggered by external stimuli. By anchoring these variables to the realizable_entity, materials scientists can rigorously link molecular design to reliable, scalable engineering outcomes.",
+      "gold_triples": [
+        [
+          "function",
+          "is-a",
+          "realizable entity"
+        ],
+        [
+          "role",
+          "is-a",
+          "realizable entity"
+        ],
+        [
+          "disposition",
+          "is-a",
+          "realizable entity"
+        ],
+        [
+          "polar addition reaction",
+          "is-a",
+          "addition reaction"
+        ],
+        [
+          "electrophilic addition reaction",
+          "is-a",
+          "polar addition reaction"
+        ],
+        [
+          "nucleophilic addition reaction",
+          "is-a",
+          "polar addition reaction"
+        ],
+        [
+          "non polar addition reaction",
+          "is-a",
+          "addition reaction"
+        ],
+        [
+          "disposition",
+          "disjoint with",
+          "role"
+        ],
+        [
+          "disposition",
+          "disjoint with",
+          "function"
+        ],
+        [
+          "function",
+          "disjoint with",
+          "role"
+        ]
+      ],
+      "id": "939d609ff10943a69e2ca4ab9aede84c",
+      "package_index": 7,
+      "source_index": 944,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "disposition",
+          "disjoint with",
+          "function"
+        ],
+        [
+          "disposition",
+          "disjoint with",
+          "role"
+        ],
+        [
+          "function",
+          "disjoint with",
+          "role"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "disposition",
+          "disjoint with",
+          "function"
+        ],
+        [
+          "disposition",
+          "disjoint with",
+          "role"
+        ],
+        [
+          "function",
+          "disjoint with",
+          "role"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "domain_specific",
+      "context": "Title: Agricultural and Biological Overview of Turkeys \n\n Content: \nIn agricultural zoology, the genus Meleagris comprises distinct avian species, most notably the wild Meleagris ocellata and the Meleagris gallopavo. Both of these scientifically classified organisms are recognized as members of the turkey (bird) category, highlighting their shared biological heritage within avian animals. While the term turkey is frequently used as a general descriptor, it formally represents a subclass of the turkey (bird), serving as the common identifier for the group. Agricultural operations primarily utilize the domestic turkey, a specific type of turkey developed through selective breeding for meat production and egg yield. Farmers closely monitor the health of a live turkey throughout its growth cycle to ensure welfare and productivity before harvest. After processing, the resulting turkey carcass represents the processed form of the turkey, ready for distribution in the food supply chain.",
+      "gold_triples": [
+        [
+          "meleagris ocellata",
+          "is-a",
+          "turkey (bird)"
+        ],
+        [
+          "meleagris gallopavo",
+          "is-a",
+          "turkey (bird)"
+        ],
+        [
+          "turkey",
+          "is-a",
+          "turkey (bird)"
+        ],
+        [
+          "domestic turkey",
+          "is-a",
+          "turkey"
+        ],
+        [
+          "live turkey",
+          "is-a",
+          "turkey"
+        ],
+        [
+          "turkey carcass",
+          "is-a",
+          "turkey"
+        ],
+        [
+          "domestic turkey",
+          "database_cross_reference",
+          "meleagris gallopavo"
+        ]
+      ],
+      "id": "6377de321a6146dca3de0a2e8694b707",
+      "package_index": 8,
+      "source_index": 980,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "domestic turkey",
+          "database_cross_reference",
+          "meleagris gallopavo"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "domestic turkey",
+          "database_cross_reference",
+          "meleagris gallopavo"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "disjoint_with",
+      "context": "Title: The Hierarchy of Measurement Scales in Ecological Research \n\n Content: \nIn ecological and environmental science, the precision of data collection relies heavily on the specific type of measurement scale employed. Broadly, these scales are divided into two primary categories: qualitative and quantitative scale systems. The qualitative branch includes methods such as categorical scale and ordinal property designations, which classify data based on attributes rather than numerical magnitude. Conversely, the quantitative scale framework encompasses more mathematically rigorous structures, including the interval scale, ratio scale, and increment measures. Within the broader classification of measurement tools, each of these—whether qualitative is subclass of scale or ratio scale is subclass of scale—is formally recognized as a variant of the general scale concept. A significant subset of these tools involves ordinal classification, where data points are ranked by order or severity. This group includes the ordinal scale itself, which serves as a parent category for specialized instruments like the wind scale, commonly used in meteorology to gauge storm intensity, and the technology readiness level, often adapted in environmental engineering to assess innovation maturity. Interestingly, the term ordinal property is subclass of ordinal scale, reflecting how specific attributes can be ranked without assuming equal intervals between them. Other structural variations include the increment, which represents a subclass of scale focused on discrete steps, and the categorical scale, a subclass of scale used for non-numeric grouping. Understanding these distinctions, particularly that interval scale is subclass of quantitative scale, allows researchers to select the appropriate metric for analyzing complex environmental phenomena with statistical validity.",
+      "gold_triples": [
+        [
+          "qualitative",
+          "is-a",
+          "scale"
+        ],
+        [
+          "ratio scale",
+          "is-a",
+          "scale"
+        ],
+        [
+          "ordinal scale",
+          "is-a",
+          "scale"
+        ],
+        [
+          "technology readiness level",
+          "is-a",
+          "ordinal scale"
+        ],
+        [
+          "wind scale",
+          "is-a",
+          "ordinal scale"
+        ],
+        [
+          "ordinal property",
+          "is-a",
+          "ordinal scale"
+        ],
+        [
+          "increment",
+          "is-a",
+          "scale"
+        ],
+        [
+          "categorical scale",
+          "is-a",
+          "scale"
+        ],
+        [
+          "quantitative scale",
+          "is-a",
+          "scale"
+        ],
+        [
+          "interval scale",
+          "is-a",
+          "quantitative scale"
+        ],
+        [
+          "ordinal scale",
+          "disjoint with",
+          "quantitative scale"
+        ],
+        [
+          "categorical scale",
+          "disjoint with",
+          "quantitative scale"
+        ],
+        [
+          "categorical scale",
+          "disjoint with",
+          "ordinal scale"
+        ]
+      ],
+      "id": "1f4dc08820034097a7271184c0b8d0d2",
+      "package_index": 9,
+      "source_index": 1296,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "categorical scale",
+          "disjoint with",
+          "ordinal scale"
+        ],
+        [
+          "categorical scale",
+          "disjoint with",
+          "quantitative scale"
+        ],
+        [
+          "ordinal scale",
+          "disjoint with",
+          "quantitative scale"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "categorical scale",
+          "disjoint with",
+          "ordinal scale"
+        ],
+        [
+          "categorical scale",
+          "disjoint with",
+          "quantitative scale"
+        ],
+        [
+          "ordinal scale",
+          "disjoint with",
+          "quantitative scale"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "domain_specific",
+      "context": "Title: Integrated Agricultural Management: Caprine Husbandry and Regional Fauna \n\n Content: \nAgricultural biodiversity encompasses both managed livestock and the surrounding wildlife that shares the farming landscape. In caprine husbandry, *Capra hircus* stands as the primary species of domestic interest. Within this species, specific designations based on age and sex are vital; for example, a *kid (goat)* represents a juvenile stage, while a *doe (goat)* refers to a mature female. Together, these animals—identified collectively as *live goats*—form the backbone of smallholder dairy and meat production. As these animals are processed, they produce a *goat carcass*, which refers to the biological remains utilized in agriculture. This term is critical in understanding the agricultural product cycle, particularly as a *goat carcass (raw)* denotes the uncooked version ready for culinary preparation. Beyond livestock, savvy farmers must also navigate the dynamics of local wildlife. Various antelope species inhabit these regions, including *Gazella*, a genus known for its swift movements which can compete for grazing resources. Furthermore, *Neotragus moschatus*, the pygmy antelope, and *Oreotragus oreotragus*, the klipspringer, are other noteworthy members of the subfamily *Antilopinae*, each adapted to the unique challenges of their environments. Reptilian inhabitants, particularly those in the family *Gekkonidae*, play an essential role within this ecosystem as well. These geckos, classified under the clade *Bifurcata*, contribute to agricultural pest control, consuming insects that threaten crop viability and thus supporting the overall ecological health of farming zones.",
+      "gold_triples": [
+        [
+          "neotragus moschatus",
+          "is-a",
+          "antilopinae"
+        ],
+        [
+          "oreotragus oreotragus",
+          "is-a",
+          "antilopinae"
+        ],
+        [
+          "gazella",
+          "is-a",
+          "antilopinae"
+        ],
+        [
+          "gekkonidae",
+          "is-a",
+          "bifurcata"
+        ],
+        [
+          "capra hircus",
+          "is-a",
+          "goat"
+        ],
+        [
+          "kid (goat)",
+          "is-a",
+          "capra hircus"
+        ],
+        [
+          "doe (goat)",
+          "is-a",
+          "capra hircus"
+        ],
+        [
+          "live goat",
+          "is-a",
+          "goat"
+        ],
+        [
+          "goat carcass",
+          "is-a",
+          "goat"
+        ],
+        [
+          "goat carcass",
+          "is-a",
+          "goat carcass"
+        ],
+        [
+          "goat",
+          "database_cross_reference",
+          "capra hircus"
+        ]
+      ],
+      "id": "26884e7b88ba4ebf92705a1cb1240af4",
+      "package_index": 10,
+      "source_index": 1632,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "goat",
+          "database_cross_reference",
+          "capra hircus"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "goat",
+          "database_cross_reference",
+          "capra hircus"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "disjoint_with",
+      "context": "Title: A Comprehensive Classification of Lakes by Formation and Chemistry \n\n Content: \nLakes represent a diverse array of lentic water bodies, categorized by their formation processes, chemical properties, and thermal behaviors. At the most basic level, a natural lake serves as a broad category encompassing various distinct types. Among these, the tectonic lake arises from geological crustal movements, with the rift lake being a prominent subtype formed within divergent plate boundaries. Formation by volcanic activity yields the crater lake, which further divides into the volcanic crater lake and the impact crater lake, the latter resulting from meteorite strikes. Glacial erosion often carves out the ribbon lake, while subsidence in permafrost regions creates the thermokarst lake, a specific kind of freshwater lake found in cold climates. Other freshwater variants include the humic lake, which is characterized by high organic matter, and the mesotrophic lake, which holds moderate nutrient levels. The interaction between lakes and their surroundings also dictates classification. An endorheic lake lacks an outflow, draining only through evaporation, whereas a marine lake is connected to the sea but maintains a distinct body of water. Water movement beneath the earth's surface can form a subterranean lake, often linked to underground water systems. Unique geological formations include the asphalt lake, where natural bitumen seeps accumulate. The chemical and physical stability of a lake's water column further refines its identity. A holomictic lake experiences complete mixing of its water layers, a process that can occur annually or more frequently. Within this group, the dimictic lake mixes twice a year, the monomictic lake mixes once, and the polymictic lake mixes multiple times. In contrast, some lakes exhibit stable stratification that prevents vertical mixing. The meromictic lake maintains distinct permanent layers that do not mix, while the amictic lake remains stagnant throughout the year, showing no seasonal turnover. Together, these classifications illustrate the complex ecological and geological factors that define each lake system.",
+      "gold_triples": [
+        [
+          "meromictic lake",
+          "is-a",
+          "lake"
+        ],
+        [
+          "subterranean lake",
+          "is-a",
+          "lake"
+        ],
+        [
+          "ribbon lake",
+          "is-a",
+          "lake"
+        ],
+        [
+          "marine lake",
+          "is-a",
+          "lake"
+        ],
+        [
+          "amictic lake",
+          "is-a",
+          "lake"
+        ],
+        [
+          "endorheic lake",
+          "is-a",
+          "lake"
+        ],
+        [
+          "holomictic lake",
+          "is-a",
+          "lake"
+        ],
+        [
+          "dimictic lake",
+          "is-a",
+          "holomictic lake"
+        ],
+        [
+          "monomictic lake",
+          "is-a",
+          "holomictic lake"
+        ],
+        [
+          "polymictic lake",
+          "is-a",
+          "holomictic lake"
+        ],
+        [
+          "humic lake",
+          "is-a",
+          "lake"
+        ],
+        [
+          "crater lake",
+          "is-a",
+          "lake"
+        ],
+        [
+          "volcanic crater lake",
+          "is-a",
+          "crater lake"
+        ],
+        [
+          "impact crater lake",
+          "is-a",
+          "crater lake"
+        ],
+        [
+          "freshwater lake",
+          "is-a",
+          "lake"
+        ],
+        [
+          "thermokarst lake",
+          "is-a",
+          "freshwater lake"
+        ],
+        [
+          "mesotrophic lake",
+          "is-a",
+          "lake"
+        ],
+        [
+          "tectonic lake",
+          "is-a",
+          "lake"
+        ],
+        [
+          "rift lake",
+          "is-a",
+          "tectonic lake"
+        ],
+        [
+          "natural lake",
+          "is-a",
+          "lake"
+        ],
+        [
+          "asphalt lake",
+          "is-a",
+          "lake"
+        ],
+        [
+          "dimictic lake",
+          "disjoint with",
+          "monomictic lake"
+        ],
+        [
+          "meromictic lake",
+          "disjoint with",
+          "holomictic lake"
+        ],
+        [
+          "polymictic lake",
+          "disjoint with",
+          "monomictic lake"
+        ],
+        [
+          "dimictic lake",
+          "disjoint with",
+          "polymictic lake"
+        ],
+        [
+          "amictic lake",
+          "disjoint with",
+          "holomictic lake"
+        ]
+      ],
+      "id": "46c8351ef5d445888ca51a1b7f85e93a",
+      "package_index": 11,
+      "source_index": 1735,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "amictic lake",
+          "disjoint with",
+          "holomictic lake"
+        ],
+        [
+          "dimictic lake",
+          "disjoint with",
+          "monomictic lake"
+        ],
+        [
+          "dimictic lake",
+          "disjoint with",
+          "polymictic lake"
+        ],
+        [
+          "meromictic lake",
+          "disjoint with",
+          "holomictic lake"
+        ],
+        [
+          "polymictic lake",
+          "disjoint with",
+          "monomictic lake"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "amictic lake",
+          "disjoint with",
+          "holomictic lake"
+        ],
+        [
+          "dimictic lake",
+          "disjoint with",
+          "monomictic lake"
+        ],
+        [
+          "dimictic lake",
+          "disjoint with",
+          "polymictic lake"
+        ],
+        [
+          "meromictic lake",
+          "disjoint with",
+          "holomictic lake"
+        ],
+        [
+          "polymictic lake",
+          "disjoint with",
+          "monomictic lake"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "equivalent_class",
+      "context": "Title: Spatial Orientation and Inclination in Ecological Monitoring \n\n Content: \nIn contemporary environmental science and ecological surveying, accurately quantifying spatial relationships is essential for modeling ecosystem dynamics. Researchers organize a wide array of angular and directional parameters under the unifying framework of inclination. When studying microclimates, for example, ecologists measure the vertical direction of solar penetration alongside the incoming radiation and its angle of incidence. Canopy architecture is often analyzed by tracking outgoing reflectance relative to the zenith, while understory development is mapped through radial, outward, and inward growth vectors. Biogeographical assessments frequently examine how species ranges migrate from the equator toward the pole, relying on polar direction and horizontal direction gradients to interpret climate-driven habitat shifts. Field instrumentation demands precise calibration of sensor orientation and attitude, typically achieved through adjustable tilt mechanisms aligned to a central axis. Similarly, environmental modellers utilize angular direction datasets to simulate seed dispersal patterns, while coastal researchers track the azimuth and azimuthal direction of water currents to predict nutrient transport. Whether observing the sense of migratory alignment in wildlife, documenting the lateral expansion of soil erosion, or characterizing any other spatial metric, every measurement ultimately falls within the broader classification of inclination. Integrating these multidimensional parameters allows scientists to capture the full geometric complexity of natural systems.",
+      "gold_triples": [
+        [
+          "zenith",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "equator",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "azimuth",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "outward",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "sense",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "axis",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "tilt",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "lateral",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "polar direction",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "angular direction",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "vertical direction",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "outgoing",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "inward",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "orientation",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "attitude",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "incidence",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "radial",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "azimuthal direction",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "incoming",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "pole",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "horizontal direction",
+          "is-a",
+          "inclination"
+        ],
+        [
+          "incoming",
+          "equivalent class",
+          "inward"
+        ],
+        [
+          "outgoing",
+          "equivalent class",
+          "outward"
+        ]
+      ],
+      "id": "f78b97b120c84f49b488b274cbc3c82a",
+      "package_index": 12,
+      "source_index": 1927,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "incoming",
+          "equivalent class",
+          "inward"
+        ],
+        [
+          "outgoing",
+          "equivalent class",
+          "outward"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "incoming",
+          "equivalent class",
+          "inward"
+        ],
+        [
+          "outgoing",
+          "equivalent class",
+          "outward"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "disjoint_with",
+      "context": "Title: Dimensional Frameworks in Materials Science \n\n Content: \nIn computational materials science, the accurate modeling of structural and physical phenomena requires a rigorous dimensional framework. All such descriptors are fundamentally organized within a spatial region, which serves as the overarching mathematical continuum for mapping matter. This primary category naturally branches into lower-dimensional constructs: researchers isolate a zero dimensional region to capture point defects or quantum dots, utilize a one dimensional region for analyzing nanowires and linear dislocation arrays, and deploy a two dimensional region to characterize planar interfaces, thin films, and surface reconstructions. Despite these reductions, every dimensional classification remains a direct conceptual offshoot of the spatial region definition. When scaling up to bulk solid mechanics and crystallography, analysis shifts to a three dimensional region that encompasses the complete volumetric lattice. Within this volumetric context, crystallographers treat a space group as a specialized three dimensional region, leveraging it to map translational and rotational symmetry operations across the periodic crystal structure. Similarly, when evaluating phase stability and energy minimization, engineers conceptualize the bulk material as a thermodynamic system, which functions as a distinct three dimensional region for applying continuum thermodynamics and equilibrium calculations. By unifying these hierarchical spatial descriptors, multiscale simulations seamlessly bridge atomic scale anomalies with macroscopic material performance.",
+      "gold_triples": [
+        [
+          "one dimensional region",
+          "is-a",
+          "spatial_region"
+        ],
+        [
+          "three dimensional region",
+          "is-a",
+          "spatial_region"
+        ],
+        [
+          "space group",
+          "is-a",
+          "three dimensional region"
+        ],
+        [
+          "thermodynamic system",
+          "is-a",
+          "three dimensional region"
+        ],
+        [
+          "two dimensional region",
+          "is-a",
+          "spatial_region"
+        ],
+        [
+          "zero dimensional region",
+          "is-a",
+          "spatial_region"
+        ],
+        [
+          "one dimensional region",
+          "disjoint with",
+          "two dimensional region"
+        ],
+        [
+          "three dimensional region",
+          "disjoint with",
+          "zero dimensional region"
+        ],
+        [
+          "one dimensional region",
+          "disjoint with",
+          "zero dimensional region"
+        ],
+        [
+          "two dimensional region",
+          "disjoint with",
+          "zero dimensional region"
+        ],
+        [
+          "three dimensional region",
+          "disjoint with",
+          "two dimensional region"
+        ],
+        [
+          "one dimensional region",
+          "disjoint with",
+          "three dimensional region"
+        ]
+      ],
+      "id": "8712ffc5d5d3404994bca6b17bc6621a",
+      "package_index": 13,
+      "source_index": 2063,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "one dimensional region",
+          "disjoint with",
+          "three dimensional region"
+        ],
+        [
+          "one dimensional region",
+          "disjoint with",
+          "two dimensional region"
+        ],
+        [
+          "one dimensional region",
+          "disjoint with",
+          "zero dimensional region"
+        ],
+        [
+          "three dimensional region",
+          "disjoint with",
+          "two dimensional region"
+        ],
+        [
+          "three dimensional region",
+          "disjoint with",
+          "zero dimensional region"
+        ],
+        [
+          "two dimensional region",
+          "disjoint with",
+          "zero dimensional region"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "one dimensional region",
+          "disjoint with",
+          "three dimensional region"
+        ],
+        [
+          "one dimensional region",
+          "disjoint with",
+          "two dimensional region"
+        ],
+        [
+          "one dimensional region",
+          "disjoint with",
+          "zero dimensional region"
+        ],
+        [
+          "three dimensional region",
+          "disjoint with",
+          "two dimensional region"
+        ],
+        [
+          "three dimensional region",
+          "disjoint with",
+          "zero dimensional region"
+        ],
+        [
+          "two dimensional region",
+          "disjoint with",
+          "zero dimensional region"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "type",
+      "context": "Title: Length Units in Agriculture \n\n Content: \nAgriculture relies on precise measurements across vastly different scales, from the macroscopic layout of fields to microscopic biological markers. At the field scale, surveyors utilize the meter as a standard reference, which serves as a core length unit. For larger land assessments, the mile proves essential; this measure belongs to the mile based unit family, which itself is a subclass of the broader length unit classification. Similarly, historical or regional land deeds might reference the league, a specific instance that falls under the league based unit hierarchy, ultimately categorized as a length unit. For traditional British Imperial surveys, the yard remains prevalent; it is a subclass of the yard based unit group, which defines a subclass of length unit. The inch also plays a role in equipment calibration; as a subclass of the inch based unit, it represents a length unit suitable for fine adjustments. Even older land division terms persist: the chain underpins the chain based unit class, a length unit, while the furlong anchors the furlong based unit category, also a length unit. Precision agriculture extends to microscopic levels. Soil analysis and molecular biology require the micrometer, which stands as a length unit. Even finer resolutions demand the nanometer, another vital length unit for studying cellular structures and nano-fertilizers. In spectroscopy and optical measurements, the angstrom is frequently employed; this value is an instance of a length unit and also belongs to the angstrom based unit class, which is a subclass of length unit. For broader small-scale measurements, the centimeter provides a practical length unit, often used in measuring plant growth increments.",
+      "gold_triples": [
+        [
+          "nanometer",
+          "instance-of",
+          "length unit"
+        ],
+        [
+          "centimeter",
+          "instance-of",
+          "length unit"
+        ],
+        [
+          "angstrom",
+          "instance-of",
+          "length unit"
+        ],
+        [
+          "micrometer",
+          "instance-of",
+          "length unit"
+        ],
+        [
+          "meter",
+          "instance-of",
+          "length unit"
+        ],
+        [
+          "yard based unit",
+          "is-a",
+          "length unit"
+        ],
+        [
+          "yard",
+          "is-a",
+          "yard based unit"
+        ],
+        [
+          "centimorgan",
+          "is-a",
+          "length unit"
+        ],
+        [
+          "centiray",
+          "is-a",
+          "length unit"
+        ],
+        [
+          "league based unit",
+          "is-a",
+          "length unit"
+        ],
+        [
+          "league",
+          "is-a",
+          "league based unit"
+        ],
+        [
+          "chain based unit",
+          "is-a",
+          "length unit"
+        ],
+        [
+          "angstrom based unit",
+          "is-a",
+          "length unit"
+        ],
+        [
+          "angstrom",
+          "is-a",
+          "angstrom based unit"
+        ],
+        [
+          "foot based unit",
+          "is-a",
+          "length unit"
+        ],
+        [
+          "foot",
+          "is-a",
+          "foot based unit"
+        ],
+        [
+          "furlong based unit",
+          "is-a",
+          "length unit"
+        ],
+        [
+          "inch based unit",
+          "is-a",
+          "length unit"
+        ],
+        [
+          "inch",
+          "is-a",
+          "inch based unit"
+        ],
+        [
+          "maritime length unit based unit",
+          "is-a",
+          "length unit"
+        ],
+        [
+          "thou based unit",
+          "is-a",
+          "length unit"
+        ],
+        [
+          "thou",
+          "is-a",
+          "thou based unit"
+        ],
+        [
+          "mile based unit",
+          "is-a",
+          "length unit"
+        ],
+        [
+          "mile",
+          "is-a",
+          "mile based unit"
+        ],
+        [
+          "angstrom",
+          "type",
+          "length unit"
+        ]
+      ],
+      "id": "82ed1b20a0984b31ab08e6460ab40730",
+      "package_index": 14,
+      "source_index": 2245,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "angstrom",
+          "type",
+          "length unit"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "angstrom",
+          "type",
+          "length unit"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "domain_specific",
+      "context": "Title: Leafy Vegetable Plants in Agriculture \n\n Content: \nIn the realm of agricultural botany, the diversity of leafy vegetable plants offers a wide array of nutritional and culinary options. One notable group is the mallow plant, which stands as a distinct subclass within the broader group of leafy vegetable plants. Malva sylvestris and Malva verticillata are specific species that fall under the mallow plant category, widely cultivated for their culinary versatility. Similarly, the glasswort plant is recognized as another important subclass of leafy vegetable plant, with the common glasswort plant representing a valuable variety well-adapted to saline soils. Other significant entries in the leafy vegetable plant classification include Tetragonia tetragonoides, which belongs to the Aizoaceae family, and the waterclover plant, known for its aquatic adaptability. Coastal foraging and farming also utilize Tripolium pannonicum, a hardy leafy vegetable plant commonly found in saltmarshes, while Centella asiatica is prized both as a leafy vegetable plant and for its medicinal properties. Additionally, Lycium chinense operates as a leafy vegetable plant, well-known for its leaves and often utilized as a plant used for dietary supplements, fitting into the Lycium genus.",
+      "gold_triples": [
+        [
+          "lycium chinense",
+          "is-a",
+          "leafy vegetable plant"
+        ],
+        [
+          "mallow plant",
+          "is-a",
+          "leafy vegetable plant"
+        ],
+        [
+          "malva sylvestris",
+          "is-a",
+          "mallow plant"
+        ],
+        [
+          "malva verticillata",
+          "is-a",
+          "mallow plant"
+        ],
+        [
+          "tetragonia tetragonoides",
+          "is-a",
+          "leafy vegetable plant"
+        ],
+        [
+          "water clover plant",
+          "is-a",
+          "leafy vegetable plant"
+        ],
+        [
+          "tripolium pannonicum",
+          "is-a",
+          "leafy vegetable plant"
+        ],
+        [
+          "centella asiatica",
+          "is-a",
+          "leafy vegetable plant"
+        ],
+        [
+          "glasswort plant",
+          "is-a",
+          "leafy vegetable plant"
+        ],
+        [
+          "common glasswort plant",
+          "is-a",
+          "glasswort plant"
+        ],
+        [
+          "mallow plant",
+          "database_cross_reference",
+          "malva verticillata"
+        ]
+      ],
+      "id": "2e7b9f0787754eb7811e0b0e9a9608d9",
+      "package_index": 15,
+      "source_index": 2315,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "mallow plant",
+          "database_cross_reference",
+          "malva verticillata"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "mallow plant",
+          "database_cross_reference",
+          "malva verticillata"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "domain_specific",
+      "context": "Title: Spice or Flavor-Producing Plants \n\n Content: \nAgriculture encompasses a diverse array of crops classified broadly as spice or flavor-producing plants, which provide essential aromatics and culinary value. Within this domain, the rose plant stands out as a significant subclass of spice or flavor-producing plant. Several notable species fall under this group, including the hardy Rosa rugosa, the wild Rosa canina, the elegant Rosa suffulta, the fragrant Rosa gallica, and the garden Rosa majalis. The cinnamon plant represents another major subclass of spice or flavor-producing plant, renowned for its bark and essential oils. This category includes several distinct types such as the batavia cassia plant, the botanical Cinnamomum aromaticum, the true cinnamon Cinnamomum verum, and the highly aromatic saigon cinnamon plant. Similarly, the vanilla plant is a subclass of spice or flavor-producing plant cherished for its pods. Key varieties include Vanilla pompona, the widely cultivated Vanilla planifolia, and the unique tahitian vanilla plant. Brewing herbs also feature prominently; Humulus lupulus is a subclass of spice or flavor-producing plant widely used for bittering agents. It comprises several variants such as Humulus lupulus var. cordifolius, the Humulus lupulus var. neomexicanus, and the hop commonly used in brewing, Humulus lupulus var. lupulus. The agricultural landscape includes many other direct subclasses of spice or flavor-producing plant. Juniperus communis provides berries for gin and game dishes, while Dipteryx odorata yields the tonka bean. Herbs like Origanum majorana (marjoram), the aromatic Ocimum basilicum (basil), and the leafy Borago officinalis contribute fresh flavors. Tropical and subtropical options include Theobroma grandiflorum, the red ginger plant, the tropical curryleaf plant, the cooling wintergreen plant, the bitter angostura tree, and the citrusy lemon grass plant.",
+      "gold_triples": [
+        [
+          "rose plant",
+          "is-a",
+          "spice or flavor-producing plant"
+        ],
+        [
+          "rosa rugosa",
+          "is-a",
+          "rose plant"
+        ],
+        [
+          "rosa canina",
+          "is-a",
+          "rose plant"
+        ],
+        [
+          "rosa suffulta",
+          "is-a",
+          "rose plant"
+        ],
+        [
+          "rosa gallica",
+          "is-a",
+          "rose plant"
+        ],
+        [
+          "rosa majalis",
+          "is-a",
+          "rose plant"
+        ],
+        [
+          "juniperus communis",
+          "is-a",
+          "spice or flavor-producing plant"
+        ],
+        [
+          "humulus lupulus",
+          "is-a",
+          "spice or flavor-producing plant"
+        ],
+        [
+          "humulus lupulus var. cordifolius",
+          "is-a",
+          "humulus lupulus"
+        ],
+        [
+          "humulus lupulus var. neomexicanus",
+          "is-a",
+          "humulus lupulus"
+        ],
+        [
+          "humulus lupulus var. lupulus",
+          "is-a",
+          "humulus lupulus"
+        ],
+        [
+          "dipteryx odorata",
+          "is-a",
+          "spice or flavor-producing plant"
+        ],
+        [
+          "origanum majorana",
+          "is-a",
+          "spice or flavor-producing plant"
+        ],
+        [
+          "theobroma grandiflorum",
+          "is-a",
+          "spice or flavor-producing plant"
+        ],
+        [
+          "ocimum basilicum",
+          "is-a",
+          "spice or flavor-producing plant"
+        ],
+        [
+          "vanilla plant",
+          "is-a",
+          "spice or flavor-producing plant"
+        ],
+        [
+          "vanilla pompona",
+          "is-a",
+          "vanilla plant"
+        ],
+        [
+          "vanilla planifolia",
+          "is-a",
+          "vanilla plant"
+        ],
+        [
+          "tahitian vanilla plant",
+          "is-a",
+          "vanilla plant"
+        ],
+        [
+          "borago officinalis",
+          "is-a",
+          "spice or flavor-producing plant"
+        ],
+        [
+          "red ginger plant",
+          "is-a",
+          "spice or flavor-producing plant"
+        ],
+        [
+          "curryleaf plant",
+          "is-a",
+          "spice or flavor-producing plant"
+        ],
+        [
+          "cinnamon plant",
+          "is-a",
+          "spice or flavor-producing plant"
+        ],
+        [
+          "batavia cassia plant",
+          "is-a",
+          "cinnamon plant"
+        ],
+        [
+          "cinnamomum aromaticum",
+          "is-a",
+          "cinnamon plant"
+        ],
+        [
+          "cinnamomum verum",
+          "is-a",
+          "cinnamon plant"
+        ],
+        [
+          "saigon cinnamon plant",
+          "is-a",
+          "cinnamon plant"
+        ],
+        [
+          "wintergreen plant",
+          "is-a",
+          "spice or flavor-producing plant"
+        ],
+        [
+          "angostura tree",
+          "is-a",
+          "spice or flavor-producing plant"
+        ],
+        [
+          "lemon grass plant",
+          "is-a",
+          "spice or flavor-producing plant"
+        ],
+        [
+          "cinnamon plant",
+          "database_cross_reference",
+          "cinnamomum verum"
+        ]
+      ],
+      "id": "d198b87ec2614fc389af1ed17d47b977",
+      "package_index": 16,
+      "source_index": 2470,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "cinnamon plant",
+          "database_cross_reference",
+          "cinnamomum verum"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "cinnamon plant",
+          "database_cross_reference",
+          "cinnamomum verum"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "equivalent_class",
+      "context": "Title: Mean and Its Subclasses in Climatology \n\n Content: \nThe statistical analysis of ecological data frequently centers on the mean, a core concept that generalizes various averaging techniques. Among the specific forms of a mean, the time average emerges as a distinct mean representing aggregate values over a specific interval. In parallel, the temporal average serves as another form of mean, emphasizing the evolution of variables across time. Similarly, the time mean is formally defined as a mean, providing a robust baseline for temporal studies, while the temporal mean also operates as a mean, often highlighting periodic fluctuations. In broader climatology, the global climate is conceptualized as a mean, encapsulating the integrated state of planetary systems. Descending from the time mean, a diverse taxonomy of measures applies. The climate itself is categorized as a time mean, embodying long-term statistical regularities. This category includes the climatic average, which is a time mean derived from climatic observations, and the climatological average, which also qualifies as a time mean used for rigorous environmental baselines. Furthermore, the climate average is recognized as a time mean, synthesizing data to reveal underlying trends. The hierarchy extends to specific temporal resolutions: the annual average is identified as a time mean, capturing yearly cycles, and the monthly average is likewise a time mean, offering a finer-grained view of temporal variations.",
+      "gold_triples": [
+        [
+          "time average",
+          "is-a",
+          "mean"
+        ],
+        [
+          "temporal average",
+          "is-a",
+          "mean"
+        ],
+        [
+          "global climate",
+          "is-a",
+          "mean"
+        ],
+        [
+          "time mean",
+          "is-a",
+          "mean"
+        ],
+        [
+          "climatological average",
+          "is-a",
+          "time mean"
+        ],
+        [
+          "climate average",
+          "is-a",
+          "time mean"
+        ],
+        [
+          "climate",
+          "is-a",
+          "time mean"
+        ],
+        [
+          "annual average",
+          "is-a",
+          "time mean"
+        ],
+        [
+          "monthly average",
+          "is-a",
+          "time mean"
+        ],
+        [
+          "climatic average",
+          "is-a",
+          "time mean"
+        ],
+        [
+          "temporal mean",
+          "is-a",
+          "mean"
+        ],
+        [
+          "climate",
+          "equivalent class",
+          "climatological average"
+        ],
+        [
+          "climate",
+          "equivalent class",
+          "climatic average"
+        ],
+        [
+          "temporal average",
+          "equivalent class",
+          "time mean"
+        ],
+        [
+          "time average",
+          "equivalent class",
+          "time mean"
+        ],
+        [
+          "temporal mean",
+          "equivalent class",
+          "time mean"
+        ],
+        [
+          "climate",
+          "equivalent class",
+          "climate average"
+        ]
+      ],
+      "id": "6b17389d9e4741bdb5218b3cdb369bd3",
+      "package_index": 17,
+      "source_index": 2483,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "climate",
+          "equivalent class",
+          "climate average"
+        ],
+        [
+          "climate",
+          "equivalent class",
+          "climatic average"
+        ],
+        [
+          "climate",
+          "equivalent class",
+          "climatological average"
+        ],
+        [
+          "temporal average",
+          "equivalent class",
+          "time mean"
+        ],
+        [
+          "temporal mean",
+          "equivalent class",
+          "time mean"
+        ],
+        [
+          "time average",
+          "equivalent class",
+          "time mean"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "climate",
+          "equivalent class",
+          "climate average"
+        ],
+        [
+          "climate",
+          "equivalent class",
+          "climatic average"
+        ],
+        [
+          "climate",
+          "equivalent class",
+          "climatological average"
+        ],
+        [
+          "temporal average",
+          "equivalent class",
+          "time mean"
+        ],
+        [
+          "temporal mean",
+          "equivalent class",
+          "time mean"
+        ],
+        [
+          "time average",
+          "equivalent class",
+          "time mean"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "disjoint_with",
+      "context": "Title: Classification of Vehicle and Driving Operations \n\n Content: \nIn the analysis of automotive systems and autonomous mobility, it is essential to categorize the various activities involved in vehicle management. The most fundamental category is operation, which serves as the parent class for a wide spectrum of driving-related activities. Within this hierarchy, sustained operation of a vehicle represents a specific duration of driving, which is further divided into distinct automation levels. Specifically, no driving automation and driving automation are both recognized as subclasses of sustained operation of a vehicle, delineating the spectrum between manual control and fully automated systems. Similarly, the broader domain of motor vehicle operation is a subclass of operation that encompasses specific driving modes. These include routine ADS operation, which pertains to standard automated driving tasks, as well as driverless operation, which functions without human intervention. Conversely, operation with driver remains a critical category where human oversight is integrated into the process. Beyond the physical act of driving, several support and safety mechanisms are also classified as operations. These include supervise DAS performance, remote assistance, and remote driving, which allow for external or assisted control. Safety protocols and contingencies are similarly structured; for instance, DDT fallback and minimal risk condition achievement are operational responses designed to handle system limitations. Furthermore, operational design domain exit and DDT performance-relevant system failure are specific operational states triggered by boundary conditions or technical faults. In commercial and fleet contexts, fleet operation and dispatch in driveless operation optimize large-scale vehicle management. Additionally, the request to intervene serves as a critical operational command for safety overrides. All these diverse activities, from the daily trip to complex automation failures, ultimately fall under the umbrella of operation, illustrating the comprehensive nature of modern vehicle control frameworks.",
+      "gold_triples": [
+        [
+          "trip",
+          "is-a",
+          "operation"
+        ],
+        [
+          "sustained operation of a vehicle",
+          "is-a",
+          "operation"
+        ],
+        [
+          "no driving automation",
+          "is-a",
+          "sustained operation of a vehicle"
+        ],
+        [
+          "driving automation",
+          "is-a",
+          "sustained operation of a vehicle"
+        ],
+        [
+          "remote driving",
+          "is-a",
+          "operation"
+        ],
+        [
+          "supervise das performance",
+          "is-a",
+          "operation"
+        ],
+        [
+          "remote assistance",
+          "is-a",
+          "operation"
+        ],
+        [
+          "minimal risk condition achievement",
+          "is-a",
+          "operation"
+        ],
+        [
+          "ddt fallback",
+          "is-a",
+          "operation"
+        ],
+        [
+          "motor vehicle operation",
+          "is-a",
+          "operation"
+        ],
+        [
+          "routine ads operation",
+          "is-a",
+          "motor vehicle operation"
+        ],
+        [
+          "driverless operation",
+          "is-a",
+          "motor vehicle operation"
+        ],
+        [
+          "operation with driver",
+          "is-a",
+          "motor vehicle operation"
+        ],
+        [
+          "request to intervene",
+          "is-a",
+          "operation"
+        ],
+        [
+          "fleet operation",
+          "is-a",
+          "operation"
+        ],
+        [
+          "dispatch in driveless operation",
+          "is-a",
+          "operation"
+        ],
+        [
+          "ddt performance-relevant system failure",
+          "is-a",
+          "operation"
+        ],
+        [
+          "operational design domain exit",
+          "is-a",
+          "operation"
+        ],
+        [
+          "driving automation",
+          "disjoint with",
+          "no driving automation"
+        ],
+        [
+          "driverless operation",
+          "disjoint with",
+          "operation with driver"
+        ]
+      ],
+      "id": "ebf2378f09cd440c9d0285dc9175473c",
+      "package_index": 18,
+      "source_index": 2884,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "driverless operation",
+          "disjoint with",
+          "operation with driver"
+        ],
+        [
+          "driving automation",
+          "disjoint with",
+          "no driving automation"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "driverless operation",
+          "disjoint with",
+          "operation with driver"
+        ],
+        [
+          "driving automation",
+          "disjoint with",
+          "no driving automation"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "domain_specific",
+      "context": "Title: Overview of Cattle Classification and Management \n\n Content: \nIn modern agricultural science, bovine classification begins with Bos taurus, the species that has historically shaped global farming systems. within this species, taurine cattle represent the foundational lineage adapted to temperate climates and intensive management. commercial operations typically divide taurine cattle into specialized production groups, most notably beef cattle for meat production and dairy cattle optimized for milk yield. the earliest stage in this lifecycle is the cattle calf, a young taurine individual that requires careful nutritional and health oversight before maturing into production roles. beyond the taurine lineage, Bos taurus also encompasses other distinct varieties and management categories adapted to different farming systems. the hardy zebu, for instance, remains a vital direct classification under Bos taurus, prized for its heat tolerance in tropical regions. in temperate commercial operations, individual animals are categorized by sex, reproductive status, and production phase. a young castrated male managed for marbling and weight gain is referred to as a cattle steer, while an intact mature male used for natural breeding carries the designation of cattle bull. female cattle that have not yet produced their first calf are grouped as a heifer until they mature into the milking or cowherd ranks. traditional draft systems also rely on an ox, a trained working animal directly derived from Bos taurus. modern feedlot and pasture-based supply chains further segment mature and growing females by their growth stage. early in the feeding program, newly weaned animals are often classified as a weanling cow as they adapt to new forage sources. as they enter a grass-finishing phase, they transition into a stocker cow category, followed by a feeder cow that moves between grazing and feed supplementation. the final growth phase assigns them the role of a finisher cow, receiving a calorie-dense ration to achieve optimal market weight. together, these specialized classifications reflect the sophisticated management strategies employed to maximize the productivity of Bos taurus across diverse agricultural landscapes.",
+      "gold_triples": [
+        [
+          "taurine cattle",
+          "is-a",
+          "bos taurus"
+        ],
+        [
+          "beef cattle",
+          "is-a",
+          "taurine cattle"
+        ],
+        [
+          "cattle calf",
+          "is-a",
+          "taurine cattle"
+        ],
+        [
+          "dairy cattle",
+          "is-a",
+          "taurine cattle"
+        ],
+        [
+          "cattle bull",
+          "is-a",
+          "bos taurus"
+        ],
+        [
+          "cattle steer",
+          "is-a",
+          "bos taurus"
+        ],
+        [
+          "feeder cow",
+          "is-a",
+          "bos taurus"
+        ],
+        [
+          "heifer",
+          "is-a",
+          "bos taurus"
+        ],
+        [
+          "ox",
+          "is-a",
+          "bos taurus"
+        ],
+        [
+          "zebu",
+          "is-a",
+          "bos taurus"
+        ],
+        [
+          "weanling cow",
+          "is-a",
+          "bos taurus"
+        ],
+        [
+          "stocker cow",
+          "is-a",
+          "bos taurus"
+        ],
+        [
+          "finisher cow",
+          "is-a",
+          "bos taurus"
+        ],
+        [
+          "zebu",
+          "database_cross_reference",
+          "bos taurus"
+        ]
+      ],
+      "id": "015443823c5f4aceb29c237c5a978c75",
+      "package_index": 19,
+      "source_index": 2969,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "zebu",
+          "database_cross_reference",
+          "bos taurus"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "zebu",
+          "database_cross_reference",
+          "bos taurus"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "type",
+      "context": "Title: Taxonomy of Units in Agricultural and Scientific Measurement \n\n Content: \nIn the systematic classification of physical quantities, the concept of a unit serves as the fundamental category for all measurement standards. Every specific type of measurement ultimately derives from the broader concept of a unit. Within this hierarchy, the rate unit is subclass of unit, which serves as an umbrella for various kinetic measures such as the angular velocity unit is subclass of unit and the frequency unit is subclass of unit. Similarly, the length unit is subclass of unit and the time unit is subclass of unit, establishing the foundational dimensions of space and duration in agricultural data collection.\n\nSpecific physical properties are defined by their own specialized subclasses. For instance, the electric charge is subclass of unit, which further branches into the coulomb based unit is subclass of electric charge. Thermal measurements rely on the temperature unit is subclass of unit, while mechanical properties are often described using the mass unit is subclass of unit and the surface tension unit is subclass of unit. Densities are categorized through the density unit is subclass of unit, which includes the mass density unit is subclass of density unit for volumetric density and the area density unit is subclass of density unit for surface coverage.\n\nBiological and chemical parameters are particularly important in agriculture. The catalytic activity unit is subclass of unit, which encompasses the enzyme unit based unit is subclass of catalytic activity unit, essential for measuring biological reaction rates. Energy interactions are captured by the energy unit is subclass of unit. Molar quantities fall under the substance unit is subclass of unit, which includes specific instances like the micromole is instance of substance unit and the nanomole is instance of substance unit, both belonging to the mole based unit is subclass of substance unit. Concentration levels are tracked via the concentration unit is subclass of unit, and flow dynamics in irrigation systems are often measured using the volumetric flow rate unit is subclass of unit, with specific instruments calibrated in microliters per minute is instance of volumetric flow rate unit.\n\nFinally, electromagnetic properties are structured under the magnetic flux unit is subclass of unit, which includes the weber based unit is subclass of magnetic flux unit and the volt-hour based unit is subclass of magnetic flux unit. The intensity of these fields is measured by the magnetic flux density unit is subclass of unit, including the tesla based unit is subclass of magnetic flux density unit. All these specialized categories, whether they are the microliters per minute is subclass of volumetric flow rate unit or the micromole is instance of substance unit, ultimately trace back to the base unit is subclass of unit, creating a coherent and interconnected system of measurement standards.",
+      "gold_triples": [
+        [
+          "angular velocity unit",
+          "is-a",
+          "unit"
+        ],
+        [
+          "length unit",
+          "is-a",
+          "unit"
+        ],
+        [
+          "frequency unit",
+          "is-a",
+          "unit"
+        ],
+        [
+          "rate unit",
+          "is-a",
+          "unit"
+        ],
+        [
+          "electric charge",
+          "is-a",
+          "unit"
+        ],
+        [
+          "coulomb based unit",
+          "is-a",
+          "electric charge"
+        ],
+        [
+          "temperature unit",
+          "is-a",
+          "unit"
+        ],
+        [
+          "density unit",
+          "is-a",
+          "unit"
+        ],
+        [
+          "mass density unit",
+          "is-a",
+          "density unit"
+        ],
+        [
+          "area density unit",
+          "is-a",
+          "density unit"
+        ],
+        [
+          "mass unit",
+          "is-a",
+          "unit"
+        ],
+        [
+          "surface tension unit",
+          "is-a",
+          "unit"
+        ],
+        [
+          "volumetric flow rate unit",
+          "is-a",
+          "unit"
+        ],
+        [
+          "microliters per minute",
+          "instance-of",
+          "volumetric flow rate unit"
+        ],
+        [
+          "microliters per minute",
+          "is-a",
+          "volumetric flow rate unit"
+        ],
+        [
+          "catalytic activity unit",
+          "is-a",
+          "unit"
+        ],
+        [
+          "enzyme unit based unit",
+          "is-a",
+          "catalytic activity unit"
+        ],
+        [
+          "energy unit",
+          "is-a",
+          "unit"
+        ],
+        [
+          "time unit",
+          "is-a",
+          "unit"
+        ],
+        [
+          "concentration unit",
+          "is-a",
+          "unit"
+        ],
+        [
+          "base unit",
+          "is-a",
+          "unit"
+        ],
+        [
+          "substance unit",
+          "is-a",
+          "unit"
+        ],
+        [
+          "micromole",
+          "instance-of",
+          "substance unit"
+        ],
+        [
+          "nanomole",
+          "instance-of",
+          "substance unit"
+        ],
+        [
+          "mole based unit",
+          "is-a",
+          "substance unit"
+        ],
+        [
+          "magnetic flux density unit",
+          "is-a",
+          "unit"
+        ],
+        [
+          "tesla based unit",
+          "is-a",
+          "magnetic flux density unit"
+        ],
+        [
+          "magnetic flux unit",
+          "is-a",
+          "unit"
+        ],
+        [
+          "volt-hour based unit",
+          "is-a",
+          "magnetic flux unit"
+        ],
+        [
+          "weber based unit",
+          "is-a",
+          "magnetic flux unit"
+        ],
+        [
+          "microliters per minute",
+          "type",
+          "volumetric flow rate unit"
+        ]
+      ],
+      "id": "d9d707bc1ccd4a3494584564ee2fbe59",
+      "package_index": 20,
+      "source_index": 3119,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "microliters per minute",
+          "type",
+          "volumetric flow rate unit"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "microliters per minute",
+          "type",
+          "volumetric flow rate unit"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "equivalent_class",
+      "context": "Title: Exploring Seamounts in Geology \n\n Content: \nSeamounts represent a fascinating facet of geological formations, bridging the divide between marine and terrestrial environments. These underwater mountains rise dramatically from the ocean floor, without ever surfacing, and are classified as a subtype of orography. This distinction highlights their significance within the broader context of elevated landforms. As a subclass of both mountains and orographic features, seamounts exhibit substantial vertical relief, impacting local fluid dynamics and marine ecosystems. Understanding seamounts is crucial, as they not only enrich the biodiversity of our oceans but also remind us of the intricate connections within the solid earth, of which land is a subclass. Meanwhile, every geologic structure, including these unique underwater formations, also falls under the umbrella of solid earth, underlining the continuous interplay between different realms of our planet.",
+      "gold_triples": [
+        [
+          "seamount",
+          "is-a",
+          "orography"
+        ],
+        [
+          "seamount",
+          "is-a",
+          "orographic"
+        ],
+        [
+          "seamount",
+          "is-a",
+          "mountain"
+        ],
+        [
+          "land",
+          "is-a",
+          "solid earth"
+        ],
+        [
+          "geologic structure",
+          "is-a",
+          "solid earth"
+        ],
+        [
+          "mountain",
+          "equivalent class",
+          "orography"
+        ],
+        [
+          "orographic",
+          "equivalent class",
+          "orography"
+        ]
+      ],
+      "id": "ccbd396c8e264a27a6318fdaec54abc4",
+      "package_index": 21,
+      "source_index": 3274,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "mountain",
+          "equivalent class",
+          "orography"
+        ],
+        [
+          "orographic",
+          "equivalent class",
+          "orography"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "mountain",
+          "equivalent class",
+          "orography"
+        ],
+        [
+          "orographic",
+          "equivalent class",
+          "orography"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "disjoint_with",
+      "context": "Title: Ecology and Environment \n\n Content: \nEcological monitoring relies heavily on isotopic signatures to understand biogeochemical cycles. Stable and radioactive isotopes act as tracers; for instance, researchers analyze s36 alongside s32 to trace sulfur migration within ecosystems. Fission products like u239 require careful management due to their radioactive nature. Stable isotopes such as deuterium help to ascertain water sources in the hydrological cycle, while aluminum-26, or al26, serves as a chronometer for geologic processes. Natural background radiation often stems from th232, a key element in understanding geological time. Potassium-40, or k40, contributes to natural soil radioactivity and is significant in dating geological materials. Tritium, denoted as t, and its stable counterpart deuterium are vital for hydrological studies, linking isotopic composition to water quality and resources. Uranium decay eventually yields pb207, which can indicate contamination sources in environmental monitoring. Carbon isotopes, particularly c13, are essential for assessing carbon cycling in various ecosystems, aiding in the understanding of terrestrial and marine interactions. Helium-3, or he3, and o18 provide records of paleotemperature, relevant in studying past climate changes and upcoming potential shifts. Within the periodic classification, a nonmetal is subclass of element, with hydrogen, represented as h, standing as a prominent nonmetal critical for life. The prictogen, a subclass of element, includes essential components such as nitrogen, n, which plays a vital role in fertilizers and the nitrogen cycle. Antimony, sb, and arsenic, as highlighted in environmental studies, are also prictogens that can lead to soil contamination and health hazards. Amphoterous properties define a metalloid, which is subclass of element, with boron, b, and silicon, si, being pertinent for soil and diatoms' growth, essential checks in ecological systems. Conductors and structural components often fall under metal classification; aluminum, al, impacts acidity and overall pollution levels in ecosystems. Geochemists categorize elements based on affinity; a siderophile is subclass of element, crucial for understanding planet formation, while chalcophile and lithophile elements contribute to mineral cycles and ecological balance. Radioactive series include the actinoid subclass of element that provides significant insight into natural processes over geological time. Catalytic diversity is found in transition metals, a subclass of metal, playing vital roles in various environmental interactions. Through these isotopes and elemental classes, we comprehend the delicate balance of ecosystems and their responses to natural and anthropogenic changes.",
+      "gold_triples": [
+        [
+          "s36",
+          "instance-of",
+          "isotope"
+        ],
+        [
+          "u239",
+          "instance-of",
+          "isotope"
+        ],
+        [
+          "deuterium",
+          "instance-of",
+          "isotope"
+        ],
+        [
+          "al26",
+          "instance-of",
+          "isotope"
+        ],
+        [
+          "th232",
+          "instance-of",
+          "isotope"
+        ],
+        [
+          "s32",
+          "instance-of",
+          "isotope"
+        ],
+        [
+          "t",
+          "instance-of",
+          "isotope"
+        ],
+        [
+          "k40",
+          "instance-of",
+          "isotope"
+        ],
+        [
+          "d",
+          "instance-of",
+          "isotope"
+        ],
+        [
+          "tritium",
+          "instance-of",
+          "isotope"
+        ],
+        [
+          "pb207",
+          "instance-of",
+          "isotope"
+        ],
+        [
+          "c13",
+          "instance-of",
+          "isotope"
+        ],
+        [
+          "he3",
+          "instance-of",
+          "isotope"
+        ],
+        [
+          "o18",
+          "instance-of",
+          "isotope"
+        ],
+        [
+          "nonmetal",
+          "is-a",
+          "element"
+        ],
+        [
+          "h",
+          "instance-of",
+          "nonmetal"
+        ],
+        [
+          "prictogen",
+          "is-a",
+          "element"
+        ],
+        [
+          "n",
+          "instance-of",
+          "prictogen"
+        ],
+        [
+          "sb",
+          "instance-of",
+          "prictogen"
+        ],
+        [
+          "as",
+          "instance-of",
+          "prictogen"
+        ],
+        [
+          "siderophile",
+          "is-a",
+          "element"
+        ],
+        [
+          "metalloid",
+          "is-a",
+          "element"
+        ],
+        [
+          "b",
+          "instance-of",
+          "metalloid"
+        ],
+        [
+          "si",
+          "instance-of",
+          "metalloid"
+        ],
+        [
+          "actinoid",
+          "is-a",
+          "element"
+        ],
+        [
+          "chalcophile",
+          "is-a",
+          "element"
+        ],
+        [
+          "lithophile",
+          "is-a",
+          "element"
+        ],
+        [
+          "metal",
+          "is-a",
+          "element"
+        ],
+        [
+          "al",
+          "instance-of",
+          "metal"
+        ],
+        [
+          "transition metal",
+          "is-a",
+          "metal"
+        ],
+        [
+          "metal",
+          "disjoint with",
+          "metalloid"
+        ],
+        [
+          "metalloid",
+          "disjoint with",
+          "nonmetal"
+        ],
+        [
+          "metal",
+          "disjoint with",
+          "nonmetal"
+        ]
+      ],
+      "id": "dbde9f7d10fe4a3d8950e0924cdffeff",
+      "package_index": 22,
+      "source_index": 3556,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "metal",
+          "disjoint with",
+          "metalloid"
+        ],
+        [
+          "metal",
+          "disjoint with",
+          "nonmetal"
+        ],
+        [
+          "metalloid",
+          "disjoint with",
+          "nonmetal"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "metal",
+          "disjoint with",
+          "metalloid"
+        ],
+        [
+          "metal",
+          "disjoint with",
+          "nonmetal"
+        ],
+        [
+          "metalloid",
+          "disjoint with",
+          "nonmetal"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "domain_specific",
+      "context": "Title: Classification and Diversity of Psidium Guava Species \n\n Content: \nIn the study of tropical agriculture, the genus Psidium encompasses a diverse array of fruit-bearing species valued for their ecological presence and economic potential. A primary member of this group is Psidium guajava, the apple guava, which is cultivated extensively worldwide and is known for its sweet, edible fruit. Closely related within the Psidium family, Psidium cattleyanum, commonly referred to as the strawberry guava, is notable for its wild growth in various ecosystems and offers a unique flavor profile. Additionally, Psidium guineense, recognized as the Amazonian guava, showcases resilience and adaptability, thriving in different soil conditions and climates. When these species are categorized under the agricultural definition of guava plants, Psidium cattleyanum and Psidium guineense are significant due to their distinctive fruit characteristics, representing essential components of the guava classification. Within Psidium cattleyanum, further taxonomic differentiation is recognized, particularly the variety known as Psidium cattleyanum var. littorale. This yellow-fruited form stands apart from its red-fruited relatives while still maintaining the essential characteristics of its parent species. Each of these varieties plays a critical role in agricultural practices, breeding programs, and biodiversity preservation efforts.",
+      "gold_triples": [
+        [
+          "psidium cattleyanum",
+          "is-a",
+          "guava plant"
+        ],
+        [
+          "psidium cattleyanum var. littorale",
+          "is-a",
+          "psidium cattleyanum"
+        ],
+        [
+          "psidium guineense",
+          "is-a",
+          "guava plant"
+        ],
+        [
+          "psidium guineense",
+          "is-a",
+          "psidium"
+        ],
+        [
+          "psidium cattleyanum",
+          "is-a",
+          "psidium"
+        ],
+        [
+          "psidium guajava",
+          "is-a",
+          "psidium"
+        ],
+        [
+          "guava plant",
+          "database_cross_reference",
+          "psidium guajava"
+        ]
+      ],
+      "id": "16a3e9a88b014e3bba13389147dec3cc",
+      "package_index": 23,
+      "source_index": 3557,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "guava plant",
+          "database_cross_reference",
+          "psidium guajava"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "guava plant",
+          "database_cross_reference",
+          "psidium guajava"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "equivalent_class",
+      "context": "Title: Understanding Climate Classification and Meteorological Measures \n\n Content: \nIn ecological studies, the mean monthly temperature and average monthly precipitation are routinely synthesized into a monthly average to capture seasonal baselines. These metrics feed directly into the climate classification system, which organizes global ecosystems into structured tiers. The a, b, c, d, and e designations each function as distinct categories under the climate classification umbrella. For example, the tropical climate defines equatorial biomes, the dry climate captures arid expanses, and the marine climate describes ocean-influenced coasts. The temperate climate encompasses regions with moderate seasonal variation, while the dry winter climate highlights zones where summer rains dominate. Within the broader climate classification, the wet summer climate branches out to include the wet summer dry winter climate, a highly specific seasonal pattern. Additionally, the climate zone type serves as a finer-grained subdivision of the climate classification, allowing researchers to map ecological gradients with precision.",
+      "gold_triples": [
+        [
+          "mean monthly temperature",
+          "is-a",
+          "monthly average"
+        ],
+        [
+          "average monthly precipitation",
+          "is-a",
+          "monthly average"
+        ],
+        [
+          "b",
+          "is-a",
+          "climate classification"
+        ],
+        [
+          "d",
+          "is-a",
+          "climate classification"
+        ],
+        [
+          "wet summer climate",
+          "is-a",
+          "climate classification"
+        ],
+        [
+          "wet summer dry winter climate",
+          "is-a",
+          "wet summer climate"
+        ],
+        [
+          "e",
+          "is-a",
+          "climate classification"
+        ],
+        [
+          "c",
+          "is-a",
+          "climate classification"
+        ],
+        [
+          "a",
+          "is-a",
+          "climate classification"
+        ],
+        [
+          "climate zone type",
+          "is-a",
+          "climate classification"
+        ],
+        [
+          "tropical climate",
+          "is-a",
+          "climate classification"
+        ],
+        [
+          "dry winter climate",
+          "is-a",
+          "climate classification"
+        ],
+        [
+          "dry climate",
+          "is-a",
+          "climate classification"
+        ],
+        [
+          "marine climate",
+          "is-a",
+          "climate classification"
+        ],
+        [
+          "temperate climate",
+          "is-a",
+          "climate classification"
+        ],
+        [
+          "a",
+          "equivalent class",
+          "tropical climate"
+        ],
+        [
+          "c",
+          "equivalent class",
+          "temperate climate"
+        ],
+        [
+          "b",
+          "equivalent class",
+          "dry climate"
+        ]
+      ],
+      "id": "0bb6c862323242b2b5f2fa9d1e4f4be2",
+      "package_index": 24,
+      "source_index": 3829,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "a",
+          "equivalent class",
+          "tropical climate"
+        ],
+        [
+          "b",
+          "equivalent class",
+          "dry climate"
+        ],
+        [
+          "c",
+          "equivalent class",
+          "temperate climate"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "a",
+          "equivalent class",
+          "tropical climate"
+        ],
+        [
+          "b",
+          "equivalent class",
+          "dry climate"
+        ],
+        [
+          "c",
+          "equivalent class",
+          "temperate climate"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "disjoint_with",
+      "context": "Title: Introduction to Upper Ontology \n\n Content: \nUpper ontological frameworks typically begin by distinguishing between entities that persist wholly at any given moment and those that unfold over time. The former belongs to the foundational category of endurant, which captures everything that remains numerically identical throughout its existence. Branching from this root is the physical-endurant class, which encompasses discrete physical objects, structural characteristics, and homogeneous substances. Specifically, the physical-object term denotes tangible, countable items, while feature refers to intrinsic properties like shape or texture that reside in matter, and amount-of-matter represents bulk substances such as water or metal. Complementing this material domain is the non-physical-endurant category, which serves as the immaterial counterpart within endurant. This branch groups intangible persistents, most notably the non-physical-object, which covers abstract entities like legal rights or mathematical sets. The framework also acknowledges arbitrary-sum as a specialized class of endurant, designating any aggregation of entities that an observer deliberately unifies for analytical purposes. Turning to temporal development, the ontology introduces the broader class of stative to manage entities defined by their state or activity. Nested within this category is the process subtype, which specifically models dynamic sequences of change, such as biological growth or chemical reactions, thereby completing the core taxonomy for describing persistent and evolving reality.",
+      "gold_triples": [
+        [
+          "process",
+          "is-a",
+          "stative"
+        ],
+        [
+          "physical-endurant",
+          "is-a",
+          "endurant"
+        ],
+        [
+          "physical-object",
+          "is-a",
+          "physical-endurant"
+        ],
+        [
+          "feature",
+          "is-a",
+          "physical-endurant"
+        ],
+        [
+          "amount of matter",
+          "is-a",
+          "physical-endurant"
+        ],
+        [
+          "non physical endurant",
+          "is-a",
+          "endurant"
+        ],
+        [
+          "non-physical-object",
+          "is-a",
+          "non physical endurant"
+        ],
+        [
+          "arbitrary-sum",
+          "is-a",
+          "endurant"
+        ],
+        [
+          "physical-endurant",
+          "disjoint with",
+          "arbitrary-sum"
+        ],
+        [
+          "physical-object",
+          "disjoint with",
+          "amount of matter"
+        ],
+        [
+          "physical-endurant",
+          "disjoint with",
+          "non physical endurant"
+        ],
+        [
+          "feature",
+          "disjoint with",
+          "amount of matter"
+        ],
+        [
+          "arbitrary-sum",
+          "disjoint with",
+          "non physical endurant"
+        ],
+        [
+          "physical-object",
+          "disjoint with",
+          "feature"
+        ]
+      ],
+      "id": "7dc268d638254b4982159ce2822edd41",
+      "package_index": 25,
+      "source_index": 4070,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "arbitrary-sum",
+          "disjoint with",
+          "non physical endurant"
+        ],
+        [
+          "feature",
+          "disjoint with",
+          "amount of matter"
+        ],
+        [
+          "physical-endurant",
+          "disjoint with",
+          "arbitrary-sum"
+        ],
+        [
+          "physical-endurant",
+          "disjoint with",
+          "non physical endurant"
+        ],
+        [
+          "physical-object",
+          "disjoint with",
+          "amount of matter"
+        ],
+        [
+          "physical-object",
+          "disjoint with",
+          "feature"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "arbitrary-sum",
+          "disjoint with",
+          "non physical endurant"
+        ],
+        [
+          "feature",
+          "disjoint with",
+          "amount of matter"
+        ],
+        [
+          "physical-endurant",
+          "disjoint with",
+          "arbitrary-sum"
+        ],
+        [
+          "physical-endurant",
+          "disjoint with",
+          "non physical endurant"
+        ],
+        [
+          "physical-object",
+          "disjoint with",
+          "amount of matter"
+        ],
+        [
+          "physical-object",
+          "disjoint with",
+          "feature"
+        ]
+      ]
+    },
+    {
+      "assigned_stratum": "type",
+      "context": "Title: Concentration Units in Agricultural Chemistry \n\n Content: \nIn modern agricultural science and food safety testing, quantifying substances with precision is paramount. Researchers and agronomists rely on a standardized hierarchy of measurement types, where the broad category known as a concentration unit serves as the foundation for expressing the abundance of a constituent within a mixture. Various specific measures are recognized as instances of a concentration unit, including mass-based and molar-based expressions. For instance, analytical protocols frequently utilize milligram per milliliter, microgram per liter, gram per liter, and gram per deciliter to report solute levels in nutrient solutions or soil extracts. When dealing with trace elements or micronutrients, highly sensitive scales are employed; micromolar, nanomolar, and picomolar are all classified as instances of a concentration unit, allowing for the detection of minute biological signals. Beyond molar metrics, agricultural formulations often depend on compositional ratios. Volume percentage, mass volume percentage, and mass percentage are all instances of a concentration unit, providing straightforward methods for mixing liquid fertilizers or describing the density of chemical additives. In the realm of microbial analysis, such as assessing soil health or contamination in irrigation water, biologists track bacterial loads using colony forming unit per volume as an instance of a concentration unit. A more specific metric, the colony forming unit per milliliter based unit, operates as a subclass of colony forming unit per volume, offering higher granularity for liquid sample assessments. Certain biochemical assays require alternative dimensional approaches. The unit of molality, which relates solute amount to solvent mass, is a subclass of a concentration unit and includes specialized derivatives like the molal based unit. Within this category, specific measures such as micromole per kilogram and micromole per litre are used to evaluate metabolic rates in plant tissues independent of temperature fluctuations. Similarly, enzymatic activity in biological samples is quantified using a catalytic (activity) concentration unit, which is itself a subclass of a concentration unit; specific implementations include the katal per cubic meter based unit and the katal per liter based unit to measure reaction velocities in agricultural biotechnology. Volume-to-volume relationships are also critical, particularly in pesticide application and greenhouse ventilation management. The class volume per unit volume represents a subclass of a concentration unit, encompassing metrics like the volume percentage based unit. For low-concentration gas monitoring, the milliliter per cubic meter is a subclass of volume per unit volume, enabling the detection of volatile organic compounds or ethylene in crop storage facilities.",
+      "gold_triples": [
+        [
+          "milligram per milliliter",
+          "instance-of",
+          "concentration unit"
+        ],
+        [
+          "microgram per liter",
+          "instance-of",
+          "concentration unit"
+        ],
+        [
+          "micromolar",
+          "instance-of",
+          "concentration unit"
+        ],
+        [
+          "volume percentage",
+          "instance-of",
+          "concentration unit"
+        ],
+        [
+          "nanomolar",
+          "instance-of",
+          "concentration unit"
+        ],
+        [
+          "picomolar",
+          "instance-of",
+          "concentration unit"
+        ],
+        [
+          "mass volume percentage",
+          "instance-of",
+          "concentration unit"
+        ],
+        [
+          "gram per liter",
+          "instance-of",
+          "concentration unit"
+        ],
+        [
+          "molar",
+          "instance-of",
+          "concentration unit"
+        ],
+        [
+          "gram per deciliter",
+          "instance-of",
+          "concentration unit"
+        ],
+        [
+          "colony forming unit per volume",
+          "instance-of",
+          "concentration unit"
+        ],
+        [
+          "colony forming unit per milliliter based unit",
+          "is-a",
+          "colony forming unit per volume"
+        ],
+        [
+          "mass percentage",
+          "instance-of",
+          "concentration unit"
+        ],
+        [
+          "colony forming unit per volume",
+          "is-a",
+          "concentration unit"
+        ],
+        [
+          "unit of molality",
+          "is-a",
+          "concentration unit"
+        ],
+        [
+          "molal based unit",
+          "is-a",
+          "unit of molality"
+        ],
+        [
+          "micromole per kilogram",
+          "is-a",
+          "unit of molality"
+        ],
+        [
+          "micromole per litre",
+          "is-a",
+          "unit of molality"
+        ],
+        [
+          "catalytic (activity) concentration unit",
+          "is-a",
+          "concentration unit"
+        ],
+        [
+          "katal per cubic meter based unit",
+          "is-a",
+          "catalytic (activity) concentration unit"
+        ],
+        [
+          "katal per liter based unit",
+          "is-a",
+          "catalytic (activity) concentration unit"
+        ],
+        [
+          "volume per unit volume",
+          "is-a",
+          "concentration unit"
+        ],
+        [
+          "volume percentage based unit",
+          "is-a",
+          "volume per unit volume"
+        ],
+        [
+          "milliliter per cubic meter",
+          "is-a",
+          "volume per unit volume"
+        ],
+        [
+          "unit per volume unit",
+          "is-a",
+          "concentration unit"
+        ],
+        [
+          "unit per milliliter based unit",
+          "is-a",
+          "unit per volume unit"
+        ],
+        [
+          "unit per liter based unit",
+          "is-a",
+          "unit per volume unit"
+        ],
+        [
+          "dose unit",
+          "is-a",
+          "concentration unit"
+        ],
+        [
+          "milligram per square meter",
+          "is-a",
+          "dose unit"
+        ],
+        [
+          "milligram per kilogram",
+          "is-a",
+          "dose unit"
+        ],
+        [
+          "colony forming unit per volume",
+          "type",
+          "concentration unit"
+        ]
+      ],
+      "id": "c47aafd41db548a2ab93d3227874fe98",
+      "package_index": 26,
+      "source_index": 4105,
+      "source_task": "a",
+      "target_gold": [
+        [
+          "colony forming unit per volume",
+          "type",
+          "concentration unit"
+        ]
+      ],
+      "visible_target_gold": [
+        [
+          "colony forming unit per volume",
+          "type",
+          "concentration unit"
+        ]
+      ]
+    }
+  ]
+}

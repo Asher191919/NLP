@@ -1,0 +1,495 @@
+{
+  "meta": {
+    "protocol": "v5_axiom_confirmatory_error_audit_v1",
+    "source_score": "D:\\NLP\\experiments\\results\\v5_axiom_confirmatory_score_a_n24_seed20260925.json",
+    "source_score_sha256": "7a5de59c2e1c1f693c2f530ebadc75913fb49af2f80be2c8a5525bf17b9aba9a",
+    "api_calls": 0,
+    "retuning_performed": false
+  },
+  "per_predicate_official_exact": {
+    "base": {
+      "equivalent class": {
+        "predictions": 9,
+        "gold": 19,
+        "tp": 1,
+        "fp": 8,
+        "fn": 18,
+        "precision": 0.1111111111111111,
+        "recall": 0.05263157894736842,
+        "f1": 0.07142857142857142,
+        "positive_samples": 1
+      },
+      "disjoint with": {
+        "predictions": 6,
+        "gold": 32,
+        "tp": 3,
+        "fp": 3,
+        "fn": 29,
+        "precision": 0.5,
+        "recall": 0.09375,
+        "f1": 0.15789473684210525,
+        "positive_samples": 3
+      }
+    },
+    "calibrated": {
+      "equivalent class": {
+        "predictions": 9,
+        "gold": 19,
+        "tp": 1,
+        "fp": 8,
+        "fn": 18,
+        "precision": 0.1111111111111111,
+        "recall": 0.05263157894736842,
+        "f1": 0.07142857142857142,
+        "positive_samples": 1
+      },
+      "disjoint with": {
+        "predictions": 5,
+        "gold": 32,
+        "tp": 2,
+        "fp": 3,
+        "fn": 30,
+        "precision": 0.4,
+        "recall": 0.0625,
+        "f1": 0.10810810810810811,
+        "positive_samples": 2
+      }
+    }
+  },
+  "by_preregistered_assignment_stratum": {
+    "base": {
+      "equivalent class": {
+        "predictions": 9,
+        "gold": 22,
+        "tp": 1,
+        "fp": 8,
+        "fn": 21,
+        "precision": 0.1111111111111111,
+        "recall": 0.045454545454545456,
+        "f1": 0.06451612903225805,
+        "positive_samples": 1
+      },
+      "disjoint with": {
+        "predictions": 6,
+        "gold": 32,
+        "tp": 3,
+        "fp": 3,
+        "fn": 29,
+        "precision": 0.5,
+        "recall": 0.09375,
+        "f1": 0.15789473684210525,
+        "positive_samples": 3
+      }
+    },
+    "calibrated": {
+      "equivalent class": {
+        "predictions": 9,
+        "gold": 22,
+        "tp": 1,
+        "fp": 8,
+        "fn": 21,
+        "precision": 0.1111111111111111,
+        "recall": 0.045454545454545456,
+        "f1": 0.06451612903225805,
+        "positive_samples": 1
+      },
+      "disjoint with": {
+        "predictions": 5,
+        "gold": 32,
+        "tp": 2,
+        "fp": 3,
+        "fn": 30,
+        "precision": 0.4,
+        "recall": 0.0625,
+        "f1": 0.10810810810810811,
+        "positive_samples": 2
+      }
+    }
+  },
+  "candidate_error_audit": {
+    "eligible_candidates": 15,
+    "error_type_counts": {
+      "exact_true_positive": 4,
+      "no_exact_endpoint_or_predicate_match": 9,
+      "predicate_subject_exact": 1,
+      "symmetric_reverse_only": 1
+    },
+    "by_predicate": {
+      "disjoint with": {
+        "exact_true_positive": 3,
+        "no_exact_endpoint_or_predicate_match": 2,
+        "symmetric_reverse_only": 1
+      },
+      "equivalent class": {
+        "exact_true_positive": 1,
+        "no_exact_endpoint_or_predicate_match": 7,
+        "predicate_subject_exact": 1
+      }
+    },
+    "by_raw_confidence": {
+      "0.90": {
+        "exact_true_positive": 1
+      },
+      "0.95": {
+        "exact_true_positive": 3,
+        "no_exact_endpoint_or_predicate_match": 7,
+        "predicate_subject_exact": 1,
+        "symmetric_reverse_only": 1
+      },
+      "0.98": {
+        "no_exact_endpoint_or_predicate_match": 2
+      }
+    },
+    "rejected_candidate_reasons": {
+      "evidence_missing_endpoints": 1,
+      "evidence_not_verbatim": 1
+    },
+    "examples": {
+      "symmetric_reverse_only": [
+        {
+          "sample_index": 1070,
+          "confidence": 0.95,
+          "triple": [
+            "occurrent",
+            "disjoint with",
+            "continuant"
+          ],
+          "near_gold_triples": [
+            [
+              "continuant",
+              "disjoint with",
+              "occurrent"
+            ]
+          ]
+        }
+      ],
+      "no_exact_endpoint_or_predicate_match": [
+        {
+          "sample_index": 1070,
+          "confidence": 0.98,
+          "triple": [
+            "independent continuant",
+            "disjoint with",
+            "specifically dependent continuant"
+          ],
+          "near_gold_triples": []
+        },
+        {
+          "sample_index": 1169,
+          "confidence": 0.98,
+          "triple": [
+            "choice",
+            "equivalent class",
+            "component"
+          ],
+          "near_gold_triples": []
+        },
+        {
+          "sample_index": 1594,
+          "confidence": 0.95,
+          "triple": [
+            "reflection",
+            "equivalent class",
+            "bounces waves off surfaces"
+          ],
+          "near_gold_triples": []
+        },
+        {
+          "sample_index": 1594,
+          "confidence": 0.95,
+          "triple": [
+            "refraction",
+            "equivalent class",
+            "bends waves as they pass through layers of varying density"
+          ],
+          "near_gold_triples": []
+        },
+        {
+          "sample_index": 1594,
+          "confidence": 0.95,
+          "triple": [
+            "transmission",
+            "equivalent class",
+            "allows waves to pass through media"
+          ],
+          "near_gold_triples": []
+        }
+      ],
+      "exact_true_positive": [
+        {
+          "sample_index": 1070,
+          "confidence": 0.95,
+          "triple": [
+            "material entity",
+            "disjoint with",
+            "immaterial entity"
+          ],
+          "near_gold_triples": [
+            [
+              "material entity",
+              "disjoint with",
+              "immaterial entity"
+            ]
+          ]
+        },
+        {
+          "sample_index": 1281,
+          "confidence": 0.9,
+          "triple": [
+            "aromatic",
+            "disjoint with",
+            "non aromatic"
+          ],
+          "near_gold_triples": [
+            [
+              "aromatic",
+              "disjoint with",
+              "non aromatic"
+            ]
+          ]
+        },
+        {
+          "sample_index": 4034,
+          "confidence": 0.95,
+          "triple": [
+            "ols",
+            "equivalent class",
+            "ordinary least squares"
+          ],
+          "near_gold_triples": [
+            [
+              "ols",
+              "equivalent class",
+              "ordinary least squares"
+            ]
+          ]
+        },
+        {
+          "sample_index": 4185,
+          "confidence": 0.95,
+          "triple": [
+            "heterogeneous mixture",
+            "disjoint with",
+            "homogeneous mixture"
+          ],
+          "near_gold_triples": [
+            [
+              "heterogeneous mixture",
+              "disjoint with",
+              "homogeneous mixture"
+            ]
+          ]
+        }
+      ],
+      "predicate_subject_exact": [
+        {
+          "sample_index": 1594,
+          "confidence": 0.95,
+          "triple": [
+            "attenuation",
+            "equivalent class",
+            "reduction in wave intensity"
+          ],
+          "near_gold_triples": [
+            [
+              "attenuation",
+              "equivalent class",
+              "extinction"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "sample_cluster_bootstrap": {
+    "protocol": "sample_cluster_bootstrap_confirmatory_v1",
+    "resampling_unit": "sample_index",
+    "conditional_on": "frozen_confirmatory_samples_predictions_and_gold",
+    "replicates": 10000,
+    "seed": 20260925,
+    "confidence_level": 0.95,
+    "n_sample_groups": 24,
+    "exact": {
+      "base": {
+        "precision": {
+          "estimate": 0.26666666666666666,
+          "lower": 0.05555555555555555,
+          "upper": 0.8,
+          "bootstrap_valid_replicates": 10000
+        },
+        "recall": {
+          "estimate": 0.07407407407407407,
+          "lower": 0.014084507042253521,
+          "upper": 0.1935483870967742,
+          "bootstrap_valid_replicates": 10000
+        },
+        "f1": {
+          "estimate": 0.11594202898550725,
+          "lower": 0.023809523809523808,
+          "upper": 0.27118644067796605,
+          "bootstrap_valid_replicates": 10000
+        }
+      },
+      "calibrated": {
+        "precision": {
+          "estimate": 0.21428571428571427,
+          "lower": 0.0,
+          "upper": 0.75,
+          "bootstrap_valid_replicates": 10000
+        },
+        "recall": {
+          "estimate": 0.05555555555555555,
+          "lower": 0.0,
+          "upper": 0.15384615384615385,
+          "bootstrap_valid_replicates": 10000
+        },
+        "f1": {
+          "estimate": 0.08823529411764706,
+          "lower": 0.0,
+          "upper": 0.22222222222222218,
+          "bootstrap_valid_replicates": 10000
+        }
+      },
+      "calibrated_minus_base": {
+        "precision": {
+          "estimate": -0.05238095238095239,
+          "lower": -0.2232589285714285,
+          "upper": 0.0,
+          "bootstrap_valid_replicates": 10000
+        },
+        "recall": {
+          "estimate": -0.018518518518518517,
+          "lower": -0.07692307692307693,
+          "upper": 0.0,
+          "bootstrap_valid_replicates": 10000
+        },
+        "f1": {
+          "estimate": -0.027706734867860183,
+          "lower": -0.1064166513200851,
+          "upper": 0.0,
+          "bootstrap_valid_replicates": 10000
+        }
+      }
+    },
+    "candidate_calibration": {
+      "raw": {
+        "brier": {
+          "estimate": 0.67072,
+          "lower": 0.19707999999999998,
+          "upper": 0.8589333333333333,
+          "bootstrap_valid_replicates": 10000
+        },
+        "ece": {
+          "estimate": 0.6839999999999999,
+          "lower": 0.1459999999999999,
+          "upper": 0.8977777777777778,
+          "bootstrap_valid_replicates": 10000
+        }
+      },
+      "calibrated": {
+        "brier": {
+          "estimate": 0.2108843537414966,
+          "lower": 0.10544217687074829,
+          "upper": 0.48396501457725954,
+          "bootstrap_valid_replicates": 10000
+        },
+        "ece": {
+          "estimate": 0.12380952380952381,
+          "lower": 0.01428571428571429,
+          "upper": 0.5587662337662291,
+          "bootstrap_valid_replicates": 10000
+        }
+      },
+      "calibrated_minus_raw": {
+        "brier": {
+          "estimate": -0.45983564625850337,
+          "lower": -0.7517164314581095,
+          "upper": 0.27387819897959087,
+          "bootstrap_valid_replicates": 10000
+        },
+        "ece": {
+          "estimate": -0.5601904761904761,
+          "lower": -0.6721804511278195,
+          "upper": 0.396857142857143,
+          "bootstrap_valid_replicates": 10000
+        }
+      }
+    }
+  },
+  "scale_planning": {
+    "base": {
+      "method": "normal_approximation_planning_only",
+      "target_95_percent_half_width": 0.1,
+      "observed_precision": 0.26666666666666666,
+      "observed_predictions_per_sample": 0.625,
+      "required_predictions": 76,
+      "estimated_required_samples": 122,
+      "not_a_hypothesis_test_or_tuning_budget": true
+    },
+    "calibrated": {
+      "method": "normal_approximation_planning_only",
+      "target_95_percent_half_width": 0.1,
+      "observed_precision": 0.21428571428571427,
+      "observed_predictions_per_sample": 0.5833333333333334,
+      "required_predictions": 65,
+      "estimated_required_samples": 112,
+      "not_a_hypothesis_test_or_tuning_budget": true
+    },
+    "per_preregistered_assignment_stratum": {
+      "base": {
+        "equivalent class": {
+          "method": "normal_approximation_planning_only",
+          "target_95_percent_half_width": 0.1,
+          "observed_precision": 0.1111111111111111,
+          "observed_predictions_per_sample": 0.75,
+          "required_predictions": 38,
+          "estimated_required_samples": 51,
+          "not_a_hypothesis_test_or_tuning_budget": true
+        },
+        "disjoint with": {
+          "method": "normal_approximation_planning_only",
+          "target_95_percent_half_width": 0.1,
+          "observed_precision": 0.5,
+          "observed_predictions_per_sample": 0.5,
+          "required_predictions": 97,
+          "estimated_required_samples": 194,
+          "not_a_hypothesis_test_or_tuning_budget": true
+        }
+      },
+      "calibrated": {
+        "equivalent class": {
+          "method": "normal_approximation_planning_only",
+          "target_95_percent_half_width": 0.1,
+          "observed_precision": 0.1111111111111111,
+          "observed_predictions_per_sample": 0.75,
+          "required_predictions": 38,
+          "estimated_required_samples": 51,
+          "not_a_hypothesis_test_or_tuning_budget": true
+        },
+        "disjoint with": {
+          "method": "normal_approximation_planning_only",
+          "target_95_percent_half_width": 0.1,
+          "observed_precision": 0.4,
+          "observed_predictions_per_sample": 0.4166666666666667,
+          "required_predictions": 93,
+          "estimated_required_samples": 224,
+          "not_a_hypothesis_test_or_tuning_budget": true
+        }
+      }
+    },
+    "decision": {
+      "expand_for_estimation_only": true,
+      "launch_now": false,
+      "status": "deferred_pending_scope_and_cost_justification",
+      "recommended_total_samples": 122,
+      "additional_samples_from_current_n24": 98,
+      "eligible_endpoint_visible_target_pool": 185,
+      "remaining_pool_after_current_n24": 161,
+      "authorize_threshold_or_rule_retuning": false,
+      "interpretation": "Expansion can narrow uncertainty around the frozen negative result; it cannot reopen model selection on these confirmatory labels. The pooled estimate hides predicate heterogeneity and does not remove endpoint-visible gold-stratified selection bias."
+    }
+  },
+  "scientific_deployable": false,
+  "confirmatory_eligible": false,
+  "reason": "confirmatory_gate_failed_and_analysis_does_not_authorize_retuning"
+}

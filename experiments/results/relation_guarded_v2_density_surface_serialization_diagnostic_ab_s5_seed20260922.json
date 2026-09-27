@@ -1,0 +1,768 @@
+{
+  "meta": {
+    "protocol": "relation_guarded_v2_offline_audit_v1",
+    "source_result": "D:\\NLP\\experiments\\results\\official_stratified_open_openai_ab_s5_seed20260922.json",
+    "source_results": [
+      "D:\\NLP\\experiments\\results\\official_stratified_open_openai_ab_s5_seed20260922.json"
+    ],
+    "source_system": "open_vocab_guarded_v2",
+    "seed": 20260922,
+    "calibration_per_stratum": 2,
+    "all_samples_calibration": true,
+    "canonicalization_version": "relation_canonicalization_v2",
+    "source_evaluation_selection_uses_gold_locally": true,
+    "source_attempt_ledgers": [
+      null
+    ],
+    "calibration_split_uses_candidate_labels": false,
+    "gold_used_for_candidate_labels_only": true,
+    "calibrator_fit_population": "post_evidence_pre_quantity_candidates",
+    "api_calls": 0
+  },
+  "split": {
+    "calibration_indices": {
+      "a": [
+        199,
+        631,
+        829,
+        1071,
+        1158,
+        1285,
+        1741,
+        1769,
+        2041,
+        2521,
+        2542,
+        2742,
+        3244,
+        3550,
+        4021
+      ],
+      "b": [
+        44,
+        57,
+        85,
+        420,
+        519,
+        666,
+        834,
+        1536,
+        1659,
+        1770,
+        1833,
+        2313,
+        2342,
+        2459,
+        2739
+      ]
+    },
+    "heldout_indices": {
+      "a": [],
+      "b": []
+    }
+  },
+  "candidate_summary": {
+    "all": {
+      "n": 111,
+      "raw_true_positives": 1,
+      "canonical_true_positives": 1,
+      "symmetric_semantic_true_positives": 1,
+      "recovered_by_symmetric_order_invariance": 0,
+      "canonicalization_changed": 10,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "calibration": {
+      "n": 111,
+      "raw_true_positives": 1,
+      "canonical_true_positives": 1,
+      "symmetric_semantic_true_positives": 1,
+      "recovered_by_symmetric_order_invariance": 0,
+      "canonicalization_changed": 10,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "heldout": {
+      "n": 0,
+      "raw_true_positives": 0,
+      "canonical_true_positives": 0,
+      "symmetric_semantic_true_positives": 0,
+      "recovered_by_symmetric_order_invariance": 0,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "calibration_deployment_population": {
+      "n": 98,
+      "raw_true_positives": 0,
+      "canonical_true_positives": 0,
+      "symmetric_semantic_true_positives": 0,
+      "recovered_by_symmetric_order_invariance": 0,
+      "canonicalization_changed": 8,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "heldout_deployment_population": {
+      "n": 0,
+      "raw_true_positives": 0,
+      "canonical_true_positives": 0,
+      "symmetric_semantic_true_positives": 0,
+      "recovered_by_symmetric_order_invariance": 0,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    }
+  },
+  "calibrator": {
+    "version": "beta_isotonic_v1",
+    "status": "degenerate_too_few_positives",
+    "deployable": false,
+    "alpha": 1.0,
+    "beta": 1.0,
+    "min_positives": 2,
+    "min_negatives": 2,
+    "n_samples": 98,
+    "n_positives": 0,
+    "blocks": [
+      {
+        "min_score": 0.9,
+        "max_score": 0.9,
+        "positives": 0,
+        "total": 51,
+        "probability": 0.018867924528301886
+      },
+      {
+        "min_score": 0.95,
+        "max_score": 0.95,
+        "positives": 0,
+        "total": 44,
+        "probability": 0.021739130434782608
+      },
+      {
+        "min_score": 0.96,
+        "max_score": 0.96,
+        "positives": 0,
+        "total": 3,
+        "probability": 0.2
+      }
+    ]
+  },
+  "deployment_support": {
+    "deployable": false,
+    "candidate_level_deployable": false,
+    "status": "degenerate_too_few_positives",
+    "min_positive_samples": 5,
+    "positive_candidates": 0,
+    "positive_samples": 0,
+    "support_level": "insufficient",
+    "warning": null
+  },
+  "calibration_metrics": {
+    "calibration_raw": {
+      "n": 98,
+      "positives": 0,
+      "brier": 0.8549469387755102,
+      "ece": 0.9242857142857143
+    },
+    "calibration_calibrated": {
+      "n": 98,
+      "positives": 0,
+      "brier": 0.0016219375329280831,
+      "ece": 0.02570189683748807
+    },
+    "heldout_raw": {
+      "n": 0,
+      "positives": 0,
+      "brier": 0.0,
+      "ece": 0.0
+    },
+    "heldout_calibrated_diagnostic_only": {
+      "n": 0,
+      "positives": 0,
+      "brier": 0.0,
+      "ece": 0.0
+    }
+  },
+  "calibrated_threshold_selection": {
+    "scope": "post_evidence_pre_quantity_candidates_from_calibration_samples_only",
+    "n_candidates": 98,
+    "n_positives": 0,
+    "recommended_threshold": 0.2,
+    "recommended_metrics": {
+      "threshold": 0.2,
+      "selected": 3,
+      "tp": 0,
+      "fp": 3,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "rows": [
+      {
+        "threshold": 0.0,
+        "selected": 98,
+        "tp": 0,
+        "fp": 98,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "threshold": 0.020303527481542245,
+        "selected": 47,
+        "tp": 0,
+        "fp": 47,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "threshold": 0.1108695652173913,
+        "selected": 3,
+        "tp": 0,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      {
+        "threshold": 0.2,
+        "selected": 3,
+        "tp": 0,
+        "fp": 3,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    ]
+  },
+  "calibration_predicate_policy": {
+    "scope": "post_evidence_pre_quantity_candidates_from_calibration_samples_only",
+    "allowed_predicates": [],
+    "selected": 0,
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "warning": "This policy is selected on sparse calibration labels and must be reported as a calibration-supported ablation, not a universal predicate inventory."
+  },
+  "predicate_constrained_threshold_selection": {
+    "scope": "post_evidence_pre_quantity_candidates_from_calibration_samples_only",
+    "n_candidates": 0,
+    "n_positives": 0,
+    "recommended_threshold": 0.0,
+    "recommended_metrics": {
+      "threshold": 0.0,
+      "selected": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "rows": [
+      {
+        "threshold": 0.0,
+        "selected": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    ]
+  },
+  "candidate_groups": {
+    "by_task": {
+      "a": {
+        "n": 91,
+        "positives": 0,
+        "accepted": 54,
+        "accepted_positives": 0
+      },
+      "b": {
+        "n": 20,
+        "positives": 1,
+        "accepted": 19,
+        "accepted_positives": 0
+      }
+    },
+    "by_evidence_mode": {
+      "cross_sentence": {
+        "n": 48,
+        "positives": 1,
+        "accepted": 27,
+        "accepted_positives": 0
+      },
+      "explicit": {
+        "n": 63,
+        "positives": 0,
+        "accepted": 46,
+        "accepted_positives": 0
+      }
+    },
+    "by_predicate": {
+      "defines": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 0,
+        "accepted_positives": 0
+      },
+      "develops_from": {
+        "n": 2,
+        "positives": 0,
+        "accepted": 2,
+        "accepted_positives": 0
+      },
+      "dictates": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 1,
+        "accepted_positives": 0
+      },
+      "has part": {
+        "n": 31,
+        "positives": 0,
+        "accepted": 18,
+        "accepted_positives": 0
+      },
+      "has_characteristic": {
+        "n": 4,
+        "positives": 0,
+        "accepted": 4,
+        "accepted_positives": 0
+      },
+      "involves": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 1,
+        "accepted_positives": 0
+      },
+      "located in": {
+        "n": 10,
+        "positives": 0,
+        "accepted": 7,
+        "accepted_positives": 0
+      },
+      "part_of": {
+        "n": 55,
+        "positives": 1,
+        "accepted": 34,
+        "accepted_positives": 0
+      },
+      "regulates": {
+        "n": 5,
+        "positives": 0,
+        "accepted": 5,
+        "accepted_positives": 0
+      },
+      "relates_to": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 1,
+        "accepted_positives": 0
+      }
+    },
+    "by_raw_confidence": {
+      "0.9": {
+        "n": 55,
+        "positives": 0,
+        "accepted": 38,
+        "accepted_positives": 0
+      },
+      "0.95": {
+        "n": 53,
+        "positives": 1,
+        "accepted": 32,
+        "accepted_positives": 0
+      },
+      "0.96": {
+        "n": 3,
+        "positives": 0,
+        "accepted": 3,
+        "accepted_positives": 0
+      }
+    }
+  },
+  "implicit_evidence": {
+    "candidates_observed": 48,
+    "accepted_candidates": 27,
+    "canonical_true_positives": 1,
+    "accepted_canonical_true_positives": 0,
+    "requires_new_guarded_v2_generation": false
+  },
+  "structural_projection_audit": {
+    "version": "structural_projection_audit_v1",
+    "uses_gold_for_candidate_labels_only": true,
+    "api_calls": 0,
+    "by_rule": {
+      "taxonomy_inverse_has_part_unrestricted": {
+        "pooled": {
+          "n": 149,
+          "tp": 0,
+          "fp": 149,
+          "positive_samples": 0,
+          "precision": 0.0
+        },
+        "leave_one_sample_out": {
+          "n": 0,
+          "tp": 0,
+          "fp": 0,
+          "positive_samples": 0,
+          "precision": 0.0,
+          "selected_folds": 0,
+          "selection_min_training_positive_samples": 1,
+          "selection_min_training_precision": 0.8
+        },
+        "cross_sample_replicated": false
+      },
+      "taxonomy_to_part_of_unrestricted": {
+        "pooled": {
+          "n": 149,
+          "tp": 0,
+          "fp": 149,
+          "positive_samples": 0,
+          "precision": 0.0
+        },
+        "leave_one_sample_out": {
+          "n": 0,
+          "tp": 0,
+          "fp": 0,
+          "positive_samples": 0,
+          "precision": 0.0,
+          "selected_folds": 0,
+          "selection_min_training_positive_samples": 1,
+          "selection_min_training_precision": 0.8
+        },
+        "cross_sample_replicated": false
+      }
+    },
+    "replicated_rules": [],
+    "exact_positive_candidates": [],
+    "selected_projection_candidates": [],
+    "selected_projection_summary": {
+      "n": 0,
+      "tp": 0,
+      "fp": 0,
+      "positive_samples": 0,
+      "precision": 0.0
+    },
+    "deployment_support": {
+      "deployable": false,
+      "status": "insufficient_projection_positive_samples",
+      "min_positive_samples": 5,
+      "min_precision": 0.8,
+      "positive_samples": 0,
+      "precision": 0.0
+    },
+    "combined_with_base_diagnostic": {
+      "positive_samples": 0,
+      "base_positive_samples": 0,
+      "new_projection_positive_samples": 0,
+      "passes_sample_count_only": false,
+      "deployable": false,
+      "warning": "The combined sample count is diagnostic only until the projection channel independently reaches its support gate."
+    }
+  },
+  "symmetric_serialization_audit": {
+    "scope": "accepted_candidates_only",
+    "symmetric_predicates": [
+      "disjoint with",
+      "equivalent class"
+    ],
+    "surface_morphology_version": "relation_surface_morphology_v1",
+    "max_predictions_per_sample": 8,
+    "official_exact_original": {
+      "predictions": 73,
+      "gold": 116,
+      "tp": 0,
+      "fp": 73,
+      "fn": 116,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "positive_samples": 0
+    },
+    "semantic_order_invariant_diagnostic": {
+      "predictions": 73,
+      "gold": 109,
+      "tp": 0,
+      "fp": 73,
+      "fn": 109,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "positive_samples": 0
+    },
+    "semantic_order_and_surface_invariant_diagnostic": {
+      "predictions": 73,
+      "gold": 109,
+      "tp": 0,
+      "fp": 73,
+      "fn": 109,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "positive_samples": 0
+    },
+    "official_exact_surface_canonicalization_ablation": {
+      "predictions": 73,
+      "gold": 116,
+      "tp": 0,
+      "fp": 73,
+      "fn": 116,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "positive_samples": 0
+    },
+    "surface_canonicalization_transition": {
+      "recovered_exact": 0,
+      "lost_exact": 0,
+      "recovered": [],
+      "lost": []
+    },
+    "official_exact_bidirectional_serialization_ablation": {
+      "predictions": 73,
+      "gold": 116,
+      "tp": 0,
+      "fp": 73,
+      "fn": 116,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "positive_samples": 0
+    },
+    "bidirectional_predictions_added": 0,
+    "official_exact_cap_aware_bidirectional_ablation": {
+      "predictions": 73,
+      "gold": 116,
+      "tp": 0,
+      "fp": 73,
+      "fn": 116,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "positive_samples": 0
+    },
+    "cap_aware_bidirectional_transition": {
+      "recovered_exact": 0,
+      "lost_exact": 0,
+      "recovered": [],
+      "lost": []
+    },
+    "cap_aware_bidirectional_predictions_added": 0,
+    "official_exact_surface_plus_cap_aware_bidirectional_ablation": {
+      "predictions": 73,
+      "gold": 116,
+      "tp": 0,
+      "fp": 73,
+      "fn": 116,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "positive_samples": 0
+    },
+    "surface_plus_cap_aware_bidirectional_transition": {
+      "recovered_exact": 0,
+      "lost_exact": 0,
+      "recovered": [],
+      "lost": []
+    },
+    "surface_plus_cap_aware_bidirectional_predictions_added": 0,
+    "deployable": false,
+    "confirmatory_eligible": false,
+    "warning": "Symmetric/surface-invariant matching is not the official exact metric. Surface canonicalization and bidirectional serialization are gold-blind diagnostic ablations and require adequate independent support before use."
+  },
+  "exact_positive_candidates": [
+    {
+      "task": "b",
+      "sample_index": 1833,
+      "stratum": "high",
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "infructescence axis",
+        "part_of",
+        "infructescence"
+      ],
+      "canonical_triple": [
+        "infructescence axis",
+        "part_of",
+        "infructescence"
+      ],
+      "raw_correct": true,
+      "canonical_correct": true,
+      "symmetric_semantic_correct": true,
+      "canonicalization_changed": false,
+      "evidence_mode": "cross_sentence",
+      "evidence_gap_chars": 1604,
+      "postprocess_status": "rejected",
+      "rejection_reasons": [
+        "implicit_evidence_too_distant"
+      ]
+    }
+  ],
+  "near_match_summary": {
+    "endpoints_exact_predicate_mismatch": 1,
+    "endpoints_reversed": 2,
+    "exact": 1,
+    "none": 105,
+    "predicate_subject_exact": 2
+  },
+  "actionable_near_matches": [
+    {
+      "task": "a",
+      "sample_index": 2521,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "second-order administrative region",
+        "part_of",
+        "administrative region structure"
+      ],
+      "canonical_triple": [
+        "second-order administrative region",
+        "part_of",
+        "administrative region structure"
+      ],
+      "near_match_type": "predicate_subject_exact",
+      "near_gold_triples": [
+        [
+          "second-order administrative region",
+          "part_of",
+          "first-order administrative region"
+        ]
+      ],
+      "evidence_mode": "cross_sentence",
+      "evidence_gap_chars": 2,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 2521,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "third-order administrative region",
+        "part_of",
+        "administrative region structure"
+      ],
+      "canonical_triple": [
+        "third-order administrative region",
+        "part_of",
+        "administrative region structure"
+      ],
+      "near_match_type": "predicate_subject_exact",
+      "near_gold_triples": [
+        [
+          "third-order administrative region",
+          "part_of",
+          "second-order administrative region"
+        ]
+      ],
+      "evidence_mode": "cross_sentence",
+      "evidence_gap_chars": 2,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 2542,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "fourier transform",
+        "part_of",
+        "fourier analysis"
+      ],
+      "canonical_triple": [
+        "fourier transform",
+        "part_of",
+        "fourier analysis"
+      ],
+      "near_match_type": "endpoints_reversed",
+      "near_gold_triples": [
+        [
+          "fourier analysis",
+          "equivalent class",
+          "fourier transform"
+        ]
+      ],
+      "evidence_mode": "cross_sentence",
+      "evidence_gap_chars": 1,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 3550,
+      "split": "calibration",
+      "confidence": 0.9,
+      "raw_triple": [
+        "intertidal zone",
+        "part of",
+        "littoral zone"
+      ],
+      "canonical_triple": [
+        "intertidal zone",
+        "part_of",
+        "littoral zone"
+      ],
+      "near_match_type": "endpoints_exact_predicate_mismatch",
+      "near_gold_triples": [
+        [
+          "intertidal zone",
+          "equivalent class",
+          "littoral zone"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "b",
+      "sample_index": 1833,
+      "split": "calibration",
+      "confidence": 0.9,
+      "raw_triple": [
+        "flower",
+        "has_part",
+        "gynoecium"
+      ],
+      "canonical_triple": [
+        "flower",
+        "has part",
+        "gynoecium"
+      ],
+      "near_match_type": "endpoints_reversed",
+      "near_gold_triples": [
+        [
+          "gynoecium",
+          "part_of",
+          "flower"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    }
+  ],
+  "interpretation": {
+    "calibrated_metrics_are_deployable": false,
+    "warning": "Do not apply this calibrator: the calibration split has too few positive candidates. The calibrated held-out metrics are diagnostic only."
+  }
+}

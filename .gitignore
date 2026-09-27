@@ -1,0 +1,41 @@
+# Local credentials and environment overrides
+.env
+.env.*
+!.env.example
+!.env.example.*
+*.key
+api_key*
+src/dots_config.json
+
+# Third-party datasets and cloned baselines
+/data/
+
+# Generated experiment caches and resumable checkpoints
+/experiments/results/blind_cache/
+/experiments/results/checkpoints/
+/experiments/results/contamination_probe_cache/
+/experiments/results/contamination_surface_cache/
+/experiments/results/nonce_relation_holdout_cache/
+
+# Python build, test, and environment artifacts
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+/src/_tmp_*.py
+
+# Local tooling and editor state
+/.workbuddy/
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

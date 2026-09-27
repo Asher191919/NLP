@@ -1,0 +1,58 @@
+{
+  "n_samples_compared": 30,
+  "sample_exact_agreement_rate": 0.2,
+  "relation_set_jaccard_mean": 0.36459130919085153,
+  "micro_relation_set_jaccard": 0.34355828220858897,
+  "positive_agreement_rate": 0.5114155251141552,
+  "asserted_relations_union": 163,
+  "annotator_a_relations": 114,
+  "annotator_b_relations": 105,
+  "agreed_relations": 56,
+  "annotator_a_only_relations": 58,
+  "annotator_b_only_relations": 49,
+  "predicate_disagreement_histogram": {
+    "derives from": 33,
+    "part_of": 21,
+    "located in": 20,
+    "develops_from": 14,
+    "regulates": 11,
+    "has part": 6,
+    "positively regulates": 1,
+    "causes": 1
+  },
+  "per_task": {
+    "a": {
+      "samples": 15,
+      "exact": 3,
+      "jaccard_sum": 5.636842105263158,
+      "asserted": 63,
+      "asserted_a": 59,
+      "asserted_b": 30,
+      "only_a": 33,
+      "only_b": 4,
+      "agreed": 26,
+      "sample_exact_agreement_rate": 0.2,
+      "relation_set_jaccard_mean": 0.3757894736842105,
+      "micro_relation_set_jaccard": 0.4126984126984127,
+      "positive_agreement_rate": 0.5842696629213483
+    },
+    "b": {
+      "samples": 15,
+      "exact": 3,
+      "jaccard_sum": 5.300897170462388,
+      "asserted": 100,
+      "asserted_a": 55,
+      "asserted_b": 75,
+      "only_a": 25,
+      "only_b": 45,
+      "agreed": 30,
+      "sample_exact_agreement_rate": 0.2,
+      "relation_set_jaccard_mean": 0.35339314469749256,
+      "micro_relation_set_jaccard": 0.3,
+      "positive_agreement_rate": 0.46153846153846156
+    }
+  },
+  "protocol": "relation_text_model_annotation_v1",
+  "packet_id": "5b53d848edca6abb58f4",
+  "annotation_source": "model"
+}

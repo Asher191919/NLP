@@ -1,0 +1,469 @@
+{
+  "meta": {
+    "protocol": "relation_human_calibration_v1",
+    "audit_only": true,
+    "packet_id": "5b53d848edca6abb58f4",
+    "annotation_manifest_sha256": "2049a811de2bc7f9437d61ad99ee115be79a4eff4c119f0161d63c9a7aaebff5",
+    "system": "open_vocab_guarded_v2",
+    "model": "dots3-note-prev",
+    "external_destination": "https://note3-prev-api.askdiandian.com/v1",
+    "contains_source_text": false,
+    "selection_uses_official_gold": false,
+    "selection_uses_model_output": false,
+    "protected_gold_visible_to_model": false,
+    "annotation_status": "pending_human_double_annotation",
+    "estimated_calls": 30,
+    "estimated_generation_cache_hits": 30,
+    "estimated_exact_cache_replays": 30,
+    "estimated_local_reprocesses": 0,
+    "estimated_external_calls": 0,
+    "total_prompt_chars": 127483
+  },
+  "tasks": {
+    "task_a": {
+      "n_samples": 15,
+      "samples": [
+        {
+          "sample_key": "0cf8c1f31b7e58e5f6de",
+          "source_index": 48,
+          "source_sample_id_sha256": "1941e55f44e0d445dd7541b17e2526f9bde1d2e81f0dc03d83b12e69c48bcb93",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2866,
+          "prompt_sha256": "5b00354348f2af1fc59c1e5ec3a35a19ee219d11911eb2c775b2d17542a44627",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "0e8dc10a03ef9c2738a9",
+          "source_index": 562,
+          "source_sample_id_sha256": "65c415417d821f51f399a8161667e79d9b3e4a9fa3bf122c4dcff53a13e6772a",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 3627,
+          "prompt_sha256": "5c75ae84c93a3124a0b9d17b8e5c8fd38652dab04895848b2bd38a733820db2a",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "3d26a16175967faadac4",
+          "source_index": 659,
+          "source_sample_id_sha256": "89467504f117eacb5c365dede8b315d39bf56acf5375bf8e855babbd353eb2a9",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2712,
+          "prompt_sha256": "d7d405147b8c9e6668c04ee97eb2b946ed0f41d3f9548630d9e3c9dccd07d6a4",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "3e3c72ddf55be826e2e3",
+          "source_index": 864,
+          "source_sample_id_sha256": "59ed14c93d5dd4de02a1ac9e598f3da41780f963de802ab7a325f72060a91c16",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2355,
+          "prompt_sha256": "65757ee7fe0615189f736ed07ed97270d9392ce736f27d9cd81a315070465318",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "c8afd393363bcfb1d758",
+          "source_index": 1108,
+          "source_sample_id_sha256": "c19f38ee117edaf3082ae788cf47233c21df0c411085180c2e50befc78930e1c",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1606,
+          "prompt_sha256": "d876a1993fb8638e577f52b5a2b61718f7eb0e1f0f97a910915fc9473b857222",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "723685d243983ec78bc9",
+          "source_index": 1159,
+          "source_sample_id_sha256": "5ab6efef73ead6e10b9d3d589c522f9da9c7ab0791d5f1f56390f4541c43e0c0",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2448,
+          "prompt_sha256": "2aca4370444bd172eab0dbbea9dc3509641d010df777ede1fd9d3a642f3b48bb",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "037dc73c98f67807cb95",
+          "source_index": 1286,
+          "source_sample_id_sha256": "f7863f0306d3ae917cd3a6abf855f1d0def393af6fb2989e092690c1e3145be0",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1354,
+          "prompt_sha256": "08389d9b51ec0c94c667d0e462ce31c28d9e84333c1f11d93981981aed87a7f6",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "a3d7c70645dd818fb70a",
+          "source_index": 1914,
+          "source_sample_id_sha256": "73dc1c663bda761493553ca108597a52ac67472d9c7169ab126e5695cd6ffd03",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1951,
+          "prompt_sha256": "62dfde52a5e15815949b3200e47d68f740191cb651f0f5787dc4e4967c85620e",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "e73d073a8f76b0a88658",
+          "source_index": 1966,
+          "source_sample_id_sha256": "8f6db9eacaad0ad3e9c1c15751bb59ed9ea272f1bed3e662a28a8258d73c71eb",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2694,
+          "prompt_sha256": "b691d084a98b4b586be21c496b4d18a70bb3169626a3ba38bfd6ccd3c1ed7ce1",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "c3d79112a1708e865c00",
+          "source_index": 2174,
+          "source_sample_id_sha256": "2f5cc94c0899f5e2b033c2c1d67ada8cd92eaa85feb348f527713ccb4223d7c9",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2632,
+          "prompt_sha256": "0e959ddfa5050cf7d75edb8bde96b13e06016bc829f210da6e6c6900b756d66e",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "f458c2a4ec6a51e5fd7d",
+          "source_index": 2319,
+          "source_sample_id_sha256": "92adb29ec1fb0868135ba4685359df5e442abe5d1818010f18af8a1a7cbf1a00",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1794,
+          "prompt_sha256": "99f2a8cd155ba8296b6d427d28a1696ec6b5b9487f5d88ffcb991e91f91b011a",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "c1236bd636d750c34e84",
+          "source_index": 2522,
+          "source_sample_id_sha256": "9b52c272dfc97b2624b8118260c1d5cfdd1476e65f53cfd2e702342728eeb2c1",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2978,
+          "prompt_sha256": "d9fcb6b610fd0109da7e0f40886fa9bd278da4055e4cefaf04bd3d8f7dc9fb90",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "812be39864326e677c2e",
+          "source_index": 3390,
+          "source_sample_id_sha256": "d2ef36f7b82420266d7a6647acb28d115a057b7c8806571e1cc308c6304880d5",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1324,
+          "prompt_sha256": "d1ad5e319673cf4b8a80b879ba04e76a667d06f0da12ba31b0ce5f5bf2970063",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "4335dd9d441401a9de73",
+          "source_index": 3515,
+          "source_sample_id_sha256": "aa604496e4051f890c724b4de0bcf1a95924486353b7650b3a6567be35b33789",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 1090,
+          "prompt_sha256": "bf02a63d080e19f67bf7ff0a167207787553f34587e65f2491279dff03f999bf",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "a2ed3a0c5534ab6ee628",
+          "source_index": 4153,
+          "source_sample_id_sha256": "b836a2bab18490de8c86244229deaae7b4476a482e3f651f420e4c4eecfce3ff",
+          "input_fields": [
+            "context"
+          ],
+          "protected_gold_field": "primitive-ontology-triples",
+          "context_chars_sent": 2665,
+          "prompt_sha256": "c0529d83e21dfc3d1a9de3609b1d84ac5f94d67c05fa402b1249aa6262aea94a",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        }
+      ]
+    },
+    "task_b": {
+      "n_samples": 15,
+      "samples": [
+        {
+          "sample_key": "2ef68fa8681e2c0013da",
+          "source_index": 96,
+          "source_sample_id_sha256": "68c7db42ae8a491f2f6ab5dc2085ec6ea9295f3298e7cca257a85d81fa6e9d2a",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1623,
+          "prompt_sha256": "a11da3063ae37273b557a1158754f5023eb2837141b65c5badcb31379e396694",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "3ca254ed1680846607b3",
+          "source_index": 118,
+          "source_sample_id_sha256": "76a1617c7df46f4bce40f2f08a27fbeae786b5d2953c8235c39cbf9b4c37949d",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1655,
+          "prompt_sha256": "9873b69c37239c487051e0384b6cf8de84209b7132defe84327c81f04b682283",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "bf6885a86c3bf4522cbe",
+          "source_index": 209,
+          "source_sample_id_sha256": "82905e52b5407c6f12deed4f94b5e898a801bcd2c787e203fd51252770913060",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 3384,
+          "prompt_sha256": "ff25a598592c4da755cf2fcb37d7951551410bf30dc0df684614bd4c287e6b11",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "ffbc4d6ce0336591c572",
+          "source_index": 258,
+          "source_sample_id_sha256": "fd19242f010e5ac2a96374951e369ad5886502d79eb01728f8d0a5cbd712258c",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 3391,
+          "prompt_sha256": "7360f64b7c5d61b90f23ad3b7956d628c5e503c6ff6412648bbb12e9dca4291d",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "ad3248b084cb29772a3c",
+          "source_index": 349,
+          "source_sample_id_sha256": "7bb7172750dc2aededb1c7ed950d13e1867489f8a6da912a2d02dc08308a9f2b",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1820,
+          "prompt_sha256": "4bccc913b1a3b79f2fe913f38e8291b55846577fbded88752adcba25e131d1aa",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "04e4fd278857190bab4d",
+          "source_index": 369,
+          "source_sample_id_sha256": "23df1605a2f41dc0eee7e0c92e5064334973019b9f6c6ff59232abc9a31ef816",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 3900,
+          "prompt_sha256": "1e783969481f0a6a3102d6b51b282093dab17d9f1976f56bb52baf04d215dc34",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "e30db887e826e796ed85",
+          "source_index": 445,
+          "source_sample_id_sha256": "c090e65eaa109e0ece5847762012a9c2718346b14e993183be67635f8c807c8d",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1481,
+          "prompt_sha256": "853f2dd6cd065744f0810639553a167e414dd0bf845972d1d27c11be1f312902",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "17c5af20cab2ecdc1230",
+          "source_index": 476,
+          "source_sample_id_sha256": "7c3a316c7bcda372f1bef6334d9572bc3b3df224d4f09521dd49cf2320417cfb",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1902,
+          "prompt_sha256": "00a3a9b988cbcd0587435dfc3ce5ea5033c3c2287b75b953867931ad9768c1bb",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "7b7e28cf0ffb25163635",
+          "source_index": 494,
+          "source_sample_id_sha256": "df4a8d74f2700edb1625a34fc078ad1a80ade29166d174eac6ea4566fcd81403",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1762,
+          "prompt_sha256": "5836801db02b49d62ce3fbcac859b780cd545363ef62a7ab765fe76d7fff3844",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "e8cc5f686501d04654b7",
+          "source_index": 824,
+          "source_sample_id_sha256": "548cbd580f78d797d08da7e8c5a527bd40849c26c0112ffbdc8273dc3d7cd94a",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2230,
+          "prompt_sha256": "7e4ad8ce98b68ece85eac75050d057f1b0e0fb81e4e6d24035a01423f11a0b6f",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "1e67a8921ca9c82a9309",
+          "source_index": 1002,
+          "source_sample_id_sha256": "56948de7dde7062088a54201b6a8cebcfffe82e84da4110fa0edcf68be590acc",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2997,
+          "prompt_sha256": "f456031c0febc0f6f1fd4ae16e2f003d98bfc2cf0c7623e0213fb2c1589bc65e",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "46ed7f3706ce269756c4",
+          "source_index": 1355,
+          "source_sample_id_sha256": "d10704a0e92235afa48867dada9243923b4f6da0260f90353a522961ba49a6ed",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 3657,
+          "prompt_sha256": "43cecb9ac0a5bcf2da5568b2ccfaf1582e91d677fef4722ecaba09e6166ee447",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "dbceb06136ce5887a0ba",
+          "source_index": 1398,
+          "source_sample_id_sha256": "6a14e50c6c4039c43079aca0e3c6c34c60c82994e1dc19ac1a8d77c2bb5b69b8",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 1650,
+          "prompt_sha256": "84400ce14ae19c44d47ca030455221fb7d903864ce30650ac2827e65cb2bda49",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "3ae2c6f2190894cf523d",
+          "source_index": 1491,
+          "source_sample_id_sha256": "0af2b9f09a6b1d59b6c3d39cb7df1899831114f4ba1bb3b96a1a88c3e5ac4ae8",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2185,
+          "prompt_sha256": "79587de54165dee25ac43b35784bf5102c8a94bc9c58990b5e9080a7e54fd668",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        },
+        {
+          "sample_key": "ca3a5c5ed3aaedfc58af",
+          "source_index": 2560,
+          "source_sample_id_sha256": "05bf91e489a4501f782263407d7a4c79d60983d3a940fc915ba684b6f8db7901",
+          "input_fields": [
+            "context",
+            "initial-primitive-ontology-triples",
+            "terms",
+            "types"
+          ],
+          "protected_gold_field": "extended-primitive-ontology-triples",
+          "context_chars_sent": 2441,
+          "prompt_sha256": "44e76ce8d3b2c7699efb10af63d93d67320547a0cbcb1c9cabb948f48a9ac7c3",
+          "generation_cache_hit": true,
+          "exact_cache_hit": true
+        }
+      ]
+    }
+  }
+}

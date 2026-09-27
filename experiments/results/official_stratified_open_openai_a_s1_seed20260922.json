@@ -1,0 +1,717 @@
+{
+  "meta": {
+    "challenge": "LLMs4OL 2026",
+    "protocol": "llms4ol2026_stratified_open_v1",
+    "model": "dots3-note-prev",
+    "tasks": [
+      "a"
+    ],
+    "systems": [
+      "open_vocab_guarded"
+    ],
+    "samples_per_stratum": 1,
+    "seed": 20260922,
+    "selection_uses_gold_locally": true,
+    "gold_visible_to_model": false,
+    "confidence_threshold": 0.85,
+    "max_nontax": 8,
+    "strata": {
+      "low": "exactly 1 non-taxonomic gold triple",
+      "medium": "2-4 non-taxonomic gold triples",
+      "high": "at least 5 non-taxonomic gold triples"
+    }
+  },
+  "tasks": {
+    "task_a": {
+      "meta": {
+        "task": "a",
+        "task_name": "Flagship",
+        "selected_indices": [
+          1181,
+          2041,
+          4021
+        ],
+        "n_samples": 3
+      },
+      "systems": {
+        "open_vocab_guarded": {
+          "meta": {
+            "challenge": "LLMs4OL 2026",
+            "protocol": "llms4ol2026_blind_v1",
+            "input_policy": "context_only",
+            "gold_visible_to_model": false,
+            "task": "a",
+            "task_name": "Flagship",
+            "system": "open_vocab_guarded",
+            "backend": "openai",
+            "model": "dots3-note-prev",
+            "offset": 0,
+            "limit": 3,
+            "workers": 1,
+            "max_context_chars": 6000,
+            "confidence_threshold": 0.85,
+            "max_nontax": 8,
+            "max_completion_tokens": 16384,
+            "metric": "llms4ol2026_graph_similarity_exact",
+            "elapsed_sec": 572.161,
+            "elapsed_sec_scope": "current_process_including_cache_replay",
+            "selection": "non_tax_gold_density_stratified_local_only",
+            "selected_indices": [
+              1181,
+              2041,
+              4021
+            ]
+          },
+          "summary": {
+            "target_n": 3,
+            "n_success": 3,
+            "n_failed": 0,
+            "complete": true,
+            "term_typing_f1_micro": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 10,
+              "fn": 0
+            },
+            "taxonomy_f1_micro": {
+              "precision": 0.5333333333333333,
+              "recall": 0.27586206896551724,
+              "f1": 0.36363636363636365,
+              "tp": 8,
+              "fp": 7,
+              "fn": 21
+            },
+            "nontax_f1_micro": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 24,
+              "fn": 21
+            },
+            "official_graph_similarity_avg": 0.169354983002326,
+            "composite_typing_tax_gs": 0.17766378221289655,
+            "nontax_pred_total": 24,
+            "nontax_gold_total": 21,
+            "successful_latency_sec": {
+              "min": 94.357,
+              "median": 223.69,
+              "p95": 254.104,
+              "max": 254.104,
+              "sum": 572.151
+            },
+            "successful_runner_attempts_total": 3,
+            "successful_samples_with_retry": 0,
+            "guard": {
+              "samples": 3,
+              "raw_nontax": 24,
+              "accepted_nontax": 24,
+              "rejected_nontax": 0,
+              "rejection_reason_counts": {}
+            }
+          },
+          "samples": [
+            {
+              "sample_index": 1181,
+              "sample_id": "c17503fefb9443d893468e651b33cf69",
+              "status": "ok",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded\\01181_4572aab0e2.json",
+              "attempts": 1,
+              "latency_sec": 254.104,
+              "metrics": {
+                "typing": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 1,
+                  "fn": 0
+                },
+                "taxonomy": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 2,
+                  "fn": 16
+                },
+                "nontax": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 8,
+                  "fn": 16
+                },
+                "official_graph_similarity": {
+                  "edge_f1": 0.0,
+                  "neighborhood_similarity": 0.0,
+                  "taxonomy_similarity": 0.0,
+                  "graph_similarity": 0.0,
+                  "metric_id": "llms4ol2026_graph_similarity_exact",
+                  "external_reportable": true,
+                  "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+                },
+                "gold_counts": {
+                  "typing": 0,
+                  "taxonomy": 16,
+                  "nontax": 16
+                },
+                "pred_counts": {
+                  "typing": 1,
+                  "taxonomy": 2,
+                  "nontax": 8
+                }
+              },
+              "guard_diagnostics": {
+                "confidence_threshold": 0.85,
+                "max_nontax": 8,
+                "raw_candidates": 11,
+                "accepted_core": 3,
+                "raw_nontax": 8,
+                "accepted_nontax": 8,
+                "rejected_nontax": 0,
+                "rejection_reason_counts": {},
+                "accepted_nontax_candidates": [
+                  {
+                    "triple": [
+                      "enginespecification",
+                      "for",
+                      "automotive components"
+                    ],
+                    "confidence": 1.0,
+                    "evidence": "enginespecification for automotive components",
+                    "position": 3
+                  },
+                  {
+                    "triple": [
+                      "nutritioninformation",
+                      "for",
+                      "food items"
+                    ],
+                    "confidence": 1.0,
+                    "evidence": "nutritioninformation for food items",
+                    "position": 4
+                  },
+                  {
+                    "triple": [
+                      "monetaryamount",
+                      "for",
+                      "standard transactions"
+                    ],
+                    "confidence": 1.0,
+                    "evidence": "monetaryamount for standard transactions",
+                    "position": 5
+                  },
+                  {
+                    "triple": [
+                      "datedmoneyspecification",
+                      "when",
+                      "temporal validity is required"
+                    ],
+                    "confidence": 1.0,
+                    "evidence": "datedmoneyspecification when temporal validity is required",
+                    "position": 6
+                  },
+                  {
+                    "triple": [
+                      "exchangeratespecification",
+                      "captures",
+                      "currency fluctuations"
+                    ],
+                    "confidence": 1.0,
+                    "evidence": "currency fluctuations are captured through exchangeratespecification",
+                    "position": 7
+                  },
+                  {
+                    "triple": [
+                      "offershippingdetails",
+                      "aggregates",
+                      "transport options"
+                    ],
+                    "confidence": 1.0,
+                    "evidence": "offershippingdetails object aggregates transport options",
+                    "position": 8
+                  },
+                  {
+                    "triple": [
+                      "shippingratesettings",
+                      "determines",
+                      "costs"
+                    ],
+                    "confidence": 1.0,
+                    "evidence": "shippingratesettings to determine costs based on geographic parameters",
+                    "position": 9
+                  },
+                  {
+                    "triple": [
+                      "geoshape",
+                      "defines",
+                      "parameters"
+                    ],
+                    "confidence": 1.0,
+                    "evidence": "these parameters can be defined with high precision via geoshape",
+                    "position": 10
+                  }
+                ],
+                "rejected_nontax_candidates": []
+              },
+              "stratum": "high",
+              "nontax_gold": 16
+            },
+            {
+              "sample_index": 2041,
+              "sample_id": "0b10e30137b949e69133097528a75084",
+              "status": "ok",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded\\02041_e8884dae97.json",
+              "attempts": 1,
+              "latency_sec": 223.69,
+              "metrics": {
+                "typing": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 8,
+                  "fn": 0
+                },
+                "taxonomy": {
+                  "precision": 0.875,
+                  "recall": 0.875,
+                  "f1": 0.875,
+                  "tp": 7,
+                  "fp": 1,
+                  "fn": 1
+                },
+                "nontax": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 8,
+                  "fn": 4
+                },
+                "official_graph_similarity": {
+                  "edge_f1": 0.38888888888888895,
+                  "neighborhood_similarity": 0.13796296296296295,
+                  "taxonomy_similarity": 0.7777777777777778,
+                  "graph_similarity": 0.4348765432098765,
+                  "metric_id": "llms4ol2026_graph_similarity_exact",
+                  "external_reportable": true,
+                  "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+                },
+                "gold_counts": {
+                  "typing": 0,
+                  "taxonomy": 8,
+                  "nontax": 4
+                },
+                "pred_counts": {
+                  "typing": 8,
+                  "taxonomy": 8,
+                  "nontax": 8
+                }
+              },
+              "guard_diagnostics": {
+                "confidence_threshold": 0.85,
+                "max_nontax": 8,
+                "raw_candidates": 24,
+                "accepted_core": 16,
+                "raw_nontax": 8,
+                "accepted_nontax": 8,
+                "rejected_nontax": 0,
+                "rejection_reason_counts": {},
+                "accepted_nontax_candidates": [
+                  {
+                    "triple": [
+                      "stem",
+                      "bears",
+                      "leaves"
+                    ],
+                    "confidence": 0.95,
+                    "evidence": "the stem, which is fundamentally a shoot axis that bears leaves",
+                    "position": 16
+                  },
+                  {
+                    "triple": [
+                      "stem",
+                      "facilitates",
+                      "nutrient transport"
+                    ],
+                    "confidence": 0.95,
+                    "evidence": "the stem, which is fundamentally a shoot axis that bears leaves and facilitates nutrient transport",
+                    "position": 17
+                  },
+                  {
+                    "triple": [
+                      "branches",
+                      "expand",
+                      "canopy"
+                    ],
+                    "confidence": 0.95,
+                    "evidence": "branches, each functioning independently as a shoot axis to expand the canopy",
+                    "position": 18
+                  },
+                  {
+                    "triple": [
+                      "rhizome",
+                      "enables",
+                      "vegetative propagation"
+                    ],
+                    "confidence": 0.95,
+                    "evidence": "vegetative propagation and storage occur via the rhizome",
+                    "position": 19
+                  },
+                  {
+                    "triple": [
+                      "shoot axis tuber",
+                      "accumulates",
+                      "reserves"
+                    ],
+                    "confidence": 0.95,
+                    "evidence": "shoot axis tuber are classified as shoot axes, having adapted to accumulate reserves",
+                    "position": 20
+                  },
+                  {
+                    "triple": [
+                      "inflorescence axis",
+                      "optimized_for",
+                      "pollination"
+                    ],
+                    "confidence": 0.95,
+                    "evidence": "inflorescence axis, a specialized shoot axis type optimized for pollination",
+                    "position": 21
+                  },
+                  {
+                    "triple": [
+                      "infructescence axis",
+                      "supports",
+                      "fruit cluster"
+                    ],
+                    "confidence": 0.95,
+                    "evidence": "infructescence axis, which retains its identity as a shoot axis while supporting the developing fruit cluster",
+                    "position": 22
+                  },
+                  {
+                    "triple": [
+                      "shoot axis apex",
+                      "responsible_for",
+                      "primary growth"
+                    ],
+                    "confidence": 0.95,
+                    "evidence": "shoot axis apex is classified as a shoot axis, representing the apical segment responsible for primary growth",
+                    "position": 23
+                  }
+                ],
+                "rejected_nontax_candidates": []
+              },
+              "stratum": "medium",
+              "nontax_gold": 4
+            },
+            {
+              "sample_index": 4021,
+              "sample_id": "c808267a7c7847c289c0633a5df92a80",
+              "status": "ok",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded\\04021_788e04c935.json",
+              "attempts": 1,
+              "latency_sec": 94.357,
+              "metrics": {
+                "typing": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 1,
+                  "fn": 0
+                },
+                "taxonomy": {
+                  "precision": 0.2,
+                  "recall": 0.2,
+                  "f1": 0.20000000000000004,
+                  "tp": 1,
+                  "fp": 4,
+                  "fn": 4
+                },
+                "nontax": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 8,
+                  "fn": 1
+                },
+                "official_graph_similarity": {
+                  "edge_f1": 0.1,
+                  "neighborhood_similarity": 0.03623188405797101,
+                  "taxonomy_similarity": 0.08333333333333333,
+                  "graph_similarity": 0.07318840579710145,
+                  "metric_id": "llms4ol2026_graph_similarity_exact",
+                  "external_reportable": true,
+                  "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+                },
+                "gold_counts": {
+                  "typing": 0,
+                  "taxonomy": 5,
+                  "nontax": 1
+                },
+                "pred_counts": {
+                  "typing": 1,
+                  "taxonomy": 5,
+                  "nontax": 8
+                }
+              },
+              "guard_diagnostics": {
+                "confidence_threshold": 0.85,
+                "max_nontax": 8,
+                "raw_candidates": 14,
+                "accepted_core": 6,
+                "raw_nontax": 8,
+                "accepted_nontax": 8,
+                "rejected_nontax": 0,
+                "rejection_reason_counts": {},
+                "accepted_nontax_candidates": [
+                  {
+                    "triple": [
+                      "strip mining",
+                      "involves",
+                      "removal of overburden"
+                    ],
+                    "confidence": 0.9,
+                    "evidence": "strip mining, a method that is fundamentally a type of mining involving the removal of overburden",
+                    "position": 6
+                  },
+                  {
+                    "triple": [
+                      "spatial subset",
+                      "enables",
+                      "isolation of specific geographic regions"
+                    ],
+                    "confidence": 0.9,
+                    "evidence": "A spatial subset enables the isolation of specific geographic regions",
+                    "position": 7
+                  },
+                  {
+                    "triple": [
+                      "parameter subset",
+                      "allows",
+                      "selection of critical variables"
+                    ],
+                    "confidence": 0.9,
+                    "evidence": "a parameter subset allows for the selection of critical variables",
+                    "position": 8
+                  },
+                  {
+                    "triple": [
+                      "computational ecology",
+                      "utilizes",
+                      "data mining algorithms"
+                    ],
+                    "confidence": 0.9,
+                    "evidence": "computational ecology increasingly utilizes data mining algorithms",
+                    "position": 9
+                  },
+                  {
+                    "triple": [
+                      "data mining process",
+                      "streamlines",
+                      "complex information"
+                    ],
+                    "confidence": 0.9,
+                    "evidence": "this data mining process is categorized as a specialized subset of data reduction services, streamlining complex information",
+                    "position": 10
+                  },
+                  {
+                    "triple": [
+                      "mining protocol",
+                      "facilitates",
+                      "more granular impact evaluations"
+                    ],
+                    "confidence": 0.9,
+                    "evidence": "mining protocol as a specific subset of industrial operations, which facilitates more granular impact evaluations",
+                    "position": 11
+                  },
+                  {
+                    "triple": [
+                      "classification systems",
+                      "are essential for",
+                      "managing resource extraction"
+                    ],
+                    "confidence": 0.9,
+                    "evidence": "rigorous classification systems are essential for managing resource extraction",
+                    "position": 12
+                  },
+                  {
+                    "triple": [
+                      "classification systems",
+                      "are essential for",
+                      "monitoring ecosystem health"
+                    ],
+                    "confidence": 0.9,
+                    "evidence": "rigorous classification systems are essential for managing resource extraction and monitoring ecosystem health",
+                    "position": 13
+                  }
+                ],
+                "rejected_nontax_candidates": []
+              },
+              "stratum": "low",
+              "nontax_gold": 1
+            }
+          ],
+          "strata": {
+            "low": {
+              "target_n": 1,
+              "n_success": 1,
+              "n_failed": 0,
+              "complete": true,
+              "term_typing_f1_micro": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "tp": 0,
+                "fp": 1,
+                "fn": 0
+              },
+              "taxonomy_f1_micro": {
+                "precision": 0.2,
+                "recall": 0.2,
+                "f1": 0.20000000000000004,
+                "tp": 1,
+                "fp": 4,
+                "fn": 4
+              },
+              "nontax_f1_micro": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "tp": 0,
+                "fp": 8,
+                "fn": 1
+              },
+              "official_graph_similarity_avg": 0.07318840579710145,
+              "composite_typing_tax_gs": 0.09106280193236715,
+              "nontax_pred_total": 8,
+              "nontax_gold_total": 1,
+              "successful_latency_sec": {
+                "min": 94.357,
+                "median": 94.357,
+                "p95": 94.357,
+                "max": 94.357,
+                "sum": 94.357
+              },
+              "successful_runner_attempts_total": 1,
+              "successful_samples_with_retry": 0,
+              "guard": {
+                "samples": 1,
+                "raw_nontax": 8,
+                "accepted_nontax": 8,
+                "rejected_nontax": 0,
+                "rejection_reason_counts": {}
+              }
+            },
+            "medium": {
+              "target_n": 1,
+              "n_success": 1,
+              "n_failed": 0,
+              "complete": true,
+              "term_typing_f1_micro": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "tp": 0,
+                "fp": 8,
+                "fn": 0
+              },
+              "taxonomy_f1_micro": {
+                "precision": 0.875,
+                "recall": 0.875,
+                "f1": 0.875,
+                "tp": 7,
+                "fp": 1,
+                "fn": 1
+              },
+              "nontax_f1_micro": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "tp": 0,
+                "fp": 8,
+                "fn": 4
+              },
+              "official_graph_similarity_avg": 0.4348765432098765,
+              "composite_typing_tax_gs": 0.43662551440329217,
+              "nontax_pred_total": 8,
+              "nontax_gold_total": 4,
+              "successful_latency_sec": {
+                "min": 223.69,
+                "median": 223.69,
+                "p95": 223.69,
+                "max": 223.69,
+                "sum": 223.69
+              },
+              "successful_runner_attempts_total": 1,
+              "successful_samples_with_retry": 0,
+              "guard": {
+                "samples": 1,
+                "raw_nontax": 8,
+                "accepted_nontax": 8,
+                "rejected_nontax": 0,
+                "rejection_reason_counts": {}
+              }
+            },
+            "high": {
+              "target_n": 1,
+              "n_success": 1,
+              "n_failed": 0,
+              "complete": true,
+              "term_typing_f1_micro": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "tp": 0,
+                "fp": 1,
+                "fn": 0
+              },
+              "taxonomy_f1_micro": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "tp": 0,
+                "fp": 2,
+                "fn": 16
+              },
+              "nontax_f1_micro": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "tp": 0,
+                "fp": 8,
+                "fn": 16
+              },
+              "official_graph_similarity_avg": 0.0,
+              "composite_typing_tax_gs": 0.0,
+              "nontax_pred_total": 8,
+              "nontax_gold_total": 16,
+              "successful_latency_sec": {
+                "min": 254.104,
+                "median": 254.104,
+                "p95": 254.104,
+                "max": 254.104,
+                "sum": 254.104
+              },
+              "successful_runner_attempts_total": 1,
+              "successful_samples_with_retry": 0,
+              "guard": {
+                "samples": 1,
+                "raw_nontax": 8,
+                "accepted_nontax": 8,
+                "rejected_nontax": 0,
+                "rejection_reason_counts": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

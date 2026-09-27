@@ -1,0 +1,328 @@
+{
+  "balance_audit": {
+    "evidence_mode_counts": {
+      "cross_sentence": 60,
+      "explicit": 60
+    },
+    "gold_relations": 120,
+    "hard_negative_controls": 60,
+    "predicate_counts": {
+      "derives from": 20,
+      "develops_from": 20,
+      "has part": 20,
+      "located in": 20,
+      "part_of": 20,
+      "regulates": 20
+    },
+    "samples": 30,
+    "surface_form_counts": {
+      "canonical": 15,
+      "paraphrased": 15
+    },
+    "unique_entities": 300
+  },
+  "files": {
+    "dataset.json": {
+      "sha256": "aa1f0e2e61177e6144e2e78b44aa54da4cf79fc471c953ea468a68ec500b629b"
+    },
+    "model_inputs.jsonl": {
+      "sha256": "433d1923619bc4946ad32b1faa20018769378fb47261414622bf39058c7bb31c"
+    }
+  },
+  "locked_protocol": {
+    "allow_deployment_change": false,
+    "allow_generation_tuning": false,
+    "calibrator_may_not_be_fit_or_applied": true,
+    "evidence_strata": [
+      "explicit",
+      "cross_sentence"
+    ],
+    "gold_may_not_enter_prompts": true,
+    "gold_relations_per_sample": 4,
+    "hard_negative_controls_per_sample": 2,
+    "interpretation": "synthetic_low_exposure_holdout_not_naturalistic_benchmark",
+    "predicate_inventory": [
+      "part_of",
+      "has part",
+      "develops_from",
+      "derives from",
+      "located in",
+      "regulates"
+    ],
+    "sample_count": 30,
+    "surface_strata": [
+      "canonical",
+      "paraphrased"
+    ]
+  },
+  "meta": {
+    "confirmatory_eligible": false,
+    "contains_protected_gold": false,
+    "contains_source_text": false,
+    "model_input_fields": [
+      "id",
+      "context"
+    ],
+    "package_id": "aa1f0e2e61177e6144e2",
+    "protocol": "nonce_relation_holdout_v1",
+    "scientific_deployable": false,
+    "seed": 20260926,
+    "status": "frozen"
+  },
+  "official_overlap_audit": {
+    "official_2026_entity_string_overlap_count": 0,
+    "official_2026_exact_gold_triple_overlap_count": 0,
+    "official_2026_sources": {
+      "a": {
+        "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2026\\TaskA-Flagship\\train_task_a.json",
+        "sha256": "f20b87514a09aa70cb247d359d09674040a9b238235cd2837a1c898de70018a0"
+      },
+      "b": {
+        "path": "D:\\NLP\\data\\LLMs4OL-Challenge\\2026\\TaskB-Reuse\\train_task_b.json",
+        "sha256": "6d5745ca415c1beac1850be385d030d6227e4b84955180f62dcee970bf593f08"
+      }
+    }
+  },
+  "samples": [
+    {
+      "context_sha256": "7be63fbcf34bbf80bd17fce82a69dec6733a43954148d6f8b901ede3f4347d43",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_000",
+      "sample_index": 0,
+      "surface_form": "canonical"
+    },
+    {
+      "context_sha256": "3cf4b262ac433d2ea1aebe936801e6eff4c459111807acab138df4a436b57064",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_001",
+      "sample_index": 1,
+      "surface_form": "canonical"
+    },
+    {
+      "context_sha256": "f5ad4179962cfdfc71180ad4ede7652a86ddb1d7108c093d9c94ad4e935b6728",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_002",
+      "sample_index": 2,
+      "surface_form": "canonical"
+    },
+    {
+      "context_sha256": "d1bac7b53682665fa0642e2d644a3d59771a34add8a1f7d32c023095022d88b9",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_003",
+      "sample_index": 3,
+      "surface_form": "canonical"
+    },
+    {
+      "context_sha256": "75861189bedfb4b7a3915dc6b2637112c8c2c8224cffb3d103677d212c1cc693",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_004",
+      "sample_index": 4,
+      "surface_form": "canonical"
+    },
+    {
+      "context_sha256": "76a49f7f476112090a76a1eabb133adff3dd593009034733c01d0d669de43aae",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_005",
+      "sample_index": 5,
+      "surface_form": "canonical"
+    },
+    {
+      "context_sha256": "1a805e2d889d66fb55682529a436cf019815e97c16614b61775250d57a5f413e",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_006",
+      "sample_index": 6,
+      "surface_form": "canonical"
+    },
+    {
+      "context_sha256": "ca1c3cb4812ea9156d785bccb5c6f38ab65ee60d416afa8b8b1361618684206e",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_007",
+      "sample_index": 7,
+      "surface_form": "canonical"
+    },
+    {
+      "context_sha256": "d2c3ed1f76d78a5ccdad5aea7b36a347a6de19ec1f5844e880d2b1bc74e19654",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_008",
+      "sample_index": 8,
+      "surface_form": "canonical"
+    },
+    {
+      "context_sha256": "adf81c05177f2aad199aeae80ee8442922adaee4f41244c17031ee520960fc8a",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_009",
+      "sample_index": 9,
+      "surface_form": "canonical"
+    },
+    {
+      "context_sha256": "1f672eebb8b8d8180e6ef3651516ed0c6bb96d60046e3da43bcb1db1138b87a5",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_010",
+      "sample_index": 10,
+      "surface_form": "canonical"
+    },
+    {
+      "context_sha256": "012b5d7067ca635424b8c3125c917ec915c9b0e687d91ef47bb9ec5826459ff5",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_011",
+      "sample_index": 11,
+      "surface_form": "canonical"
+    },
+    {
+      "context_sha256": "5bd4d22efa0ce18cc5f948cf93180385830da53e1c497dd811f5dac591a0ca15",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_012",
+      "sample_index": 12,
+      "surface_form": "canonical"
+    },
+    {
+      "context_sha256": "60ffcfc7d0585e285237ea932f32a3fc7d17ce0687865fd009fd8297b2ccbc09",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_013",
+      "sample_index": 13,
+      "surface_form": "canonical"
+    },
+    {
+      "context_sha256": "fbfd9601706123a3f0aa01da1c1e8fae58f4c8946410b3d1f898f07f8f8be708",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_014",
+      "sample_index": 14,
+      "surface_form": "canonical"
+    },
+    {
+      "context_sha256": "3ea457eae8df411c09531801324735837b656e935681cd06daf45da95ccce388",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_015",
+      "sample_index": 15,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context_sha256": "04a9d2812c05fd9115c62960a2c1e81101ae44926e86a861c7370827d23b33cb",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_016",
+      "sample_index": 16,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context_sha256": "08c10c1bbb8e93c0024f8a09206ab7052322d14a7c69e1e6c2c8ecaf0e49f3e4",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_017",
+      "sample_index": 17,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context_sha256": "d8c0859e7554d475c778cc8cc595c1303758acb3cbce8168ed9a3f9ebbaba929",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_018",
+      "sample_index": 18,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context_sha256": "72b4457968927744c8ac4289929f459ea105f9496a8b44cf1e87856561c60ba5",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_019",
+      "sample_index": 19,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context_sha256": "bf685a304024adcfc9213fa4fe1e612cc46f974db73daa25d4b78920369df2d6",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_020",
+      "sample_index": 20,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context_sha256": "a1f0ba82ba12e8051f01663b95de6bd2e153f33f4f1eb93f345564ca48351e8d",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_021",
+      "sample_index": 21,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context_sha256": "6f24b367275a4f4ca0d152e46c74dd722ee7fd66b01d10ae840362c298ea7a2f",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_022",
+      "sample_index": 22,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context_sha256": "99c667a5ede55ff989c34830a1975204721b359c7af9bf11890708ea4dd87d13",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_023",
+      "sample_index": 23,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context_sha256": "b5961bb05dc3e27c3599e2c976a1b24a21a235ee91ef5bc18cdc777732f90e82",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_024",
+      "sample_index": 24,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context_sha256": "9a3c20e47481a09115afb20115082c901088f9450761f0a9cc18b620701e8e5d",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_025",
+      "sample_index": 25,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context_sha256": "ead027a2220b2dc6f70cb6c1d192ef570ac29994c38201281e4fd32cac80fbe2",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_026",
+      "sample_index": 26,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context_sha256": "d39970256a18d52d449de0e587b3f14cf42183ec8f97b92774808e4b75d39f82",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_027",
+      "sample_index": 27,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context_sha256": "889ce78eede9979a5345807664d83d7bd6483a8be785b1de53cbc9b5962dcb07",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_028",
+      "sample_index": 28,
+      "surface_form": "paraphrased"
+    },
+    {
+      "context_sha256": "d613356900ecf9ad9bb26915802b4b8634cf17d9122f12fa7ac0868ae57cc313",
+      "gold_relation_count": 4,
+      "hard_negative_count": 2,
+      "sample_id": "nonce_rel_029",
+      "sample_index": 29,
+      "surface_form": "paraphrased"
+    }
+  ]
+}

@@ -1,0 +1,711 @@
+{
+  "meta": {
+    "protocol": "relation_guarded_v2_independent_calibration_v1",
+    "model": "dots3-note-prev",
+    "system": "open_vocab_guarded_v3_relations",
+    "tasks": [
+      "a"
+    ],
+    "samples_per_task": 12,
+    "sample_indices": [
+      938,
+      2077,
+      2424
+    ],
+    "seed": 20260923,
+    "prior_failed_connection_attempts": 0,
+    "selection_uses_gold_locally": true,
+    "selection_is_calibration_only_not_unbiased_evaluation": true,
+    "gold_visible_to_model": false,
+    "exclude_prefix": 30,
+    "exclude_eval_result": "..\\experiments\\results\\official_stratified_open_openai_ab_s5_seed20260922.json",
+    "confidence_threshold": 0.85,
+    "implicit_confidence_threshold": 0.95,
+    "calibrated_confidence_threshold": 0.5,
+    "max_nontax": 8,
+    "max_implicit_gap_chars": 600,
+    "attempt_ledger": {
+      "planned_units": 3,
+      "successful_units": 3,
+      "failed_final_units": 0,
+      "prior_failed_connection_attempts": 0,
+      "unit_attempts_including_prior_failures": 3,
+      "successful_runner_attempts_including_retries": 3,
+      "low_level_attempts_including_prior_failures": 3
+    }
+  },
+  "tasks": {
+    "task_a": {
+      "meta": {
+        "task": "a",
+        "selected_indices": [
+          938,
+          2077,
+          2424
+        ],
+        "n_samples": 3
+      },
+      "systems": {
+        "open_vocab_guarded_v3_relations": {
+          "meta": {
+            "challenge": "LLMs4OL 2026",
+            "protocol": "llms4ol2026_blind_v1",
+            "input_policy": "context_only",
+            "gold_visible_to_model": false,
+            "task": "a",
+            "task_name": "Flagship",
+            "system": "open_vocab_guarded_v3_relations",
+            "backend": "openai",
+            "model": "dots3-note-prev",
+            "offset": 0,
+            "limit": 3,
+            "workers": 2,
+            "max_context_chars": 6000,
+            "confidence_threshold": 0.85,
+            "implicit_confidence_threshold": 0.95,
+            "calibrated_confidence_threshold": 0.5,
+            "allowed_nontax_predicates": null,
+            "max_nontax": 8,
+            "max_implicit_gap_chars": 600,
+            "calibration_file": null,
+            "calibration_status": "not_configured",
+            "max_completion_tokens": 32768,
+            "metric": "llms4ol2026_graph_similarity_exact",
+            "elapsed_sec": 119.292,
+            "elapsed_sec_scope": "current_process_including_cache_replay",
+            "selection": "independent_relation_calibration",
+            "selected_indices": [
+              938,
+              2077,
+              2424
+            ],
+            "excluded_indices_count": 45,
+            "pool": {
+              "selection": "explicit_sample_indices",
+              "selected_visible_gold": 3,
+              "selected_visible_supported_gold": 3
+            }
+          },
+          "summary": {
+            "target_n": 3,
+            "n_success": 3,
+            "n_failed": 0,
+            "complete": true,
+            "term_typing_f1_micro": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0
+            },
+            "taxonomy_f1_micro": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 36
+            },
+            "nontax_f1_micro": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 11,
+              "fn": 3
+            },
+            "nontax_nonself_f1_micro": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "tp": 0,
+              "fp": 11,
+              "fn": 3
+            },
+            "official_graph_similarity_avg": 0.0,
+            "composite_typing_tax_gs": 0.0,
+            "nontax_pred_total": 11,
+            "nontax_gold_total": 3,
+            "nontax_nonself_pred_total": 11,
+            "nontax_nonself_gold_total": 3,
+            "successful_latency_sec": {
+              "min": 46.447,
+              "median": 66.262,
+              "p95": 72.838,
+              "max": 72.838,
+              "sum": 185.547
+            },
+            "successful_runner_attempts_total": 3,
+            "successful_samples_with_retry": 0,
+            "guard": {
+              "samples": 3,
+              "raw_nontax": 11,
+              "accepted_nontax": 11,
+              "rejected_nontax": 0,
+              "rejection_reason_counts": {}
+            }
+          },
+          "samples": [
+            {
+              "sample_index": 938,
+              "sample_id": "d6a16147e05b407a82123dae18a9753b",
+              "status": "ok",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v3_relations\\00938_b526764cf3.json",
+              "attempts": 1,
+              "latency_sec": 66.262,
+              "metrics": {
+                "typing": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 0
+                },
+                "taxonomy": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 18
+                },
+                "nontax": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 2,
+                  "fn": 1
+                },
+                "nontax_nonself": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 2,
+                  "fn": 1
+                },
+                "official_graph_similarity": {
+                  "edge_f1": 0.0,
+                  "neighborhood_similarity": 0.0,
+                  "taxonomy_similarity": 0.0,
+                  "graph_similarity": 0.0,
+                  "metric_id": "llms4ol2026_graph_similarity_exact",
+                  "external_reportable": true,
+                  "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+                },
+                "gold_counts": {
+                  "typing": 0,
+                  "taxonomy": 18,
+                  "nontax": 1
+                },
+                "pred_counts": {
+                  "typing": 0,
+                  "taxonomy": 0,
+                  "nontax": 2
+                }
+              },
+              "guard_diagnostics": {
+                "canonicalization_version": "relation_canonicalization_v2",
+                "postprocess_version": "guarded_v2_postprocess_v3",
+                "calibration_status": "not_configured",
+                "calibration_applied": false,
+                "confidence_threshold": 0.85,
+                "implicit_confidence_threshold": 0.95,
+                "calibrated_confidence_threshold": 0.5,
+                "allowed_nontax_predicates": null,
+                "max_implicit_gap_chars": 600,
+                "max_nontax": 8,
+                "raw_candidates": 2,
+                "canonicalized_candidates": 0,
+                "accepted_core": 0,
+                "raw_nontax": 2,
+                "accepted_nontax": 2,
+                "rejected_nontax": 0,
+                "rejection_reason_counts": {},
+                "accepted_nontax_candidates": [
+                  {
+                    "triple": [
+                      "phytophthora infestans",
+                      "regulates",
+                      "cultivation of such crops"
+                    ],
+                    "raw_confidence": 0.9,
+                    "calibrated_confidence": null,
+                    "ranking_confidence": 0.9,
+                    "evidence": [
+                      "Cultivation of such crops is often challenged by pathogens like Phytophthora infestans"
+                    ],
+                    "evidence_mode": "explicit",
+                    "evidence_gap_chars": null,
+                    "canonicalization": {
+                      "version": "relation_canonicalization_v2",
+                      "changed": false,
+                      "reversed": false,
+                      "subject_from": null,
+                      "predicate_from": null,
+                      "object_from": null,
+                      "subject_method": "context_exact",
+                      "object_method": "context_exact"
+                    },
+                    "position": 0
+                  },
+                  {
+                    "triple": [
+                      "phytophthora",
+                      "regulates",
+                      "blight"
+                    ],
+                    "raw_confidence": 0.9,
+                    "calibrated_confidence": null,
+                    "ranking_confidence": 0.9,
+                    "evidence": [
+                      "Phytophthora, a genus notorious for causing blights"
+                    ],
+                    "evidence_mode": "explicit",
+                    "evidence_gap_chars": null,
+                    "canonicalization": {
+                      "version": "relation_canonicalization_v2",
+                      "changed": false,
+                      "reversed": false,
+                      "subject_from": null,
+                      "predicate_from": null,
+                      "object_from": null,
+                      "subject_method": "context_exact",
+                      "object_method": "unchanged"
+                    },
+                    "position": 1
+                  }
+                ],
+                "rejected_nontax_candidates": []
+              },
+              "official_nontax_gold_nonself": 1,
+              "visible_nontax_gold": 1,
+              "visible_supported_gold": 1,
+              "visible_supported_predicates": [
+                "derives from"
+              ],
+              "selection_purpose": "fixed_relation_generation_pilot"
+            },
+            {
+              "sample_index": 2077,
+              "sample_id": "d904529816df4778b6ed73454edb7a88",
+              "status": "ok",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v3_relations\\02077_f5cf104df2.json",
+              "attempts": 1,
+              "latency_sec": 46.447,
+              "metrics": {
+                "typing": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 0
+                },
+                "taxonomy": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 6
+                },
+                "nontax": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 3,
+                  "fn": 1
+                },
+                "nontax_nonself": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 3,
+                  "fn": 1
+                },
+                "official_graph_similarity": {
+                  "edge_f1": 0.0,
+                  "neighborhood_similarity": 0.0,
+                  "taxonomy_similarity": 0.0,
+                  "graph_similarity": 0.0,
+                  "metric_id": "llms4ol2026_graph_similarity_exact",
+                  "external_reportable": true,
+                  "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+                },
+                "gold_counts": {
+                  "typing": 0,
+                  "taxonomy": 6,
+                  "nontax": 1
+                },
+                "pred_counts": {
+                  "typing": 0,
+                  "taxonomy": 0,
+                  "nontax": 3
+                }
+              },
+              "guard_diagnostics": {
+                "canonicalization_version": "relation_canonicalization_v2",
+                "postprocess_version": "guarded_v2_postprocess_v3",
+                "calibration_status": "not_configured",
+                "calibration_applied": false,
+                "confidence_threshold": 0.85,
+                "implicit_confidence_threshold": 0.95,
+                "calibrated_confidence_threshold": 0.5,
+                "allowed_nontax_predicates": null,
+                "max_implicit_gap_chars": 600,
+                "max_nontax": 8,
+                "raw_candidates": 3,
+                "canonicalized_candidates": 0,
+                "accepted_core": 0,
+                "raw_nontax": 3,
+                "accepted_nontax": 3,
+                "rejected_nontax": 0,
+                "rejection_reason_counts": {},
+                "accepted_nontax_candidates": [
+                  {
+                    "triple": [
+                      "derivatives",
+                      "derives from",
+                      "leguminous crops"
+                    ],
+                    "raw_confidence": 0.9,
+                    "calibrated_confidence": null,
+                    "ranking_confidence": 0.9,
+                    "evidence": [
+                      "derivatives derived from leguminous crops"
+                    ],
+                    "evidence_mode": "explicit",
+                    "evidence_gap_chars": null,
+                    "canonicalization": {
+                      "version": "relation_canonicalization_v2",
+                      "changed": false,
+                      "reversed": false,
+                      "subject_from": null,
+                      "predicate_from": null,
+                      "object_from": null,
+                      "subject_method": "context_exact",
+                      "object_method": "context_exact"
+                    },
+                    "position": 0
+                  },
+                  {
+                    "triple": [
+                      "polypyrrole family",
+                      "located in",
+                      "agricultural products"
+                    ],
+                    "raw_confidence": 0.9,
+                    "calibrated_confidence": null,
+                    "ranking_confidence": 0.9,
+                    "evidence": [
+                      "The polypyrrole family constitutes a significant group of organonitrogen heterocyclic compounds found in various agricultural products."
+                    ],
+                    "evidence_mode": "explicit",
+                    "evidence_gap_chars": null,
+                    "canonicalization": {
+                      "version": "relation_canonicalization_v2",
+                      "changed": false,
+                      "reversed": false,
+                      "subject_from": null,
+                      "predicate_from": null,
+                      "object_from": null,
+                      "subject_method": "context_exact",
+                      "object_method": "context_exact"
+                    },
+                    "position": 1
+                  },
+                  {
+                    "triple": [
+                      "chemical makeup",
+                      "has part",
+                      "nitrogen-containing heterocycles"
+                    ],
+                    "raw_confidence": 0.9,
+                    "calibrated_confidence": null,
+                    "ranking_confidence": 0.9,
+                    "evidence": [
+                      "the chemical makeup of these crops involves complex organic frameworks, particularly nitrogen-containing heterocycles"
+                    ],
+                    "evidence_mode": "explicit",
+                    "evidence_gap_chars": null,
+                    "canonicalization": {
+                      "version": "relation_canonicalization_v2",
+                      "changed": false,
+                      "reversed": false,
+                      "subject_from": null,
+                      "predicate_from": null,
+                      "object_from": null,
+                      "subject_method": "context_exact",
+                      "object_method": "context_exact"
+                    },
+                    "position": 2
+                  }
+                ],
+                "rejected_nontax_candidates": []
+              },
+              "official_nontax_gold_nonself": 1,
+              "visible_nontax_gold": 1,
+              "visible_supported_gold": 1,
+              "visible_supported_predicates": [
+                "derives from"
+              ],
+              "selection_purpose": "fixed_relation_generation_pilot"
+            },
+            {
+              "sample_index": 2424,
+              "sample_id": "8fa7c5ddf09d420a8d192dd7abd08fd6",
+              "status": "ok",
+              "cache": "D:\\NLP\\experiments\\results\\blind_cache\\dots3-note-prev\\task_a\\open_vocab_guarded_v3_relations\\02424_3833b93615.json",
+              "attempts": 1,
+              "latency_sec": 72.838,
+              "metrics": {
+                "typing": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 0
+                },
+                "taxonomy": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 0,
+                  "fn": 12
+                },
+                "nontax": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 6,
+                  "fn": 1
+                },
+                "nontax_nonself": {
+                  "precision": 0.0,
+                  "recall": 0.0,
+                  "f1": 0.0,
+                  "tp": 0,
+                  "fp": 6,
+                  "fn": 1
+                },
+                "official_graph_similarity": {
+                  "edge_f1": 0.0,
+                  "neighborhood_similarity": 0.0,
+                  "taxonomy_similarity": 0.0,
+                  "graph_similarity": 0.0,
+                  "metric_id": "llms4ol2026_graph_similarity_exact",
+                  "external_reportable": true,
+                  "official_formula": "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
+                },
+                "gold_counts": {
+                  "typing": 0,
+                  "taxonomy": 12,
+                  "nontax": 1
+                },
+                "pred_counts": {
+                  "typing": 0,
+                  "taxonomy": 0,
+                  "nontax": 6
+                }
+              },
+              "guard_diagnostics": {
+                "canonicalization_version": "relation_canonicalization_v2",
+                "postprocess_version": "guarded_v2_postprocess_v3",
+                "calibration_status": "not_configured",
+                "calibration_applied": false,
+                "confidence_threshold": 0.85,
+                "implicit_confidence_threshold": 0.95,
+                "calibrated_confidence_threshold": 0.5,
+                "allowed_nontax_predicates": null,
+                "max_implicit_gap_chars": 600,
+                "max_nontax": 8,
+                "raw_candidates": 6,
+                "canonicalized_candidates": 0,
+                "accepted_core": 0,
+                "raw_nontax": 6,
+                "accepted_nontax": 6,
+                "rejected_nontax": 0,
+                "rejection_reason_counts": {},
+                "accepted_nontax_candidates": [
+                  {
+                    "triple": [
+                      "mass of solid material",
+                      "has part",
+                      "soil strata"
+                    ],
+                    "raw_confidence": 0.9,
+                    "calibrated_confidence": null,
+                    "ranking_confidence": 0.9,
+                    "evidence": [
+                      "Complementing these are the mass of solid material, including soil strata and harvested biomass, which complete the triad of environmental substance."
+                    ],
+                    "evidence_mode": "explicit",
+                    "evidence_gap_chars": null,
+                    "canonicalization": {
+                      "version": "relation_canonicalization_v2",
+                      "changed": false,
+                      "reversed": false,
+                      "subject_from": null,
+                      "predicate_from": null,
+                      "object_from": null,
+                      "subject_method": "context_exact",
+                      "object_method": "context_exact"
+                    },
+                    "position": 0
+                  },
+                  {
+                    "triple": [
+                      "mass of solid material",
+                      "has part",
+                      "harvested biomass"
+                    ],
+                    "raw_confidence": 0.9,
+                    "calibrated_confidence": null,
+                    "ranking_confidence": 0.9,
+                    "evidence": [
+                      "Complementing these are the mass of solid material, including soil strata and harvested biomass, which complete the triad of environmental substance."
+                    ],
+                    "evidence_mode": "explicit",
+                    "evidence_gap_chars": null,
+                    "canonicalization": {
+                      "version": "relation_canonicalization_v2",
+                      "changed": false,
+                      "reversed": false,
+                      "subject_from": null,
+                      "predicate_from": null,
+                      "object_from": null,
+                      "subject_method": "context_exact",
+                      "object_method": "context_exact"
+                    },
+                    "position": 1
+                  },
+                  {
+                    "triple": [
+                      "lithometeor",
+                      "has part",
+                      "rocky debris"
+                    ],
+                    "raw_confidence": 0.9,
+                    "calibrated_confidence": null,
+                    "ranking_confidence": 0.9,
+                    "evidence": [
+                      "A lithometeor consists of rocky debris, marking a solid division of the meteor classification, while a hydrometeor comprises suspended droplets or ice, representing a fluid division of the meteor class that directly dictates precipitation events crucial for crop hydration."
+                    ],
+                    "evidence_mode": "explicit",
+                    "evidence_gap_chars": null,
+                    "canonicalization": {
+                      "version": "relation_canonicalization_v2",
+                      "changed": false,
+                      "reversed": false,
+                      "subject_from": null,
+                      "predicate_from": null,
+                      "object_from": null,
+                      "subject_method": "context_exact",
+                      "object_method": "context_exact"
+                    },
+                    "position": 2
+                  },
+                  {
+                    "triple": [
+                      "hydrometeor",
+                      "has part",
+                      "suspended droplets"
+                    ],
+                    "raw_confidence": 0.9,
+                    "calibrated_confidence": null,
+                    "ranking_confidence": 0.9,
+                    "evidence": [
+                      "A lithometeor consists of rocky debris, marking a solid division of the meteor classification, while a hydrometeor comprises suspended droplets or ice, representing a fluid division of the meteor class that directly dictates precipitation events crucial for crop hydration."
+                    ],
+                    "evidence_mode": "explicit",
+                    "evidence_gap_chars": null,
+                    "canonicalization": {
+                      "version": "relation_canonicalization_v2",
+                      "changed": false,
+                      "reversed": false,
+                      "subject_from": null,
+                      "predicate_from": null,
+                      "object_from": null,
+                      "subject_method": "context_exact",
+                      "object_method": "context_exact"
+                    },
+                    "position": 3
+                  },
+                  {
+                    "triple": [
+                      "hydrometeor",
+                      "has part",
+                      "ice"
+                    ],
+                    "raw_confidence": 0.9,
+                    "calibrated_confidence": null,
+                    "ranking_confidence": 0.9,
+                    "evidence": [
+                      "A lithometeor consists of rocky debris, marking a solid division of the meteor classification, while a hydrometeor comprises suspended droplets or ice, representing a fluid division of the meteor class that directly dictates precipitation events crucial for crop hydration."
+                    ],
+                    "evidence_mode": "explicit",
+                    "evidence_gap_chars": null,
+                    "canonicalization": {
+                      "version": "relation_canonicalization_v2",
+                      "changed": false,
+                      "reversed": false,
+                      "subject_from": null,
+                      "predicate_from": null,
+                      "object_from": null,
+                      "subject_method": "context_exact",
+                      "object_method": "context_exact"
+                    },
+                    "position": 4
+                  },
+                  {
+                    "triple": [
+                      "hydrometeor",
+                      "regulates",
+                      "precipitation events"
+                    ],
+                    "raw_confidence": 0.9,
+                    "calibrated_confidence": null,
+                    "ranking_confidence": 0.9,
+                    "evidence": [
+                      "A lithometeor consists of rocky debris, marking a solid division of the meteor classification, while a hydrometeor comprises suspended droplets or ice, representing a fluid division of the meteor class that directly dictates precipitation events crucial for crop hydration."
+                    ],
+                    "evidence_mode": "explicit",
+                    "evidence_gap_chars": null,
+                    "canonicalization": {
+                      "version": "relation_canonicalization_v2",
+                      "changed": false,
+                      "reversed": false,
+                      "subject_from": null,
+                      "predicate_from": null,
+                      "object_from": null,
+                      "subject_method": "context_exact",
+                      "object_method": "context_exact"
+                    },
+                    "position": 5
+                  }
+                ],
+                "rejected_nontax_candidates": []
+              },
+              "official_nontax_gold_nonself": 1,
+              "visible_nontax_gold": 1,
+              "visible_supported_gold": 1,
+              "visible_supported_predicates": [
+                "has part"
+              ],
+              "selection_purpose": "fixed_relation_generation_pilot"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

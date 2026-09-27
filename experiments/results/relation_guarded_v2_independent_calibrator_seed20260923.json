@@ -1,0 +1,824 @@
+{
+  "meta": {
+    "protocol": "relation_guarded_v2_offline_audit_v1",
+    "source_result": "D:\\NLP\\experiments\\results\\relation_calibration_ab_n12_seed20260923.json",
+    "source_results": [
+      "D:\\NLP\\experiments\\results\\relation_calibration_ab_n12_seed20260923.json"
+    ],
+    "source_system": "open_vocab_guarded_v2",
+    "seed": 20260922,
+    "calibration_per_stratum": 2,
+    "all_samples_calibration": true,
+    "canonicalization_version": "relation_canonicalization_v2",
+    "source_evaluation_selection_uses_gold_locally": true,
+    "source_attempt_ledgers": [
+      {
+        "planned_units": 24,
+        "successful_units": 24,
+        "failed_final_units": 0,
+        "prior_failed_connection_attempts": 6,
+        "unit_attempts_including_prior_failures": 30,
+        "successful_runner_attempts_including_retries": 26,
+        "low_level_attempts_including_prior_failures": 32
+      }
+    ],
+    "calibration_split_uses_candidate_labels": false,
+    "gold_used_for_candidate_labels_only": true,
+    "calibrator_fit_population": "post_evidence_pre_quantity_candidates",
+    "api_calls": 0
+  },
+  "split": {
+    "calibration_indices": {
+      "a": [
+        503,
+        520,
+        968,
+        973,
+        1025,
+        1263,
+        1478,
+        2100,
+        2531,
+        3120,
+        3150,
+        3978
+      ],
+      "b": [
+        262,
+        370,
+        432,
+        558,
+        645,
+        727,
+        1900,
+        1975,
+        2010,
+        2477,
+        2559,
+        2668
+      ]
+    },
+    "heldout_indices": {
+      "a": [],
+      "b": []
+    }
+  },
+  "candidate_summary": {
+    "all": {
+      "n": 114,
+      "raw_true_positives": 3,
+      "canonical_true_positives": 3,
+      "canonicalization_changed": 47,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "calibration": {
+      "n": 114,
+      "raw_true_positives": 3,
+      "canonical_true_positives": 3,
+      "canonicalization_changed": 47,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "heldout": {
+      "n": 0,
+      "raw_true_positives": 0,
+      "canonical_true_positives": 0,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "calibration_deployment_population": {
+      "n": 92,
+      "raw_true_positives": 3,
+      "canonical_true_positives": 3,
+      "canonicalization_changed": 31,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "heldout_deployment_population": {
+      "n": 0,
+      "raw_true_positives": 0,
+      "canonical_true_positives": 0,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    }
+  },
+  "calibrator": {
+    "version": "beta_isotonic_v1",
+    "status": "ok",
+    "deployable": true,
+    "alpha": 1.0,
+    "beta": 1.0,
+    "min_positives": 2,
+    "min_negatives": 2,
+    "n_samples": 92,
+    "n_positives": 3,
+    "blocks": [
+      {
+        "min_score": 0.85,
+        "max_score": 0.95,
+        "positives": 2,
+        "total": 89,
+        "probability": 0.03296703296703297
+      },
+      {
+        "min_score": 0.96,
+        "max_score": 0.96,
+        "positives": 0,
+        "total": 2,
+        "probability": 0.25
+      },
+      {
+        "min_score": 0.97,
+        "max_score": 0.97,
+        "positives": 1,
+        "total": 1,
+        "probability": 0.6666666666666666
+      }
+    ]
+  },
+  "deployment_support": {
+    "deployable": false,
+    "candidate_level_deployable": true,
+    "status": "insufficient_independent_positive_samples",
+    "min_positive_samples": 5,
+    "positive_candidates": 3,
+    "positive_samples": 2,
+    "support_level": "minimal",
+    "warning": "Candidate-level deployment checks pass, but positive evidence comes from fewer than five independent samples. Treat this as a precision operating point, not a stable probability model."
+  },
+  "calibration_metrics": {
+    "calibration_raw": {
+      "n": 92,
+      "positives": 3,
+      "brier": 0.8245010869565218,
+      "ece": 0.890108695652174
+    },
+    "calibration_calibrated": {
+      "n": 92,
+      "positives": 3,
+      "brier": 0.02392359160455195,
+      "ece": 0.01921086160216595
+    },
+    "heldout_raw": {
+      "n": 0,
+      "positives": 0,
+      "brier": 0.0,
+      "ece": 0.0
+    },
+    "heldout_calibrated_diagnostic_only": {
+      "n": 0,
+      "positives": 0,
+      "brier": 0.0,
+      "ece": 0.0
+    }
+  },
+  "calibrated_threshold_selection": {
+    "scope": "post_evidence_pre_quantity_candidates_from_calibration_samples_only",
+    "n_candidates": 92,
+    "n_positives": 3,
+    "recommended_threshold": 0.6666666666666666,
+    "recommended_metrics": {
+      "threshold": 0.6666666666666666,
+      "selected": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5
+    },
+    "rows": [
+      {
+        "threshold": 0.0,
+        "selected": 92,
+        "tp": 3,
+        "fp": 89,
+        "fn": 0,
+        "precision": 0.03260869565217391,
+        "recall": 1.0,
+        "f1": 0.06315789473684211
+      },
+      {
+        "threshold": 0.14148351648351648,
+        "selected": 3,
+        "tp": 1,
+        "fp": 2,
+        "fn": 2,
+        "precision": 0.3333333333333333,
+        "recall": 0.3333333333333333,
+        "f1": 0.3333333333333333
+      },
+      {
+        "threshold": 0.4583333333333333,
+        "selected": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5
+      },
+      {
+        "threshold": 0.6666666666666666,
+        "selected": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5
+      }
+    ]
+  },
+  "calibration_predicate_policy": {
+    "scope": "post_evidence_pre_quantity_candidates_from_calibration_samples_only",
+    "allowed_predicates": [
+      "develops_from",
+      "part_of"
+    ],
+    "selected": 44,
+    "tp": 3,
+    "fp": 41,
+    "fn": 0,
+    "precision": 0.06818181818181818,
+    "recall": 1.0,
+    "f1": 0.1276595744680851,
+    "warning": "This policy is selected on sparse calibration labels and must be reported as a calibration-supported ablation, not a universal predicate inventory."
+  },
+  "predicate_constrained_threshold_selection": {
+    "scope": "post_evidence_pre_quantity_candidates_from_calibration_samples_only",
+    "n_candidates": 44,
+    "n_positives": 3,
+    "recommended_threshold": 0.6666666666666666,
+    "recommended_metrics": {
+      "threshold": 0.6666666666666666,
+      "selected": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5
+    },
+    "rows": [
+      {
+        "threshold": 0.0,
+        "selected": 44,
+        "tp": 3,
+        "fp": 41,
+        "fn": 0,
+        "precision": 0.06818181818181818,
+        "recall": 1.0,
+        "f1": 0.1276595744680851
+      },
+      {
+        "threshold": 0.14148351648351648,
+        "selected": 2,
+        "tp": 1,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "f1": 0.4
+      },
+      {
+        "threshold": 0.4583333333333333,
+        "selected": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5
+      },
+      {
+        "threshold": 0.6666666666666666,
+        "selected": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5
+      }
+    ]
+  },
+  "candidate_groups": {
+    "by_task": {
+      "a": {
+        "n": 95,
+        "positives": 2,
+        "accepted": 55,
+        "accepted_positives": 2
+      },
+      "b": {
+        "n": 19,
+        "positives": 1,
+        "accepted": 15,
+        "accepted_positives": 1
+      }
+    },
+    "by_evidence_mode": {
+      "cross_sentence": {
+        "n": 18,
+        "positives": 1,
+        "accepted": 10,
+        "accepted_positives": 1
+      },
+      "explicit": {
+        "n": 96,
+        "positives": 2,
+        "accepted": 60,
+        "accepted_positives": 2
+      }
+    },
+    "by_predicate": {
+      "addresses": {
+        "n": 2,
+        "positives": 0,
+        "accepted": 0,
+        "accepted_positives": 0
+      },
+      "covers": {
+        "n": 2,
+        "positives": 0,
+        "accepted": 1,
+        "accepted_positives": 0
+      },
+      "derives from": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 1,
+        "accepted_positives": 0
+      },
+      "develops_from": {
+        "n": 2,
+        "positives": 1,
+        "accepted": 1,
+        "accepted_positives": 1
+      },
+      "ensures": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 1,
+        "accepted_positives": 0
+      },
+      "grounds": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 1,
+        "accepted_positives": 0
+      },
+      "has part": {
+        "n": 23,
+        "positives": 0,
+        "accepted": 14,
+        "accepted_positives": 0
+      },
+      "located in": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 1,
+        "accepted_positives": 0
+      },
+      "maintains": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 0,
+        "accepted_positives": 0
+      },
+      "manages": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 1,
+        "accepted_positives": 0
+      },
+      "measures": {
+        "n": 2,
+        "positives": 0,
+        "accepted": 2,
+        "accepted_positives": 0
+      },
+      "mediates": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 0,
+        "accepted_positives": 0
+      },
+      "models": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 0,
+        "accepted_positives": 0
+      },
+      "part_of": {
+        "n": 51,
+        "positives": 2,
+        "accepted": 29,
+        "accepted_positives": 2
+      },
+      "precursor_of": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 1,
+        "accepted_positives": 0
+      },
+      "regulates": {
+        "n": 11,
+        "positives": 0,
+        "accepted": 9,
+        "accepted_positives": 0
+      },
+      "required_for": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 0,
+        "accepted_positives": 0
+      },
+      "retains": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 0,
+        "accepted_positives": 0
+      },
+      "serves_as": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 0,
+        "accepted_positives": 0
+      },
+      "supplies": {
+        "n": 4,
+        "positives": 0,
+        "accepted": 4,
+        "accepted_positives": 0
+      },
+      "supports": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 0,
+        "accepted_positives": 0
+      },
+      "threatens": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 1,
+        "accepted_positives": 0
+      },
+      "used_as": {
+        "n": 2,
+        "positives": 0,
+        "accepted": 2,
+        "accepted_positives": 0
+      },
+      "uses": {
+        "n": 1,
+        "positives": 0,
+        "accepted": 1,
+        "accepted_positives": 0
+      }
+    },
+    "by_raw_confidence": {
+      "0.85": {
+        "n": 3,
+        "positives": 0,
+        "accepted": 0,
+        "accepted_positives": 0
+      },
+      "0.9": {
+        "n": 56,
+        "positives": 2,
+        "accepted": 32,
+        "accepted_positives": 2
+      },
+      "0.95": {
+        "n": 52,
+        "positives": 0,
+        "accepted": 35,
+        "accepted_positives": 0
+      },
+      "0.96": {
+        "n": 2,
+        "positives": 0,
+        "accepted": 2,
+        "accepted_positives": 0
+      },
+      "0.97": {
+        "n": 1,
+        "positives": 1,
+        "accepted": 1,
+        "accepted_positives": 1
+      }
+    }
+  },
+  "implicit_evidence": {
+    "candidates_observed": 18,
+    "accepted_candidates": 10,
+    "canonical_true_positives": 1,
+    "accepted_canonical_true_positives": 1,
+    "requires_new_guarded_v2_generation": false
+  },
+  "exact_positive_candidates": [
+    {
+      "task": "a",
+      "sample_index": 2100,
+      "stratum": null,
+      "split": "calibration",
+      "confidence": 0.9,
+      "raw_triple": [
+        "inflorescence length",
+        "part_of",
+        "inflorescence size"
+      ],
+      "canonical_triple": [
+        "inflorescence length",
+        "part_of",
+        "inflorescence size"
+      ],
+      "raw_correct": true,
+      "canonical_correct": true,
+      "canonicalization_changed": false,
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 2100,
+      "stratum": null,
+      "split": "calibration",
+      "confidence": 0.9,
+      "raw_triple": [
+        "inflorescence width",
+        "part_of",
+        "inflorescence size"
+      ],
+      "canonical_triple": [
+        "inflorescence width",
+        "part_of",
+        "inflorescence size"
+      ],
+      "raw_correct": true,
+      "canonical_correct": true,
+      "canonicalization_changed": false,
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "b",
+      "sample_index": 727,
+      "stratum": null,
+      "split": "calibration",
+      "confidence": 0.97,
+      "raw_triple": [
+        "infructescence",
+        "develops_from",
+        "inflorescence"
+      ],
+      "canonical_triple": [
+        "infructescence",
+        "develops_from",
+        "inflorescence"
+      ],
+      "raw_correct": true,
+      "canonical_correct": true,
+      "canonicalization_changed": false,
+      "evidence_mode": "cross_sentence",
+      "evidence_gap_chars": 99,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    }
+  ],
+  "near_match_summary": {
+    "endpoints_exact_predicate_mismatch": 2,
+    "exact": 3,
+    "none": 104,
+    "predicate_object_exact": 2,
+    "predicate_subject_exact": 3
+  },
+  "actionable_near_matches": [
+    {
+      "task": "a",
+      "sample_index": 503,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "peripheral zone",
+        "part_of",
+        "meristem tissue"
+      ],
+      "canonical_triple": [
+        "peripheral zone",
+        "part_of",
+        "meristem tissue"
+      ],
+      "near_match_type": "predicate_subject_exact",
+      "near_gold_triples": [
+        [
+          "peripheral zone",
+          "part_of",
+          "shoot apical meristem"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 503,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "phyllome anlagen",
+        "part_of",
+        "meristem tissue"
+      ],
+      "canonical_triple": [
+        "phyllome anlagen",
+        "part_of",
+        "meristem tissue"
+      ],
+      "near_match_type": "predicate_subject_exact",
+      "near_gold_triples": [
+        [
+          "phyllome anlagen",
+          "part_of",
+          "peripheral zone"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 520,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "signal transduction",
+        "part_of",
+        "cellular process"
+      ],
+      "canonical_triple": [
+        "signal transduction",
+        "part_of",
+        "cellular process"
+      ],
+      "near_match_type": "predicate_subject_exact",
+      "near_gold_triples": [
+        [
+          "signal transduction",
+          "part_of",
+          "cell communication"
+        ],
+        [
+          "signal transduction",
+          "part_of",
+          "cellular response to stimulus"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 520,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "signal transduction",
+        "mediates",
+        "cellular response to stimulus"
+      ],
+      "canonical_triple": [
+        "signal transduction",
+        "mediates",
+        "cellular response to stimulus"
+      ],
+      "near_match_type": "endpoints_exact_predicate_mismatch",
+      "near_gold_triples": [
+        [
+          "signal transduction",
+          "part_of",
+          "cellular response to stimulus"
+        ],
+        [
+          "signal transduction",
+          "tree view",
+          "cellular response to stimulus"
+        ]
+      ],
+      "evidence_mode": "cross_sentence",
+      "evidence_gap_chars": 2,
+      "postprocess_status": "rejected",
+      "rejection_reasons": [
+        "quantity_limit"
+      ]
+    },
+    {
+      "task": "a",
+      "sample_index": 973,
+      "split": "calibration",
+      "confidence": 0.95,
+      "raw_triple": [
+        "ammonium_magnesium_phosphate_hexahydrate",
+        "part_of",
+        "ammonium_magnesium_phosphate"
+      ],
+      "canonical_triple": [
+        "ammonium magnesium phosphate hexahydrate",
+        "part_of",
+        "ammonium magnesium phosphate"
+      ],
+      "near_match_type": "endpoints_exact_predicate_mismatch",
+      "near_gold_triples": [
+        [
+          "ammonium magnesium phosphate hexahydrate",
+          "has part",
+          "ammonium magnesium phosphate"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 1025,
+      "split": "calibration",
+      "confidence": 0.9,
+      "raw_triple": [
+        "structural supports",
+        "part_of",
+        "building"
+      ],
+      "canonical_triple": [
+        "structural supports",
+        "part_of",
+        "building"
+      ],
+      "near_match_type": "predicate_object_exact",
+      "near_gold_triples": [
+        [
+          "building part",
+          "part_of",
+          "building"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    },
+    {
+      "task": "a",
+      "sample_index": 2100,
+      "split": "calibration",
+      "confidence": 0.9,
+      "raw_triple": [
+        "inflorescence height",
+        "part_of",
+        "inflorescence size"
+      ],
+      "canonical_triple": [
+        "inflorescence height",
+        "part_of",
+        "inflorescence size"
+      ],
+      "near_match_type": "predicate_object_exact",
+      "near_gold_triples": [
+        [
+          "inflorescence length",
+          "part_of",
+          "inflorescence size"
+        ],
+        [
+          "inflorescence width",
+          "part_of",
+          "inflorescence size"
+        ]
+      ],
+      "evidence_mode": "explicit",
+      "evidence_gap_chars": null,
+      "postprocess_status": "accepted",
+      "rejection_reasons": []
+    }
+  ],
+  "interpretation": {
+    "calibrated_metrics_are_deployable": false,
+    "warning": "Do not apply this calibrator: candidate-level class checks pass, but positive evidence comes from fewer than 5 independent samples."
+  }
+}

@@ -1,0 +1,2465 @@
+{
+  "meta": {
+    "protocol": "llms4ol2026_closed_book_probe_v1",
+    "status": "frozen_not_executed",
+    "frozen_before_generation": true,
+    "model": "dots3-note-prev",
+    "seed": 20260926,
+    "prefix": 30,
+    "per_task": 15,
+    "max_positive_facts_per_sample": 4,
+    "contains_source_text": false,
+    "contains_protected_gold": true,
+    "gold_visible_to_model": true,
+    "gold_visibility_scope": "closed_book_probe_only",
+    "membership_labels_available": false,
+    "claim_scope": "benchmark_factual_probeability_not_verified_membership",
+    "cache_hits": 0,
+    "estimated_external_calls": 30
+  },
+  "locked_protocol": {
+    "one_call_per_sample": true,
+    "positive_source": "official_target_triples",
+    "negative_source": "same_predicate_object_swap_not_in_sample_gold",
+    "primary_probe_metric": "item_level_auroc_from_self_reported_probability",
+    "sample_probeability": "balanced_mean_probability_correct",
+    "clean_polluted_split": "within_task_bottom_top_rank_tertiles",
+    "middle_tertile_reported_but_excluded_from_contrast": true,
+    "blind_performance_source": "existing_frozen_context_grounded_results",
+    "allow_generation_tuning": false,
+    "allow_calibration_tuning": false,
+    "allow_deployment_change": false
+  },
+  "selected_indices": {
+    "a": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      11,
+      15,
+      16,
+      17,
+      18,
+      20,
+      25,
+      28
+    ],
+    "b": [
+      2,
+      3,
+      5,
+      7,
+      9,
+      10,
+      11,
+      12,
+      14,
+      15,
+      23,
+      24,
+      25,
+      27,
+      28
+    ]
+  },
+  "query_counts": {
+    "entailed": 107,
+    "not_entailed": 107
+  },
+  "blind_results": {
+    "a": {
+      "path": "D:\\NLP\\experiments\\results\\official_blind_openai_a_n30_off0.json",
+      "sha256": "c4748792a472649b0aac6f2a50600c52eba58c1ded31898c2198bb806f9fe454"
+    },
+    "b": {
+      "path": "D:\\NLP\\experiments\\results\\official_blind_openai_b_n30_off0.json",
+      "sha256": "4797d9128db18ea880df9f90aaf6744a9c26e83453081766d56dc48e9fb807f4"
+    }
+  },
+  "samples": [
+    {
+      "task": "a",
+      "sample_index": 0,
+      "sample_id": "e084ae705bfc4281a5e60155dc34c92c",
+      "items": [
+        {
+          "triple": [
+            "transmission type value automatic",
+            "is-a",
+            "02 vegetables (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "static object",
+            "is-a",
+            "other objects with which car can colide"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "moving object",
+            "is-a",
+            "01160 - bread and similar products (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "transmission type value manual",
+            "is-a",
+            "02 vegetables (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "transmission type value manual",
+            "is-a",
+            "transmission type value"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "moving object",
+            "is-a",
+            "other objects with which car can colide"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "static object",
+            "is-a",
+            "01160 - bread and similar products (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "transmission type value automatic",
+            "is-a",
+            "transmission type value"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "6c6d8d98dfa228f635e5814f6fd0ec384ed6b32bbb54169284a44b07fe162d01"
+    },
+    {
+      "task": "a",
+      "sample_index": 1,
+      "sample_id": "a499358f7cff43cebea40eb1b6098a04",
+      "items": [
+        {
+          "triple": [
+            "artiodactyla",
+            "is-a",
+            "laurasiatheria"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "artiodactyla",
+            "is-a",
+            "abelmoschus"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "perissodactyla",
+            "is-a",
+            "abelmoschus"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "tylopoda",
+            "is-a",
+            "artiodactyla"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "ruminantia",
+            "is-a",
+            "artiodactyla"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "perissodactyla",
+            "is-a",
+            "laurasiatheria"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "ruminantia",
+            "is-a",
+            "abelmoschus"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "tylopoda",
+            "is-a",
+            "abelmoschus"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "37a71b0750ac651a1131105a419f396be0bc758115a51c5b20bef08220bf276d"
+    },
+    {
+      "task": "a",
+      "sample_index": 2,
+      "sample_id": "7d4b8618c0bc4bf2aa2cfb42683b0663",
+      "items": [
+        {
+          "triple": [
+            "chokecherry",
+            "is-a",
+            "1-benzopyran"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "pepo fruit",
+            "is-a",
+            "berry fruit"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "moskovich tomato",
+            "is-a",
+            "tomato"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "tomato",
+            "is-a",
+            "abelmoschus"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "pepo fruit",
+            "is-a",
+            "1-benzopyran"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "moskovich tomato",
+            "is-a",
+            "abelmoschus"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "chokecherry",
+            "is-a",
+            "choke cherry"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "tomato",
+            "is-a",
+            "tomato"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "0b80faff95d27aa4aca12a688e408c2dbf0acaf8c3175031feea3c3ccb98dc49"
+    },
+    {
+      "task": "a",
+      "sample_index": 3,
+      "sample_id": "c6fa4b40bf4b4e678c697c8411cb2592",
+      "items": [
+        {
+          "triple": [
+            "turkey thigh (skinless, with bone)",
+            "is-a",
+            "00370 - rice and similar- (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "turkey thigh (with skin, with bone)",
+            "is-a",
+            "piece of turkey meat (with bone)"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "mango (sliced, canned)",
+            "is-a",
+            "1-benzopyran"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "turkey thigh (skinless, with bone)",
+            "is-a",
+            "piece of turkey meat (with bone)"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "turkey thigh (with skin, with bone)",
+            "is-a",
+            "00370 - rice and similar- (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "piece of turkey meat (with bone, raw)",
+            "is-a",
+            "piece of turkey meat (with bone)"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "mango (sliced, canned)",
+            "is-a",
+            "mango (canned)"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "piece of turkey meat (with bone, raw)",
+            "is-a",
+            "00370 - rice and similar- (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "f6e5e8f12051d94168fc11cdd6086636b2c26fffcb7bd96be2dfb6365ca78ffa"
+    },
+    {
+      "task": "a",
+      "sample_index": 4,
+      "sample_id": "fe0c2371649b4f3c99fd5bbed9d20cd7",
+      "items": [
+        {
+          "triple": [
+            "gerund ac frame",
+            "is-a",
+            "gerund frame"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "admitted term",
+            "instance-of",
+            "a class"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "regulated term",
+            "instance-of",
+            "a class"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "preferred term",
+            "instance-of",
+            "a class"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "preferred term",
+            "instance-of",
+            "normative authorization"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "regulated term",
+            "instance-of",
+            "normative authorization"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "gerund ac frame",
+            "is-a",
+            "1-benzopyran"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "admitted term",
+            "instance-of",
+            "normative authorization"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "4f411b1781e05e52c5083759ad0c057d61af4b43bb05e6a1d1e6aa940dba25c3"
+    },
+    {
+      "task": "a",
+      "sample_index": 5,
+      "sample_id": "6c6169dbc051483287e9f3d6d35e6fe4",
+      "items": [
+        {
+          "triple": [
+            "reciprocal square metre reciprocal gram",
+            "instance-of",
+            "unit multiplication"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "kelvin mole",
+            "instance-of",
+            "unit multiplication"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "kilogram second to the power -2",
+            "instance-of",
+            "unit multiplication"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "square metre hertz",
+            "instance-of",
+            "a class"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "square metre hertz",
+            "instance-of",
+            "unit multiplication"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "kelvin mole",
+            "instance-of",
+            "a class"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "reciprocal square metre reciprocal gram",
+            "instance-of",
+            "a class"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "kilogram second to the power -2",
+            "instance-of",
+            "a class"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "bb1d13eff50457d84de41eaaeae14bc0ad63e07e33f8bb6316dc3d9fd0976eb3"
+    },
+    {
+      "task": "a",
+      "sample_index": 7,
+      "sample_id": "9c122a867b3c49918228078b65391c07",
+      "items": [
+        {
+          "triple": [
+            "leek",
+            "is-a",
+            "root, tuber or bulb"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "piece of chicken breast (skinless, raw)",
+            "is-a",
+            "00380 - rice grain (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "root, tuber or bulb, with peel",
+            "is-a",
+            "00960 - groats (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "seco-ergostane",
+            "is-a",
+            "seco-steroid"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "root, tuber or bulb, with peel",
+            "is-a",
+            "root, tuber or bulb"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "leek",
+            "is-a",
+            "00960 - groats (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "piece of chicken breast (skinless, raw)",
+            "is-a",
+            "piece of chicken breast (skinless)"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "seco-ergostane",
+            "is-a",
+            "1-benzopyran"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "36513e3917944c94fddc0da3c4b1e3c64b89af2bda4736b563de791411ab0b79"
+    },
+    {
+      "task": "a",
+      "sample_index": 11,
+      "sample_id": "8c1a770ebc1a4e768148de07cc26d624",
+      "items": [
+        {
+          "triple": [
+            "cardiofaciocutaneous syndrome 4",
+            "is-a",
+            "02 vegetables (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "cardiofaciocutaneous syndrome 4",
+            "is-a",
+            "autosomal dominant disease"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "fanconi renotubular syndrome 1",
+            "is-a",
+            "02 vegetables (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "hypomyelinating leukodystrophy 25",
+            "is-a",
+            "autosomal dominant disease"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "retinitis pigmentosa 87",
+            "is-a",
+            "02 vegetables (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "retinitis pigmentosa 87",
+            "is-a",
+            "autosomal dominant disease"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "fanconi renotubular syndrome 1",
+            "is-a",
+            "autosomal dominant disease"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "hypomyelinating leukodystrophy 25",
+            "is-a",
+            "02 vegetables (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "3b91567c4f29d1f06dbf2f9216f1eb84a936cf3cd0b62d20f3e3dcf6a10e3d9d"
+    },
+    {
+      "task": "a",
+      "sample_index": 15,
+      "sample_id": "9590a4b4b04a4283aa26a5400fd12a8f",
+      "items": [
+        {
+          "triple": [
+            "benzene",
+            "is-a",
+            "02 vegetables (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "benzene",
+            "is-a",
+            "volatile organic compound"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "acetonitrile",
+            "is-a",
+            "volatile organic compound"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "acetonitrile",
+            "is-a",
+            "02 vegetables (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "methanol",
+            "is-a",
+            "volatile organic compound"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "methanol",
+            "is-a",
+            "02 vegetables (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "1,4-dioxane",
+            "is-a",
+            "02 vegetables (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "1,4-dioxane",
+            "is-a",
+            "volatile organic compound"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "260b206cdabecd18a05b5114634303bc3e0e094a33c110c8876d4175a051bb56"
+    },
+    {
+      "task": "a",
+      "sample_index": 16,
+      "sample_id": "bdcd0033f69e443f84938228e57f3644",
+      "items": [
+        {
+          "triple": [
+            "hatchback",
+            "instance-of",
+            "body style value"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "saloon",
+            "instance-of",
+            "body style value"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "estate",
+            "instance-of",
+            "adiabatic bulk modulus"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "unspecified",
+            "instance-of",
+            "body style value"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "saloon",
+            "instance-of",
+            "adiabatic bulk modulus"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "estate",
+            "instance-of",
+            "body style value"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "hatchback",
+            "instance-of",
+            "adiabatic bulk modulus"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "unspecified",
+            "instance-of",
+            "adiabatic bulk modulus"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "467bbdc46f497db3918a638a79365db329d49b916f745e9a354faf7a906b8fe4"
+    },
+    {
+      "task": "a",
+      "sample_index": 17,
+      "sample_id": "2e31f1fa13324890b03248b5cfb2541d",
+      "items": [
+        {
+          "triple": [
+            "thermal climate",
+            "is-a",
+            "climatological average"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "microclimate",
+            "is-a",
+            "1-benzopyran"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "local climate",
+            "is-a",
+            "1-benzopyran"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "thermal climate",
+            "is-a",
+            "1-benzopyran"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "mesoclimate",
+            "is-a",
+            "climatological average"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "mesoclimate",
+            "is-a",
+            "1-benzopyran"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "local climate",
+            "is-a",
+            "climatological average"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "microclimate",
+            "is-a",
+            "climatological average"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "99a819f02a787e089f6768d9f0e544eff07a2be98144c27759ec1c8635f26eb2"
+    },
+    {
+      "task": "a",
+      "sample_index": 18,
+      "sample_id": "a4fb64e849134ec8b3b7fe2839a43eb8",
+      "items": [
+        {
+          "triple": [
+            "clostridium difficile colitis",
+            "is-a",
+            "colitis"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "inflammatory bowel disease 29",
+            "is-a",
+            "inflammatory bowel disease"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "clostridium difficile colitis",
+            "is-a",
+            "abelmoschus"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "ulcerative colitis",
+            "is-a",
+            "abelmoschus"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "colitis",
+            "is-a",
+            "inflammatory bowel disease"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "colitis",
+            "is-a",
+            "02 vegetables (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "inflammatory bowel disease 29",
+            "is-a",
+            "02 vegetables (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "ulcerative colitis",
+            "is-a",
+            "colitis"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "8666a3e28de659eda256ffd7be67e65708da5d2b33bbd2eb264c2748ed2c451a"
+    },
+    {
+      "task": "a",
+      "sample_index": 20,
+      "sample_id": "2ec4d79d2075424c85bf8ccccf645c90",
+      "items": [
+        {
+          "triple": [
+            "ruditapes philippinarum",
+            "is-a",
+            "ruditapes"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "ruditapes philippinarum",
+            "is-a",
+            "abelmoschus"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "lamb neck",
+            "is-a",
+            "piece of lamb meat (raw)"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "piece of lamb meat (with bone, raw)",
+            "is-a",
+            "00380 - rice grain (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "piece of lamb meat (cubed, raw)",
+            "is-a",
+            "00380 - rice grain (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "piece of lamb meat (cubed, raw)",
+            "is-a",
+            "piece of lamb meat (raw)"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "piece of lamb meat (with bone, raw)",
+            "is-a",
+            "piece of lamb meat (raw)"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "lamb neck",
+            "is-a",
+            "00380 - rice grain (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "27255f0c60ac27e878cc0592925938b3b89072f24e351b066f8879efd97a25d0"
+    },
+    {
+      "task": "a",
+      "sample_index": 25,
+      "sample_id": "6d9bdf0f92d0400289fd280b6edd5d43",
+      "items": [
+        {
+          "triple": [
+            "epitope specific granulocyte colony stimulating factor production by t cells",
+            "is-a",
+            "00380 - rice grain (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "epitope specific interleukin-1 alpha production by t cells",
+            "is-a",
+            "interleukin-1 alpha production"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "epitope specific granulocyte colony stimulating factor production by t cells",
+            "is-a",
+            "granulocyte colony-stimulating factor production"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "avalanche photodiode",
+            "is-a",
+            "abelmoschus"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "avalanche photodiode",
+            "is-a",
+            "photodiode"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "epitope specific helper t cell enhancement of t cell mediated immune response",
+            "is-a",
+            "helper t cell enhancement of t cell mediated immune response"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "epitope specific interleukin-1 alpha production by t cells",
+            "is-a",
+            "00960 - groats (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "epitope specific helper t cell enhancement of t cell mediated immune response",
+            "is-a",
+            "01190 - wheat bread and rolls, white (refined flour) (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "24220e5f166035fb4cbec2c9bcd2a6d909e7f0180573157b12644bba38baf277"
+    },
+    {
+      "task": "a",
+      "sample_index": 28,
+      "sample_id": "f9cd72fff2e142758efb43894580f798",
+      "items": [
+        {
+          "triple": [
+            "eriocheir sinensis",
+            "is-a",
+            "varunidae"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "piece(s) of bison organ (raw)",
+            "is-a",
+            "00380 - rice grain (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "piece(s) of bison organ (raw)",
+            "is-a",
+            "piece(s) of bison organ"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "gecarcinidae",
+            "is-a",
+            "abelmoschus"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "eriocheir sinensis",
+            "is-a",
+            "abelmoschus"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "snapper fillet (raw)",
+            "is-a",
+            "snapper fillet"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "gecarcinidae",
+            "is-a",
+            "grapsoidea"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "snapper fillet (raw)",
+            "is-a",
+            "1-benzopyran"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "b6cd2be960f908a64dfc5a3bae438817afed3956554b4b8811a6aa360c570bfe"
+    },
+    {
+      "task": "b",
+      "sample_index": 2,
+      "sample_id": "a954183e350a42d280972135f60941a9",
+      "items": [
+        {
+          "triple": [
+            "ground speed",
+            "is-a",
+            "speed"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "potential",
+            "is-a",
+            "physical quantity"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "capacity",
+            "is-a",
+            "physical quantity"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "ground speed",
+            "is-a",
+            "abalone"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "proper motion",
+            "is-a",
+            "speed"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "proper motion",
+            "is-a",
+            "abalone"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "potential",
+            "is-a",
+            "1d extent"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "capacity",
+            "is-a",
+            "1d extent"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "4c84af67ac0dd5f13337609afb335e7d32b0105f2799e11fefd420de65602159"
+    },
+    {
+      "task": "b",
+      "sample_index": 3,
+      "sample_id": "8cc70e8706f34b5aa545acddc0ca27a3",
+      "items": [
+        {
+          "triple": [
+            "squab carcass (gutted)",
+            "is-a",
+            "01 fruits (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "35780 - common chamomile (efsa foodex2)",
+            "is-a",
+            "02770 - croissant (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "35780 - common chamomile (efsa foodex2)",
+            "is-a",
+            "35770 - chamomile (efsa foodex2)"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "squab carcass (gutted)",
+            "is-a",
+            "squab processed carcass"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q03"
+        }
+      ],
+      "prompt_sha256": "ff16a97ef13c045ba7449c4a311e54490027d4e3e3e9b19ad7d6992829db807f"
+    },
+    {
+      "task": "b",
+      "sample_index": 5,
+      "sample_id": "ec6105f455e44cf19310b18b94e0efaf",
+      "items": [
+        {
+          "triple": [
+            "southern bluefin tuna",
+            "is-a",
+            "tuna (raw)"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "southern bluefin tuna",
+            "is-a",
+            "1d extent"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "northern bluefin tuna (raw)",
+            "is-a",
+            "1d extent"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "bluefin tuna",
+            "is-a",
+            "1d extent"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "bluefin tuna",
+            "is-a",
+            "tuna (raw)"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "skipjack tuna (raw)",
+            "is-a",
+            "tuna (raw)"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "skipjack tuna (raw)",
+            "is-a",
+            "1d extent"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "northern bluefin tuna (raw)",
+            "is-a",
+            "tuna (raw)"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "c7ae92f0415b9998dd8dd993d9b2cc49100df7ebd561176da852a73b57793bc0"
+    },
+    {
+      "task": "b",
+      "sample_index": 7,
+      "sample_id": "1ed40d043201487399942563e3e97883",
+      "items": [
+        {
+          "triple": [
+            "piece of vegetable",
+            "is-a",
+            "1d extent"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "plant above surface, excluding fruit and seed",
+            "is-a",
+            "(1->4)-beta-d-glucan"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "wood",
+            "is-a",
+            "root, stem, leaf or flower"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "wood",
+            "is-a",
+            "(1->4)-beta-d-glucan"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "plant above surface, excluding fruit and seed",
+            "is-a",
+            "root, stem, leaf or flower"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "piece of vegetable",
+            "is-a",
+            "plant piece"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q05"
+        }
+      ],
+      "prompt_sha256": "18997205f063e22f7ef0d198b469e8a6805f0fe2f4c9cebe0fec4635a7aaba30"
+    },
+    {
+      "task": "b",
+      "sample_index": 9,
+      "sample_id": "8cab167a90484df19f37da9c335d6e93",
+      "items": [
+        {
+          "triple": [
+            "auditory system benign neoplasm",
+            "is-a",
+            "sensory organ benign neoplasm"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "auditory system benign neoplasm",
+            "is-a",
+            "02770 - croissant (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q01"
+        }
+      ],
+      "prompt_sha256": "b3b16a28527d24a470bcf4bd648cfdd8b591bf25957577e49dd2535959137cd6"
+    },
+    {
+      "task": "b",
+      "sample_index": 10,
+      "sample_id": "948d25b13a4240499ec6d210b9847b5e",
+      "items": [
+        {
+          "triple": [
+            "plants per hectare",
+            "is-a",
+            "area density unit"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "phosphate ion",
+            "is-a",
+            "phosphorus oxoanion"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "row per meter square",
+            "is-a",
+            "01 fruits (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "kilogram per hectare",
+            "is-a",
+            "01 fruits (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "row per meter square",
+            "is-a",
+            "area density unit"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "plants per hectare",
+            "is-a",
+            "01 fruits (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "phosphate ion",
+            "is-a",
+            "1d extent"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "kilogram per hectare",
+            "is-a",
+            "area density unit"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "e0c5fd1e8c03eb7f821458aba1e8f3173797a30a9f1375ee471448a03810ad78"
+    },
+    {
+      "task": "b",
+      "sample_index": 11,
+      "sample_id": "277ae0b955a24ab499106cdd7a8c91fe",
+      "items": [
+        {
+          "triple": [
+            "butter cake.ttl",
+            "instance-of",
+            "age"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "workforce.ttl",
+            "instance-of",
+            "age"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "butter cake.ttl",
+            "instance-of",
+            "document"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "saw.rdf",
+            "instance-of",
+            "age"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "saw.rdf",
+            "instance-of",
+            "document"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "brushed_dc_electric_motor.ttl",
+            "instance-of",
+            "document"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "brushed_dc_electric_motor.ttl",
+            "instance-of",
+            "age"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "workforce.ttl",
+            "instance-of",
+            "document"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "b5d836678f3bac855496b7b1886d30879e9a8fb92dbed69998ff0a6540b5e270"
+    },
+    {
+      "task": "b",
+      "sample_index": 12,
+      "sample_id": "c4d163e8f7374185a427479b023647d2",
+      "items": [
+        {
+          "triple": [
+            "soil analysis process",
+            "is-a",
+            "environmental system process"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "soil analysis process",
+            "is-a",
+            "01 fruits (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "transpiration",
+            "is-a",
+            "material transport process"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "flooding",
+            "is-a",
+            "01 fruits (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "flooding",
+            "is-a",
+            "material transport process"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "transpiration",
+            "is-a",
+            "01 fruits (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "liming process",
+            "is-a",
+            "environmental system process"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "liming process",
+            "is-a",
+            "01 fruits (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "9b89c825ae69e81dea602a060246876357e264df270d57028fec2157740e8eae"
+    },
+    {
+      "task": "b",
+      "sample_index": 14,
+      "sample_id": "69925a1440024c53a135f64e99cc1c9e",
+      "items": [
+        {
+          "triple": [
+            "time instant",
+            "is-a",
+            "temporal entity"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "10000041 - fats edible - animal (perishable) (gs1 gpc)",
+            "is-a",
+            "50151600 - fats edible (gs1 gpc)"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "10000585 - fats edible - vegetable or plant (perishable) (gs1 gpc)",
+            "is-a",
+            "(1->4)-beta-d-glucan"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "time instant",
+            "is-a",
+            "1d extent"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "10000585 - fats edible - vegetable or plant (perishable) (gs1 gpc)",
+            "is-a",
+            "50151600 - fats edible (gs1 gpc)"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "10000041 - fats edible - animal (perishable) (gs1 gpc)",
+            "is-a",
+            "(1->4)-beta-d-glucan"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q05"
+        }
+      ],
+      "prompt_sha256": "ddb16600786f9d8bffc622a0c2efd550b90ae251927019f9d350f90f0bc40ba9"
+    },
+    {
+      "task": "b",
+      "sample_index": 15,
+      "sample_id": "d0d990d3770f410aada290ba01ed8de3",
+      "items": [
+        {
+          "triple": [
+            "fibrolamellar carcinoma",
+            "is-a",
+            "hepatocellular carcinoma"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "fibrolamellar carcinoma",
+            "is-a",
+            "1d extent"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "childhood hepatocellular carcinoma",
+            "is-a",
+            "1d extent"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "sclerosing hepatic carcinoma",
+            "is-a",
+            "1d extent"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "childhood hepatocellular carcinoma",
+            "is-a",
+            "hepatocellular carcinoma"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "sclerosing hepatic carcinoma",
+            "is-a",
+            "hepatocellular carcinoma"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q05"
+        }
+      ],
+      "prompt_sha256": "2f75e4fa2c9d940ad7639e958999d91d4e23180211e6a03d53298c4753ed4983"
+    },
+    {
+      "task": "b",
+      "sample_index": 23,
+      "sample_id": "7d379fdd736645d78c565a0aeb4e129f",
+      "items": [
+        {
+          "triple": [
+            "07630 - red algae (efsa foodex2)",
+            "is-a",
+            "01180 - wheat bread and rolls (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "07720 - other brown algae (efsa foodex2)",
+            "is-a",
+            "(1->4)-beta-d-glucan"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "07600 - green algae (efsa foodex2)",
+            "is-a",
+            "07590 - algae and prokaryotes organisms (efsa foodex2)"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "07720 - other brown algae (efsa foodex2)",
+            "is-a",
+            "07690 - brown algae (efsa foodex2)"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "07710 - sea spaghetti (efsa foodex2)",
+            "is-a",
+            "(1->4)-beta-d-glucan"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "07630 - red algae (efsa foodex2)",
+            "is-a",
+            "07590 - algae and prokaryotes organisms (efsa foodex2)"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "07710 - sea spaghetti (efsa foodex2)",
+            "is-a",
+            "07690 - brown algae (efsa foodex2)"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "07600 - green algae (efsa foodex2)",
+            "is-a",
+            "01180 - wheat bread and rolls (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "d6e543a6560c28521da2598dad2be3c9dd85eaabf1a76f102e4302558246c5cf"
+    },
+    {
+      "task": "b",
+      "sample_index": 24,
+      "sample_id": "b12307f6c2ff4ab9959466d1ad47f1ec",
+      "items": [
+        {
+          "triple": [
+            "light microscopy assay",
+            "is-a",
+            "1d extent"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "electron microscopy imaging assay",
+            "is-a",
+            "1d extent"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "electron microscopy imaging assay",
+            "is-a",
+            "microscopy assay"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "confocal fluorescence microscopy assay",
+            "is-a",
+            "1d extent"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "confocal fluorescence microscopy assay",
+            "is-a",
+            "microscopy assay"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "light microscopy assay",
+            "is-a",
+            "microscopy assay"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q05"
+        }
+      ],
+      "prompt_sha256": "37b0ebd470b5f15852e9d6fe513881376bb0c741f83824270531dbe02b5dc500"
+    },
+    {
+      "task": "b",
+      "sample_index": 25,
+      "sample_id": "29dbc84e40334f1a9ba8d5cdfa69106b",
+      "items": [
+        {
+          "triple": [
+            "shellfish food product",
+            "is-a",
+            "animal seafood product"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "shellfish food product",
+            "is-a",
+            "01 fruits (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q01"
+        }
+      ],
+      "prompt_sha256": "f3284e03b29059dea54f43af77a2a693e7f081b61c3fab9ec5055dbb21765c87"
+    },
+    {
+      "task": "b",
+      "sample_index": 27,
+      "sample_id": "da4b3ec210154ff592355f61147d2dd4",
+      "items": [
+        {
+          "triple": [
+            "hindlimb zeugopod",
+            "is-a",
+            "lower limb segment"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "salt and pepper spray",
+            "is-a",
+            "01180 - wheat bread and rolls (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "soup seasoning (chicken fat added)",
+            "is-a",
+            "01180 - wheat bread and rolls (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "soup seasoning (chicken fat added)",
+            "is-a",
+            "sodium chloride flavoring or seasoning food product"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "hindlimb stylopod",
+            "is-a",
+            "lower limb segment"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "hindlimb zeugopod",
+            "is-a",
+            "01 fruits (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q05"
+        },
+        {
+          "triple": [
+            "salt and pepper spray",
+            "is-a",
+            "sodium chloride flavoring or seasoning food product"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q06"
+        },
+        {
+          "triple": [
+            "hindlimb stylopod",
+            "is-a",
+            "01 fruits (ccpr)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q07"
+        }
+      ],
+      "prompt_sha256": "6f167cfcdceb3816ee237b429575c3240fcdd1abf4933de2fcb2c7850d8ae9ac"
+    },
+    {
+      "task": "b",
+      "sample_index": 28,
+      "sample_id": "fec887ae266b40ab8a7dd7d5ee765f3d",
+      "items": [
+        {
+          "triple": [
+            "elispot assay measuring epitope specific macrophage inflammatory protein-1 alpha production by t cells",
+            "is-a",
+            "assay measuring epitope specific macrophage inflammatory protein-1 alpha production by t cells"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q00"
+        },
+        {
+          "triple": [
+            "elisa measuring epitope specific macrophage inflammatory protein-1 alpha production by t cells",
+            "is-a",
+            "assay measuring epitope specific macrophage inflammatory protein-1 alpha production by t cells"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q01"
+        },
+        {
+          "triple": [
+            "cytometric bead array assay measuring epitope specific macrophage inflammatory protein-1 alpha production by t cells",
+            "is-a",
+            "12320 - other seeds (including elsewhere non-listed oilseeds and other seeds) (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q02"
+        },
+        {
+          "triple": [
+            "elispot assay measuring epitope specific macrophage inflammatory protein-1 alpha production by t cells",
+            "is-a",
+            "12320 - other seeds (including elsewhere non-listed oilseeds and other seeds) (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q03"
+        },
+        {
+          "triple": [
+            "cytometric bead array assay measuring epitope specific macrophage inflammatory protein-1 alpha production by t cells",
+            "is-a",
+            "assay measuring epitope specific macrophage inflammatory protein-1 alpha production by t cells"
+          ],
+          "expected": "entailed",
+          "control_type": "official_target_fact",
+          "item_id": "q04"
+        },
+        {
+          "triple": [
+            "elisa measuring epitope specific macrophage inflammatory protein-1 alpha production by t cells",
+            "is-a",
+            "12320 - other seeds (including elsewhere non-listed oilseeds and other seeds) (efsa foodex2)"
+          ],
+          "expected": "not_entailed",
+          "control_type": "same_predicate_object_swap_non_gold",
+          "item_id": "q05"
+        }
+      ],
+      "prompt_sha256": "f49948f5ecbce9b8cb97c148f11afd6333551d79ecc0da2aae7e1c1275834048"
+    }
+  ]
+}

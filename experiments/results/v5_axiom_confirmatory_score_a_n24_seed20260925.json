@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "protocol": "v5_axiom_confirmatory_scoring_v1",
+    "manifest": "D:\\NLP\\experiments\\results\\v5_axiom_confirmatory_manifest_a24_seed20260925.json",
+    "manifest_sha256": "487a2f2242dbee3ee722dfab1d795b18a985e4c4e5fb066aa37d388d90499f0b",
+    "base_result": "D:\\NLP\\experiments\\results\\v5_axiom_confirmatory_base_a_n24_seed20260925.json",
+    "base_result_semantic_sha256": "1d325b5544eedfd012641bc45c3c344084d1daaf56f1f29ea6dc8aa15bed5091",
+    "calibrated_result": "D:\\NLP\\experiments\\results\\v5_axiom_confirmatory_calibrated_a_n24_seed20260925.json",
+    "calibrated_result_semantic_sha256": "f4c3fe812ff69b6e524841d68302fb07329aa7073f26ad1d2737c46462e317c4",
+    "calibrator_artifact": "D:\\NLP\\experiments\\results\\relation_guarded_v5_axioms_only_pooled_calibrator_a16_seed20260925.json",
+    "calibrator_sha256": "22440c30c38f94c8999ef0ac276ca958665085488472746bc7afb00f7e0145df",
+    "api_calls_for_scoring": 0,
+    "claim_scope": "task_a_endpoint_visible_axiom_slice"
+  },
+  "candidate_population": {
+    "all": {
+      "n": 17,
+      "raw_true_positives": 4,
+      "canonical_true_positives": 4,
+      "symmetric_semantic_true_positives": 5,
+      "recovered_by_symmetric_order_invariance": 1,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    },
+    "deployment_eligible": {
+      "n": 15,
+      "raw_true_positives": 4,
+      "canonical_true_positives": 4,
+      "symmetric_semantic_true_positives": 5,
+      "recovered_by_symmetric_order_invariance": 1,
+      "canonicalization_changed": 0,
+      "recovered_by_canonicalization": 0,
+      "lost_by_canonicalization": 0
+    }
+  },
+  "official_exact": {
+    "base_v5": {
+      "precision": 0.26666666666666666,
+      "recall": 0.07407407407407407,
+      "f1": 0.11594202898550725,
+      "tp": 4,
+      "fp": 11,
+      "fn": 50,
+      "positive_samples": 4
+    },
+    "frozen_calibrated_v5": {
+      "precision": 0.21428571428571427,
+      "recall": 0.05555555555555555,
+      "f1": 0.08823529411764706,
+      "tp": 3,
+      "fp": 11,
+      "fn": 51,
+      "positive_samples": 3
+    },
+    "transition_from_base_to_calibrated": {
+      "recovered_exact": 0,
+      "lost_exact": 1,
+      "recovered": [],
+      "lost": [
+        {
+          "task": "a",
+          "sample_index": 1281,
+          "triple": [
+            "aromatic",
+            "disjoint with",
+            "non aromatic"
+          ]
+        }
+      ]
+    }
+  },
+  "candidate_calibration": {
+    "raw": {
+      "n": 15,
+      "positives": 4,
+      "brier": 0.67072,
+      "ece": 0.6839999999999999
+    },
+    "frozen_calibrator": {
+      "n": 15,
+      "positives": 4,
+      "brier": 0.2108843537414966,
+      "ece": 0.12380952380952381
+    },
+    "delta": {
+      "brier": -0.45983564625850337,
+      "ece": -0.5601904761904761
+    }
+  },
+  "preregistered_gate": {
+    "requirements": {
+      "successful_units_required": 24,
+      "minimum_exact_positive_samples": 5,
+      "minimum_exact_precision": 0.2,
+      "calibrated_brier_must_not_exceed_raw": true,
+      "all_conditions_required": true,
+      "threshold_or_rule_retuning_after_freeze": false
+    },
+    "checks": {
+      "successful_units": true,
+      "minimum_exact_positive_samples": false,
+      "minimum_exact_precision": true,
+      "calibrated_brier_must_not_exceed_raw": true
+    },
+    "passed": false,
+    "failed_checks": [
+      "minimum_exact_positive_samples"
+    ]
+  },
+  "confirmatory_evidence_valid": true,
+  "scientific_deployable": false,
+  "confirmatory_eligible": false,
+  "status": "failed_closed",
+  "reason": "minimum_exact_positive_samples"
+}

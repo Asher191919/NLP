@@ -1,0 +1,1226 @@
+{
+  "meta": {
+    "protocol": "official_relation_transfer_error_audit_v1",
+    "status": "complete",
+    "post_hoc_diagnostic": true,
+    "official_metric": false,
+    "contains_source_text": false,
+    "contains_protected_gold": true,
+    "result_path": "D:\\NLP\\experiments\\results\\official_relation_transfer_openai_a_n30_seed20260927.json",
+    "result_sha256": "7dc644e0d955c4b315407c65958f62c21066a7a46f2c3fb11b05035394f8d9f0",
+    "package_id": "76e98ba860f1b72b4df3",
+    "evaluation_manifest_sha256": "9e4ab1df98616874acebe75a425d8aa24dbe0ec6d5e149d14bca78613e27bb12",
+    "model": "dots3-note-prev",
+    "recorded_unit_attempts": 81
+  },
+  "diagnostic_policy": {
+    "official_exact_scores_unchanged": true,
+    "surface_matching_is_non_official": true,
+    "surface_matching_operations": [
+      "strip_trailing_parenthetical_qualifier",
+      "normalize_hyphen_and_underscore",
+      "remove_ascii_punctuation",
+      "relation_surface_morphology_v1"
+    ],
+    "may_tune_prompt_or_thresholds": false,
+    "may_fit_or_apply_calibrator": false,
+    "may_authorize_external_calls": false,
+    "may_authorize_deployment": false
+  },
+  "systems": {
+    "open_vocab": {
+      "predicted_nonself_nontax": 424,
+      "gold_nonself_nontax": 101,
+      "prediction_error_categories": {
+        "no_local_gold_overlap": 307,
+        "one_endpoint_exact": 101,
+        "one_endpoint_surface": 6,
+        "both_endpoints_exact_not_paired": 5,
+        "endpoints_reversed": 4,
+        "endpoints_exact_predicate_mismatch": 1
+      },
+      "missed_gold_coverage_categories": {
+        "no_endpoint_or_predicate_generated": 47,
+        "both_endpoints_generated_unpaired": 31,
+        "one_endpoint_generated": 16,
+        "reversed_endpoints_wrong_predicate": 4,
+        "one_surface_endpoint_generated": 2,
+        "exact_endpoints_wrong_predicate": 1
+      },
+      "prediction_predicate_counts": {
+        "is a": 37,
+        "encompasses": 32,
+        "subclass of": 14,
+        "includes": 13,
+        "influences": 10,
+        "associated with": 8,
+        "classified under": 8,
+        "used_for": 7,
+        "evaluates": 6,
+        "represents": 6,
+        "accumulates as": 5,
+        "describes": 5,
+        "determined by": 5,
+        "ensures": 5,
+        "provides": 5,
+        "qualifies as": 5,
+        "serves as": 5,
+        "analyzes": 4,
+        "characterized by": 4,
+        "defines": 4,
+        "requires": 4,
+        "used for": 4,
+        "addresses": 3,
+        "are": 3,
+        "classified into": 3,
+        "depends on": 3,
+        "drives": 3,
+        "example of": 3,
+        "functions as": 3,
+        "generated-by": 3,
+        "include": 3,
+        "manifests-in": 3,
+        "occurs along": 3,
+        "plays role in": 3,
+        "based on": 2,
+        "categorized based on": 2,
+        "categorized_into": 2,
+        "contribute to": 2,
+        "delineated into": 2,
+        "depend on": 2,
+        "drive": 2,
+        "facilitates": 2,
+        "generate": 2,
+        "governs": 2,
+        "has": 2,
+        "has-restoring-force": 2,
+        "instance of": 2,
+        "investigates": 2,
+        "involves": 2,
+        "is classified as": 2,
+        "is situated within": 2,
+        "maintains": 2,
+        "occurs-in": 2,
+        "plays-role-in": 2,
+        "propagates-through": 2,
+        "redistributes": 2,
+        "refers-to": 2,
+        "simulates": 2,
+        "triggered-by": 2,
+        "validates": 2,
+        "account for": 1,
+        "acquires": 1,
+        "acts as": 1,
+        "affect": 1,
+        "aids in": 1,
+        "aims to improve": 1,
+        "aligned with": 1,
+        "allows for": 1,
+        "amplifies": 1,
+        "analyze": 1,
+        "applied-to": 1,
+        "applies-in": 1,
+        "arises when": 1,
+        "associated-with": 1,
+        "attests to": 1,
+        "bonded to": 1,
+        "can lead to": 1,
+        "can-lead-to": 1,
+        "captures": 1,
+        "categorized under": 1,
+        "caused by": 1,
+        "clears": 1,
+        "commonly known as": 1,
+        "complement": 1,
+        "completes": 1,
+        "confirms": 1,
+        "contain": 1,
+        "contains": 1,
+        "contributes to": 1,
+        "corrects": 1,
+        "created when": 1,
+        "defined as": 1,
+        "defined by": 1,
+        "definition": 1,
+        "delves into": 1,
+        "demands": 1,
+        "develops along": 1,
+        "dictates": 1,
+        "distinct from": 1,
+        "distribute": 1,
+        "dominates at": 1,
+        "donate": 1,
+        "driven by": 1,
+        "emerge from": 1,
+        "encompass": 1,
+        "ensures safety of": 1,
+        "establish": 1,
+        "establishes": 1,
+        "examines": 1,
+        "example-in": 1,
+        "exemplifies": 1,
+        "exhibit": 1,
+        "facilitate": 1,
+        "falls under": 1,
+        "formed-by": 1,
+        "forms as": 1,
+        "forms due to": 1,
+        "forms in": 1,
+        "function as": 1,
+        "generated as": 1,
+        "generates": 1,
+        "gives rise to": 1,
+        "has flavor": 1,
+        "helps in": 1,
+        "highlights": 1,
+        "hinges-on": 1,
+        "impacts": 1,
+        "integral to": 1,
+        "integrates": 1,
+        "interacts with": 1,
+        "intersects with": 1,
+        "intertwined with": 1,
+        "involve": 1,
+        "involves-restoring-force": 1,
+        "is central to": 1,
+        "is crucial for": 1,
+        "is fundamental to": 1,
+        "is subclass of": 1,
+        "is variety of": 1,
+        "is-for": 1,
+        "is-specialized-extension-of": 1,
+        "leases": 1,
+        "link": 1,
+        "manages": 1,
+        "manifest as": 1,
+        "manifests through": 1,
+        "marks": 1,
+        "mediated by": 1,
+        "mixture of": 1,
+        "occurs at elevated levels due to": 1,
+        "occurs during": 1,
+        "occurs in": 1,
+        "occurs when": 1,
+        "offers": 1,
+        "operate as": 1,
+        "organizes": 1,
+        "parameterizes": 1,
+        "part of": 1,
+        "play role in": 1,
+        "populates": 1,
+        "present in": 1,
+        "preserves": 1,
+        "prevalent in": 1,
+        "produce": 1,
+        "produces": 1,
+        "provides insights into": 1,
+        "purpose": 1,
+        "quantifies": 1,
+        "reclaims": 1,
+        "refers to": 1,
+        "regulate": 1,
+        "related form involving": 1,
+        "relevant to": 1,
+        "relies on": 1,
+        "represents species of": 1,
+        "require understanding of": 1,
+        "results from": 1,
+        "serve as": 1,
+        "serves": 1,
+        "serves_as": 1,
+        "shaped by": 1,
+        "specifies": 1,
+        "standardizes": 1,
+        "strives to create": 1,
+        "structures": 1,
+        "studies": 1,
+        "supplies": 1,
+        "supports": 1,
+        "sustains": 1,
+        "traces": 1,
+        "transfers-energy": 1,
+        "upholds": 1,
+        "used to define": 1,
+        "used-to-monitor": 1,
+        "utilize": 1,
+        "utilized to determine": 1,
+        "variant where": 1,
+        "varies with": 1,
+        "vary by": 1,
+        "yields": 1
+      },
+      "gold_predicate_counts": {
+        "disjoint with": 38,
+        "equivalent class": 29,
+        "type": 16,
+        "database_cross_reference": 5,
+        "is_conjugate_acid_of": 5,
+        "is_conjugate_base_of": 5,
+        "has role": 2,
+        "same as": 1
+      },
+      "prediction_predicate_scope": {
+        "outside_global_gold_predicate_inventory": 371,
+        "taxonomy_alias_misserialized_as_nontax": 51,
+        "typing_alias_misserialized_as_nontax": 2
+      },
+      "samples_with_any_sample_gold_predicate_output": 0,
+      "by_assigned_stratum_prediction_errors": {
+        "disjoint_with": {
+          "no_local_gold_overlap": 69,
+          "one_endpoint_exact": 39,
+          "one_endpoint_surface": 4,
+          "both_endpoints_exact_not_paired": 2
+        },
+        "equivalent_class": {
+          "no_local_gold_overlap": 135,
+          "one_endpoint_exact": 39,
+          "both_endpoints_exact_not_paired": 3,
+          "one_endpoint_surface": 2,
+          "endpoints_exact_predicate_mismatch": 1,
+          "endpoints_reversed": 1
+        },
+        "other_open_predicate": {
+          "no_local_gold_overlap": 103,
+          "one_endpoint_exact": 23,
+          "endpoints_reversed": 3
+        }
+      },
+      "prediction_error_examples": {
+        "no_local_gold_overlap": [
+          {
+            "source_index": 294,
+            "prediction": [
+              "agronomists",
+              "account for",
+              "previous crop"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 294,
+            "prediction": [
+              "forest canopy",
+              "influences",
+              "microclimates"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 294,
+            "prediction": [
+              "forest canopy",
+              "influences",
+              "soil nutrient cycling"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 294,
+            "prediction": [
+              "previous crop",
+              "dictates",
+              "subsequent planting cycles"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 626,
+            "prediction": [
+              "authorized signature",
+              "confirms",
+              "authenticity of the report"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          }
+        ],
+        "one_endpoint_exact": [
+          {
+            "source_index": 294,
+            "prediction": [
+              "gram",
+              "serves as",
+              "primary reference point"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 626,
+            "prediction": [
+              "reference dose",
+              "used to define",
+              "safe exposure levels"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 626,
+            "prediction": [
+              "rfd",
+              "establishes",
+              "toxicity benchmarks"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 860,
+            "prediction": [
+              "general circulation model",
+              "simulates",
+              "large-scale fluid dynamics"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 1232,
+            "prediction": [
+              "active stasis",
+              "specifies",
+              "under active control"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          }
+        ],
+        "both_endpoints_exact_not_paired": [
+          {
+            "source_index": 626,
+            "prediction": [
+              "reference dose",
+              "defined as",
+              "dosage"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 626,
+            "prediction": [
+              "reference dose",
+              "subclass of",
+              "dose"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": "subclass of"
+          },
+          {
+            "source_index": 626,
+            "prediction": [
+              "rfd",
+              "subclass of",
+              "dose"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": "subclass of"
+          },
+          {
+            "source_index": 2049,
+            "prediction": [
+              "deoxyribonucleic acid",
+              "subclass of",
+              "nucleic acid"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": "subclass of"
+          },
+          {
+            "source_index": 2049,
+            "prediction": [
+              "ribonucleic acid",
+              "subclass of",
+              "nucleic acid"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": "subclass of"
+          }
+        ],
+        "endpoints_reversed": [
+          {
+            "source_index": 626,
+            "prediction": [
+              "rfd",
+              "aligned with",
+              "reference dose"
+            ],
+            "near_gold_triples": [
+              [
+                "reference dose",
+                "equivalent class",
+                "rfd"
+              ]
+            ],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 1883,
+            "prediction": [
+              "beta vulgaris",
+              "encompasses",
+              "beet plant"
+            ],
+            "near_gold_triples": [
+              [
+                "beet plant",
+                "database_cross_reference",
+                "beta vulgaris"
+              ]
+            ],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 1883,
+            "prediction": [
+              "cichorium endivia",
+              "represents species of",
+              "endive plant"
+            ],
+            "near_gold_triples": [
+              [
+                "endive plant",
+                "database_cross_reference",
+                "cichorium endivia"
+              ]
+            ],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 1883,
+            "prediction": [
+              "rumex acetosa",
+              "classified under",
+              "sorrel plant"
+            ],
+            "near_gold_triples": [
+              [
+                "sorrel plant",
+                "database_cross_reference",
+                "rumex acetosa"
+              ]
+            ],
+            "predicate_alias": null
+          }
+        ],
+        "endpoints_exact_predicate_mismatch": [
+          {
+            "source_index": 860,
+            "prediction": [
+              "gcm",
+              "refers to",
+              "general circulation model"
+            ],
+            "near_gold_triples": [
+              [
+                "gcm",
+                "equivalent class",
+                "general circulation model"
+              ]
+            ],
+            "predicate_alias": null
+          }
+        ],
+        "one_endpoint_surface": [
+          {
+            "source_index": 1372,
+            "prediction": [
+              "document_assessment",
+              "maintains",
+              "research_document_integrity"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 3189,
+            "prediction": [
+              "ecological provinces",
+              "delineated into",
+              "ecoregions"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 3189,
+            "prediction": [
+              "ecoregions",
+              "shaped by",
+              "regional climate systems"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 3189,
+            "prediction": [
+              "ecozones",
+              "delineated into",
+              "ecoregions"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 4292,
+            "prediction": [
+              "predictions",
+              "based on",
+              "estimates"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          }
+        ]
+      },
+      "missed_gold_examples": {
+        "no_endpoint_or_predicate_generated": [
+          {
+            "source_index": 265,
+            "gold_triple": [
+              "delivery charge specification",
+              "disjoint with",
+              "payment charge specification"
+            ]
+          },
+          {
+            "source_index": 265,
+            "gold_triple": [
+              "delivery charge specification",
+              "disjoint with",
+              "unit price specification"
+            ]
+          },
+          {
+            "source_index": 265,
+            "gold_triple": [
+              "delivery method",
+              "disjoint with",
+              "price specification"
+            ]
+          },
+          {
+            "source_index": 265,
+            "gold_triple": [
+              "payment charge specification",
+              "disjoint with",
+              "delivery charge specification"
+            ]
+          },
+          {
+            "source_index": 265,
+            "gold_triple": [
+              "payment charge specification",
+              "disjoint with",
+              "unit price specification"
+            ]
+          }
+        ],
+        "one_endpoint_generated": [
+          {
+            "source_index": 294,
+            "gold_triple": [
+              "gram",
+              "type",
+              "mass unit"
+            ]
+          },
+          {
+            "source_index": 1232,
+            "gold_triple": [
+              "active stasis",
+              "disjoint with",
+              "deactivated stasis"
+            ]
+          },
+          {
+            "source_index": 1232,
+            "gold_triple": [
+              "defunct stasis",
+              "disjoint with",
+              "operational stasis"
+            ]
+          },
+          {
+            "source_index": 1372,
+            "gold_triple": [
+              "accuracy_assessment",
+              "disjoint with",
+              "document assessment"
+            ]
+          },
+          {
+            "source_index": 1372,
+            "gold_triple": [
+              "accuracy_assessment",
+              "disjoint with",
+              "project assessment"
+            ]
+          }
+        ],
+        "both_endpoints_generated_unpaired": [
+          {
+            "source_index": 626,
+            "gold_triple": [
+              "dosage",
+              "equivalent class",
+              "dose"
+            ]
+          },
+          {
+            "source_index": 1372,
+            "gold_triple": [
+              "accuracy_assessment",
+              "disjoint with",
+              "agent_assessment"
+            ]
+          },
+          {
+            "source_index": 1372,
+            "gold_triple": [
+              "accuracy_assessment",
+              "disjoint with",
+              "event_assessment"
+            ]
+          },
+          {
+            "source_index": 1372,
+            "gold_triple": [
+              "accuracy_assessment",
+              "disjoint with",
+              "service_assessment"
+            ]
+          },
+          {
+            "source_index": 1372,
+            "gold_triple": [
+              "requirement_assessment",
+              "disjoint with",
+              "agent_assessment"
+            ]
+          }
+        ],
+        "reversed_endpoints_wrong_predicate": [
+          {
+            "source_index": 626,
+            "gold_triple": [
+              "reference dose",
+              "equivalent class",
+              "rfd"
+            ]
+          },
+          {
+            "source_index": 1883,
+            "gold_triple": [
+              "beet plant",
+              "database_cross_reference",
+              "beta vulgaris"
+            ]
+          },
+          {
+            "source_index": 1883,
+            "gold_triple": [
+              "endive plant",
+              "database_cross_reference",
+              "cichorium endivia"
+            ]
+          },
+          {
+            "source_index": 1883,
+            "gold_triple": [
+              "sorrel plant",
+              "database_cross_reference",
+              "rumex acetosa"
+            ]
+          }
+        ],
+        "exact_endpoints_wrong_predicate": [
+          {
+            "source_index": 860,
+            "gold_triple": [
+              "gcm",
+              "equivalent class",
+              "general circulation model"
+            ]
+          }
+        ],
+        "one_surface_endpoint_generated": [
+          {
+            "source_index": 3189,
+            "gold_triple": [
+              "biome",
+              "disjoint with",
+              "ecoregion"
+            ]
+          },
+          {
+            "source_index": 4292,
+            "gold_triple": [
+              "predict",
+              "equivalent class",
+              "prediction"
+            ]
+          }
+        ]
+      }
+    },
+    "open_vocab_guarded_v2": {
+      "predicted_nonself_nontax": 143,
+      "gold_nonself_nontax": 101,
+      "prediction_error_categories": {
+        "no_local_gold_overlap": 93,
+        "one_endpoint_exact": 45,
+        "both_endpoints_exact_not_paired": 2,
+        "endpoints_exact_predicate_mismatch": 1,
+        "endpoints_reversed": 1,
+        "one_endpoint_surface": 1
+      },
+      "missed_gold_coverage_categories": {
+        "no_endpoint_or_predicate_generated": 63,
+        "both_endpoints_generated_unpaired": 19,
+        "one_endpoint_generated": 17,
+        "exact_endpoints_wrong_predicate": 1,
+        "reversed_endpoints_wrong_predicate": 1
+      },
+      "prediction_predicate_counts": {
+        "part_of": 46,
+        "has part": 43,
+        "regulates": 11,
+        "influences": 6,
+        "derives from": 5,
+        "develops_from": 5,
+        "located in": 3,
+        "yields": 3,
+        "provides": 2,
+        "characterizes": 1,
+        "demands": 1,
+        "dictates": 1,
+        "dominates at": 1,
+        "includes": 1,
+        "is fundamental unit of": 1,
+        "is present in": 1,
+        "is prevalent form in": 1,
+        "is_assigned": 1,
+        "is_not": 1,
+        "is_placed_in": 1,
+        "is_under": 1,
+        "mediates": 1,
+        "operates_in": 1,
+        "provides framework for": 1,
+        "require": 1,
+        "requires": 1,
+        "share": 1,
+        "transitions_into": 1
+      },
+      "gold_predicate_counts": {
+        "disjoint with": 38,
+        "equivalent class": 29,
+        "type": 16,
+        "database_cross_reference": 5,
+        "is_conjugate_acid_of": 5,
+        "is_conjugate_base_of": 5,
+        "has role": 2,
+        "same as": 1
+      },
+      "prediction_predicate_scope": {
+        "outside_global_gold_predicate_inventory": 143
+      },
+      "samples_with_any_sample_gold_predicate_output": 0,
+      "by_assigned_stratum_prediction_errors": {
+        "disjoint_with": {
+          "one_endpoint_exact": 24,
+          "no_local_gold_overlap": 21,
+          "both_endpoints_exact_not_paired": 2,
+          "one_endpoint_surface": 1
+        },
+        "equivalent_class": {
+          "no_local_gold_overlap": 43,
+          "one_endpoint_exact": 13,
+          "endpoints_exact_predicate_mismatch": 1
+        },
+        "other_open_predicate": {
+          "no_local_gold_overlap": 29,
+          "one_endpoint_exact": 8,
+          "endpoints_reversed": 1
+        }
+      },
+      "prediction_error_examples": {
+        "one_endpoint_exact": [
+          {
+            "source_index": 265,
+            "prediction": [
+              "delivery method",
+              "has part",
+              "delivery mode freight"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 265,
+            "prediction": [
+              "delivery method",
+              "has part",
+              "delivery mode mail"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 265,
+            "prediction": [
+              "delivery method",
+              "has part",
+              "delivery mode own fleet"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 265,
+            "prediction": [
+              "delivery method",
+              "has part",
+              "delivery mode pick up"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 1232,
+            "prediction": [
+              "equipment",
+              "is_assigned",
+              "defunct stasis"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          }
+        ],
+        "no_local_gold_overlap": [
+          {
+            "source_index": 294,
+            "prediction": [
+              "forest canopy",
+              "influences",
+              "microclimate"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 294,
+            "prediction": [
+              "forest canopy",
+              "influences",
+              "soil nutrient cycling"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 294,
+            "prediction": [
+              "grain",
+              "part_of",
+              "grain based unit"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 294,
+            "prediction": [
+              "previous crop",
+              "regulates",
+              "subsequent planting cycles"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 626,
+            "prediction": [
+              "authorized signature",
+              "provides",
+              "validation evidence"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          }
+        ],
+        "one_endpoint_surface": [
+          {
+            "source_index": 1372,
+            "prediction": [
+              "project",
+              "has part",
+              "project_assessment"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          }
+        ],
+        "endpoints_reversed": [
+          {
+            "source_index": 1883,
+            "prediction": [
+              "beta vulgaris",
+              "has part",
+              "beet plant"
+            ],
+            "near_gold_triples": [
+              [
+                "beet plant",
+                "database_cross_reference",
+                "beta vulgaris"
+              ]
+            ],
+            "predicate_alias": null
+          }
+        ],
+        "both_endpoints_exact_not_paired": [
+          {
+            "source_index": 2049,
+            "prediction": [
+              "deoxyribonucleic acid",
+              "part_of",
+              "nucleic acid"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          },
+          {
+            "source_index": 2049,
+            "prediction": [
+              "ribonucleic acid",
+              "part_of",
+              "nucleic acid"
+            ],
+            "near_gold_triples": [],
+            "predicate_alias": null
+          }
+        ],
+        "endpoints_exact_predicate_mismatch": [
+          {
+            "source_index": 3204,
+            "prediction": [
+              "difference",
+              "derives from",
+              "subtraction"
+            ],
+            "near_gold_triples": [
+              [
+                "difference",
+                "equivalent class",
+                "subtraction"
+              ]
+            ],
+            "predicate_alias": null
+          }
+        ]
+      },
+      "missed_gold_examples": {
+        "no_endpoint_or_predicate_generated": [
+          {
+            "source_index": 265,
+            "gold_triple": [
+              "delivery charge specification",
+              "disjoint with",
+              "payment charge specification"
+            ]
+          },
+          {
+            "source_index": 265,
+            "gold_triple": [
+              "delivery charge specification",
+              "disjoint with",
+              "unit price specification"
+            ]
+          },
+          {
+            "source_index": 265,
+            "gold_triple": [
+              "payment charge specification",
+              "disjoint with",
+              "delivery charge specification"
+            ]
+          },
+          {
+            "source_index": 265,
+            "gold_triple": [
+              "payment charge specification",
+              "disjoint with",
+              "unit price specification"
+            ]
+          },
+          {
+            "source_index": 265,
+            "gold_triple": [
+              "unit price specification",
+              "disjoint with",
+              "delivery charge specification"
+            ]
+          }
+        ],
+        "one_endpoint_generated": [
+          {
+            "source_index": 265,
+            "gold_triple": [
+              "delivery method",
+              "disjoint with",
+              "price specification"
+            ]
+          },
+          {
+            "source_index": 265,
+            "gold_triple": [
+              "price specification",
+              "disjoint with",
+              "delivery method"
+            ]
+          },
+          {
+            "source_index": 1372,
+            "gold_triple": [
+              "accuracy_assessment",
+              "disjoint with",
+              "agent_assessment"
+            ]
+          },
+          {
+            "source_index": 1372,
+            "gold_triple": [
+              "accuracy_assessment",
+              "disjoint with",
+              "document assessment"
+            ]
+          },
+          {
+            "source_index": 1372,
+            "gold_triple": [
+              "accuracy_assessment",
+              "disjoint with",
+              "project assessment"
+            ]
+          }
+        ],
+        "both_endpoints_generated_unpaired": [
+          {
+            "source_index": 1232,
+            "gold_triple": [
+              "active stasis",
+              "disjoint with",
+              "deactivated stasis"
+            ]
+          },
+          {
+            "source_index": 1232,
+            "gold_triple": [
+              "defunct stasis",
+              "disjoint with",
+              "operational stasis"
+            ]
+          },
+          {
+            "source_index": 1372,
+            "gold_triple": [
+              "accuracy_assessment",
+              "disjoint with",
+              "event_assessment"
+            ]
+          },
+          {
+            "source_index": 1372,
+            "gold_triple": [
+              "accuracy_assessment",
+              "disjoint with",
+              "service_assessment"
+            ]
+          },
+          {
+            "source_index": 1372,
+            "gold_triple": [
+              "requirement_assessment",
+              "disjoint with",
+              "data_item_assessment"
+            ]
+          }
+        ],
+        "reversed_endpoints_wrong_predicate": [
+          {
+            "source_index": 1883,
+            "gold_triple": [
+              "beet plant",
+              "database_cross_reference",
+              "beta vulgaris"
+            ]
+          }
+        ],
+        "exact_endpoints_wrong_predicate": [
+          {
+            "source_index": 3204,
+            "gold_triple": [
+              "difference",
+              "equivalent class",
+              "subtraction"
+            ]
+          }
+        ]
+      },
+      "guard_candidate_audit": {
+        "raw_nontax_candidates": 225,
+        "accepted_nontax_candidates": 143,
+        "rejected_nontax_candidates": 82,
+        "raw_candidate_error_categories": {
+          "no_local_gold_overlap": 159,
+          "one_endpoint_exact": 57,
+          "endpoints_exact_predicate_mismatch": 3,
+          "both_endpoints_exact_not_paired": 2,
+          "one_endpoint_surface": 2,
+          "endpoints_reversed": 1,
+          "surface_endpoints_predicate_mismatch": 1
+        },
+        "raw_candidate_predicate_scope": {
+          "outside_global_gold_predicate_inventory": 225
+        },
+        "rejected_candidate_error_categories": {
+          "no_local_gold_overlap": 66,
+          "one_endpoint_exact": 12,
+          "endpoints_exact_predicate_mismatch": 2,
+          "one_endpoint_surface": 1,
+          "surface_endpoints_predicate_mismatch": 1
+        },
+        "rejected_candidate_reasons": {
+          "quantity_limit": 40,
+          "evidence_missing_endpoints": 24,
+          "evidence_not_verbatim": 10,
+          "implicit_evidence_too_distant": 6,
+          "generic_predicate": 3,
+          "implicit_span_missing_endpoint": 1
+        },
+        "raw_exact_true_positives": 0,
+        "raw_candidates_using_exact_global_gold_predicate": 0,
+        "rejected_exact_true_positives": 0
+      }
+    }
+  },
+  "conclusions": {
+    "guarded_raw_generator_contained_exact_gold": false,
+    "guard_rejected_exact_gold": false,
+    "guarded_accepted_predictions_using_exact_gold_predicate": 0,
+    "guarded_raw_candidates_using_exact_gold_predicate": 0,
+    "dominant_guarded_failure": "predicate_inventory_mismatch",
+    "nonce_gain_transferred_to_official_text": false,
+    "retuning_authorized": false,
+    "scientific_deployable": false,
+    "confirmatory_eligible": false
+  }
+}

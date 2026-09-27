@@ -1,0 +1,11 @@
+# local secrets — never commit
+dots_config.json
+.env
+.env.*
+!.env.example*
+*.key
+api_key*
+
+# OS / editor
+Thumbs.db
+.DS_Store
