@@ -14,8 +14,10 @@ if str(TESTS) not in sys.path:
 MODULES = (
     "test_nonce_relation_holdout",
     "test_official_blind_eval",
+    "test_predicate_inventory",
     "test_relation_calibration",
     "test_relation_guarded_v2",
+    "test_task_c_taxonomy",
 )
 
 # These tests require resources intentionally omitted from the public artifact:
@@ -36,8 +38,11 @@ DATA_BOUND_TESTS = {
     "test_relation_calibration.GroupedCalibrationUncertaintyTests.test_v5_semantic_protocol_is_frozen_secondary_only",
     "test_relation_calibration.RelationAnnotationWorkflowTests.test_annotated_calibration_audit_contains_no_source_text",
     "test_relation_calibration.RelationAnnotationWorkflowTests.test_model_calibration_audit_does_not_claim_pending_human_annotation",
+    "test_task_c_taxonomy.TaskCOfficialMetricMirrorTests.test_local_mirror_matches_official_challenge_module",
+    "test_task_c_taxonomy.TaskCOfficialDataTests.test_archeon_domain_loads_expected_counts_and_hashes",
+    "test_task_c_taxonomy.TaskCOfficialDataTests.test_evaluate_task_c_on_archeon_prefix_closes_gate",
 }
-EXPECTED_PORTABLE_TESTS = 88
+EXPECTED_PORTABLE_TESTS = 129
 
 
 def iter_tests(suite: unittest.TestSuite):

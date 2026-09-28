@@ -25,7 +25,12 @@ sample, naturalistic benchmark, temporal holdout, or deployment experiment.
 
 The route inventory is frozen to `equivalent class`, `disjoint with`, `type`,
 `database_cross_reference`, `has role`, `same as`,
-`is_conjugate_acid_of`, and `is_conjugate_base_of`. After all prior selections
+`is_conjugate_acid_of`, and `is_conjugate_base_of`. In code it is route
+`official_task_ab_inventory_v1` in `src/ontobridg/relations/predicate_inventory.py`
+(`predicate_inventory_v1`), and the routed-v6 prompt renders it directly.
+`build_official_predicate_routing_holdout.py --audit-only` re-verifies that the
+frozen prompt hashes and payload bytes still rebuild from that table.
+After all prior selections
 and exact-gold overlaps are excluded, the independent pool supports only four
 of them: 30 visible `disjoint with`, 23 `equivalent class`, 3 `type`, and 8
 `database_cross_reference` edges. The other four prompt routes are therefore

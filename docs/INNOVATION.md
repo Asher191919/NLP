@@ -335,6 +335,18 @@ Outputs:
     is prohibited. The mechanism, n>=100 expansion, and deployment gates remain
     closed.
 
+12. The predicate families behind that negative result are now sedimented in
+    `src/ontobridg/relations/predicate_inventory.py` (version
+    `predicate_inventory_v1`): 23 canonical labels with 13 families, 39 frozen
+    surface aliases, four route inventories, and zero-call projection and
+    adherence diagnostics. The guarded prompt inventories, the alias
+    canonicalization table, and adherence reporting now all read that single
+    table, and the frozen packets still rebuild byte-identically
+    (`build_official_predicate_routing_holdout.py --audit-only`,
+    `build_official_relation_transfer_holdout.py --audit-only`). This is
+    infrastructure only: it adds no new empirical claim, changes no official
+    score, and cannot reopen the failed mechanism gate.
+
 ---
 
 ## 8. One-Line Evidence Statement

@@ -118,7 +118,9 @@ Week 9–12  投 workshop（OM 相关 / 本体与 LLM 相关 CEUR 或等价）
 
 ### 4.1 关键落地节点规划
 - **Phase 1（规范接口）**：实现与 `ontolearner` 库对齐的 Python API 包装类，打通 Task C 跨域 Taxonomy 预测。
+- **进展（2026-09-28）**：已落地 `ontobridg/tasks/task_c_taxonomy.py`：官方 Task C 指标镜像 `eval/official_taxonomy_match.py`（与挑战赛 `2026/metrics/taxonomy.py` 的 exact/fuzzy 逐位一致，由 `tests/test_task_c_taxonomy.py` 逐用例固定）、零 API 的 surface/transfer 诱导器与符号修复（自环过滤、父上限、无环森林化）、以及与 `ontolearner.AutoLearner` 签名对齐的 `OntoLearnerTaxonomyLearner`（`load`/`fit`/`predict`/`fit_predict`，`task="taxonomy-discovery"`，直接接受 `extract()` 结果、dict/属性行与纯词表，不引入 torch/transformers 依赖）。本地四域评测始终为 surrogate：`deployment_gate` 在非官方协议下恒报 `protocol_fidelity_local_surrogate`，`scientific_deployable=false`、`external_reportable=false`。
 - **Phase 2（规则与谓词对齐）**：在 `ontobridg/relations/` 中沉淀针对 Flagship 与 Reuse 任务的谓词约束库，替换盲目生成的开放谓词。
+  **进展（2026-09-28）**：已落地 `relations/predicate_inventory.py`（`predicate_inventory_v1`）——23 个规范谓词、13 个谓词族、39 条冻结 alias、4 条路由（general / axiom / official_task_ab / taxonomic core），并提供零调用的 `project_predicate` 与 `route_adherence` 诊断。guarded prompt 词表与 `canonicalization` alias 表统一由该表派生；v2/v3/v6 冻结包的 prompt 字节经 `build_*_holdout.py --audit-only` 校验仍逐字节一致（54/54、60/60 缓存重放）。注意：alias 增删会改变关系归一化行为且 `CANONICALIZATION_VERSION` 已进入冻结的 `postprocess_sha256`，因此必须同时提升两个版本号并重跑全部冻结校验，不允许静默修改。已知限制：`is conjugate acid of` 这类空格写法尚未映射到官方下划线谓词，需走同样的版本提升流程。
 - **Phase 3（新赛季同步）**：2027 官方任务公布后 48 小时内更新 `competition/` 事实定义，启动自动化回归基准。
 
 **作者与许可注意：** UMLS 相关实验若不能公开原始数据，论文中写明获取路径与聚合结果；代码仓库提供非 UMLS 可复现路径。

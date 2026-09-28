@@ -14,6 +14,7 @@ OAEI/LLMs4OL 2026 提交窗口已过，项目面向 **LLMs4OL 2027 + 论文发�
 | 系统代码 | `src/ontobridg/` | 可运行（mock LLM 离线） |
 | 竞赛仿真 | `src/run_competition_sim.py` | OntoBridg vs pro-team 对比出数 |
 | 官方评测脚本 | `src/run_official_2026_eval.py` | 官方 2026 train 子集离线评测 |
+| 谓词体系 | `src/ontobridg/relations/predicate_inventory.py` | `predicate_inventory_v1`：谓词族 / 路由注册表 / alias 归一化 / 零调用 adherence 诊断 |
 | 官方数据 2024–2026 | `data/LLMs4OL-Challenge/` | train/test + metrics |
 | OntoLearner 源码 | `data/OntoLearner/` | clone 完成 |
 | 优胜方法代码 | `data/alexbek/`, `data/LLMs4OL-baseline/` | 对照 baseline |
@@ -46,7 +47,7 @@ OAEI/LLMs4OL 2026 提交窗口已过，项目面向 **LLMs4OL 2027 + 论文发�
 
 为检验上述合成增益能否迁移，`official_relation_transfer_v1` 已完成 60/60 个冻结单元（累计 81 次尝试，完成后生成/后处理缓存均为 60/60，离线重放 0 次外部调用）。它从未使用的 2026 Task A 官方训练文本中选取 30 个 gold-stratified 样本，按 `equivalent class` / `disjoint with` / 其他开放谓词各 10 个分层，包含 89 条端点可见和 101 条完整 non-self non-tax gold。`open_vocab` 与未校准 guarded-v2 的 exact NonTax P/R/F1 均为 0；后者把 non-self non-tax 误报从 424 降到 143（-66.3%），并把 official GS 从 0.1946 提高到 0.2593，但没有恢复任何 gold 关系。零调用 post-hoc 审计进一步发现：guarded-v2 的 225 个 raw 候选全部使用 gold 谓词集合之外的谓词，0 个 raw exact TP，82 个被拒候选中也没有 TP；因此主因是 predicate inventory / task definition 不对齐，而不是置信度或证据门误删。该审计看过 gold，不能用于在同一切片调参。该结果仍是 gold-stratified 迁移诊断，不是 unbiased、naturalistic、temporal、隐藏测试或部署证据。
 
-后续独立检验 `official_predicate_routing_v1` 已完成（package ID `78d478f4f1d9d76ff979`）：27 个独立 Task A 样本按 `equivalent class` / `disjoint with` / `type` / domain 分配为 8/8/3/8，共有 64 条端点可见 target gold（69 条完整 target gold），与既有证据的样本、压缩 context 和 exact non-tax gold 重叠均为 0。54/54 个冻结单元在 57 次记录尝试内成功，完成后生成和后处理缓存均为 54/54，离线重放 0 次外部调用。与 relation-only v3 对照相比，routed-v6 将四分层 macro exact target F1 从 0 提高到 0.0526，但 pooled target P/R/F1 仅为 0.0143/0.0290/0.0191：140 个目标谓词预测中有 2 个 TP 和 138 个 FP。两个 TP 均来自 2 个独立 `type` 样本；`equivalent class`、`disjoint with` 和 `database_cross_reference` 仍为 0 TP。因正例样本数 2 低于预注册门槛 5，机制门失败，`scientific_deployable=false`、`confirmatory_eligible=false`；协议禁止同切片修补，并据此不启动 n≥100 扩样。
+后续独立检验 `official_predicate_routing_v1` 已完成（package ID `78d478f4f1d9d76ff979`）：27 个独立 Task A 样本按 `equivalent class` / `disjoint with` / `type` / domain 分配为 8/8/3/8，共有 64 条端点可见 target gold（69 条完整 target gold），与既有证据的样本、压缩 context 和 exact non-tax gold 重叠均为 0。该路由词表已在代码中沉淀为 `ontobridg/relations/predicate_inventory.py` 的 `official_task_ab_inventory_v1` 路由（`predicate_inventory_v1`），guarded prompt 词表与 canonicalization alias 表均由同一张表派生，`build_official_predicate_routing_holdout.py --audit-only` 可逐字节复验（属基础设施整理，不新增任何实证结论，也不改变任何榜单分数）。54/54 个冻结单元在 57 次记录尝试内成功，完成后生成和后处理缓存均为 54/54，离线重放 0 次外部调用。与 relation-only v3 对照相比，routed-v6 将四分层 macro exact target F1 从 0 提高到 0.0526，但 pooled target P/R/F1 仅为 0.0143/0.0290/0.0191：140 个目标谓词预测中有 2 个 TP 和 138 个 FP。两个 TP 均来自 2 个独立 `type` 样本；`equivalent class`、`disjoint with` 和 `database_cross_reference` 仍为 0 TP。因正例样本数 2 低于预注册门槛 5，机制门失败，`scientific_deployable=false`、`confirmatory_eligible=false`；协议禁止同切片修补，并据此不启动 n≥100 扩样。
 
 零调用错误审计进一步表明，routed-v6 的 140 个目标输出中有 120 个 `type`（85.7%）；138 个 official exact FP 中，121 个带显式证据、17 个带跨句证据，133 个预测的两个端点都逐字绑定到上下文。该结果定位的是“广泛输出文本可证据化关系但与稀疏 official gold 不对齐”，而不是单纯缺证据；由于未做独立语义裁决，off-gold 既不能自动视为语义错误，也不能视为正确关系，机制门保持关闭。
 

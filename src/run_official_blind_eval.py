@@ -34,6 +34,13 @@ from ontobridg.relations.canonicalization import (
     canonicalize_predicate,
     canonicalize_triple,
 )
+from ontobridg.relations.predicate_inventory import (
+    STYLE_OR,
+    STYLE_SEMICOLON,
+    inventory_labels,
+    render_labels,
+    route_for_system,
+)
 
 CHALLENGE = ROOT / "data" / "LLMs4OL-Challenge" / "2026"
 RESULTS = ROOT / "experiments" / "results"
@@ -543,17 +550,9 @@ def build_prompt(
             "open_vocab_guarded_v5_axioms_only",
             "open_vocab_guarded_v6_predicate_routed",
         }
-        preferred_predicates = (
-            "equivalent class and disjoint with"
-            if system == "open_vocab_guarded_v5_axioms_only"
-            else (
-                "equivalent class, disjoint with, type, database_cross_reference, "
-                "has role, same as, is_conjugate_acid_of, and "
-                "is_conjugate_base_of"
-                if system == "open_vocab_guarded_v6_predicate_routed"
-                else "part_of, has part, develops_from, derives from, located in, and regulates"
-            )
-        )
+        route = route_for_system(system)
+        route_labels = inventory_labels(route.key)
+        preferred_predicates = render_labels(route_labels, style=route.style)
         common = (
             "You are an ontology learning system. Return compact JSON only, with this exact shape: "
             '{"triples":[{"subject":"...","predicate":"...","object":"...",'
@@ -576,9 +575,8 @@ def build_prompt(
             if system == "open_vocab_guarded_v6_predicate_routed":
                 common += (
                     "RELATION-ONLY FROZEN PREDICATE-FAMILY ROUTER: emit only the exact "
-                    "predicate strings in this inventory: equivalent class; disjoint with; "
-                    "type; database_cross_reference; has role; same as; "
-                    "is_conjugate_acid_of; is_conjugate_base_of. First identify which of "
+                    "predicate strings in this inventory: "
+                    f"{render_labels(route_labels, style=STYLE_SEMICOLON)}. First identify which of "
                     "these families the text explicitly supports, then emit only supported "
                     "triples. AXIOM FAMILY: use equivalent class only for interchangeable "
                     "class names and disjoint with only for explicitly incompatible classes. "
@@ -595,8 +593,9 @@ def build_prompt(
                 )
             elif system == "open_vocab_guarded_v5_axioms_only":
                 common += (
-                    "RELATION-ONLY AXIOM-INVENTORY PASS: emit only equivalent class or disjoint "
-                    "with triples; never emit any other predicate, including part-whole, location, "
+                    "RELATION-ONLY AXIOM-INVENTORY PASS: emit only "
+                    f"{render_labels(route_labels, style=STYLE_OR)} "
+                    "triples; never emit any other predicate, including part-whole, location, "
                     "derivation, taxonomy, or typing. Treat two classes as equivalent only when "
                     "the context presents them as interchangeable names for the same category. "
                     "Treat classes as disjoint only when the context presents mutually exclusive "

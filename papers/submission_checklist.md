@@ -41,11 +41,11 @@ This checklist tracks manuscript packaging rather than new model development. Th
 - [x] Generation and postprocessing caches have separate identities.
 - [x] Zero-call audit commands documented.
 - [x] API credentials, caches, checkpoints, and third-party datasets excluded from Git.
-- [x] Full 125-test suite passes in the source workspace with retained third-party and private experiment inputs.
-- [ ] Verify the anonymous artifact's fixed 88-test, data-free portable subset in a clean virtual environment.
+- [x] Full 170-test suite passes in the source workspace with retained third-party and private experiment inputs.
+- [x] Verify the anonymous artifact's fixed 129-test, data-free portable subset in a clean virtual environment.
 - [ ] Create a public archival release and DOI after repository URL/anonymity policy is decided.
 - [ ] Add the final repository URL and commit/tag to the camera-ready artifact statement.
-- [ ] Verify that the anonymous artifact contains no user name, local path, or provider credential.
+- [x] Verify that the anonymous artifact contains no user name, local path, or provider credential.
 
 ## Data and Ethics
 

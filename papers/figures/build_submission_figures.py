@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -93,6 +94,14 @@ def save_all(fig: plt.Figure, stem: str) -> None:
         metadata={"Date": "2026-09-28"},
     )
     svg_text = svg_path.read_text(encoding="utf-8")
+    # Matplotlib derives clip-path IDs from renderer internals that can differ
+    # between otherwise equivalent environments. Canonicalize only those IDs;
+    # geometry, labels, and all other SVG content remain untouched.
+    auto_ids = list(dict.fromkeys(re.findall(r'id="([ph][0-9a-f]+)"', svg_text)))
+    for index, auto_id in enumerate(auto_ids, start=1):
+        stable_id = f"generated_id_{index}"
+        svg_text = svg_text.replace(f'id="{auto_id}"', f'id="{stable_id}"')
+        svg_text = svg_text.replace(f"url(#{auto_id})", f"url(#{stable_id})")
     svg_path.write_text(
         "\n".join(line.rstrip() for line in svg_text.splitlines()) + "\n",
         encoding="utf-8",

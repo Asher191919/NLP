@@ -19,15 +19,20 @@ It intentionally excludes API credentials, raw generation caches, checkpoints, t
 
 Python 3.11 or newer is recommended.
 
+The artifact pins Matplotlib to `3.10.8` because publication figure hashes are
+checked byte-for-byte; the SVG writer can otherwise vary generated pattern IDs
+across Matplotlib releases. Other dependencies are installed from the versions
+declared in `requirements.txt`.
+
 ```powershell
 py -3 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe run_reproduction.py
 ```
 
-The reproduction command performs an anonymity scan, verifies the package manifest, runs 88 data-free portable unit tests, checks manuscript tables and numeric claims against the aggregate evidence projections, regenerates both main figures, and verifies that the regenerated files match the packaged hashes.
+The reproduction command performs an anonymity scan, verifies the package manifest, runs 129 data-free portable unit tests, checks manuscript tables and numeric claims against the aggregate evidence projections, regenerates both main figures, and verifies that the regenerated files match the packaged hashes.
 
-The source repository's complete suite contains 125 tests. Fifteen tests require third-party challenge data or private experiment packets, and two data-bound modules contain another 22 tests. Those 37 tests are not executed by this public package because their required inputs are intentionally excluded. `run_portable_tests.py` fixes the 88-test public subset by test ID and fails if that selection drifts.
+The source repository's complete suite contains 170 tests. Eighteen tests require third-party challenge data or private experiment packets, and three data-bound modules contain another 23 tests. Those 41 tests are not executed by this public package because their required inputs are intentionally excluded. `run_portable_tests.py` fixes the 129-test public subset by test ID and fails if that selection drifts.
 
 No command in this workflow makes an external model call. The original hosted-model generations cannot be reconstructed without provider access and the excluded private caches. Their prompts, system logic, attempt accounting, aggregate outputs, and source hashes remain auditable.
 

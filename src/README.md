@@ -19,7 +19,8 @@ ontobridg/
   data/           loaders + WordNet (optional NLTK) + synthetic mock ontologies
   llm/            pluggable backends: mock (deterministic), OpenAI-compatible HTTP, local
   prompts/        instruction / cloze / few-shot templates for pipeline stages
-  symbolic/       taxonomy transitivity, cycle break, domain/range + lexical filters
+  relations/      predicate inventory + route registry, alias canonicalization, calibration
+  symbolic/       graph constraints: taxonomy transitivity, cycle break, domain/range + lexical filters
   pipeline/       extract → type → taxonomy → relations → symbolic repair
   eval/           micro/macro/per-class F1, taxonomy edge F1, hierarchical P/R, graph similarity
   contamination/  term holdout, paraphrase templates, novel synthetic ontologies
@@ -254,6 +255,34 @@ py -3 D:\NLP\src\analyze_official_predicate_routing.py
   -Systems 'open_vocab,open_vocab_guarded_v2' -VerboseRun
 ```
 
+### Predicate inventory and routes
+
+`ontobridg/relations/predicate_inventory.py` (`predicate_inventory_v1`) is the single
+source of truth for predicate families, frozen route inventories, alias
+canonicalization, and zero-call adherence diagnostics. `run_official_blind_eval`
+renders every guarded prompt inventory from it, and `relations/canonicalization.py`
+derives its alias table from it, so the frozen packets must keep rebuilding
+byte-identically:
+
+```powershell
+# Contract tests: alias table, routes, prompt sections, projection, adherence
+py -3 D:\NLP\src\tests\test_predicate_inventory.py
+
+# Byte-identical frozen-packet rebuild (proves the prompt inventory text is unchanged)
+py -3 D:\NLP\src\build_official_predicate_routing_holdout.py --audit-only
+py -3 D:\NLP\src\build_official_relation_transfer_holdout.py --audit-only
+```
+
+`project_predicate` maps any predicted surface onto its canonical label, family,
+direction, and routes without rewriting unknown surfaces, and `route_adherence`
+reports in-route rate, projection rate, family counts, and off-route offenders for
+one route. Two constraints follow from the frozen artifacts: (1) adding or
+redirecting an alias changes relation canonicalization, and `CANONICALIZATION_VERSION`
+is part of the frozen `postprocess_sha256`, so both version strings must be bumped and
+every packet re-verified; (2) label surfaces such as `is conjugate acid of` are still
+unmapped to the official underscore predicate, which is the documented open item for
+the next version bump.
+
 The 39-sample independent v2 calibration artifact contains 144 deployment-eligible candidates but only four exact positives from three samples, so it remains non-deployable under the five-positive-sample gate. A separate v5 pool has 31 candidates and seven positives from six samples; its grouped OOF metrics improve, but the former validation slice was inspected and then reused for calibration. `run_gold_relation_grouped_cv.py` therefore preserves the numeric result while forcing scientific deployment closed. `run_v5_confirmatory.py` freezes and executes a new balanced 24-sample endpoint-visible slice. On that slice, frozen calibration improves candidate Brier/ECE but reduces exact TP from four to three and fails the five-positive-sample gate, so `scientific_deployable=false` and `confirmatory_eligible=false` remain final. V2 and v5 are different systems and their calibration candidates must not be mixed.
 
 `analyze_v5_confirmatory.py` adds a deterministic per-predicate error audit, 10,000-replicate sample-cluster intervals, and estimation-only scale planning. `run_v5_semantic_secondary.py` locks the official threshold, source hash, outer model revision, nested remote-code revision, and input hashes before scoring. At threshold 0.90 the semantic metric changes 0/24 confirmatory samples for both systems. Exact remains primary and neither analysis can authorize retuning or deployment.
@@ -267,6 +296,32 @@ The frozen contamination pilot uses 15 Task A and 15 Task B samples. The closed-
 `official_predicate_routing_v1` (package ID `78d478f4f1d9d76ff979`) is the completed independent follow-up. Its 27 Task A samples are allocated 8 equivalent-class / 8 disjoint-with / 3 type / 8 domain, with 64 endpoint-visible target gold edges and 69 total target gold edges. Prior sample-index, compact-context, and exact non-tax-gold overlap are all zero. The locked comparison changes only prompt identity between `open_vocab_guarded_v3_relations` and `open_vocab_guarded_v6_predicate_routed`; both share the postprocessor and use no calibrator or output allowlist. All 54 units completed in 57 recorded attempts. Routed-v6 raises four-stratum macro exact target F1 from 0 to 0.0526, but pooled target P/R/F1 is only 0.0143/0.0290/0.0191 (2 TP, 138 FP, 67 FN). Both TP occur in two of the three independent `type` samples; the equivalent-class, disjoint-with, and domain strata remain at 0 TP. The strict macro-improvement condition passes, while the required five TP-positive samples condition fails at 2. The mechanism gate therefore fails closed, with no same-slice repair, n>=100 expansion, calibration, or deployment authorized. Completed generation and postprocess caches now audit at 54/54 hits and zero external calls.
 
 `analyze_official_predicate_routing.py` rebuilds a strictly offline error audit from the completed caches. It finds that `type` accounts for 120/140 routed outputs; 133/138 official exact false positives bind both endpoints verbatim to context, and all 138 have accepted explicit or cross-sentence evidence. This diagnoses broad evidence-bound off-gold generation rather than a missing-evidence failure. It does not adjudicate semantic correctness, change official scores, authorize tuning, or reopen the failed gate.
+
+### Task C taxonomy discovery (offline)
+
+`ontobridg/tasks/task_c_taxonomy.py` implements the LLMs4OL 2026 cross-domain
+Taxonomy task as a zero-API, deterministic stack. `load_task_c_domain` reads the
+held-out term lists and gold `{"id","parent","child"}` edges,
+`SurfaceTaxonomyInducer` scores source-transfer / containment / morphology
+candidates with a documented schedule, and the symbolic repair stage enforces
+self-loop removal, a parent cap, and acyclicity so every prediction set is a
+forest by construction. `ontobridg/eval/official_taxonomy_match.py` mirrors the
+official challenge metric (`data/LLMs4OL-Challenge/2026/metrics/taxonomy.py`)
+bit-for-bit, and `OntoLearnerTaxonomyLearner` keeps the OntoLearner
+`AutoLearner` contract (`load`/`fit`/`predict`/`fit_predict` with
+`task="taxonomy-discovery"`) for `ontology.extract()` results and plain term
+lists.
+
+```powershell
+# Contract tests: metric mirror, inducer scoring, repair invariants, gate, AutoLearner contract
+py -3 D:\NLP\src\tests\test_task_c_taxonomy.py
+```
+
+Every local run is a **surrogate**: `deployment_gate` reports
+`protocol_fidelity_local_surrogate` and keeps `scientific_deployable=false` /
+`external_reportable=false` unless the official external training protocol
+(OntoLearner source ontologies, no held-out domains) is used, so no locally
+produced Task C number is externally reportable.
 
 ## Design notes
 

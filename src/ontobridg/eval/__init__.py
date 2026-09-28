@@ -18,10 +18,23 @@ from ontobridg.eval.metrics import (
     evaluate_pipeline_result,
     semantic_graph_similarity,
 )
+from ontobridg.eval.official_taxonomy_match import (
+    METRIC_ID as OFFICIAL_TAXONOMY_METRIC_ID,
+)
+from ontobridg.eval.official_taxonomy_match import (
+    evaluate as official_task_c_evaluate,
+)
+from ontobridg.eval.official_taxonomy_match import (
+    exact_match as official_taxonomy_exact_match,
+)
+from ontobridg.eval.official_taxonomy_match import (
+    fuzzy_match as official_taxonomy_fuzzy_match,
+)
 
 __all__ = [
     "CompetitionMetrics",
     "OFFICIAL_METRIC_ID",
+    "OFFICIAL_TAXONOMY_METRIC_ID",
     "classification_report",
     "edge_f1",
     "evaluate_pipeline_result",
@@ -29,6 +42,9 @@ __all__ = [
     "map_classification_report",
     "official_exact_match",
     "official_graph_similarity",
+    "official_task_c_evaluate",
+    "official_taxonomy_exact_match",
+    "official_taxonomy_fuzzy_match",
     "proxy_semantic_graph_similarity",
     "relation_metrics",
     "semantic_graph_similarity",

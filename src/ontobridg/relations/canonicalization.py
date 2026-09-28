@@ -1,10 +1,23 @@
-"""Leakage-controlled predicate and entity canonicalization for relation triples."""
+"""Leakage-controlled predicate and entity canonicalization for relation triples.
+
+The predicate alias table is derived from
+`ontobridg.relations.predicate_inventory`, which is the single versioned source
+of truth for canonical predicate labels, families, and routes. Adding, removing,
+or redirecting an alias is a canonicalization behaviour change, so it requires
+bumping both `CANONICALIZATION_VERSION` and the inventory version.
+"""
 from __future__ import annotations
 
 import re
 from dataclasses import dataclass
 from difflib import SequenceMatcher
 from typing import Any, Iterable
+
+from ontobridg.relations.predicate_inventory import (
+    alias_table,
+    normalize_key,
+    surface as predicate_surface,
+)
 
 
 CANONICALIZATION_VERSION = "relation_canonicalization_v2"
@@ -17,54 +30,16 @@ class PredicateAlias:
 
 
 def _surface(value: Any) -> str:
-    return " ".join(str(value).lower().strip().split())
+    return predicate_surface(value)
 
 
 def _key(value: Any) -> str:
-    text = _surface(value).replace("_", " ").replace("-", " ")
-    return " ".join(re.findall(r"[a-z0-9]+", text))
+    return normalize_key(value)
 
 
 _PREDICATE_ALIASES = {
-    "is a": PredicateAlias("is-a"),
-    "isa": PredicateAlias("is-a"),
-    "subclass of": PredicateAlias("is-a"),
-    "subclassof": PredicateAlias("is-a"),
-    "kind of": PredicateAlias("is-a"),
-    "instance of": PredicateAlias("instance-of"),
-    "instanceof": PredicateAlias("instance-of"),
-    "part of": PredicateAlias("part_of"),
-    "is part of": PredicateAlias("part_of"),
-    "has part": PredicateAlias("has part"),
-    "contains as part": PredicateAlias("has part"),
-    "develops from": PredicateAlias("develops_from"),
-    "developed from": PredicateAlias("develops_from"),
-    "arises from": PredicateAlias("develops_from"),
-    "derives from": PredicateAlias("derives from"),
-    "derived from": PredicateAlias("derives from"),
-    "gives rise to": PredicateAlias("develops_from", reverse=True),
-    "is located in": PredicateAlias("located in"),
-    "located in": PredicateAlias("located in"),
-    "is defined by": PredicateAlias("is defined by"),
-    "equivalent to": PredicateAlias("equivalent class"),
-    "equivalent class": PredicateAlias("equivalent class"),
-    "equivalentclass": PredicateAlias("equivalent class"),
-    "disjoint from": PredicateAlias("disjoint with"),
-    "disjoint with": PredicateAlias("disjoint with"),
-    "disjointwith": PredicateAlias("disjoint with"),
-    "same as": PredicateAlias("same as"),
-    "exact match": PredicateAlias("exact match"),
-    "tree view": PredicateAlias("tree view"),
-    "database cross reference": PredicateAlias("database_cross_reference"),
-    "databasecrossreference": PredicateAlias("database_cross_reference"),
-    "see also": PredicateAlias("see also"),
-    "seealso": PredicateAlias("see also"),
-    "has role": PredicateAlias("has role"),
-    "positively regulates": PredicateAlias("positively regulates"),
-    "regulates": PredicateAlias("regulates"),
-    "domain": PredicateAlias("domain"),
-    "range": PredicateAlias("range"),
-    "type": PredicateAlias("type"),
+    key: PredicateAlias(label=label, reverse=reverse)
+    for key, (label, reverse) in alias_table().items()
 }
 
 
