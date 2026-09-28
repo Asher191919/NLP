@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>paper_draft</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a
+href="#ontobridg-fail-closed-evaluation-of-open-relation-ontology-learning"
+id="toc-ontobridg-fail-closed-evaluation-of-open-relation-ontology-learning">OntoBridg:
+Fail-Closed Evaluation of Open-Relation Ontology Learning</a>
+<ul>
+<li><a href="#abstract" id="toc-abstract">Abstract</a></li>
+<li><a href="#introduction" id="toc-introduction">1
+Introduction</a></li>
+<li><a href="#background-and-related-work"
+id="toc-background-and-related-work">2 Background and Related Work</a>
+<ul>
+<li><a href="#llms-for-ontology-learning"
+id="toc-llms-for-ontology-learning">2.1 LLMs for ontology
+learning</a></li>
+<li><a href="#contamination-aware-evaluation"
+id="toc-contamination-aware-evaluation">2.2 Contamination-aware
+evaluation</a></li>
+</ul></li>
+<li><a href="#method" id="toc-method">3 Method</a>
+<ul>
+<li><a href="#task-interface" id="toc-task-interface">3.1 Task
+interface</a></li>
+<li><a href="#candidate-generation-systems"
+id="toc-candidate-generation-systems">3.2 Candidate-generation
+systems</a></li>
+<li><a href="#relation-guard" id="toc-relation-guard">3.3 Relation
+guard</a></li>
+<li><a href="#calibration-and-fail-closed-gates"
+id="toc-calibration-and-fail-closed-gates">3.4 Calibration and
+fail-closed gates</a></li>
+<li><a href="#contamination-diagnostics"
+id="toc-contamination-diagnostics">3.5 Contamination
+diagnostics</a></li>
+</ul></li>
+<li><a href="#experimental-design" id="toc-experimental-design">4
+Experimental Design</a>
+<ul>
+<li><a href="#data-and-frozen-evidence-partitions"
+id="toc-data-and-frozen-evidence-partitions">4.1 Data and frozen
+evidence partitions</a></li>
+<li><a href="#metrics-and-uncertainty"
+id="toc-metrics-and-uncertainty">4.2 Metrics and uncertainty</a></li>
+<li><a href="#research-questions" id="toc-research-questions">4.3
+Research questions</a></li>
+</ul></li>
+<li><a href="#results" id="toc-results">5 Results</a>
+<ul>
+<li><a href="#blind-official-training-prefix"
+id="toc-blind-official-training-prefix">5.1 Blind official-training
+prefix</a></li>
+<li><a href="#relation-channel-isolation"
+id="toc-relation-channel-isolation">5.2 Relation-channel
+isolation</a></li>
+<li><a href="#calibration-remains-fail-closed"
+id="toc-calibration-remains-fail-closed">5.3 Calibration remains
+fail-closed</a></li>
+<li><a
+href="#contamination-diagnostics-do-not-support-a-global-inflation-claim"
+id="toc-contamination-diagnostics-do-not-support-a-global-inflation-claim">5.4
+Contamination diagnostics do not support a global inflation
+claim</a></li>
+<li><a href="#controlled-extraction-does-not-transfer-to-official-text"
+id="toc-controlled-extraction-does-not-transfer-to-official-text">5.5
+Controlled extraction does not transfer to official text</a></li>
+<li><a
+href="#predicate-routing-gives-narrow-recovery-and-fails-its-gate"
+id="toc-predicate-routing-gives-narrow-recovery-and-fails-its-gate">5.6
+Predicate routing gives narrow recovery and fails its gate</a></li>
+</ul></li>
+<li><a href="#discussion" id="toc-discussion">6 Discussion</a>
+<ul>
+<li><a href="#evidence-is-necessary-but-not-sufficient"
+id="toc-evidence-is-necessary-but-not-sufficient">6.1 Evidence is
+necessary but not sufficient</a></li>
+<li><a href="#why-fail-closed-evaluation-matters"
+id="toc-why-fail-closed-evaluation-matters">6.2 Why fail-closed
+evaluation matters</a></li>
+<li><a href="#implications-for-llms4ol-evaluation"
+id="toc-implications-for-llms4ol-evaluation">6.3 Implications for
+LLMs4OL evaluation</a></li>
+</ul></li>
+<li><a href="#limitations-ethics-and-reproducibility"
+id="toc-limitations-ethics-and-reproducibility">7 Limitations, Ethics,
+and Reproducibility</a></li>
+<li><a href="#conclusion" id="toc-conclusion">8 Conclusion</a></li>
+<li><a href="#references" id="toc-references">References</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1
+id="ontobridg-fail-closed-evaluation-of-open-relation-ontology-learning">OntoBridg:
+Fail-Closed Evaluation of Open-Relation Ontology Learning</h1>
+<p><strong>Keywords:</strong> ontology learning; large language models;
+neuro-symbolic systems; relation extraction; calibration; benchmark
+contamination</p>
+<h2 id="abstract">Abstract</h2>
+<p>Large language models can generate ontology triples from text, but
+open-relation generation creates a difficult precision problem: a model
+may emit many plausible, evidence-linked relations that do not match the
+benchmark graph. Public ontology resources also create plausible
+pretraining-exposure confounds. We present <strong>OntoBridg</strong>,
+an ontology-learning pipeline that treats the language model as a
+candidate generator and applies relation-channel evidence, confidence,
+canonicalization, self-loop, predicate, and quantity constraints. We
+evaluate it on the public LLMs4OL 2026 Task A and Task B training data
+under a gold-withheld prompt protocol; no result uses hidden test labels
+or constitutes a leaderboard claim. On relation-density-stratified
+samples, isolating constraints to the relation channel improves exact
+Graph Similarity by 0.0315 and 0.0409 for Tasks A and B, but exact
+non-taxonomic F1 remains zero. On a frozen synthetic nonce holdout,
+guarding raises non-taxonomic F1 from 0.2612 to 0.8571 with no errors on
+60 negated controls. This gain does not transfer to a disjoint,
+relation-rich official-text slice, where both systems recover 0 of 101
+gold relations. Predicate routing recovers two <code>type</code> edges
+but produces 138 official exact false positives and fails a precommitted
+five-sample support gate. A contamination pilot finds high factual
+probeability but opposing alias effects across tasks. These results
+support a fail-closed evaluation protocol rather than a naturalistic
+performance claim: controlled extraction succeeds, official-text
+relation recovery remains unsupported, and every calibration and
+deployment gate stays closed.</p>
+<h2 id="introduction">1 Introduction</h2>
+<p>Ontology learning converts text into typed entities, taxonomic edges,
+and non-taxonomic relations. The LLMs4OL program established common
+tasks and datasets for testing whether large language models (LLMs) can
+perform these operations across lexical, geographic, biomedical, and
+web-schema domains [1,2]. More recent systems combine prompting with
+retrieval or learned graph components. Beliaeva and Rahmatullaev use
+retrieval-augmented prompting, embedding ensembles, and cross-attention
+taxonomy induction [3]. Mishra et al. report strong 2026 Task A and Task
+B scores with retrieval-augmented Qwen2.5-14B, yet extract no
+non-taxonomic relations [4]. This exposes a central design tension:
+closed vocabularies can suppress false positives, while open
+vocabularies are needed when the relevant property inventory is
+incomplete.</p>
+<p>Open generation alone does not solve the problem. A model can extract
+a relation that is linguistically plausible, grounded in the supplied
+passage, and still fail exact graph scoring because its predicate,
+direction, endpoint form, or relation selection differs from the
+reference graph. In ontology learning, indiscriminate recall is
+especially costly because every extra edge changes graph neighborhoods
+and consistency. Evidence constraints can remove unsupported candidates,
+but they do not determine which of several text-supported facts belongs
+in a sparse benchmark graph.</p>
+<p>Evaluation is complicated further by possible training-data exposure.
+WordNet, GeoNames, schema.org, and many biomedical ontologies are
+public, widely mirrored resources. Closed-book recall of their facts is
+therefore not proof of induction from the supplied text. Black-box
+contamination tests can establish suspicious distributional evidence
+without proving that a specific item occurred in a proprietary training
+corpus [10,11]. Task-level contamination can also make nominally
+few-shot evaluation behave like recall [12]. For ontology learning, this
+distinction matters because the benchmark target is itself a public
+knowledge artifact.</p>
+<p>We study these issues through <strong>OntoBridg</strong>, a pipeline
+in which the LLM generates candidate triples and deterministic
+postprocessing governs whether relation candidates survive. Our goal is
+not to claim a new leaderboard score. Instead, we ask where relation
+constraints work, where they fail, and whether a manifest-frozen
+fail-closed protocol prevents a controlled positive result from being
+promoted into an unsupported deployment claim.</p>
+<p>The paper makes four contributions:</p>
+<ol type="1">
+<li><p><strong>A gold-withheld failure characterization.</strong> On
+fixed prefixes of the public 2026 Task A and Task B training sets, gold
+is excluded from prompts and unconstrained open-relation generation
+emits 384 and 150 non-taxonomic predictions. It misses Task A’s sole
+non-taxonomic gold edge, while the Task B prefix contains no such gold
+edge; exact Graph Similarity falls sharply in both tasks.</p></li>
+<li><p><strong>A relation-channel guard.</strong> Confidence, verbatim
+evidence, entity and predicate canonicalization, self-loop removal,
+generic-predicate filtering, and a quantity cap are applied only to
+non-taxonomic relations. Preserving the typing and taxonomy channels
+isolates the effect of relation filtering and improves exact Graph
+Similarity on density-stratified samples.</p></li>
+<li><p><strong>Independent controlled and transfer tests.</strong> A
+frozen nonce holdout shows that the guarded extractor can recover new
+synthetic facts under familiar predicates. A disjoint official-text
+transfer slice and an independent predicate-routing slice show that this
+gain does not establish official relation recovery.</p></li>
+<li><p><strong>A fail-closed evidence protocol.</strong> Calibration,
+contamination diagnostics, frozen manifests, sample-grouped uncertainty
+estimates, and minimum positive-sample gates are recorded explicitly.
+Insufficient support closes the mechanism, confirmatory, and deployment
+gates instead of triggering same-slice prompt repair.</p></li>
+</ol>
+<h2 id="background-and-related-work">2 Background and Related Work</h2>
+<h3 id="llms-for-ontology-learning">2.1 LLMs for ontology learning</h3>
+<p>LLMs4OL formalized term typing, taxonomy discovery, and non-taxonomic
+relation extraction as related ontology-learning capabilities [1]. The
+2024 challenge overview established shared-task datasets and reporting
+conventions [2], and the OntoLearner library later provided a modular
+integration surface for benchmarking ontology-learning systems [5]. The
+2025 Alexbek system demonstrates that no single architecture dominates
+all stages: retrieval-augmented prompting is used for
+document-to-term/type extraction, embedding ensembles for typing, and a
+cross-attention model for taxonomy induction [3]. The 2026 pro-team
+system similarly combines retrieval with deterministic filtering [4].
+Its strong graph scores and empty non-taxonomic relation output motivate
+our focus on relation-channel behavior.</p>
+<p>Classical ontology learning used lexical and lexico-syntactic
+regularities, including Hearst patterns for hyponymy [6]. Modern LLM
+systems replace fixed patterns with broader candidate generation, but
+the underlying need for structural control remains. Ontology matching is
+a neighboring, not identical, task; systems such as LogMap [7],
+AgreementMakerLight [8], and BERTMap [9] illustrate how lexical or
+neural candidates can be combined with logical and structural
+validation. OntoBridg adopts the same high-level separation between
+candidate generation and deterministic acceptance while evaluating
+ontology construction rather than cross-ontology correspondence.</p>
+<h3 id="contamination-aware-evaluation">2.2 Contamination-aware
+evaluation</h3>
+<p>Test-set contamination cannot generally be verified for a closed
+commercial or hosted model. Oren et al. show that aggregate ordering
+statistics can provide black-box evidence of test-set exposure [10].
+Golchin and Surdeanu use guided prompting to trace contamination signals
+across datasets and model families [11]. Li and Flanigan demonstrate
+task contamination, where exposure to task-specific data changes the
+interpretation of few-shot performance [12]. These methods motivate
+diagnostics, not binary declarations that individual samples are clean
+or contaminated.</p>
+<p>Our protocol therefore separates three claims.
+<strong>Probeability</strong> means a model discriminates official facts
+from constructed controls without seeing task context. <strong>Surface
+sensitivity</strong> means performance changes after endpoint aliases
+replace original names. <strong>Verified membership</strong> would
+require direct knowledge of the model’s training corpus, which is
+unavailable here. We report the first two and do not claim the
+third.</p>
+<h2 id="method">3 Method</h2>
+<h3 id="task-interface">3.1 Task interface</h3>
+<p>We use the public LLMs4OL 2026 definitions [13]. In Task A
+(Flagship), the model receives a text context and predicts primitive
+ontology triples. In Task B (Reuse), it receives a context, an initial
+ontology, and the officially supplied term and type lists, and predicts
+extension triples. Let (x_i) denote the legal input fields for sample
+(i), (G_i) its locally held gold graph, and (hat{G}_i) the predicted
+graph. Gold triples are used for selection or scoring only and never
+enter prompts.</p>
+<p>Triples are partitioned into typing, taxonomy, and non-taxonomic
+channels. The relation experiments exclude self-loops and treat the
+exact normalized triple</p>
+<p>[ (s,p,o) _i G_i ]</p>
+<p>as a true positive. Surface or semantic variants are not counted by
+the primary exact metric.</p>
+<h3 id="candidate-generation-systems">3.2 Candidate-generation
+systems</h3>
+<p>The experiments compare the following system identities:</p>
+<ul>
+<li><strong>Closed vocabulary:</strong> generate typing and taxonomy
+triples only.</li>
+<li><strong>Open vocabulary:</strong> generate typing, taxonomy, and
+concise non-taxonomic predicates supported by the context.</li>
+<li><strong>Guarded relation generation:</strong> require every relation
+candidate to include a confidence score and verbatim evidence.</li>
+<li><strong>Relation-channel hybrid:</strong> retain typing and taxonomy
+triples from the legacy open system and substitute only the guarded
+relation channel.</li>
+<li><strong>Predicate-routed relation generation:</strong> restrict a
+relation-only prompt to a frozen eight-predicate inventory for an
+independent mechanism test.</li>
+</ul>
+<p>The hosted backbone is identified by the stable experiment alias
+<code>dots3-note-prev</code>, with temperature zero. Prompt hashes,
+model-input hashes, postprocessing signatures, attempt counts, and cache
+identities are retained in the experiment artifacts. Because a hosted
+alias does not guarantee immutable provider weights, model drift remains
+a limitation.</p>
+<h3 id="relation-guard">3.3 Relation guard</h3>
+<p>Each guarded candidate contains a triple (r=(s,p,o)), a raw
+confidence (q), an evidence mode, and one or two verbatim evidence
+spans. Entity strings are normalized against exact context surfaces and
+the official input inventory. Predicate aliases are canonicalized with
+direction-aware reversal where required.</p>
+<p>An explicit candidate requires one verbatim span containing both
+endpoints and raw confidence (q). A cross-sentence candidate requires
+two distinct verbatim spans, joint endpoint coverage, a maximum
+normalized gap of 600 characters, and (q). Candidates are rejected for
+invalid or non-verbatim evidence, missing endpoints, self-loops, generic
+predicates, or failure of an optional frozen predicate policy. Surviving
+candidates are ranked by confidence and capped at eight relations per
+sample. Formally,</p>
+<p>[ (r)=I_q I_e I_{self} I_{generic} I_p I_k, ]</p>
+<p>where (I_q) is the mode-specific confidence test, (I_e) is the
+evidence test, (I_p) is the optional predicate policy, and (I_k)
+represents the per-sample quantity cap. The guard is deterministic once
+the raw generation is cached.</p>
+<p>Applying the guard directly to a full generated graph can also change
+typing and taxonomy behavior because the prompt itself changes. The
+hybrid comparison avoids this confound: it holds the legacy
+typing/taxonomy output fixed and changes only accepted relations.</p>
+<h3 id="calibration-and-fail-closed-gates">3.4 Calibration and
+fail-closed gates</h3>
+<p>Raw generation and postprocessing have separate cache identities. A
+new calibrator can therefore be fit and replayed locally without another
+model call. Calibration is considered deployable only when its labels
+are independent of the evaluation slice and exact positives occur in at
+least five independent samples. Samples, rather than candidates, define
+cross-validation and bootstrap clusters.</p>
+<p>Passing a probability metric is not sufficient. A confirmatory gate
+also requires that a frozen decision rule retain exact relations in at
+least five independent samples on an untouched slice. Resubstitution,
+same-slice threshold search, weak labels without human audit, and
+post-hoc surface rules cannot open the gate. Every artifact records
+<code>scientific_deployable</code> and
+<code>confirmatory_eligible</code>; both default to false.</p>
+<h3 id="contamination-diagnostics">3.5 Contamination diagnostics</h3>
+<p>The closed-book probe asks the model to discriminate official facts
+from matched constructed controls without task context. We summarize
+discrimination with AUROC and a sample-cluster bootstrap interval. A
+paired surface test replaces endpoint names with aliases while
+preserving graph structure. Neither test provides verified training-set
+membership. Probe results are descriptive and cannot tune generation,
+filtering, calibration, or deployment.</p>
+<h2 id="experimental-design">4 Experimental Design</h2>
+<h3 id="data-and-frozen-evidence-partitions">4.1 Data and frozen
+evidence partitions</h3>
+<p>All official-data experiments use the public LLMs4OL 2026 Task A and
+Task B training JSON files [13]. The challenge repository is
+MIT-licensed; upstream ontology resources, especially UMLS-derived
+material, may impose additional terms. We therefore release scripts,
+manifests, hashes, prompts, and aggregate results, but do not
+redistribute third-party source data in the artifact.</p>
+<p>Table 1 separates the evidence partitions. Gold-stratified sets are
+useful diagnostics but are not unbiased estimates of the natural task
+distribution.</p>
+<p><strong>Table 1. Frozen evidence partitions.</strong></p>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 18%" />
+<col style="width: 25%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr>
+<th>Partition</th>
+<th>Source</th>
+<th style="text-align: right;">Samples</th>
+<th>Purpose</th>
+<th>Selection status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blind prefix</td>
+<td>Task A + B train</td>
+<td style="text-align: right;">30 per task</td>
+<td>Closed vs. open baseline</td>
+<td>Fixed prefix; gold withheld from prompts</td>
+</tr>
+<tr>
+<td>Density strata</td>
+<td>Task A + B train</td>
+<td style="text-align: right;">15 per task</td>
+<td>Relation-only guard comparison</td>
+<td>Gold-stratified low/medium/high density</td>
+</tr>
+<tr>
+<td>Independent v2 calibration</td>
+<td>Task A + B train</td>
+<td style="text-align: right;">39</td>
+<td>Candidate calibration support</td>
+<td>Disjoint; relation-enriched</td>
+</tr>
+<tr>
+<td>V5 confirmatory</td>
+<td>Task A train</td>
+<td style="text-align: right;">24</td>
+<td>Frozen decision-rule test</td>
+<td>Disjoint; predicate-balanced, endpoint-visible</td>
+</tr>
+<tr>
+<td>Nonce holdout</td>
+<td>Synthetic context-only</td>
+<td style="text-align: right;">30</td>
+<td>Controlled new-fact extraction</td>
+<td>Frozen before generation</td>
+</tr>
+<tr>
+<td>Official transfer</td>
+<td>Task A train</td>
+<td style="text-align: right;">30</td>
+<td>Transfer of nonce result</td>
+<td>Disjoint; relation-rich, gold-stratified</td>
+</tr>
+<tr>
+<td>Predicate routing</td>
+<td>Task A train</td>
+<td style="text-align: right;">27</td>
+<td>Independent routing mechanism test</td>
+<td>Disjoint 8/8/3/8 predicate strata</td>
+</tr>
+</tbody>
+</table>
+<p>The nonce holdout contains 120 balanced positive relations, 60
+negated co-occurrence controls, and 300 newly generated opaque entities.
+It has zero exact entity-string and gold-triple overlap with the
+official Task A/B training data. It is synthetic and low-overlap, not a
+verified temporal benchmark.</p>
+<h3 id="metrics-and-uncertainty">4.2 Metrics and uncertainty</h3>
+<p>We report micro precision, recall, and F1 for typing, taxonomy, and
+non-taxonomic relations. The primary graph metric is the official exact
+Graph Similarity implementation distributed with the 2026 challenge
+[13]:</p>
+<p>[ GS=. ]</p>
+<p>The composite ((TypingF1+TaxonomyF1+GS)/3) is an internal summary and
+not an official leaderboard score. Exact matching is primary. A frozen
+semantic secondary analysis is reported in the supplement; its model
+revision and threshold were locked before scoring.</p>
+<p>Where reported, uncertainty intervals use 10,000 sample-cluster
+bootstrap replicates. For paired system comparisons, samples are
+resampled jointly within prespecified strata. We emphasize effect sizes
+and support counts rather than null-hypothesis significance tests
+because several slices are small and purposefully stratified.</p>
+<h3 id="research-questions">4.3 Research questions</h3>
+<ul>
+<li><strong>RQ1:</strong> Does isolating symbolic constraints to the
+relation channel improve graph precision without changing typing or
+taxonomy output?</li>
+<li><strong>RQ2:</strong> Does guarded extraction on a controlled nonce
+holdout transfer to relation-rich official text?</li>
+<li><strong>RQ3:</strong> Do calibration and predicate routing satisfy
+prespecified independent-sample support gates?</li>
+<li><strong>RQ4:</strong> Do closed-book probeability and endpoint
+aliasing support a contamination-induced performance-inflation
+claim?</li>
+</ul>
+<figure>
+<img src="figures/ontobridg_evidence_chain.svg"
+alt="OntoBridg evidence chain" />
+<figcaption aria-hidden="true">OntoBridg evidence chain</figcaption>
+</figure>
+<p><strong>Figure 1. Evaluation and decision flow.</strong> Raw LLM
+generations are processed by a deterministic relation guard and
+evaluated across increasingly demanding evidence partitions. A positive
+controlled result advances to independent official-text tests; failed
+support gates stop expansion and deployment rather than triggering
+same-slice repair.</p>
+<h2 id="results">5 Results</h2>
+<h3 id="blind-official-training-prefix">5.1 Blind official-training
+prefix</h3>
+<p>All 120 task-system-sample units complete. Task A prompts contain
+context only; Task B prompts contain only official task inputs. Table 2
+shows that open generation does not improve the blind prefix. It emits
+384 Task A predictions and misses Task A’s sole non-taxonomic gold edge;
+it emits 150 Task B predictions on a prefix containing no non-taxonomic
+gold edge. Relative to closed generation, exact Graph Similarity falls
+by 0.2801 on Task A and 0.2927 on Task B. The prefix therefore diagnoses
+over-generation but cannot estimate relation recall reliably.</p>
+<p><strong>Table 2. Gold-withheld official-training prefix (30 samples
+per task).</strong></p>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr>
+<th>Task</th>
+<th>System</th>
+<th style="text-align: right;">Typing F1</th>
+<th style="text-align: right;">Taxonomy F1</th>
+<th style="text-align: right;">NonTax F1</th>
+<th style="text-align: right;">Exact GS</th>
+<th style="text-align: right;">NonTax pred/gold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Closed</td>
+<td style="text-align: right;"><strong>0.1400</strong></td>
+<td style="text-align: right;"><strong>0.4903</strong></td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;"><strong>0.4404</strong></td>
+<td style="text-align: right;">0 / 1</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Open</td>
+<td style="text-align: right;">0.1356</td>
+<td style="text-align: right;">0.3516</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.1603</td>
+<td style="text-align: right;">384 / 1</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Closed</td>
+<td style="text-align: right;">0.8824</td>
+<td style="text-align: right;"><strong>0.9474</strong></td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;"><strong>0.9375</strong></td>
+<td style="text-align: right;">0 / 0</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Open</td>
+<td style="text-align: right;"><strong>1.0000</strong></td>
+<td style="text-align: right;">0.8966</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.6449</td>
+<td style="text-align: right;">150 / 0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relation-channel-isolation">5.2 Relation-channel isolation</h3>
+<p>The density-stratified evaluation contains 63 Task A and 53 Task B
+non-taxonomic gold edges. Table 3 reports the stable comparison: typing
+and taxonomy outputs are inherited from the same open run, while only
+the relation channel changes. The v1 hybrid removes 216 Task A and 42
+Task B relation predictions, improving exact Graph Similarity by 0.0315
+and 0.0409. V2 adds entity/predicate canonicalization and cross-sentence
+evidence. It improves Task A GS by 0.0327 over open generation but is
+less conservative on Task B.</p>
+<p>No guarded hybrid recovers an exact relation on this slice. V2
+generates the one Task B relation recovered by the unguarded system at
+confidence 0.95, but its evidence spans are 1,604 normalized characters
+apart and the frozen 600-character rule rejects it. A post-hoc wider gap
+accepts that edge and additional false positives; it is reported only as
+a mechanism diagnostic and does not change the primary result.</p>
+<p><strong>Table 3. Relation-density-stratified hybrid comparison (15
+samples per task).</strong></p>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr>
+<th>Task</th>
+<th>Relation channel</th>
+<th style="text-align: right;">Typing F1</th>
+<th style="text-align: right;">Taxonomy F1</th>
+<th style="text-align: right;">NonTax F1</th>
+<th style="text-align: right;">Exact GS</th>
+<th style="text-align: right;">NonTax predictions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Open</td>
+<td style="text-align: right;">0.3077</td>
+<td style="text-align: right;">0.3475</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.1825</td>
+<td style="text-align: right;">250</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Guarded v1</td>
+<td style="text-align: right;">0.3077</td>
+<td style="text-align: right;">0.3475</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;"><strong>0.2140</strong></td>
+<td style="text-align: right;">34</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Guarded v2</td>
+<td style="text-align: right;">0.3077</td>
+<td style="text-align: right;">0.3475</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;"><strong>0.2152</strong></td>
+<td style="text-align: right;">54</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Open</td>
+<td style="text-align: right;">0.6000</td>
+<td style="text-align: right;">0.7500</td>
+<td style="text-align: right;"><strong>0.0202</strong></td>
+<td style="text-align: right;">0.5598</td>
+<td style="text-align: right;">46</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Guarded v1</td>
+<td style="text-align: right;">0.6000</td>
+<td style="text-align: right;">0.7500</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;"><strong>0.6007</strong></td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Guarded v2</td>
+<td style="text-align: right;">0.6000</td>
+<td style="text-align: right;">0.7500</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.5766</td>
+<td style="text-align: right;">19</td>
+</tr>
+</tbody>
+</table>
+<p>These results answer RQ1 narrowly: relation-channel isolation
+improves graph precision by suppressing unmatched edges, but evidence
+filtering alone does not establish relation recovery.</p>
+<h3 id="calibration-remains-fail-closed">5.3 Calibration remains
+fail-closed</h3>
+<p>The independent v2 calibration pool contains 144 eligible candidates
+but only four exact positives from three samples. Calibration reduces
+resubstitution Brier score from 0.8429 to 0.0270 and expected
+calibration error (ECE) from 0.9024 to 0.0113, yet it fails the
+five-positive-sample requirement.</p>
+<p>Dual-model weak annotation supplies more positives but has low
+relation-set agreement (micro Jaccard 0.3436), no held-out human audit,
+and no overlap with the packet’s single official non-taxonomic edge. In
+sample-grouped five-fold evaluation, calibration reduces Brier/ECE to
+0.1134/0.0045, but every fold maps the narrow 0.85-1.00 raw confidence
+range to one probability block. This is base-rate shrinkage, not learned
+ranking.</p>
+<p>The untouched 24-sample v5 confirmatory slice gives the decisive
+test. Base v5 yields 4 TP in 15 predictions from four samples (F1
+0.1159). The frozen calibrator improves candidate Brier/ECE from
+0.6707/0.6840 to 0.2109/0.1238, but its threshold removes one TP,
+leaving 3 TP in 14 predictions from three samples (F1 0.0882). The
+confirmatory and deployment gates therefore remain closed. The
+sample-cluster interval for calibrated-minus-base F1 is [-0.1064,
+0].</p>
+<h3
+id="contamination-diagnostics-do-not-support-a-global-inflation-claim">5.4
+Contamination diagnostics do not support a global inflation claim</h3>
+<p>The closed-book probe completes 30 samples and 214 balanced items.
+AUROC is 0.9780 with a 10,000-replicate sample-cluster 95% interval of
+[0.9484, 0.9982], showing that official facts are highly probeable.
+Probeability, however, has weak and inconsistent association with
+per-sample Graph Similarity.</p>
+<p>Endpoint aliasing also has opposing effects. Original-minus-alias GS
+is negative for Task A closed/open (-0.0921 and -0.1102) but positive
+for Task B closed/open (+0.1557 and +0.1917). Restricting to fully
+endpoint-visible samples preserves this pattern. These results show
+task-dependent surface sensitivity, not verified training membership or
+a general contamination-induced score increase. RQ4 is therefore
+answered in the negative.</p>
+<h3 id="controlled-extraction-does-not-transfer-to-official-text">5.5
+Controlled extraction does not transfer to official text</h3>
+<p>The nonce holdout provides the strongest positive relation result.
+Guarded v2 raises exact non-taxonomic F1 from 0.2612 to 0.8571 and exact
+GS from 0.1805 to 0.5690. Both systems produce zero predictions on all
+60 negated controls. Guarded performance is perfect on canonical
+language (F1 1.0000) but falls to 0.7119 on paraphrases, demonstrating
+sensitivity even in the controlled setting.</p>
+<p>The disjoint official-text transfer slice reverses the conclusion. It
+contains 101 non-self non-taxonomic gold edges, 89 with both endpoints
+visible in the compressed context. Neither system recovers one. Guarded
+v2 reduces predictions from 424 to 143 and raises exact GS from 0.1946
+to 0.2593, but exact relation precision, recall, and F1 remain zero. A
+zero-call audit finds no exact TP among 225 raw guarded candidates and
+no raw candidate using an exact gold predicate. The guard did not remove
+a latent correct relation; the raw predicate family was misaligned with
+the reference inventory.</p>
+<p><strong>Table 4. Controlled nonce result and official-text
+transfer.</strong></p>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr>
+<th>Partition</th>
+<th>System</th>
+<th style="text-align: right;">Precision</th>
+<th style="text-align: right;">Recall</th>
+<th style="text-align: right;">NonTax F1</th>
+<th style="text-align: right;">Exact GS</th>
+<th style="text-align: right;">Predictions / gold</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nonce</td>
+<td>Open</td>
+<td style="text-align: right;">0.2222</td>
+<td style="text-align: right;">0.3167</td>
+<td style="text-align: right;">0.2612</td>
+<td style="text-align: right;">0.1805</td>
+<td style="text-align: right;">171 / 120</td>
+</tr>
+<tr>
+<td>Nonce</td>
+<td>Guarded v2</td>
+<td style="text-align: right;"><strong>0.8644</strong></td>
+<td style="text-align: right;"><strong>0.8500</strong></td>
+<td style="text-align: right;"><strong>0.8571</strong></td>
+<td style="text-align: right;"><strong>0.5690</strong></td>
+<td style="text-align: right;">118 / 120</td>
+</tr>
+<tr>
+<td>Official transfer</td>
+<td>Open</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.1946</td>
+<td style="text-align: right;">424 / 101</td>
+</tr>
+<tr>
+<td>Official transfer</td>
+<td>Guarded v2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;"><strong>0.2593</strong></td>
+<td style="text-align: right;">143 / 101</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="figures/ontobridg_main_results.svg"
+alt="Controlled and official relation results" />
+<figcaption aria-hidden="true">Controlled and official relation
+results</figcaption>
+</figure>
+<p><strong>Figure 2. Controlled success and official-text
+failure.</strong> Panel A contrasts non-taxonomic F1 on the nonce and
+official-transfer partitions. Panel B reports the corresponding exact
+Graph Similarity. Panel C shows that independent predicate routing
+produces two official exact true positives but 138 exact false
+positives. Exact false positives are scoring outcomes, not
+human-adjudicated semantic errors.</p>
+<h3 id="predicate-routing-gives-narrow-recovery-and-fails-its-gate">5.6
+Predicate routing gives narrow recovery and fails its gate</h3>
+<p>The independent routing packet freezes 27 Task A samples after the
+official-transfer diagnosis. It contains 69 target gold edges across
+<code>equivalent class</code>, <code>disjoint with</code>,
+<code>type</code>, and <code>database_cross_reference</code> strata and
+has zero sample, context, or exact-gold overlap with prior evidence.
+General relation-only v3 and routed v6 differ only in prompt identity
+and share the same postprocessor.</p>
+<p>Routed v6 raises four-stratum macro target F1 from 0 to 0.0526, but
+pooled precision/recall/F1 is 0.0143/0.0290/0.0191. Both true positives
+are <code>type</code> edges from two independent samples. The other
+three strata remain at zero TP, so the five-positive-sample mechanism
+gate fails.</p>
+<p><strong>Table 5. Independent predicate-routing result.</strong></p>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th>System</th>
+<th style="text-align: right;">Macro target F1</th>
+<th style="text-align: right;">Pooled P / R / F1</th>
+<th style="text-align: right;">TP / FP / FN</th>
+<th style="text-align: right;">TP-positive samples</th>
+<th style="text-align: right;">Exact GS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>General v3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0 / 0 / 0</td>
+<td style="text-align: right;">0 / 0 / 69</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Routed v6</td>
+<td style="text-align: right;"><strong>0.0526</strong></td>
+<td style="text-align: right;">0.0143 / 0.0290 / 0.0191</td>
+<td style="text-align: right;">2 / 138 / 67</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.0016</td>
+</tr>
+</tbody>
+</table>
+<p>The post-hoc audit clarifies the failure. Of 140 accepted routed
+outputs, 120 are <code>type</code>; all 138 exact false positives
+contain accepted explicit or cross-sentence evidence, and 133 bind both
+endpoints verbatim to the context. Routing therefore changes the failure
+mode from out-of-inventory predicates to broad, evidence-bound off-gold
+generation. Because official gold completeness is not established and no
+independent semantic adjudication was performed, off-gold predictions
+cannot be declared semantically correct or incorrect. The audit does not
+reopen the gate.</p>
+<h2 id="discussion">6 Discussion</h2>
+<h3 id="evidence-is-necessary-but-not-sufficient">6.1 Evidence is
+necessary but not sufficient</h3>
+<p>The relation guard consistently reduces unmatched predictions and can
+greatly improve graph-level scores when typing and taxonomy are held
+fixed. Its success on the nonce holdout shows that the implementation
+can recover unseen entity combinations from supplied text. The official
+transfer and routing results show the boundary: evidence verifies that
+text supports an assertion, not that the benchmark expects that
+assertion or predicate serialization.</p>
+<p>This distinction is important for ontology construction. A passage
+can support many defensible type or identity statements while a
+reference graph records only a subset. Under exact evaluation, these
+become false positives even when both endpoints and an evidence span are
+valid. Better confidence calibration cannot resolve incomplete or
+selectively scoped supervision unless the calibration labels reflect
+that same selection process.</p>
+<h3 id="why-fail-closed-evaluation-matters">6.2 Why fail-closed
+evaluation matters</h3>
+<p>Several intermediate analyses could have been presented
+optimistically: large calibration improvements on sparse labels, a
+strong controlled nonce result, a wider evidence gap that restores one
+relation, or a post-hoc symmetric-edge rule. Each fails a different
+independence or support requirement. The protocol turns these failures
+into explicit stopping decisions. It blocks same-slice repair, prevents
+weak labels from being renamed as human annotation, and avoids scaling
+an intervention whose mechanism gate failed.</p>
+<p>The resulting contribution is therefore methodological as much as
+algorithmic. OntoBridg provides a reproducible sequence for separating
+candidate generation, deterministic filtering, calibration, controlled
+extraction, official-text transfer, and independent mechanism testing.
+Negative results remain useful because their scope and stopping rules
+are auditable.</p>
+<h3 id="implications-for-llms4ol-evaluation">6.3 Implications for
+LLMs4OL evaluation</h3>
+<p>First, relation-channel and core-graph metrics should be reported
+separately. A model can improve typing while harming graph similarity
+through relation over-generation. Second, public-training-data
+experiments should be labeled as such; they do not substitute for
+hidden-test or temporal evaluation. Third, contamination probes should
+not create unverified clean/polluted labels. Finally, benchmarks with
+sparse relation annotations may need explicit closed predicate
+inventories, completeness statements, or semantic adjudication protocols
+if they intend to reward plausible additional relations.</p>
+<h2 id="limitations-ethics-and-reproducibility">7 Limitations, Ethics,
+and Reproducibility</h2>
+<p><strong>Training rather than hidden test data.</strong> All
+official-data results use public 2026 training files. Gold-stratified
+transfer and routing slices are mechanism diagnostics, not unbiased
+performance estimates or leaderboard submissions.</p>
+<p><strong>One hosted model.</strong> The primary experiments use one
+OpenAI-compatible hosted model alias. Temperature is zero and all
+prompts are hashed, but provider-side weights and serving behavior are
+not independently versioned. Cross-model generalization is unknown.</p>
+<p><strong>Sparse and potentially incomplete gold.</strong> Exact
+scoring is appropriate for challenge comparability but cannot adjudicate
+plausible off-gold relations. The routing audit demonstrates this
+ambiguity. No human semantic audit is claimed.</p>
+<p><strong>Synthetic holdout.</strong> Nonce entities and relation facts
+are newly generated and have no exact overlap with official data, but
+the relation templates and predicates are familiar. The holdout tests
+controlled new-fact extraction, not natural language coverage or
+unseen-predicate discovery.</p>
+<p><strong>Calibration support.</strong> Independent exact positives
+remain too sparse for deployment. Dual-model annotations are exploratory
+weak labels with low agreement and no held-out human audit. They cannot
+open a confirmatory gate.</p>
+<p><strong>Contamination inference.</strong> High closed-book AUROC may
+reflect general public knowledge, control construction artifacts, or
+training exposure. Endpoint aliasing changes lexical difficulty as well
+as memorization cues. We do not identify individual training examples or
+claim verified membership.</p>
+<p><strong>Data licensing and privacy.</strong> Experiments use public
+challenge files and synthetic text; no personal data are introduced. The
+challenge repository is MIT-licensed, while upstream ontology resources
+may have additional terms. The artifact excludes third-party datasets
+and API credentials. It includes code, frozen manifests, hashes,
+prompts, aggregate result JSON, and zero-call replay instructions.</p>
+<p><strong>Resource use.</strong> Cached raw generations and signed
+postprocessing outputs avoid repeated API calls during calibration and
+audit. All reported post-hoc analyses are local. API attempt counts,
+retries, and final failures are retained rather than silently
+discarded.</p>
+<h2 id="conclusion">8 Conclusion</h2>
+<p>OntoBridg treats LLM-based ontology learning as candidate generation
+followed by deterministic, fail-closed evaluation. Relation-only guards
+improve graph precision and recover controlled synthetic relations, but
+that success does not transfer to relation-rich official text. Predicate
+routing obtains two exact <code>type</code> relations yet fails its
+independent-sample support gate, while most off-gold outputs remain
+evidence-bound and semantically unadjudicated. Contamination diagnostics
+reveal high factual probeability without supporting a global
+score-inflation claim. The defensible result is not that open-relation
+ontology learning is solved, but that controlled positives, transfer
+failures, and deployment decisions can be separated reproducibly. On the
+current evidence, naturalistic open-relation gains remain unsupported
+and every deployment gate remains closed.</p>
+<h2 id="references">References</h2>
+<ol type="1">
+<li>H. Babaei Giglou, J. D’Souza, and S. Auer. LLMs4OL: Large Language
+Models for Ontology Learning. In <em>The Semantic Web - ISWC 2023</em>,
+pp. 408-427, 2023. https://doi.org/10.1007/978-3-031-47240-4_22.</li>
+<li>H. Babaei Giglou, J. D’Souza, and S. Auer. LLMs4OL 2024 Overview:
+The 1st Large Language Models for Ontology Learning Challenge. <em>Open
+Conference Proceedings</em>, 4:3-16, 2024.
+https://doi.org/10.52825/ocp.v4i.2473.</li>
+<li>A. Beliaeva and T. Rahmatullaev. Heterogeneous LLM Methods for
+Ontology Learning (Few-Shot Prompting, Ensemble Typing, and
+Attention-Based Taxonomies). arXiv:2508.19428, 2025.
+https://doi.org/10.48550/arXiv.2508.19428.</li>
+<li>S. Mishra, D. R. Meena, M. Ojha, K. P. Singh, and K. Singh. pro-team
+at LLMs4OL 2026 Tasks Flagship and Reuse: Retrieval-Augmented Generation
+and Vocabulary-Constrained Filtering for Ontology Learning.
+arXiv:2608.27101, 2026. https://doi.org/10.48550/arXiv.2608.27101.</li>
+<li>H. Babaei Giglou, J. D’Souza, A. Aioanei, N. Mihindukulasooriya, and
+S. Auer. OntoLearner: A Modular Python Library for Ontology Learning
+with Large Language Models. arXiv:2607.01977, 2026.</li>
+<li>M. A. Hearst. Automatic Acquisition of Hyponyms from Large Text
+Corpora. In <em>COLING 1992</em>, p. 539, 1992.
+https://doi.org/10.3115/992133.992154.</li>
+<li>E. Jimenez-Ruiz and B. Cuenca Grau. LogMap: Logic-Based and Scalable
+Ontology Matching. In <em>The Semantic Web - ISWC 2011</em>,
+pp. 273-288, 2011. https://doi.org/10.1007/978-3-642-25073-6_18.</li>
+<li>D. Faria, C. Pesquita, E. Santos, M. Palmonari, I. F. Cruz, and F.
+M. Couto. The AgreementMakerLight Ontology Matching System. In <em>OTM
+2013 Conferences</em>, pp. 527-541, 2013.
+https://doi.org/10.1007/978-3-642-41030-7_38.</li>
+<li>Y. He, J. Chen, D. Antonyrajah, and I. Horrocks. BERTMap: A
+BERT-Based Ontology Alignment System. <em>Proceedings of the AAAI
+Conference on Artificial Intelligence</em>, 36(5):5684-5691, 2022.
+https://doi.org/10.1609/aaai.v36i5.20510.</li>
+<li>Y. Oren, N. Meister, N. Chatterji, F. Ladhak, and T. B. Hashimoto.
+Proving Test Set Contamination in Black-Box Language Models.
+arXiv:2310.17623, 2023. https://doi.org/10.48550/arXiv.2310.17623.</li>
+<li>S. Golchin and M. Surdeanu. Time Travel in LLMs: Tracing Data
+Contamination in Large Language Models. In <em>ICLR 2024</em>, 2024.
+arXiv:2308.08493.</li>
+<li>C. Li and J. Flanigan. Task Contamination: Language Models May Not
+Be Few-Shot Anymore. <em>Proceedings of the AAAI Conference on
+Artificial Intelligence</em>, 38(16):18471-18480, 2024.
+https://doi.org/10.1609/aaai.v38i16.29808.</li>
+<li>LLMs4OL Organizers. LLMs4OL Challenge Repository: 2026 Tasks and
+Metrics. GitHub repository, 2026.
+https://github.com/LLMs4OL/LLMs4OL-Challenge (accessed 2026-09-28).</li>
+</ol>
+</body>
+</html>
