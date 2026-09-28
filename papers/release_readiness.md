@@ -1,7 +1,7 @@
 # OntoBridg Release Readiness
 
 **Checked:** 2026-09-29  
-**Repository commit:** `2e696b7`  
+**Repository commit:** `0a03592`  
 **Anonymous artifact:** `dist/ontobridg-anonymous-artifact.zip`  
 **Artifact SHA-256:** `b9e9f5bce1b004cca5a6ec30d7ac2ed0dc196fda6d520dadba676f2bb6f87777`
 
