@@ -19,7 +19,8 @@ OAEI/LLMs4OL 2026 提交窗口已过，项目面向 **LLMs4OL 2027 + 论文发�
 | 优胜方法代码 | `data/alexbek/`, `data/LLMs4OL-baseline/` | 对照 baseline |
 | 设计/战略 | `docs/DESIGN.md`, `docs/STRATEGY.md`, `docs/INNOVATION.md` | 已写 |
 | 竞赛事实 | `competition/README.md`, `competition/OFFICIAL_2026.md` | 已按 2026 官网修订 |
-| 论文包 | `papers/paper_draft.md` 等 + refs PDF | 骨架完成 |
+| 投稿论文包 | `papers/paper_draft.md`, `papers/appendix.md`, `papers/references.bib` | 匿名、venue-neutral 稿件已就绪 |
+| 投稿检查 | `papers/submission_checklist.md`, `src/check_submission_manuscript.py` | 结构、引用、图表和证据数字可复核 |
 | 实验结果 | `experiments/results/*.json` | demo / sim / official eval |
 
 ## 当前主要证据（官方 2026 train，blind n = 30）
@@ -90,11 +91,11 @@ Base URL / 模型已写好：
 
 ## 阅读顺序
 
-1. `competition/README.md` + `competition/OFFICIAL_2026.md` — 赛什么、指标、2026 结果  
-2. `docs/DESIGN.md` — OntoBridg 架构  
-3. `docs/INNOVATION.md` — 打哪里、凭什么赢  
-4. `docs/STRATEGY.md` — 8 周到 2027 的路线  
-5. `papers/paper_draft.md` — 论文定位与贡献
+1. `papers/paper_draft.md` — 投稿主文与当前可辩护结论
+2. `papers/appendix.md` — 校准、迁移、routing 与复现细节
+3. `papers/submission_checklist.md` — 投稿前仍需完成的 venue-specific 项目
+4. `competition/README.md` + `competition/OFFICIAL_2026.md` — 任务与指标事实
+5. `docs/DESIGN.md` — OntoBridg 架构
 
 ## 约定
 

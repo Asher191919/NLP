@@ -1,5 +1,7 @@
 # Paper Outline — OntoBridg / Contamination-aware Ontology Learning
 
+> **Archived planning document.** This file predates the completed experiments and contains superseded hypotheses and task plans. The canonical submission manuscript is `papers/paper_draft.md`; the supplement is `papers/appendix.md`; the live packaging checklist is `papers/submission_checklist.md`. Do not use claims or TODO items below in a submission without revalidation.
+
 > 版本：v0.1 | 日期：2026-09-19 | 配套：`DESIGN.md` / `STRATEGY.md`
 
 ---

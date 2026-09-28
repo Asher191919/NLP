@@ -1,206 +1,90 @@
-# OntoBridg — Target Venues (Ranked)
+# OntoBridg Venue Strategy
 
-> **Status**: Venue shortlist v0.1 | 2026-09-20
-> **Project**: OntoBridg | `D:\NLP` | LLMs4OL (not OAEI primary)
-> **Notes**: Deadlines are approximate / “if known”; verify on official CFP before submitting. Chinese OK for planning notes.
+**Assessment date:** 2026-09-28
 
----
+## Current Paper Type
 
-## Ranking Criteria Used
+OntoBridg is currently a reproducible negative-results and evaluation-protocol paper with one bounded controlled positive result. Its defensible contribution is:
 
-1. Fit to **LLMs4OL / ontology learning + contamination** contribution
-2. Chance of **competition-track** acceptance while system paper + protocol are still maturing
-3. Path to **journal / archival** extension
-4. Review cycle speed vs. paper readiness (code + experiments incomplete as of 2026-09)
+- relation-channel constraints improve graph precision;
+- a synthetic nonce holdout demonstrates controlled extraction;
+- the gain fails to transfer to relation-rich official text;
+- independent predicate routing fails a preregistered support gate;
+- contamination diagnostics show probeability and task-dependent surface sensitivity without proving membership;
+- the system remains fail-closed for calibration and deployment.
 
----
+It is not currently a leaderboard paper, a hidden-test study, a multi-model benchmark, or a demonstrated naturalistic performance improvement.
 
-## Tier 1 — Primary Targets (LLMs4OL / ISWC ecosystem)
+## Recommended Sequence
 
-### 1. LLMs4OL Workshop (co-located with ISWC or venue of that year)
+### 1. LLMs4OL 2027 workshop or closely aligned ISWC workshop
 
-| Item | Detail |
-|------|--------|
-| **Why #1** | Exact task family; competition/system papers expected; contamination critique is on-topic |
-| **Paper type** | System + evaluation-protocol paper (competition track) |
-| **Fit** | 2026 Task A Flagship / B Reuse / C Taxonomy + baselines Alexbek / pro-team + OntoBridg |
-| **Deadline** | Typically ~ISWC workshop deadline (often May–July for autumn ISWC). **2027 track TBD** — monitor arXiv/LLMs4OL site |
-| **Length** | Often CEUR 8–12 pages |
-| **Risk** | Depends on 2027 task stability; if track changes, reframe using 2026 Flagship/Reuse/Taxonomy names |
+**Recommendation:** primary target, subject to the official 2027 call.
 
-**Action:** Track LLMs4OL 2027 CFP; pre-register system; submit contamination protocol as core differentiator.
+**Fit:** high. The manuscript directly examines LLMs4OL Task A/B behavior, exact graph metrics, relation extraction, reproducibility, and evaluation safeguards. Shared-task and workshop audiences can evaluate a carefully bounded negative result without requiring the broader empirical coverage expected of an ISWC full research paper.
 
-### 2. ISWC (International Semantic Web Conference) — Research / Resource track
+**Submission framing:**
 
-| Item | Detail |
-|------|--------|
-| **Why** | Core venue for ontology learning + neuro-symbolic OL; audience understands TBox, SGS, OAEI contrast |
-| **Paper type** | Full research paper (contamination protocol + hybrid method) or resource/demo if engineering-led |
-| **Fit** | Strong once Stage 2–6 experiments exist |
-| **Deadline** | ISWC research track historically: abstract ~April, full ~May (for that year’s conference). **Verify current year CFP** |
-| **Length** | ~16 pages Springer LNCS (+ references) or as CFP specifies |
-| **Risk** | High bar; needs solid baselines + clean ablations |
+> Evidence constraints recover controlled relations but do not transfer to official text; fail-closed gates prevent a synthetic gain from becoming an unsupported deployment claim.
 
-**Action:** If LLMs4OL workshop happens first, workshop paper → extended ISWC/journal version.
+**Required before submission:**
 
-### 3. OM Workshop @ ISWC (Ontology Matching) — CEUR — **Backup only**
+- verify the official call, page limit, anonymity policy, and artifact rules;
+- move the Markdown manuscript into the required CEUR/LNCS template;
+- add author metadata only after the anonymity policy is known;
+- archive an anonymized artifact with a stable URL or DOI.
 
-| Item | Detail |
-|------|--------|
-| **Why backup** | Project direction is **LLMs4OL not OAEI**; OAEI 2026 execution deadline already passed (2026-09-05 per DESIGN) |
-| **Use for** | (a) Hybrid symbolic vs LLM contrast notes; (b) if LLMs4OL 2027 timeline fails, pivot matching module to OAEI 2027 |
-| **Paper type** | Short system / position paper on contamination in matching **or** OntoBridg-matching port |
-| **Deadline** | Usually aligned with ISWC workshop deadlines (often August for autumn ISWC). **2027 TBD** |
-| **Venue outlet** | CEUR-WS |
-| **Risk** | Mismatch with current main claims; do not lead with OAEI for this paper |
+### 2. Negative-results, evaluation, or neuro-symbolic NLP workshop
 
----
+**Recommendation:** fallback if no suitable LLMs4OL 2027 call appears.
 
-## Tier 2 — Journals (Extension After Workshop / Strong Preprint)
+**Fit:** moderate to high when framed around evaluation science, sparse structured gold, evidence-bound off-gold generation, and fail-closed decision rules. The ontology-learning context must remain explicit; this should not be reframed as generic relation extraction without additional baselines.
 
-### 4. Journal of Web Semantics (JWS)
+### 3. ISWC research track
 
-| Item | Detail |
-|------|--------|
-| **Why** | Home venue for ontology learning, semantic web, hybrid systems |
-| **Paper type** | Full archival article: OntoBridg + contamination protocol + extensive ablations |
-| **Fit** | Excellent after experimental results; SGS/graph metrics welcome |
-| **Timeline** | Rolling; major revision cycles common. Target **after** workshop acceptance + extra datasets |
-| **Risk** | Slow review; needs completeness |
+**Recommendation:** do not submit the current package as a full research paper.
 
-### 5. Knowledge-Based Systems (KBS)
+The present evidence uses one hosted model and public training data, and the main naturalistic relation result is negative. A competitive full-paper version would normally require at least one of the following:
 
-| Item | Detail |
-|------|--------|
-| **Why** | Publishes neuro-symbolic + LLM hybrid KRR systems; good for method-heavy framing |
-| **Paper type** | Research article |
-| **Fit** | Strong for multi-objective scoring + symbolic repair + open relation vocab |
-| **Timeline** | Rolling; relatively faster than some SW venues |
-| **Risk** | Less “semantic web competition” audience; emphasize general OL method |
+- replication across multiple model families;
+- a genuinely independent naturalistic or temporal dataset;
+- a human-adjudicated completeness study for off-gold relations;
+- a benchmark or annotation resource that can be released and reused;
+- a new method that succeeds under the already frozen transfer protocol.
 
-### 6. Semantic Web Journal (SWJ)
+These additions must use new data or models; the failed routing slice cannot be repaired or tuned.
 
-| Item | Detail |
-|------|--------|
-| **Why** | Direct OL/alignment audience; open review culture |
-| **Paper type** | Research paper; possible special issue on LLMs + SW |
-| **Fit** | Contamination + LLMs4OL + hybrid pipeline |
-| **Timeline** | Rolling + special issues (watch SWJ calls) |
-| **Risk** | Special-issue deadlines can be tight |
+### 4. JWS, Semantic Web Journal, or Knowledge-Based Systems
 
----
+**Recommendation:** later archival extension only.
 
-## Tier 3 — NLP Conferences / Findings (Alternate Framing)
+A journal version should add multi-model replication, broader dataset coverage, human adjudication, and a mature public artifact. The current manuscript can serve as the protocol and negative-results core of that extension.
 
-### 7. EMNLP / ACL Findings (or *SEM)
+### 5. OAEI / Ontology Matching workshop
 
-| Item | Detail |
-|------|--------|
-| **Why** | Contamination methodology is broadly eval-science; open relation extraction is NLP |
-| **Paper type** | Findings short/long; or workshop (BlackboxNLP, NLP4ConvAI not ideal — prefer **eval / resources** workshops) |
-| **Fit** | Best if headline is *contamination-aware evaluation for structured prediction from LLMs* rather than full OL system |
-| **Deadline** | ACL/EMNLP cycles ~May and ~Aug (varies by year; ARR + direct). **Verify** |
-| **Risk** | Semantic-web depth (SGS, TBox repair) may need compression |
+**Recommendation:** not a primary target.
 
-### 8. AAAI / IJCAI (secondary)
+Ontology matching is used only as related-work context. The evaluated task is ontology learning/extension, and no matching-system experiment is reported.
 
-| Item | Detail |
-|------|--------|
-| **Why** | Neuro-symbolic AI framing |
-| **Fit** | Only if method novelty (constraints + open vocab + contamination) is very strong |
-| **Deadline** | AAAI often abstract July–Aug for following winter; IJCAI ~January |
-| **Risk** | Crowded; OL-specific audience thinner |
+## Claims by Venue
 
-### 9. LREC / ESWC / EKAW (niche SW/NLP)
+| Claim | Workshop manuscript | Full research/journal extension |
+|---|---|---|
+| Relation-only guard improves graph precision | Ready | Replicate across models/data |
+| Guarded nonce extraction reaches F1 0.8571 | Ready with synthetic qualifier | Add naturalistic validation |
+| Official-text transfer recovers 0/101 | Ready as negative result | Diagnose with human completeness study |
+| Predicate routing fails five-sample gate | Ready | Test a new preregistered method on new data |
+| Facts are highly probeable | Ready as diagnostic | Add stronger contamination methodology |
+| Verified pretraining contamination | Not supported | Requires corpus access or stronger evidence |
+| Deployment-ready calibration | Not supported | Requires independent human/official support |
 
-| Item | Detail |
-|------|--------|
-| **ESWC** | Good ISWC sibling; research + resources; spring deadline typical |
-| **EKAW** | Knowledge engineering / ontology learning focused when held |
-| **LREC** | If contribution reframed as dataset/eval resource (contamination probes + clean splits) |
+## Venue Checks Still Requiring External Confirmation
 
----
+- [ ] Official LLMs4OL 2027 call and submission deadline
+- [ ] Page limit and template
+- [ ] Double-blind versus single-blind policy
+- [ ] Prior-preprint policy
+- [ ] Artifact review and anonymization requirements
+- [ ] Whether workshop publication permits a later extended journal version
 
-## Recommended Submission Sequences
-
-### Sequence A — Competition-first (aligned with LLMs4OL 2027)
-
-```
-Now (2026-09) → implement Stage 2–6, pilots on WordNet + schema.org
-      ↓
-2026 H2 / 2027 H1 → track LLMs4OL 2027 CFP + ISWC workshop deadlines
-      ↓
-Submit system+protocol paper → LLMs4OL workshop (CEUR)
-      ↓
-Extend with full ablations + more datasets → JWS or SWJ (or ISWC research next cycle)
-```
-
-### Sequence B — Method-first (if competition timeline slips)
-
-```
-Draft contamination protocol + hybrid method on public LLMs4OL data
-      ↓
-Preprint arXiv
-      ↓
-Findings / ESWC / ISWC research track
-      ↓
-Optional: OM Workshop short paper for OAEI contrast / matching port
-      ↓
-Journal (KBS or JWS) extended version
-```
-
-### Sequence C — OAEI backup (only if LLMs4OL blocked)
-
-```
-Port matching module → LogMap-style hybrid + LLM candidates
-      ↓
-Pre-register OAEI 2027 → OM Workshop paper
-      ↓
-Not the current primary narrative; keep as DESIGN.md secondary path
-```
-
----
-
-## Deadline Checklist (Fill Official Dates)
-
-| Venue | Approx window | Official CFP | Decision |
-|-------|---------------|--------------|----------|
-| LLMs4OL 2027 workshop | ~mid-year (ISWC-linked) | ☐ pending | **Primary** |
-| ISWC 2027 Research | ~Apr–May 2027 | ☐ pending | Primary after workshop |
-| OM @ ISWC 2027 | ~Aug 2027 | ☐ pending | Backup |
-| ESWC 2027/2028 | ~Nov–Dec prior year | ☐ pending | Optional |
-| EMNLP/ACL Findings | ARR cycle | ☐ pending | Alt framing |
-| JWS / SWJ / KBS | Rolling | ☐ open now | Extension |
-
-*Note: Project DESIGN.md states OAEI **2026** execution deadline was **2026-09-05** (passed) — reinforces LLMs4OL as primary.*
-
----
-
-## Paper Packaging per Venue
-
-| Venue | Lead pitch | Must include | Can cut |
-|-------|------------|--------------|---------|
-| LLMs4OL workshop | System + contamination protocol on official tasks | A/B/C results, Alexbek/pro-team compare, stress tests | Long OL history |
-| ISWC research | Hybrid OL + eval science | Full method, repair rules, SGS analysis | Competition diary |
-| OM CEUR | Contamination in matching / hybrid wins | OAEI contrast, LogMap/AML/BERTMap cites | Open vocab depth |
-| JWS/SWJ/KBS | Complete method + protocol archive | All tables, release notes, license appendix | Workshop anecdotes |
-| NLP Findings | Contamination eval for structured LLM tasks | Probes, stress tests, ranking-flip | OWL export details |
-
----
-
-## Practical Notes
-
-1. **Do not claim** Alexbek/pro-team numbers until reproduced or carefully cited from arXiv (2508.19428, 2608.27101).
-2. **UMLS license**: journal/workshop submission can describe access path; avoid committing restricted data.
-3. **Dual submission**: workshops (CEUR) often allow later extension; check each CFP.
-4. **Name consistency**: system is **OntoBridg** (project DESIGN spelling); keep spelling stable across drafts.
-5. **Evidence gate**: workshop paper OK with 2 datasets + clear protocol; ISWC/journal want 3–4 datasets + full ablations.
-
----
-
-## Immediate Next Venue Actions
-
-- [ ] Confirm LLMs4OL 2027 task definitions + SGS formula (from 2026 overview / organizers)
-- [ ] Add official CFP links + exact dates to this file when known
-- [ ] Choose Sequence A vs B after first end-to-end run on WordNet
-- [ ] Keep `paper_draft.md` abstract non-numeric until results exist
+No deadline is recorded here until it has been verified from the official call.

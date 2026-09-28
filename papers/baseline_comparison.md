@@ -1,5 +1,7 @@
 # OntoBridg — Baseline Comparison Table
 
+> **Archived planning matrix.** This document predates the completed official-train, nonce, transfer, and predicate-routing experiments. Submission-ready claims and measured tables now live in `paper_draft.md` and `appendix.md`; unresolved `TBD` cells below are not manuscript evidence.
+
 > **Status**: Comparison matrix v0.1 | 2026-09-20
 > **Use**: Feeds Section 4 of `paper_draft.md`; refresh numbers after reproduction.
 > **Caveat**: Metrics for external systems are **as reported / qualitative** until OntoBridg reproduces them under the same backbone & splits. Official LLMs4OL year protocols may differ (F1-only vs SGS+F1).
