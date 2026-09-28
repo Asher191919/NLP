@@ -88,3 +88,18 @@ Ontology matching is used only as related-work context. The evaluated task is on
 - [ ] Whether workshop publication permits a later extended journal version
 
 No deadline is recorded here until it has been verified from the official call.
+
+## External status check (2026-09-29)
+
+The official LLMs4OL series page (`https://sites.google.com/view/llms4ol`)
+returned HTTP 200, but its published page did not contain a 2027 call,
+deadline, page limit, template, or artifact policy. The 2026 page was reachable
+and remains historical; it cannot be used as a 2027 submission rule. The
+`iswc2027.semanticweb.org` host could not be verified from this environment, so
+no date or venue fact is inferred from it.
+
+The current decision is therefore to keep the manuscript venue-neutral, target
+an LLMs4OL 2027 or closely aligned Semantic Web/ontology workshop first, and
+use an OM/evaluation workshop as the fallback. Template conversion and author
+metadata remain intentionally deferred until an official call and its
+anonymity policy are available.

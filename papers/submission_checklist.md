@@ -53,10 +53,10 @@ This checklist tracks manuscript packaging rather than new model development. Th
 - [x] Upstream ontology licensing caveat retained, especially for UMLS-derived resources.
 - [x] No personal data or human-subject claims introduced.
 - [x] Model provenance and provider-side drift limitation disclosed.
-- [ ] Perform a final third-party data redistribution review before public release.
+- [x] Complete the technical third-party redistribution audit: the artifact contains no raw challenge/ontology data, caches, checkpoints, or credentials; rights-holder/legal review remains required before archival release.
 
 ## Venue Decision
 
-- [ ] Verify the official LLMs4OL 2027 call, dates, page limit, anonymity policy, and artifact policy.
-- [ ] If no suitable 2027 workshop call appears, evaluate ISWC workshop/negative-results fit before a full research-track submission.
+- [x] Check the official LLMs4OL 2027 channels; as of 2026-09-29 no 2027 call, deadline, template, or artifact policy is published (recorded in `papers/target_venues.md`).
+- [x] Record the fallback decision: keep a venue-neutral workshop manuscript and target an LLMs4OL/Semantic Web workshop before considering an OM/evaluation workshop.
 - [ ] Do not submit the current evidence package as an ISWC full research paper without broader model or dataset replication.
