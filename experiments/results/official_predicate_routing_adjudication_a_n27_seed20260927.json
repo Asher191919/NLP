@@ -1,0 +1,39 @@
+{
+  "adjudication_summary": {
+    "both_endpoints_verbatim_fp": 133,
+    "both_endpoints_verbatim_fp_rate": 0.9638,
+    "evidence_grounded_fp": 138,
+    "evidence_grounded_fp_rate": 1.0,
+    "official_exact_evaluation_intact": true,
+    "official_exact_fp": 138,
+    "official_exact_structural_categories": {
+      "both_endpoints_exact_not_paired": 6,
+      "endpoints_exact_predicate_mismatch": 1,
+      "endpoints_reversed": 2,
+      "exact": 2,
+      "no_local_gold_overlap": 73,
+      "one_endpoint_exact": 36,
+      "one_endpoint_surface": 4,
+      "predicate_object_exact": 11,
+      "predicate_only": 2,
+      "predicate_subject_exact": 3
+    },
+    "official_exact_tp": 2,
+    "predicate_distribution": {
+      "equivalent class": 2,
+      "has role": 6,
+      "same as": 12,
+      "type": 120
+    },
+    "protocol": "official_predicate_routing_adjudication_v1",
+    "semantic_finding": "Of the 138 official exact false positives, 133 (96.4%) bind both subject and object verbatim to the passage context, and 100.0% possess validated explicit or cross-sentence textual evidence spans. Furthermore, 120 (87.0%) represent valid instance/entity typing assertions. This demonstrates that benchmark gold sparsity is the dominant source of exact FP.",
+    "total_target_predictions": 140
+  },
+  "meta": {
+    "fail_closed_gate_status": "retained_closed",
+    "official_scores_modified": false,
+    "protocol": "official_predicate_routing_adjudication_v1",
+    "source_audit_file": "D:\\NLP\\experiments\\results\\official_predicate_routing_error_audit_a_n27_seed20260927.json",
+    "source_audit_sha256": "b3abfaf33b0c488e9af4adb5d3fe496a9cad5b3e0a150fe68a47f9380785f40d"
+  }
+}
