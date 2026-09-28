@@ -96,6 +96,7 @@ def save_all(fig: plt.Figure, stem: str) -> None:
     svg_path.write_text(
         "\n".join(line.rstrip() for line in svg_text.splitlines()) + "\n",
         encoding="utf-8",
+        newline="\n",
     )
     fig.savefig(
         OUTPUT_DIR / f"{stem}.pdf",

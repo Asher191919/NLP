@@ -4,7 +4,7 @@
 
 ## Abstract
 
-Large language models can generate ontology triples from text, but open-relation generation creates a difficult precision problem: a model may emit many plausible, evidence-linked relations that do not match the benchmark graph. Public ontology resources also create plausible pretraining-exposure confounds. We present **OntoBridg**, an ontology-learning pipeline that treats the language model as a candidate generator and applies relation-channel evidence, confidence, canonicalization, self-loop, predicate, and quantity constraints. We evaluate it on the public LLMs4OL 2026 Task A and Task B training data under a leakage-controlled protocol; no result uses hidden test labels or constitutes a leaderboard claim. On relation-density-stratified samples, isolating constraints to the relation channel improves exact Graph Similarity by 0.0315 and 0.0409 for Tasks A and B, but exact non-taxonomic F1 remains zero. On a frozen synthetic nonce holdout, guarding raises non-taxonomic F1 from 0.2612 to 0.8571 with no errors on 60 negated controls. This gain does not transfer to a disjoint, relation-rich official-text slice, where both systems recover 0 of 101 gold relations. Predicate routing recovers two `type` edges but produces 138 official exact false positives and fails a preregistered five-sample support gate. A contamination pilot finds high factual probeability but opposing alias effects across tasks. These results support a fail-closed evaluation protocol rather than a naturalistic performance claim: controlled extraction succeeds, official-text relation recovery remains unsupported, and every calibration and deployment gate stays closed.
+Large language models can generate ontology triples from text, but open-relation generation creates a difficult precision problem: a model may emit many plausible, evidence-linked relations that do not match the benchmark graph. Public ontology resources also create plausible pretraining-exposure confounds. We present **OntoBridg**, an ontology-learning pipeline that treats the language model as a candidate generator and applies relation-channel evidence, confidence, canonicalization, self-loop, predicate, and quantity constraints. We evaluate it on the public LLMs4OL 2026 Task A and Task B training data under a gold-withheld prompt protocol; no result uses hidden test labels or constitutes a leaderboard claim. On relation-density-stratified samples, isolating constraints to the relation channel improves exact Graph Similarity by 0.0315 and 0.0409 for Tasks A and B, but exact non-taxonomic F1 remains zero. On a frozen synthetic nonce holdout, guarding raises non-taxonomic F1 from 0.2612 to 0.8571 with no errors on 60 negated controls. This gain does not transfer to a disjoint, relation-rich official-text slice, where both systems recover 0 of 101 gold relations. Predicate routing recovers two `type` edges but produces 138 official exact false positives and fails a precommitted five-sample support gate. A contamination pilot finds high factual probeability but opposing alias effects across tasks. These results support a fail-closed evaluation protocol rather than a naturalistic performance claim: controlled extraction succeeds, official-text relation recovery remains unsupported, and every calibration and deployment gate stays closed.
 
 ## 1 Introduction
 
@@ -14,11 +14,11 @@ Open generation alone does not solve the problem. A model can extract a relation
 
 Evaluation is complicated further by possible training-data exposure. WordNet, GeoNames, schema.org, and many biomedical ontologies are public, widely mirrored resources. Closed-book recall of their facts is therefore not proof of induction from the supplied text. Black-box contamination tests can establish suspicious distributional evidence without proving that a specific item occurred in a proprietary training corpus [10,11]. Task-level contamination can also make nominally few-shot evaluation behave like recall [12]. For ontology learning, this distinction matters because the benchmark target is itself a public knowledge artifact.
 
-We study these issues through **OntoBridg**, a pipeline in which the LLM generates candidate triples and deterministic postprocessing governs whether relation candidates survive. Our goal is not to claim a new leaderboard score. Instead, we ask where relation constraints work, where they fail, and whether a preregistered fail-closed protocol prevents a controlled positive result from being promoted into an unsupported deployment claim.
+We study these issues through **OntoBridg**, a pipeline in which the LLM generates candidate triples and deterministic postprocessing governs whether relation candidates survive. Our goal is not to claim a new leaderboard score. Instead, we ask where relation constraints work, where they fail, and whether a manifest-frozen fail-closed protocol prevents a controlled positive result from being promoted into an unsupported deployment claim.
 
 The paper makes four contributions:
 
-1. **A leakage-controlled failure characterization.** On fixed prefixes of the public 2026 Task A and Task B training sets, unconstrained open-relation generation emits 384 and 150 non-taxonomic predictions. It misses Task A's sole non-taxonomic gold edge, while the Task B prefix contains no such gold edge; exact Graph Similarity falls sharply in both tasks.
+1. **A gold-withheld failure characterization.** On fixed prefixes of the public 2026 Task A and Task B training sets, gold is excluded from prompts and unconstrained open-relation generation emits 384 and 150 non-taxonomic predictions. It misses Task A's sole non-taxonomic gold edge, while the Task B prefix contains no such gold edge; exact Graph Similarity falls sharply in both tasks.
 
 2. **A relation-channel guard.** Confidence, verbatim evidence, entity and predicate canonicalization, self-loop removal, generic-predicate filtering, and a quantity cap are applied only to non-taxonomic relations. Preserving the typing and taxonomy channels isolates the effect of relation filtering and improves exact Graph Similarity on density-stratified samples.
 
@@ -102,7 +102,7 @@ Table 1 separates the evidence partitions. Gold-stratified sets are useful diagn
 
 | Partition | Source | Samples | Purpose | Selection status |
 |---|---|---:|---|---|
-| Blind prefix | Task A + B train | 30 per task | Closed vs. open baseline | Fixed prefix; leakage-controlled prompts |
+| Blind prefix | Task A + B train | 30 per task | Closed vs. open baseline | Fixed prefix; gold withheld from prompts |
 | Density strata | Task A + B train | 15 per task | Relation-only guard comparison | Gold-stratified low/medium/high density |
 | Independent v2 calibration | Task A + B train | 39 | Candidate calibration support | Disjoint; relation-enriched |
 | V5 confirmatory | Task A train | 24 | Frozen decision-rule test | Disjoint; predicate-balanced, endpoint-visible |
@@ -122,7 +122,7 @@ GS=\frac{EdgeF1+NeighborhoodSimilarity+TaxonomySimilarity}{3}.
 
 The composite ((TypingF1+TaxonomyF1+GS)/3) is an internal summary and not an official leaderboard score. Exact matching is primary. A frozen semantic secondary analysis is reported in the supplement; its model revision and threshold were locked before scoring.
 
-Uncertainty intervals use 10,000 sample-cluster bootstrap replicates. For paired system comparisons, samples are resampled jointly within prespecified strata. We emphasize effect sizes and support counts rather than null-hypothesis significance tests because several slices are small and purposefully stratified.
+Where reported, uncertainty intervals use 10,000 sample-cluster bootstrap replicates. For paired system comparisons, samples are resampled jointly within prespecified strata. We emphasize effect sizes and support counts rather than null-hypothesis significance tests because several slices are small and purposefully stratified.
 
 ### 4.3 Research questions
 
@@ -141,7 +141,7 @@ Uncertainty intervals use 10,000 sample-cluster bootstrap replicates. For paired
 
 All 120 task-system-sample units complete. Task A prompts contain context only; Task B prompts contain only official task inputs. Table 2 shows that open generation does not improve the blind prefix. It emits 384 Task A predictions and misses Task A's sole non-taxonomic gold edge; it emits 150 Task B predictions on a prefix containing no non-taxonomic gold edge. Relative to closed generation, exact Graph Similarity falls by 0.2801 on Task A and 0.2927 on Task B. The prefix therefore diagnoses over-generation but cannot estimate relation recall reliably.
 
-**Table 2. Leakage-controlled official-training prefix (30 samples per task).**
+**Table 2. Gold-withheld official-training prefix (30 samples per task).**
 
 | Task | System | Typing F1 | Taxonomy F1 | NonTax F1 | Exact GS | NonTax pred/gold |
 |---|---|---:|---:|---:|---:|---:|

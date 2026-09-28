@@ -6,7 +6,7 @@ This supplement accompanies *OntoBridg: Fail-Closed Evaluation of Open-Relation 
 
 | Artifact family | Frozen before generation | Gold used in prompts | Claim scope | Final gate |
 |---|---:|---:|---|---|
-| Blind Task A/B prefix | Yes | No | Leakage-controlled train-prefix comparison | Non-deployable |
+| Blind Task A/B prefix | Yes | No | Gold-withheld train-prefix comparison | Non-deployable |
 | Density-stratified guard | Yes | No | Gold-stratified relation-filtering diagnostic | Non-deployable |
 | Independent v2 calibration | Yes | No | Candidate calibration support | Failed: 3 positive samples |
 | Dual-model weak annotation | Yes | No | Exploratory weak-label calibration | Human/confirmatory ineligible |
@@ -17,7 +17,7 @@ This supplement accompanies *OntoBridg: Fail-Closed Evaluation of Open-Relation 
 | Official relation transfer | Yes | No | Disjoint official-train transfer | Failed: 0 TP |
 | Predicate routing | Yes | No | Independent mechanism test | Failed: 2 of 5 required samples |
 
-The immutable manifests retain their freeze-time cache states and planned-call estimates. Completed result artifacts separately record actual attempts and final cache coverage. This distinction prevents an execution from rewriting the preregistered state.
+The immutable manifests retain their freeze-time cache states, precommitted decision rules, and planned-call estimates. Completed result artifacts separately record actual attempts and final cache coverage. The manifests were frozen locally before execution but were not registered in a public preregistration service.
 
 ## B. Guarded-System Variants
 
@@ -42,7 +42,7 @@ The direct-v1 core-score regression is why the paper does not attribute hybrid G
 
 ### C.1 Independent v2 calibration
 
-The independent v2 pool contains 177 raw candidates. After evidence and confidence checks but before quantity truncation, 144 candidates define the calibration population. Four are exact positives from three samples. Beta-isotonic calibration changes Brier/ECE from 0.8429/0.9024 to 0.0270/0.0113 on the fitted population. The artifact status is `insufficient_independent_positive_samples` because the preregistered minimum is five positive samples.
+The independent v2 pool contains 177 raw candidates. After evidence and confidence checks but before quantity truncation, 144 candidates define the calibration population. Four are exact positives from three samples. Beta-isotonic calibration changes Brier/ECE from 0.8429/0.9024 to 0.0270/0.0113 on the fitted population. The artifact status is `insufficient_independent_positive_samples` because the precommitted minimum is five positive samples.
 
 ### C.2 Weak-label analysis
 

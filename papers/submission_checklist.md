@@ -21,6 +21,7 @@ This checklist tracks manuscript packaging rather than new model development. Th
 - [x] Supplement contains extended calibration, transfer, routing, oracle-pilot, and API-stability details.
 - [x] BibTeX file contains verified metadata for all cited work.
 - [x] Main result tables and headline numeric claims are checked against frozen JSON artifacts.
+- [x] Internal adversarial review distinguishes gold-withheld prompting from pretraining contamination and local protocol freezing from public preregistration.
 - [ ] Add author names, affiliations, ORCID identifiers, and corresponding-author email after anonymity requirements are known.
 - [ ] Convert Markdown to the official CEUR/LNCS template after the venue is selected.
 - [ ] Recheck page limit after template conversion.
@@ -40,7 +41,8 @@ This checklist tracks manuscript packaging rather than new model development. Th
 - [x] Generation and postprocessing caches have separate identities.
 - [x] Zero-call audit commands documented.
 - [x] API credentials, caches, checkpoints, and third-party datasets excluded from Git.
-- [x] Full offline unit-test suite passes.
+- [x] Full 125-test suite passes in the source workspace with retained third-party and private experiment inputs.
+- [ ] Verify the anonymous artifact's fixed 88-test, data-free portable subset in a clean virtual environment.
 - [ ] Create a public archival release and DOI after repository URL/anonymity policy is decided.
 - [ ] Add the final repository URL and commit/tag to the camera-ready artifact statement.
 - [ ] Verify that the anonymous artifact contains no user name, local path, or provider credential.
