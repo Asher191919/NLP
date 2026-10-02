@@ -4,7 +4,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-RES = Path(r"D:\NLP\experiments\results")
+RES = Path(__file__).resolve().parents[1] / "experiments" / "results"
 CKPT = RES / "checkpoints"
 
 

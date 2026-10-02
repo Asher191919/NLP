@@ -5,6 +5,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
+PROJECT_ROOT = ROOT.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
@@ -128,7 +129,7 @@ def main() -> int:
         },
         "contamination": rd,
     }
-    out_path = Path(r"D:\NLP\experiments\results\demo_metrics.json")
+    out_path = PROJECT_ROOT / "experiments" / "results" / "demo_metrics.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"\nWrote {out_path}")

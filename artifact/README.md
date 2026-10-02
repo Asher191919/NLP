@@ -50,4 +50,8 @@ This artifact supports a controlled synthetic positive result, official-training
 
 ## Licensing Note
 
-No third-party dataset is redistributed. The upstream LLMs4OL repository is MIT-licensed, but some underlying ontology resources may impose additional terms. A project-level code and artifact license must be selected before public archival release.
+No third-party dataset is redistributed. Project code and the anonymous artifact
+are released under the root `LICENSE` (MIT). The upstream LLMs4OL repository
+and underlying ontology resources remain subject to their own licenses. Paper
+copyright and any venue-specific open-access license are deferred to the
+selected venue.

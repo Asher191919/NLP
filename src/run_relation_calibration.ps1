@@ -12,7 +12,7 @@ param(
   [int]$ExcludePrefix = 30,
   [ValidateRange(0, 10000)]
   [int]$PriorFailedConnectionAttempts = 0,
-  [string]$ExcludeEvalResult = 'D:\NLP\experiments\results\official_stratified_open_openai_ab_s5_seed20260922.json',
+  [string]$ExcludeEvalResult = '',
   [ValidateRange(1, 4)]
   [int]$Workers = 2,
   [ValidateRange(4096, 65536)]
@@ -23,6 +23,9 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+if ([string]::IsNullOrWhiteSpace($ExcludeEvalResult)) {
+  $ExcludeEvalResult = Join-Path (Split-Path $PSScriptRoot -Parent) 'experiments\results\official_stratified_open_openai_ab_s5_seed20260922.json'
+}
 . (Join-Path $PSScriptRoot 'dots_config.ps1')
 Set-DotsOntoBridgEnv
 

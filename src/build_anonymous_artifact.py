@@ -17,6 +17,7 @@ DEFAULT_OUTPUT = DIST / "ontobridg-anonymous-artifact"
 ARCHIVE_ROOT = "ontobridg-anonymous-artifact"
 TEXT_SUFFIXES = {".bib", ".json", ".md", ".py", ".svg", ".txt"}
 PAPER_FILES = (
+    "LICENSE",
     "papers/paper_draft.md",
     "papers/appendix.md",
     "papers/references.bib",

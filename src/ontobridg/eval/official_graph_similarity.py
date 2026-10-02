@@ -14,6 +14,7 @@ Notes:
 from __future__ import annotations
 
 from collections import defaultdict
+from pathlib import Path
 from typing import Iterable, Sequence
 
 Triple = tuple[str, str, str]
@@ -23,6 +24,7 @@ OFFICIAL_SOURCE = "data/LLMs4OL-Challenge/2026/metrics/graph_similarity.py"
 OFFICIAL_FORMULA = "(edge_f1 + neighborhood_similarity + taxonomy_similarity) / 3"
 METRIC_ID = "llms4ol2026_graph_similarity_exact"
 EXTERNAL_REPORTABLE = True
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 
 def normalize(text: str) -> str:
@@ -199,9 +201,8 @@ def evaluate_structures(
 def load_official_module():
     """Optionally import the challenge script (needs networkx/rapidfuzz/ST)."""
     import importlib.util
-    from pathlib import Path
 
-    path = Path(r"D:\NLP\data\LLMs4OL-Challenge\2026\metrics\graph_similarity.py")
+    path = PROJECT_ROOT / "data" / "LLMs4OL-Challenge" / "2026" / "metrics" / "graph_similarity.py"
     if not path.exists():
         raise FileNotFoundError(path)
     spec = importlib.util.spec_from_file_location("llms4ol_official_graph_similarity", path)

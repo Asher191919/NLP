@@ -1,7 +1,8 @@
 import json
 from pathlib import Path
 
-res = Path(r"D:\NLP\experiments\results")
+ROOT = Path(__file__).resolve().parents[1]
+res = ROOT / "experiments" / "results"
 chunks = [
     res / "official_train_baseline_openai_a_n5_off0.json",
     res / "official_train_baseline_openai_a_n4_off5.json",

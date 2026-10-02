@@ -22,11 +22,11 @@ inventory (`is-a`, type names). Associative relations — `part-of`, `causes`,
 are **out of vocabulary**, so the extractor emits nothing.
 
 This motivates an open relation channel, but it does not establish that the open
-channel improves official scoring. In the leakage-controlled n = 30 prefix, the
+channel improves official scoring. In the gold-withheld n = 30 prefix, the
 current unconstrained open implementation lowers exact Graph Similarity by
 0.2801 on Task A and 0.2927 on Task B because it over-generates unmatched
 relations. The relation-density follow-up finds only one exact generated relation,
-which the preregistered evidence-gap gate rejects. The supported contribution is
+which the precommitted evidence-gap gate rejects. The supported contribution is
 therefore a failure diagnosis and fail-closed protocol, not a winning claim.
 
 | Task | Closed GS | Open GS | Open non-tax pred/gold |
@@ -138,7 +138,7 @@ Directly applying guarded generation to every channel damages typing/taxonomy.
 The evaluated hybrid therefore preserves the legacy core graph and substitutes
 only the guarded relation channel. Confidence calibration is deployable only when
 candidate-level class support and at least five independent positive samples pass
-the preregistered gate. Current support is four positives from three samples, so
+the precommitted gate. Current support is four positives from three samples, so
 the artifact correctly remains `deployable=false`.
 
 A separate 30-sample dual-model weak-label experiment supplies 26 candidate
@@ -150,7 +150,7 @@ in-sample calibration metrics are not evidence of held-out reliability.
 A separate axiom-only v5 diagnostic isolates symmetric relations. On eight
 2026 Task A calibration samples, a conservative singularizer plus bounded
 reverse-edge expansion raises exact F1 from 0.1379 to 0.3117. However, the
-preregistered disjoint eight-sample validation reverses that result: base F1 is
+precommitted disjoint eight-sample validation reverses that result: base F1 is
 0.1667, while the rule adds eight false positives, recovers no true positive,
 and lowers F1 to 0.1364. The rule is therefore rejected for the production
 canonicalizer. Pooling both slices gives seven exact positives from six samples
@@ -158,7 +158,7 @@ and numerically passes grouped-CV support (Brier 0.1836; ECE 0.0830), but the
 validation slice has then been reused for calibration. A subsequently frozen
 24-sample endpoint-visible confirmatory slice produces 4 base TP from 4 samples.
 Frozen calibration improves Brier from 0.6707 to 0.2109 but removes one TP and
-leaves only 3 positive samples, below the preregistered minimum of 5. This valid
+leaves only 3 positive samples, below the precommitted minimum of 5. This valid
 confirmatory negative result forces `scientific_deployable=false` and
 `confirmatory_eligible=false`; no post-result retuning is allowed, and v5 is not
 part of the v2 calibrator.
@@ -278,7 +278,7 @@ Outputs:
 2. Obtain relation-level human validation (independent annotation or a documented
    audit with corrected/missing relations) before reconsidering deployment.
 3. Refit locally from the existing generation cache with zero external calls, and
-   launch confirmatory API evaluation only if every preregistered gate then
+   launch confirmatory API evaluation only if every precommitted gate then
    passes; otherwise report the abstention result without relaxing thresholds.
 4. Retain the completed v5 confirmatory failure without threshold or rule
    retuning; report probability calibration and exact decision quality separately.

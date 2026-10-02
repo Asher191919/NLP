@@ -1,7 +1,7 @@
 # OntoBridg — LLMs4OL 本体学习竞赛与论文项目
 
 > **主方向：LLMs4OL（Ontology Learning）→ 目标 2027 + 论文**  
-> 系统代号 **OntoBridg** | 本地根目录 `D:\NLP` | 更新 2026-09-27
+> 系统代号 **OntoBridg** | 本地根目录 `D:\NLP` | 更新 2026-10-02
 
 ## 一句话结论
 

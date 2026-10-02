@@ -1,6 +1,6 @@
 # OntoBridg Venue Strategy
 
-**Assessment date:** 2026-09-28
+**Assessment date:** 2026-10-02
 
 ## Current Paper Type
 
@@ -9,7 +9,7 @@ OntoBridg is currently a reproducible negative-results and evaluation-protocol p
 - relation-channel constraints improve graph precision;
 - a synthetic nonce holdout demonstrates controlled extraction;
 - the gain fails to transfer to relation-rich official text;
-- independent predicate routing fails a preregistered support gate;
+- independent predicate routing fails a precommitted support gate;
 - contamination diagnostics show probeability and task-dependent surface sensitivity without proving membership;
 - the system remains fail-closed for calibration and deployment.
 
@@ -73,23 +73,23 @@ Ontology matching is used only as related-work context. The evaluated task is on
 | Relation-only guard improves graph precision | Ready | Replicate across models/data |
 | Guarded nonce extraction reaches F1 0.8571 | Ready with synthetic qualifier | Add naturalistic validation |
 | Official-text transfer recovers 0/101 | Ready as negative result | Diagnose with human completeness study |
-| Predicate routing fails five-sample gate | Ready | Test a new preregistered method on new data |
+| Predicate routing fails five-sample gate | Ready | Test a new precommitted method on new data |
 | Facts are highly probeable | Ready as diagnostic | Add stronger contamination methodology |
 | Verified pretraining contamination | Not supported | Requires corpus access or stronger evidence |
 | Deployment-ready calibration | Not supported | Requires independent human/official support |
 
 ## Venue Checks Still Requiring External Confirmation
 
-- [ ] Official LLMs4OL 2027 call and submission deadline
-- [ ] Page limit and template
-- [ ] Double-blind versus single-blind policy
-- [ ] Prior-preprint policy
-- [ ] Artifact review and anonymization requirements
-- [ ] Whether workshop publication permits a later extended journal version
+- [x] Official channels checked on 2026-10-02; no LLMs4OL 2027 call or submission deadline is published
+- [—] Page limit and template — awaiting the official 2027 call
+- [—] Double-blind versus single-blind policy — awaiting the official 2027 call
+- [—] Prior-preprint policy — awaiting the official 2027 call
+- [—] Artifact review and anonymization requirements — awaiting the official 2027 call
+- [—] Whether workshop publication permits a later extended journal version — awaiting the official 2027 call
 
 No deadline is recorded here until it has been verified from the official call.
 
-## External status check (2026-09-29)
+## External status check (2026-10-02)
 
 The official LLMs4OL series page (`https://sites.google.com/view/llms4ol`)
 returned HTTP 200, but its published page did not contain a 2027 call,

@@ -22,7 +22,7 @@ This checklist tracks manuscript packaging rather than new model development. Th
 - [x] BibTeX file contains verified metadata for all cited work.
 - [x] Main result tables and headline numeric claims are checked against frozen JSON artifacts.
 - [x] Internal adversarial review distinguishes gold-withheld prompting from pretraining contamination and local protocol freezing from public preregistration.
-- [ ] Add author names, affiliations, ORCID identifiers, and corresponding-author email after anonymity requirements are known.
+- [ ] Add author names, affiliations, ORCID identifiers, and corresponding-author email after anonymity requirements are known (template: `papers/author_metadata.template.yaml`).
 - [ ] Convert Markdown to the official CEUR/LNCS template after the venue is selected.
 - [ ] Recheck page limit after template conversion.
 
@@ -50,6 +50,7 @@ This checklist tracks manuscript packaging rather than new model development. Th
 ## Data and Ethics
 
 - [x] Challenge repository license identified as MIT.
+- [x] Project code and anonymous artifact license selected as MIT (`LICENSE`); upstream resources remain separately licensed.
 - [x] Upstream ontology licensing caveat retained, especially for UMLS-derived resources.
 - [x] No personal data or human-subject claims introduced.
 - [x] Model provenance and provider-side drift limitation disclosed.
